@@ -14,15 +14,35 @@ public class PlayerController : MonoBehaviour
     private float chargeArrowYMin = 68f;
     private float chargeArrowYHeight = 350.0f;
 
+    private bool holdControl = true;
+
+    public float GetMinLaunchForce()
+    {
+        return minLaunchForce;
+    }
+
+    public float GetMaxLaunchForce()
+    {
+        return maxLaunchForce;
+    }
+
+    public void SetHoldControl(bool input)
+    {
+        holdControl = input;
+    }
+
     private void Update()
     {
-        if (charging)
+        if (holdControl)
         {
-            Charge();
-        }
-        else
-        {
-            launchForce = 0;
+            if (charging)
+            {
+                Charge();
+            }
+            else
+            {
+                launchForce = 0;
+            }
         }
         chargeText.text = "" + launchForce;
         chargeArrow.position = new Vector3(chargeArrow.position.x, chargeArrowYMin + chargeArrowYHeight * launchForce / maxLaunchForce);
@@ -84,5 +104,17 @@ public class PlayerController : MonoBehaviour
     {
         Rigidbody body = GetComponent<Rigidbody>();
         body.AddForce(force * direction.normalized);
+    }
+
+    public void Launch(float force)
+    {
+        launchForce = force;
+        LaunchCharge();
+        launchForce = 0;
+    }
+
+    public void SetLaunchForce(float force)
+    {
+        launchForce = force;
     }
 }

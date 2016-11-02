@@ -24,6 +24,11 @@ public class InputController : MonoBehaviour
 
     public Text controlText;
 
+    public Text chargeText;
+    public Transform chargeArrow;
+    private float chargeArrowYMin = 68f;
+    private float chargeArrowYHeight = 350.0f;
+
     private void Awake()
     {
         inputPlane = new Plane(Vector3.right, Vector3.zero);
@@ -98,6 +103,7 @@ public class InputController : MonoBehaviour
                 if (Input.GetMouseButtonDown(0))
                 {
                     oldPoint = Input.mousePosition;
+                    player.SetHoldControl(true);
                 }
 
                 // Look
@@ -167,6 +173,7 @@ public class InputController : MonoBehaviour
                 if (Input.GetMouseButtonDown(1))
                 {
                     player.SetCharging(true);
+                    player.SetHoldControl(true);
                 }
 
                 // Launch
@@ -209,29 +216,37 @@ public class InputController : MonoBehaviour
                     oldPoint = pos;
                 }
 
-                // Rotate player so it faces camera direction
-                if (Input.GetMouseButton(1))
-                {
-                    // Calculate distance
-                    player.GetComponent<Rigidbody>().freezeRotation = true;
-                    playerTransform.rotation = behindCamera.transform.rotation;
-                    playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
-                }
-
                 // Move
                 if (Input.GetMouseButtonDown(1))
                 {
                     // Hide save starting positions
-                    player.SetCharging(true);
+                    oldPoint = Input.mousePosition;
+                    //player.SetCharging(true);
+                    player.SetHoldControl(false);
+                }
+
+                // Rotate player so it faces camera direction
+                if (Input.GetMouseButton(1))
+                {
+                    player.GetComponent<Rigidbody>().freezeRotation = true;
+                    playerTransform.rotation = behindCamera.transform.rotation;
+                    playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
+                    // Calculate distance
+                    // TODO: Update power bar.
+                    Vector2 difference = oldPoint - (Vector2)Input.mousePosition;
+                    float launchForce = difference.y * 3;
+                    player.SetLaunchForce(launchForce);
                 }
 
                 // Launch
                 if (Input.GetMouseButtonUp(1))
                 {
-                    // Perform slingshot breh
                     player.GetComponent<Rigidbody>().freezeRotation = false;
-                    player.LaunchCharge(behindCamera.pitch.transform.forward);
-                    player.SetCharging(false);
+                    // Perform slingshot breh
+                    // TODO: Call function for launching player.
+                    Vector2 difference = oldPoint - (Vector2) Input.mousePosition;
+                    player.Launch(difference.y * 3);
+                    //player.SetCharging(false);
                 }
                 break;
             case ControlMode.Cross:

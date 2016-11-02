@@ -15,10 +15,16 @@ public enum Behaviour
     ice, grabby, electrocution, explosive
 }
 
+public enum ItemSize
+{
+    small, medium, grande
+}
+
 public class Item : MonoBehaviour {
 
     public Behaviour behaviour = Behaviour.none;
     public Movement movement = Movement.none;
+    public ItemSize itemSize = ItemSize.small;
 
     public void SetBehaviour(Behaviour _behaviour)
     {
@@ -28,6 +34,11 @@ public class Item : MonoBehaviour {
     public void SetMovement(Movement _movement)
     {
         movement = _movement;
+    }
+
+    public void SetSize(ItemSize _itemSize)
+    {
+        itemSize = _itemSize;
     }
 
 }

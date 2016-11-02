@@ -6,17 +6,14 @@ using System.Collections;
 // input/movement would be a separate script.
 public class PlayerBehaviour : MonoBehaviour {
 
-
-
     Rigidbody rgb;
+    [HideInInspector]
+    public bool onFire;
+    
 
     void Start()
     {
         rgb = this.gameObject.GetComponent<Rigidbody>();
-    }
-
-    void Update()
-    {
     }
 
     void OnCollisionEnter(Collision other)
@@ -36,21 +33,24 @@ public class PlayerBehaviour : MonoBehaviour {
         {
             case Behaviour.fire:
                 Debug.Log("Burn, mofo!");
+                onFire = true;
+                obj.GetComponent<FireHazard>().StartCoroutine(
+                    obj.GetComponent<FireHazard>().BurnToDeath());
                 return;
             case Behaviour.bouncy:
-                Debug.Log("Bouncy!");
+                Debug.Log("Bouncy Castle!");
                 return;
             case Behaviour.slippery:
-                Debug.Log("Slippery.");
+                Debug.Log("Slippery like and eel!");
                 return;
-            /*case Behaviour.sticky:
-                Debug.Log("Slippery.");
-                return;*/
+            case Behaviour.sticky:
+                Debug.Log("What a sticky situation.");
+                return;
             case Behaviour.explosive:
                 Debug.Log("Boom! Explosive.");
                 return;
             case Behaviour.electrocution:
-                Debug.Log("Electrocution!");
+                Debug.Log("Hair-raising!");
                 return;
             default:
                 return;

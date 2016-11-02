@@ -11,8 +11,8 @@ public class PlayerController : MonoBehaviour
     public Transform pitchTransform;
     public Text chargeText;
     public Transform chargeArrow;
-    float chargeArrowYMin = -700.0f;
-    float chargeArrowYHeight = 400.0f;
+    private float chargeArrowYMin = 68f;
+    private float chargeArrowYHeight = 350.0f;
 
     private void Update()
     {
@@ -25,8 +25,7 @@ public class PlayerController : MonoBehaviour
             launchForce = 0;
         }
         chargeText.text = "" + launchForce;
-
-        chargeArrow.transform.position = new Vector3(chargeArrow.position.x, chargeArrowYMin + chargeArrowYHeight * launchForce / maxLaunchForce);
+        chargeArrow.position = new Vector3(chargeArrow.position.x, chargeArrowYMin + chargeArrowYHeight * launchForce / maxLaunchForce);
     }
 
     private void Charge()

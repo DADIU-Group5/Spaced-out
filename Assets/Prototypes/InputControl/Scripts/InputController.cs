@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class InputController : MonoBehaviour
 {
     private bool primed = false;
+    private bool invertCameraControls = false;
     private Vector2 oldPoint;
     private Camera current;
     private Plane inputPlane;
@@ -30,7 +31,7 @@ public class InputController : MonoBehaviour
         controlNames = new List<string>(){
             "Hold - Button",
             "Hold - Fingers",
-            "Sling - Two Fingers",
+            "Drag - Two Fingers",
             "Cross",
             "Swipe",
             "Jetpack micro corrections"
@@ -112,6 +113,11 @@ public class InputController : MonoBehaviour
                     {
                         offset = pos - ScreenCenter();
                     }
+
+                    if (invertCameraControls)
+                    {
+                        offset = -offset;
+                    }
                     DirectedRotation(offset, tilt);
                     oldPoint = pos;
                 }
@@ -139,6 +145,11 @@ public class InputController : MonoBehaviour
                     else
                     {
                         offset = pos - ScreenCenter();
+                    }
+
+                    if (invertCameraControls)
+                    {
+                        offset = -offset;
                     }
                     DirectedRotation(offset, tilt);
                     oldPoint = pos;
@@ -189,6 +200,11 @@ public class InputController : MonoBehaviour
                     {
                         offset = pos - ScreenCenter();
                     }
+
+                    if (invertCameraControls)
+                    {
+                        offset = -offset;
+                    }
                     DirectedRotation(offset, tilt);
                     oldPoint = pos;
                 }
@@ -196,6 +212,7 @@ public class InputController : MonoBehaviour
                 // Rotate player so it faces camera direction
                 if (Input.GetMouseButton(1))
                 {
+                    // Calculate distance
                     player.GetComponent<Rigidbody>().freezeRotation = true;
                     playerTransform.rotation = behindCamera.transform.rotation;
                     playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
@@ -204,12 +221,14 @@ public class InputController : MonoBehaviour
                 // Move
                 if (Input.GetMouseButtonDown(1))
                 {
+                    // Hide save starting positions
                     player.SetCharging(true);
                 }
 
                 // Launch
                 if (Input.GetMouseButtonUp(1))
                 {
+                    // Perform slingshot breh
                     player.GetComponent<Rigidbody>().freezeRotation = false;
                     player.LaunchCharge(behindCamera.pitch.transform.forward);
                     player.SetCharging(false);
@@ -276,5 +295,10 @@ public class InputController : MonoBehaviour
             behindCamera.transform.Rotate(Vector3.up, Time.deltaTime * xScale * cameraRotateSpeed * (offset.x / ScreenCenter().magnitude));
             behindCamera.pitch.transform.Rotate(Vector3.right, Time.deltaTime * cameraRotateSpeed * (-offset.y / ScreenCenter().magnitude));
         }
+    }
+
+    public void ToggleCameraControls()
+    {
+        invertCameraControls = !invertCameraControls;
     }
 }

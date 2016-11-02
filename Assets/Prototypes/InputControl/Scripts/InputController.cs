@@ -233,7 +233,7 @@ public class InputController : MonoBehaviour
                     playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
                     // Calculate distance
                     // TODO: Update power bar.
-                    Vector2 difference = oldPoint - (Vector2)Input.mousePosition;
+                    Vector2 difference = oldPoint - (Vector2) Input.mousePosition;
                     float launchForce = difference.y * 3;
                     player.SetLaunchForce(launchForce);
                 }
@@ -246,7 +246,6 @@ public class InputController : MonoBehaviour
                     // TODO: Call function for launching player.
                     Vector2 difference = oldPoint - (Vector2) Input.mousePosition;
                     player.Launch(difference.y * 3);
-                    //player.SetCharging(false);
                 }
                 break;
             case ControlMode.Cross:

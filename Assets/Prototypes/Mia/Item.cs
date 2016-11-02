@@ -12,12 +12,10 @@ public enum Movement
 public enum Behaviour
 {
     none, sticky, bouncy, slippery, fire,
-    ice, grabby
+    ice, grabby, electrocution, explosive
 }
 
 public class Item : MonoBehaviour {
-
-    
 
     public Behaviour behaviour = Behaviour.none;
     public Movement movement = Movement.none;

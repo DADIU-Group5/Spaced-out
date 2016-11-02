@@ -9,6 +9,7 @@ public class StickyHazard : MonoBehaviour {
     [Tooltip("Minimum speed in the sticky zone.")]
     public Vector3 minimumSpeed = new Vector3(.1f,.1f,.1f);
 
+    [Tooltip("How much the speed decreases at each FixedUpdate")]
     public float speedDecrease = 0.1f;
 
     // Internal list that tracks objects that enter this object's "zone"
@@ -24,11 +25,10 @@ public class StickyHazard : MonoBehaviour {
         for (int i = 0; i < objects.Count; i++)
         {
             Rigidbody rgb = objects[i].GetComponent<Rigidbody>();
-            if (Vector3.Distance(rgb.velocity, minimumSpeed) > 0.01f)
+            if (Mathf.Abs(Vector3.Distance(rgb.velocity, minimumSpeed)) > 0.01f)
             {
                 //foreach object in sticky influence, lower velocity. (Force instead?)
                 rgb.velocity = rgb.velocity * (1f-speedDecrease);
-                Debug.Log("Sticky object speed: " + rgb.velocity);
             }
         }
     }

@@ -11,7 +11,7 @@ public enum Movement
 //just added some for example.
 public enum Behaviour
 {
-    none, sticky, bouncy, slippery, fire,
+    none, hazardSwitch, sticky, bouncy, slippery, fire,
     ice, grabby, electrocution, explosive
 }
 

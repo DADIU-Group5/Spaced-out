@@ -6,9 +6,10 @@ public class SlipperyHazard : MonoBehaviour {
     [HideInInspector]
     public GameObject player;
 
-    [Tooltip("Minimum speed in the sticky zone.")]
-    public Vector3 minimumSpeed = new Vector3(.1f, .1f, .1f);
+    [Tooltip("Maximum speed in the sticky zone.")]
+    public Vector3 maximumSpeed = new Vector3(3f, 3f, 3f);
 
+    [Tooltip("How much the speed increases at each FixedUpdate")]
     public float speedIncrease = 0.05f;
 
     // Internal list that tracks objects that enter this object's "zone"
@@ -25,11 +26,11 @@ public class SlipperyHazard : MonoBehaviour {
         for (int i = 0; i < objects.Count; i++)
         {
             Rigidbody rgb = objects[i].GetComponent<Rigidbody>();
-            if (Vector3.Distance(rgb.velocity, minimumSpeed) > 0.01f)
+            if (Mathf.Abs( Vector3.Distance(rgb.velocity, maximumSpeed)) < 0.05f)
             {
+                if (rgb)
                 //foreach object in sticky influence, increase velocity. (Force instead?)
                 rgb.velocity = rgb.velocity * (1f+speedIncrease);
-                //Debug.Log("slippery...");
             }
         }
     }
@@ -46,11 +47,9 @@ public class SlipperyHazard : MonoBehaviour {
 
     void OnTriggerExit(Collider other)
     {
-        Debug.Log("Object left zone");
         if (other.transform.tag == "Player" || other.transform.tag == "object" &&
             other.transform.GetComponent<Item>().movement == Movement.floatingItem)
         {   //if the objects leave the collider, remove from list.
-            Debug.Log("Object removed");
             objects.Remove(other);
         }
     }

@@ -9,15 +9,23 @@ public class LevelGenerator : MonoBehaviour {
     public int seed;
     public int minRooms = 7;
     public int maxRooms = 20;
+
+    List<Bounds> allBounds = new List<Bounds>();
     
 	// Use this for initialization
 	void Start () {
+        #if UNITY_EDITOR
+            UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
+        #endif
         seed = Random.Range(0, 100);
         Random.InitState(seed);
         LoadRooms();
         for (int i = 0; i < Random.Range(minRooms, maxRooms); i++)
         {
-            CreateRandomRoom();
+            if (!CreateRandomRoom())
+            {
+                break;
+            }
         }
 	}
 	
@@ -32,7 +40,7 @@ public class LevelGenerator : MonoBehaviour {
     /// <summary>
     /// Creates a random room.
     /// </summary>
-    void CreateRandomRoom()
+    bool CreateRandomRoom()
     {
         //Creates a new room. Get a reference to the room script, and get a random entrance door.
         GameObject newRoom = Instantiate((GameObject)rooms[Random.Range(0, rooms.Count)]) as GameObject;
@@ -44,16 +52,42 @@ public class LevelGenerator : MonoBehaviour {
         newRoom.transform.rotation = rot;
 
         //Moves the new room into position.
-        newRoom.transform.position = newRoom.transform.position + (lastDoor.transform.position - entranceDoor.transform.position);
+        newRoom.transform.position = newRoom.transform.position + (lastDoor.transform.position - entranceDoor.transform.position)-entranceDoor.transform.right;
 
-        entranceDoor.GetComponent<Door>().ConnectRoom(lastDoor);
+        //Get bounds.
+        Bounds newBound = newRoom.AddComponent<calcbounds>().calc();
         
-        //Make a random door the exit.
-        lastDoor = GetRandomDoor(theRoom);
-        if(lastDoor == entranceDoor)
+        if (DoesRoomIntersect(newBound))
         {
-            Debug.LogError("Something went wrong, you need to 'connect' a door, when using it.");
+            Destroy(newRoom);
+            return false;
         }
+        else
+        {
+            entranceDoor.GetComponent<Door>().ConnectRoom(lastDoor);
+
+            //Make a random door the exit.
+            lastDoor = GetRandomDoor(theRoom);
+            if (lastDoor == entranceDoor)
+            {
+                Debug.LogError("Something went wrong, you need to 'connect' a door, when using it.");
+            }
+        }
+        allBounds.Add(newBound);
+        return true;
+    }
+
+    bool DoesRoomIntersect(Bounds newB)
+    {
+        foreach (Bounds item in allBounds)
+        {
+            if (item.Intersects(newB))
+            {
+                Debug.Log("Early exit, intersection!");
+                return true;
+            }
+        }
+        return false;
     }
 
     /// <summary>

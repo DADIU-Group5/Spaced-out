@@ -64,7 +64,7 @@ public class InputController : MonoBehaviour
     public void ChangeControlLeft()
     {
         if ((int)selectedControl <= 0)
-            selectedControl = ControlMode.JetPack;
+            selectedControl = ControlMode.SlingTheMofo;
         else
             selectedControl--;
 
@@ -73,7 +73,7 @@ public class InputController : MonoBehaviour
 
     public void ChangeControlRight()
     {
-        if ((int)selectedControl >= 4)
+        if ((int)selectedControl >= 2)
             selectedControl = ControlMode.HoldButton;
         else
             selectedControl++;

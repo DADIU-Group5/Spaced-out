@@ -6,7 +6,6 @@ using System.Collections.Generic;
 [CustomEditor(typeof(RoomCreator))]
 public class RoomCreatorEditor : Editor
 {
-
     RoomCreator RC;
 
     enum States { noRoom, Editing, Saving, Loading }
@@ -19,6 +18,7 @@ public class RoomCreatorEditor : Editor
     public override void OnInspectorGUI()
     {
         RC = (RoomCreator)target;
+        //DrawDefaultInspector();
         if (rooms == null || rooms.Count == 0)
         {
             LoadRooms();
@@ -81,17 +81,21 @@ public class RoomCreatorEditor : Editor
 
     void EditingRoom()
     {
-        if (GUILayout.Button("Create Static Object"))
+        if (GUILayout.Button("Create Environmental Object"))
         {
-            RC.AddNewStaticObject();
+            RC.AddNewEnvironmentalObject();
         }
         if (GUILayout.Button("Create Dynamic Object"))
         {
             RC.AddNewDynamicObject();
         }
-        if (GUILayout.Button("Create Envirionmental Object"))
+        if (GUILayout.Button("Create Shaping Object"))
         {
-            RC.AddNewEnvironmentObject();
+            RC.AddNewshapingObject();
+        }
+        if (GUILayout.Button("Create Door"))
+        {
+            RC.AddNewDoor();
         }
         if (GUILayout.Button("Clear!"))
         {
@@ -99,7 +103,11 @@ public class RoomCreatorEditor : Editor
         }
         if (GUILayout.Button("Save!"))
         {
-            states = States.Saving;
+            RC.GetRoom().CleanData();
+            if (RC.GetRoom().canBeRoom())
+            {
+                states = States.Saving;
+            }
         }
     }
 
@@ -190,9 +198,7 @@ public class RoomCreatorEditor : Editor
             return;
         }
         EditorGUILayout.LabelField("Name", rooms[LoadID].name);
-        EditorGUILayout.BeginHorizontal();
         GUILayout.Label(AssetPreview.GetAssetPreview(rooms[LoadID]));
-        EditorGUILayout.EndHorizontal();
         if (GUILayout.Button("Load"))
         {
             roomName = rooms[LoadID].name;

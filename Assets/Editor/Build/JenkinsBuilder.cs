@@ -18,24 +18,22 @@ public class JenkinsBuilder : MonoBehaviour
         return EditorScenes.ToArray();
     }
 
+    [MenuItem("Build/Alpha")]
     private static void BuildAlpha()
     {
         Build("SpacedOut_Alpha");
     }
 
+    [MenuItem("Build/Beta")]
     private static void BuildBeta()
     {
         Build("SpacedOut_Beta");
     }
 
+    [MenuItem("Build/Main")]
     private static void BuildMain()
     {
         Build("SpacedOut_Main");
-    }
-
-    private static void BuildFinal()
-    {
-        Build("SpacedOut");
     }
 
     private static void Build(string name)

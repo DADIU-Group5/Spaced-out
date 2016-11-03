@@ -11,22 +11,41 @@ public class PlayerController : MonoBehaviour
     public Transform pitchTransform;
     public Text chargeText;
     public Transform chargeArrow;
-    float chargeArrowYMin = -700.0f;
-    float chargeArrowYHeight = 400.0f;
+    private float chargeArrowYMin = 68f;
+    private float chargeArrowYHeight = 350.0f;
+
+    private bool holdControl = true;
+
+    public float GetMinLaunchForce()
+    {
+        return minLaunchForce;
+    }
+
+    public float GetMaxLaunchForce()
+    {
+        return maxLaunchForce;
+    }
+
+    public void SetHoldControl(bool input)
+    {
+        holdControl = input;
+    }
 
     private void Update()
     {
-        if (charging)
+        if (holdControl)
         {
-            Charge();
-        }
-        else
-        {
-            launchForce = 0;
+            if (charging)
+            {
+                Charge();
+            }
+            else
+            {
+                launchForce = 0;
+            }
         }
         chargeText.text = "" + launchForce;
-
-        chargeArrow.transform.position = new Vector3(chargeArrow.position.x, chargeArrowYMin + chargeArrowYHeight * launchForce / maxLaunchForce);
+        chargeArrow.position = new Vector3(chargeArrow.position.x, chargeArrowYMin + chargeArrowYHeight * launchForce / maxLaunchForce);
     }
 
     private void Charge()
@@ -85,5 +104,17 @@ public class PlayerController : MonoBehaviour
     {
         Rigidbody body = GetComponent<Rigidbody>();
         body.AddForce(force * direction.normalized);
+    }
+
+    public void Launch(float force)
+    {
+        launchForce = force;
+        LaunchCharge();
+        launchForce = 0;
+    }
+
+    public void SetLaunchForce(float force)
+    {
+        launchForce = force;
     }
 }

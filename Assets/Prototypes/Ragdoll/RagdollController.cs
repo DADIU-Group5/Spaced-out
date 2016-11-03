@@ -4,7 +4,7 @@ using System.Collections;
 public class RagdollController : MonoBehaviour {
 
     public Rigidbody[] ragdollRig;
-    public Rigidbody dave;
+    public Rigidbody ragdollRoot;
 
     // Use this for initialization
     void Start()
@@ -16,8 +16,8 @@ public class RagdollController : MonoBehaviour {
             //isKinematic
             joint.isKinematic = true;
         }
-        //dave.isKinematic = false;
-        //dave.useGravity = false;
+        ragdollRoot.isKinematic = false;
+        ragdollRoot.useGravity = false;
     }
 
     public void RagdollStart()
@@ -28,8 +28,9 @@ public class RagdollController : MonoBehaviour {
             //isKinematic
             joint.isKinematic = false;
         }
-        //dave.isKinematic = false;
-        //dave.useGravity = false;
+        ragdollRoot.isKinematic = false;
+        ragdollRoot.useGravity = false;
+
         //disable animator here
     }
 
@@ -41,8 +42,9 @@ public class RagdollController : MonoBehaviour {
             //isKinematic
             joint.isKinematic = true;
         }
-        //dave.isKinematic = false;
-        //dave.useGravity = false;
+        ragdollRoot.isKinematic = false;
+        ragdollRoot.useGravity = false;
+
         //enable animator here
     }
 }

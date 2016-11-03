@@ -100,14 +100,14 @@ public class InputController : MonoBehaviour
                 current = behind;
                 behind.enabled = true;
 
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) && !Input.GetMouseButton(1))
                 {
                     oldPoint = Input.mousePosition;
                     player.SetHoldControl(true);
                 }
 
                 // Look
-                if (Input.GetMouseButton(0))
+                if (Input.GetMouseButton(0) && !Input.GetMouseButton(1))
                 {
                     Vector2 pos = Input.mousePosition;
                     Vector2 offset;
@@ -134,13 +134,13 @@ public class InputController : MonoBehaviour
                 current = behind;
                 behind.enabled = true;
 
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) && !Input.GetMouseButton(1))
                 {
                     oldPoint = Input.mousePosition;
                 }
 
                 // Look
-                if (Input.GetMouseButton(0))
+                if (Input.GetMouseButton(0) && !Input.GetMouseButton(1) && !Input.GetMouseButtonUp(1))
                 {
                     Vector2 pos = Input.mousePosition;
                     Vector2 offset;
@@ -179,6 +179,7 @@ public class InputController : MonoBehaviour
                 // Launch
                 if (Input.GetMouseButtonUp(1))
                 {
+                    oldPoint = Input.mousePosition;
                     player.GetComponent<Rigidbody>().freezeRotation = false;
                     player.LaunchCharge(behindCamera.pitch.transform.forward);
                     player.SetCharging(false);
@@ -189,13 +190,13 @@ public class InputController : MonoBehaviour
                 current = behind;
                 behind.enabled = true;
 
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) && !Input.GetMouseButton(1))
                 {
                     oldPoint = Input.mousePosition;
                 }
 
                 // Look
-                if (Input.GetMouseButton(0))
+                if (Input.GetMouseButton(0) && !Input.GetMouseButton(1) && !Input.GetMouseButtonUp(1))
                 {
                     Vector2 pos = Input.mousePosition;
                     Vector2 offset;
@@ -246,6 +247,7 @@ public class InputController : MonoBehaviour
                     // TODO: Call function for launching player.
                     Vector2 difference = oldPoint - (Vector2) Input.mousePosition;
                     player.Launch(difference.y * 3);
+                    oldPoint = Input.mousePosition;
                 }
                 break;
             case ControlMode.Cross:

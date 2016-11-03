@@ -29,7 +29,7 @@ public class PlayerBehaviour : MonoBehaviour {
     /// </summary>
     public void PlayerMetObject(GameObject obj)
     {
-        Behaviour objBehaviour = obj.GetComponent<Item>().behaviour;
+        Behaviour objBehaviour = obj.GetComponent<GameplayElement>().behaviour;
 
         switch (objBehaviour)
         {

@@ -11,7 +11,7 @@ public enum Movement
 //just added some for example.
 public enum Behaviour
 {
-    none, switchItem, hazardSwitch, sticky, bouncy, slippery, fire,
+    none, automaticDoors, switchItem, hazardSwitch, sticky, bouncy, slippery, fire,
     ice, grabby, electrocution, explosive
 }
 
@@ -25,7 +25,7 @@ public enum Fragility
     fragile, solid
 }
 
-public class Item : MonoBehaviour {
+public class GameplayElement : MonoBehaviour {
 
     public Behaviour behaviour = Behaviour.none;
     public Movement movement = Movement.none;

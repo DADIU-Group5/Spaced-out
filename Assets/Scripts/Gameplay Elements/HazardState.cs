@@ -16,7 +16,7 @@ public class HazardState : MonoBehaviour {
     private Color flashColour = Color.cyan;
 
     [HideInInspector]
-    public Item itemState;
+    public GameplayElement itemState;
 
     public void EnabledOrDisableTrap()
     {
@@ -47,7 +47,7 @@ public class HazardState : MonoBehaviour {
     void Start()
     {
         orgColour = GetComponent<Renderer>().material.color;
-        itemState = this.GetComponent<Item>();
+        itemState = this.GetComponent<GameplayElement>();
         behaviour = itemState.behaviour;
 
     }

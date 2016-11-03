@@ -5,6 +5,7 @@ public class Door : MonoBehaviour {
 
     bool used = false;
     GameObject connectedTo;
+    public GameObject unusedPrefab;
 
 	public void ConnectRoom(GameObject go)
     {
@@ -15,5 +16,18 @@ public class Door : MonoBehaviour {
     public bool Connected()
     {
         return used;
+    }
+
+    public void CheckConnection()
+    {
+        if (!used)
+        {
+            GameObject go = Instantiate(unusedPrefab) as GameObject;
+            go.transform.position = transform.position;
+            go.transform.rotation = transform.rotation;
+            go.transform.parent = transform.parent;
+
+            Destroy(gameObject);
+        }
     }
 }

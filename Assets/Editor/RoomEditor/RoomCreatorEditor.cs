@@ -61,7 +61,6 @@ public class RoomCreatorEditor : Editor
             }
             states = States.Editing;
         }
-
     }
 
     void NoRoom()
@@ -85,9 +84,13 @@ public class RoomCreatorEditor : Editor
         {
             RC.AddNewEnvironmentalObject();
         }
-        if (GUILayout.Button("Create Dynamic Object"))
+        if (GUILayout.Button("Create Floating Object"))
         {
-            RC.AddNewDynamicObject();
+            RC.AddFloatingObject();
+        }
+        if (GUILayout.Button("Create Static Object"))
+        {
+            RC.AddStaticObject();
         }
         if (GUILayout.Button("Create Shaping Object"))
         {
@@ -97,7 +100,7 @@ public class RoomCreatorEditor : Editor
         {
             RC.AddNewDoor();
         }
-        if (GUILayout.Button("Clear!"))
+        if (GUILayout.Button("Clear!") && EditorUtility.DisplayDialog("Clear?", "Are you sure you want to clear the current room? Will erase any unsaved changes!", "I am sure", "Cancel"))
         {
             RC.DestroyRoom();
         }
@@ -107,6 +110,152 @@ public class RoomCreatorEditor : Editor
             if (RC.GetRoom().canBeRoom())
             {
                 states = States.Saving;
+            }
+        }
+        if (GUILayout.Button("UpdateAll"))
+        {
+            foreach (Transform child in RC.GetRoom().shapingParent.transform)
+            {
+                if (!RC.GetRoom().shapingObjects.Contains(child.gameObject))
+                {
+                    RC.GetRoom().AddShapingObject(child.gameObject);
+                }
+            }
+            foreach (Transform child in RC.GetRoom().floatingObjectParent.transform)
+            {
+                if (!RC.GetRoom().floatingObjects.Contains(child.gameObject))
+                {
+                    RC.GetRoom().AddFloatingObject(child.gameObject);
+                }
+            }
+            foreach (Transform child in RC.GetRoom().staticObjectParent.transform)
+            {
+                if (!RC.GetRoom().staticObjects.Contains(child.gameObject))
+                {
+                    RC.GetRoom().AddStaticObject(child.gameObject);
+                }
+            }
+            foreach (Transform child in RC.GetRoom().enviromentalObjectsParent.transform)
+            {
+                if (!RC.GetRoom().enviromentalObjects.Contains(child.gameObject))
+                {
+                    RC.GetRoom().AddEnviromentalObject(child.gameObject);
+                }
+            }
+
+            foreach (GameObject item in RC.GetRoom().floatingObjects)
+            {
+                if (item.GetComponent<ObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<ObjectSelector>());
+                }
+                if (item.GetComponent<ShapingObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<ShapingObjectSelector>());
+                }
+                if (item.GetComponent<FloatingObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<FloatingObjectSelector>());
+                }
+                if (item.GetComponent<EnviromentalObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<EnviromentalObjectSelector>());
+                }
+
+                //Actaul add
+                if (item.GetComponent<FloatingObjectSelector>() == null)
+                {
+                    item.AddComponent<FloatingObjectSelector>();
+                }
+            }
+
+            foreach (GameObject item in RC.GetRoom().staticObjects)
+            {
+                if (item.GetComponent<ObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<ObjectSelector>());
+                }
+                if (item.GetComponent<ShapingObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<ShapingObjectSelector>());
+                }
+                if (item.GetComponent<FloatingObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<FloatingObjectSelector>());
+                }
+                if (item.GetComponent<StaticObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<StaticObjectSelector>());
+                }
+                if (item.GetComponent<EnviromentalObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<EnviromentalObjectSelector>());
+                }
+
+                //Actaul add
+                if (item.GetComponent<StaticObjectSelector>() == null)
+                {
+                    item.AddComponent<StaticObjectSelector>();
+                }
+            }
+
+            foreach (GameObject item in RC.GetRoom().enviromentalObjects)
+            {
+                if (item.GetComponent<ObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<ObjectSelector>());
+                }
+                if (item.GetComponent<ShapingObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<ShapingObjectSelector>());
+                }
+                if (item.GetComponent<FloatingObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<FloatingObjectSelector>());
+                }
+                if (item.GetComponent<StaticObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<StaticObjectSelector>());
+                }
+                if (item.GetComponent<EnviromentalObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<EnviromentalObjectSelector>());
+                }
+
+                //Actaul add
+                if (item.GetComponent<EnviromentalObjectSelector>() == null)
+                {
+                    item.AddComponent<EnviromentalObjectSelector>();
+                }
+            }
+            foreach (GameObject item in RC.GetRoom().shapingObjects)
+            {
+                if(item.GetComponent<ObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<ObjectSelector>());
+                }
+                if (item.GetComponent<ShapingObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<ShapingObjectSelector>());
+                }
+                if (item.GetComponent<FloatingObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<FloatingObjectSelector>());
+                }
+                if (item.GetComponent<StaticObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<StaticObjectSelector>());
+                }
+                if (item.GetComponent<EnviromentalObjectSelector>() != null)
+                {
+                    DestroyImmediate(item.GetComponent<EnviromentalObjectSelector>());
+                }
+
+                //Actaul add
+                if (item.GetComponent<ShapingObjectSelector>() == null)
+                {
+                    item.AddComponent<ShapingObjectSelector>();
+                }
             }
         }
     }
@@ -243,6 +392,6 @@ public class RoomCreatorEditor : Editor
 
     void LoadRooms()
     {
-        rooms = new List<UnityEngine.Object>(Resources.LoadAll("Rooms"));
+        rooms = new List<Object>(Resources.LoadAll("Rooms"));
     }
 }

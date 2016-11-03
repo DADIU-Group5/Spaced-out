@@ -5,6 +5,12 @@ using System.Collections.Generic;
 public class LevelGenerator : MonoBehaviour {
 
     List<Object> rooms = new List<Object>();
+    List<Object> availableRooms = new List<Object>();
+    List<Room> spawnedRooms = new List<Room>();
+
+    Object lastSpawnedRoom = null;
+
+    public GameObject doorPrefab;
     public GameObject lastDoor;
     public int seed;
     public int minRooms = 7;
@@ -14,10 +20,13 @@ public class LevelGenerator : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-        #if UNITY_EDITOR
-            UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
-        #endif
-        seed = Random.Range(0, 100);
+#if UNITY_EDITOR
+        UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
+#endif
+        if (seed == -1)
+        {
+            seed = Random.Range(0, 100);
+        }
         Random.InitState(seed);
         LoadRooms();
         for (int i = 0; i < Random.Range(minRooms, maxRooms); i++)
@@ -25,6 +34,14 @@ public class LevelGenerator : MonoBehaviour {
             if (!CreateRandomRoom())
             {
                 break;
+            }
+        }
+
+        foreach (Room item in spawnedRooms)
+        {
+            foreach (GameObject door in item.doorObjects)
+            {
+                door.GetComponent<Door>().CheckConnection();
             }
         }
 	}
@@ -35,6 +52,7 @@ public class LevelGenerator : MonoBehaviour {
 	void LoadRooms()
     {
         rooms = new List<Object>(Resources.LoadAll("Rooms"));
+        availableRooms = new List<Object>(rooms);
     }
 
     /// <summary>
@@ -43,7 +61,7 @@ public class LevelGenerator : MonoBehaviour {
     bool CreateRandomRoom()
     {
         //Creates a new room. Get a reference to the room script, and get a random entrance door.
-        GameObject newRoom = Instantiate((GameObject)rooms[Random.Range(0, rooms.Count)]) as GameObject;
+        GameObject newRoom = Instantiate(GetavailableRoom()) as GameObject;
         Room theRoom = newRoom.GetComponent<Room>();
         GameObject entranceDoor = GetRandomDoor(theRoom);
 
@@ -65,6 +83,10 @@ public class LevelGenerator : MonoBehaviour {
         else
         {
             entranceDoor.GetComponent<Door>().ConnectRoom(lastDoor);
+            if (lastDoor != null)
+            {
+                lastDoor.GetComponent<Door>().ConnectRoom(newRoom);
+            }
 
             //Make a random door the exit.
             lastDoor = GetRandomDoor(theRoom);
@@ -73,7 +95,10 @@ public class LevelGenerator : MonoBehaviour {
                 Debug.LogError("Something went wrong, you need to 'connect' a door, when using it.");
             }
         }
+        spawnedRooms.Add(theRoom);
+        lastSpawnedRoom = (Object)newRoom;
         allBounds.Add(newBound);
+        theRoom.RandomizeInterior();
         return true;
     }
 
@@ -104,7 +129,7 @@ public class LevelGenerator : MonoBehaviour {
         //However it is not very optimized.
 
         //The amount of doors.
-        int amount = r.doorObject.Count;
+        int amount = r.doorObjects.Count;
         int rand;
         //Amount of tries.
         int counter = 100;
@@ -113,9 +138,9 @@ public class LevelGenerator : MonoBehaviour {
             counter--;
             rand = Random.Range(0, amount);
             //If not already used, use it.
-            if (!r.doorObject[rand].GetComponent<Door>().Connected())
+            if (!r.doorObjects[rand].GetComponent<Door>().Connected())
             {
-                return r.doorObject[rand];
+                return r.doorObjects[rand];
             }
             if (counter == 0)
             {
@@ -124,5 +149,23 @@ public class LevelGenerator : MonoBehaviour {
         }
         Debug.LogError("no valid door, should not happen!");
         return null;
+    }
+
+    GameObject GetavailableRoom()
+    {
+        if (availableRooms.Count == 0)
+        {
+            availableRooms = new List<Object>(rooms);
+        }
+        int rand = Random.Range(0, availableRooms.Count);
+        GameObject go = (GameObject)availableRooms[rand];
+        availableRooms.RemoveAt(rand);
+
+        if(lastSpawnedRoom == go)
+        {
+            return GetavailableRoom();
+        }
+
+        return go;
     }
 }

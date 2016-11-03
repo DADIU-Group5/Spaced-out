@@ -6,11 +6,11 @@ public class calcbounds : MonoBehaviour {
 
     Bounds bounds;
 
-    void OnDrawGizmos()
+    /*void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(/*transform.position - new Vector3(0, -1,- 2)*/bounds.center, bounds.size);
-    }
+        Gizmos.DrawWireCube(bounds.center, bounds.size);
+    }*/
 
     // Use this for initialization
     public Bounds calc () {

@@ -11,7 +11,7 @@ public enum Movement
 //just added some for example.
 public enum Behaviour
 {
-    none, hazardSwitch, sticky, bouncy, slippery, fire,
+    none, switchItem, hazardSwitch, sticky, bouncy, slippery, fire,
     ice, grabby, electrocution, explosive
 }
 
@@ -34,6 +34,12 @@ public class Item : MonoBehaviour {
     public void SetMovement(Movement _movement)
     {
         movement = _movement;
+        //if this item floats, then it needs a rigidbody to be manipulated by hazards.
+        /*if (movement == Movement.floatingItem)
+        {
+            this.gameObject.AddComponent<Rigidbody>();
+            this.gameObject.GetComponent<Rigidbody>().useGravity = false;
+        }*/
     }
 
     public void SetSize(ItemSize _itemSize)

@@ -6,9 +6,10 @@ public class RoomCreator : MonoBehaviour
 
     //Prefabs, needs to get these from a database.
     public GameObject baseRoomPrefab;
-    public GameObject staticObject;
+    public GameObject environmentalObject;
     public GameObject dynamicObject;
-    public GameObject envirionmentObject;
+    public GameObject shapingObject;
+    public GameObject DoorObject;
 
     Room currentRoom;
 
@@ -37,10 +38,10 @@ public class RoomCreator : MonoBehaviour
         return currentRoom;
     }
 
-    public void AddNewStaticObject()
+    public void AddNewEnvironmentalObject()
     {
-        GameObject temp = Instantiate(staticObject) as GameObject;
-        currentRoom.AddStaticObject(temp);
+        GameObject temp = Instantiate(environmentalObject) as GameObject;
+        currentRoom.AddEnviromentalObject(temp);
     }
 
     public void AddNewDynamicObject()
@@ -49,10 +50,16 @@ public class RoomCreator : MonoBehaviour
         currentRoom.AddDynamicObject(temp);
     }
 
-    public void AddNewEnvironmentObject()
+    public void AddNewshapingObject()
     {
-        GameObject temp = Instantiate(envirionmentObject) as GameObject;
-        currentRoom.AddEnvirionmentalObject(temp);
+        GameObject temp = Instantiate(shapingObject) as GameObject;
+        currentRoom.AddShapingObject(temp);
+    }
+
+    public void AddNewDoor()
+    {
+        GameObject temp = Instantiate(DoorObject) as GameObject;
+        currentRoom.AddDoor(temp);
     }
 
     public void DestroyRoom()

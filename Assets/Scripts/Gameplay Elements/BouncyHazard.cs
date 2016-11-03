@@ -1,37 +1,43 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class StickyHazard : MonoBehaviour {
+public class BouncyHazard : MonoBehaviour {
 
     [HideInInspector]
     public GameObject player;
 
-    [Tooltip("Minimum speed in the sticky zone.")]
-    public Vector3 minimumSpeed = new Vector3(.1f,.1f,.1f);
-
-    [Tooltip("How much the speed decreases at each FixedUpdate")]
-    public float speedDecrease = 0.1f;
+    [Tooltip("Set bounciness!")]
+    public float bounciness = 0.5f;
 
     // Internal list that tracks objects that enter this object's "zone"
     private List<Collider> objects = new List<Collider>();
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
+    //so far is only adds force, like the fan does - how should this work
     void FixedUpdate()
     {
         for (int i = 0; i < objects.Count; i++)
         {
             Rigidbody rgb = objects[i].GetComponent<Rigidbody>();
-            if (Mathf.Abs(Vector3.Distance(rgb.velocity, minimumSpeed)) > 0.01f)
-            {
-                //foreach object in sticky influence, lower velocity. (Force instead?)
-                rgb.velocity = rgb.velocity * (1f-speedDecrease);
-            }
+            //foreach object in sticky influence, lower velocity. (Force instead?)
+            rgb.AddForce(Vector3.up * bounciness, ForceMode.Impulse);
         }
     }
+    /*
+    public IEnumerator Bouncer()
+    {
+
+        yield return new WaitForSeconds(1f);
+        //do something to the list of objects every x seconds!
+        bounce;
+        wait...
+        bring down;
+    }*/
 
     void OnTriggerEnter(Collider other)
     {

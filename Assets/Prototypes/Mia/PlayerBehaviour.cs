@@ -22,12 +22,14 @@ public class PlayerBehaviour : MonoBehaviour {
         {
             PlayerMetObject(other.gameObject);
         }
-
     }
 
+    /// <summary>
+    /// Player met and object, decide on proper reaction.
+    /// </summary>
     public void PlayerMetObject(GameObject obj)
     {
-        Behaviour objBehaviour = obj.GetComponent<Item>().behaviour;
+        Behaviour objBehaviour = obj.GetComponent<GameplayElement>().behaviour;
 
         switch (objBehaviour)
         {
@@ -36,18 +38,6 @@ public class PlayerBehaviour : MonoBehaviour {
                 onFire = true;
                 obj.GetComponent<FireHazard>().StartCoroutine(
                     obj.GetComponent<FireHazard>().BurnToDeath());
-                return;
-            case Behaviour.bouncy:
-                Debug.Log("Bouncy Castle!");
-                return;
-            case Behaviour.slippery:
-                Debug.Log("Slippery like and eel!");
-                return;
-            case Behaviour.sticky:
-                Debug.Log("What a sticky situation.");
-                return;
-            case Behaviour.explosive:
-                Debug.Log("Boom! Explosive.");
                 return;
             case Behaviour.electrocution:
                 Debug.Log("Hair-raising!");

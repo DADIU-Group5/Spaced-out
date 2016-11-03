@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class SlipperyHazard : MonoBehaviour {
 
+    //should be in direction of blue arrow
     [HideInInspector]
     public GameObject player;
 
@@ -38,7 +39,7 @@ public class SlipperyHazard : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Player" || other.transform.tag == "object" &&
-            other.transform.GetComponent<Item>().movement == Movement.floatingItem)
+            other.transform.GetComponent<GameplayElement>().movement == Movement.floatingItem)
         {   //if it's an object with a rigidbody (moveable),
             //add to list of objects in collider...
             objects.Add(other);
@@ -48,7 +49,7 @@ public class SlipperyHazard : MonoBehaviour {
     void OnTriggerExit(Collider other)
     {
         if (other.transform.tag == "Player" || other.transform.tag == "object" &&
-            other.transform.GetComponent<Item>().movement == Movement.floatingItem)
+            other.transform.GetComponent<GameplayElement>().movement == Movement.floatingItem)
         {   //if the objects leave the collider, remove from list.
             objects.Remove(other);
         }

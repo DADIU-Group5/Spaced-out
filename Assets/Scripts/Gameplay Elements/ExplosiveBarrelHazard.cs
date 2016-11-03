@@ -60,6 +60,9 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
         //Explode, and destroy object/start animation:
 
         //find all objects in radius of child's spherecollider...
+
+        //Physics.OverlapSphere()
+
         for (int i = 0; i < explosionRadius.objects.Count; i++)
         {
             Rigidbody rgb = explosionRadius.objects[i].GetComponent<Rigidbody>();
@@ -70,14 +73,15 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
         }
 
         Destroy(gameObject);
-
     }
 
-        //The object checks if anything with a high enough velocity hits it...
-        //if it does, it explodes, and adds force to every object in radius
-        //the radius is determined by the spherecollider of the Barrel's child
-        //which also keeps track of what is in range.
-        void OnCollisionEnter(Collision other)
+    /// <summary>
+    /// The object checks if anything with a high enough velocity hits it...
+    /// if it does, it explodes, and adds force to every object in radius
+    /// the radius is determined by the spherecollider of the Barrel's child
+    /// which also keeps track of what is in range.
+    /// </summary>
+    void OnCollisionEnter(Collision other)
     {
         if (other.transform.tag == "Player" || 
             other.transform.tag == "object" && other.gameObject.GetComponent<Rigidbody>() != null)
@@ -89,25 +93,13 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
             //if the velocity is enough to explode...
             if (pushForce >= explodeForce)
             {
-                if (explosionRadius.objects.Count > 0)
-                {
-                    StartCoroutine(Exploder());
-                }
+                StartCoroutine(Exploder());
             }
             //if the force is not enough to explode, just push instead.
             else
-            { 
+            {
                 GetComponent<Rigidbody>().AddForce(pushDirection * pushForce);
             }
         }
     }
-
-    /*//should it return when not touched?
-    void OnTriggerExit(Collider other)
-    {
-        if (other.transform.tag == "Player" || other.transform.tag == "object")
-        {   
-            
-        }
-    }*/
 }

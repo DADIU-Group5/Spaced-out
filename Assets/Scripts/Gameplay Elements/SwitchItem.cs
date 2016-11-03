@@ -26,7 +26,7 @@ public class SwitchItem : MonoBehaviour {
         {
             foreach (GameObject hazard in assignedHazards)
             {
-                hazard.GetComponent<HazardState>().isOn = !hazard.GetComponent<HazardState>().isOn;
+                hazard.GetComponent<HazardState>().EnabledOrDisableTrap();
             }
         }
     }

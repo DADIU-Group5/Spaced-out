@@ -2,62 +2,60 @@
 using System.Collections.Generic;
 using System;
 
-namespace SpacedOut.Utils
+public enum Language
 {
-    public class Translator : Singleton<Translator>
+    Danish, English
+}
+
+public class Translator : Singleton<Translator>
+{
+    private Language language;
+    private Dictionary<string, string> danish;
+    private Dictionary<string, string> english;
+
+    protected override void Awake()
     {
-        public enum Language
+        base.Awake();
+        language = Language.English;
+        LoadTranslations();
+    }
+
+    // returns a translated string
+    public string Get(string key)
+    {
+        if (language == Language.Danish)
         {
-            Danish, English
+            if (danish.ContainsKey(key))
+                return danish[key];
         }
-        private Language language;
-        private Dictionary<string, string> danish;
-        private Dictionary<string, string> english;
-
-        protected override void Awake()
+        else
         {
-            base.Awake();
-            language = Language.English;
-            LoadTranslations();
+            if (english.ContainsKey(key))
+                return english[key];
         }
+        Debug.LogWarning("Translation key not found: " + key);
+        return key;
+    }
 
-        // returns a translated string
-        public string Get(string key)
+    // change the language
+    public void SetLanguage(Language lan)
+    {
+        language = lan;
+    }
+
+    // initial load of all translations
+    private void LoadTranslations()
+    {
+        danish = new Dictionary<string, string>();
+        english = new Dictionary<string, string>();
+        TextAsset asset = Resources.Load<TextAsset>("Translations");
+        var lines = asset.text.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+
+        for (int i = 1; i < lines.Length; i++)
         {
-            if (language == Language.Danish)
-            {
-                if (danish.ContainsKey(key))
-                    return danish[key];
-            }
-            else
-            {
-                if (english.ContainsKey(key))
-                    return english[key];
-            }
-            Debug.LogWarning("Translation key not found: " + key);
-            return key;
-        }
-
-        // change the language
-        public void SetLanguage(Language lan)
-        {
-            language = lan;
-        }
-
-        // initial load of all translations
-        private void LoadTranslations()
-        {
-            danish = new Dictionary<string, string>();
-            english = new Dictionary<string, string>();
-            TextAsset asset = Resources.Load<TextAsset>("Translations");
-            var lines = asset.text.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
-
-            for (int i = 1; i < lines.Length; i++)
-            {
-                var vals = lines[i].Split('\t');
-                english[vals[0]] = vals[1];
-                danish[vals[0]] = vals[2];
-            }
+            var vals = lines[i].Split('\t');
+            english[vals[0]] = vals[1];
+            danish[vals[0]] = vals[2];
         }
     }
 }

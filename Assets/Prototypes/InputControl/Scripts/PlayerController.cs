@@ -104,6 +104,7 @@ public class PlayerController : MonoBehaviour
     {
         Rigidbody body = GetComponent<Rigidbody>();
         body.AddForce(force * direction.normalized);
+        //body.velocity += force * direction.normalized / 100;
     }
 
     public void Launch(float force)

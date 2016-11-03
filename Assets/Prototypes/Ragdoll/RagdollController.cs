@@ -4,6 +4,7 @@ using System.Collections;
 public class RagdollController : MonoBehaviour {
 
     public Rigidbody[] ragdollRig;
+    public CharacterJoint[] ragdollCharacterJoint;
     public Rigidbody ragdollRoot;
 
     // Use this for initialization
@@ -11,6 +12,7 @@ public class RagdollController : MonoBehaviour {
     {
         //find ragdoll joints in ragdollrigged gameobject, acess their rigidbodies
         ragdollRig = this.GetComponentsInChildren<Rigidbody>();
+        ragdollCharacterJoint = this.GetComponentsInChildren<CharacterJoint>();
         foreach (Rigidbody joint in ragdollRig)
         {
             //isKinematic
@@ -18,6 +20,11 @@ public class RagdollController : MonoBehaviour {
         }
         ragdollRoot.isKinematic = false;
         ragdollRoot.useGravity = false;
+
+        foreach (CharacterJoint charJoint in ragdollCharacterJoint)
+        {
+            charJoint.enableProjection = true;
+        }
     }
 
     public void RagdollStart()
@@ -29,7 +36,6 @@ public class RagdollController : MonoBehaviour {
             joint.isKinematic = false;
         }
         ragdollRoot.isKinematic = false;
-        ragdollRoot.useGravity = false;
 
         //disable animator here
     }
@@ -43,7 +49,6 @@ public class RagdollController : MonoBehaviour {
             joint.isKinematic = true;
         }
         ragdollRoot.isKinematic = false;
-        ragdollRoot.useGravity = false;
 
         //enable animator here
     }

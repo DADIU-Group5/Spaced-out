@@ -1,39 +1,21 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
-using UnityEngine.UI;
-
 
 public class InputController : MonoBehaviour
 {
-    //private bool primed = false;
     private bool invertCameraControls = false;
     private Vector2 oldPoint;
-    //private Camera current;
-    //private Plane inputPlane;
-
-    //public bool tilt = false
-    //public bool sidescroll = false, swipeRotate = true;
 
     public float cameraRotateSpeed = 4000f;
-    //public Camera camera;
+    public Camera cam;
     public BehindCamera behindCamera;
     public PlayerController player;
     public Transform playerTransform;
     public Transform playerPitchTransform;
 
-    public List<string> controlNames;
-
-    public Text controlText;
-
-    public Text chargeText;
-    public Transform chargeArrow;
-
-    public float forceScalling = 6.0f;
+    public float forceScaling = 6.0f;
 
     private void Awake()
-    {
-        //inputPlane = new Plane(Vector3.right, Vector3.zero);
-    }
+    { }
 
     private void Update()
     {
@@ -42,9 +24,6 @@ public class InputController : MonoBehaviour
         {
             Application.Quit();
         }
-
-        //current = behind;
-        //behind.enabled = true;
 
         if (Input.GetMouseButtonDown(0) && !Input.GetMouseButton(1))
         {
@@ -55,21 +34,12 @@ public class InputController : MonoBehaviour
         if (Input.GetMouseButton(0) && !Input.GetMouseButton(1) && !Input.GetMouseButtonUp(1))
         {
             Vector2 pos = Input.mousePosition;
-            Vector2 offset;
-            //  if (swipeRotate)
-            //  {
-            offset = pos - oldPoint;
-            //  }
-            //else
-            // {
-            //    offset = pos - ScreenCenter();
-            //}
+            Vector2 offset = pos - oldPoint;
 
             if (invertCameraControls)
-            {
                 offset = -offset;
-            }
-            DirectedRotation(offset);//, tilt);
+            
+            DirectedRotation(offset);
             oldPoint = pos;
         }
 
@@ -78,7 +48,6 @@ public class InputController : MonoBehaviour
         {
             // Hide save starting positions
             oldPoint = Input.mousePosition;
-            //player.SetCharging(true);
             player.SetHoldControl(false);
         }
 
@@ -107,7 +76,7 @@ public class InputController : MonoBehaviour
     {
         Vector2 difference = oldPoint - (Vector2)Input.mousePosition;
 
-        float launchForce = difference.y * forceScalling;
+        float launchForce = difference.y * forceScaling;
 
         return launchForce.Clamp(player.minLaunchForce, player.maxLaunchForce);
     }
@@ -120,7 +89,6 @@ public class InputController : MonoBehaviour
 
     private Vector2 ScreenCenter()
     {
-        var cam = GetComponent<Camera>();
         return new Vector2(cam.pixelWidth / 2f, cam.pixelHeight / 2f);
     }
 
@@ -135,4 +103,5 @@ public class InputController : MonoBehaviour
     {
         invertCameraControls = !invertCameraControls;
     }
+
 }

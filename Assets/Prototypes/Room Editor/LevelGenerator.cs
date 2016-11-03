@@ -16,6 +16,8 @@ public class LevelGenerator : MonoBehaviour {
     public int minRooms = 7;
     public int maxRooms = 20;
 
+    Door firstDoor = null;
+
     List<Bounds> allBounds = new List<Bounds>();
     
 	// Use this for initialization
@@ -27,8 +29,10 @@ public class LevelGenerator : MonoBehaviour {
         {
             seed = Random.Range(0, 100);
         }
+
         Random.InitState(seed);
         LoadRooms();
+
         for (int i = 0; i < Random.Range(minRooms, maxRooms); i++)
         {
             if (!CreateRandomRoom())
@@ -37,6 +41,7 @@ public class LevelGenerator : MonoBehaviour {
             }
         }
 
+        firstDoor.BreakConnection();
         foreach (Room item in spawnedRooms)
         {
             foreach (GameObject door in item.doorObjects)
@@ -44,6 +49,7 @@ public class LevelGenerator : MonoBehaviour {
                 door.GetComponent<Door>().CheckConnection();
             }
         }
+        
 	}
 	
     /// <summary>
@@ -64,6 +70,10 @@ public class LevelGenerator : MonoBehaviour {
         GameObject newRoom = Instantiate(GetavailableRoom()) as GameObject;
         Room theRoom = newRoom.GetComponent<Room>();
         GameObject entranceDoor = GetRandomDoor(theRoom);
+        if(firstDoor == null)
+        {
+            firstDoor = entranceDoor.GetComponent<Door>();
+        }
 
         //Gets the rotation of the room. Should be rotated equal to the difference between the last and new doors right axis.
         Quaternion rot = Quaternion.FromToRotation(entranceDoor.transform.right, -lastDoor.transform.right);

@@ -30,4 +30,10 @@ public class Door : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+
+    public void BreakConnection()
+    {
+        used = false;
+        connectedTo = null;
+    }
 }

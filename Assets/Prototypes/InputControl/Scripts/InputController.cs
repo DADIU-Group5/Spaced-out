@@ -235,7 +235,7 @@ public class InputController : MonoBehaviour
                     // Calculate distance
                     // TODO: Update power bar.
                     Vector2 difference = oldPoint - (Vector2) Input.mousePosition;
-                    float launchForce = difference.y * 3;
+                    float launchForce = difference.y * 30;
                     player.SetLaunchForce(launchForce);
                 }
 
@@ -246,7 +246,7 @@ public class InputController : MonoBehaviour
                     // Perform slingshot breh
                     // TODO: Call function for launching player.
                     Vector2 difference = oldPoint - (Vector2) Input.mousePosition;
-                    player.Launch(difference.y * 3);
+                    player.Launch(difference.y * 30);
                     oldPoint = Input.mousePosition;
                 }
                 break;

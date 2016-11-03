@@ -17,14 +17,16 @@ public class RagdollController : MonoBehaviour {
         {
             //isKinematic
             joint.isKinematic = true;
+            joint.useGravity = false;
         }
         ragdollRoot.isKinematic = false;
-        ragdollRoot.useGravity = false;
 
         foreach (CharacterJoint charJoint in ragdollCharacterJoint)
         {
             charJoint.enableProjection = true;
         }
+
+        RagdollStart();
     }
 
     public void RagdollStart()

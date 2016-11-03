@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using System;
 
-public enum Language
-{
-    Danish, English
-}
+
 
 public class Translator : Singleton<Translator>
 {
+    public TextAsset translations;
     private Language language;
     private Dictionary<string, string> danish;
     private Dictionary<string, string> english;
@@ -16,8 +14,13 @@ public class Translator : Singleton<Translator>
     protected override void Awake()
     {
         base.Awake();
-        language = Language.English;
+        
         LoadTranslations();
+    }
+
+    void Start()
+    {
+        SettingsManager.instance.onLanguageChanged += LanguageChanged;
     }
 
     // returns a translated string
@@ -37,8 +40,7 @@ public class Translator : Singleton<Translator>
         return key;
     }
 
-    // change the language
-    public void SetLanguage(Language lan)
+    private void LanguageChanged(Language lan)
     {
         language = lan;
     }
@@ -48,14 +50,16 @@ public class Translator : Singleton<Translator>
     {
         danish = new Dictionary<string, string>();
         english = new Dictionary<string, string>();
-        TextAsset asset = Resources.Load<TextAsset>("Translations");
-        var lines = asset.text.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+        var lines = translations.text.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-        for (int i = 1; i < lines.Length; i++)
+        foreach (string line in lines)
         {
-            var vals = lines[i].Split('\t');
-            english[vals[0]] = vals[1];
-            danish[vals[0]] = vals[2];
+            // read the translations
+            string[] vals = line.Split(',');
+            if (vals.Length >= 2)
+                english[vals[0]] = vals[1].Trim('"');
+            if (vals.Length >= 3)
+                danish[vals[0]] = vals[2].Trim('"');
         }
     }
 }

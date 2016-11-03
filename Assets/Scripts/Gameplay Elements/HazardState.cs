@@ -25,11 +25,13 @@ public class HazardState : MonoBehaviour {
 
         if (isOn)
         {
-            GetComponent<Renderer>().material.color = orgColour;
+            if (gameObject.GetComponent<Renderer>() != null)
+                GetComponent<Renderer>().material.color = orgColour;
         }
         else
         {
-            GetComponent<Renderer>().material.color = flashColour;
+            if (gameObject.GetComponent<Renderer>() != null)
+                GetComponent<Renderer>().material.color = flashColour;
         }
 
         Debug.Log("An object was turned On: "+ isOn);
@@ -46,6 +48,7 @@ public class HazardState : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        if (gameObject.GetComponent<Renderer>() != null)
         orgColour = GetComponent<Renderer>().material.color;
         itemState = this.GetComponent<GameplayElement>();
         behaviour = itemState.behaviour;

@@ -1,16 +1,20 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class SwitchItem : MonoBehaviour {
 
     //Should contain logic on on/off,
     // as well as which object it manipulates.
    // [HideInInspector]
-    public GameObject assignedHazard;
+    public List<GameObject> assignedHazards;
 
+
+    /// <summary>
+    /// Assign an object to this switch
+    /// </summary>
     public void AssignHazardToSwitch(GameObject hazard)
     {
-        assignedHazard = hazard;
+        assignedHazards.Add(hazard);
     }
 
     //if and object or the player taps the switch, turn off/on
@@ -20,7 +24,10 @@ public class SwitchItem : MonoBehaviour {
     {
         if (other.transform.tag == "Player" || other.transform.tag == "object")
         {
-            assignedHazard.GetComponent<HazardState>().isOn = !assignedHazard.GetComponent<HazardState>().isOn;
+            foreach (GameObject hazard in assignedHazards)
+            {
+                hazard.GetComponent<HazardState>().isOn = !hazard.GetComponent<HazardState>().isOn;
+            }
         }
     }
 

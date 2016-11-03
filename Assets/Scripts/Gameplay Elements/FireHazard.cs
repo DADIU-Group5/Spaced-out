@@ -12,7 +12,10 @@ public class FireHazard : MonoBehaviour {
     void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
 	}
-	
+
+    /// <summary>
+    /// Burn the player to death, if fire is not put out.
+    /// </summary>
     public IEnumerator BurnToDeath()
     {
         yield return new WaitForSeconds(TimeUntilBurnToDeath);

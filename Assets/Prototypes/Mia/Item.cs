@@ -20,17 +20,37 @@ public enum ItemSize
     small, medium, grande
 }
 
+public enum Fragility
+{
+    fragile, solid
+}
+
 public class Item : MonoBehaviour {
 
     public Behaviour behaviour = Behaviour.none;
     public Movement movement = Movement.none;
     public ItemSize itemSize = ItemSize.small;
+    public Fragility fragility = Fragility.fragile;
 
+    /// <summary>
+    /// Set Fragility
+    /// </summary>
+    public void SetFragility(Fragility _fragility)
+    {
+        fragility = _fragility;
+    }
+
+    /// <summary>
+    /// Set Behaviour
+    /// </summary>
     public void SetBehaviour(Behaviour _behaviour)
     {
         behaviour = _behaviour;
     }
 
+    /// <summary>
+    /// Set Movement 
+    /// </summary>
     public void SetMovement(Movement _movement)
     {
         movement = _movement;
@@ -42,6 +62,9 @@ public class Item : MonoBehaviour {
         }*/
     }
 
+    /// <summary>
+    /// Set Size
+    /// </summary>
     public void SetSize(ItemSize _itemSize)
     {
         itemSize = _itemSize;

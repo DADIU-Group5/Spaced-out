@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class SlipperyHazard : MonoBehaviour {
 
+    //should be in direction of blue arrow
     [HideInInspector]
     public GameObject player;
 

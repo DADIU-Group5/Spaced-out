@@ -32,3 +32,5 @@ sysinfo.txt
 # DADIU Ignores
 /Assets/Local/
 /Assets/Local.meta
+Assets/Prototypes/Mia/ExampleClass.cs
+Assets/Prototypes/Mia/ExampleClass.cs.meta

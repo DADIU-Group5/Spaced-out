@@ -3,21 +3,8 @@ using System.Collections;
 
 public class AutomaticDoors : MonoBehaviour {
 
-    GameObject doorCheck0;
-    GameObject doorCheck1;
-
+    [HideInInspector]
     public HazardState state;
-    //if the player is touching both of these checks, then player dies.
-
-    //if door is closed,
-    //  check both doorChecks
-    //  if both are touching player
-    //      kill player
-
-    public void CheckForPlayer()
-    {
-
-    }
 
     public void CloseOpenDoor()
     {

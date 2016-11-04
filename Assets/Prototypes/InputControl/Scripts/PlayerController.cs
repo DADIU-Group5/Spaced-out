@@ -5,7 +5,9 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     [HideInInspector]
-    public bool onFire;
+    public bool onFire = false;
+    [HideInInspector]
+    public bool Dead = false;
 
     private bool charging = false, increasing = false;
     private float launchForce = 0f;
@@ -18,6 +20,12 @@ public class PlayerController : MonoBehaviour
     private float chargeArrowYHeight = 350.0f;
 
     private bool holdControl = true;
+
+    public void PlayerDied()
+    {
+        Dead = true;
+        StartCoroutine(GameObject.Find("GameOverCanvas").GetComponent<GameOverMenu>().GameOver());
+    }
 
     public float GetMinLaunchForce()
     {
@@ -36,6 +44,12 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (Dead)
+        {
+            PlayerDied();
+            Dead = !Dead;
+        }
+
         if (holdControl)
         {
             if (charging)

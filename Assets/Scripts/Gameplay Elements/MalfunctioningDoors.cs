@@ -58,7 +58,6 @@ public class MalfunctioningDoors : MonoBehaviour {
             Debug.Log("Player has been crushed!");
 
             GameObject.FindGameObjectWithTag("Player").GetComponent<Renderer>().material.color = Color.blue;
-            crushingPlayer = false;
         }
 
         if (doorIsMalfunctioning && !malfunctioning)

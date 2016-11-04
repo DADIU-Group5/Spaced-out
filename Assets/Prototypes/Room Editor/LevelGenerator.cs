@@ -15,6 +15,7 @@ public class LevelGenerator : MonoBehaviour {
     public int seed;
     public int minRooms = 7;
     public int maxRooms = 20;
+    public float distanceBetweenRooms = 1;
 
     Door firstDoor = null;
 
@@ -46,7 +47,18 @@ public class LevelGenerator : MonoBehaviour {
         {
             foreach (GameObject door in item.doorObjects)
             {
-                door.GetComponent<Door>().CheckConnection();
+                if (door.GetComponent<Door>().GetDoorType() == DoorType.entrance)
+                {
+                    GameObject newDoor = Instantiate(doorPrefab);
+                    newDoor.transform.rotation = door.transform.rotation;
+                    newDoor.transform.position = door.transform.position + (door.transform.right * (distanceBetweenRooms / 2));
+                    newDoor.transform.parent = door.transform.parent;
+                    Destroy(door);
+                }
+                else
+                {
+                    door.GetComponent<Door>().CheckConnection();
+                }
             }
         }
         
@@ -80,7 +92,7 @@ public class LevelGenerator : MonoBehaviour {
         newRoom.transform.rotation = rot;
 
         //Moves the new room into position.
-        newRoom.transform.position = newRoom.transform.position + (lastDoor.transform.position - entranceDoor.transform.position)-entranceDoor.transform.right;
+        newRoom.transform.position = newRoom.transform.position + (lastDoor.transform.position - entranceDoor.transform.position)-(entranceDoor.transform.right* distanceBetweenRooms);
 
         //Get bounds.
         Bounds newBound = newRoom.AddComponent<calcbounds>().calc();

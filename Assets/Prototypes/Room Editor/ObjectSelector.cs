@@ -8,9 +8,11 @@ public class ObjectSelector : MonoBehaviour {
     public List<Object> canBe;
     GameObject GOshowing;
     int showing;
+    public bool lockObject = false;
+    public Object lockedAs;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         LoadObjects();
 	}
 
@@ -80,12 +82,37 @@ public class ObjectSelector : MonoBehaviour {
         {
             return;
         }
-        showing = Random.Range(0, canBe.Count);
-        GOshowing = Instantiate((GameObject)canBe[showing], transform.position, Quaternion.identity, transform.parent) as GameObject;
-        if(gameObject.transform.localScale != Vector3.one){
+        if (lockObject)
+        {
+            ReplaceModel(lockedAs);
+        }
+        else
+        {
+            showing = Random.Range(0, canBe.Count);
+            ReplaceModel(canBe[showing]);
+        }
+        Destroy(gameObject);
+    }
+
+    void ReplaceModel(Object obj)
+    {
+        GOshowing = Instantiate((GameObject)obj, transform.position, Quaternion.identity, transform.parent) as GameObject;
+        if (gameObject.transform.localScale != Vector3.one)
+        {
             GOshowing.transform.localScale = gameObject.transform.localScale;
         }
         GOshowing.transform.rotation = gameObject.transform.rotation;
-        Destroy(gameObject);
+    }
+
+    public void LockObject()
+    {
+        lockObject = true;
+        lockedAs = (Object)GOshowing;
+    }
+
+    public void UnlockObject()
+    {
+        lockObject = false;
+        lockedAs = null;
     }
 }

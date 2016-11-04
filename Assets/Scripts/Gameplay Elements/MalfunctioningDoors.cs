@@ -5,6 +5,10 @@ public class MalfunctioningDoors : MonoBehaviour {
 
     public bool doorIsMalfunctioning = true;
 
+    [Header("The Random range between Close/Open doors:")]
+    public float minRange = 2f;
+    public float maxRange = 4f;
+
     private bool malfunctioning = false;
     private bool closed = true;
 
@@ -12,17 +16,18 @@ public class MalfunctioningDoors : MonoBehaviour {
     public HazardState state;
     private Animator animator;
 
+    [HideInInspector]
+    public int doorsTouchingPlayer = 0;
+    private bool crushingPlayer = false;
+
     public void CloseOpenDoor()
     {
-        //yield return new WaitForSeconds(Random.Range[2, 4]);
         if (!state.isOn || closed)
         {
-            Debug.Log("opening doors");
             animator.SetTrigger("Open");
         }
         else
         {
-            Debug.Log("closing doors");
             animator.SetTrigger("Close");
         }
     }
@@ -31,10 +36,9 @@ public class MalfunctioningDoors : MonoBehaviour {
     {
         while (malfunctioning)
         {
-            Debug.Log("doors are malfunctioning");
             CloseOpenDoor();
             closed = !closed;
-            yield return new WaitForSeconds(Random.Range(2, 4));
+            yield return new WaitForSeconds(Random.Range(minRange, maxRange));
         }
     }
 
@@ -46,6 +50,17 @@ public class MalfunctioningDoors : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (doorsTouchingPlayer >= 2 && !crushingPlayer &&
+            this.animator.GetCurrentAnimatorStateInfo(0).IsName("DoorClose"))
+        {
+            crushingPlayer = true;
+
+            Debug.Log("Player has been crushed!");
+
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Renderer>().material.color = Color.blue;
+            crushingPlayer = false;
+        }
+
         if (doorIsMalfunctioning && !malfunctioning)
         {
             

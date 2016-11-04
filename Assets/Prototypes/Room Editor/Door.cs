@@ -16,9 +16,17 @@ public class Door : MonoBehaviour {
         doorType = DoorType.entrance;
     }
 
-    public bool Connected()
+    public void SetExit()
     {
         doorType = DoorType.exit;
+    }
+
+    public bool Connected()
+    {
+        if(doorType == DoorType.exit)
+        {
+            return false;
+        }
         return used;
     }
 

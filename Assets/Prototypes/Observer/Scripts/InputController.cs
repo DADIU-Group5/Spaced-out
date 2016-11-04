@@ -78,11 +78,9 @@ namespace ObserverPattern
 
                 var evt = new Event(EventName.PlayerLaunch);
 
-                evt.payload.Add("launch_force", "20.0f");
+                evt.payload.Add(PayloadConstants.LAUNCH_SPEED, GetLaunchForce());
 
                 subject.Notify(gameObject, evt);
-
-                //player.Launch(GetLaunchForce());
 
                 oldPoint = Input.mousePosition;
             }

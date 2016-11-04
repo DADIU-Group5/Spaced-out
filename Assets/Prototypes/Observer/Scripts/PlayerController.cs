@@ -35,6 +35,11 @@ namespace ObserverPattern
             holdControl = input;
         }
 
+        private void Awake()
+        {
+            subject.AddObserver(this);
+        }
+
         private void Update()
         {
             if (holdControl)

@@ -7,11 +7,23 @@ public class FireHazard : MonoBehaviour {
 
     [HideInInspector]
     public GameObject player;
+    private bool burningPlayer = false;
 
     // Use this for initialization
     void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
 	}
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "Player" && !burningPlayer)
+        {
+            burningPlayer = true;
+            player.GetComponent<PlayerController>().onFire = true;
+            StartCoroutine(BurnToDeath());
+        }
+    }
 
     /// <summary>
     /// Burn the player to death, if fire is not put out.
@@ -21,7 +33,7 @@ public class FireHazard : MonoBehaviour {
         yield return new WaitForSeconds(TimeUntilBurnToDeath);
 
         //if the player is still on fire after this time, die.
-        if (player.GetComponent < PlayerBehaviour >(). onFire)
+        if (player.GetComponent < PlayerController >(). onFire)
         {
             Debug.Log("Player has burned to death!");
         }

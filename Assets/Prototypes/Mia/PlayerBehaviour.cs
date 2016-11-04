@@ -33,12 +33,12 @@ public class PlayerBehaviour : MonoBehaviour {
 
         switch (objBehaviour)
         {
-            case Behaviour.fire:
+            /*case Behaviour.fire:
                 Debug.Log("Burn, mofo!");
                 onFire = true;
                 obj.GetComponent<FireHazard>().StartCoroutine(
                     obj.GetComponent<FireHazard>().BurnToDeath());
-                return;
+                return;*/
             case Behaviour.electrocution:
                 Debug.Log("Hair-raising!");
                 return;

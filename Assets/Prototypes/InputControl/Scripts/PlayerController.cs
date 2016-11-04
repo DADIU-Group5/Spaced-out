@@ -4,6 +4,9 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
+    [HideInInspector]
+    public bool onFire;
+
     private bool charging = false, increasing = false;
     private float launchForce = 0f;
 

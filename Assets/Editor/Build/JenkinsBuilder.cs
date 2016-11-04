@@ -5,7 +5,8 @@ using System.IO;
 
 public class JenkinsBuilder : MonoBehaviour
 {
-    private const string BUILD_FOLDER = "Builds";
+    private const string buildFolder = "Builds";
+    private const string appName = "SpacedOut";
 
     private static string[] FindEnabledEditorScenes()
     {
@@ -18,25 +19,14 @@ public class JenkinsBuilder : MonoBehaviour
         return EditorScenes.ToArray();
     }
 
-    [MenuItem("Build/Alpha")]
-    private static void BuildAlpha()
+    // Bump version number in PlayerSettings.bundleVersion
+    private static int IncreaseBuildVersion()
     {
-        Build("SpacedOut_Alpha");
+        return ++PlayerSettings.Android.bundleVersionCode;
     }
 
-    [MenuItem("Build/Beta")]
-    private static void BuildBeta()
-    {
-        Build("SpacedOut_Beta");
-    }
-
-    [MenuItem("Build/Main")]
-    private static void BuildMain()
-    {
-        Build("SpacedOut_Main");
-    }
-
-    private static void Build(string name)
+    [MenuItem("Build/Build Game")]
+    private static void Build()
     {
         // load the scenes
         var scenes = FindEnabledEditorScenes();
@@ -45,17 +35,14 @@ public class JenkinsBuilder : MonoBehaviour
         {
             throw new UnityException("No scenes to build.");
         }
-
-        Directory.CreateDirectory(BUILD_FOLDER);
-
+        
+        Directory.CreateDirectory(buildFolder);
         UnityException exc = null;
-
         try
         {
-            BuildPipeline.BuildPlayer(
-                scenes,
-                BUILD_FOLDER + "/" + name + ".apk",
-                BuildTarget.Android, BuildOptions.None);
+            string version = string.Format("v{0}.{1}", PlayerSettings.bundleVersion, IncreaseBuildVersion().ToString("D2"));
+            string path = string.Format("{0}/{1}_{2}.apk", buildFolder, appName, version);
+            BuildPipeline.BuildPlayer(scenes, path, BuildTarget.Android, BuildOptions.None);
         }
         catch (UnityException e)
         {

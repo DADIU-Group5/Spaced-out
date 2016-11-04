@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System;
 
-
-
 public class Translator : Singleton<Translator>
 {
     public TextAsset translations;
@@ -14,12 +12,12 @@ public class Translator : Singleton<Translator>
     protected override void Awake()
     {
         base.Awake();
-        
         LoadTranslations();
     }
 
     void Start()
     {
+        language = SettingsManager.instance.GetLanguage();
         SettingsManager.instance.onLanguageChanged += LanguageChanged;
     }
 

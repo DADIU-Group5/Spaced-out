@@ -12,11 +12,6 @@ public class SettingsManager : Singleton<SettingsManager> {
     public event LanguageChangedEventHandler onLanguageChanged;
     // settings 
     public GameSettings settings;
-
-    void Start()
-    {
-
-    }
     
 	public void SetVolume(float volume)
     {
@@ -32,5 +27,10 @@ public class SettingsManager : Singleton<SettingsManager> {
             settings.language = language;
             onLanguageChanged(language);
         }
+    }
+
+    public Language GetLanguage()
+    {
+        return settings.language;
     }
 }

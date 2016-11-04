@@ -19,13 +19,24 @@ public class JenkinsBuilder : MonoBehaviour
         return EditorScenes.ToArray();
     }
 
-    // Bump version number in PlayerSettings.bundleVersion
-    private static int IncreaseBuildVersion()
+    [MenuItem("Build Server/Open Build Folder")]
+    private static void OpenBuildFolder()
     {
-        return ++PlayerSettings.Android.bundleVersionCode;
+        OpenExplorer(@"C:\Users\student\Documents\Spaced-out\Builds\");
     }
 
-    [MenuItem("Build/Build Game")]
+    private static void OpenExplorer(string path)
+    {
+        System.Diagnostics.Process.Start("explorer.exe", "/open," + path);
+    }
+
+    private static string IncreaseBuildVersion()
+    {
+        int version = ++PlayerSettings.Android.bundleVersionCode;
+        return version.ToString("D2");
+    }
+
+    [MenuItem("Build Server/Build Game")]
     private static void Build()
     {
         // load the scenes
@@ -40,7 +51,7 @@ public class JenkinsBuilder : MonoBehaviour
         UnityException exc = null;
         try
         {
-            string version = string.Format("v{0}.{1}", PlayerSettings.bundleVersion, IncreaseBuildVersion().ToString("D2"));
+            string version = string.Format("v{0}.{1}", PlayerSettings.bundleVersion, IncreaseBuildVersion());
             string path = string.Format("{0}/{1}_{2}.apk", buildFolder, appName, version);
             BuildPipeline.BuildPlayer(scenes, path, BuildTarget.Android, BuildOptions.None);
         }

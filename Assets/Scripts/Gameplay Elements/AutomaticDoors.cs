@@ -9,18 +9,19 @@ public class AutomaticDoors : MonoBehaviour {
     private bool lastOnOff = true;
 
     public bool doorIsMalfunctioning = false;
-    private bool malfunctioning = true;
+    private bool malfunctioning = false;
     private bool closed = true;
 
     public void CloseOpenDoor()
     {
-        //yield return new WaitForSeconds(Random.Range[2, 4]);
-        if (!state.isOn || malfunctioning && closed)
+        if (closed)
         {
+            closed = false;
             Debug.Log("opening doors");
             animator.SetTrigger("Open");
         } else
         {
+            closed = true;
             Debug.Log("closing doors");
             animator.SetTrigger("Close");
         }
@@ -30,46 +31,19 @@ public class AutomaticDoors : MonoBehaviour {
 	void Start () {
         state = gameObject.GetComponent<HazardState>();
         animator = gameObject.GetComponent<Animator>();
-        StartCoroutine(MalfunctioningDoors());
-    }
-
-    public IEnumerator MalfunctioningDoors()
-    {
-        while (malfunctioning)
-        {
-            Debug.Log("doors are malfunctioning");
-            CloseOpenDoor();
-            closed = !closed;
-            yield return new WaitForSeconds(Random.Range(2, 4));
-        }
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (doorIsMalfunctioning)
-        {
-            malfunctioning = true;
-        }
+        
         //this only opens/closes if the isOn state is changed.
         //if the door isOn == true, then malfunctioning is set to false.
-	    if (!state.isOn && state.isOn != lastOnOff)
+	    if (!state.isOn && closed)
         {
-            if (doorIsMalfunctioning)
-            {
-                malfunctioning = false;
-            }
-            //GetComponent<Collider>().enabled = true;
             CloseOpenDoor();
-        } else if (state.isOn != lastOnOff)
+        } else if (state.isOn && !closed)
         {
-            if (doorIsMalfunctioning)
-            {
-                malfunctioning = true;
-            }
-            //GetComponent<Collider>().enabled = false;
             CloseOpenDoor();
         }
-        lastOnOff = state.isOn;
-
     }
 }

@@ -20,7 +20,7 @@ public class FireHazard : MonoBehaviour {
         if (other.transform.tag == "Player" && !burningPlayer)
         {
             burningPlayer = true;
-            player.GetComponent<PlayerBehaviour>().onFire = true;
+            player.GetComponent<PlayerController>().onFire = true;
             StartCoroutine(BurnToDeath());
         }
     }
@@ -33,8 +33,9 @@ public class FireHazard : MonoBehaviour {
         yield return new WaitForSeconds(TimeUntilBurnToDeath);
 
         //if the player is still on fire after this time, die.
-        if (player.GetComponent < PlayerBehaviour >(). onFire)
+        if (player.GetComponent < PlayerController >(). onFire)
         {
+            Debug.Log("Player has burned to death!");
         }
     }
 }

@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     private bool charging = false, increasing = false;
     private float launchForce = 0f;
 
-    public float minLaunchForce = 100f, maxLaunchForce = 200f, launchSideScale = 10f, timeToMax = 1f;
+    public float minLaunchForce = 0f, maxLaunchForce = 3000f, launchSideScale = 10f;
     public Transform pitchTransform;
     public Text chargeText;
     public Transform chargeArrow;
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
     private void Charge()
     {
-        float delta = (Time.deltaTime * (maxLaunchForce - minLaunchForce)) / timeToMax;
+        float delta = (Time.deltaTime * (maxLaunchForce - minLaunchForce));
         if (increasing)
         {
             launchForce += delta;

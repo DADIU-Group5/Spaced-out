@@ -34,3 +34,6 @@ sysinfo.txt
 /Assets/Local.meta
 Assets/Prototypes/Mia/ExampleClass.cs
 Assets/Prototypes/Mia/ExampleClass.cs.meta
+Assets/Prototypes/InputControl/Scripts/PlayerController.cs.meta
+Assets/Prototypes/InputControl/InputControl.unity.meta
+Assets/Prototypes/InputControl/Scripts/InputController.cs.meta

@@ -6,8 +6,10 @@ namespace Prototype
     {
         private bool invertCameraControls = false;
         private Vector2 oldPoint;
+        private bool launchMode = false;
 
         public float cameraRotateSpeed = 4000f;
+        public float launchBuffer = 100f;
         public Camera cam;
         public BehindCamera behindCamera;
         public PlayerController player;
@@ -16,7 +18,7 @@ namespace Prototype
         public Transform playerTransform;
         public Transform playerPitchTransform;
 
-        public float forceScaling = 6.0f;
+
 
         private void Awake()
         { }
@@ -28,65 +30,92 @@ namespace Prototype
             {
                 Application.Quit();
             }
-
-            if (Input.GetMouseButtonDown(0) && !Input.GetMouseButton(1))
+            
+            // See of player was tapped. If he was, set launchMode to true, otherwise to false.
+            if (Input.GetMouseButtonDown(0))
             {
-                oldPoint = Input.mousePosition;
-            }
+                RaycastHit hit;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            // Look
-            if (Input.GetMouseButton(0) && !Input.GetMouseButton(1) && !Input.GetMouseButtonUp(1))
-            {
-                Vector2 pos = Input.mousePosition;
-                Vector2 offset = pos - oldPoint;
-
-                if (invertCameraControls)
+                if (Physics.Raycast(ray, out hit))
                 {
-                    offset = -offset;
+                    if (hit.collider.tag == "Player")
+                    {
+                        launchMode = true;
+                    }
+                    else
+                    {
+                        launchMode = false;
+                    }
                 }
-                DirectedRotation(offset);
-                oldPoint = pos;
             }
 
-            // Move
-            if (Input.GetMouseButtonDown(1))
+            // Check if we are NOT in launchmode
+            if (!launchMode)
             {
-                // Hide save starting positions
-                oldPoint = Input.mousePosition;
-                player.SetHoldControl(false);
+                // Save starting position of tap
+                if (Input.GetMouseButtonDown(0))
+                {
+                    oldPoint = Input.mousePosition;
+                }
+                
+                // Look around and change position of camera
+                if (Input.GetMouseButton(0))
+                {
+                    Vector2 pos = Input.mousePosition;
+                    Vector2 offset = pos - oldPoint;
+
+                    if (invertCameraControls)
+                    {
+                        offset = -offset;
+                    }
+                    DirectedRotation(offset);
+                    oldPoint = pos;
+                }
             }
-
-            // Rotate player so it faces camera direction
-            if (Input.GetMouseButton(1))
+            else
             {
-                // TODO: remove
-                player.GetComponent<Rigidbody>().freezeRotation = true;
+                // Save starting position of tap
+                if (Input.GetMouseButtonDown(0))
+                {
+                    // TODO: Raycast here
+                    // Hide save starting positions
+                    oldPoint = Input.mousePosition;
+                    player.SetHoldControl(false);
+                }
 
-                playerTransform.rotation = behindCamera.transform.rotation;
-                playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
+                // Rotate player so it faces camera direction and update velocity meter according to where finger is on the screen
+                if (Input.GetMouseButton(0))
+                {
+                    // TODO: remove
+                    player.GetComponent<Rigidbody>().freezeRotation = true;
 
-                player.SetLaunchForce(GetLaunchForce());
-            }
+                    playerTransform.rotation = behindCamera.transform.rotation;
+                    playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
 
-            // Launch
-            if (Input.GetMouseButtonUp(1))
-            {
-                // TODO: remove
-                player.GetComponent<Rigidbody>().freezeRotation = false;
+                    player.SetLaunchForce(GetLaunchForce());
+                }
 
-                player.Launch(GetLaunchForce());
+                // Launch 
+                if (Input.GetMouseButtonUp(0))
+                {
+                    launchMode = false;
+                    // TODO: remove
+                    player.GetComponent<Rigidbody>().freezeRotation = false;
 
-                oldPoint = Input.mousePosition;
+                    player.Launch(GetLaunchForce());
+
+                    oldPoint = Input.mousePosition;
+                }
             }
         }
 
         private float GetLaunchForce()
         {
-            Vector2 difference = oldPoint - (Vector2)Input.mousePosition;
+            float difference = oldPoint.y - Input.mousePosition.y;
+            float maxDifference = oldPoint.y - launchBuffer;
 
-            float launchForce = difference.y * forceScaling;
-
-            return launchForce.Clamp(player.minLaunchForce, player.maxLaunchForce);
+            return (difference / maxDifference).Clamp(0f, 1f);
         }
 
         private void ResetRotation()

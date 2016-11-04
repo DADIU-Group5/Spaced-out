@@ -6,13 +6,16 @@ public class PlayerController : MonoBehaviour
 {
     private bool charging = false, increasing = false;
     private float launchForce = 0f;
-
-    public float minLaunchForce = 0f, maxLaunchForce = 3000f, launchSideScale = 10f;
-    public Transform pitchTransform;
-    public Text chargeText;
-    public Transform chargeArrow;
     private float chargeArrowYMin = 68f;
     private float chargeArrowYHeight = 350.0f;
+
+    public float minLaunchForce = 0f, maxLaunchForce = 3000f, launchSideScale = 10f;
+    public float maxMagnitude = 30f;
+    public Transform pitchTransform;
+    public Text chargeText;
+    public Text readyToLaunchText;
+    public Transform chargeArrow;
+    public Rigidbody rbPlayer;
 
     private bool holdControl = true;
 
@@ -28,26 +31,39 @@ public class PlayerController : MonoBehaviour
 
     public void SetHoldControl(bool input)
     {
-        holdControl = input;
+        if (rbPlayer.velocity.magnitude < maxMagnitude)
+        {
+            holdControl = input;
+        }
     }
 
     private void Update()
     {
-        if (holdControl)
+        if (rbPlayer.velocity.magnitude > maxMagnitude)
         {
-            if (charging)
-            {
-                Charge();
-            }
-            else
-            {
-                launchForce = 0;
-            }
+            readyToLaunchText.text = "Velocity: " + rbPlayer.velocity.magnitude + "\nNot Ready To Launch";
         }
-        chargeText.text = "" + launchForce;
-        chargeArrow.position = new Vector3(chargeArrow.position.x, chargeArrowYMin + chargeArrowYHeight * launchForce / maxLaunchForce);
+        else
+        {
+            readyToLaunchText.text = "Velocity: " + rbPlayer.velocity.magnitude + "\nReady To Launch";
+            
+            if (holdControl)
+            {
+                if (charging)
+                {
+                    Charge();
+                }
+                else
+                {
+                    launchForce = 0;
+                }
+            }
+            chargeText.text = "" + launchForce;
+            chargeArrow.position = new Vector3(chargeArrow.position.x, chargeArrowYMin + chargeArrowYHeight * launchForce / maxLaunchForce);
+        }
     }
 
+    // Deprecated! No sure if I should delete... /Malte
     private void Charge()
     {
         float delta = (Time.deltaTime * (maxLaunchForce - minLaunchForce));
@@ -71,6 +87,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Deprecated! No sure if I should delete... /Malte
     public void SetCharging(bool value)
     {
         charging = value;
@@ -102,20 +119,21 @@ public class PlayerController : MonoBehaviour
 
     public void Launch(Vector3 direction, float force)
     {
-        Rigidbody body = GetComponent<Rigidbody>();
-        body.AddForce(force * direction.normalized);
-        //body.velocity += force * direction.normalized / 100;
+        if (rbPlayer.velocity.magnitude < maxMagnitude) {
+            Rigidbody body = GetComponent<Rigidbody>();
+            body.AddForce(force * direction.normalized);
+        }
     }
 
     public void Launch(float force)
     {
-        launchForce = force;
+        launchForce = force * maxLaunchForce;
         LaunchCharge();
         launchForce = 0;
     }
 
     public void SetLaunchForce(float force)
     {
-        launchForce = force;
+        launchForce = force * maxLaunchForce;
     }
 }

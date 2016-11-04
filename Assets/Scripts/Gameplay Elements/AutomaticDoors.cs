@@ -8,7 +8,8 @@ public class AutomaticDoors : MonoBehaviour {
     private Animator animator;
     private bool lastOnOff = true;
 
-    public bool malfunctioning = true;
+    public bool doorIsMalfunctioning = false;
+    private bool malfunctioning = true;
     private bool closed = true;
 
     public void CloseOpenDoor()
@@ -45,17 +46,27 @@ public class AutomaticDoors : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        if (doorIsMalfunctioning)
+        {
+            malfunctioning = true;
+        }
         //this only opens/closes if the isOn state is changed.
         //if the door isOn == true, then malfunctioning is set to false.
 	    if (!state.isOn && state.isOn != lastOnOff)
         {
-            malfunctioning = false;
-            GetComponent<Collider>().enabled = true;
+            if (doorIsMalfunctioning)
+            {
+                malfunctioning = false;
+            }
+            //GetComponent<Collider>().enabled = true;
             CloseOpenDoor();
         } else if (state.isOn != lastOnOff)
         {
-            GetComponent<Collider>().enabled = false;
+            if (doorIsMalfunctioning)
+            {
+                malfunctioning = true;
+            }
+            //GetComponent<Collider>().enabled = false;
             CloseOpenDoor();
         }
         lastOnOff = state.isOn;

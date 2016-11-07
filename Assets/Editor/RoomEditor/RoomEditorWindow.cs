@@ -3,9 +3,9 @@ using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 
-[CustomEditor(typeof(RoomCreator))]
-public class RoomCreatorEditor : Editor
-{
+public class RoomEditorWindow : EditorWindow {
+    
+    public static RoomEditorWindow window;
     RoomCreator RC;
 
     enum States { noRoom, Editing, Saving, Loading }
@@ -13,39 +13,52 @@ public class RoomCreatorEditor : Editor
 
     string roomName;
 
-    string pathName = "Assets/Resources/Rooms/";
-    
-    int LoadID = 0;
     List<Object> rooms;
+    int loadID = 0;
 
-    public override void OnInspectorGUI()
+    string pathName = "Assets/Resources/Rooms/";
+
+    [MenuItem("RoomEditor/RoomWindow")]
+    public static void ShowWindow()
     {
-        EditorGUILayout.LabelField("YOU NEED TO USE THE 'ROOM EDITOR WINDOW!",EditorStyles.helpBox);
-        return;
-        /*RC = (RoomCreator)target;
-        //DrawDefaultInspector();
-        if (rooms == null || rooms.Count == 0)
+        window = (RoomEditorWindow)EditorWindow.GetWindow(typeof(RoomEditorWindow));
+        window.titleContent = new GUIContent("Room Editor", "Used to create and edit rooms.");
+    }
+
+    void OnGUI()
+    {
+        Selection.selectionChanged += RepaintThis;
+        if (RC == null)
         {
-            LoadRooms();
+            NoRoomCreator();
         }
-        GetState();
+        if (RC != null)
+        {
+            GetState();
+        }
         switch (states)
         {
             case States.noRoom:
                 NoRoom();
                 break;
             case States.Editing:
-                EditingRoom();
+                Editing();
                 break;
             case States.Saving:
                 SavingRoom();
                 break;
             case States.Loading:
-                Loading();
+                LoadingRooms();
                 break;
             default:
                 break;
-        }*/
+        }
+        
+    }
+
+    void RepaintThis()
+    {
+        Repaint();
     }
 
     void GetState()
@@ -70,80 +83,139 @@ public class RoomCreatorEditor : Editor
 
     void NoRoom()
     {
-        if (GUILayout.Button("Create Room"))
+        if (!RC.EditingRoom())
         {
-            states = States.Editing;
-            LoadRooms();
-            roomName = "";
-            RC.CreateNewRoom();
-        }
-        if (GUILayout.Button("Load Room"))
-        {
-            states = States.Loading;
+            GUILayout.FlexibleSpace();
+            if (GUILayout.Button("New room", GUILayout.Height(50)))
+            {
+                NewRoom();
+            }
+            GUILayout.FlexibleSpace();
+            
+            if (GUILayout.Button("Load room", GUILayout.Height(50)))
+            {
+                states = States.Loading;
+            }
+            GUILayout.FlexibleSpace();
         }
     }
 
-    void EditingRoom()
+    void Editing()
     {
-        if (GUILayout.Button("Create Environmental Object"))
+        if (Selection.activeGameObject != null)
         {
-            RC.AddNewEnvironmentalObject();
+            if (Selection.activeGameObject.GetComponent<ObjectSelector>() != null)
+            {
+                EditorGUILayout.LabelField("Currently selected object: ", Selection.activeGameObject.name);
+                if (GUILayout.Button("Duplicate"))
+                {
+                    Duplicate(Selection.activeGameObject);
+                }
+                if (GUILayout.Button("Delete"))
+                {
+                    DestroyImmediate(Selection.activeGameObject);
+                }
+            }
+            else
+            {
+                EditorGUILayout.LabelField("No duplicatable object selected");
+                GUILayout.Space(42);
+            }
+            if (GUILayout.Button("Focus"))
+            {
+                SceneView.lastActiveSceneView.FrameSelected();
+            }
         }
-        if (GUILayout.Button("Create Floating Object"))
+        else
         {
-            RC.AddFloatingObject();
+            EditorGUILayout.LabelField("No Object selected");
+            GUILayout.Space(64);
         }
-        if (GUILayout.Button("Create Static Object"))
+        GUILayout.FlexibleSpace();
+        thing = EditorGUILayout.Popup("Create new object: ", thing, new string[] {"Select", "Enviromental", "Floating", "Static", "Shaping", "Door" });
+        switch (thing)
         {
-            RC.AddStaticObject();
+            case 1:
+                Selection.activeGameObject = RC.AddNewEnvironmentalObject();
+                thing = 0;
+                break;
+            case 2:
+                Selection.activeGameObject = RC.AddFloatingObject();
+                thing = 0;
+                break;
+            case 3:
+                Selection.activeGameObject = RC.AddStaticObject();
+                thing = 0;
+                break;
+            case 4:
+                Selection.activeGameObject = RC.AddNewshapingObject();
+                thing = 0;
+                break;
+            case 5:
+                Selection.activeGameObject = RC.AddNewDoor();
+                thing = 0;
+                break;
+            default:
+                break;
         }
-        if (GUILayout.Button("Create Shaping Object"))
-        {
-            RC.AddNewshapingObject();
-        }
-        if (GUILayout.Button("Create Door"))
-        {
-            RC.AddNewDoor();
-        }
-        if (GUILayout.Button("Clear!") && EditorUtility.DisplayDialog("Clear?", "Are you sure you want to clear the current room? Will erase any unsaved changes!", "I am sure", "Cancel"))
+
+        GUILayout.FlexibleSpace();
+
+        EditorGUILayout.BeginHorizontal();
+        if (GUILayout.Button("Clear!", GUILayout.Height(50)) && EditorUtility.DisplayDialog("Clear?", "Are you sure you want to clear the current room? Will erase any unsaved changes!", "I am sure", "Cancel"))
         {
             RC.DestroyRoom();
         }
-        if (GUILayout.Button("Save!"))
+        if (GUILayout.Button("Save!", GUILayout.Height(50)))
         {
+            UpdateAll();
             RC.GetRoom().CleanData();
+            roomName = RC.GetName();
             if (RC.GetRoom().canBeRoom())
             {
                 states = States.Saving;
             }
         }
-        if (GUILayout.Button("Update All"))
-        {
-            UpdateAll();
-        }
+        EditorGUILayout.EndHorizontal();
+        GUILayout.FlexibleSpace();
+    }
+
+    int thing = 0;
+
+    void Duplicate(GameObject toDuplicate)
+    {
+        GameObject go = Instantiate(toDuplicate,toDuplicate.transform.position,toDuplicate.transform.rotation,toDuplicate.transform.parent) as GameObject;
+        go.name = toDuplicate.name;
+        Selection.activeGameObject = go;
     }
 
     void SavingRoom()
     {
+        if(roomName == null)
+        {
+            roomName = RC.GetName();
+        }
         roomName = EditorGUILayout.TextField("Room Name", roomName);
-        if (GUILayout.Button("Temporary save!"))
+        GUILayout.FlexibleSpace();
+        if (GUILayout.Button("Temporary save!", GUILayout.Height(50)))
         {
             if (SaveObject())
             {
                 states = States.Editing;
             }
         }
-        if (GUILayout.Button("Save and finalize!"))
+        if (GUILayout.Button("Save and finalize!", GUILayout.Height(50)))
         {
             if (SaveObject())
             {
                 RC.DestroyRoom();
             }
         }
-        if (GUILayout.Button("Back"))
+        if (GUILayout.Button("Back", GUILayout.Height(50)))
         {
             states = States.Editing;
         }
+        GUILayout.FlexibleSpace();
     }
 
     bool SaveObject()
@@ -163,7 +235,7 @@ public class RoomCreatorEditor : Editor
             PrefabUtility.CreatePrefab(pathName + roomName + ".prefab", roomToSave.gameObject);
             AssetDatabase.ImportAsset(pathName + roomName + ".prefab");
             AssetDatabase.Refresh();
-            LoadRooms();
+            GetRoomsFromDatabase();
             return true;
         }
     }
@@ -174,7 +246,7 @@ public class RoomCreatorEditor : Editor
         {
             return false;
         }
-        foreach (UnityEngine.Object item in rooms)
+        foreach (Object item in rooms)
         {
             if (item.name == _name)
             {
@@ -191,56 +263,55 @@ public class RoomCreatorEditor : Editor
         return false;
     }
 
-    void Loading()
+    void NewRoom()
     {
-        LoadRooms();
-        EditorGUILayout.LabelField("Room count:", rooms.Count.ToString());
-        EditorGUILayout.LabelField("Room:", LoadID.ToString());
-        if (rooms.Count == 0)
+        RC.CreateNewRoom();
+    }
+
+    void LoadingRooms()
+    {
+        GetRoomsFromDatabase();
+        EditorGUILayout.LabelField("Number of rooms: ", rooms.Count.ToString());
+        if(rooms.Count == 0)
         {
-            LoadID = 0;
-            GUILayout.Label("There is no saved rooms!");
-            if (GUILayout.Button("Back"))
-            {
-                states = States.noRoom;
-            }
+            GUILayout.Label("There are no rooms in the database!");
             return;
         }
-        EditorGUILayout.LabelField("Name", rooms[LoadID].name);
-        GUILayout.Label(AssetPreview.GetAssetPreview(rooms[LoadID]));
+        EditorGUILayout.LabelField("Previewing: ", (loadID + 1).ToString());
+        EditorGUILayout.LabelField("Name: ", rooms[loadID].name);
+        GUILayout.Label(AssetPreview.GetAssetPreview(rooms[loadID]),EditorStyles.centeredGreyMiniLabel);
+
         if (GUILayout.Button("Load"))
         {
-            roomName = rooms[LoadID].name;
-            RC.LoadRoom((GameObject)rooms[LoadID]);
+            RC.LoadRoom((GameObject)rooms[loadID]);
+            roomName = rooms[loadID].name;
         }
-        if (GUILayout.Button("Remove!") && EditorUtility.DisplayDialog("DELETE?", "Are you sure you want to delete this room? CANNOT be undone!", "YES!", "Cancel"))
+        if (GUILayout.Button("Remove") && EditorUtility.DisplayDialog("DELETE?", "Are you sure you want to delete this room? CANNOT be undone!", "YES!", "Cancel"))
         {
-
-            FileUtil.DeleteFileOrDirectory(pathName + rooms[LoadID].name + ".prefab");
+            FileUtil.DeleteFileOrDirectory(pathName + rooms[loadID].name + ".prefab");
             EditorUtility.UnloadUnusedAssetsImmediate();
             AssetDatabase.Refresh();
-            LoadRooms();
-            if (LoadID >= rooms.Count)
+            GetRoomsFromDatabase();
+            if (loadID >= rooms.Count)
             {
-                LoadID = rooms.Count - 1;
+                loadID = rooms.Count - 1;
             }
         }
-
         EditorGUILayout.BeginHorizontal();
         if (GUILayout.Button("Prev"))
         {
-            LoadID--;
-            if (LoadID < 0)
+            loadID--;
+            if (loadID < 0)
             {
-                LoadID = rooms.Count - 1;
+                loadID = rooms.Count - 1;
             }
         }
         if (GUILayout.Button("Next"))
         {
-            LoadID++;
-            if (LoadID >= rooms.Count)
+            loadID++;
+            if (loadID >= rooms.Count)
             {
-                LoadID = 0;
+                loadID = 0;
             }
         }
         EditorGUILayout.EndHorizontal();
@@ -250,9 +321,26 @@ public class RoomCreatorEditor : Editor
         }
     }
 
-    void LoadRooms()
+    void GetRoomsFromDatabase()
     {
         rooms = new List<Object>(Resources.LoadAll("Rooms"));
+    }
+
+    void NoRoomCreator()
+    {
+        RC = FindObjectOfType<RoomCreator>();
+        if (RC == null)
+        {
+            Debug.LogError("There are no Room Creator in the scene, you should use the Room Editor scene!");
+        }
+    }
+
+    void AddRC()
+    {
+        if(Selection.activeGameObject.GetComponent<RoomCreator>() != null)
+        {
+            RC = Selection.activeGameObject.GetComponent<RoomCreator>();
+        }
     }
 
     /// <summary>
@@ -405,4 +493,5 @@ public class RoomCreatorEditor : Editor
             }
         }
     }
+
 }

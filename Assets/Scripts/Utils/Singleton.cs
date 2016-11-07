@@ -6,7 +6,6 @@
 /// <typeparam name="T">Type of class</typeparam>
 public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
-
     public static T instance;
 
     protected virtual void Awake()

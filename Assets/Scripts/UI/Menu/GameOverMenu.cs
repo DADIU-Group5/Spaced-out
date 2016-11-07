@@ -12,9 +12,12 @@ public class GameOverMenu : MonoBehaviour {
     public Text ResetCountdown;
 
     private bool playerIsDead = false;
+    private bool playerWon = false;
     private float countingDown = 10;
 
-    //Set GameOver
+    /// <summary>
+    /// Set Game Over
+    /// </summary>
     public IEnumerator GameOver()
     {
         //wait set amount of time...
@@ -23,7 +26,8 @@ public class GameOverMenu : MonoBehaviour {
         //turn on all the UI elements in the GameOverCanvas
         for (int i = 0; i < transform.childCount; i++)
         {
-            transform.GetChild(i).gameObject.SetActive(true);
+            if (transform.GetChild(i).gameObject.name != "ResetButton")
+                transform.GetChild(i).gameObject.SetActive(true);
         }
         countingDown = timeTilReset;
         playerIsDead = !playerIsDead;
@@ -31,12 +35,34 @@ public class GameOverMenu : MonoBehaviour {
 
     }
 
-    //Reset level
-    public IEnumerator ResetLevel()
+    /// <summary>
+    /// Set Win Game
+    /// </summary>
+    public IEnumerator Win()
+    {
+        //wait set amount of time...
+        //yield return new WaitForSeconds(timeTilGameOverScreen);
+
+        //turn on all the UI elements in the GameOverCanvas
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (transform.GetChild(i).gameObject.name == "ResetCountDownText")
+                continue;
+            transform.GetChild(i).gameObject.SetActive(true);
+        }
+        Debug.Log("Running Win Coroutine");
+        playerWon = !playerWon;
+        yield return null;
+
+    }
+
+    /// <summary>
+    /// Reset level
+    /// </summary>
+    public void ResetLevel()
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
-        yield return null;
     }
 
 	// Update is called once per frame
@@ -52,7 +78,7 @@ public class GameOverMenu : MonoBehaviour {
         //if the countdown has reached zero, reset the level
         if (countingDown <= 0)
         {
-            StartCoroutine(ResetLevel());
+            ResetLevel();
         }
 	}
 }

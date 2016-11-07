@@ -6,15 +6,17 @@ public class Room : MonoBehaviour
 {
     //Parents
     public Transform enviromentalObjectsParent;
-    public Transform dynamicObjectsParent;
+    public Transform floatingObjectParent;
+    public Transform staticObjectParent;
     public Transform shapingParent;
     public Transform doorParent;
 
     //Lists of the objects in the room.
     public List<GameObject> enviromentalObjects;
-    public List<GameObject> dynamicObjects;
-    public List<GameObject> shapingObject;
-    public List<GameObject> doorObject;
+    public List<GameObject> floatingObjects;
+    public List<GameObject> staticObjects;
+    public List<GameObject> shapingObjects;
+    public List<GameObject> doorObjects;
 
     /// <summary>
     /// Adds a new enviromental object.
@@ -34,14 +36,28 @@ public class Room : MonoBehaviour
     /// Adds a new dynamic object.
     /// </summary>
     /// <param name="go"></param>
-    public void AddDynamicObject(GameObject go)
+    public void AddFloatingObject(GameObject go)
     {
-        if (dynamicObjects == null)
+        if (floatingObjects == null)
         {
-            dynamicObjects = new List<GameObject>();
+            floatingObjects = new List<GameObject>();
         }
-        go.transform.parent = dynamicObjectsParent;
-        dynamicObjects.Add(go);
+        go.transform.parent = floatingObjectParent;
+        floatingObjects.Add(go);
+    }
+
+    /// <summary>
+    /// Adds a new dynamic object.
+    /// </summary>
+    /// <param name="go"></param>
+    public void AddStaticObject(GameObject go)
+    {
+        if (staticObjects == null)
+        {
+            staticObjects = new List<GameObject>();
+        }
+        go.transform.parent = staticObjectParent;
+        staticObjects.Add(go);
     }
 
     /// <summary>
@@ -50,12 +66,12 @@ public class Room : MonoBehaviour
     /// <param name="go"></param>
     public void AddShapingObject(GameObject go)
     {
-        if (shapingObject == null)
+        if (shapingObjects == null)
         {
-            shapingObject = new List<GameObject>();
+            shapingObjects = new List<GameObject>();
         }
         go.transform.parent = shapingParent;
-        shapingObject.Add(go);
+        shapingObjects.Add(go);
     }
 
     /// <summary>
@@ -64,12 +80,12 @@ public class Room : MonoBehaviour
     /// <param name="go"></param>
     public void AddDoor(GameObject go)
     {
-        if (doorObject == null)
+        if (doorObjects == null)
         {
-            doorObject = new List<GameObject>();
+            doorObjects = new List<GameObject>();
         }
         go.transform.parent = doorParent;
-        doorObject.Add(go);
+        doorObjects.Add(go);
     }
 
     /// <summary>
@@ -77,10 +93,11 @@ public class Room : MonoBehaviour
     /// </summary>
     public void CleanData()
     {
-        CleanList(enviromentalObjects);
-        CleanList(dynamicObjects);
-        CleanList(shapingObject);
-        CleanList(doorObject);
+        CleanList(enviromentalObjects, enviromentalObjectsParent);
+        CleanList(floatingObjects, floatingObjectParent);
+        CleanList(staticObjects, staticObjectParent);
+        CleanList(shapingObjects, shapingParent);
+        CleanList(doorObjects, doorParent);
     }
 
     /// <summary>
@@ -88,11 +105,11 @@ public class Room : MonoBehaviour
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="toClean"></param>
-    void CleanList<T>(List<T> toClean)
+    void CleanList(List<GameObject> toClean, Transform t)
     {
         for (int i = toClean.Count-1; i >= 0 ; i--)
         {
-            if(toClean[i] == null)
+            if(toClean[i] == null || toClean[i].transform.parent != t)
             {
                 toClean.RemoveAt(i);
             }
@@ -105,16 +122,64 @@ public class Room : MonoBehaviour
     /// <returns></returns>
     public bool canBeRoom()
     {
-        if(doorObject == null)
+        if(doorObjects == null)
         {
             Debug.LogError("No doors");
             return false;
         }
-        if(doorObject.Count < 2)
+        if(doorObjects.Count < 2)
         {
             Debug.LogError("Room needs atleast 2 doors!");
             return false;
         }
         return true;
+    }
+
+    public void RandomizeInterior()
+    {
+        foreach (GameObject item in floatingObjects)
+        {
+            if (item.GetComponent<ObjectSelector>() != null)
+            {
+                item.GetComponent<ObjectSelector>().Replace();
+            }
+            else
+            {
+                Debug.Log("not there");
+            }
+        }
+        foreach (GameObject item in staticObjects)
+        {
+            if (item.GetComponent<ObjectSelector>() != null)
+            {
+                item.GetComponent<ObjectSelector>().Replace();
+            }
+            else
+            {
+                Debug.Log("not there");
+            }
+        }
+        foreach (GameObject item in enviromentalObjects)
+        {
+            if (item.GetComponent<ObjectSelector>() != null)
+            {
+                item.GetComponent<ObjectSelector>().Replace();
+            }
+            else
+            {
+                Debug.Log("not there");
+            }
+        }
+        foreach (GameObject item in shapingObjects)
+        {
+            if (item.GetComponent<ObjectSelector>() != null)
+            {
+                item.GetComponent<ObjectSelector>().Replace();
+            }
+            else
+            {
+                Debug.Log("not there");
+            }
+        }
     }
 }

@@ -5,7 +5,8 @@ using System.IO;
 
 public class JenkinsBuilder : MonoBehaviour
 {
-    private const string BUILD_FOLDER = "Builds";
+    private const string buildFolder = "Builds";
+    private const string appName = "SpacedOut";
 
     private static string[] FindEnabledEditorScenes()
     {
@@ -18,25 +19,25 @@ public class JenkinsBuilder : MonoBehaviour
         return EditorScenes.ToArray();
     }
 
-    [MenuItem("Build/Alpha")]
-    private static void BuildAlpha()
+    [MenuItem("Build Server/Open Build Folder")]
+    private static void OpenBuildFolder()
     {
-        Build("SpacedOut_Alpha");
+        OpenExplorer(@"C:\Users\student\Documents\Spaced-out\Builds\");
     }
 
-    [MenuItem("Build/Beta")]
-    private static void BuildBeta()
+    private static void OpenExplorer(string path)
     {
-        Build("SpacedOut_Beta");
+        System.Diagnostics.Process.Start("explorer.exe", "/open," + path);
     }
 
-    [MenuItem("Build/Main")]
-    private static void BuildMain()
+    private static string IncreaseBuildVersion()
     {
-        Build("SpacedOut_Main");
+        int version = ++PlayerSettings.Android.bundleVersionCode;
+        return version.ToString("D2");
     }
 
-    private static void Build(string name)
+    [MenuItem("Build Server/Build Game")]
+    private static void Build()
     {
         // load the scenes
         var scenes = FindEnabledEditorScenes();
@@ -45,17 +46,14 @@ public class JenkinsBuilder : MonoBehaviour
         {
             throw new UnityException("No scenes to build.");
         }
-
-        Directory.CreateDirectory(BUILD_FOLDER);
-
+        
+        Directory.CreateDirectory(buildFolder);
         UnityException exc = null;
-
         try
         {
-            BuildPipeline.BuildPlayer(
-                scenes,
-                BUILD_FOLDER + "/" + name + ".apk",
-                BuildTarget.Android, BuildOptions.None);
+            string version = string.Format("v{0}.{1}", PlayerSettings.bundleVersion, IncreaseBuildVersion());
+            string path = string.Format("{0}/{1}_{2}.apk", buildFolder, appName, version);
+            BuildPipeline.BuildPlayer(scenes, path, BuildTarget.Android, BuildOptions.None);
         }
         catch (UnityException e)
         {

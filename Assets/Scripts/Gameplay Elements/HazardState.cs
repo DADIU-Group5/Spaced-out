@@ -33,7 +33,6 @@ public class HazardState : MonoBehaviour {
             if (gameObject.GetComponent<Renderer>() != null)
                 GetComponent<Renderer>().material.color = flashColour;
         }
-
         Debug.Log("An object was turned On: "+ isOn);
     }
 

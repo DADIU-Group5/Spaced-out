@@ -8,20 +8,22 @@ public class AutomaticDoors : MonoBehaviour {
     private Animator animator;
     private bool lastOnOff = true;
 
-    public bool doorIsMalfunctioning = false;
-    private bool malfunctioning = true;
+    [HideInInspector]
+    public int doorsTouchingPlayer = 0;
+
+    private bool malfunctioning = false;
     private bool closed = true;
+    private bool crushingPlayer = false;
 
     public void CloseOpenDoor()
     {
-        //yield return new WaitForSeconds(Random.Range[2, 4]);
-        if (!state.isOn || malfunctioning && closed)
+        if (closed)
         {
-            Debug.Log("opening doors");
+            closed = false;
             animator.SetTrigger("Open");
         } else
         {
-            Debug.Log("closing doors");
+            closed = true;
             animator.SetTrigger("Close");
         }
     }
@@ -30,46 +32,30 @@ public class AutomaticDoors : MonoBehaviour {
 	void Start () {
         state = gameObject.GetComponent<HazardState>();
         animator = gameObject.GetComponent<Animator>();
-        StartCoroutine(MalfunctioningDoors());
-    }
-
-    public IEnumerator MalfunctioningDoors()
-    {
-        while (malfunctioning)
-        {
-            Debug.Log("doors are malfunctioning");
-            CloseOpenDoor();
-            closed = !closed;
-            yield return new WaitForSeconds(Random.Range(2, 4));
-        }
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (doorIsMalfunctioning)
+
+        if (doorsTouchingPlayer >= 2 && !crushingPlayer &&
+            this.animator.GetCurrentAnimatorStateInfo(0).IsName("DoorClose"))
         {
-            malfunctioning = true;
+            crushingPlayer = true;
+
+            Debug.Log("Player has been crushed!");
+
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Renderer>().material.color = Color.blue;
+            crushingPlayer = false;
         }
+
         //this only opens/closes if the isOn state is changed.
         //if the door isOn == true, then malfunctioning is set to false.
-	    if (!state.isOn && state.isOn != lastOnOff)
+        if (!state.isOn && closed)
         {
-            if (doorIsMalfunctioning)
-            {
-                malfunctioning = false;
-            }
-            //GetComponent<Collider>().enabled = true;
             CloseOpenDoor();
-        } else if (state.isOn != lastOnOff)
+        } else if (state.isOn && !closed)
         {
-            if (doorIsMalfunctioning)
-            {
-                malfunctioning = true;
-            }
-            //GetComponent<Collider>().enabled = false;
             CloseOpenDoor();
         }
-        lastOnOff = state.isOn;
-
     }
 }

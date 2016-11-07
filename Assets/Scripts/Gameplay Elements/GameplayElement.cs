@@ -12,7 +12,7 @@ public enum Movement
 public enum Behaviour
 {
     none, automaticDoors, switchItem, hazardSwitch, sticky, bouncy, slippery, fire,
-    ice, grabby, electrocution, explosive
+    ice, grabby, electrocution, explosive, fan
 }
 
 public enum ItemSize

@@ -112,6 +112,11 @@ public class PlayerController : MonoBehaviour, Observer
                 Launch(launchForce);
 
                 break;
+            case EventName.PlayerDead:
+                Kill();
+                break;
+            default:
+                break;
         }
     }
 }

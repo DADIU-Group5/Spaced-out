@@ -7,7 +7,7 @@ public class GameOverMenu : MonoBehaviour {
 
     [Header("Set countdown times:")]
     public float timeTilGameOverScreen = 1f;
-    public float timeTilReset = 1f;
+    public float timeTilReset = 5f;
 
     public Text ResetCountdown;
 

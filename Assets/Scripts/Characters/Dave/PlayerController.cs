@@ -20,8 +20,7 @@ public class PlayerController : MonoBehaviour
     public Text readyToLaunchText;
     public Transform chargeArrow;
     public Rigidbody rbPlayer;
-
-
+    public FuelController fuel;
 
     public float GetMinLaunchForce()
     {
@@ -35,7 +34,12 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (rbPlayer.velocity.magnitude > maxMagnitude)
+        if (!fuel.HasFuel())
+        {
+            readyToLaunchText.text = "Velocity: " + rbPlayer.velocity.magnitude + "\nNo More Fuel!";
+            UpdateLaunchUI();
+        }
+        else if (rbPlayer.velocity.magnitude > maxMagnitude)
         {
             readyToLaunchText.text = "Velocity: " + rbPlayer.velocity.magnitude + "\nNot Ready To Launch";
         }
@@ -52,6 +56,11 @@ public class PlayerController : MonoBehaviour
         {
             Rigidbody body = GetComponent<Rigidbody>();
             body.AddForce(force * direction.normalized);
+
+            if (force > 0)
+            {
+                fuel.UseFuel();
+            }
         }
     }
 

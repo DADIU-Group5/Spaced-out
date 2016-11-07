@@ -8,21 +8,22 @@ public class AutomaticDoors : MonoBehaviour {
     private Animator animator;
     private bool lastOnOff = true;
 
-    public bool doorIsMalfunctioning = false;
+    [HideInInspector]
+    public int doorsTouchingPlayer = 0;
+
     private bool malfunctioning = false;
     private bool closed = true;
+    private bool crushingPlayer = false;
 
     public void CloseOpenDoor()
     {
         if (closed)
         {
             closed = false;
-            Debug.Log("opening doors");
             animator.SetTrigger("Open");
         } else
         {
             closed = true;
-            Debug.Log("closing doors");
             animator.SetTrigger("Close");
         }
     }
@@ -35,10 +36,21 @@ public class AutomaticDoors : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+
+        if (doorsTouchingPlayer >= 2 && !crushingPlayer &&
+            this.animator.GetCurrentAnimatorStateInfo(0).IsName("DoorClose"))
+        {
+            crushingPlayer = true;
+
+            Debug.Log("Player has been crushed!");
+
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Renderer>().material.color = Color.blue;
+            crushingPlayer = false;
+        }
+
         //this only opens/closes if the isOn state is changed.
         //if the door isOn == true, then malfunctioning is set to false.
-	    if (!state.isOn && closed)
+        if (!state.isOn && closed)
         {
             CloseOpenDoor();
         } else if (state.isOn && !closed)

@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public bool onFire = false;
     [HideInInspector]
-    public bool Dead = false;
+    public bool dead = false;
     
     private float launchForce = 0f;
     private float chargeArrowYMin = 68f;
@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public Text readyToLaunchText;
     public Transform chargeArrow;
     public Rigidbody rbPlayer;
+
+
 
     public float GetMinLaunchForce()
     {

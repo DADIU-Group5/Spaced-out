@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,6 +22,14 @@ public class PlayerController : MonoBehaviour
     public Transform chargeArrow;
     public Rigidbody rbPlayer;
     public FuelController fuel;
+
+    GameOverMenu gameOverMenu;
+
+    // Use this for initialization
+    void Start()
+    {
+        gameOverMenu = GameObject.Find("GameOverCanvas").GetComponent<GameOverMenu>();
+    }
 
     public float GetMinLaunchForce()
     {
@@ -82,5 +91,11 @@ public class PlayerController : MonoBehaviour
     {
         chargeText.text = "" + launchForce;
         chargeArrow.position = new Vector3(chargeArrow.position.x, chargeArrowYMin + chargeArrowYHeight * launchForce / maxLaunchForce);
+    }
+
+    internal void Kill()
+    {
+        dead = true;
+        StartCoroutine(gameOverMenu.GameOver());
     }
 }

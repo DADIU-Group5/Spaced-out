@@ -31,6 +31,7 @@ public class ObjectDatabase : MonoBehaviour {
     }
 
     #if UNITY_EDITOR
+    //Only used in the editor, to make sure this is a singleton, only an issue that it 'forgets' itself when in editor, not when the game is running.
     void Update()
     {
         if(instance == null)
@@ -40,6 +41,9 @@ public class ObjectDatabase : MonoBehaviour {
     }
     #endif
     
+    /// <summary>
+    /// Loads the objects from the resources folder.
+    /// </summary>
     public void LoadObjects()
     {
         enviromentalObjects = new List<Object>(Resources.LoadAll("ObjectDatabase/EnviromentalObjects"));

@@ -34,10 +34,13 @@ public class Door : MonoBehaviour {
     {
         if (doorType != DoorType.entrance)
         {
-            GameObject go = Instantiate(unusedPrefab) as GameObject;
-            go.transform.position = transform.position;
-            go.transform.rotation = transform.rotation;
-            go.transform.parent = transform.parent;
+            if (doorType != DoorType.exit)
+            {
+                GameObject go = Instantiate(unusedPrefab) as GameObject;
+                go.transform.position = transform.position;
+                go.transform.rotation = transform.rotation;
+                go.transform.parent = transform.parent;
+            }
 
             Destroy(gameObject);
         }

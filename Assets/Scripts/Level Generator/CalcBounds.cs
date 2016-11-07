@@ -2,7 +2,7 @@
 using System.Collections;
 
 [ExecuteInEditMode]
-public class calcbounds : MonoBehaviour {
+public class CalcBounds : MonoBehaviour {
 
     Bounds bounds;
 

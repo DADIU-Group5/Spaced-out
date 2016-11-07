@@ -47,12 +47,18 @@ public class ObjectSelector : MonoBehaviour {
         gameObject.GetComponent<Renderer>().enabled = true;
     }
 
+    /// <summary>
+    /// Displays a random model that this object can be.
+    /// </summary>
     public void ShowRandom()
     {
         showing = Random.Range(0, canBe.Count);
         ShowModel();
     }
 
+    /// <summary>
+    /// Creates the model for the selected object.
+    /// </summary>
     void ShowModel()
     {
         gameObject.GetComponent<Renderer>().enabled = false;
@@ -61,6 +67,9 @@ public class ObjectSelector : MonoBehaviour {
         GOshowing.transform.rotation = gameObject.transform.rotation;
     }
 
+    /// <summary>
+    /// Removes the visual model.
+    /// </summary>
     void DestroyShowingModel()
     {
         if (GOshowing != null)
@@ -76,16 +85,22 @@ public class ObjectSelector : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Used in level generation to replace the object with a gameplay object.
+    /// </summary>
     public void Replace()
     {
         if(canBe.Count == 0)
         {
+            Debug.LogError("This object CANNOT become a object, is the something in the correct resources folder?");
             return;
         }
+        //If locked use the locked object.
         if (lockObject)
         {
             ReplaceModel(lockedAs);
         }
+        //Selects a random object to become.
         else
         {
             showing = Random.Range(0, canBe.Count);
@@ -94,6 +109,7 @@ public class ObjectSelector : MonoBehaviour {
         Destroy(gameObject);
     }
 
+    //Replaces the 'dummy' object with a gameplay object.
     void ReplaceModel(Object obj)
     {
         GOshowing = Instantiate((GameObject)obj, transform.position, Quaternion.identity, transform.parent) as GameObject;

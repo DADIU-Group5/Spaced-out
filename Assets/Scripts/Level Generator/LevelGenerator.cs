@@ -12,6 +12,10 @@ public class LevelGenerator : MonoBehaviour {
 
     public GameObject doorPrefab;
     public GameObject lastDoor;
+
+    public GameObject playerPrefab;
+    public GameObject keys;
+
     public int exteriorSeed;
     public int interiorSeed;
     public int minRooms = 7;
@@ -27,6 +31,8 @@ public class LevelGenerator : MonoBehaviour {
 #if UNITY_EDITOR
         UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
 #endif
+        System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+        sw.Start();
         if (exteriorSeed == -1)
         {
             exteriorSeed = Random.Range(0, 100);
@@ -40,8 +46,13 @@ public class LevelGenerator : MonoBehaviour {
         Debug.Log("Created: " + spawnedRooms.Count);
         RemoveUnusedDoors();
         RandomizeInteriorForAll();
-	}
+        sw.Stop();
+        Debug.Log("Level generation time"+sw.Elapsed);
+    }
 
+    /// <summary>
+    /// Randomizes all the objects in the rooms.
+    /// </summary>
     void RandomizeInteriorForAll()
     {
         Random.InitState(interiorSeed);
@@ -64,6 +75,8 @@ public class LevelGenerator : MonoBehaviour {
             {
                 createdRooms++;
             }
+            //If it could not create a room from a position, remove the previous room, and try again.
+            //Should make sure it never hits a dead end.
             else
             {
                 createdRooms--;
@@ -72,6 +85,7 @@ public class LevelGenerator : MonoBehaviour {
                 allBounds.RemoveAt(spawnedRooms.Count - 1);
                 lastDoor = GetRandomDoor(spawnedRooms[spawnedRooms.Count - 1]);
             }
+            //Makes sure that it does not end in an infinite loop, should not actually happen.
             tries--;
             if(tries == 0)
             {
@@ -81,6 +95,10 @@ public class LevelGenerator : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Creates a new room, has 3 tries to do it, before it will say it cannot create it there.
+    /// </summary>
+    /// <returns></returns>
     bool CreateRoom()
     {
         for (int i = 0; i < 3; i++)
@@ -112,7 +130,7 @@ public class LevelGenerator : MonoBehaviour {
         newRoom.transform.position = newRoom.transform.position + (lastDoor.transform.position - entranceDoor.transform.position) - (entranceDoor.transform.right * distanceBetweenRooms);
 
         //Get bounds.
-        Bounds newBound = newRoom.AddComponent<calcbounds>().calc();
+        Bounds newBound = newRoom.AddComponent<CalcBounds>().calc();
 
         if (DoesRoomIntersect(newBound))
         {
@@ -173,57 +191,7 @@ public class LevelGenerator : MonoBehaviour {
         availableRooms = new List<Object>(rooms);
     }
 
-    /// <summary>
-    /// Creates a random room.
-    /// </summary>
-    bool CreateRandomRoom()
-    {
-        //Creates a new room. Get a reference to the room script, and get a random entrance door.
-        GameObject newRoom = Instantiate(GetavailableRoom()) as GameObject;
-        Room theRoom = newRoom.GetComponent<Room>();
-        GameObject entranceDoor = GetRandomDoor(theRoom);
-        if(firstDoor == null)
-        {
-            firstDoor = entranceDoor.GetComponent<Door>();
-        }
-
-        //Gets the rotation of the room. Should be rotated equal to the difference between the last and new doors right axis.
-        Quaternion rot = Quaternion.FromToRotation(entranceDoor.transform.right, -lastDoor.transform.right);
-        newRoom.transform.rotation = rot;
-
-        //Moves the new room into position.
-        newRoom.transform.position = newRoom.transform.position + (lastDoor.transform.position - entranceDoor.transform.position)-(entranceDoor.transform.right* distanceBetweenRooms);
-
-        //Get bounds.
-        Bounds newBound = newRoom.AddComponent<calcbounds>().calc();
-        
-        if (DoesRoomIntersect(newBound))
-        {
-            Destroy(newRoom);
-            return false;
-        }
-        else
-        {
-            entranceDoor.GetComponent<Door>().ConnectRoom(lastDoor);
-            if (lastDoor != null)
-            {
-                lastDoor.GetComponent<Door>().ConnectRoom(newRoom);
-            }
-
-            //Make a random door the exit.
-            lastDoor = GetRandomDoor(theRoom);
-            if (lastDoor == entranceDoor)
-            {
-                Debug.LogError("Something went wrong, you need to 'connect' a door, when using it.");
-            }
-        }
-        spawnedRooms.Add(theRoom);
-        lastSpawnedRoom = (Object)newRoom;
-        allBounds.Add(newBound);
-        theRoom.RandomizeInterior();
-        return true;
-    }
-
+    
     bool DoesRoomIntersect(Bounds newB)
     {
         foreach (Bounds item in allBounds)
@@ -273,6 +241,10 @@ public class LevelGenerator : MonoBehaviour {
         return null;
     }
 
+    /// <summary>
+    /// Returns a room to spawn next.
+    /// </summary>
+    /// <returns></returns>
     GameObject GetavailableRoom()
     {
         if (availableRooms.Count == 0)

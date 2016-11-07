@@ -135,6 +135,9 @@ public class Room : MonoBehaviour
         return true;
     }
 
+    /// <summary>
+    /// Randomizes all the interior objects in this room, that is not locked.
+    /// </summary>
     public void RandomizeInterior()
     {
         foreach (GameObject item in floatingObjects)

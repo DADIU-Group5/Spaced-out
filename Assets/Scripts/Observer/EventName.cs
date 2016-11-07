@@ -9,5 +9,6 @@
     QuitGame,
     LevelCompleted,
     RestartLevel,
-    PlayerFuelPickup
+    PlayerFuelPickup,
+    PlayerDead
 }

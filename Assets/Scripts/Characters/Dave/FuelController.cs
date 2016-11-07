@@ -11,6 +11,7 @@ public class FuelController : MonoBehaviour {
 
     public Text fuelText;
     public Rigidbody rbPlayer;
+    public PlayerController player;
 
     public void Awake()
     {
@@ -19,10 +20,10 @@ public class FuelController : MonoBehaviour {
 
     public void Update()
     {
-        if (rbPlayer.velocity.magnitude < velocityToDie && currentFuel <= 0)
+        if (rbPlayer.velocity.magnitude < velocityToDie && currentFuel <= 0 && !player.dead)
         {
-            // TODO: Remove log and kill player
-            Debug.Log("Player died from fuel missing");
+            var evt = new ObserverEvent(EventName.PlayerDead);
+            Subject.instance.Notify(gameObject, evt);
         }
     }
 
@@ -54,6 +55,9 @@ public class FuelController : MonoBehaviour {
         {
             ReplenishFuel();
             Destroy(other.gameObject);
+
+            var evt = new ObserverEvent(EventName.PlayerFuelPickup);
+            Subject.instance.Notify(gameObject, evt);
         }
     }
 }

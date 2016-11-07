@@ -8,5 +8,7 @@
     Unpause,
     QuitGame,
     LevelCompleted,
-    RestartLevel
+    RestartLevel,
+    PlayerFuelPickup,
+    PlayerDead
 }

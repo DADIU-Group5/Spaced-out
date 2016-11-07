@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F5948B08-8EA0-455A-9A43-E3F403D87912}" SchemaVersion="72">
+	<InteractiveMusic>
+		<WorkUnit Name="Default Work Unit" ID="{F5948B08-8EA0-455A-9A43-E3F403D87912}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSegment Name="souvlaki spacestation" ID="{3D16A1B8-CF01-444D-AFDC-D5E4DC2C4420}" ShortID="59042852">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="329777.75"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="souvlaki spacestation" ID="{4498F419-EA30-46EB-90FF-E40D14B08CB2}" ShortID="107333530">
+							<PropertyList>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsZeroLantency" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="LookAheadTime" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="souvlaki spacestation" ID="{C73C3570-ADE7-4110-98C4-7D7741563FB8}" ShortID="289830870">
+									<Language>SFX</Language>
+									<AudioFile>souvlaki spacestation.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{55AC085B-EC28-4574-8F9E-1802AAA4A629}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{32D0FB67-7EF8-4E5B-AF45-4549A826FD53}">
+									<ClipList>
+										<MusicClip Name="souvlaki spacestation" ID="{54DEA2E5-6DB3-4901-B017-2ABC86F83D66}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="329777.75"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+											</PropertyList>
+											<AudioSourceRef Name="souvlaki spacestation" ID="{C73C3570-ADE7-4110-98C4-7D7741563FB8}"/>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{71C2944A-AE5A-473B-9EAF-1DCA96F28266}"/>
+						<MusicCue Name="Exit Cue" ID="{311C01F8-4104-474B-905F-0349B9259BE8}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="329777.75"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
+				<MusicSegment Name="mirrors edge shard" ID="{8690E214-D721-4E44-8194-99653370BC81}" ShortID="731830279">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="221074.958333333"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="mirrors edge shard" ID="{8A0FE0EE-F60E-4D09-B2A1-47F953274FA0}" ShortID="1041700164">
+							<PropertyList>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsZeroLantency" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="mirrors edge shard" ID="{42400D47-54D0-452B-B310-A02154A8687D}" ShortID="564402045">
+									<Language>SFX</Language>
+									<AudioFile>mirrors edge shard.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{B3E97708-F77B-4738-ADA8-E3C205657F06}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{C83C0230-63C5-4F2F-A8FD-A96F7C3A8AD5}">
+									<ClipList>
+										<MusicClip Name="mirrors edge shard" ID="{F2D52E9F-0847-4D94-8C1E-5EEF5DEC9F61}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="221074.958333333"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+											</PropertyList>
+											<AudioSourceRef Name="mirrors edge shard" ID="{42400D47-54D0-452B-B310-A02154A8687D}"/>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{F09F36DC-DE26-4589-9C76-D33F914CC734}"/>
+						<MusicCue Name="Exit Cue" ID="{9C88ABA8-54F9-4772-8F4F-8D4FA9AF78B2}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="221074.958333333"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
+				<MusicSegment Name="pink floyd breathe" ID="{CBCE22ED-EE43-48A6-AE3B-A5FBD405E8A1}" ShortID="932920953">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="164081.208333333"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="pink floyd breathe" ID="{B00BD1E7-FACF-4351-A73A-54A22F4B923B}" ShortID="714839205">
+							<PropertyList>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsZeroLantency" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="pink floyd breathe" ID="{D82D73A7-A115-43DB-A025-A3FB65049496}" ShortID="516794672">
+									<Language>SFX</Language>
+									<AudioFile>pink floyd breathe.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{59191011-5507-4C5F-8D5C-3A07853EE3C8}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{9EEC308A-3177-4B22-9619-6D936D633275}">
+									<ClipList>
+										<MusicClip Name="pink floyd breathe" ID="{1E627A6C-928D-4365-91F4-F1DA45855DCA}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="164081.208333333"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+											</PropertyList>
+											<AudioSourceRef Name="pink floyd breathe" ID="{D82D73A7-A115-43DB-A025-A3FB65049496}"/>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{C2D746D1-453A-4EE2-9011-D78B15DEFC34}"/>
+						<MusicCue Name="Exit Cue" ID="{97D79655-78FC-48E5-8668-31A802225AD3}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="164081.208333333"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
+				<MusicSegment Name="le femme d'argent" ID="{513D9045-7FD2-42FB-B753-8AB0DA711F20}" ShortID="520250465">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="642820.875"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="le femme d'argent" ID="{EAF60B37-D6E9-4000-BC6B-8A620DD9D916}" ShortID="209522960">
+							<PropertyList>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsZeroLantency" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="le femme d'argent" ID="{54F444C9-E06E-4A95-88AC-B5CC68E2AE91}" ShortID="854569370">
+									<Language>SFX</Language>
+									<AudioFile>le femme d'argent.wav</AudioFile>
+								</AudioFileSource>
+								<AudioFileSource Name="le femme d'argent_01" ID="{E1453A5D-6C24-434E-8767-B8F43A0EA355}" ShortID="992004907">
+									<Language>SFX</Language>
+									<AudioFile>le femme d'argent.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="854569370"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{E0E8B376-EC6A-4B57-AB18-F4266FAB6263}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{F0D077B9-DFF7-4A09-864B-B46F7FC2F7F0}">
+									<ClipList>
+										<MusicClip Name="le femme d'argent" ID="{3F4F670A-DF73-4087-8B80-2EAE20CB2AB4}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="405516.1875"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+											</PropertyList>
+											<AudioSourceRef Name="le femme d'argent" ID="{54F444C9-E06E-4A95-88AC-B5CC68E2AE91}"/>
+										</MusicClip>
+										<MusicClip Name="le femme d'argent" ID="{204BC5DA-79FE-41A2-AA85-75AD7AF9FB08}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="237304.6875"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+												<Property Name="PlayAt" Type="Real64" Value="405516.1875"/>
+											</PropertyList>
+											<AudioSourceRef Name="le femme d'argent_01" ID="{E1453A5D-6C24-434E-8767-B8F43A0EA355}"/>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{F8C71723-E5C6-41D5-80EC-4C3260F9C729}"/>
+						<MusicCue Name="Exit Cue" ID="{E114776E-D0CD-44F6-9190-C01B8388BCDC}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="405516.1875"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
+				<MusicSegment Name="boards of canada dawn chorus" ID="{81B9D6A7-86AE-4532-8187-1CB2635BFCC1}" ShortID="267652008">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="220333.041666667"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="boards of canada dawn chorus" ID="{D67138FF-9A49-4B7A-BD92-94FEBE25A595}" ShortID="1032362037">
+							<PropertyList>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsZeroLantency" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="boards of canada dawn chorus" ID="{43084674-400C-4501-81CB-72FDBAB6D783}" ShortID="278196675">
+									<Language>SFX</Language>
+									<AudioFile>boards of canada dawn chorus.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{F5A7213C-42C8-4B89-96EF-54CD2E1C2093}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{97A3322C-25C5-4E2A-AFAC-0329F4D38BEA}">
+									<ClipList>
+										<MusicClip Name="boards of canada dawn chorus" ID="{E5A46843-8686-411D-AFCE-674667630EDB}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="220333.041666667"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+											</PropertyList>
+											<AudioSourceRef Name="boards of canada dawn chorus" ID="{43084674-400C-4501-81CB-72FDBAB6D783}"/>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{9EA5DC7C-7AC9-4155-95A8-54F96416BB46}"/>
+						<MusicCue Name="Exit Cue" ID="{D9E9946F-216B-460F-92F5-CAB919C15822}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="220333.041666667"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
+				<MusicSegment Name="black moth super rainbow gold splatter" ID="{2C5A2223-99F0-47B5-87A3-0B6CD053D2A8}" ShortID="612748503">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="260515.413370998"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="black moth super rainbow gold splatter" ID="{B09385A1-5DC7-4960-A852-FA83F4E374FA}" ShortID="256388758">
+							<PropertyList>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsZeroLantency" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="black moth super rainbow gold splatter" ID="{39ED55E5-6775-4449-B56C-7F4917F2EF1C}" ShortID="278331299">
+									<Language>SFX</Language>
+									<AudioFile>black moth super rainbow gold splatter.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{3AF41141-6543-4FF3-9EE3-10CE1E863C80}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{61CFBF8E-208C-4AE5-9E62-A03CC0E2CC77}">
+									<ClipList>
+										<MusicClip Name="black moth super rainbow gold splatter" ID="{198A1658-F47A-40AA-96A6-8E9A58F1E171}">
+											<PropertyList>
+												<Property Name="BeginTrimOffset" Type="Real64" Value="22069.3031357675"/>
+												<Property Name="EndTrimOffset" Type="Real64" Value="254758.166666667"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="31.1998331112475"/>
+												<Property Name="FadeInShape" Type="int16" Value="3"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+												<Property Name="PlayAt" Type="Real64" Value="-22069.3031357675"/>
+											</PropertyList>
+											<AudioSourceRef Name="black moth super rainbow gold splatter" ID="{39ED55E5-6775-4449-B56C-7F4917F2EF1C}"/>
+											<PropertyCurveList>
+												<PropertyCurve PropertyName="Highpass">
+													<Curve Name="" ID="{A048952C-19B1-4BF0-9B6D-90504E04770F}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>22.0693</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>254.758166666667</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</PropertyCurve>
+												<PropertyCurve PropertyName="Lowpass">
+													<Curve Name="" ID="{865ACACD-39C5-494A-A0FB-7946BBDEDC8A}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>22.0693</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>254.758166666667</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</PropertyCurve>
+												<PropertyCurve PropertyName="Volume">
+													<Curve Name="" ID="{B191686C-3B25-4764-A9DE-28BB5C758746}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>22.0693</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>254.758166666667</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</PropertyCurve>
+											</PropertyCurveList>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{4EC21491-AC54-4E27-B06B-FA72E6846C96}">
+							<PropertyList>
+								<Property Name="TimeMs" Type="Real64" Value="5000"/>
+							</PropertyList>
+						</MusicCue>
+						<MusicCue Name="Exit Cue" ID="{47FDB734-88F6-4EAC-90F8-6B854CCD03E5}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="254720.575800377"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
+			</ChildrenList>
+		</WorkUnit>
+	</InteractiveMusic>
+</WwiseDocument>

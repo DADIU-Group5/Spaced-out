@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, Observer
 {
     [HideInInspector]
     public bool onFire = false;
@@ -82,5 +83,19 @@ public class PlayerController : MonoBehaviour
     {
         chargeText.text = "" + launchForce;
         chargeArrow.position = new Vector3(chargeArrow.position.x, chargeArrowYMin + chargeArrowYHeight * launchForce / maxLaunchForce);
+    }
+
+    public void OnNotify(GameObject entity, ObserverEvent evt)
+    {
+        switch (evt.eventName)
+        {
+            case EventName.PlayerLaunch:
+
+                var payload = evt.payload;
+                float launchForce = (float)payload[PayloadConstants.LAUNCH_SPEED];
+                Launch(launchForce);
+
+                break;
+        }
     }
 }

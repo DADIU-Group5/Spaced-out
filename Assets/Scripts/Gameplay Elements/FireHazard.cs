@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class FireHazard : MonoBehaviour {
 
@@ -8,6 +9,8 @@ public class FireHazard : MonoBehaviour {
     [HideInInspector]
     public GameObject player;
     private bool burningPlayer = false;
+
+    public Text burningText;
 
     // Use this for initialization
     void Start () {
@@ -21,6 +24,7 @@ public class FireHazard : MonoBehaviour {
         {
             burningPlayer = true;
             player.GetComponent<PlayerController>().onFire = true;
+            burningText.text = "BURNING!";
             StartCoroutine(BurnToDeath());
         }
     }

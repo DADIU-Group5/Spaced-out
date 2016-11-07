@@ -13,6 +13,7 @@ namespace Prototype
         public Camera cam;
         public BehindCamera behindCamera;
         public PlayerController player;
+        public FuelController fuel;
 
         // TODO: remove
         public Transform playerTransform;
@@ -72,7 +73,7 @@ namespace Prototype
                     oldPoint = pos;
                 }
             }
-            else
+            else if (fuel.HasFuel())
             {
                 // Save starting position of tap
                 if (Input.GetMouseButtonDown(0))

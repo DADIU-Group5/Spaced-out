@@ -14,13 +14,15 @@ public class LevelGenerator : MonoBehaviour {
     public GameObject lastDoor;
 
     public GameObject playerPrefab;
-    public GameObject keys;
+    public GameObject keyPrefab;
 
     public int exteriorSeed;
     public int interiorSeed;
     public int minRooms = 7;
     public int maxRooms = 20;
     public float distanceBetweenRooms = 3;
+    public float distanceFromDoorToPlayer = 1;
+    public float distanceFromDoorToKey = 1;
 
     Door firstDoor = null;
 
@@ -44,6 +46,8 @@ public class LevelGenerator : MonoBehaviour {
         Debug.Log("Length: " + roomsToCreate);
         CreateLevel(roomsToCreate);
         Debug.Log("Created: " + spawnedRooms.Count);
+        SpawnPlayer();
+        SpawnKey();
         RemoveUnusedDoors();
         RandomizeInteriorForAll();
         sw.Stop();
@@ -60,6 +64,29 @@ public class LevelGenerator : MonoBehaviour {
         {
             item.RandomizeInterior();
         }
+    }
+
+    /// <summary>
+    /// Spawns the player in front of the first door in the first room.
+    /// </summary>
+    void SpawnPlayer()
+    {
+        foreach (GameObject item in spawnedRooms[0].doorObjects)
+        {
+            if(item.GetComponent<Door>().GetDoorType() == DoorType.entrance)
+            {
+                Instantiate(playerPrefab, item.transform.position - (item.transform.right*distanceFromDoorToPlayer), Quaternion.identity);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Spawns the 'key' at a random doors position in the last room.
+    /// </summary>
+    void SpawnKey()
+    {
+        Transform tempTrans = GetRandomDoor(spawnedRooms[spawnedRooms.Count - 1]).transform;
+        Instantiate(keyPrefab, tempTrans.position - (tempTrans.right*distanceFromDoorToKey), Quaternion.identity);
     }
 
     /// <summary>

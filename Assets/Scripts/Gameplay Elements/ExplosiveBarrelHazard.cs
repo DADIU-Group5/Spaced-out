@@ -30,6 +30,13 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
     public Color detonationColor = Color.blue;
 
     private Color orgColor;
+    GameOverMenu gameOverMenu;
+
+    // Use this for initialization
+    void Start()
+    {
+        gameOverMenu = GameObject.Find("GameOverCanvas").GetComponent<GameOverMenu>();
+    }
 
     /// <summary>
     /// Flash to signify explosion
@@ -72,6 +79,7 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
             if (explosionObjects[i].tag == "Player")
             {
                 explosionObjects[i].GetComponent<PlayerController>().dead = true;
+                StartCoroutine(gameOverMenu.GameOver());
             }
         }
 

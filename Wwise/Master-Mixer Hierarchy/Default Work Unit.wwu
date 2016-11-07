@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}" SchemaVersion="72">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="BypassEffect0" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Highpass" Type="int16">
+							<RTPCList>
+								<RTPC Name="" ID="{1CCC7C3E-2DDB-4750-9D5D-109D70813158}" ShortID="16109131">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{B49C0C46-FA24-4D81-9C51-5606C1737A27}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0</YPos>
+												<Flags>5</Flags>
+												<SegmentShape>Exp1</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>80.5851</XPos>
+												<YPos>29</YPos>
+												<Flags>0</Flags>
+												<SegmentShape>Exp1</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>58</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<RTPCList>
+								<RTPC Name="" ID="{D6681019-A370-4A9C-987A-0D3B620AD855}" ShortID="810232681">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="masterLoPass" ID="{39C7C7C7-839A-4FE4-AACC-F993D76A1806}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{2D5749A9-7C1E-4EB3-B12B-B811C4E6554D}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>90.42553</XPos>
+												<YPos>0</YPos>
+												<Flags>0</Flags>
+												<SegmentShape>Log3</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>92.42021</XPos>
+												<YPos>100</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>100</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Effect0" PluginName="McDSP ML1" CompanyID="256" PluginID="103" PluginType="3">
+							<ObjectRef Name="Master_Dynamic" ID="{1F96B68C-A26B-48BE-83C8-CDB05F7A81EF}" WorkUnitID="{C495E5B0-5DF1-4961-BC6A-4C9887E70704}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
+						<Bus Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
+						<Bus Name="atmos" ID="{FA0DE26E-0B1A-402B-A0E0-578BA0A760BF}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-20</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
+						<Bus Name="music" ID="{CA906606-09FB-4986-B724-CAA394C96D8F}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-20</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
+					</ChildrenList>
+				</Bus>
+				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}"/>
+				<MotionBus Name="Master Motion Bus" ID="{20A630BA-3398-4676-B927-1004DFE41FD8}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

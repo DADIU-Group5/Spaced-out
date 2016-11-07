@@ -54,6 +54,9 @@ public class FuelController : MonoBehaviour {
         {
             ReplenishFuel();
             Destroy(other.gameObject);
+
+            var evt = new ObserverEvent(EventName.PlayerFuelPickup);
+            Subject.instance.Notify(gameObject, evt);
         }
     }
 }

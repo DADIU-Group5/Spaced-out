@@ -36,7 +36,7 @@ public class FireHazard : MonoBehaviour {
         if (player.GetComponent < PlayerController >(). onFire)
         {
             Debug.Log("Player has burned to death!");
-            player.GetComponent<PlayerController>().dead = true;
+            player.GetComponent<PlayerController>().Kill();
         }
     }
 }

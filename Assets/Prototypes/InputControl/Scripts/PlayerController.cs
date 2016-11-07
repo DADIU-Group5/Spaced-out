@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public bool onFire = false;
     [HideInInspector]
-    public bool Dead = false;
+    public bool dead = false;
 
     private bool charging = false, increasing = false;
     private float launchForce = 0f;
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerDied()
     {
-        Dead = true;
+        dead = true;
         StartCoroutine(GameObject.Find("GameOverCanvas").GetComponent<GameOverMenu>().GameOver());
     }
 
@@ -44,10 +44,10 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (Dead)
+        if (dead)
         {
             PlayerDied();
-            Dead = !Dead;
+            dead = !dead;
         }
 
         if (holdControl)

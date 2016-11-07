@@ -10,8 +10,10 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
     [Header("Power of the explosion:")]
     public float explosionPower = 50f;
 
-    [Header("Add ChildObject with the Collider")]
-    public float explosionRadius;
+    [Header("In the damaging radius:")]
+    public float explosionRadius = 10f;
+    [Header("In the pushing radius:")]
+    public float pushRadius = 5f;
 
     //direction of the push, based on collision
     [HideInInspector]
@@ -60,12 +62,24 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
         //Explode, and destroy object/start animation:
 
         //find all objects in radius of child's spherecollider...
-
         Collider[] explosionObjects = Physics.OverlapSphere(transform.position, explosionRadius);
 
         for (int i = 0; i < explosionObjects.Length; i++)
         {
             Rigidbody rgb = explosionObjects[i].GetComponent<Rigidbody>();
+            if (rgb == null)
+                continue;
+            if (explosionObjects[i].tag == "Player")
+            {
+                explosionObjects[i].GetComponent<PlayerController>().dead = true;
+            }
+        }
+
+        Collider[] pushObjects = Physics.OverlapSphere(transform.position, pushRadius);
+
+        for (int i = 0; i < pushObjects.Length; i++)
+        {
+            Rigidbody rgb = pushObjects[i].GetComponent<Rigidbody>();
             if (rgb == null)
                 continue;
             //and Boom!

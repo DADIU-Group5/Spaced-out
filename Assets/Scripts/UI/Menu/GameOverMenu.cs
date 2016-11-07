@@ -31,7 +31,6 @@ public class GameOverMenu : MonoBehaviour {
         }
         countingDown = timeTilReset;
         playerIsDead = !playerIsDead;
-        Debug.Log("Running Gameover Coroutine");
 
     }
 
@@ -50,7 +49,6 @@ public class GameOverMenu : MonoBehaviour {
                 continue;
             transform.GetChild(i).gameObject.SetActive(true);
         }
-        Debug.Log("Running Win Coroutine");
         playerWon = !playerWon;
         yield return null;
 

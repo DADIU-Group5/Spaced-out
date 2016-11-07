@@ -51,6 +51,7 @@ public class JenkinsBuilder : MonoBehaviour
         UnityException exc = null;
         try
         {
+            SignBuild();
             string version = string.Format("v{0}.{1}", PlayerSettings.bundleVersion, IncreaseBuildVersion());
             string path = string.Format("{0}/{1}_{2}.apk", buildFolder, appName, version);
             BuildPipeline.BuildPlayer(scenes, path, BuildTarget.Android, BuildOptions.None);
@@ -62,5 +63,13 @@ public class JenkinsBuilder : MonoBehaviour
 
         if (exc != null)
             throw exc;
+    }
+
+    private static void SignBuild()
+    {
+        PlayerSettings.Android.keystoreName = "C:/Users/student/Documents/Spaced-out/user.keystore";
+        PlayerSettings.Android.keystorePass = "dadiutest";
+        PlayerSettings.Android.keyaliasName = "dadiutest";
+        PlayerSettings.Android.keyaliasPass = "dadiutest";
     }
 }

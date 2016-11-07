@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, Observer
 {
     [HideInInspector]
     public bool onFire = false;
@@ -21,6 +22,15 @@ public class PlayerController : MonoBehaviour
     public Transform chargeArrow;
     public Rigidbody rbPlayer;
     public FuelController fuel;
+
+    GameOverMenu gameOverMenu;
+
+    // Use this for initialization
+    void Start()
+    {
+        gameOverMenu = GameObject.Find("GameOverCanvas").GetComponent<GameOverMenu>();
+        Subject.instance.AddObserver(this);
+    }
 
     public float GetMinLaunchForce()
     {
@@ -82,5 +92,26 @@ public class PlayerController : MonoBehaviour
     {
         chargeText.text = "" + launchForce;
         chargeArrow.position = new Vector3(chargeArrow.position.x, chargeArrowYMin + chargeArrowYHeight * launchForce / maxLaunchForce);
+    }
+
+    internal void Kill()
+    {
+        dead = true;
+        StartCoroutine(gameOverMenu.GameOver());
+    }
+
+    public void OnNotify(GameObject entity, ObserverEvent evt)
+    {
+        switch (evt.eventName)
+        {
+            case EventName.PlayerLaunch:
+
+                var payload = evt.payload;
+                float launchForce = (float)payload[PayloadConstants.LAUNCH_SPEED];
+               
+                Launch(launchForce);
+
+                break;
+        }
     }
 }

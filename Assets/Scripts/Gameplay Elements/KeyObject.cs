@@ -17,7 +17,6 @@ public class KeyObject : MonoBehaviour {
         if (other.transform.tag == "Player")
         {
             StartCoroutine(gameOverMenu.Win());
-            
         }
     }
 }

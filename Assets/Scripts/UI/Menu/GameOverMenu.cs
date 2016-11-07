@@ -26,8 +26,11 @@ public class GameOverMenu : MonoBehaviour {
         //turn on all the UI elements in the GameOverCanvas
         for (int i = 0; i < transform.childCount; i++)
         {
-            if (transform.GetChild(i).gameObject.name != "ResetButton")
-                transform.GetChild(i).gameObject.SetActive(true);
+            if (transform.GetChild(i).gameObject.name == "ResetButton")
+                continue;
+            if (transform.GetChild(i).gameObject.name == "WinText")
+                continue;
+            transform.GetChild(i).gameObject.SetActive(true);
         }
         countingDown = timeTilReset;
         playerIsDead = !playerIsDead;
@@ -46,6 +49,8 @@ public class GameOverMenu : MonoBehaviour {
         for (int i = 0; i < transform.childCount; i++)
         {
             if (transform.GetChild(i).gameObject.name == "ResetCountDownText")
+                continue;
+            if (transform.GetChild(i).gameObject.name == "GameOverText")
                 continue;
             transform.GetChild(i).gameObject.SetActive(true);
         }

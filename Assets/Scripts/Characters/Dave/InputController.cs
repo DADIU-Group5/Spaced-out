@@ -97,7 +97,7 @@ namespace Prototype
                     //player.Launch(GetLaunchForce());
 
                     var evt = new ObserverEvent(EventName.PlayerLaunch);
-
+                    
                     evt.payload.Add(PayloadConstants.LAUNCH_SPEED, GetLaunchForce());
                     Subject.instance.Notify(gameObject, evt);
 

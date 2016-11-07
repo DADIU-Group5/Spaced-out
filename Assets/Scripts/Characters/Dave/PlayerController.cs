@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour, Observer
     void Start()
     {
         gameOverMenu = GameObject.Find("GameOverCanvas").GetComponent<GameOverMenu>();
+        Subject.instance.AddObserver(this);
     }
 
     public float GetMinLaunchForce()
@@ -107,6 +108,7 @@ public class PlayerController : MonoBehaviour, Observer
 
                 var payload = evt.payload;
                 float launchForce = (float)payload[PayloadConstants.LAUNCH_SPEED];
+               
                 Launch(launchForce);
 
                 break;

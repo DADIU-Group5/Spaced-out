@@ -4,32 +4,182 @@ using System.Collections.Generic;
 
 public class Room : MonoBehaviour
 {
-
     //Parents
-    public Transform staticObjectsParent;
-    public Transform dynamicObjectsParent;
-    public Transform envirionmentParent;
+    public Transform enviromentalObjectsParent;
+    public Transform floatingObjectParent;
+    public Transform staticObjectParent;
+    public Transform shapingParent;
+    public Transform doorParent;
 
-    //Lists
-    List<GameObject> staticObjects = new List<GameObject>();
-    List<GameObject> dynamicObjects = new List<GameObject>();
-    List<GameObject> envirionmentalObject = new List<GameObject>();
+    //Lists of the objects in the room.
+    public List<GameObject> enviromentalObjects;
+    public List<GameObject> floatingObjects;
+    public List<GameObject> staticObjects;
+    public List<GameObject> shapingObjects;
+    public List<GameObject> doorObjects;
 
+    /// <summary>
+    /// Adds a new enviromental object.
+    /// </summary>
+    /// <param name="go"></param>
+    public void AddEnviromentalObject(GameObject go)
+    {
+        if(enviromentalObjects == null)
+        {
+            enviromentalObjects = new List<GameObject>();
+        }
+        go.transform.parent = enviromentalObjectsParent;
+        enviromentalObjects.Add(go);
+    }
+
+    /// <summary>
+    /// Adds a new dynamic object.
+    /// </summary>
+    /// <param name="go"></param>
+    public void AddFloatingObject(GameObject go)
+    {
+        if (floatingObjects == null)
+        {
+            floatingObjects = new List<GameObject>();
+        }
+        go.transform.parent = floatingObjectParent;
+        floatingObjects.Add(go);
+    }
+
+    /// <summary>
+    /// Adds a new dynamic object.
+    /// </summary>
+    /// <param name="go"></param>
     public void AddStaticObject(GameObject go)
     {
-        go.transform.parent = staticObjectsParent;
+        if (staticObjects == null)
+        {
+            staticObjects = new List<GameObject>();
+        }
+        go.transform.parent = staticObjectParent;
         staticObjects.Add(go);
     }
 
-    public void AddDynamicObject(GameObject go)
+    /// <summary>
+    /// Adds a new shaping object.
+    /// </summary>
+    /// <param name="go"></param>
+    public void AddShapingObject(GameObject go)
     {
-        go.transform.parent = dynamicObjectsParent;
-        dynamicObjects.Add(go);
+        if (shapingObjects == null)
+        {
+            shapingObjects = new List<GameObject>();
+        }
+        go.transform.parent = shapingParent;
+        shapingObjects.Add(go);
     }
 
-    public void AddEnvirionmentalObject(GameObject go)
+    /// <summary>
+    /// Adds a new door.
+    /// </summary>
+    /// <param name="go"></param>
+    public void AddDoor(GameObject go)
     {
-        go.transform.parent = envirionmentParent;
-        envirionmentalObject.Add(go);
+        if (doorObjects == null)
+        {
+            doorObjects = new List<GameObject>();
+        }
+        go.transform.parent = doorParent;
+        doorObjects.Add(go);
+    }
+
+    /// <summary>
+    /// Cleans the lists, removes null entries.
+    /// </summary>
+    public void CleanData()
+    {
+        CleanList(enviromentalObjects, enviromentalObjectsParent);
+        CleanList(floatingObjects, floatingObjectParent);
+        CleanList(staticObjects, staticObjectParent);
+        CleanList(shapingObjects, shapingParent);
+        CleanList(doorObjects, doorParent);
+    }
+
+    /// <summary>
+    /// Method for cleaning a list.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="toClean"></param>
+    void CleanList(List<GameObject> toClean, Transform t)
+    {
+        for (int i = toClean.Count-1; i >= 0 ; i--)
+        {
+            if(toClean[i] == null || toClean[i].transform.parent != t)
+            {
+                toClean.RemoveAt(i);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Checks if the room follows the rules that a room should have.
+    /// </summary>
+    /// <returns></returns>
+    public bool canBeRoom()
+    {
+        if(doorObjects == null)
+        {
+            Debug.LogError("No doors");
+            return false;
+        }
+        if(doorObjects.Count < 2)
+        {
+            Debug.LogError("Room needs atleast 2 doors!");
+            return false;
+        }
+        return true;
+    }
+
+    public void RandomizeInterior()
+    {
+        foreach (GameObject item in floatingObjects)
+        {
+            if (item.GetComponent<ObjectSelector>() != null)
+            {
+                item.GetComponent<ObjectSelector>().Replace();
+            }
+            else
+            {
+                Debug.Log("not there");
+            }
+        }
+        foreach (GameObject item in staticObjects)
+        {
+            if (item.GetComponent<ObjectSelector>() != null)
+            {
+                item.GetComponent<ObjectSelector>().Replace();
+            }
+            else
+            {
+                Debug.Log("not there");
+            }
+        }
+        foreach (GameObject item in enviromentalObjects)
+        {
+            if (item.GetComponent<ObjectSelector>() != null)
+            {
+                item.GetComponent<ObjectSelector>().Replace();
+            }
+            else
+            {
+                Debug.Log("not there");
+            }
+        }
+        foreach (GameObject item in shapingObjects)
+        {
+            if (item.GetComponent<ObjectSelector>() != null)
+            {
+                item.GetComponent<ObjectSelector>().Replace();
+            }
+            else
+            {
+                Debug.Log("not there");
+            }
+        }
     }
 }

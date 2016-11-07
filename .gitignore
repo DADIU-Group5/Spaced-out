@@ -32,3 +32,18 @@ sysinfo.txt
 # DADIU Ignores
 /Assets/Local/
 /Assets/Local.meta
+Assets/Prototypes/Mia/ExampleClass.cs
+Assets/Prototypes/Mia/ExampleClass.cs.meta
+<<<<<<< HEAD
+Assets/Prototypes/InputControl/Scripts/PlayerController.cs.meta
+Assets/Prototypes/InputControl/InputControl.unity.meta
+Assets/Prototypes/InputControl/Scripts/InputController.cs.meta
+=======
+Assets/Prototypes/InputControl.meta
+Assets/Prototypes/InputControl/InputControl.unity.meta
+Assets/Prototypes/InputControl/Scripts.meta
+Assets/Prototypes/InputControl/Scripts/InputController.cs.meta
+Assets/Prototypes/InputControl/Scripts/PlayerController.cs.meta
+Assets/Resources/Rooms.meta
+>>>>>>> alpha
+Assets/Prototypes/InputControl.meta~HEAD

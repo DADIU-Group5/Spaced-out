@@ -88,7 +88,8 @@ public class LevelGenerator : MonoBehaviour {
         {
             if(item.GetComponent<Door>().GetDoorType() == DoorType.entrance)
             {
-                Instantiate(playerPrefab, item.transform.position - (item.transform.right*playerDistanceFromDoor), Quaternion.identity);
+                //Instantiate(playerPrefab, item.transform.position - (item.transform.right*playerDistanceFromDoor), Quaternion.identity);
+                playerPrefab.transform.position = item.transform.position - (item.transform.right * playerDistanceFromDoor);
             }
         }
     }

@@ -49,7 +49,7 @@ public class FuelController : MonoBehaviour {
 
     public void UpdateFuelUI()
     {
-        fuelText.text = "Current fuel: " + currentFuel;
+        fuelText.text = "Current oxygen: " + currentFuel;
     }
 
     void OnTriggerEnter(Collider other)

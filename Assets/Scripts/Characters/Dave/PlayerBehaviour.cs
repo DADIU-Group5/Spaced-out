@@ -13,6 +13,8 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     [HideInInspector]
     public bool dead = false;
 
+    private PayloadConstants payload; 
+
     public float TimeUntilBurnToDeath = 5f;
 
     void Start()
@@ -46,11 +48,15 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         }
     }
 
-    internal void Kill()
+    internal void Kill(EventName causeOfDeath)
     {
-        dead = true;
-        var evt = new ObserverEvent(EventName.PlayerDead);
-        Subject.instance.Notify(gameObject, evt);
+        if (!dead)
+        {
+            var evt = new ObserverEvent(EventName.PlayerDead);
+            evt.payload.Add(PayloadConstants.DEATH_CAUSE, causeOfDeath);
+            Subject.instance.Notify(gameObject, evt);
+            dead = true;
+        }
     }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
@@ -65,16 +71,20 @@ public class PlayerBehaviour : MonoBehaviour, Observer
                 onFire = false;
                 break;
             case EventName.Crushed:
-                Kill();
+                Kill(evt.eventName);
+                //Kill(EventName.Crushed);
                 break;
             case EventName.Electrocuted:
-                Kill();
+                Kill(evt.eventName);
+                //Kill(EventName.Electrocuted);
                 break;
             case EventName.PlayerExploded:
-                Kill();
+                Kill(evt.eventName);
+                //Kill(EventName.PlayerExploded);
                 break;
             case EventName.FuelEmpty:
-                Kill();
+                Kill(evt.eventName);
+                //Kill(EventName.FuelEmpty);
                 break;
             default:
                 break;
@@ -90,7 +100,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         if (onFire)
         {
             Debug.Log("Player has burned to death!");
-            Kill();
+            Kill(EventName.OnFire);
         }
     }
 

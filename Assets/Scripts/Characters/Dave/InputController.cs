@@ -2,11 +2,12 @@
 
 namespace Prototype
 {
-    public class InputController : MonoBehaviour
+    public class InputController : MonoBehaviour, Observer
     {
         private bool invertCameraControls = false;
-        private Vector2 oldPoint;
         private bool launchMode = false;
+        private bool inputDisabled = false;
+        private Vector2 oldPoint;
 
         public float cameraRotateSpeed = 4000f;
         public float launchBuffer = 100f;
@@ -15,12 +16,16 @@ namespace Prototype
         public PlayerController player;
         public FuelController fuel;
 
+        public Collider hitboxCollider;
+
         // TODO: remove
         public Transform playerTransform;
         public Transform playerPitchTransform;
-        
+
         private void Awake()
-        { }
+        {
+
+        }
 
         private void Update()
         {
@@ -29,78 +34,131 @@ namespace Prototype
             {
                 Application.Quit();
             }
-            
-            // See of player was tapped. If he was, set launchMode to true, otherwise to false.
+
+            // If input is disabled, stop.
+            if (inputDisabled)
+            {
+                return;
+            }
+
+            // See if player was tapped. If he was, set launchMode to true, otherwise to false.
             if (Input.GetMouseButtonDown(0))
             {
-                RaycastHit hit;
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-                if (Physics.Raycast(ray, out hit))
-                {
-                    if (hit.collider.tag == "Player")
-                    {
-                        launchMode = true;
-                    }
-                    else
-                    {
-                        launchMode = false;
-                    }
-                }
+                launchMode = DetectPlayerTap();
             }
 
             // Check if we are NOT in launchmode
             if (!launchMode)
             {
-                // Save starting position of tap
-                if (Input.GetMouseButtonDown(0))
-                {
-                    oldPoint = Input.mousePosition;
-                }
-                
-                // Look around and change position of camera
-                if (Input.GetMouseButton(0))
-                {
-                    Vector2 pos = Input.mousePosition;
-                    Vector2 offset = pos - oldPoint;
-
-                    if (invertCameraControls)
-                    {
-                        offset = -offset;
-                    }
-
-                    DirectedRotation(offset);
-                    oldPoint = pos;
-                }
+                HandleCameraMode();
             }
             else if (fuel.HasFuel())
             {
-                // Save starting position of tap
-                if (Input.GetMouseButtonDown(0))
-                {
-                    oldPoint = Input.mousePosition;
-                }
-
-                // Rotate player pitch so it faces camera direction and update velocity meter according to where finger is on the screen
-                if (Input.GetMouseButton(0))
-                {
-                    // Rotate player pitch transform so player is launched in correct direction
-                    playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
-
-                    player.SetLaunchForce(GetLaunchForce());
-                }
-
-                // Launch 
-                if (Input.GetMouseButtonUp(0))
-                {
-                    var evt = new ObserverEvent(EventName.PlayerLaunch);
-                    
-                    evt.payload.Add(PayloadConstants.LAUNCH_SPEED, GetLaunchForce());
-                    Subject.instance.Notify(gameObject, evt);
-
-                    launchMode = false;
-                }
+                HandleLaunchMode();
             }
+        }
+
+        private void HandleLaunchMode()
+        {
+            // Save starting position of tap
+            if (Input.GetMouseButtonDown(0))
+            {
+                oldPoint = Input.mousePosition;
+            }
+
+            // Rotate player pitch so it faces camera direction and update velocity meter according to where finger is on the screen
+            if (Input.GetMouseButton(0))
+            {
+                playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
+
+                // TODO: Implement an UIController that can handle updating the UI with method calls,
+                //       so we aren't updating this part of the UI every frame... /Malte
+                player.SetLaunchForce(GetLaunchForce());
+            }
+
+            // Launch 
+            if (Input.GetMouseButtonUp(0))
+            {
+                var evt = new ObserverEvent(EventName.PlayerLaunch);
+
+                evt.payload.Add(PayloadConstants.LAUNCH_SPEED, GetLaunchForce());
+                Subject.instance.Notify(gameObject, evt);
+
+                launchMode = false;
+            }
+        }
+
+        private void HandleCameraMode()
+        {
+            // Save starting position of tap
+            if (Input.GetMouseButtonDown(0))
+            {
+                oldPoint = Input.mousePosition;
+            }
+
+            // Look around and change position of camera
+            if (Input.GetMouseButton(0))
+            {
+                Vector2 pos = Input.mousePosition;
+                Vector2 offset = pos - oldPoint;
+
+                if (invertCameraControls)
+                {
+                    offset = -offset;
+                }
+
+                DirectedRotation(offset);
+                oldPoint = pos;
+            }
+        }
+
+        // Returns true if player was tapped, otherwise false.
+        private bool DetectPlayerTap()
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            return hitboxCollider.Raycast(ray, out hit, 1000f);
+
+            /*
+
+            if (hitboxCollider.Raycast(ray, out hit, 1000f))
+            {
+                return true;
+            }
+            else
+            {
+            }
+            return false;
+
+
+
+
+
+
+
+            if (Input.mousePosition.x > pixelsLeft &&
+                Input.mousePosition.x < pixelsRight &&
+                Input.mousePosition.y > pixelsBottom &&
+                Input.mousePosition.y < pixelsTop)
+            {
+                return true;
+            }
+
+            return false;
+            
+
+
+
+
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                return hit.collider.tag == "Player";
+            }
+
+            return false;*/
         }
 
         // Calculate force from old mouse position and current mouse position
@@ -133,6 +191,18 @@ namespace Prototype
         public void ToggleCameraControls()
         {
             invertCameraControls = !invertCameraControls;
+        }
+
+        public void OnNotify(GameObject entity, ObserverEvent evt)
+        {
+            switch (evt.eventName)
+            {
+                case EventName.PlayerDead:
+                    inputDisabled = true;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

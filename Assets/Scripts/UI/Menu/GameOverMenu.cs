@@ -21,7 +21,7 @@ public class GameOverMenu : MonoBehaviour, Observer
         switch (evt.eventName)
         {
 
-            case EventName.PlayerDead:
+            case EventName.PlayerExploded:
                 StartCoroutine(GameOver());
                 break;
             case EventName.PlayerWon:

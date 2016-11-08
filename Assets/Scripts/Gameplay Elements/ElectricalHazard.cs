@@ -22,6 +22,10 @@ public class ElectricalHazard : MonoBehaviour {
         {
             shockingPlayer = true;
             player.GetComponent<PlayerController>().onFire = true;
+
+            var evt = new ObserverEvent(EventName.Electrocuted);
+            Subject.instance.Notify(gameObject, evt);
+
             StartCoroutine(ShockToDeath());
         }
     }
@@ -38,7 +42,7 @@ public class ElectricalHazard : MonoBehaviour {
         {
             Debug.Log("Player was electrocuted!");
             //player.GetComponent<PlayerController>().Kill();
-            var evt = new ObserverEvent(EventName.PlayerDead);
+            var evt = new ObserverEvent(EventName.PlayerExploded);
             Subject.instance.Notify(gameObject, evt);
         }
     }

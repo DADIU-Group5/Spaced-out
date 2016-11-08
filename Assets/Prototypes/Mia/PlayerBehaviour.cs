@@ -68,7 +68,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
             case EventName.Extinguish:
                 onFire = false;
                 break;
-            case EventName.PlayerDead:
+            case EventName.PlayerExploded:
                 Debug.Log("calling on notify");
                 Kill(); //this keeps calling?
                 break;
@@ -86,7 +86,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         if (onFire)
         {
             Debug.Log("Player has burned to death!");
-            var evt = new ObserverEvent(EventName.PlayerDead);
+            var evt = new ObserverEvent(EventName.PlayerExploded);
             Subject.instance.Notify(gameObject, evt);
 
         }

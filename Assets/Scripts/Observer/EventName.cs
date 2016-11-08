@@ -10,8 +10,11 @@
     LevelCompleted,
     RestartLevel,
     PlayerFuelPickup,
-    PlayerDead,
     OnFire,
     Extinguish,
+    Electrocuted,
+    BarrelTriggered,
+    BarrelExplosion,
+    PlayerExploded,
     PlayerWon
 }

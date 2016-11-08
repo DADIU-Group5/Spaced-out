@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class KeyObject : MonoBehaviour {
 
@@ -9,23 +8,17 @@ public class KeyObject : MonoBehaviour {
 	void Start () {
         gameOverMenu = GameObject.Find("GameOverCanvas").GetComponent<GameOverMenu>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
     /// <summary>
     /// Check for player collision
     /// </summary>
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log("Collision!");
         if (other.transform.tag == "Player")
         {
-            Debug.Log("Player hit!");
-            StartCoroutine(gameOverMenu.Win());
-            
+            //StartCoroutine(gameOverMenu.Win());
+            var evt = new ObserverEvent(EventName.PlayerWon);
+            Subject.instance.Notify(gameObject, evt);
         }
     }
 }

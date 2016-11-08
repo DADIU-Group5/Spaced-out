@@ -1,0 +1,17 @@
+﻿public enum EventName
+{
+    Collision,
+    CameraMoved,
+    PlayerLaunch,
+    PlayerCollision,
+    Pause,
+    Unpause,
+    QuitGame,
+    LevelCompleted,
+    RestartLevel,
+    PlayerFuelPickup,
+    PlayerDead,
+    OnFire,
+    Extinguish,
+    PlayerWon
+}

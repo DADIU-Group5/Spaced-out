@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}" SchemaVersion="72">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="masterHiPass" ID="{6BE69766-05F5-4CC4-BD22-B4CD8F23794C}"/>
+				<GameParameter Name="masterLoPass" ID="{39C7C7C7-839A-4FE4-AACC-F993D76A1806}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

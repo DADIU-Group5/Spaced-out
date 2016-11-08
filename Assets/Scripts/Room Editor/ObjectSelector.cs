@@ -129,6 +129,18 @@ public class ObjectSelector : MonoBehaviour {
     public void UnlockObject()
     {
         lockObject = false;
+        if(GOshowing == null)
+        {
+            if (Application.isEditor)
+            {
+                DestroyImmediate(transform.GetChild(0).gameObject);
+            }
+            else
+            {
+                Destroy(transform.GetChild(0).gameObject);
+            }
+            gameObject.GetComponent<Renderer>().enabled = true;
+        }
         lockedAs = null;
     }
 }

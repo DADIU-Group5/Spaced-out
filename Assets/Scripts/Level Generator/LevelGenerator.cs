@@ -192,7 +192,6 @@ public class LevelGenerator : MonoBehaviour {
         spawnedRooms.Add(theRoom);
         lastSpawnedRoom = (Object)newRoom;
         allBounds.Add(newBound);
-        //theRoom.RandomizeInterior();
         return true;
     }
 

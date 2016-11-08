@@ -12,6 +12,6 @@ public class PlayerHitboxController : MonoBehaviour {
 
         // Rotation should always face camera with flat surface
         this.transform.LookAt(cameraTransform);
-        this.transform.Rotate(new Vector3(180f,0f,0f));
+        this.transform.Rotate(new Vector3(90f,0f,0f));
 	}
 }

@@ -44,6 +44,8 @@ public class PlayerController : MonoBehaviour, Observer
 
     private void Update()
     {
+        // TODO: Implement an UIController that can handle updating the UI with method calls,
+        //       so we aren't updating this part of the UI every frame... /Malte
         if (!fuel.HasFuel())
         {
             readyToLaunchText.text = "Velocity: " + rbPlayer.velocity.magnitude + "\nNo More Fuel!";

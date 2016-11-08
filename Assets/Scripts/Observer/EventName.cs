@@ -13,5 +13,11 @@
     PlayerDead,
     OnFire,
     Extinguish,
-    PlayerWon
+    PlayerWon,
+    Crushed,
+    Electrocuted,
+    BarrelTriggered,
+    BarrelExplosion,
+    PlayerExploded,
+    FuelEmpty
 }

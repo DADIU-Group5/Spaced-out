@@ -3,55 +3,61 @@ using System.Collections;
 
 public class RagdollController : MonoBehaviour {
 
-    public Rigidbody[] ragdollRig;
-    public CharacterJoint[] ragdollCharacterJoint;
     public Rigidbody ragdollRoot;
-
-    // Use this for initialization
+    private Animator animator;
+    private Rigidbody[] rigidbodies;
+    private CharacterJoint[] joints;
+    
     void Start()
     {
-        //find ragdoll joints in ragdollrigged gameobject, acess their rigidbodies
-        ragdollRig = this.GetComponentsInChildren<Rigidbody>();
-        ragdollCharacterJoint = this.GetComponentsInChildren<CharacterJoint>();
-        foreach (Rigidbody joint in ragdollRig)
-        {
-            //isKinematic
-            joint.isKinematic = true;
-            joint.useGravity = false;
-        }
-        ragdollRoot.isKinematic = false;
+        animator = GetComponent<Animator>();
+        rigidbodies = GetComponentsInChildren<Rigidbody>();
+        joints = GetComponentsInChildren<CharacterJoint>();
 
-        foreach (CharacterJoint charJoint in ragdollCharacterJoint)
+        // disable gravity on model
+        foreach (Rigidbody body in rigidbodies)
         {
-            charJoint.enableProjection = true;
+            body.useGravity = false;
+        }
+        // projection limits unwanted stretches in model
+        foreach (CharacterJoint joint in joints)
+        {
+            joint.enableProjection = true;
         }
 
-        RagdollStart();
+        Blend();
+        //DisableRagdoll();
+        //EnableRagdoll();
     }
 
-    public void RagdollStart()
+    public void EnableRagdoll()
     {
-        //start ragdolling
-        foreach (Rigidbody joint in ragdollRig)
+        // enable ragdoll effect
+        foreach (Rigidbody body in rigidbodies)
         {
-            //isKinematic
-            joint.isKinematic = false;
+            body.isKinematic = false;
         }
-        ragdollRoot.isKinematic = false;
 
-        //disable animator here
+        // disable animations
+        animator.enabled = false;
     }
 
-    public void RagdollStop()
+    public void DisableRagdoll()
     {
-        //stop ragdolling
-        foreach (Rigidbody joint in ragdollRig)
+        // disable ragdoll effect
+        foreach (Rigidbody joint in rigidbodies)
         {
-            //isKinematic
             joint.isKinematic = true;
         }
         ragdollRoot.isKinematic = false;
 
-        //enable animator here
+        // enable animations
+        animator.enabled = true;
+    }
+
+    public void Blend()
+    {
+        EnableRagdoll();
+        animator.enabled = true;
     }
 }

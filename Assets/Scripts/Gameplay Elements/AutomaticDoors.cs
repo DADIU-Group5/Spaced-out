@@ -41,11 +41,10 @@ public class AutomaticDoors : MonoBehaviour {
             this.animator.GetCurrentAnimatorStateInfo(0).IsName("DoorClose"))
         {
             crushingPlayer = true;
+            var evt = new ObserverEvent(EventName.Crushed);
+            Subject.instance.Notify(gameObject, evt);
 
             Debug.Log("Player has been crushed!");
-
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Renderer>().material.color = Color.blue;
-            crushingPlayer = false;
         }
 
         //this only opens/closes if the isOn state is changed.

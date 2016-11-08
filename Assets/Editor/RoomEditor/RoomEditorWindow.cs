@@ -188,7 +188,6 @@ public class RoomEditorWindow : EditorWindow {
         }
         if (GUILayout.Button("Save!", GUILayout.Height(50)))
         {
-
             RC.GetRoom().CleanData();
             UpdateAll();
             roomName = RC.GetName();
@@ -288,13 +287,11 @@ public class RoomEditorWindow : EditorWindow {
         float xMove = 2.5f + (xScale.x / 2);
         float yMove = 2.5f + (yScale.y / 2);
 
-
         //Upper wall
         GameObject upper = RC.AddNewshapingObject();
         upper.transform.localScale = yScale;
         upper.transform.rotation = wall.transform.rotation;
         upper.transform.position = (wall.transform.up * yMove) + wall.transform.position;
-
 
         //Lower wall
         GameObject lower = RC.AddNewshapingObject();
@@ -302,13 +299,11 @@ public class RoomEditorWindow : EditorWindow {
         lower.transform.rotation = wall.transform.rotation;
         lower.transform.position = (wall.transform.up * -yMove) + wall.transform.position;
 
-
         //Right wall
         GameObject right = RC.AddNewshapingObject();
         right.transform.localScale = xScale;
         right.transform.rotation = wall.transform.rotation;
         right.transform.position = (wall.transform.right * xMove) + wall.transform.position;
-
 
         //Left wall
         GameObject left = RC.AddNewshapingObject();

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{16BB581D-BAEC-49FA-A974-D915FC1D5EA1}" SchemaVersion="72">
+	<Effects>
+		<WorkUnit Name="Default Work Unit" ID="{16BB581D-BAEC-49FA-A974-D915FC1D5EA1}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="jetpack_charge" ID="{E5421C49-839D-4B67-BBB4-C10B855796C0}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FilterTypeBand1" Type="int32" Value="0"/>
+						<Property Name="FrequencyBand1" Type="Real32">
+							<RTPCList>
+								<RTPC Name="" ID="{C7F012BF-E234-4013-9857-49913AE644BD}" ShortID="337414840">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{4802CF50-BA28-4F01-AAA9-FABAA1188C40}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="5"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>972.70415</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>3611.53899</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="FrequencyBand2" Type="Real32" Value="20">
+							<RTPCList>
+								<RTPC Name="" ID="{7A79C55D-4038-496A-B98A-D81BCC974577}" ShortID="501468208">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{813134DD-E4EC-4E3E-A685-3E3E972627F2}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="5"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>951.40489</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>3417.06977</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="FrequencyBand3" Type="Real32" Value="1646">
+							<RTPCList>
+								<RTPC Name="" ID="{A5D2CA7E-28DD-470A-8B6E-B425F63CFAAE}" ShortID="23730794">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{6B694458-AED7-46E5-9819-09B62A08CBE2}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="5"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>295.80681</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>3453.94853</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="GainBand1" Type="Real32" Value="-24"/>
+						<Property Name="GainBand2" Type="Real32" Value="20"/>
+						<Property Name="GainBand3" Type="Real32" Value="-24"/>
+						<Property Name="QFactorBand2" Type="Real32" Value="25"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
+	</Effects>
+</WwiseDocument>

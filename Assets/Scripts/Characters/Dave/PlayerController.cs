@@ -44,6 +44,8 @@ public class PlayerController : MonoBehaviour, Observer
 
     private void Update()
     {
+        // TODO: Implement an UIController that can handle updating the UI with method calls,
+        //       so we aren't updating this part of the UI every frame... /Malte
         if (!fuel.HasFuel())
         {
             readyToLaunchText.text = "Velocity: " + rbPlayer.velocity.magnitude + "\nNo More Fuel!";
@@ -94,11 +96,11 @@ public class PlayerController : MonoBehaviour, Observer
         chargeArrow.position = new Vector3(chargeArrow.position.x, chargeArrowYMin + chargeArrowYHeight * launchForce / maxLaunchForce);
     }
 
-    internal void Kill()
+    /*internal void Kill()
     {
         dead = true;
         StartCoroutine(gameOverMenu.GameOver());
-    }
+    }*/
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
@@ -112,8 +114,10 @@ public class PlayerController : MonoBehaviour, Observer
                 Launch(launchForce);
 
                 break;
-            case EventName.PlayerDead:
-                Kill();
+            /*case EventName.PlayerDead:
+                Debug.Log("calling on notify");
+                if (!dead)
+                    Kill(); //this keeps calling?*/
                 break;
             default:
                 break;

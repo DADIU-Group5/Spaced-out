@@ -55,7 +55,7 @@ public class Fan : MonoBehaviour {
 
     void OnTriggerExit(Collider other)
     {
-        if (other.transform.tag == "player" || other.transform.tag == "object" &&
+        if (other.transform.tag == "Player" || other.transform.tag == "object" &&
             other.transform.GetComponent<GameplayElement>().movement == Movement.floatingItem)
         {   //if the objects leave the collider, remove from list.
             objects.Remove(other);

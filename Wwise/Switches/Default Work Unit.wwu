@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{38CE447A-5578-44EF-B8FD-CAFDFA5204BC}" SchemaVersion="72">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{38CE447A-5578-44EF-B8FD-CAFDFA5204BC}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="galVersion" ID="{BBC04D70-2427-451B-8F93-8407A5EFD474}">
+					<ChildrenList>
+						<Switch Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
+						<Switch Name="v2" ID="{02705BA3-282A-40B4-B70C-52231142B581}"/>
+						<Switch Name="v3" ID="{68351F88-EA08-4001-B2DD-A7BB1D9C547B}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

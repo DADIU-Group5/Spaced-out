@@ -16,7 +16,9 @@ public class KeyObject : MonoBehaviour {
     {
         if (other.transform.tag == "Player")
         {
-            StartCoroutine(gameOverMenu.Win());
+            //StartCoroutine(gameOverMenu.Win());
+            var evt = new ObserverEvent(EventName.PlayerWon);
+            Subject.instance.Notify(gameObject, evt);
         }
     }
 }

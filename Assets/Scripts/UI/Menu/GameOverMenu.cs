@@ -11,6 +11,7 @@ public class GameOverMenu : MonoBehaviour, Observer
     public float timeTilReset = 5f;
 
     public Text ResetCountdown;
+    public Text DeathCauseText;
 
     private bool playerIsDead = false;
     private bool playerWon = false;
@@ -22,6 +23,35 @@ public class GameOverMenu : MonoBehaviour, Observer
         {
 
             case EventName.PlayerDead:
+                var payload = evt.payload;
+                EventName causeOfDeath = (EventName)payload[PayloadConstants.DEATH_CAUSE];
+                string deathCause = "You lost...";
+                switch (causeOfDeath)
+                {
+                    case EventName.OnFire:
+                        deathCause = "Get some aloe vera for that burn!";
+                        break;
+                    case EventName.Crushed:
+                        deathCause = "That's heart-crushing!";
+                        break;
+                    case EventName.Electrocuted:
+                        deathCause = "That was shocking!";
+                        break;
+                    case EventName.PlayerExploded:
+                        deathCause = "Baby you're a firework!";
+                        break;
+                    case EventName.FuelEmpty:
+                        deathCause = "Did someone take your breath away?";
+                        break;
+                   /* case EventName.FuelEmpty:
+                        deathCause = "";
+                        break;*/
+
+
+                }
+
+                DeathCauseText.text = deathCause;
+
                 StartCoroutine(GameOver());
                 break;
             case EventName.PlayerWon:
@@ -69,6 +99,8 @@ public class GameOverMenu : MonoBehaviour, Observer
             if (transform.GetChild(i).gameObject.name == "ResetCountDownText")
                 continue;
             if (transform.GetChild(i).gameObject.name == "GameOverText")
+                continue;
+            if (transform.GetChild(i).gameObject.name == "DeathCauseText")
                 continue;
             transform.GetChild(i).gameObject.SetActive(true);
         }

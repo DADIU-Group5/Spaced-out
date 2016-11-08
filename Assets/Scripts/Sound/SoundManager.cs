@@ -16,6 +16,7 @@ public class SoundManager : MonoBehaviour, Observer
     void Start()
     {
         AkSoundEngine.LoadBank("soundbank_alpha", AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
+        AkSoundEngine.SetSwitch("galVersion", "v1", gameObject);
     }
 
     private void Awake()

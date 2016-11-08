@@ -35,42 +35,46 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     public void PlayerMetObject(GameObject obj)
     {
         Behaviour objBehaviour = obj.GetComponent<GameplayElement>().behaviour;
-
         switch (objBehaviour)
         {
-
             case Behaviour.electrocution:
                 Debug.Log("Hair-raising!");
                 return;
+            
             default:
                 return;
-
-
         }
     }
 
     internal void Kill()
     {
         dead = true;
-        //StartCoroutine(gameOverMenu.GameOver());
+        var evt = new ObserverEvent(EventName.PlayerDead);
+        Subject.instance.Notify(gameObject, evt);
     }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
         switch (evt.eventName)
         {
-
             case EventName.OnFire:
                 onFire = true;
-                Debug.Log("Onnotify burning");
                 StartCoroutine(BurnToDeath());
                 break;
             case EventName.Extinguish:
                 onFire = false;
                 break;
+            case EventName.Crushed:
+                Kill();
+                break;
+            case EventName.Electrocuted:
+                Kill();
+                break;
             case EventName.PlayerExploded:
-                Debug.Log("calling on notify");
-                Kill(); //this keeps calling?
+                Kill();
+                break;
+            case EventName.FuelEmpty:
+                Kill();
                 break;
             default:
                 break;
@@ -86,9 +90,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         if (onFire)
         {
             Debug.Log("Player has burned to death!");
-            var evt = new ObserverEvent(EventName.PlayerExploded);
-            Subject.instance.Notify(gameObject, evt);
-
+            Kill();
         }
     }
 

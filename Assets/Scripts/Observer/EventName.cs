@@ -8,5 +8,16 @@
     Unpause,
     QuitGame,
     LevelCompleted,
-    RestartLevel
+    RestartLevel,
+    PlayerFuelPickup,
+    PlayerDead,
+    OnFire,
+    Extinguish,
+    PlayerWon,
+    Crushed,
+    Electrocuted,
+    BarrelTriggered,
+    BarrelExplosion,
+    PlayerExploded,
+    FuelEmpty
 }

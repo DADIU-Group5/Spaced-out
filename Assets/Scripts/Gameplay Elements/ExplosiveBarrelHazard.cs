@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ExplosiveBarrelHazard : MonoBehaviour {
 
@@ -63,6 +64,11 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
 
         //find all objects in radius of child's spherecollider...
         Collider[] explosionObjects = Physics.OverlapSphere(transform.position, explosionRadius);
+        List<Collider> filterList = new List<Collider>(explosionObjects);
+
+        filterList.RemoveAll(elem => !Physics.Linecast(transform.position, elem.transform.position));
+
+        explosionObjects = filterList.ToArray();
 
         for (int i = 0; i < explosionObjects.Length; i++)
         {
@@ -71,11 +77,18 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
                 continue;
             if (explosionObjects[i].tag == "Player")
             {
-                explosionObjects[i].GetComponent<PlayerController>().dead = true;
+                //explosionObjects[i].GetComponent<PlayerController>().Kill();
+                var evt = new ObserverEvent(EventName.PlayerExploded);
+                Subject.instance.Notify(gameObject, evt);
             }
         }
 
         Collider[] pushObjects = Physics.OverlapSphere(transform.position, pushRadius);
+        filterList = new List<Collider>(pushObjects);
+
+        filterList.RemoveAll(elem => !Physics.Linecast(this.transform.position, elem.transform.position));
+
+        pushObjects = filterList.ToArray();
 
         for (int i = 0; i < pushObjects.Length; i++)
         {
@@ -102,6 +115,9 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
         if (other.transform.tag == "Player" || 
             other.transform.tag == "object" && other.gameObject.GetComponent<Rigidbody>() != null)
         {
+            var evt = new ObserverEvent(EventName.BarrelTriggered);
+            Subject.instance.Notify(gameObject, evt);
+
             pushForce = other.rigidbody.velocity.magnitude;
             pushDirection = other.contacts[0].point - transform.position;
             pushDirection = -pushDirection.normalized;

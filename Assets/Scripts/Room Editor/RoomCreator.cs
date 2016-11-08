@@ -14,19 +14,27 @@ public class RoomCreator : MonoBehaviour
 
     Room currentRoom;
 
+    string rName;
+
     /// <summary>
     /// Creates a new room, if there is not already one.
     /// </summary>
 	public void CreateNewRoom()
     {
+        if(currentRoom != null)
+        {
+            Debug.LogError("There already was a room, now you have 2 and that is bad!");
+        }
         GameObject go = Instantiate(baseRoomPrefab) as GameObject;
         currentRoom = go.GetComponent<Room>();
+        rName = null;
     }
 
     public void LoadRoom(GameObject prefabToLoad)
     {
         GameObject go = Instantiate(prefabToLoad) as GameObject;
         currentRoom = go.GetComponent<Room>();
+        rName = prefabToLoad.name;
     }
 
     public bool EditingRoom()
@@ -39,38 +47,48 @@ public class RoomCreator : MonoBehaviour
         return currentRoom;
     }
 
-    public void AddNewEnvironmentalObject()
+    public GameObject AddNewEnvironmentalObject()
     {
         GameObject temp = Instantiate(environmentalObject) as GameObject;
         currentRoom.AddEnviromentalObject(temp);
+        return temp;
     }
 
-    public void AddFloatingObject()
+    public GameObject AddFloatingObject()
     {
         GameObject temp = Instantiate(floatingObject) as GameObject;
         currentRoom.AddFloatingObject(temp);
+        return temp;
     }
 
-    public void AddStaticObject()
+    public GameObject AddStaticObject()
     {
         GameObject temp = Instantiate(staticObject) as GameObject;
         currentRoom.AddStaticObject(temp);
+        return temp;
     }
 
-    public void AddNewshapingObject()
+    public GameObject AddNewshapingObject()
     {
         GameObject temp = Instantiate(shapingObject) as GameObject;
         currentRoom.AddShapingObject(temp);
+        return temp;
     }
 
-    public void AddNewDoor()
+    public GameObject AddNewDoor()
     {
         GameObject temp = Instantiate(DoorObject) as GameObject;
         currentRoom.AddDoor(temp);
+        return temp;
+    }
+
+    public string GetName()
+    {
+        return rName;
     }
 
     public void DestroyRoom()
-    {
+    { 
         if (Application.isEditor)
         {
             DestroyImmediate(currentRoom.gameObject);

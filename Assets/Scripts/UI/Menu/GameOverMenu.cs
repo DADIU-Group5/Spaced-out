@@ -3,34 +3,85 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameOverMenu : MonoBehaviour {
+public class GameOverMenu : MonoBehaviour, Observer
+{
 
     [Header("Set countdown times:")]
     public float timeTilGameOverScreen = 1f;
-    public float timeTilReset = 1f;
+    public float timeTilReset = 5f;
 
     public Text ResetCountdown;
+    public Text DeathCauseText;
 
     private bool playerIsDead = false;
     private bool playerWon = false;
     private float countingDown = 10;
+
+    public void OnNotify(GameObject entity, ObserverEvent evt)
+    {
+        switch (evt.eventName)
+        {
+
+            case EventName.PlayerDead:
+                var payload = evt.payload;
+                EventName causeOfDeath = (EventName)payload[PayloadConstants.DEATH_CAUSE];
+                string deathCause = "You lost...";
+                switch (causeOfDeath)
+                {
+                    case EventName.OnFire:
+                        deathCause = "Get some aloe vera for that burn!";
+                        break;
+                    case EventName.Crushed:
+                        deathCause = "That's heart-crushing!";
+                        break;
+                    case EventName.Electrocuted:
+                        deathCause = "That was shocking!";
+                        break;
+                    case EventName.PlayerExploded:
+                        deathCause = "Baby you're a firework!";
+                        break;
+                    case EventName.FuelEmpty:
+                        deathCause = "Did someone take your breath away?";
+                        break;
+                   /* case EventName.FuelEmpty:
+                        deathCause = "";
+                        break;*/
+
+
+                }
+
+                DeathCauseText.text = deathCause;
+
+                StartCoroutine(GameOver());
+                break;
+            case EventName.PlayerWon:
+                StartCoroutine(Win());
+                break;
+            default:
+                break;
+        }
+    }
 
     /// <summary>
     /// Set Game Over
     /// </summary>
     public IEnumerator GameOver()
     {
+        Debug.Log("Gameover called");
         //wait set amount of time...
         yield return new WaitForSeconds(timeTilGameOverScreen);
 
         //turn on all the UI elements in the GameOverCanvas
         for (int i = 0; i < transform.childCount; i++)
         {
-            if (transform.GetChild(i).gameObject.name != "ResetButton")
-                transform.GetChild(i).gameObject.SetActive(true);
+            if (transform.GetChild(i).gameObject.name == "ResetButton")
+                continue;
+            if (transform.GetChild(i).gameObject.name == "WinText")
+                continue;
+            transform.GetChild(i).gameObject.SetActive(true);
         }
         countingDown = timeTilReset;
-        playerIsDead = !playerIsDead;
+        playerIsDead = true;
 
     }
 
@@ -47,9 +98,13 @@ public class GameOverMenu : MonoBehaviour {
         {
             if (transform.GetChild(i).gameObject.name == "ResetCountDownText")
                 continue;
+            if (transform.GetChild(i).gameObject.name == "GameOverText")
+                continue;
+            if (transform.GetChild(i).gameObject.name == "DeathCauseText")
+                continue;
             transform.GetChild(i).gameObject.SetActive(true);
         }
-        playerWon = !playerWon;
+        playerWon = true;
         yield return null;
 
     }
@@ -63,8 +118,13 @@ public class GameOverMenu : MonoBehaviour {
         SceneManager.LoadScene(scene.name);
     }
 
-	// Update is called once per frame
-	void Update () {
+    void Start()
+    {
+        Subject.instance.AddObserver(this);
+    }
+
+    // Update is called once per frame
+    void Update () {
 
         //if the player is dead, start counting down to level reset
 	    if (playerIsDead)

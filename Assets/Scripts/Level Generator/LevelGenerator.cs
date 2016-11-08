@@ -21,8 +21,8 @@ public class LevelGenerator : MonoBehaviour {
     public int minRooms = 7;
     public int maxRooms = 20;
     public float distanceBetweenRooms = 3;
-    public float distanceFromDoorToPlayer = 1;
-    public float distanceFromDoorToKey = 1;
+    public float playerDistanceFromDoor = 1;
+    public float keyDistanceFromDoor = 1;
 
     Door firstDoor = null;
 
@@ -30,9 +30,17 @@ public class LevelGenerator : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-#if UNITY_EDITOR
-        UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
-#endif
+        #if UNITY_EDITOR
+            UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
+        #endif
+        GenerateLevel();
+    }
+
+    /// <summary>
+    /// Generates the entire level.
+    /// </summary>
+    void GenerateLevel()
+    {
         System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
         sw.Start();
         if (exteriorSeed == -1)
@@ -41,17 +49,22 @@ public class LevelGenerator : MonoBehaviour {
         }
 
         Random.InitState(exteriorSeed);
+
         LoadRooms();
+
         int roomsToCreate = Random.Range(minRooms, maxRooms);
+
         Debug.Log("Length: " + roomsToCreate);
         CreateLevel(roomsToCreate);
         Debug.Log("Created: " + spawnedRooms.Count);
+
         SpawnPlayer();
         SpawnKey();
         RemoveUnusedDoors();
         RandomizeInteriorForAll();
+
         sw.Stop();
-        Debug.Log("Level generation time"+sw.Elapsed);
+        Debug.Log("Level generation time" + sw.Elapsed);
     }
 
     /// <summary>
@@ -75,7 +88,7 @@ public class LevelGenerator : MonoBehaviour {
         {
             if(item.GetComponent<Door>().GetDoorType() == DoorType.entrance)
             {
-                Instantiate(playerPrefab, item.transform.position - (item.transform.right*distanceFromDoorToPlayer), Quaternion.identity);
+                Instantiate(playerPrefab, item.transform.position - (item.transform.right*playerDistanceFromDoor), Quaternion.identity);
             }
         }
     }
@@ -86,7 +99,7 @@ public class LevelGenerator : MonoBehaviour {
     void SpawnKey()
     {
         Transform tempTrans = GetRandomDoor(spawnedRooms[spawnedRooms.Count - 1]).transform;
-        Instantiate(keyPrefab, tempTrans.position - (tempTrans.right*distanceFromDoorToKey), Quaternion.identity);
+        Instantiate(keyPrefab, tempTrans.position - (tempTrans.right*keyDistanceFromDoor), Quaternion.identity);
     }
 
     /// <summary>

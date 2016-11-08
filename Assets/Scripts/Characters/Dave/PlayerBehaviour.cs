@@ -13,6 +13,8 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     [HideInInspector]
     public bool dead = false;
 
+    private PayloadConstants payload; 
+
     public float TimeUntilBurnToDeath = 5f;
 
     void Start()
@@ -35,42 +37,54 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     public void PlayerMetObject(GameObject obj)
     {
         Behaviour objBehaviour = obj.GetComponent<GameplayElement>().behaviour;
-
         switch (objBehaviour)
         {
-
             case Behaviour.electrocution:
                 Debug.Log("Hair-raising!");
                 return;
+            
             default:
                 return;
-
-
         }
     }
 
-    internal void Kill()
+    internal void Kill(EventName causeOfDeath)
     {
-        dead = true;
-        //StartCoroutine(gameOverMenu.GameOver());
+        if (!dead)
+        {
+            var evt = new ObserverEvent(EventName.PlayerDead);
+            evt.payload.Add(PayloadConstants.DEATH_CAUSE, causeOfDeath);
+            Subject.instance.Notify(gameObject, evt);
+            dead = true;
+        }
     }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
         switch (evt.eventName)
         {
-
             case EventName.OnFire:
                 onFire = true;
-                Debug.Log("Onnotify burning");
                 StartCoroutine(BurnToDeath());
                 break;
             case EventName.Extinguish:
                 onFire = false;
                 break;
-            case EventName.PlayerDead:
-                Debug.Log("calling on notify");
-                Kill(); //this keeps calling?
+            case EventName.Crushed:
+                Kill(evt.eventName);
+                //Kill(EventName.Crushed);
+                break;
+            case EventName.Electrocuted:
+                Kill(evt.eventName);
+                //Kill(EventName.Electrocuted);
+                break;
+            case EventName.PlayerExploded:
+                Kill(evt.eventName);
+                //Kill(EventName.PlayerExploded);
+                break;
+            case EventName.FuelEmpty:
+                Kill(evt.eventName);
+                //Kill(EventName.FuelEmpty);
                 break;
             default:
                 break;
@@ -86,9 +100,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         if (onFire)
         {
             Debug.Log("Player has burned to death!");
-            var evt = new ObserverEvent(EventName.PlayerDead);
-            Subject.instance.Notify(gameObject, evt);
-
+            Kill(EventName.OnFire);
         }
     }
 

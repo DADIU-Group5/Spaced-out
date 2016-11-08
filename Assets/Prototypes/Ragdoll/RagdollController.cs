@@ -25,7 +25,9 @@ public class RagdollController : MonoBehaviour {
             joint.enableProjection = true;
         }
 
-        EnableRagdoll();
+        Blend();
+        //DisableRagdoll();
+        //EnableRagdoll();
     }
 
     public void EnableRagdoll()
@@ -50,6 +52,12 @@ public class RagdollController : MonoBehaviour {
         ragdollRoot.isKinematic = false;
 
         // enable animations
+        animator.enabled = true;
+    }
+
+    public void Blend()
+    {
+        EnableRagdoll();
         animator.enabled = true;
     }
 }

@@ -12,7 +12,7 @@ public class SoundManager : MonoBehaviour, Observer
     // Use this for initialization
     void Start()
     {
-        //AkSoundEngine.LoadBank("soundbank_alpha", AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
+        AkSoundEngine.LoadBank("soundbank_alpha", AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
     }
 
     private void Awake()
@@ -22,9 +22,7 @@ public class SoundManager : MonoBehaviour, Observer
 
     // Update is called once per frame
     void Update()
-    {
-
-    }
+    { }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
@@ -35,12 +33,12 @@ public class SoundManager : MonoBehaviour, Observer
                 var payload = evt.payload;
                 float launchForce = (float)payload[PayloadConstants.LAUNCH_SPEED];
 
-                //PlayEvent(SoundEventConstants.GAL_RANDOM_INSULT);
+                PlayEvent(SoundEventConstants.DAVE_CHARGE);
 
                 break;
         }
     }
-    /*
+    
     private void PlayEvent(string eventName)
     {
         AkSoundEngine.PostEvent(eventName, gameObject);
@@ -96,5 +94,4 @@ public class SoundManager : MonoBehaviour, Observer
     {
         AkSoundEngine.SetRTPCValue("MasterVolume", volume);
     }
-    */
 }

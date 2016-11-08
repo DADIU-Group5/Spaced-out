@@ -231,7 +231,6 @@
 						<Action Name="Set Game Parameter" ID="{EFAA7190-BAB6-48D8-8588-CF4BAC34F606}" ShortID="271915988" Type="SetGameParameter" Scope="One" Global="true">
 							<PropertyList>
 								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
-								<Property Name="Delay" Type="Real64" Value="0.5"/>
 								<Property Name="FadeCurve" Type="int16" Value="0"/>
 							</PropertyList>
 							<ElementList>
@@ -316,7 +315,6 @@
 						<Action Name="Set Game Parameter" ID="{CD4A4332-B5D4-4D0B-BC32-6C607E49FD47}" ShortID="762250533" Type="SetGameParameter" Scope="One" Global="true">
 							<PropertyList>
 								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
-								<Property Name="Delay" Type="Real64" Value="0.5"/>
 								<Property Name="FadeCurve" Type="int16" Value="0"/>
 							</PropertyList>
 							<ElementList>
@@ -401,7 +399,6 @@
 						<Action Name="Set Game Parameter" ID="{8B077E18-8164-45EE-9916-45F1C6684752}" ShortID="403225526" Type="SetGameParameter" Scope="One" Global="true">
 							<PropertyList>
 								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
-								<Property Name="Delay" Type="Real64" Value="0.5"/>
 								<Property Name="FadeCurve" Type="int16" Value="0"/>
 							</PropertyList>
 							<ElementList>
@@ -486,7 +483,6 @@
 						<Action Name="Set Game Parameter" ID="{A7ED819D-E924-489E-B09D-4E8D7C352FA6}" ShortID="787763922" Type="SetGameParameter" Scope="One" Global="true">
 							<PropertyList>
 								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
-								<Property Name="Delay" Type="Real64" Value="0.5"/>
 								<Property Name="FadeCurve" Type="int16" Value="0"/>
 							</PropertyList>
 							<ElementList>
@@ -569,7 +565,6 @@
 						</Action>
 						<Action Name="Set Game Parameter" ID="{4B26FF92-953A-41FC-BE08-5490F0055D53}" ShortID="739894960" Type="SetGameParameter" Scope="One" Global="true">
 							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.5"/>
 								<Property Name="FadeCurve" Type="int16" Value="7"/>
 							</PropertyList>
 							<ElementList>

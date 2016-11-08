@@ -37,7 +37,9 @@ public class ElectricalHazard : MonoBehaviour {
         if (player.GetComponent<PlayerController>().onFire)
         {
             Debug.Log("Player was electrocuted!");
-            player.GetComponent<PlayerController>().Kill();
+            //player.GetComponent<PlayerController>().Kill();
+            var evt = new ObserverEvent(EventName.PlayerDead);
+            Subject.instance.Notify(gameObject, evt);
         }
     }
 }

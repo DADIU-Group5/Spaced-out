@@ -10,5 +10,8 @@
     LevelCompleted,
     RestartLevel,
     PlayerFuelPickup,
-    PlayerDead
+    PlayerDead,
+    OnFire,
+    Extinguish,
+    PlayerWon
 }

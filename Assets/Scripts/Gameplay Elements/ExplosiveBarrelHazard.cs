@@ -71,7 +71,9 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
                 continue;
             if (explosionObjects[i].tag == "Player")
             {
-                explosionObjects[i].GetComponent<PlayerController>().Kill();
+                //explosionObjects[i].GetComponent<PlayerController>().Kill();
+                var evt = new ObserverEvent(EventName.PlayerDead);
+                Subject.instance.Notify(gameObject, evt);
             }
         }
 

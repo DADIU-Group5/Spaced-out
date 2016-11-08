@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class FireHazard : MonoBehaviour {
 
-    public float TimeUntilBurnToDeath = 20f;
+    //public float TimeUntilBurnToDeath = 20f;
 
     [HideInInspector]
     public GameObject player;
@@ -24,24 +24,27 @@ public class FireHazard : MonoBehaviour {
         if (other.transform.tag == "Player" && !burningPlayer)
         {
             burningPlayer = true;
-            player.GetComponent<PlayerController>().onFire = true;
+           // player.GetComponent<PlayerController>().onFire = true;
+            var evt = new ObserverEvent(EventName.OnFire);
+            Subject.instance.Notify(gameObject, evt);
+
             burningText.text = "BURNING!";
-            StartCoroutine(BurnToDeath());
+            //StartCoroutine(BurnToDeath());
         }
     }
 
     /// <summary>
     /// Burn the player to death, if fire is not put out.
     /// </summary>
-    public IEnumerator BurnToDeath()
+    /*public IEnumerator BurnToDeath()
     {
         yield return new WaitForSeconds(TimeUntilBurnToDeath);
 
         //if the player is still on fire after this time, die.
-        if (player.GetComponent < PlayerController >(). onFire)
+        if (player.GetComponent < PlayerBehaviour >(). onFire)
         {
             Debug.Log("Player has burned to death!");
-            player.GetComponent<PlayerController>().Kill();
+            
         }
-    }
+    }*/
 }

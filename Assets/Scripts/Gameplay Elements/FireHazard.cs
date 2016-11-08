@@ -9,6 +9,7 @@ public class FireHazard : MonoBehaviour {
     [HideInInspector]
     public GameObject player;
     private bool burningPlayer = false;
+    public bool extinquishFlames = false;
 
     public Text burningText;
 

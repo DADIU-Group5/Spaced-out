@@ -20,6 +20,7 @@ public class GameOverMenu : MonoBehaviour {
     /// </summary>
     public IEnumerator GameOver()
     {
+        Debug.Log("Gameover called");
         //wait set amount of time...
         yield return new WaitForSeconds(timeTilGameOverScreen);
 
@@ -33,7 +34,7 @@ public class GameOverMenu : MonoBehaviour {
             transform.GetChild(i).gameObject.SetActive(true);
         }
         countingDown = timeTilReset;
-        playerIsDead = !playerIsDead;
+        playerIsDead = true;
 
     }
 
@@ -54,7 +55,7 @@ public class GameOverMenu : MonoBehaviour {
                 continue;
             transform.GetChild(i).gameObject.SetActive(true);
         }
-        playerWon = !playerWon;
+        playerWon = true;
         yield return null;
 
     }

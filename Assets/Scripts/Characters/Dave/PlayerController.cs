@@ -113,7 +113,9 @@ public class PlayerController : MonoBehaviour, Observer
 
                 break;
             case EventName.PlayerDead:
-                Kill();
+                Debug.Log("calling on notify");
+               /* if (!dead)
+                    Kill();*/ //this keeps calling?
                 break;
             default:
                 break;

@@ -36,7 +36,7 @@ public class ElectricalHazard : MonoBehaviour {
         //if the player is still on fire after this time, die.
         if (player.GetComponent<PlayerController>().onFire)
         {
-            Debug.Log("Player has burned to death!");
+            Debug.Log("Player was electrocuted!");
             player.GetComponent<PlayerController>().Kill();
         }
     }

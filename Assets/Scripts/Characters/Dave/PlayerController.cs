@@ -94,11 +94,11 @@ public class PlayerController : MonoBehaviour, Observer
         chargeArrow.position = new Vector3(chargeArrow.position.x, chargeArrowYMin + chargeArrowYHeight * launchForce / maxLaunchForce);
     }
 
-    internal void Kill()
+    /*internal void Kill()
     {
         dead = true;
         StartCoroutine(gameOverMenu.GameOver());
-    }
+    }*/
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
@@ -112,10 +112,10 @@ public class PlayerController : MonoBehaviour, Observer
                 Launch(launchForce);
 
                 break;
-            case EventName.PlayerDead:
+            /*case EventName.PlayerDead:
                 Debug.Log("calling on notify");
-               /* if (!dead)
-                    Kill();*/ //this keeps calling?
+                if (!dead)
+                    Kill(); //this keeps calling?*/
                 break;
             default:
                 break;

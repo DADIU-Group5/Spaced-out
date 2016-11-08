@@ -118,47 +118,6 @@ namespace Prototype
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             return hitboxCollider.Raycast(ray, out hit, 1000f);
-
-            /*
-
-            if (hitboxCollider.Raycast(ray, out hit, 1000f))
-            {
-                return true;
-            }
-            else
-            {
-            }
-            return false;
-
-
-
-
-
-
-
-            if (Input.mousePosition.x > pixelsLeft &&
-                Input.mousePosition.x < pixelsRight &&
-                Input.mousePosition.y > pixelsBottom &&
-                Input.mousePosition.y < pixelsTop)
-            {
-                return true;
-            }
-
-            return false;
-            
-
-
-
-
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                return hit.collider.tag == "Player";
-            }
-
-            return false;*/
         }
 
         // Calculate force from old mouse position and current mouse position

@@ -6,7 +6,7 @@ public class PlayerHitboxController : MonoBehaviour {
     public Transform playerTransform;
     public Transform cameraTransform;
     
-	void Update () {
+	void LateUpdate () {
         // Position should always be on top of the player
         this.transform.position = playerTransform.position;
 

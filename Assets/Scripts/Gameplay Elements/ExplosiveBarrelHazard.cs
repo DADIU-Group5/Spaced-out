@@ -104,6 +104,9 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
         if (other.transform.tag == "Player" || 
             other.transform.tag == "object" && other.gameObject.GetComponent<Rigidbody>() != null)
         {
+            var evt = new ObserverEvent(EventName.BarrelTriggered);
+            Subject.instance.Notify(gameObject, evt);
+
             pushForce = other.rigidbody.velocity.magnitude;
             pushDirection = other.contacts[0].point - transform.position;
             pushDirection = -pushDirection.normalized;

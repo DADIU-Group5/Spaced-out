@@ -12,7 +12,7 @@ namespace Prototype
         public float launchBuffer = 100f;
         public Camera cam;
         public BehindCamera behindCamera;
-        //public PlayerController player;
+        public PlayerController player;
         public FuelController fuel;
 
         // TODO: remove
@@ -87,15 +87,12 @@ namespace Prototype
                     // Rotate player pitch transform so player is launched in correct direction
                     playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
 
-                    // Commented out by Giorgos, I don't think this is needed
-                    //player.SetLaunchForce(GetLaunchForce());
+                    player.SetLaunchForce(GetLaunchForce());
                 }
 
                 // Launch 
                 if (Input.GetMouseButtonUp(0))
                 {
-                    //player.Launch(GetLaunchForce());
-
                     var evt = new ObserverEvent(EventName.PlayerLaunch);
                     
                     evt.payload.Add(PayloadConstants.LAUNCH_SPEED, GetLaunchForce());

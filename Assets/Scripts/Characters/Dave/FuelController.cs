@@ -24,7 +24,7 @@ public class FuelController : MonoBehaviour {
     {
         if (rbPlayer.velocity.magnitude < velocityToDie && currentFuel <= 0 && !dead)
         {
-            var evt = new ObserverEvent(EventName.PlayerDead); //fuelEmpty
+            var evt = new ObserverEvent(EventName.FuelEmpty); //fuelEmpty
             Subject.instance.Notify(gameObject, evt);
             dead = true;
         }

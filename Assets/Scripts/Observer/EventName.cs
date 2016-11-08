@@ -18,5 +18,6 @@
     Electrocuted,
     BarrelTriggered,
     BarrelExplosion,
-    PlayerExploded
+    PlayerExploded,
+    FuelEmpty
 }

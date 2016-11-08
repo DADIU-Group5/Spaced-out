@@ -73,6 +73,9 @@ public class PlayerBehaviour : MonoBehaviour, Observer
             case EventName.PlayerExploded:
                 Kill();
                 break;
+            case EventName.FuelEmpty:
+                Kill();
+                break;
             default:
                 break;
         }

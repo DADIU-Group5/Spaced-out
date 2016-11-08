@@ -3,6 +3,12 @@ using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 
+/*
+ * NO LONGER USED! 
+ * USES ROOMEDITORWINDOW INSTEAD!
+ */
+
+
 [CustomEditor(typeof(RoomCreator))]
 public class RoomCreatorEditor : Editor
 {

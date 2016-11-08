@@ -8,7 +8,7 @@ public class RoomEditorWindow : EditorWindow {
     public static RoomEditorWindow window;
     RoomCreator RC;
 
-    enum States { noRoom, Editing, Saving, Loading }
+    enum States { noRoom, Editing, Saving, Loading, CreateRoom }
     States states;
 
     string roomName;
@@ -50,6 +50,9 @@ public class RoomEditorWindow : EditorWindow {
             case States.Loading:
                 LoadingRooms();
                 break;
+            case States.CreateRoom:
+                CreateBasicRoom();
+                break;
             default:
                 break;
         }
@@ -77,27 +80,29 @@ public class RoomEditorWindow : EditorWindow {
             {
                 return;
             }
+            if (states == States.CreateRoom)
+            {
+                return;
+            }
             states = States.Editing;
         }
     }
 
     void NoRoom()
     {
-        if (!RC.EditingRoom())
+        GUILayout.Label("Currently no room, create a new room or load an existing room.");
+        GUILayout.FlexibleSpace();
+        if (GUILayout.Button("New room", GUILayout.Height(50)))
         {
-            GUILayout.FlexibleSpace();
-            if (GUILayout.Button("New room", GUILayout.Height(50)))
-            {
-                NewRoom();
-            }
-            GUILayout.FlexibleSpace();
-            
-            if (GUILayout.Button("Load room", GUILayout.Height(50)))
-            {
-                states = States.Loading;
-            }
-            GUILayout.FlexibleSpace();
+            NewRoom();
         }
+        GUILayout.FlexibleSpace();
+            
+        if (GUILayout.Button("Load room", GUILayout.Height(50)))
+        {
+            states = States.Loading;
+        }
+        GUILayout.FlexibleSpace();
     }
 
     void Editing()
@@ -158,7 +163,11 @@ public class RoomEditorWindow : EditorWindow {
             default:
                 break;
         }
-
+        GUILayout.FlexibleSpace();
+        if(GUILayout.Button("Create basic room"))
+        {
+            states = States.CreateRoom;
+        }
         GUILayout.FlexibleSpace();
 
         EditorGUILayout.BeginHorizontal();
@@ -187,6 +196,25 @@ public class RoomEditorWindow : EditorWindow {
         GameObject go = Instantiate(toDuplicate,toDuplicate.transform.position,toDuplicate.transform.rotation,toDuplicate.transform.parent) as GameObject;
         go.name = toDuplicate.name;
         Selection.activeGameObject = go;
+    }
+
+    Vector3 size = new Vector3(5,5,5);
+
+    void CreateBasicRoom()
+    {
+        GUILayout.Label("Creating a basic room");
+        GUILayout.FlexibleSpace();
+        size = EditorGUILayout.Vector3Field("Size: ", size);
+        if (GUILayout.Button("Create Room (NYI)", GUILayout.Height(50)))
+        {
+            states = States.Editing;
+        }
+        GUILayout.FlexibleSpace();
+        if (GUILayout.Button("Back", GUILayout.Height(50)))
+        {
+            states = States.Editing;
+        }
+        GUILayout.FlexibleSpace();
     }
 
     void SavingRoom()

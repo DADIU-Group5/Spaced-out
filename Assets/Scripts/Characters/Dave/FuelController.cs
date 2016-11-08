@@ -11,7 +11,9 @@ public class FuelController : MonoBehaviour {
 
     public Text fuelText;
     public Rigidbody rbPlayer;
-    public PlayerController player;
+    public PlayerBehaviour player;
+    private bool dead = false;
+
 
     public void Awake()
     {
@@ -20,10 +22,11 @@ public class FuelController : MonoBehaviour {
 
     public void Update()
     {
-        if (rbPlayer.velocity.magnitude < velocityToDie && currentFuel <= 0 && !player.dead)
+        if (rbPlayer.velocity.magnitude < velocityToDie && currentFuel <= 0 && !dead)
         {
-            var evt = new ObserverEvent(EventName.PlayerDead);
+            var evt = new ObserverEvent(EventName.PlayerDead); //fuelEmpty
             Subject.instance.Notify(gameObject, evt);
+            dead = true;
         }
     }
 

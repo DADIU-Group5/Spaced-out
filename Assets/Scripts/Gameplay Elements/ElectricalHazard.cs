@@ -18,10 +18,8 @@ public class ElectricalHazard : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Player" && !shockingPlayer)
+        if (other.transform.tag == "Player")
         {
-            shockingPlayer = true;
-            player.GetComponent<PlayerController>().onFire = true;
             StartCoroutine(ShockToDeath());
         }
     }
@@ -32,14 +30,9 @@ public class ElectricalHazard : MonoBehaviour {
     public IEnumerator ShockToDeath()
     {
         yield return new WaitForSeconds(TimeUntilShockToDeath);
-
-        //if the player is still on fire after this time, die.
-        if (player.GetComponent<PlayerController>().onFire)
-        {
-            Debug.Log("Player was electrocuted!");
-            //player.GetComponent<PlayerController>().Kill();
-            var evt = new ObserverEvent(EventName.PlayerDead);
-            Subject.instance.Notify(gameObject, evt);
-        }
+        Debug.Log("Player was electrocuted!");
+        //player.GetComponent<PlayerController>().Kill();
+        var evt = new ObserverEvent(EventName.Electrocuted);
+        Subject.instance.Notify(gameObject, evt);
     }
 }

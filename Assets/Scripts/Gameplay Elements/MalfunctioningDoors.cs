@@ -53,11 +53,11 @@ public class MalfunctioningDoors : MonoBehaviour {
         if (doorsTouchingPlayer >= 2 && !crushingPlayer &&
             this.animator.GetCurrentAnimatorStateInfo(0).IsName("DoorClose"))
         {
+            var evt = new ObserverEvent(EventName.Crushed);
+            Subject.instance.Notify(gameObject, evt);
             crushingPlayer = true;
 
             Debug.Log("Player has been crushed!");
-
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Renderer>().material.color = Color.blue;
         }
 
         if (doorIsMalfunctioning && !malfunctioning)

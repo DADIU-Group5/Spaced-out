@@ -52,11 +52,11 @@ public class SoundManager : MonoBehaviour, Observer
                 else
                     PlayEvent(SoundEventConstants.DAVE_LAUNCH);
 
-                if (firstLaunch)
-                {
-                    PlayEvent(SoundEventConstants.DAVE_FIRST_LAUNCH);
-                    firstLaunch = false;
-                }
+                //if (firstLaunch)
+                //{
+                //    PlayEvent(SoundEventConstants.DAVE_FIRST_LAUNCH);
+                //    firstLaunch = false;
+                //}
 
                 break;
 

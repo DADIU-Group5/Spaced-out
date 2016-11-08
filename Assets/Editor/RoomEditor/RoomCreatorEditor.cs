@@ -3,6 +3,12 @@ using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 
+/*
+ * NO LONGER USED! 
+ * USES ROOMEDITORWINDOW INSTEAD!
+ */
+
+
 [CustomEditor(typeof(RoomCreator))]
 public class RoomCreatorEditor : Editor
 {
@@ -20,9 +26,11 @@ public class RoomCreatorEditor : Editor
 
     public override void OnInspectorGUI()
     {
+        EditorGUILayout.LabelField("YOU NEED TO USE THE 'ROOM EDITOR WINDOW!",EditorStyles.helpBox);
         RC = (RoomCreator)target;
+        return;
         //DrawDefaultInspector();
-        if (rooms == null || rooms.Count == 0)
+        /*if (rooms == null || rooms.Count == 0)
         {
             LoadRooms();
         }
@@ -43,7 +51,7 @@ public class RoomCreatorEditor : Editor
                 break;
             default:
                 break;
-        }
+        }*/
     }
 
     void GetState()

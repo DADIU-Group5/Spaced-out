@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ExplosiveBarrelHazard : MonoBehaviour {
 
@@ -63,6 +64,11 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
 
         //find all objects in radius of child's spherecollider...
         Collider[] explosionObjects = Physics.OverlapSphere(transform.position, explosionRadius);
+        List<Collider> filterList = new List<Collider>(explosionObjects);
+
+        filterList.RemoveAll(elem => !Physics.Linecast(transform.position, elem.transform.position));
+
+        explosionObjects = filterList.ToArray();
 
         for (int i = 0; i < explosionObjects.Length; i++)
         {
@@ -78,6 +84,11 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
         }
 
         Collider[] pushObjects = Physics.OverlapSphere(transform.position, pushRadius);
+        filterList = new List<Collider>(pushObjects);
+
+        filterList.RemoveAll(elem => !Physics.Linecast(this.transform.position, elem.transform.position));
+
+        pushObjects = filterList.ToArray();
 
         for (int i = 0; i < pushObjects.Length; i++)
         {

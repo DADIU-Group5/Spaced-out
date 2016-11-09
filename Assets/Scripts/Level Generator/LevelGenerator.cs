@@ -64,6 +64,8 @@ public class LevelGenerator : MonoBehaviour {
         interiorSeed = PlayerPrefs.GetInt("intSeed");
         Debug.Log("extSeed: " + exteriorSeed);
         Debug.Log("intSeed: " + interiorSeed);
+        minRooms = PlayerPrefs.GetInt(PlayerPrefs.GetString("CurrentLevel") + "Length");
+        maxRooms = minRooms;
     }
 
     /// <summary>

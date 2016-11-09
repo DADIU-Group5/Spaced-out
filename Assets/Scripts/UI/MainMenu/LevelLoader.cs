@@ -5,6 +5,8 @@ using System;
 
 public class LevelLoader : MonoBehaviour {
 
+    public int[] levelLengths = new int[5];
+
     public bool overrideSeed = false;
 
     public int extSeed = 10;
@@ -19,6 +21,11 @@ public class LevelLoader : MonoBehaviour {
     void Start()
     {
         timeDifference = new TimeSpan(hoursFromWinToReset, 0, 0);
+        PlayerPrefs.SetInt("1Length", levelLengths[0]);
+        PlayerPrefs.SetInt("2Length", levelLengths[1]);
+        PlayerPrefs.SetInt("3Length", levelLengths[2]);
+        PlayerPrefs.SetInt("4Length", levelLengths[3]);
+        PlayerPrefs.SetInt("5Length", levelLengths[4]);
         //PlayerPrefs.SetString("FinishTime", DateTime.Now.ToBinary().ToString());
         //PlayerPrefs.SetInt("FinishedGame", 1);
         CheckRemakeSeed();

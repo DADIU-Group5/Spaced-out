@@ -92,7 +92,7 @@ public class ObjectSelector : MonoBehaviour {
     {
         if(canBe.Count == 0)
         {
-            Debug.LogError("This object CANNOT become a object, is the something in the correct resources folder?");
+            Debug.LogError("This object CANNOT become a object, is the object in the correct resources folder?");
             return;
         }
         //If locked use the locked object.
@@ -129,6 +129,18 @@ public class ObjectSelector : MonoBehaviour {
     public void UnlockObject()
     {
         lockObject = false;
+        if(GOshowing == null)
+        {
+            if (Application.isEditor)
+            {
+                DestroyImmediate(transform.GetChild(0).gameObject);
+            }
+            else
+            {
+                Destroy(transform.GetChild(0).gameObject);
+            }
+            gameObject.GetComponent<Renderer>().enabled = true;
+        }
         lockedAs = null;
     }
 }

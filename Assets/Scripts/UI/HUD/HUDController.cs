@@ -4,22 +4,21 @@ using System.Collections;
 
 public class HUDController : MonoBehaviour, Observer {
 
-    private Text fuelText;
-    private Text chargeText;
-    private Text launchText;
-    private Transform chargeArrow;
+    public Text fuelText;
+    public Text chargeText;
+    public Text launchText;
+    public Transform chargeArrow;
 
     private float chargeArrowYMin = 68f;
     private float chargeArrowYHeight = 350.0f;
 
-    void Start () {
+    void Awake ()
+    {
         Subject.instance.AddObserver(this);
+    }
 
-        // These are all in the this prefab, so there will not be NULL references unless the prefab is broken..
-        fuelText = GameObject.Find("Fuel Text").GetComponent<Text>();
-        chargeText = GameObject.Find("Charge Text").GetComponent<Text>();
-        launchText = GameObject.Find("Launch Text").GetComponent<Text>();
-        chargeArrow = GameObject.Find("Charge Arrow").GetComponent<Transform>();
+    void Start () {
+
     }
 	
 	void Update () {

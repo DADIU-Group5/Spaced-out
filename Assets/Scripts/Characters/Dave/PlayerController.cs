@@ -17,9 +17,8 @@ public class PlayerController : MonoBehaviour, Observer
     public Transform pitchTransform;
     public Rigidbody rbPlayer;
     public FuelController fuel;
-
-    // Use this for initialization
-    void Start()
+    
+    void Awake ()
     {
         Subject.instance.AddObserver(this);
     }

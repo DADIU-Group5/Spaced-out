@@ -11,9 +11,10 @@ public class FuelController : MonoBehaviour {
 
     public void Start()
     {
-        ReplenishFuel();
         player = gameObject.GetComponent<PlayerController>();
         rbPlayer = gameObject.GetComponent<Rigidbody>();
+
+        ReplenishFuel();
     }
 
     public void Update()

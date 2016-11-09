@@ -1,170 +1,166 @@
 ﻿using UnityEngine;
 
-namespace Prototype
+public class InputController : MonoBehaviour, Observer
 {
-    public class InputController : MonoBehaviour, Observer
+    private bool invertCameraControls = false;
+    private bool launchMode = false;
+    private bool inputDisabled = false;
+    private Vector2 oldPoint;
+
+    public float cameraRotateSpeed = 4000f;
+    public float launchBuffer = 100f;
+    public Camera cam;
+    public BehindCamera behindCamera;
+    public PlayerController player;
+    public FuelController fuel;
+
+    public Collider hitboxCollider;
+    
+    public Transform playerTransform;
+    public Transform playerPitchTransform;
+
+    private void Start()
     {
-        private bool invertCameraControls = false;
-        private bool launchMode = false;
-        private bool inputDisabled = false;
-        private Vector2 oldPoint;
 
-        public float cameraRotateSpeed = 4000f;
-        public float launchBuffer = 100f;
-        public Camera cam;
-        public BehindCamera behindCamera;
-        public PlayerController player;
-        public FuelController fuel;
+    }
 
-        public Collider hitboxCollider;
+    private void Awake()
+    {
 
-        // TODO: remove
-        public Transform playerTransform;
-        public Transform playerPitchTransform;
+    }
 
-        private void Start()
+    private void Update()
+    {
+        // Quit
+        if (Input.GetKey(KeyCode.Escape))
         {
-
+            Application.Quit();
         }
 
-        private void Awake()
+        // If input is disabled, stop.
+        if (inputDisabled)
         {
-
+            return;
         }
 
-        private void Update()
+        // See if player was tapped. If he was, set launchMode to true, otherwise to false.
+        if (Input.GetMouseButtonDown(0))
         {
-            // Quit
-            if (Input.GetKey(KeyCode.Escape))
-            {
-                Application.Quit();
-            }
-
-            // If input is disabled, stop.
-            if (inputDisabled)
-            {
-                return;
-            }
-
-            // See if player was tapped. If he was, set launchMode to true, otherwise to false.
-            if (Input.GetMouseButtonDown(0))
-            {
-                launchMode = DetectPlayerTap();
-            }
-
-            // Check if we are NOT in launchmode
-            if (!launchMode)
-            {
-                HandleCameraMode();
-            }
-            else if (fuel.HasFuel())
-            {
-                HandleLaunchMode();
-            }
+            launchMode = DetectPlayerTap();
         }
 
-        private void HandleLaunchMode()
+        // Check if we are NOT in launchmode
+        if (!launchMode)
         {
-            // Save starting position of tap
-            if (Input.GetMouseButtonDown(0))
+            HandleCameraMode();
+        }
+        else if (fuel.HasFuel())
+        {
+            HandleLaunchMode();
+        }
+    }
+
+    private void HandleLaunchMode()
+    {
+        // Save starting position of tap
+        if (Input.GetMouseButtonDown(0))
+        {
+            oldPoint = Input.mousePosition;
+        }
+
+        // Rotate player pitch so it faces camera direction and update velocity meter according to where finger is on the screen
+        if (Input.GetMouseButton(0))
+        {
+            playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
+
+            // TODO: Implement an UIController that can handle updating the UI with method calls,
+            //       so we aren't updating this part of the UI every frame... /Malte
+            player.SetLaunchForce(GetLaunchForce());
+        }
+
+        // Launch 
+        if (Input.GetMouseButtonUp(0))
+        {
+            var evt = new ObserverEvent(EventName.PlayerLaunch);
+
+            evt.payload.Add(PayloadConstants.LAUNCH_SPEED, GetLaunchForce());
+            Subject.instance.Notify(gameObject, evt);
+
+            launchMode = false;
+        }
+    }
+
+    private void HandleCameraMode()
+    {
+        // Save starting position of tap
+        if (Input.GetMouseButtonDown(0))
+        {
+            oldPoint = Input.mousePosition;
+        }
+
+        // Look around and change position of camera
+        if (Input.GetMouseButton(0))
+        {
+            Vector2 pos = Input.mousePosition;
+            Vector2 offset = pos - oldPoint;
+
+            if (invertCameraControls)
             {
-                oldPoint = Input.mousePosition;
+                offset = -offset;
             }
 
-            // Rotate player pitch so it faces camera direction and update velocity meter according to where finger is on the screen
-            if (Input.GetMouseButton(0))
-            {
-                playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
-
-                // TODO: Implement an UIController that can handle updating the UI with method calls,
-                //       so we aren't updating this part of the UI every frame... /Malte
-                player.SetLaunchForce(GetLaunchForce());
-            }
-
-            // Launch 
-            if (Input.GetMouseButtonUp(0))
-            {
-                var evt = new ObserverEvent(EventName.PlayerLaunch);
-
-                evt.payload.Add(PayloadConstants.LAUNCH_SPEED, GetLaunchForce());
-                Subject.instance.Notify(gameObject, evt);
-
-                launchMode = false;
-            }
+            DirectedRotation(offset);
+            oldPoint = pos;
         }
+    }
 
-        private void HandleCameraMode()
+    // Returns true if player was tapped, otherwise false.
+    private bool DetectPlayerTap()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        return hitboxCollider.Raycast(ray, out hit, 1000f);
+    }
+
+    // Calculate force from old mouse position and current mouse position
+    private float GetLaunchForce()
+    {
+        float difference = oldPoint.y - Input.mousePosition.y;
+        float maxDifference = oldPoint.y - launchBuffer;
+
+        return (difference / maxDifference).Clamp(0f, 1f);
+    }
+
+    private void ResetRotation()
+    {
+        playerTransform.rotation = Quaternion.identity;
+        playerPitchTransform.rotation = Quaternion.identity;
+    }
+
+    private Vector2 ScreenCenter()
+    {
+        return new Vector2(cam.pixelWidth / 2f, cam.pixelHeight / 2f);
+    }
+
+    private void DirectedRotation(Vector2 offset)
+    {
+        float xScale = behindCamera.pitch.transform.up.y;
+        behindCamera.transform.Rotate(Vector3.up, Time.deltaTime * xScale * cameraRotateSpeed * (offset.x / ScreenCenter().magnitude));
+        behindCamera.pitch.transform.Rotate(Vector3.right, Time.deltaTime * cameraRotateSpeed * (-offset.y / ScreenCenter().magnitude));
+    }
+
+    public void OnNotify(GameObject entity, ObserverEvent evt)
+    {
+        switch (evt.eventName)
         {
-            // Save starting position of tap
-            if (Input.GetMouseButtonDown(0))
-            {
-                oldPoint = Input.mousePosition;
-            }
-
-            // Look around and change position of camera
-            if (Input.GetMouseButton(0))
-            {
-                Vector2 pos = Input.mousePosition;
-                Vector2 offset = pos - oldPoint;
-
-                if (invertCameraControls)
-                {
-                    offset = -offset;
-                }
-
-                DirectedRotation(offset);
-                oldPoint = pos;
-            }
-        }
-
-        // Returns true if player was tapped, otherwise false.
-        private bool DetectPlayerTap()
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            return hitboxCollider.Raycast(ray, out hit, 1000f);
-        }
-
-        // Calculate force from old mouse position and current mouse position
-        private float GetLaunchForce()
-        {
-            float difference = oldPoint.y - Input.mousePosition.y;
-            float maxDifference = oldPoint.y - launchBuffer;
-
-            return (difference / maxDifference).Clamp(0f, 1f);
-        }
-
-        private void ResetRotation()
-        {
-            playerTransform.rotation = Quaternion.identity;
-            playerPitchTransform.rotation = Quaternion.identity;
-        }
-
-        private Vector2 ScreenCenter()
-        {
-            return new Vector2(cam.pixelWidth / 2f, cam.pixelHeight / 2f);
-        }
-
-        private void DirectedRotation(Vector2 offset)
-        {
-            float xScale = behindCamera.pitch.transform.up.y;
-            behindCamera.transform.Rotate(Vector3.up, Time.deltaTime * xScale * cameraRotateSpeed * (offset.x / ScreenCenter().magnitude));
-            behindCamera.pitch.transform.Rotate(Vector3.right, Time.deltaTime * cameraRotateSpeed * (-offset.y / ScreenCenter().magnitude));
-        }
-
-        public void OnNotify(GameObject entity, ObserverEvent evt)
-        {
-            switch (evt.eventName)
-            {
-                case EventName.PlayerDead:
-                    inputDisabled = true;
-                    break;
-                case EventName.ToggleCameraControls:
-                    invertCameraControls = !invertCameraControls;
-                    break;
-                default:
-                    break;
-            }
+            case EventName.PlayerDead:
+                inputDisabled = true;
+                break;
+            case EventName.ToggleCameraControls:
+                invertCameraControls = !invertCameraControls;
+                break;
+            default:
+                break;
         }
     }
 }

@@ -31,11 +31,10 @@ public class SlipperyHazard : MonoBehaviour {
         for (int i = 0; i < objects.Count; i++)
         {
             Rigidbody rgb = objects[i].GetComponent<Rigidbody>();
-            if (Mathf.Abs( Vector3.Distance(rgb.velocity, maximumSpeed)) < 0.05f)
+            if (rgb)
             {
-                if (rgb)
-                //foreach object in sticky influence, increase velocity. (Force instead?)
-                rgb.velocity = rgb.velocity * (1f+speedIncrease);
+                //foreach object in slippery influence, increase velocity. (Force instead?)
+                rgb.velocity = rgb.velocity * (1f + speedIncrease);
             }
         }
     }

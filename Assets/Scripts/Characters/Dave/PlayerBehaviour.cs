@@ -13,9 +13,14 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     [HideInInspector]
     public bool dead = false;
 
-    private PayloadConstants payload; 
+    private PayloadConstants payload;
 
+    [Tooltip("Time until burn death:")]
     public float TimeUntilBurnToDeath = 5f;
+
+    [Tooltip("How many jumps does it take to extinguish?")]
+    public int JumpsToExtinguish = 2;
+    private int bounces = 0;
 
     void Start()
     {
@@ -25,9 +30,18 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.transform.tag == "object")
+        /*if (other.transform.tag == "object")
         {
             PlayerMetObject(other.gameObject);
+        }*/
+        if (onFire)
+        {
+            bounces += 1;
+            if (bounces == JumpsToExtinguish)
+            {
+                var evt = new ObserverEvent(EventName.Extinguish);
+                Subject.instance.Notify(gameObject, evt);
+            }
         }
     }
 
@@ -69,6 +83,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
                 break;
             case EventName.Extinguish:
                 onFire = false;
+                Debug.Log("Not on fire anymore!");
                 break;
             case EventName.Crushed:
                 Kill(evt.eventName);
@@ -103,12 +118,4 @@ public class PlayerBehaviour : MonoBehaviour, Observer
             Kill(EventName.OnFire);
         }
     }
-
-   /* void Update()
-    {
-        if ()
-        {
-            onFire = false;
-        }
-    }*/
 }

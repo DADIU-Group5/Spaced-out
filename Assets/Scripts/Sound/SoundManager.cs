@@ -38,7 +38,7 @@ public class SoundManager : MonoBehaviour, Observer
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
-        Debug.Log(evt.eventName.ToString());
+        //Debug.Log(evt.eventName.ToString());
 
         switch (evt.eventName)
         {

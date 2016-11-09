@@ -7,17 +7,29 @@ public class SoundManager : MonoBehaviour, Observer
     uint bankID;
 
     [Range(0, 100)]
-    public float CurrentVolume = 100;
+    public float CurrentVolume = 75;
+
+    // TODO: remove and put into some sort of game manager
+    private bool firstLaunch = true;
 
     // Use this for initialization
     void Start()
     {
         AkSoundEngine.LoadBank("soundbank_alpha", AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
+        AkSoundEngine.SetSwitch("galVersion", "v1", gameObject);
     }
 
     private void Awake()
     {
         Subject.instance.AddObserver(this);
+    }
+
+    private class Waiter
+    {
+        public IEnumerable Wait()
+        {
+            yield return new WaitForSeconds(10);
+        }
     }
 
     // Update is called once per frame
@@ -26,15 +38,46 @@ public class SoundManager : MonoBehaviour, Observer
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
+        Debug.Log(evt.eventName.ToString());
+
         switch (evt.eventName)
         {
             case EventName.PlayerLaunch:
 
                 var payload = evt.payload;
                 float launchForce = (float)payload[PayloadConstants.LAUNCH_SPEED];
+                //Debug.Log("Launch force: " + launchForce);
+                // add game manager class that keeps track of charges so that he can do it only once
+                //if(launchForce > 0.75)
+                //    PlayEvent(SoundEventConstants.DAVE_CHARGE);
+                //else
+                    PlayEvent(SoundEventConstants.DAVE_LAUNCH);
 
-                PlayEvent(SoundEventConstants.DAVE_CHARGE);
+                //if (firstLaunch)
+                //{
+                //    PlayEvent(SoundEventConstants.DAVE_FIRST_LAUNCH);
+                //    firstLaunch = false;
+                //}
 
+                break;
+
+            case EventName.OnFire:
+                Debug.Log("received on fire event");
+                PlayEvent(SoundEventConstants.GAL_DAVE_ON_FIRE);
+                break;
+
+            case EventName.Electrocuted:
+                PlayEvent(SoundEventConstants.GAL_DEATH_ELECTROCUTED);
+                break;
+
+            case EventName.BarrelTriggered:
+                PlayEvent(SoundEventConstants.EXPLOSIVE);
+                break;
+            case EventName.BarrelExplosion:
+                
+                break;
+            case EventName.PlayerExploded:
+                PlayEvent(SoundEventConstants.GAL_HAZARDS_EXPLOSION);
                 break;
         }
     }

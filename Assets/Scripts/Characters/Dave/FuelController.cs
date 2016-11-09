@@ -21,7 +21,7 @@ public class FuelController : MonoBehaviour {
         // Check if player is traveling slowly and also has no more fuel, and if so, fire PlayerDead event.
         if (rbPlayer.velocity.magnitude < velocityToDie && currentFuel <= 0 && !player.IsDead())
         {
-            var evt = new ObserverEvent(EventName.PlayerDead);
+            var evt = new ObserverEvent(EventName.FuelEmpty);
             Subject.instance.Notify(gameObject, evt);
         }
     }

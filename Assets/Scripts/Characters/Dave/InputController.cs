@@ -4,11 +4,14 @@ public class InputController : MonoBehaviour, Observer
 {
     private bool invertCameraControls = false;
     private bool launchMode = false;
+    private bool waitingMode = false;
     private bool inputDisabled = false;
+    private float launchTime = 0f;
     private Vector2 oldPoint;
 
     public float cameraRotateSpeed = 4000f;
     public float launchBuffer = 100f;
+    public float launchTimeBuffer = 5f;
     public Camera cam;
     public BehindCamera behindCamera;
     public PlayerController player;
@@ -43,31 +46,52 @@ public class InputController : MonoBehaviour, Observer
             return;
         }
 
-        // See if player was tapped. If he was, set launchMode to true, otherwise to false.
+        // See if player was tapped. If he was, set launchMode and waitingMode to true, otherwise false.
         if (Input.GetMouseButtonDown(0))
         {
             launchMode = DetectPlayerTap();
+            if (launchMode)
+            {
+                waitingMode = true;
+                launchTime = Time.timeSinceLevelLoad;
+                oldPoint = Input.mousePosition;
+            }
         }
 
-        // Check if we are NOT in launchmode
-        if (!launchMode)
+        if (waitingMode)
         {
-            HandleCameraMode();
+            // If in waiting mode, handle waiting mode
+            HandleWaitingMode();
+        }
+        else if (launchMode && fuel.HasFuel())
+        {
+            // If in launch mode and we have fuel, handle launch mode
+            HandleLaunchMode();
         }
         else if (fuel.HasFuel())
         {
-            HandleLaunchMode();
+            // If not in launch mode and we have fuel, handle camera mode
+            HandleCameraMode();
+        }
+
+    }
+
+    private void HandleWaitingMode()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            waitingMode = false;
+            launchMode = false;
+        }
+        // If in waiting mode and button hasn't been released after the buffer time, commit to the launch
+        else if (launchTime + launchTimeBuffer < Time.timeSinceLevelLoad)
+        {
+            waitingMode = false;
         }
     }
 
     private void HandleLaunchMode()
     {
-        // Save starting position of tap
-        if (Input.GetMouseButtonDown(0))
-        {
-            oldPoint = Input.mousePosition;
-        }
-
         // Rotate player pitch so it faces camera direction and update velocity meter according to where finger is on the screen
         if (Input.GetMouseButton(0))
         {

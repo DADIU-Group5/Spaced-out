@@ -49,15 +49,14 @@ public class InputController : MonoBehaviour, Observer
         // See if player was tapped. If he was, set launchMode and waitingMode to true, otherwise false.
         if (Input.GetMouseButtonDown(0))
         {
-            launchMode = DetectPlayerTap();
-            if (launchMode)
+            waitingMode = DetectPlayerTap();
+            if (waitingMode)
             {
-                waitingMode = true;
                 launchTime = Time.timeSinceLevelLoad;
                 oldPoint = Input.mousePosition;
             }
         }
-
+        
         if (waitingMode)
         {
             // If in waiting mode, handle waiting mode
@@ -73,7 +72,6 @@ public class InputController : MonoBehaviour, Observer
             // If not in launch mode and we have fuel, handle camera mode
             HandleCameraMode();
         }
-
     }
 
     private void HandleWaitingMode()
@@ -81,12 +79,12 @@ public class InputController : MonoBehaviour, Observer
         if (Input.GetMouseButtonUp(0))
         {
             waitingMode = false;
-            launchMode = false;
         }
         // If in waiting mode and button hasn't been released after the buffer time, commit to the launch
         else if (launchTime + launchTimeBuffer < Time.timeSinceLevelLoad)
         {
             waitingMode = false;
+            launchMode = true;
         }
     }
 

@@ -39,7 +39,7 @@ public class HUDController : MonoBehaviour, Observer {
                 var fuelPayload = evt.payload;
                 int fuel = (int)fuelPayload[PayloadConstants.FUEL];
 
-                fuelText.text = "Current fuel: " + fuel;
+                fuelText.text = "Current oxygen: " + fuel;
 
                 break;
 

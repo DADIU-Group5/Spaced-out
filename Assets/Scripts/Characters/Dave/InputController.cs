@@ -22,6 +22,11 @@ namespace Prototype
         public Transform playerTransform;
         public Transform playerPitchTransform;
 
+        private void Start()
+        {
+
+        }
+
         private void Awake()
         {
 
@@ -147,17 +152,15 @@ namespace Prototype
             behindCamera.pitch.transform.Rotate(Vector3.right, Time.deltaTime * cameraRotateSpeed * (-offset.y / ScreenCenter().magnitude));
         }
 
-        public void ToggleCameraControls()
-        {
-            invertCameraControls = !invertCameraControls;
-        }
-
         public void OnNotify(GameObject entity, ObserverEvent evt)
         {
             switch (evt.eventName)
             {
                 case EventName.PlayerDead:
                     inputDisabled = true;
+                    break;
+                case EventName.ToggleCameraControls:
+                    invertCameraControls = !invertCameraControls;
                     break;
                 default:
                     break;

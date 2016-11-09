@@ -4,11 +4,6 @@ using System.Collections;
 public class Checkpoint : MonoBehaviour {
 
     bool wasActivated = false;
-
-    void Start()
-    {
-        //Debug.Log("spawn location = " + (transform.position - (transform.right * 1.5f)));
-    }
 	
 	void OnTriggerEnter(Collider other)
     {
@@ -19,6 +14,8 @@ public class Checkpoint : MonoBehaviour {
         if(other.tag == "Player")
         {
             wasActivated = true;
+            CheckpointManager.instance.SetNewCheckpoint(transform.position);
+            CheckpointManager.instance.SetNewCheckpointRotation(transform.right);
             //Debug.Log("spawn location = " + (transform.position - (transform.right * 1)));
         }
     }

@@ -41,12 +41,7 @@ public class LevelGenerator : MonoBehaviour {
     /// </summary>
     void GenerateLevel()
     {
-        System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
-        sw.Start();
-        if (exteriorSeed == -1)
-        {
-            exteriorSeed = Random.Range(0, 100);
-        }
+        SetupSeeds();
 
         Random.InitState(exteriorSeed);
 
@@ -54,17 +49,21 @@ public class LevelGenerator : MonoBehaviour {
 
         int roomsToCreate = Random.Range(minRooms, maxRooms);
 
-        Debug.Log("Length: " + roomsToCreate);
         CreateLevel(roomsToCreate);
-        Debug.Log("Created: " + spawnedRooms.Count);
 
         SpawnPlayer();
         SpawnKey();
         RemoveUnusedDoors();
         RandomizeInteriorForAll();
+    }
 
-        sw.Stop();
-        Debug.Log("Level generation time" + sw.Elapsed);
+    void SetupSeeds()
+    {
+        Debug.Log("Gets seed from level: " + PlayerPrefs.GetString("CurrentLevel"));
+        exteriorSeed = PlayerPrefs.GetInt("extSeed" + PlayerPrefs.GetString("CurrentLevel"));
+        interiorSeed = PlayerPrefs.GetInt("intSeed");
+        Debug.Log("extSeed: " + exteriorSeed);
+        Debug.Log("intSeed: " + interiorSeed);
     }
 
     /// <summary>
@@ -119,12 +118,19 @@ public class LevelGenerator : MonoBehaviour {
             //If it could not create a room from a position, remove the previous room, and try again.
             //Should make sure it never hits a dead end.
             else
-            {
+            {   
                 createdRooms--;
                 Destroy(spawnedRooms[spawnedRooms.Count - 1].gameObject);
                 spawnedRooms.RemoveAt(spawnedRooms.Count - 1);
                 allBounds.RemoveAt(spawnedRooms.Count - 1);
                 lastDoor = GetRandomDoor(spawnedRooms[spawnedRooms.Count - 1]);
+                foreach (GameObject item in spawnedRooms[spawnedRooms.Count-1].doorObjects)
+                {
+                    if(item.GetComponent<Door>().GetDoorType() == DoorType.exit)
+                    {
+                        item.GetComponent<Door>().BreakConnection();
+                    }
+                }
             }
             //Makes sure that it does not end in an infinite loop, should not actually happen.
             tries--;

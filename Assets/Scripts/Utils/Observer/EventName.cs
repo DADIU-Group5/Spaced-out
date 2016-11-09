@@ -17,5 +17,11 @@
     UpdateFuel,
     UpdateLaunch,
     UpdateVelocity,
-    ToggleCameraControls
+    ToggleCameraControls,
+    Crushed,
+    Electrocuted,
+    BarrelTriggered,
+    BarrelExplosion,
+    PlayerExploded,
+    FuelEmpty
 }

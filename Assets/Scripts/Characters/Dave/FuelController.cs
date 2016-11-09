@@ -1,26 +1,25 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 
 public class FuelController : MonoBehaviour {
-
-    private int currentFuel;
-    
     public int maxFuel = 10;
     public float velocityToDie = 10f;
 
-    public Text fuelText;
-    public Rigidbody rbPlayer;
-    public PlayerController player;
+    private int currentFuel;
+    private Rigidbody rbPlayer;
+    private PlayerController player;
 
-    public void Awake()
+    public void Start()
     {
         ReplenishFuel();
+        player = gameObject.GetComponent<PlayerController>();
+        rbPlayer = gameObject.GetComponent<Rigidbody>();
     }
 
     public void Update()
     {
-        if (rbPlayer.velocity.magnitude < velocityToDie && currentFuel <= 0 && !player.dead)
+        // Check if player is traveling slowly and also has no more fuel, and if so, fire PlayerDead event.
+        if (rbPlayer.velocity.magnitude < velocityToDie && currentFuel <= 0 && !player.IsDead())
         {
             var evt = new ObserverEvent(EventName.PlayerDead);
             Subject.instance.Notify(gameObject, evt);
@@ -44,9 +43,11 @@ public class FuelController : MonoBehaviour {
         UpdateFuelUI();
     }
 
-    public void UpdateFuelUI()
+    private void UpdateFuelUI()
     {
-        fuelText.text = "Current fuel: " + currentFuel;
+        var evt = new ObserverEvent(EventName.UpdateFuel);
+        evt.payload.Add(PayloadConstants.FUEL, currentFuel);
+        Subject.instance.Notify(gameObject, evt);
     }
 
     void OnTriggerEnter(Collider other)

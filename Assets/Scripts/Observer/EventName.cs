@@ -13,5 +13,9 @@
     PlayerDead,
     OnFire,
     Extinguish,
-    PlayerWon
+    PlayerWon,
+    UpdateFuel,
+    UpdateLaunch,
+    UpdateVelocity,
+    ToggleCameraControls
 }

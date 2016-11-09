@@ -32,6 +32,14 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
 
     private Color orgColor;
 
+    [HideInInspector]
+    public GameplayElement itemState;
+
+    void Start()
+    {
+        itemState = this.gameObject.GetComponent<GameplayElement>();
+    }
+
     /// <summary>
     /// Flash to signify explosion
     /// </summary>
@@ -112,25 +120,28 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
     /// </summary>
     void OnCollisionEnter(Collision other)
     {
-        if (other.transform.tag == "Player" || 
-            other.transform.tag == "object" && other.gameObject.GetComponent<Rigidbody>() != null)
+        if (itemState.On)
         {
-            var evt = new ObserverEvent(EventName.BarrelTriggered);
-            Subject.instance.Notify(gameObject, evt);
-
-            pushForce = other.rigidbody.velocity.magnitude;
-            pushDirection = other.contacts[0].point - transform.position;
-            pushDirection = -pushDirection.normalized;
-
-            //if the velocity is enough to explode...
-            if (pushForce >= explodeForce)
+            if (other.transform.tag == "Player" ||
+            other.transform.tag == "object" && other.gameObject.GetComponent<Rigidbody>() != null)
             {
-                StartCoroutine(Exploder());
-            }
-            //if the force is not enough to explode, just push instead.
-            else
-            {
-                GetComponent<Rigidbody>().AddForce(pushDirection * pushForce);
+                var evt = new ObserverEvent(EventName.BarrelTriggered);
+                Subject.instance.Notify(gameObject, evt);
+
+                pushForce = other.rigidbody.velocity.magnitude;
+                pushDirection = other.contacts[0].point - transform.position;
+                pushDirection = -pushDirection.normalized;
+
+                //if the velocity is enough to explode...
+                if (pushForce >= explodeForce)
+                {
+                    StartCoroutine(Exploder());
+                }
+                //if the force is not enough to explode, just push instead.
+                else
+                {
+                    GetComponent<Rigidbody>().AddForce(pushDirection * pushForce);
+                }
             }
         }
     }

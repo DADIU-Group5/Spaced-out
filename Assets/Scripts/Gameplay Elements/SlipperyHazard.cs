@@ -16,10 +16,14 @@ public class SlipperyHazard : MonoBehaviour {
     // Internal list that tracks objects that enter this object's "zone"
     private List<Collider> objects = new List<Collider>();
 
+    [HideInInspector]
+    public GameplayElement itemState;
+
     // Use this for initialization
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        itemState = this.gameObject.GetComponent<GameplayElement>();
     }
 
     void FixedUpdate()
@@ -38,11 +42,14 @@ public class SlipperyHazard : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Player" || other.transform.tag == "object" &&
+        if (itemState.On)
+        {
+            if (other.transform.tag == "Player" || other.transform.tag == "object" &&
             other.transform.GetComponent<GameplayElement>().movement == Movement.floatingItem)
-        {   //if it's an object with a rigidbody (moveable),
-            //add to list of objects in collider...
-            objects.Add(other);
+            {   //if it's an object with a rigidbody (moveable),
+                //add to list of objects in collider...
+                objects.Add(other);
+            }
         }
     }
 
@@ -51,7 +58,10 @@ public class SlipperyHazard : MonoBehaviour {
         if (other.transform.tag == "Player" || other.transform.tag == "object" &&
             other.transform.GetComponent<GameplayElement>().movement == Movement.floatingItem)
         {   //if the objects leave the collider, remove from list.
-            objects.Remove(other);
+            if (objects.Contains(other))
+            {
+                objects.Remove(other);
+            }
         }
     }
 }

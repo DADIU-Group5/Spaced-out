@@ -31,6 +31,8 @@ public class GameplayElement : MonoBehaviour {
     public Movement movement = Movement.none;
     public ItemSize itemSize = ItemSize.small;
     public Fragility fragility = Fragility.fragile;
+    [HideInInspector]
+    public bool On = true;
 
     /// <summary>
     /// Set Fragility

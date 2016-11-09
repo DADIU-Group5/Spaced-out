@@ -13,15 +13,19 @@ public class FireHazard : MonoBehaviour {
 
     public Text burningText;
 
+    [HideInInspector]
+    public GameplayElement itemState;
+
     // Use this for initialization
     void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
-	}
+        itemState = this.gameObject.GetComponent<GameplayElement>();
+    }
 
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Player" && !burningPlayer)
+        if (other.transform.tag == "Player" && !burningPlayer && itemState.On)
         {
             burningPlayer = true;
            // player.GetComponent<PlayerController>().onFire = true;

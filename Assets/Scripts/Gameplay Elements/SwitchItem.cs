@@ -8,6 +8,13 @@ public class SwitchItem : MonoBehaviour {
    // [HideInInspector]
     public List<GameObject> assignedHazards;
 
+    void Start()
+    {
+        foreach (GameObject hazard in assignedHazards)
+        {
+            hazard.GetComponent<HazardState>().hazardSwitch = this.gameObject;
+        }
+    }
 
     /// <summary>
     /// Assign an object to this switch
@@ -17,26 +24,21 @@ public class SwitchItem : MonoBehaviour {
         assignedHazards.Add(hazard);
     }
 
-    //if and object or the player taps the switch, turn off/on
-    //should I only consider objects thrown by player? How would I consider that? 
-    //if player bumps into an item, bool Thrown = true?
+    /// <summary>
+    ///if and object or the player taps the switch, turn off/on
+    ///should I only consider objects thrown by player? How would I consider that? 
+    ///if player bumps into an item, bool Thrown = true?
+    /// </summary>
     void OnCollisionEnter(Collision other)
     {
         if (other.transform.tag == "Player" || other.transform.tag == "object")
         {
+            Debug.Log("switch found player!");
             foreach (GameObject hazard in assignedHazards)
             {
+                Debug.Log("hazards being turned off! item: " + hazard.name);
                 hazard.GetComponent<HazardState>().EnabledOrDisableTrap();
             }
         }
     }
-
-    /*//should it return when not touched?
-    void OnTriggerExit(Collider other)
-    {
-        if (other.transform.tag == "Player" || other.transform.tag == "object")
-        {   
-            
-        }
-    }*/
 }

@@ -75,8 +75,11 @@ public class PlayerController : MonoBehaviour, Observer
 
     public void SetLaunchForce(float force)
     {
-        launchForce = force * maxLaunchForce;
-        UpdateLaunchUI();
+        if (fuel.HasFuel() && rbPlayer.velocity.magnitude < maxMagnitude)
+        {
+            launchForce = force * maxLaunchForce;
+            UpdateLaunchUI();
+        }
     }
 
     public bool IsDead()

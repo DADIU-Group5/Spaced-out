@@ -92,7 +92,7 @@ public class ObjectSelector : MonoBehaviour {
     {
         if(canBe.Count == 0)
         {
-            Debug.LogError("This object CANNOT become a object, is the something in the correct resources folder?");
+            Debug.LogError("This object CANNOT become a object, is the object in the correct resources folder?");
             return;
         }
         //If locked use the locked object.

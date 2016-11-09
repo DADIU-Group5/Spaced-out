@@ -6,7 +6,7 @@ public class KeyObject : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        gameOverMenu = GameObject.Find("GameOverCanvas").GetComponent<GameOverMenu>();
+        //gameOverMenu = GameObject.Find("GameOverCanvas").GetComponent<GameOverMenu>();
 	}
 
     /// <summary>

@@ -46,6 +46,8 @@ public class MalfunctioningDoors : MonoBehaviour {
     void Start () {
         state = gameObject.GetComponent<HazardState>();
         animator = gameObject.GetComponent<Animator>();
+        //this is how you assign an object to a switch programmatically.
+        //GameObject.Find("SwitchTest").GetComponent<SwitchItem>().AssignHazardToSwitch(this.gameObject);
     }
 	
 	// Update is called once per frame

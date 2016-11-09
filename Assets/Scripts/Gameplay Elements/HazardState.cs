@@ -8,6 +8,7 @@ public class HazardState : MonoBehaviour {
     [Tooltip("Only change this through script :)")]
     public bool isOn = true;
 
+    [HideInInspector]
     public GameObject hazardSwitch;
 
     private Behaviour behaviour;
@@ -23,6 +24,7 @@ public class HazardState : MonoBehaviour {
         isOn = !isOn;
         TagChanger();
 
+        //this is for appearances sake:
         if (isOn)
         {
             if (gameObject.GetComponent<Renderer>() != null)
@@ -38,10 +40,15 @@ public class HazardState : MonoBehaviour {
 
     void TagChanger()
     {
+        itemState.On = isOn;
         if (isOn)
+        {
             itemState.behaviour = Behaviour.none;
+        }
         else
+        {
             itemState.behaviour = behaviour;
+        }
     }
 
     // Use this for initialization

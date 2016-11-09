@@ -20,6 +20,8 @@ public class Fan : MonoBehaviour {
     [HideInInspector]
     public Vector3 windDirection;
 
+    [HideInInspector]
+    public GameplayElement itemState;
 
     // Internal list that tracks objects that enter this object's "zone"
     private List<Collider> objects = new List<Collider>();
@@ -27,7 +29,8 @@ public class Fan : MonoBehaviour {
     // Use this for initialization
     void Start () {
         distance =  Vector3.Distance(startPos.position, endPos.position);
-        windDirection = Vector3.Normalize(endPos.position - startPos.position); 
+        windDirection = Vector3.Normalize(endPos.position - startPos.position);
+        itemState = this.gameObject.GetComponent<GameplayElement>();
     }
 	
 	// Update is called once per frame
@@ -43,14 +46,15 @@ public class Fan : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Player" || other.transform.tag == "object" && 
-            other.transform.GetComponent<GameplayElement>().movement == Movement.floatingItem)
-        {   //if it's an object with a rigidbody (moveable),
-            //add to list of objects in collider...
-            objects.Add(other);
+        if (itemState.On)
+        {
+            if (other.transform.tag == "Player" || other.transform.tag == "object" &&
+                other.transform.GetComponent<GameplayElement>().movement == Movement.floatingItem)
+            {   //if it's an object with a rigidbody (moveable),
+                //add to list of objects in collider...
+                objects.Add(other);
+            }
         }
-
-
     }
 
     void OnTriggerExit(Collider other)
@@ -58,7 +62,10 @@ public class Fan : MonoBehaviour {
         if (other.transform.tag == "Player" || other.transform.tag == "object" &&
             other.transform.GetComponent<GameplayElement>().movement == Movement.floatingItem)
         {   //if the objects leave the collider, remove from list.
-            objects.Remove(other);
+            if (objects.Contains(other))
+            {
+                objects.Remove(other);
+            }
         }
 
     }

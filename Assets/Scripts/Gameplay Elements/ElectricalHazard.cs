@@ -8,17 +8,20 @@ public class ElectricalHazard : MonoBehaviour {
     [HideInInspector]
     public GameObject player;
     private bool shockingPlayer = false;
+    [HideInInspector]
+    public GameplayElement itemState;
 
     // Use this for initialization
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        itemState = this.gameObject.GetComponent<GameplayElement>();
     }
 
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Player")
+        if (other.transform.tag == "Player" && itemState.On)
         {
             StartCoroutine(ShockToDeath());
         }

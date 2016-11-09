@@ -35,6 +35,11 @@ public class Fan : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+        //if the fan is off, stop influencing stuff.
+        if (!itemState.On)
+        {
+            objects.Clear();
+        }
         for (int i = 0; i < objects.Count; i++)
         {
             //foreach object in fan's influence, push in winddirection.

@@ -55,8 +55,11 @@ public class HUDController : MonoBehaviour, Observer {
 
             case EventName.UpdateVelocity:
                 var velocityPayload = evt.payload;
-                string velocity = (string)velocityPayload[PayloadConstants.VELOCITY];
-                
+                string velocity = "";
+                velocity = (string)velocityPayload[PayloadConstants.VELOCITY];
+
+                if (launchText== null)
+                    Debug.Log("launchtext is null!");
                 launchText.text = velocity;
 
                 break;

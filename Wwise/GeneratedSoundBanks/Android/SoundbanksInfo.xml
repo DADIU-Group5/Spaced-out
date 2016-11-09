@@ -40,13 +40,26 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<ExcludedMemoryFiles>
+				<File Id="134280575" Language="SFX">
+					<ShortName> factory rvb impulse.wav</ShortName>
+					<Path>Plugins/Wwise Convolution Reverb/ factory rvb impulse_9FFC2351.wem</Path>
+				</File>
+				<File Id="538281099" Language="SFX">
+					<ShortName>AK_Factory_IR\Rooms\AK Hamburg Echo Chamber.wav</ShortName>
+					<Path>Plugins/Wwise Convolution Reverb/AK_Factory_IR/Rooms/AK Hamburg Echo Chamber_BB274964.wem</Path>
+				</File>
+			</ExcludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="1770303713" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\soundbank_alpha</ObjectPath>
 			<ShortName>soundbank_alpha</ShortName>
 			<Path>soundbank_alpha.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3536816288" Name="daveCatchFire" ObjectPath="\Events\Default Work Unit\daveCatchFire"/>
 				<Event Id="2392150155" Name="daveCharge" ObjectPath="\Events\Default Work Unit\daveCharge"/>
+				<Event Id="3669325296" Name="daveElectrocute" ObjectPath="\Events\Default Work Unit\daveElectrocute"/>
+				<Event Id="4153348305" Name="daveFireWoosh" ObjectPath="\Events\Default Work Unit\daveFireWoosh"/>
 				<Event Id="1537918958" Name="daveFirstLaunch" ObjectPath="\Events\Default Work Unit\daveFirstLaunch"/>
 				<Event Id="2606874748" Name="daveFirstLaunch_01" ObjectPath="\Events\Default Work Unit\daveFirstLaunch_01"/>
 				<Event Id="2606874751" Name="daveFirstLaunch_02" ObjectPath="\Events\Default Work Unit\daveFirstLaunch_02"/>
@@ -54,6 +67,9 @@
 				<Event Id="2606874745" Name="daveFirstLaunch_04" ObjectPath="\Events\Default Work Unit\daveFirstLaunch_04"/>
 				<Event Id="2606874744" Name="daveFirstLaunch_05" ObjectPath="\Events\Default Work Unit\daveFirstLaunch_05"/>
 				<Event Id="3193570530" Name="daveLaunch" ObjectPath="\Events\Default Work Unit\daveLaunch"/>
+				<Event Id="3465444258" Name="davePutOutFire" ObjectPath="\Events\Default Work Unit\davePutOutFire"/>
+				<Event Id="3782881839" Name="doorShut" ObjectPath="\Events\Default Work Unit\doorShut"/>
+				<Event Id="2917121896" Name="electricity" ObjectPath="\Events\Default Work Unit\electricity"/>
 				<Event Id="433216386" Name="explosive" ObjectPath="\Events\Default Work Unit\explosive"/>
 				<Event Id="181220522" Name="galDaveOnFire" ObjectPath="\Events\Default Work Unit\galDaveOnFire"/>
 				<Event Id="3469266988" Name="galDeathElectrocuted" ObjectPath="\Events\Default Work Unit\galDeathElectrocuted"/>
@@ -61,6 +77,7 @@
 				<Event Id="1842267159" Name="galRandomInsult" ObjectPath="\Events\Default Work Unit\galRandomInsult"/>
 				<Event Id="2136770720" Name="galRandomNarative" ObjectPath="\Events\Default Work Unit\galRandomNarative"/>
 				<Event Id="4058101365" Name="gameStart" ObjectPath="\Events\Default Work Unit\gameStart"/>
+				<Event Id="579662040" Name="gas" ObjectPath="\Events\Default Work Unit\gas"/>
 				<Event Id="1205645828" Name="musicPlay" ObjectPath="\Events\Default Work Unit\musicPlay"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
@@ -80,6 +97,10 @@
 					<ShortName>uh, i love fireworks.wav</ShortName>
 					<Path>SFX/uh, i love fireworks_645155D0.wem</Path>
 				</File>
+				<File Id="68587342" Language="SFX">
+					<ShortName>electrocute4.wav</ShortName>
+					<Path>SFX/electrocute4_AC224671.wem</Path>
+				</File>
 				<File Id="69768843" Language="SFX">
 					<ShortName>explosive countdown.wav</ShortName>
 					<Path>SFX/explosive countdown_55A8CA08.wem</Path>
@@ -96,6 +117,10 @@
 					<ShortName>preexplosion.wav</ShortName>
 					<Path>SFX/preexplosion_645155D0.wem</Path>
 				</File>
+				<File Id="134280575" Language="SFX">
+					<ShortName> factory rvb impulse.wav</ShortName>
+					<Path>Plugins/Wwise Convolution Reverb/ factory rvb impulse_9FFC2351.wem</Path>
+				</File>
 				<File Id="135477313" Language="SFX">
 					<ShortName>dave, cool down v2.wav</ShortName>
 					<Path>SFX/dave, cool down v2_645155D0.wem</Path>
@@ -103,6 +128,18 @@
 				<File Id="211652015" Language="SFX">
 					<ShortName>dave, you are on fire v2.wav</ShortName>
 					<Path>SFX/dave, you are on fire v2_645155D0.wem</Path>
+				</File>
+				<File Id="261205730" Language="SFX">
+					<ShortName>electrocute5.wav</ShortName>
+					<Path>SFX/electrocute5_B2CE6A2D.wem</Path>
+				</File>
+				<File Id="263781592" Language="SFX">
+					<ShortName>gasloop.wav</ShortName>
+					<Path>SFX/gasloop_824B34CA.wem</Path>
+				</File>
+				<File Id="271878563" Language="SFX">
+					<ShortName>putoutfire3.wav</ShortName>
+					<Path>SFX/putoutfire3_645155D0.wem</Path>
 				</File>
 				<File Id="278196675" Language="SFX">
 					<ShortName>boards of canada dawn chorus.wav</ShortName>
@@ -127,6 +164,10 @@
 					<ShortName>explosion2.wav</ShortName>
 					<Path>SFX/explosion2_645155D0.wem</Path>
 				</File>
+				<File Id="369241998" Language="SFX">
+					<ShortName>electricity loop.wav</ShortName>
+					<Path>SFX/electricity loop_824B34CA.wem</Path>
+				</File>
 				<File Id="382372623" Language="SFX">
 					<ShortName>dave you are on fire v3.wav</ShortName>
 					<Path>SFX/dave you are on fire v3_645155D0.wem</Path>
@@ -139,6 +180,10 @@
 					<ShortName>launch mockup1 medium.wav</ShortName>
 					<Path>SFX/launch mockup1 medium_645155D0.wem</Path>
 				</File>
+				<File Id="401680823" Language="SFX">
+					<ShortName>door shut8_1.wav</ShortName>
+					<Path>SFX/door shut8_1_1B4F81D8.wem</Path>
+				</File>
 				<File Id="448903764" Language="SFX">
 					<ShortName>dave, cool down2.wav</ShortName>
 					<Path>SFX/dave, cool down2_645155D0.wem</Path>
@@ -147,9 +192,21 @@
 					<ShortName>explosion3.wav</ShortName>
 					<Path>SFX/explosion3_645155D0.wem</Path>
 				</File>
+				<File Id="456998750" Language="SFX">
+					<ShortName>electrocute6.wav</ShortName>
+					<Path>SFX/electrocute6_C7715EB9.wem</Path>
+				</File>
+				<File Id="473138648" Language="SFX">
+					<ShortName>fireloop.wav</ShortName>
+					<Path>SFX/fireloop_824B34CA.wem</Path>
+				</File>
 				<File Id="473978001" Language="SFX">
 					<ShortName>dave cool down2 v3.wav</ShortName>
 					<Path>SFX/dave cool down2 v3_645155D0.wem</Path>
+				</File>
+				<File Id="507642210" Language="SFX">
+					<ShortName>door shut9_1.wav</ShortName>
+					<Path>SFX/door shut9_1_04CC8D89.wem</Path>
 				</File>
 				<File Id="516794672" Language="SFX">
 					<ShortName>pink floyd breathe.wav</ShortName>
@@ -160,14 +217,34 @@
 					<ShortName>dave, you are an idiot v2.wav</ShortName>
 					<Path>SFX/dave, you are an idiot v2_645155D0.wem</Path>
 				</File>
+				<File Id="538281099" Language="SFX">
+					<ShortName>AK_Factory_IR\Rooms\AK Hamburg Echo Chamber.wav</ShortName>
+					<Path>Plugins/Wwise Convolution Reverb/AK_Factory_IR/Rooms/AK Hamburg Echo Chamber_BB274964.wem</Path>
+				</File>
+				<File Id="559213883" Language="SFX">
+					<ShortName>door shut2_1.wav</ShortName>
+					<Path>SFX/door shut2_1_7BADABE3.wem</Path>
+				</File>
+				<File Id="560816914" Language="SFX">
+					<ShortName>electrocute3.wav</ShortName>
+					<Path>SFX/electrocute3_C922A7FF.wem</Path>
+				</File>
 				<File Id="564402045" Language="SFX">
 					<ShortName>mirrors edge shard.wav</ShortName>
 					<Path>SFX/mirrors edge shard_824B34CA.wem</Path>
 					<PrefetchSize>4928</PrefetchSize>
 				</File>
+				<File Id="585615623" Language="SFX">
+					<ShortName>door shut3_1.wav</ShortName>
+					<Path>SFX/door shut3_1_8B920AFA.wem</Path>
+				</File>
 				<File Id="588751820" Language="SFX">
 					<ShortName>launch mockup1 light.wav</ShortName>
 					<Path>SFX/launch mockup1 light_645155D0.wem</Path>
+				</File>
+				<File Id="621924902" Language="SFX">
+					<ShortName>door shut10_1.wav</ShortName>
+					<Path>SFX/door shut10_1_AF56D983.wem</Path>
 				</File>
 				<File Id="625149348" Language="SFX">
 					<ShortName>kick.wav</ShortName>
@@ -189,6 +266,10 @@
 					<ShortName>i love fireworks.wav</ShortName>
 					<Path>SFX/i love fireworks_645155D0.wem</Path>
 				</File>
+				<File Id="723073472" Language="SFX">
+					<ShortName>electrocute2.wav</ShortName>
+					<Path>SFX/electrocute2_645155D0.wem</Path>
+				</File>
 				<File Id="725214750" Language="SFX">
 					<ShortName>charge.wav</ShortName>
 					<Path>SFX/charge_824B34CA.wem</Path>
@@ -200,6 +281,18 @@
 				<File Id="793887671" Language="SFX">
 					<ShortName>dave, you are on fire.wav</ShortName>
 					<Path>SFX/dave, you are on fire_645155D0.wem</Path>
+				</File>
+				<File Id="824586379" Language="SFX">
+					<ShortName>putoutfire2.wav</ShortName>
+					<Path>SFX/putoutfire2_645155D0.wem</Path>
+				</File>
+				<File Id="846681906" Language="SFX">
+					<ShortName>door shut5_1.wav</ShortName>
+					<Path>SFX/door shut5_1_6CD6A246.wem</Path>
+				</File>
+				<File Id="852010570" Language="SFX">
+					<ShortName>putoutfire1.wav</ShortName>
+					<Path>SFX/putoutfire1_645155D0.wem</Path>
 				</File>
 				<File Id="854569370" Language="SFX">
 					<ShortName>le femme d'argent.wav</ShortName>
@@ -214,6 +307,10 @@
 					<ShortName>uh, i love fireworks2.wav</ShortName>
 					<Path>SFX/uh, i love fireworks2_645155D0.wem</Path>
 				</File>
+				<File Id="877963907" Language="SFX">
+					<ShortName>electrocute1.wav</ShortName>
+					<Path>SFX/electrocute1_41EFC880.wem</Path>
+				</File>
 				<File Id="878892781" Language="SFX">
 					<ShortName>explosion4.wav</ShortName>
 					<Path>SFX/explosion4_645155D0.wem</Path>
@@ -222,6 +319,10 @@
 					<ShortName>i love fireworks2 v3.wav</ShortName>
 					<Path>SFX/i love fireworks2 v3_645155D0.wem</Path>
 				</File>
+				<File Id="942376865" Language="SFX">
+					<ShortName>door shut7_1.wav</ShortName>
+					<Path>SFX/door shut7_1_63794C17.wem</Path>
+				</File>
 				<File Id="949012013" Language="SFX">
 					<ShortName>main atmos.wav</ShortName>
 					<Path>SFX/main atmos_824B34CA.wem</Path>
@@ -229,6 +330,10 @@
 				<File Id="964967900" Language="SFX">
 					<ShortName>wow, that was shocking.wav</ShortName>
 					<Path>SFX/wow, that was shocking_645155D0.wem</Path>
+				</File>
+				<File Id="1008444769" Language="SFX">
+					<ShortName>catchfire.wav</ShortName>
+					<Path>SFX/catchfire_645155D0.wem</Path>
 				</File>
 				<File Id="1031646511" Language="SFX">
 					<ShortName>launch mockup1 long.wav</ShortName>
@@ -245,6 +350,10 @@
 				<File Id="1064419361" Language="SFX">
 					<ShortName>explosion5.wav</ShortName>
 					<Path>SFX/explosion5_645155D0.wem</Path>
+				</File>
+				<File Id="1066027588" Language="SFX">
+					<ShortName>door shut1_1.wav</ShortName>
+					<Path>SFX/door shut1_1_7BADABE3.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

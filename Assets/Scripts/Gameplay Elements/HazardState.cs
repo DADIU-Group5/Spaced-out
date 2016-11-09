@@ -8,6 +8,7 @@ public class HazardState : MonoBehaviour {
     [Tooltip("Only change this through script :)")]
     public bool isOn = true;
 
+    [HideInInspector]
     public GameObject hazardSwitch;
 
     private Behaviour behaviour;

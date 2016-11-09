@@ -11,8 +11,6 @@ public class FireHazard : MonoBehaviour {
     private bool burningPlayer = false;
     public bool extinquishFlames = false;
 
-    public Text burningText;
-
     [HideInInspector]
     public GameplayElement itemState;
 
@@ -32,7 +30,6 @@ public class FireHazard : MonoBehaviour {
             var evt = new ObserverEvent(EventName.OnFire);
             Subject.instance.Notify(gameObject, evt);
 
-            burningText.text = "BURNING!";
             //StartCoroutine(BurnToDeath());
         }
     }

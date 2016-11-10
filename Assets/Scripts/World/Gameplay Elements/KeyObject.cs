@@ -19,6 +19,7 @@ public class KeyObject : MonoBehaviour {
             //StartCoroutine(gameOverMenu.Win());
             var evt = new ObserverEvent(EventName.PlayerWon);
             Subject.instance.Notify(gameObject, evt);
+            Destroy(this);
         }
     }
 }

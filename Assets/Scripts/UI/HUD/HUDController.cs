@@ -7,6 +7,7 @@ public class HUDController : MonoBehaviour, Observer {
     public Text fuelText;
     public Text chargeText;
     public Text launchText;
+    public Text statusText;
     public Transform chargeArrow;
 
     private float chargeArrowYMin = 68f;
@@ -18,7 +19,7 @@ public class HUDController : MonoBehaviour, Observer {
     }
 
     void Start () {
-
+        
     }
 	
 	void Update () {
@@ -54,11 +55,23 @@ public class HUDController : MonoBehaviour, Observer {
 
             case EventName.UpdateVelocity:
                 var velocityPayload = evt.payload;
-                string velocity = (string)velocityPayload[PayloadConstants.VELOCITY];
-                
+                string velocity = "";
+                velocity = (string)velocityPayload[PayloadConstants.VELOCITY];
+
+                if (launchText== null)
+                    Debug.Log("launchtext is null!");
                 launchText.text = velocity;
 
                 break;
+
+            case EventName.UpdateStatus:
+                var statusPayload = evt.payload;
+                string status = (string)statusPayload[PayloadConstants.STATUS];
+
+                statusText.text = status;
+
+                break;
+
             default:
                 break;
         }

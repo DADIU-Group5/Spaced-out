@@ -8,10 +8,7 @@ public class FireHazard : MonoBehaviour {
 
     [HideInInspector]
     public GameObject player;
-    private bool burningPlayer = false;
     public bool extinquishFlames = false;
-
-    public Text burningText;
 
     [HideInInspector]
     public GameplayElement itemState;
@@ -25,14 +22,12 @@ public class FireHazard : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Player" && !burningPlayer && itemState.On)
+        if (other.transform.tag == "Player" && itemState.On)
         {
-            burningPlayer = true;
            // player.GetComponent<PlayerController>().onFire = true;
             var evt = new ObserverEvent(EventName.OnFire);
             Subject.instance.Notify(gameObject, evt);
 
-            burningText.text = "BURNING!";
             //StartCoroutine(BurnToDeath());
         }
     }

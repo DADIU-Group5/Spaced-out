@@ -3,8 +3,10 @@ using System.Collections;
 
 public class SoundEventConstants
 {
-    // Hazard sounds
+    // Ambient hazard sounds
     public const string EXPLOSIVE = "explosive";                           // works but we need this to be broken down in two
+    public const string ELECTRICITY = "electricity";
+    public const string GAS = "gas";
 
     // Dave sounds
     public const string DAVE_CHARGE = "daveCharge";                        // v
@@ -15,6 +17,12 @@ public class SoundEventConstants
     public const string DAVE_FIRST_LAUNCH_3 = "daveFirstLaunch_03";
     public const string DAVE_FIRST_LAUNCH_4 = "daveFirstLaunch_04";
     public const string DAVE_FIRST_LAUNCH_5 = "daveFirstLaunch_05";
+
+    // Dave hazard sounds
+    public const string DAVE_CATCH_FIRE = "daveCatchFire";
+    public const string DAVE_ELECTROCUTE = "daveElectrocute";
+    public const string DAVE_FIRE_WOOSH = "daveFireWoosh";
+    public const string DAVE_PUT_OUT_FIRE = "davePutOutFire";
 
     // GAL sounds
     public const string GAL_DAVE_ON_FIRE = "galDaveOnFire";                // doesn't exist

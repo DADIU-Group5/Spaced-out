@@ -67,6 +67,13 @@
 								</Element>
 							</ElementList>
 						</Action>
+						<Action Name="Play" ID="{95A5CAD8-C777-4A84-9F33-A5724BFD70E6}" ShortID="77247366" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{A5956F6A-C569-412B-B0EA-00E661FA2325}" Global="false">
+									<ObjectRef Name="air" ID="{F531F20F-7E93-44CF-9E05-98BE0E6F2967}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}"/>
+								</Element>
+							</ElementList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="explosive" ID="{CC16C51D-1180-4AA8-8570-A72721A17064}">
@@ -231,6 +238,7 @@
 						<Action Name="Set Game Parameter" ID="{EFAA7190-BAB6-48D8-8588-CF4BAC34F606}" ShortID="271915988" Type="SetGameParameter" Scope="One" Global="true">
 							<PropertyList>
 								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
 								<Property Name="FadeCurve" Type="int16" Value="0"/>
 							</PropertyList>
 							<ElementList>
@@ -315,6 +323,7 @@
 						<Action Name="Set Game Parameter" ID="{CD4A4332-B5D4-4D0B-BC32-6C607E49FD47}" ShortID="762250533" Type="SetGameParameter" Scope="One" Global="true">
 							<PropertyList>
 								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
 								<Property Name="FadeCurve" Type="int16" Value="0"/>
 							</PropertyList>
 							<ElementList>
@@ -399,6 +408,7 @@
 						<Action Name="Set Game Parameter" ID="{8B077E18-8164-45EE-9916-45F1C6684752}" ShortID="403225526" Type="SetGameParameter" Scope="One" Global="true">
 							<PropertyList>
 								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
 								<Property Name="FadeCurve" Type="int16" Value="0"/>
 							</PropertyList>
 							<ElementList>
@@ -483,6 +493,7 @@
 						<Action Name="Set Game Parameter" ID="{A7ED819D-E924-489E-B09D-4E8D7C352FA6}" ShortID="787763922" Type="SetGameParameter" Scope="One" Global="true">
 							<PropertyList>
 								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
 								<Property Name="FadeCurve" Type="int16" Value="0"/>
 							</PropertyList>
 							<ElementList>
@@ -565,6 +576,7 @@
 						</Action>
 						<Action Name="Set Game Parameter" ID="{4B26FF92-953A-41FC-BE08-5490F0055D53}" ShortID="739894960" Type="SetGameParameter" Scope="One" Global="true">
 							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
 								<Property Name="FadeCurve" Type="int16" Value="7"/>
 							</PropertyList>
 							<ElementList>
@@ -627,6 +639,120 @@
 							<ElementList>
 								<Element ID="{E8F45AC9-F4CC-4792-9AFF-8BEFD9E1C1EB}" Global="true">
 									<ObjectRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="daveCatchFire" ID="{DC2F1D92-7AD7-4678-A36B-379A498B5948}">
+					<ChildrenList>
+						<Action Name="Play" ID="{39B00D03-AABE-4578-B0ED-88235C9218C1}" ShortID="948174999" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{99332DD9-7A06-4435-B97D-1CEBE8578AC4}" Global="false">
+									<ObjectRef Name="fire" ID="{F2272E9C-56E2-4926-8544-F88B367AD4BB}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Set Voice Volume" ID="{E8F76F13-C5B6-498C-96D2-A9D566335FB6}" ShortID="274781296" Type="ChangeVolume" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64" Value="-20"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{40A37368-8478-4898-B2A5-B3B661734C2D}" Global="true">
+									<ObjectRef Name="gasloop" ID="{533D6B45-FCEB-4537-AD96-BD49B01BFAD1}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="daveElectrocute" ID="{AB4E9910-A4DB-4620-B4A4-796776254E1A}">
+					<ChildrenList>
+						<Action Name="Play" ID="{42CE92B8-FBD7-4B43-9580-FFF057BC8AE6}" ShortID="715853496" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{AC4E907C-2135-432B-A179-6F342BA5D70C}" Global="false">
+									<ObjectRef Name="electrocute" ID="{7DBDB650-1B61-4899-8FC5-F3D54D574EC3}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Stop" ID="{BD07228A-3CD4-4869-B9A0-20FA2900A276}" ShortID="455003150" Type="Stop" Scope="One" Global="false">
+							<ExcludedPlatformList>
+								<Platform>Android</Platform>
+							</ExcludedPlatformList>
+							<ElementList>
+								<Element ID="{3AC03329-89D6-4094-A0F9-4708CA5A7BA8}" Global="false">
+									<ObjectRef Name="electricity loop" ID="{9F32160E-1220-4D2E-A195-E4D70C4DC0D7}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="gas" ID="{FDC8FA31-9275-49E4-9AF3-A839267C5D4F}">
+					<ChildrenList>
+						<Action Name="Play" ID="{C17C74E5-436D-4C91-8E46-73BB6DA41462}" ShortID="248429640" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{389F3463-1090-4CB5-8B03-B6A91D5436E3}" Global="false">
+									<ObjectRef Name="gasloop" ID="{533D6B45-FCEB-4537-AD96-BD49B01BFAD1}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="electricity" ID="{466A4257-1126-4A03-83BA-658F604BB60A}">
+					<ChildrenList>
+						<Action Name="Play" ID="{FCAD8044-7F02-47F1-9F2E-AA74552CBDFD}" ShortID="368060470" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{A43554CE-14B1-47DC-A8FD-8DF02B01DFC1}" Global="false">
+									<ObjectRef Name="electricity loop" ID="{9F32160E-1220-4D2E-A195-E4D70C4DC0D7}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="davePutOutFire" ID="{3EE34473-9F4C-4248-AD8A-8C9EF4F9BB34}">
+					<ChildrenList>
+						<Action Name="Play" ID="{2576C27F-10E1-4AF0-9CA5-A8406F73CE16}" ShortID="728806884" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{4268510B-DEEE-4865-B746-A7ABAB24366F}" Global="false">
+									<ObjectRef Name="putoutfire" ID="{D5093AA8-48BC-4D7E-B7B1-8B959E683161}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Stop" ID="{982C1314-696C-4DB8-AC14-9B07F9AA94BD}" ShortID="558490375" Type="Stop" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{9A3FB164-A7EA-4D4A-865B-E68E4722F63D}" Global="false">
+									<ObjectRef Name="fire" ID="{F2272E9C-56E2-4926-8544-F88B367AD4BB}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Set Voice Volume" ID="{438892CB-5FD2-4575-A541-8996253E34F9}" ShortID="552761894" Type="ChangeVolume" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="5"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{5AB5B1A0-95AC-463E-82F7-229557567E32}" Global="true">
+									<ObjectRef Name="gasloop" ID="{533D6B45-FCEB-4537-AD96-BD49B01BFAD1}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="daveFireWoosh" ID="{39F43CD9-56D4-4625-8E4E-FB4D67D10999}">
+					<ChildrenList>
+						<Action Name="Play" ID="{659CF7C3-14B7-4532-B018-6A8A59E989A0}" ShortID="167793315" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{66636504-A60F-4223-95CE-D34BA933104E}" Global="false">
+									<ObjectRef Name="fireblaze" ID="{F4B24296-80FF-43EC-86A8-658B70201A4F}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="doorShut" ID="{9F393916-5E3D-4361-A042-6CBF80404CC9}">
+					<ChildrenList>
+						<Action Name="Play" ID="{0B2CD72E-79B5-4E11-A447-675B2F1D61F2}" ShortID="3840145" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{4ACA9471-5696-4B32-8C0C-46A0F0D67A07}" Global="false">
+									<ObjectRef Name="doors" ID="{BF4E15A6-DBD6-4FBB-8221-C7E51BEAF67F}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 								</Element>
 							</ElementList>
 						</Action>

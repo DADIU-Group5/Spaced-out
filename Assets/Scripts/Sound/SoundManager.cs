@@ -62,7 +62,6 @@ public class SoundManager : MonoBehaviour, Observer
                 break;
 
             case EventName.OnFire:
-                Debug.Log("received on fire event");
                 PlayEvent(SoundEventConstants.DAVE_CATCH_FIRE);
                 break;
 
@@ -84,6 +83,7 @@ public class SoundManager : MonoBehaviour, Observer
                         PlayEvent(SoundEventConstants.GAL_DEATH_ELECTROCUTED);
                         break;
                     case EventName.OnFire:
+                        StopEvent(SoundEventConstants.DAVE_CATCH_FIRE, 0);
                         PlayEvent(SoundEventConstants.GAL_DAVE_ON_FIRE);
                         break;
                     case EventName.Crushed:

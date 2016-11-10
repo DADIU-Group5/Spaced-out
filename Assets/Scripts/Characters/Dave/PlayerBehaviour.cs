@@ -8,14 +8,19 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 {
 
     Rigidbody rgb;
-    [HideInInspector]
+    //[HideInInspector]
     public bool onFire;
     [HideInInspector]
     public bool dead = false;
 
-    private PayloadConstants payload; 
+    private PayloadConstants payload;
 
+    [Tooltip("Time until burn death:")]
     public float TimeUntilBurnToDeath = 5f;
+
+    [Tooltip("How many jumps does it take to extinguish?")]
+    public int JumpsToExtinguish = 2;
+    public int bounces = 0;
 
     void Start()
     {
@@ -25,26 +30,16 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.transform.tag == "object")
+        if (onFire)
         {
-            PlayerMetObject(other.gameObject);
-        }
-    }
-
-    /// <summary>
-    /// Player met and object, decide on proper reaction.
-    /// </summary>
-    public void PlayerMetObject(GameObject obj)
-    {
-        Behaviour objBehaviour = obj.GetComponent<GameplayElement>().behaviour;
-        switch (objBehaviour)
-        {
-            case Behaviour.electrocution:
-                Debug.Log("Hair-raising!");
-                return;
-            
-            default:
-                return;
+            bounces += 1;
+            if (bounces >= JumpsToExtinguish)
+            {
+                Debug.Log("Extinguishing");
+                bounces = 0;
+                var evt = new ObserverEvent(EventName.Extinguish);
+                Subject.instance.Notify(gameObject, evt);
+            }
         }
     }
 
@@ -54,8 +49,13 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         {
             var evt = new ObserverEvent(EventName.PlayerDead);
             evt.payload.Add(PayloadConstants.DEATH_CAUSE, causeOfDeath);
-            Subject.instance.Notify(gameObject, evt);
             dead = true;
+
+            Subject.instance.Notify(gameObject, evt);
+
+            //Actual death.
+            transform.parent.gameObject.SetActive(false);
+            CheckpointManager.instance.RespawnPlayer(transform.parent.gameObject);
         }
     }
 
@@ -64,11 +64,24 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         switch (evt.eventName)
         {
             case EventName.OnFire:
-                onFire = true;
-                StartCoroutine(BurnToDeath());
+                if (!onFire)
+                {
+                    onFire = true;
+
+                    StartCoroutine(BurnToDeath());
+
+                    var statusEvent = new ObserverEvent(EventName.UpdateStatus);
+                    statusEvent.payload.Add(PayloadConstants.STATUS, "BURNING!");
+                    Subject.instance.Notify(gameObject, statusEvent);
+                }
                 break;
             case EventName.Extinguish:
                 onFire = false;
+                Debug.Log("Not on fire anymore!");
+                StopCoroutine(BurnToDeath());
+                var ExtinguishEvent = new ObserverEvent(EventName.UpdateStatus);
+                ExtinguishEvent.payload.Add(PayloadConstants.STATUS, "");
+                Subject.instance.Notify(gameObject, ExtinguishEvent);
                 break;
             case EventName.Crushed:
                 Kill(evt.eventName);
@@ -104,11 +117,8 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         }
     }
 
-   /* void Update()
+    void OnDestroy()
     {
-        if ()
-        {
-            onFire = false;
-        }
-    }*/
+        Subject.instance.RemoveObserver(this);
+    }
 }

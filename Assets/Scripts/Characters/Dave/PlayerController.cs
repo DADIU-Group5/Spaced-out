@@ -127,4 +127,9 @@ public class PlayerController : MonoBehaviour, Observer
                 break;
         }
     }
+
+    void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
+    }
 }

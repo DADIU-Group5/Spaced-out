@@ -38,7 +38,7 @@ public class SoundManager : MonoBehaviour, Observer
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
-        Debug.Log(evt.eventName.ToString());
+        //Debug.Log(evt.eventName.ToString());
 
         switch (evt.eventName)
         {
@@ -51,7 +51,7 @@ public class SoundManager : MonoBehaviour, Observer
                 //if(launchForce > 0.75)
                 //    PlayEvent(SoundEventConstants.DAVE_CHARGE);
                 //else
-                    PlayEvent(SoundEventConstants.DAVE_LAUNCH);
+                PlayEvent(SoundEventConstants.DAVE_LAUNCH);
 
                 //if (firstLaunch)
                 //{
@@ -62,26 +62,42 @@ public class SoundManager : MonoBehaviour, Observer
                 break;
 
             case EventName.OnFire:
-                Debug.Log("received on fire event");
-                PlayEvent(SoundEventConstants.GAL_DAVE_ON_FIRE);
+                PlayEvent(SoundEventConstants.DAVE_CATCH_FIRE);
                 break;
 
             case EventName.Electrocuted:
-                PlayEvent(SoundEventConstants.GAL_DEATH_ELECTROCUTED);
+                PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
                 break;
 
             case EventName.BarrelTriggered:
                 PlayEvent(SoundEventConstants.EXPLOSIVE);
                 break;
             case EventName.BarrelExplosion:
-                
+
                 break;
-            case EventName.PlayerExploded:
-                PlayEvent(SoundEventConstants.GAL_HAZARDS_EXPLOSION);
+            case EventName.PlayerDead:
+                var deathCause = (EventName)evt.payload[PayloadConstants.DEATH_CAUSE];
+                switch (deathCause)
+                {
+                    case EventName.Electrocuted:
+                        PlayEvent(SoundEventConstants.GAL_DEATH_ELECTROCUTED);
+                        break;
+                    case EventName.OnFire:
+                        StopEvent(SoundEventConstants.DAVE_CATCH_FIRE, 0);
+                        PlayEvent(SoundEventConstants.GAL_DAVE_ON_FIRE);
+                        break;
+                    case EventName.Crushed:
+                        //PlayEvent(SoundEventConstants.gal);
+                        break;
+                    case EventName.PlayerExploded:
+                        PlayEvent(SoundEventConstants.GAL_HAZARDS_EXPLOSION);
+                        break;
+                }
+
                 break;
         }
     }
-    
+
     private void PlayEvent(string eventName)
     {
         AkSoundEngine.PostEvent(eventName, gameObject);

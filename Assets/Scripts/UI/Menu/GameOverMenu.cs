@@ -29,19 +29,19 @@ public class GameOverMenu : MonoBehaviour, Observer
                 switch (causeOfDeath)
                 {
                     case EventName.OnFire:
-                        deathCause = "Get some aloe vera for that burn!";
+                        deathCause = "You burned to death";
                         break;
                     case EventName.Crushed:
-                        deathCause = "That's heart-crushing!";
+                        deathCause = "You got crushed";
                         break;
                     case EventName.Electrocuted:
-                        deathCause = "That was shocking!";
+                        deathCause = "You got electricuted";
                         break;
                     case EventName.PlayerExploded:
-                        deathCause = "Baby you're a firework!";
+                        deathCause = "You exploded";
                         break;
                     case EventName.FuelEmpty:
-                        deathCause = "Did someone take your breath away?";
+                        deathCause = "You ran out of oxygen";
                         break;
                    /* case EventName.FuelEmpty:
                         deathCause = "";

@@ -23,5 +23,6 @@
     BarrelTriggered,
     BarrelExplosion,
     PlayerExploded,
-    FuelEmpty
+    FuelEmpty,
+    UpdateStatus
 }

@@ -9,6 +9,7 @@ public class Room : MonoBehaviour
     public Transform floatingObjectParent;
     public Transform staticObjectParent;
     public Transform shapingParent;
+    public Transform pickupParent;
     public Transform doorParent;
 
     //Lists of the objects in the room.
@@ -16,6 +17,7 @@ public class Room : MonoBehaviour
     public List<GameObject> floatingObjects;
     public List<GameObject> staticObjects;
     public List<GameObject> shapingObjects;
+    public List<GameObject> pickupObjects;
     public List<GameObject> doorObjects;
 
     /// <summary>
@@ -75,6 +77,20 @@ public class Room : MonoBehaviour
     }
 
     /// <summary>
+    /// Adds a new pickup.
+    /// </summary>
+    /// <param name="go"></param>
+    public void AddPickup(GameObject go)
+    {
+        if (pickupObjects == null)
+        {
+            pickupObjects = new List<GameObject>();
+        }
+        go.transform.parent = pickupParent;
+        pickupObjects.Add(go);
+    }
+
+    /// <summary>
     /// Adds a new door.
     /// </summary>
     /// <param name="go"></param>
@@ -97,6 +113,7 @@ public class Room : MonoBehaviour
         CleanList(floatingObjects, floatingObjectParent);
         CleanList(staticObjects, staticObjectParent);
         CleanList(shapingObjects, shapingParent);
+        CleanList(pickupObjects, pickupParent);
         CleanList(doorObjects, doorParent);
     }
 
@@ -174,6 +191,17 @@ public class Room : MonoBehaviour
             }
         }
         foreach (GameObject item in shapingObjects)
+        {
+            if (item.GetComponent<ObjectSelector>() != null)
+            {
+                item.GetComponent<ObjectSelector>().Replace();
+            }
+            else
+            {
+                Debug.Log("not there");
+            }
+        }
+        foreach (GameObject item in pickupObjects)
         {
             if (item.GetComponent<ObjectSelector>() != null)
             {

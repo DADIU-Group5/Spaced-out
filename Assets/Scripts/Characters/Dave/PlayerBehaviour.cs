@@ -104,9 +104,19 @@ public class PlayerBehaviour : MonoBehaviour, Observer
                 break;
             case EventName.PlayerDead:
                 gameIsOver = true;
+                if (onFire)
+                {
+                    var statusEvent = new ObserverEvent(EventName.Extinguish);
+                    Subject.instance.Notify(gameObject, statusEvent);
+                }
                 break;
             case EventName.PlayerWon:
                 gameIsOver = true;
+                if (onFire)
+                {
+                    var statusEvent = new ObserverEvent(EventName.Extinguish);
+                    Subject.instance.Notify(gameObject, statusEvent);
+                }
                 break;
             default:
                 break;

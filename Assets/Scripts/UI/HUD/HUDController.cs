@@ -14,7 +14,6 @@ public class HUDController : MonoBehaviour, Observer {
     private float chargeArrowYHeight = 350.0f;
 
     private bool gameOver = false;
-    private bool OnFire = false;
 
     void Awake ()
     {
@@ -58,28 +57,15 @@ public class HUDController : MonoBehaviour, Observer {
                 break;
 
             case EventName.UpdateStatus:
-                //only allow status change if:
-                //game is not over, OR we're on fire (allowed)
-                if (!gameOver || OnFire)
-                {
-                    var statusPayload = evt.payload;
-                    string status = (string)statusPayload[PayloadConstants.STATUS];
-
-                    statusText.text = status;
-                }
+                var statusPayload = evt.payload;
+                string status = (string)statusPayload[PayloadConstants.STATUS];
+                statusText.text = status;
                 break;
             case EventName.PlayerDead:
                 gameOver = true;
                 break;
             case EventName.PlayerWon:
                 gameOver = true;
-                break;
-            case EventName.OnFire:
-                if (!gameOver)
-                    OnFire = true;
-                break;
-            case EventName.Extinguish:
-                OnFire = false;
                 break;
 
             default:

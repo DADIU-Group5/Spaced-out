@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -12,11 +13,22 @@ public class WinMenu : MonoBehaviour, Observer
     [Header("If Zero, zero times passes.")]
     public float timeTilWinScreen = 0;
 
+    public List<GameObject> goodImages;
+    public List<GameObject> badImages;
+
+    [HideInInspector]
+    public bool finished = true;
+    [HideInInspector]
+    public bool didntDie = false;
+    [HideInInspector]
+    public bool collectedAll = false;
+
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
         switch (evt.eventName)
         {
             case EventName.PlayerWon:
+                Debug.Log("WinMenu registers win!");
                 StartCoroutine(Win());
                 break;
             case EventName.PlayerDead:
@@ -33,11 +45,6 @@ public class WinMenu : MonoBehaviour, Observer
         Subject.instance.AddObserver(this);
     }
 
-    // Update is called once per frame
-    void Update () {
-	
-	}
-
     /// <summary>
     /// Reset level
     /// </summary>
@@ -48,24 +55,48 @@ public class WinMenu : MonoBehaviour, Observer
     }
 
     /// <summary>
+    /// Load Main Menu
+    /// </summary>
+    public void LoadMainMenu(int levelIndex)
+    {
+        SceneManager.LoadScene(levelIndex);
+    }
+
+    void SetBadges()
+    {
+        finished = true;
+        Debug.Log("Setting badges: finished: " + finished + " and didntdie: " + didntDie + " and collectedAll: " + collectedAll);
+
+        goodImages[0].SetActive(finished);
+        badImages[0].SetActive(!finished);
+
+        goodImages[1].SetActive(didntDie);
+        badImages[1].SetActive(!didntDie);
+
+        goodImages[2].SetActive(collectedAll);
+        badImages[2].SetActive(!collectedAll);
+    }
+
+    /// <summary>
     /// Set Win Game
     /// </summary>
     public IEnumerator Win()
     {
-        //wait set amount of time...
-        yield return new WaitForSeconds(timeTilWinScreen);
-
-        //turn on all the UI elements in the GameOverCanvas
-        //assuming the player isn't dead...
-        if (!playerIsDead)
+        Debug.Log("in win coroutine...");
+        if (!playerIsDead && !playerWon)
         {
+            //wait set amount of time...
+            yield return new WaitForSeconds(timeTilWinScreen);
+
+            //turn on all the UI elements in the objectholder...
             for (int i = 0; i < transform.childCount; i++)
             {
                 transform.GetChild(i).gameObject.SetActive(true);
             }
             playerWon = true;
+            SetBadges();
+
         }
         yield return null;
-
     }
 }

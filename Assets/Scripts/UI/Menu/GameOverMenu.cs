@@ -61,18 +61,19 @@ public class GameOverMenu : MonoBehaviour, Observer
     /// </summary>
     public IEnumerator GameOver()
     {
-        Debug.Log("Gameover called");
-        //wait set amount of time...
-        yield return new WaitForSeconds(timeTilGameOverScreen);
+        if (!playerWon && !playerIsDead) {
+            Debug.Log("Gameover called");
+            //wait set amount of time...
+            yield return new WaitForSeconds(timeTilGameOverScreen);
 
-        //turn on all the UI elements in the GameOverCanvas
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            transform.GetChild(i).gameObject.SetActive(true);
+            //turn on all the UI elements in the GameOverCanvas
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).gameObject.SetActive(true);
+            }
+            countingDown = timeTilReset;
+            playerIsDead = true;
         }
-        countingDown = timeTilReset;
-        playerIsDead = true;
-
     }
 
     /// <summary>

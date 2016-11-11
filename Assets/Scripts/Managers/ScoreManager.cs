@@ -28,13 +28,47 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
         Subject.instance.AddObserver(this);
         currentLevel = PlayerPrefs.GetInt("CurrentLevel");
 
-        //when new game:
-        //PlayerPrefs.DeleteAll();
-	}
+        //This is how you set the number of collectibles:
+        SetMaxCollectiblesForLevel(currentLevel, 1);
+    }
 
-    public void SetAchievements()
+    /// <summary>
+    /// Set max collectibles for level x
+    /// </summary>
+    public void SetMaxCollectiblesForLevel(int level, int collectibles)
     {
+        PlayerPrefs.SetInt("MaxCollectiblesForLevel"+level, collectibles);
+    }
 
+    /// <summary>
+    /// Get max collectibles for level x
+    /// </summary>
+    public int GetMaxCollectiblesForLevel(int level)
+    {
+        return PlayerPrefs.GetInt("MaxCollectiblesForLevel" + level);
+    }
+
+    /// <summary>
+    /// You picked up a collectible.
+    /// </summary>
+    public void AddCollectibles(int level)
+    {
+        int collected = GetCollectibles(level) + 1;
+        PlayerPrefs.SetInt("Level" + level + "CollectiblesCollected", collected);
+
+        //Congratulations, you gained all of the achievements!
+        if (GetCollectibles(level) >= GetMaxCollectiblesForLevel(level))
+        {
+            AddAchievementToLevel(level, 3);
+        }
+    }
+
+    /// <summary>
+    /// Current collected collectibles for level x
+    /// </summary>
+    public int GetCollectibles(int level)
+    {
+        return PlayerPrefs.GetInt("Level" + level + "CollectiblesCollected");
     }
 
     /// <summary>

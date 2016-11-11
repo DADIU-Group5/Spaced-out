@@ -3,7 +3,7 @@ using System.Collections;
 
 public class RagdollPusher : MonoBehaviour
 {
-    [Range(0.5f, 5)]
+    [Range(0.1f, 5)]
     public float force = 2f;
 
 
@@ -37,7 +37,7 @@ public class RagdollPusher : MonoBehaviour
                     impactTarget = hit.rigidbody;
 
                     //impact direction also according to the ray
-                    impact = ray.direction * 2.0f;
+                    impact = ray.direction * force;
 
                     //the impact will be reapplied for the next 250ms
                     //to make the connected objects follow even though the simulated body joints

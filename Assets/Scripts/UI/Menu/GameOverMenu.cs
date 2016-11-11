@@ -21,7 +21,6 @@ public class GameOverMenu : MonoBehaviour, Observer
     {
         switch (evt.eventName)
         {
-
             case EventName.PlayerDead:
                 var payload = evt.payload;
                 EventName causeOfDeath = (EventName)payload[PayloadConstants.DEATH_CAUSE];
@@ -43,11 +42,6 @@ public class GameOverMenu : MonoBehaviour, Observer
                     case EventName.FuelEmpty:
                         deathCause = "You ran out of oxygen";
                         break;
-                   /* case EventName.FuelEmpty:
-                        deathCause = "";
-                        break;*/
-
-
                 }
 
                 DeathCauseText.text = deathCause;
@@ -55,7 +49,7 @@ public class GameOverMenu : MonoBehaviour, Observer
                 StartCoroutine(GameOver());
                 break;
             case EventName.PlayerWon:
-                StartCoroutine(Win());
+                playerWon = true;
                 break;
             default:
                 break;
@@ -74,38 +68,10 @@ public class GameOverMenu : MonoBehaviour, Observer
         //turn on all the UI elements in the GameOverCanvas
         for (int i = 0; i < transform.childCount; i++)
         {
-            if (transform.GetChild(i).gameObject.name == "ResetButton")
-                continue;
-            if (transform.GetChild(i).gameObject.name == "WinText")
-                continue;
             transform.GetChild(i).gameObject.SetActive(true);
         }
         countingDown = timeTilReset;
         playerIsDead = true;
-
-    }
-
-    /// <summary>
-    /// Set Win Game
-    /// </summary>
-    public IEnumerator Win()
-    {
-        //wait set amount of time...
-        //yield return new WaitForSeconds(timeTilGameOverScreen);
-
-        //turn on all the UI elements in the GameOverCanvas
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            if (transform.GetChild(i).gameObject.name == "ResetCountDownText")
-                continue;
-            if (transform.GetChild(i).gameObject.name == "GameOverText")
-                continue;
-            if (transform.GetChild(i).gameObject.name == "DeathCauseText")
-                continue;
-            transform.GetChild(i).gameObject.SetActive(true);
-        }
-        playerWon = true;
-        yield return null;
 
     }
 

@@ -4,7 +4,10 @@ using UnityEngine.UI;
 
 public class MenuSettings : MonoBehaviour {
 
-    public Slider volumeSlider;
+    public Slider masterSlider;
+    public Slider musicSlider;
+    public Slider effectsSlider;
+    public Text muteBtnTxt;
     public Text englishBtnTxt;
     public Text danishBtnTxt;
     public Text resetProgBtnTxt;
@@ -21,6 +24,15 @@ public class MenuSettings : MonoBehaviour {
     void OnDestroy()
     {
         SettingsManager.instance.onLanguageChanged -= UpdateButtonText;
+    }
+
+    public void OnMuteClick()
+    {
+        // TODO: kinda retarted, refactor
+        if(AudioListener.volume == 0)
+            SettingsManager.instance.SetVolume(SettingsManager.instance.settings.volume);
+        else
+            SettingsManager.instance.SetVolume(0);
     }
 
     public void OnEnglishClick()

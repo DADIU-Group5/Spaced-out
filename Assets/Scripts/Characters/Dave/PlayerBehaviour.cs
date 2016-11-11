@@ -22,6 +22,8 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     public int JumpsToExtinguish = 2;
     public int bounces = 0;
 
+    private bool gameIsOver = false;
+
     void Start()
     {
         rgb = this.gameObject.GetComponent<Rigidbody>();
@@ -45,8 +47,9 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 
     internal void Kill(EventName causeOfDeath)
     {
-        if (!dead)
+        if (!dead && !gameIsOver)
         {
+            Debug.Log("Killing player!");
             var evt = new ObserverEvent(EventName.PlayerDead);
             evt.payload.Add(PayloadConstants.DEATH_CAUSE, causeOfDeath);
             dead = true;
@@ -64,7 +67,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         switch (evt.eventName)
         {
             case EventName.OnFire:
-                if (!onFire)
+                if (!onFire && !gameIsOver)
                 {
                     onFire = true;
 
@@ -98,6 +101,22 @@ public class PlayerBehaviour : MonoBehaviour, Observer
             case EventName.FuelEmpty:
                 Kill(evt.eventName);
                 //Kill(EventName.FuelEmpty);
+                break;
+            case EventName.PlayerDead:
+                gameIsOver = true;
+                if (onFire)
+                {
+                    var statusEvent = new ObserverEvent(EventName.Extinguish);
+                    Subject.instance.Notify(gameObject, statusEvent);
+                }
+                break;
+            case EventName.PlayerWon:
+                gameIsOver = true;
+                if (onFire)
+                {
+                    var statusEvent = new ObserverEvent(EventName.Extinguish);
+                    Subject.instance.Notify(gameObject, statusEvent);
+                }
                 break;
             default:
                 break;

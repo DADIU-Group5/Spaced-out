@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameOverMenu : MonoBehaviour, Observer
 {
-
     [Header("Set countdown times:")]
     public float timeTilGameOverScreen = 1f;
     public float timeTilReset = 5f;
@@ -19,46 +18,45 @@ public class GameOverMenu : MonoBehaviour, Observer
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
-        switch (evt.eventName)
+        //If we want to add death combos, 
+        //we're going to have remove and rethink this.
+        if (!playerWon && !playerIsDead)
         {
+            switch (evt.eventName)
+            {
+                case EventName.PlayerDead:
+                    var payload = evt.payload;
+                    EventName causeOfDeath = (EventName)payload[PayloadConstants.DEATH_CAUSE];
+                    string deathCause = "You lost...";
+                    switch (causeOfDeath)
+                    {
+                        case EventName.OnFire:
+                            deathCause = "You burned to death";
+                            break;
+                        case EventName.Crushed:
+                            deathCause = "You got crushed";
+                            break;
+                        case EventName.Electrocuted:
+                            deathCause = "You got electrocuted";
+                            break;
+                        case EventName.PlayerExploded:
+                            deathCause = "You exploded";
+                            break;
+                        case EventName.FuelEmpty:
+                            deathCause = "You ran out of oxygen";
+                            break;
+                    }
 
-            case EventName.PlayerDead:
-                var payload = evt.payload;
-                EventName causeOfDeath = (EventName)payload[PayloadConstants.DEATH_CAUSE];
-                string deathCause = "You lost...";
-                switch (causeOfDeath)
-                {
-                    case EventName.OnFire:
-                        deathCause = "You burned to death";
-                        break;
-                    case EventName.Crushed:
-                        deathCause = "You got crushed";
-                        break;
-                    case EventName.Electrocuted:
-                        deathCause = "You got electricuted";
-                        break;
-                    case EventName.PlayerExploded:
-                        deathCause = "You exploded";
-                        break;
-                    case EventName.FuelEmpty:
-                        deathCause = "You ran out of oxygen";
-                        break;
-                   /* case EventName.FuelEmpty:
-                        deathCause = "";
-                        break;*/
+                    DeathCauseText.text = deathCause;
 
-
-                }
-
-                DeathCauseText.text = deathCause;
-
-                StartCoroutine(GameOver());
-                break;
-            case EventName.PlayerWon:
-                StartCoroutine(Win());
-                break;
-            default:
-                break;
+                    StartCoroutine(GameOver());
+                    break;
+                case EventName.PlayerWon:
+                    StartCoroutine(Win());
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
@@ -82,7 +80,6 @@ public class GameOverMenu : MonoBehaviour, Observer
         }
         countingDown = timeTilReset;
         playerIsDead = true;
-
     }
 
     /// <summary>

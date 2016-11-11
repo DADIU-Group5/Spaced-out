@@ -96,6 +96,98 @@
 						<Property Name="QFactorBand2" Type="Real32" Value="25"/>
 					</PropertyList>
 				</Effect>
+				<Effect Name="fire" ID="{34339A46-3998-4C5B-A38E-A0C5A19A562A}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FrequencyBand1" Type="Real32" Value="304"/>
+						<Property Name="GainBand1" Type="Real32" Value="12"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="newsoundseed" ID="{CAC4C381-639F-435D-831D-5EED7C5AB9FD}" PluginName="SoundSeed Impact" CompanyID="0" PluginID="116" PluginType="3">					<PluginData>
+	<ModeList GlobalGain="0.000000"/>
+</PluginData>
+				</Effect>
+				<Effect Name="custom_rvb_1" ID="{2785A37B-B83C-48EF-9FCD-5281CED132E0}" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">
+					<PropertyList>
+						<Property Name="IRConvolutionStop" Type="Real64" Value="1.8973125"/>
+					</PropertyList>
+					<ChildrenList>
+						<PluginMediaSource Name=" factory rvb impulse" ID="{DE8252EA-6B25-488C-AEAE-6DCD9B567D43}" ShortID="134280575">
+							<ParentPluginID>8323075</ParentPluginID>
+							<PropertyList>
+								<Property Name="DataFileName" Type="string" Value=" factory rvb impulse.wav"/>
+							</PropertyList>
+						</PluginMediaSource>
+					</ChildrenList>
+					<PluginData>
+	<ConvolutionData>
+		<CurveList Version="1">
+			<CurveInfo Name="IRGraphicEQ">
+				<Curve Name="" ID="{4087039F-5016-4C2E-9E68-ACA1BED3368E}">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="19"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>20</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>20000</XPos>
+							<YPos>0</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
+			<CurveInfo Name="IRLPF">
+				<Curve Name="" ID="{FDF6A746-0DAB-4AC7-A823-B5246AB460DE}">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="5"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>0</XPos>
+							<YPos>20000</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>1.8973125</XPos>
+							<YPos>20000</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
+			<CurveInfo Name="IRLevel">
+				<Curve Name="" ID="{8C5EFCD0-7C36-4EE9-8686-F97533A76101}">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="1"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>0</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>1.8973125</XPos>
+							<YPos>-120</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
+		</CurveList>
+	</ConvolutionData>
+</PluginData>
+				</Effect>
+				<Effect Name="firewoosh" ID="{2076F73E-B5D4-42F1-8D54-5BDC123050AD}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FrequencyBand3" Type="Real32" Value="2794"/>
+						<Property Name="GainBand3" Type="Real32" Value="12"/>
+					</PropertyList>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

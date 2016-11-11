@@ -49,8 +49,13 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         {
             var evt = new ObserverEvent(EventName.PlayerDead);
             evt.payload.Add(PayloadConstants.DEATH_CAUSE, causeOfDeath);
-            Subject.instance.Notify(gameObject, evt);
             dead = true;
+
+            Subject.instance.Notify(gameObject, evt);
+
+            //Actual death.
+            transform.parent.gameObject.SetActive(false);
+            CheckpointManager.instance.RespawnPlayer(transform.parent.gameObject);
         }
     }
 
@@ -110,5 +115,10 @@ public class PlayerBehaviour : MonoBehaviour, Observer
             Debug.Log("Player has burned to death!");
             Kill(EventName.OnFire);
         }
+    }
+
+    void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
     }
 }

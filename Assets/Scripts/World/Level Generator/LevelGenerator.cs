@@ -89,8 +89,12 @@ public class LevelGenerator : MonoBehaviour {
         {
             if(item.GetComponent<Door>().GetDoorType() == DoorType.entrance)
             {
-                //Instantiate(playerPrefab, item.transform.position - (item.transform.right*playerDistanceFromDoor), Quaternion.identity);
-                playerPrefab.transform.position = item.transform.position - (item.transform.right * playerDistanceFromDoor);
+                GameObject go = Instantiate(playerPrefab, item.transform.position - (item.transform.right*playerDistanceFromDoor), Quaternion.identity) as GameObject;
+                go.transform.LookAt(item.transform.position - (item.transform.right * (playerDistanceFromDoor+1)), Vector3.up);
+                CheckpointManager.instance.SetSpawnDistance(playerDistanceFromDoor);
+                CheckpointManager.instance.SetNewCheckpoint(item.transform.position);
+                CheckpointManager.instance.SetNewCheckpointRotation(-item.transform.right);
+                break;
             }
         }
     }

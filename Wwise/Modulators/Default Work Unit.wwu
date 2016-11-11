@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}" SchemaVersion="72">
 	<Modulators>
-		<WorkUnit Name="Default Work Unit" ID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}" PersistMode="Standalone">
+			<ChildrenList>
+				<ModulatorLfo Name="lfoblaze" ID="{A1693B59-A97E-472E-8CF3-37455333B9F3}" ShortID="30900722">
+					<PropertyList>
+						<Property Name="LfoFrequency" Type="Real64" Value="0.3"/>
+						<Property Name="ModulatorScope" Type="int32" Value="3"/>
+					</PropertyList>
+				</ModulatorLfo>
+				<ModulatorLfo Name="lfoblaze2" ID="{92DFA088-3A9E-49C8-B1F5-49151DD3513D}" ShortID="1023130340">
+					<PropertyList>
+						<Property Name="LfoFrequency" Type="Real64" Value="0.2"/>
+						<Property Name="ModulatorScope" Type="int32" Value="3"/>
+					</PropertyList>
+				</ModulatorLfo>
+			</ChildrenList>
+		</WorkUnit>
 	</Modulators>
 </WwiseDocument>

@@ -1,3 +1,11 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	2391494160	power			\Default Work Unit\power	
+
+State	ID	Name	State Group			Notes
+	748895195	None	power			
+	930712164	off	power			
+	1651971902	on	power			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2371628509	jetpackChargeLevel			\Default Work Unit\jetpackChargeLevel	
 	3097485287	masterLoPass			\Default Work Unit\masterLoPass	
@@ -10,6 +18,13 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3991942870	music			\Default Work Unit\Master Audio Bus\music	
 
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	373392551	New_Auxiliary_Bus			\Default Work Unit\Master Secondary Bus\New_Auxiliary_Bus	
+	2425890737	rvb2			\Default Work Unit\Master Audio Bus\rvb2	
+	2425890738	rvb1			\Default Work Unit\Master Audio Bus\rvb1	
+
 Effect plug-ins	ID	Name	Type				Notes
 	259313001	Master_Dynamic	McDSP ML1			
+	1718002255	custom_rvb_1	Wwise Convolution Reverb			
+	1796269791	Damped_Chamber	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 4ms 
 

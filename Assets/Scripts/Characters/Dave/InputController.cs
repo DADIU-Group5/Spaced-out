@@ -43,10 +43,11 @@ public class InputController : MonoBehaviour, Observer
             return;
         }
 
-        // See if player was tapped. If he was, set launchMode to true, otherwise to false.
-        if (Input.GetMouseButtonDown(0))
+        // Sets launchmode if two fingers are registered.
+        if (Input.GetMouseButtonDown(1))
         {
-            launchMode = DetectPlayerTap();
+            //launchMode = DetectPlayerTap();
+            launchMode = true;
         }
 
         // Check if we are NOT in launchmode

@@ -38,6 +38,11 @@ public class FuelController : MonoBehaviour {
         return currentFuel > 0;
     }
 
+    public int GetCurrentFuel()
+    {
+        return currentFuel;
+    }
+
     public void ReplenishFuel()
     {
         currentFuel = maxFuel;

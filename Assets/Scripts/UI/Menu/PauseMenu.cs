@@ -9,6 +9,17 @@ public class PauseMenu : MonoBehaviour {
     [HideInInspector]
     public bool pausing = false;
 
+    private int level = 1;
+
+    [HideInInspector]
+    public ScoreManager _scoreManager;
+
+    void Start()
+    {
+        _scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        level = PlayerPrefs.GetInt("CurrentLevel");
+    }
+
     /// <summary>
     /// Pause/UnpauseGame
     /// </summary>
@@ -38,6 +49,9 @@ public class PauseMenu : MonoBehaviour {
         Scene scene = SceneManager.GetActiveScene();
         //remember to unpause;
         PauseGame();
+
+        //player reset, so he hasn't died in this run yet.
+        _scoreManager.SetPlayerHasDiedThisLevel(0);
         SceneManager.LoadScene(scene.name);
     }
 

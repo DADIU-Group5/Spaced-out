@@ -9,6 +9,12 @@ public class WinMenu : MonoBehaviour, Observer
     private bool playerIsDead = false;
     private bool playerWon = false;
 
+    [HideInInspector]
+    public ScoreManager _scoreManager;
+
+    [HideInInspector]
+    public int level = 1;
+
     [Header("After how long does the win screen appear:")]
     [Header("If Zero, zero times passes.")]
     public float timeTilWinScreen = 0;
@@ -17,7 +23,7 @@ public class WinMenu : MonoBehaviour, Observer
     public List<GameObject> badImages;
 
     [HideInInspector]
-    public bool finished = true;
+    public bool finished = false;
     [HideInInspector]
     public bool didntDie = false;
     [HideInInspector]
@@ -28,7 +34,6 @@ public class WinMenu : MonoBehaviour, Observer
         switch (evt.eventName)
         {
             case EventName.PlayerWon:
-                Debug.Log("WinMenu registers win!");
                 StartCoroutine(Win());
                 break;
             case EventName.PlayerDead:
@@ -43,6 +48,8 @@ public class WinMenu : MonoBehaviour, Observer
     void Start()
     {
         Subject.instance.AddObserver(this);
+        _scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        level = PlayerPrefs.GetInt("CurrentLevel");
     }
 
     /// <summary>
@@ -51,6 +58,8 @@ public class WinMenu : MonoBehaviour, Observer
     public void ResetLevel()
     {
         Scene scene = SceneManager.GetActiveScene();
+        //player reset, so he hasn't died in this run yet.
+        _scoreManager.SetPlayerHasDiedThisLevel(0);
         SceneManager.LoadScene(scene.name);
     }
 
@@ -64,8 +73,9 @@ public class WinMenu : MonoBehaviour, Observer
 
     void SetBadges()
     {
-        finished = true;
-        Debug.Log("Setting badges: finished: " + finished + " and didntdie: " + didntDie + " and collectedAll: " + collectedAll);
+        finished = (_scoreManager.GetAchievementFromLevel(level, 1) == 1) ? true : false; //ex: level2Achievement1
+        didntDie = (_scoreManager.GetAchievementFromLevel(level, 2) == 1) ? true : false; //ex: level2Achievement1
+        collectedAll = (_scoreManager.GetAchievementFromLevel(level, 3) == 1) ? true : false; //ex: level2Achievement1
 
         goodImages[0].SetActive(finished);
         badImages[0].SetActive(!finished);
@@ -82,7 +92,6 @@ public class WinMenu : MonoBehaviour, Observer
     /// </summary>
     public IEnumerator Win()
     {
-        Debug.Log("in win coroutine...");
         if (!playerIsDead && !playerWon)
         {
             //wait set amount of time...

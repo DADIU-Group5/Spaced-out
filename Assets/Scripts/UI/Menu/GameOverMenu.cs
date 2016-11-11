@@ -16,6 +16,10 @@ public class GameOverMenu : MonoBehaviour, Observer
     private bool playerIsDead = false;
     private bool playerWon = false;
     private float countingDown = 10;
+    private int level = 1;
+
+    [HideInInspector]
+    public ScoreManager _scoreManager;
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
@@ -81,13 +85,23 @@ public class GameOverMenu : MonoBehaviour, Observer
     /// </summary>
     public void ResetLevel()
     {
+        //shouldn't we go to the last transformation point?
+        //when we add that logic, remember:
+
+        //if reset to level start:
+        /* //player reset, so he hasn't died in this run yet.
+        PlayerPrefs.SetInt("playerDiedThisLevel", 0);*/
+        _scoreManager.SetPlayerHasDiedThisLevel(0);
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
+        
     }
 
     void Start()
     {
         Subject.instance.AddObserver(this);
+        _scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        level = PlayerPrefs.GetInt("CurrentLevel");
     }
 
     // Update is called once per frame

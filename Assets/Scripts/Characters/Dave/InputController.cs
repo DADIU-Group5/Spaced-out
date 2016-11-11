@@ -19,6 +19,11 @@ public class InputController : MonoBehaviour, Observer
     public Transform playerTransform,
         playerPitchTransform;
 
+    private void Awake()
+    {
+        Subject.instance.AddObserver(this);
+    }
+
     private void Update()
     {
         // Quit
@@ -167,6 +172,14 @@ public class InputController : MonoBehaviour, Observer
     {
         switch (evt.eventName)
         {
+            case EventName.PlayerSpawned:
+                inputDisabled = false;
+                GameObject go = evt.payload[PayloadConstants.PLAYER] as GameObject;
+                player = go.GetComponent<PlayerController>();
+                playerTransform = player.transform;
+                playerPitchTransform = player.pitchTransform;
+                fuel = player.fuel;
+                break;
             case EventName.PlayerDead:
                 inputDisabled = true;
                 break;

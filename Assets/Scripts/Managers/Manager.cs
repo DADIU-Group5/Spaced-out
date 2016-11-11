@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Manager : MonoBehaviour {
+public class Manager : Singleton<Manager>
+{
     public string sceneToLoad = "Main Menu";
 
 	void Start () {

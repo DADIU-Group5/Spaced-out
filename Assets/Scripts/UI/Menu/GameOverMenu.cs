@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOverMenu : MonoBehaviour, Observer
 {
+
     [Header("Set countdown times:")]
     public float timeTilGameOverScreen = 1f;
     public float timeTilReset = 5f;
@@ -15,48 +16,47 @@ public class GameOverMenu : MonoBehaviour, Observer
     private bool playerIsDead = false;
     private bool playerWon = false;
     private float countingDown = 10;
+    private int level = 1;
+
+    [HideInInspector]
+    public ScoreManager _scoreManager;
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
-        //If we want to add death combos, 
-        //we're going to have remove and rethink this.
-        if (!playerWon && !playerIsDead)
+        switch (evt.eventName)
         {
-            switch (evt.eventName)
-            {
-                case EventName.PlayerDead:
-                    var payload = evt.payload;
-                    EventName causeOfDeath = (EventName)payload[PayloadConstants.DEATH_CAUSE];
-                    string deathCause = "You lost...";
-                    switch (causeOfDeath)
-                    {
-                        case EventName.OnFire:
-                            deathCause = "You burned to death";
-                            break;
-                        case EventName.Crushed:
-                            deathCause = "You got crushed";
-                            break;
-                        case EventName.Electrocuted:
-                            deathCause = "You got electrocuted";
-                            break;
-                        case EventName.PlayerExploded:
-                            deathCause = "You exploded";
-                            break;
-                        case EventName.FuelEmpty:
-                            deathCause = "You ran out of oxygen";
-                            break;
-                    }
+            case EventName.PlayerDead:
+                var payload = evt.payload;
+                EventName causeOfDeath = (EventName)payload[PayloadConstants.DEATH_CAUSE];
+                string deathCause = "You lost...";
+                switch (causeOfDeath)
+                {
+                    case EventName.OnFire:
+                        deathCause = "You burned to death";
+                        break;
+                    case EventName.Crushed:
+                        deathCause = "You got crushed";
+                        break;
+                    case EventName.Electrocuted:
+                        deathCause = "You got electricuted";
+                        break;
+                    case EventName.PlayerExploded:
+                        deathCause = "You exploded";
+                        break;
+                    case EventName.FuelEmpty:
+                        deathCause = "You ran out of oxygen";
+                        break;
+                }
 
-                    DeathCauseText.text = deathCause;
+                DeathCauseText.text = deathCause;
 
-                    StartCoroutine(GameOver());
-                    break;
-                case EventName.PlayerWon:
-                    StartCoroutine(Win());
-                    break;
-                default:
-                    break;
-            }
+                StartCoroutine(GameOver());
+                break;
+            case EventName.PlayerWon:
+                playerWon = true;
+                break;
+            default:
+                break;
         }
     }
 
@@ -65,45 +65,19 @@ public class GameOverMenu : MonoBehaviour, Observer
     /// </summary>
     public IEnumerator GameOver()
     {
-        Debug.Log("Gameover called");
-        //wait set amount of time...
-        yield return new WaitForSeconds(timeTilGameOverScreen);
+        if (!playerWon && !playerIsDead) {
+            Debug.Log("Gameover called");
+            //wait set amount of time...
+            yield return new WaitForSeconds(timeTilGameOverScreen);
 
-        //turn on all the UI elements in the GameOverCanvas
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            if (transform.GetChild(i).gameObject.name == "ResetButton")
-                continue;
-            if (transform.GetChild(i).gameObject.name == "WinText")
-                continue;
-            transform.GetChild(i).gameObject.SetActive(true);
+            //turn on all the UI elements in the GameOverCanvas
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).gameObject.SetActive(true);
+            }
+            countingDown = timeTilReset;
+            playerIsDead = true;
         }
-        countingDown = timeTilReset;
-        playerIsDead = true;
-    }
-
-    /// <summary>
-    /// Set Win Game
-    /// </summary>
-    public IEnumerator Win()
-    {
-        //wait set amount of time...
-        //yield return new WaitForSeconds(timeTilGameOverScreen);
-
-        //turn on all the UI elements in the GameOverCanvas
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            if (transform.GetChild(i).gameObject.name == "ResetCountDownText")
-                continue;
-            if (transform.GetChild(i).gameObject.name == "GameOverText")
-                continue;
-            if (transform.GetChild(i).gameObject.name == "DeathCauseText")
-                continue;
-            transform.GetChild(i).gameObject.SetActive(true);
-        }
-        playerWon = true;
-        yield return null;
-
     }
 
     /// <summary>
@@ -111,13 +85,23 @@ public class GameOverMenu : MonoBehaviour, Observer
     /// </summary>
     public void ResetLevel()
     {
+        //shouldn't we go to the last transformation point?
+        //when we add that logic, remember:
+
+        //if reset to level start:
+        /* //player reset, so he hasn't died in this run yet.
+        PlayerPrefs.SetInt("playerDiedThisLevel", 0);*/
+        _scoreManager.SetPlayerHasDiedThisLevel(0);
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
+        
     }
 
     void Start()
     {
         Subject.instance.AddObserver(this);
+        _scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        level = PlayerPrefs.GetInt("CurrentLevel");
     }
 
     // Update is called once per frame

@@ -7,16 +7,25 @@ public class SoundManager : MonoBehaviour, Observer
     uint bankID;
 
     [Range(0, 100)]
-    public float CurrentVolume = 75;
+    public float masterVolume = 75;
 
-    // TODO: remove and put into some sort of game manager
-    private bool firstLaunch = true;
+    [Range(0, 100)]
+    public float musicVolume = 75;
+
+    [Range(0, 100)]
+    public float effectsVolume = 75;
+
+    public bool mute = false;
 
     // Use this for initialization
     void Start()
     {
         AkSoundEngine.LoadBank("soundbank_alpha", AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
         AkSoundEngine.SetSwitch("galVersion", "v1", gameObject);
+        
+        SetMasterVolume(masterVolume);
+        SetMusicVolume(musicVolume);
+        SetEffectsVolume(effectsVolume);
     }
 
     private void Awake()
@@ -45,7 +54,7 @@ public class SoundManager : MonoBehaviour, Observer
             case EventName.PlayerLaunch:
 
                 var payload = evt.payload;
-                float launchForce = (float)payload[PayloadConstants.LAUNCH_SPEED];
+                float launchForce = (float)payload[PayloadConstants.LAUNCH_FORCE];
                 //Debug.Log("Launch force: " + launchForce);
                 // add game manager class that keeps track of charges so that he can do it only once
                 //if(launchForce > 0.75)
@@ -152,5 +161,15 @@ public class SoundManager : MonoBehaviour, Observer
     public void SetMasterVolume(float volume)
     {
         AkSoundEngine.SetRTPCValue("MasterVolume", volume);
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        AkSoundEngine.SetRTPCValue("MusicVolume", volume);
+    }
+
+    public void SetEffectsVolume(float volume)
+    {
+        AkSoundEngine.SetRTPCValue("EffectsVolume", volume);
     }
 }

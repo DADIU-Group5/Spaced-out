@@ -16,10 +16,12 @@ public class KeyObject : MonoBehaviour {
     {
         if (other.transform.tag == "Player")
         {
+            Debug.Log("found player!");
             //StartCoroutine(gameOverMenu.Win());
             var evt = new ObserverEvent(EventName.PlayerWon);
             Subject.instance.Notify(gameObject, evt);
-            Destroy(this);
+            Debug.Log("destroying key");
+            Destroy(this.gameObject);
         }
     }
 }

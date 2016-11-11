@@ -55,5 +55,8 @@ public class CheckpointManager : Singleton<CheckpointManager> {
         go.transform.LookAt(position + (rotation * (spawnDistance+1)), Vector3.up);
         go.GetComponentInChildren<FuelController>().maxFuel = fuelCount + 1;
         go.GetComponentInChildren<FuelController>().ReplenishFuel();
+        var evt = new ObserverEvent(EventName.PlayerSpawned);
+        evt.payload.Add(PayloadConstants.PLAYER, go.GetComponentInChildren<PlayerController>().gameObject);
+        Subject.instance.Notify(gameObject, evt);
     }
 }

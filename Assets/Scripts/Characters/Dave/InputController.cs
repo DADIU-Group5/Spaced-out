@@ -71,12 +71,15 @@ public class InputController : MonoBehaviour, Observer
         }
 
         // Launch 
+        float launchForce = GetLaunchForce();
         if (Input.GetMouseButtonUp(0))
         {
-            var evt = new ObserverEvent(EventName.PlayerLaunch);
-
-            evt.payload.Add(PayloadConstants.LAUNCH_SPEED, GetLaunchForce());
-            Subject.instance.Notify(gameObject, evt);
+            if (launchForce > 0)
+            {
+                var evt = new ObserverEvent(EventName.PlayerLaunch);
+                evt.payload.Add(PayloadConstants.LAUNCH_SPEED, launchForce);
+                Subject.instance.Notify(gameObject, evt);
+            }
 
             launchMode = false;
         }

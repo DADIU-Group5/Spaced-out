@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour, Observer
     {
         if (rbPlayer.velocity.magnitude < maxMagnitude)
         {
+            launchForce = force * maxLaunchForce;
             Rigidbody body = GetComponent<Rigidbody>();
             body.AddForce(force * direction.normalized);
 
@@ -61,15 +62,13 @@ public class PlayerController : MonoBehaviour, Observer
                 fuel.UseFuel();
             }
         }
+        launchForce = 0;
+        UpdateLaunchUI();
     }
 
     public void Launch(float force)
     {
-        launchForce = force * maxLaunchForce;
         Launch(pitchTransform.forward, launchForce);
-        launchForce = 0;
-
-        UpdateLaunchUI();
     }
 
     public void SetLaunchForce(float force)
@@ -111,12 +110,10 @@ public class PlayerController : MonoBehaviour, Observer
         switch (evt.eventName)
         {
             case EventName.PlayerLaunch:
-
                 var payload = evt.payload;
                 float launchForce = (float)payload[PayloadConstants.LAUNCH_SPEED];
-               
+                //Vector3 launchDirection = (Vector3)payload[PayloadConstants.LAUNCH_DIRECTION];
                 Launch(launchForce);
-
                 break;
             /*case EventName.PlayerDead:
                 Debug.Log("calling on notify");

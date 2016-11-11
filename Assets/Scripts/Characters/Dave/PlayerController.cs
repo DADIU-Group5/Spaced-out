@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour, Observer
         }
     }
 
-    public void Launch(Vector3 direction, float force)
+    public void Launch(float force, Vector3 direction)
     {
         if (rbPlayer.velocity.magnitude < maxMagnitude)
         {
@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour, Observer
 
     public void Launch(float force)
     {
-        Launch(pitchTransform.forward, launchForce);
+        Launch(launchForce, pitchTransform.forward);
     }
 
     public void SetLaunchForce(float force)
@@ -110,9 +110,11 @@ public class PlayerController : MonoBehaviour, Observer
         switch (evt.eventName)
         {
             case EventName.PlayerLaunch:
+                //Currently not handled as an event, something bugs out when two payloads are used.
                 var payload = evt.payload;
-                float launchForce = (float)payload[PayloadConstants.LAUNCH_SPEED];
+                float launchForce = (float)payload[PayloadConstants.LAUNCH_FORCE];
                 //Vector3 launchDirection = (Vector3)payload[PayloadConstants.LAUNCH_DIRECTION];
+                //Launch(launchForce, launchDirection);
                 Launch(launchForce);
                 break;
             /*case EventName.PlayerDead:

@@ -45,7 +45,7 @@ public class SoundManager : MonoBehaviour, Observer
             case EventName.PlayerLaunch:
 
                 var payload = evt.payload;
-                float launchForce = (float)payload[PayloadConstants.LAUNCH_SPEED];
+                float launchForce = (float)payload[PayloadConstants.LAUNCH_FORCE];
                 //Debug.Log("Launch force: " + launchForce);
                 // add game manager class that keeps track of charges so that he can do it only once
                 //if(launchForce > 0.75)

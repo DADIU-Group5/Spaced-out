@@ -77,10 +77,10 @@ public class InputController : MonoBehaviour, Observer
             if (launchForce > 0)
             {
                 var evt = new ObserverEvent(EventName.PlayerLaunch);
-                evt.payload.Add(PayloadConstants.LAUNCH_SPEED, launchForce);
+                evt.payload.Add(PayloadConstants.LAUNCH_FORCE, launchForce);
+                //evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, GetLaunchDirection());
                 Subject.instance.Notify(gameObject, evt);
             }
-
             launchMode = false;
         }
     }
@@ -125,6 +125,12 @@ public class InputController : MonoBehaviour, Observer
         float maxDifference = oldPoint.y - launchBuffer;
 
         return (difference / maxDifference).Clamp(0f, 1f);
+    }
+
+    // Calculate the direction from the character position and the crosshair.
+    private Vector3 GetLaunchDirection()
+    {
+        return playerPitchTransform.forward;
     }
 
     // Resets the rotation.

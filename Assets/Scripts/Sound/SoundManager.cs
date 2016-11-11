@@ -172,15 +172,4 @@ public class SoundManager : MonoBehaviour, Observer
     {
         AkSoundEngine.SetRTPCValue("EffectsVolume", volume);
     }
-
-    // maybe this is plain stupid
-    public void ToggleMute()
-    {
-        mute = !mute;
-
-        if(!mute)
-            Subject.instance.AddObserver(this);
-        else
-            Subject.instance.RemoveObserver(this);
-    }
 }

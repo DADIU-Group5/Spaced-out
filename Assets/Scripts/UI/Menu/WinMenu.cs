@@ -59,7 +59,7 @@ public class WinMenu : MonoBehaviour, Observer
     {
         Scene scene = SceneManager.GetActiveScene();
         //player reset, so he hasn't died in this run yet.
-        _scoreManager.SetPlayerHasDiedThisLevel(0);
+        _scoreManager.SetPlayerHasDiedThisLevel(level);
         SceneManager.LoadScene(scene.name);
     }
 

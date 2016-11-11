@@ -37,6 +37,7 @@ public class LevelLoader : MonoBehaviour {
     /// <param name="level"></param>
     public void LoadLevel(int level)
     {
+        PlayerPrefs.SetInt("CurrentLevel", level);
         if (overrideSeed)
         {
             OverrideSeeds(extSeed, intSeed, level.ToString());

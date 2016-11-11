@@ -91,7 +91,7 @@ public class GameOverMenu : MonoBehaviour, Observer
         //if reset to level start:
         /* //player reset, so he hasn't died in this run yet.
         PlayerPrefs.SetInt("playerDiedThisLevel", 0);*/
-        _scoreManager.SetPlayerHasDiedThisLevel(0);
+        _scoreManager.SetPlayerHasDiedThisLevel(level);
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
         

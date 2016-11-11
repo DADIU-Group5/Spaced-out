@@ -51,7 +51,7 @@ public class PauseMenu : MonoBehaviour {
         PauseGame();
 
         //player reset, so he hasn't died in this run yet.
-        _scoreManager.SetPlayerHasDiedThisLevel(0);
+        _scoreManager.SetPlayerHasDiedThisLevel(level);
         SceneManager.LoadScene(scene.name);
     }
 

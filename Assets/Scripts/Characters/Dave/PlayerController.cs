@@ -12,8 +12,7 @@ public class PlayerController : MonoBehaviour, Observer
     
     private float launchForce = 0f;
 
-    public float minLaunchForce = 0f, maxLaunchForce = 3000f, launchSideScale = 10f;
-    public float maxMagnitude = 30f;
+    public float minLaunchForce = 0f, maxLaunchForce = 3000f, launchSideScale = 10f,  maxMagnitude = 30f;
     public Transform pitchTransform;
     public Rigidbody rbPlayer;
     public FuelController fuel;
@@ -49,27 +48,24 @@ public class PlayerController : MonoBehaviour, Observer
         }
     }
 
-    public void Launch(Vector3 direction, float force)
+    public void Launch(float force, Vector3 direction)
     {
         if (rbPlayer.velocity.magnitude < maxMagnitude)
         {
             Rigidbody body = GetComponent<Rigidbody>();
-            body.AddForce(force * direction.normalized);
-
+            body.AddForce(force * maxLaunchForce * direction.normalized);
             if (force > 0)
             {
                 fuel.UseFuel();
             }
         }
+        launchForce = 0;
+        UpdateLaunchUI();
     }
 
     public void Launch(float force)
     {
-        launchForce = force * maxLaunchForce;
-        Launch(pitchTransform.forward, launchForce);
-        launchForce = 0;
-
-        UpdateLaunchUI();
+        Launch(force, pitchTransform.forward);
     }
 
     public void SetLaunchForce(float force)
@@ -111,12 +107,10 @@ public class PlayerController : MonoBehaviour, Observer
         switch (evt.eventName)
         {
             case EventName.PlayerLaunch:
-
                 var payload = evt.payload;
-                float launchForce = (float)payload[PayloadConstants.LAUNCH_SPEED];
-               
-                Launch(launchForce);
-
+                float launchForce = (float)payload[PayloadConstants.LAUNCH_FORCE];
+                Vector3 launchDirection = (Vector3)payload[PayloadConstants.LAUNCH_DIRECTION];
+                Launch(launchForce, launchDirection);
                 break;
             /*case EventName.PlayerDead:
                 Debug.Log("calling on notify");

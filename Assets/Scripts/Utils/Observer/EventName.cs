@@ -10,6 +10,7 @@
     LevelCompleted,
     RestartLevel,
     PlayerFuelPickup,
+    PlayerSpawned,
     PlayerDead,
     OnFire,
     Extinguish,

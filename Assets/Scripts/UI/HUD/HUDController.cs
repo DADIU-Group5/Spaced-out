@@ -7,22 +7,17 @@ public class HUDController : MonoBehaviour, Observer {
     public Text fuelText;
     public Text chargeText;
     public Text launchText;
+    public Text statusText;
     public Transform chargeArrow;
 
     private float chargeArrowYMin = 68f;
     private float chargeArrowYHeight = 350.0f;
 
+    private bool gameOver = false;
+
     void Awake ()
     {
         Subject.instance.AddObserver(this);
-    }
-
-    void Start () {
-
-    }
-	
-	void Update () {
-
     }
 
     public void ToggleCameraControls()
@@ -54,11 +49,25 @@ public class HUDController : MonoBehaviour, Observer {
 
             case EventName.UpdateVelocity:
                 var velocityPayload = evt.payload;
-                string velocity = (string)velocityPayload[PayloadConstants.VELOCITY];
-                
+                string velocity = "";
+                velocity = (string)velocityPayload[PayloadConstants.VELOCITY];
+
                 launchText.text = velocity;
 
                 break;
+
+            case EventName.UpdateStatus:
+                var statusPayload = evt.payload;
+                string status = (string)statusPayload[PayloadConstants.STATUS];
+                statusText.text = status;
+                break;
+            case EventName.PlayerDead:
+                gameOver = true;
+                break;
+            case EventName.PlayerWon:
+                gameOver = true;
+                break;
+
             default:
                 break;
         }

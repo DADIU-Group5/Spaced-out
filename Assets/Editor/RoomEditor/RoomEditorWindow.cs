@@ -16,6 +16,8 @@ public class RoomEditorWindow : EditorWindow {
     List<Object> rooms;
     int loadID = 0;
 
+    int objectToCreate = 0;
+
     string pathName = "Assets/Resources/Rooms/";
 
     [MenuItem("RoomEditor/RoomWindow")]
@@ -51,12 +53,11 @@ public class RoomEditorWindow : EditorWindow {
                 LoadingRooms();
                 break;
             case States.CreateRoom:
-                CreateBasicRoom();
+               // CreateBasicRoom();
                 break;
             default:
                 break;
         }
-        
     }
 
     void RepaintThis()
@@ -80,10 +81,10 @@ public class RoomEditorWindow : EditorWindow {
             {
                 return;
             }
-            if (states == States.CreateRoom)
+            /*if (states == States.CreateRoom)
             {
                 return;
-            }
+            }*/
             states = States.Editing;
         }
     }
@@ -130,55 +131,44 @@ public class RoomEditorWindow : EditorWindow {
             {
                 SceneView.lastActiveSceneView.FrameSelected();
             }
-            if (Selection.activeGameObject.GetComponent<ShapingObjectSelector>() != null)
-            {
-                if (GUILayout.Button("Door"))
-                {
-                    CreateDoorInWall(Selection.activeGameObject);
-                }
-            }
-            else
-            {
-                GUILayout.Space(21);
-            }
         }
         else
         {
             EditorGUILayout.LabelField("No Object selected");
-            GUILayout.Space(85);
+            GUILayout.Space(64);
         }
         GUILayout.FlexibleSpace();
-        thing = EditorGUILayout.Popup("Create new object: ", thing, new string[] {"Select", "Enviromental", "Floating", "Static", "Shaping", "Door" });
-        switch (thing)
+        objectToCreate = EditorGUILayout.Popup("Create new object: ", objectToCreate, new string[] {"Select", "Enviromental", "Floating", "Static", "Shaping", "Pickup", "Door"});
+        switch (objectToCreate)
         {
             case 1:
                 Selection.activeGameObject = RC.AddNewEnvironmentalObject();
-                thing = 0;
+                objectToCreate = 0;
                 break;
             case 2:
                 Selection.activeGameObject = RC.AddFloatingObject();
-                thing = 0;
+                objectToCreate = 0;
                 break;
             case 3:
                 Selection.activeGameObject = RC.AddStaticObject();
-                thing = 0;
+                objectToCreate = 0;
                 break;
             case 4:
                 Selection.activeGameObject = RC.AddNewshapingObject();
-                thing = 0;
+                objectToCreate = 0;
                 break;
             case 5:
+                Selection.activeGameObject = RC.AddNewPickupObject();
+                objectToCreate = 0;
+                break;
+            case 6:
                 Selection.activeGameObject = RC.AddNewDoor();
-                thing = 0;
+                objectToCreate = 0;
                 break;
             default:
                 break;
         }
-        GUILayout.FlexibleSpace();
-        if(GUILayout.Button("Create basic room"))
-        {
-            states = States.CreateRoom;
-        }
+
         GUILayout.FlexibleSpace();
 
         EditorGUILayout.BeginHorizontal();
@@ -200,118 +190,11 @@ public class RoomEditorWindow : EditorWindow {
         GUILayout.FlexibleSpace();
     }
 
-    int thing = 0;
-
     void Duplicate(GameObject toDuplicate)
     {
         GameObject go = Instantiate(toDuplicate,toDuplicate.transform.position,toDuplicate.transform.rotation,toDuplicate.transform.parent) as GameObject;
         go.name = toDuplicate.name;
         Selection.activeGameObject = go;
-    }
-
-    Vector3 size = new Vector3(5,5,5);
-
-    void CreateBasicRoom()
-    {
-        GUILayout.Label("Creating a basic room");
-        GUILayout.FlexibleSpace();
-        size = EditorGUILayout.Vector3Field("Size: ", size);
-        if (GUILayout.Button("Create Room (NYI)", GUILayout.Height(50)))
-        {
-            CreateRoomGeometry();
-            states = States.Editing;
-        }
-        GUILayout.FlexibleSpace();
-        if (GUILayout.Button("Back", GUILayout.Height(50)))
-        {
-            states = States.Editing;
-        }
-        GUILayout.FlexibleSpace();
-    }
-
-    void CreateRoomGeometry()
-    {
-        //Floor
-        GameObject floor = RC.AddNewshapingObject();
-        floor.transform.localScale = new Vector3(size.x, size.z, 1);
-        floor.transform.rotation = Quaternion.Euler(new Vector3(90, 0, 0));
-        floor.transform.position = new Vector3(0, -size.y / 2, 0);
-
-        //Roof
-        GameObject roof = RC.AddNewshapingObject();
-        roof.transform.localScale = new Vector3(size.x, size.z, 1);
-        roof.transform.rotation = Quaternion.Euler(new Vector3(-90, 0, 0));
-        roof.transform.position = new Vector3(0,size.y/2,0);
-
-        //Right wall
-        GameObject right = RC.AddNewshapingObject();
-        right.transform.localScale = new Vector3(size.z, size.y, 1);
-        right.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
-        right.transform.position = new Vector3(size.x/2, 0, 0);
-
-        //Left wall
-        GameObject left = RC.AddNewshapingObject();
-        left.transform.localScale = new Vector3(size.z, size.y, 1);
-        left.transform.rotation = Quaternion.Euler(new Vector3(0, -90, 0));
-        left.transform.position = new Vector3(-size.x / 2, 0, 0);
-
-        //Front wall
-        GameObject front = RC.AddNewshapingObject();
-        front.transform.localScale = new Vector3(size.x, size.y, 1);
-        front.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-        front.transform.position = new Vector3(0, 0, size.z / 2);
-
-        //Back wall
-        GameObject back = RC.AddNewshapingObject();
-        back.transform.localScale = new Vector3(size.x, size.y, 1);
-        back.transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
-        back.transform.position = new Vector3(0, 0, -size.z / 2);
-    }
-
-    void CreateDoorInWall(GameObject wall)
-    {
-        if(wall.transform.localScale.x < 5 || wall.transform.localScale.y < 5)
-        {
-            Debug.LogError("Tried to create a door on a too small wall.");
-            return;
-        }
-        //Door
-        GameObject door = RC.AddNewDoor();
-        door.transform.position = wall.transform.position;
-        door.transform.rotation = Quaternion.FromToRotation(door.transform.right, wall.transform.forward);
-
-        Vector3 tempSizes = wall.transform.localScale;
-        Vector3 yScale = new Vector3(5, (tempSizes.y / 2) - 2.5f, 1);
-        Vector3 xScale = new Vector3((tempSizes.x / 2) - 2.5f, tempSizes.y, 1);
-
-        float xMove = 2.5f + (xScale.x / 2);
-        float yMove = 2.5f + (yScale.y / 2);
-
-        //Upper wall
-        GameObject upper = RC.AddNewshapingObject();
-        upper.transform.localScale = yScale;
-        upper.transform.rotation = wall.transform.rotation;
-        upper.transform.position = (wall.transform.up * yMove) + wall.transform.position;
-
-        //Lower wall
-        GameObject lower = RC.AddNewshapingObject();
-        lower.transform.localScale = yScale;
-        lower.transform.rotation = wall.transform.rotation;
-        lower.transform.position = (wall.transform.up * -yMove) + wall.transform.position;
-
-        //Right wall
-        GameObject right = RC.AddNewshapingObject();
-        right.transform.localScale = xScale;
-        right.transform.rotation = wall.transform.rotation;
-        right.transform.position = (wall.transform.right * xMove) + wall.transform.position;
-
-        //Left wall
-        GameObject left = RC.AddNewshapingObject();
-        left.transform.localScale = xScale;
-        left.transform.rotation = wall.transform.rotation;
-        left.transform.position = (wall.transform.right * -xMove)+wall.transform.position;
-
-        DestroyImmediate(wall);
     }
 
     void SavingRoom()
@@ -336,6 +219,7 @@ public class RoomEditorWindow : EditorWindow {
                 RC.DestroyRoom();
             }
         }
+        GUILayout.FlexibleSpace();
         if (GUILayout.Button("Back", GUILayout.Height(50)))
         {
             states = States.Editing;
@@ -348,6 +232,11 @@ public class RoomEditorWindow : EditorWindow {
         if (roomName == "")
         {
             EditorUtility.DisplayDialog("Invalid name", "The name: \"" + roomName + "\" is not allowed!", "Back");
+            return false;
+        }
+        if(roomName.Length < 3)
+        {
+            EditorUtility.DisplayDialog("Invalid name", "The name: \"" + roomName + "\" is too short", "Back");
             return false;
         }
         if (AssetWithNameExists(roomName))

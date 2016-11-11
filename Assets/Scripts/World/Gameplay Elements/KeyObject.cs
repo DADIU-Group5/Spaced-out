@@ -6,7 +6,7 @@ public class KeyObject : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        gameOverMenu = GameObject.Find("GameOverCanvas").GetComponent<GameOverMenu>();
+        //gameOverMenu = GameObject.Find("GameOverCanvas").GetComponent<GameOverMenu>();
 	}
 
     /// <summary>
@@ -19,6 +19,7 @@ public class KeyObject : MonoBehaviour {
             //StartCoroutine(gameOverMenu.Win());
             var evt = new ObserverEvent(EventName.PlayerWon);
             Subject.instance.Notify(gameObject, evt);
+            Destroy(this);
         }
     }
 }

@@ -8,4 +8,5 @@ public class PayloadConstants
     public const string LAUNCH_FORCE = "launchForce";
     public const string VELOCITY = "velocity";
     public const string DEATH_CAUSE = "deathCause";
+    public const string STATUS = "status";
 }

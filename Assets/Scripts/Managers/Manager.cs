@@ -6,6 +6,6 @@ public class Manager : MonoBehaviour {
 
 	void Start () {
         DontDestroyOnLoad(gameObject);
-        SceneManager.LoadScene(sceneToLoad);
+       // SceneManager.LoadScene(sceneToLoad);
 	}
 }

@@ -65,7 +65,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}"/>
-							<Value>100</Value>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_RPM" ID="{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"/>
@@ -108,7 +108,117 @@
 							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>
-					<CurrentStateList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="on" ID="{47F04DF9-4A7D-4198-A709-3A5E13D6213A}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="sfx" ID="{F075DF8B-9A32-42F7-AB20-258CF9B427F1}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="davePutOutFire" ID="{3EE34473-9F4C-4248-AD8A-8C9EF4F9BB34}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="electricity" ID="{466A4257-1126-4A03-83BA-658F604BB60A}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="daveElectrocute" ID="{AB4E9910-A4DB-4620-B4A4-796776254E1A}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="explosive" ID="{CC16C51D-1180-4AA8-8570-A72721A17064}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="gas" ID="{FDC8FA31-9275-49E4-9AF3-A839267C5D4F}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="daveFireWoosh" ID="{39F43CD9-56D4-4625-8E4E-FB4D67D10999}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="daveCatchFire" ID="{DC2F1D92-7AD7-4678-A36B-379A498B5948}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="daveElectrocute" ID="{AB4E9910-A4DB-4620-B4A4-796776254E1A}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="gameStart" ID="{E2FC7F24-0D18-4BF5-953E-A20502CCB476}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="doors" ID="{BF4E15A6-DBD6-4FBB-8221-C7E51BEAF67F}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Turbulence" ID="{EDA87B19-73AA-40A0-9F19-2073606DB710}"/>
+							<Value>6</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Month" ID="{09E2B445-C4A3-447F-B3CA-818A1D925EF7}"/>
+							<Value>6</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_RPM" ID="{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Fury" ID="{A2AE79DC-CA3A-46BA-9652-9986C322A87B}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Size" ID="{1329EBEF-A193-472E-A38C-64668B494879}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Storm" ID="{E93F8CDB-06D1-4737-ACAF-7CD44BBED783}"/>
+							<Value>75</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Presence" ID="{E3B7811A-7B2F-490F-B44F-5FE51B468041}"/>
+							<Value>95</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}"/>
+							<Value>28</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_TimeOfDay" ID="{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}"/>
+							<Value>6</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="masterHiPass" ID="{6BE69766-05F5-4CC4-BD22-B4CD8F23794C}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Freefall" ID="{2F2DFE37-4F9E-4D94-83D8-53CCA39781AD}"/>
+							<Value>75</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Fear" ID="{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="masterLoPass" ID="{39C7C7C7-839A-4FE4-AACC-F993D76A1806}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="on" ID="{47F04DF9-4A7D-4198-A709-3A5E13D6213A}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
 					</CurrentSwitchList>

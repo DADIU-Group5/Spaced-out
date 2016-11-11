@@ -88,22 +88,19 @@ public class PlayerBehaviour : MonoBehaviour, Observer
                 break;
             case EventName.Crushed:
                 Kill(evt.eventName);
-                //Kill(EventName.Crushed);
                 break;
             case EventName.Electrocuted:
                 Kill(evt.eventName);
-                //Kill(EventName.Electrocuted);
                 break;
             case EventName.PlayerExploded:
                 Kill(evt.eventName);
-                //Kill(EventName.PlayerExploded);
                 break;
             case EventName.FuelEmpty:
                 Kill(evt.eventName);
-                //Kill(EventName.FuelEmpty);
                 break;
             case EventName.PlayerDead:
                 gameIsOver = true;
+                PlayerPrefs.SetInt("playerDiedThisLevel", 1);
                 if (onFire)
                 {
                     var statusEvent = new ObserverEvent(EventName.Extinguish);

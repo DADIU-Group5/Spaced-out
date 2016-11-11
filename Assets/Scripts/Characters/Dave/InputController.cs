@@ -137,7 +137,8 @@ public class InputController : MonoBehaviour, Observer
     {
         Ray ray = cam.ScreenPointToRay(ScreenCenter());
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+        int layerMask = ~(LayerMask.NameToLayer("Golfball") | LayerMask.NameToLayer("Ragdoll"));
+        if (Physics.Raycast(ray, out hit, layerMask))
         {
             return hit.point - player.transform.position;
         }

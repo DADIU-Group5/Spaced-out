@@ -7,16 +7,25 @@ public class SoundManager : MonoBehaviour, Observer
     uint bankID;
 
     [Range(0, 100)]
-    public float CurrentVolume = 75;
+    public float masterVolume = 75;
 
-    // TODO: remove and put into some sort of game manager
-    private bool firstLaunch = true;
+    [Range(0, 100)]
+    public float musicVolume = 75;
+
+    [Range(0, 100)]
+    public float effectsVolume = 75;
+
+    public bool mute = false;
 
     // Use this for initialization
     void Start()
     {
         AkSoundEngine.LoadBank("soundbank_alpha", AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
         AkSoundEngine.SetSwitch("galVersion", "v1", gameObject);
+        
+        SetMasterVolume(masterVolume);
+        SetMusicVolume(musicVolume);
+        SetEffectsVolume(effectsVolume);
     }
 
     private void Awake()
@@ -152,5 +161,26 @@ public class SoundManager : MonoBehaviour, Observer
     public void SetMasterVolume(float volume)
     {
         AkSoundEngine.SetRTPCValue("MasterVolume", volume);
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        AkSoundEngine.SetRTPCValue("MusicVolume", volume);
+    }
+
+    public void SetEffectsVolume(float volume)
+    {
+        AkSoundEngine.SetRTPCValue("EffectsVolume", volume);
+    }
+
+    // maybe this is plain stupid
+    public void ToggleMute()
+    {
+        mute = !mute;
+
+        if(!mute)
+            Subject.instance.AddObserver(this);
+        else
+            Subject.instance.RemoveObserver(this);
     }
 }

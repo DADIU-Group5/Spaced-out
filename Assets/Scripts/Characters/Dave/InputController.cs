@@ -78,7 +78,7 @@ public class InputController : MonoBehaviour, Observer
             {
                 var evt = new ObserverEvent(EventName.PlayerLaunch);
                 evt.payload.Add(PayloadConstants.LAUNCH_FORCE, launchForce);
-                //evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, GetLaunchDirection());
+                evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, GetLaunchDirection());
                 Subject.instance.Notify(gameObject, evt);
             }
             launchMode = false;

@@ -164,9 +164,9 @@ public class RagdollHelper : MonoBehaviour
         }
 
         //Remember some key positions
-        ragdolledFeetPosition = 0.5f * (GetBonePosition(HumanBodyBones.LeftToes) + GetBonePosition(HumanBodyBones.RightToes));
-        ragdolledHeadPosition = GetBonePosition(HumanBodyBones.Head);
-        ragdolledHipPosition = GetBonePosition(HumanBodyBones.Hips);
+        //ragdolledFeetPosition = 0.5f * (GetBonePosition(HumanBodyBones.LeftToes) + GetBonePosition(HumanBodyBones.RightToes));
+        //ragdolledHeadPosition = GetBonePosition(HumanBodyBones.Head);
+        //ragdolledHipPosition = GetBonePosition(HumanBodyBones.Hips);
 
         //Initiate the get up animation
         animator.SetBool("Dance", true);
@@ -177,7 +177,6 @@ public class RagdollHelper : MonoBehaviour
     private void BlendToAnimation(float t)
     {
         t = Mathf.Clamp01(t);
-
 
     }
 
@@ -200,7 +199,4 @@ public class RagdollHelper : MonoBehaviour
     private Vector3 GetBonePosition(HumanBodyBones bone) {
         return animator.GetBoneTransform(bone).position;
     }
-
-    
-
 }

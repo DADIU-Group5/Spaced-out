@@ -130,7 +130,16 @@ public class InputController : MonoBehaviour, Observer
     // Calculate the direction from the character position and the crosshair.
     private Vector3 GetLaunchDirection()
     {
-        return playerPitchTransform.forward;
+        Ray ray = cam.ScreenPointToRay(ScreenCenter());
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            return hit.point - player.transform.position;
+        }
+        else
+        {
+            return playerPitchTransform.forward;
+        }
     }
 
     // Resets the rotation.

@@ -9,6 +9,8 @@ public class WinMenu : MonoBehaviour, Observer
     private bool playerIsDead = false;
     private bool playerWon = false;
 
+    public Button nextLevelBtn;
+
     [HideInInspector]
     public int level = 1;
 
@@ -34,7 +36,7 @@ public class WinMenu : MonoBehaviour, Observer
                 StartCoroutine(Win());
                 break;
             case EventName.PlayerDead:
-                playerIsDead = true;
+                //playerIsDead = true;
                 break;
             case EventName.PlayerSpawned:
                 playerIsDead = false;
@@ -49,6 +51,14 @@ public class WinMenu : MonoBehaviour, Observer
     {
         Subject.instance.AddObserver(this);
         level = PlayerPrefs.GetInt("CurrentLevel");
+
+        if(level == 5)
+        {
+            // TODO: make invisible
+            nextLevelBtn.enabled = false;
+            Debug.Log("last level reached, need to do something about it");
+            // transform the button
+        }
     }
 
     /// <summary>
@@ -68,6 +78,24 @@ public class WinMenu : MonoBehaviour, Observer
     public void LoadMainMenu(int levelIndex)
     {
         SceneManager.LoadScene(levelIndex);
+    }
+
+    /// <summary>
+    /// Load Next Level
+    /// </summary>
+    public void LoadNextLevel()
+    {
+        level++;
+        if (level < 5)
+        {
+            PlayerPrefs.SetInt("CurrentLevel", level);
+
+            SceneManager.LoadScene("LevelGenerator");
+        }
+        else
+        {
+            Debug.Log("Loading main menu");
+        }
     }
 
     void SetBadges()
@@ -104,6 +132,8 @@ public class WinMenu : MonoBehaviour, Observer
             playerWon = true;
             SetBadges();
 
+            //PlayerPrefs.SetString("FinishTime", DateTime.Now.ToBinary().ToString());
+            //PlayerPrefs.SetInt("FinishedGame", 1);
         }
         yield return null;
     }

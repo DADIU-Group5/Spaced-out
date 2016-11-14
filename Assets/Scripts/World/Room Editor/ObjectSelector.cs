@@ -107,6 +107,10 @@ public class ObjectSelector : MonoBehaviour {
             showing = Random.Range(0, canBe.Count);
             ReplaceModel(canBe[showing]);
         }
+        if(GOshowing == null)
+        {
+            return;
+        }
         if(GOshowing.GetComponent<HazardState>() != null)
         {
             r.AddHazard(GOshowing.GetComponent<HazardState>());
@@ -121,6 +125,13 @@ public class ObjectSelector : MonoBehaviour {
     //Replaces the 'dummy' object with a gameplay object.
     void ReplaceModel(Object obj)
     {
+
+        if(obj == null)
+        {
+            Debug.Log(lockObject);
+            Debug.Log(this.name+"error");
+            return;
+        }
         GOshowing = Instantiate((GameObject)obj, transform.position, Quaternion.identity, transform.parent) as GameObject;
         if (gameObject.transform.localScale != Vector3.one)
         {

@@ -133,12 +133,13 @@ public class InputController : MonoBehaviour, Observer
     }
 
     // Calculate the direction from the character position and the crosshair.
-    private Vector3 GetLaunchDirection()
+    public Vector3 GetLaunchDirection()
     {
         Ray ray = cam.ScreenPointToRay(ScreenCenter());
         RaycastHit hit;
         int layerMask = ~(LayerMask.NameToLayer("Golfball") | LayerMask.NameToLayer("Ragdoll"));
-        if (Physics.Raycast(ray, out hit, layerMask))
+        //if (Physics.Raycast(ray, out hit, layerMask))
+        if (Physics.Raycast(ray, out hit))
         {
             return hit.point - player.transform.position;
         }

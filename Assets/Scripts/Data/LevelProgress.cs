@@ -18,6 +18,12 @@ public class LevelProgress : Singleton<LevelProgress>
         levelsComplete = 0;
     }
 
+    public void HardResetLevelProgress()
+    {
+        tutorialComplete = false;
+        levelsComplete = 0;
+    }
+
     public void UnlockNewLevel(int levelCompleted)
     {
         levelsComplete = levelCompleted;

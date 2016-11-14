@@ -59,7 +59,15 @@ public class LevelGenerator : MonoBehaviour {
 
     void SetupSeeds()
     {
-        Debug.Log("Gets seed from level: " + PlayerPrefs.GetString("CurrentLevel"));
+        if (PlayerPrefs.GetInt("extSeed" + PlayerPrefs.GetString("CurrentLevel")) == 0)
+        {
+            Debug.Log("hrere");
+            PlayerPrefs.SetInt("extSeed" + PlayerPrefs.GetString("CurrentLevel"), Random.Range(1, 10000));
+        }
+        if (PlayerPrefs.GetInt("intSeed") == 0)
+        {
+            PlayerPrefs.SetInt("intSeed", Random.Range(1, 10000));
+        }
         exteriorSeed = PlayerPrefs.GetInt("extSeed" + PlayerPrefs.GetString("CurrentLevel"));
         interiorSeed = PlayerPrefs.GetInt("intSeed");
         Debug.Log("extSeed: " + exteriorSeed);

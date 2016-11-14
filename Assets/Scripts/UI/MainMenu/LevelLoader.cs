@@ -43,7 +43,7 @@ public class LevelLoader : MonoBehaviour {
         }
         else
         {
-            PlayerPrefs.SetString("CurrentLevel", level.ToString());
+            PlayerPrefs.SetInt("CurrentLevel", level);
             if (overrideSeed)
             {
                 OverrideSeeds(extSeed, intSeed, level.ToString());
@@ -113,8 +113,11 @@ public class LevelLoader : MonoBehaviour {
 
     public void GenerateNewLevel()
     {
+        PlayerPrefs.SetInt("Medals", PlayerPrefs.GetInt("Medals") - 15);
+
         for (int i = 1; i <= amountOfLevels; i++)
         {
+            print("Key is: extSeed" + i.ToString());
             PlayerPrefs.SetInt("extSeed" + i.ToString(), 0);
             PlayerPrefs.SetInt("level" + i + "Achievement0", 0);
             PlayerPrefs.SetInt("level" + i + "Achievement1", 0);

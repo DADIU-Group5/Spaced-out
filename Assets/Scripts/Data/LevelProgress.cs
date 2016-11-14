@@ -1,35 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
-public class LevelProgress : MonoBehaviour
+public class LevelProgress : Singleton<LevelProgress>
 {
     public bool tutorialComplete = false;
     public int levelsComplete = 0;
-    public Button[] levels;
+    //public Button[] levelButtons;
 
 	void Start ()
     {
-	
+        ResetLevelProgress();
 	}
 
     public void ResetLevelProgress()
     {
-        if (tutorialComplete = false)
-        {
-            //disable all levels
-        }
-        else
-        {
-            //disable all but level 1
-        }
-
+        levelsComplete = 0;
     }
 
     public void UnlockNewLevel(int levelCompleted)
     {
-        //bla
+        levelsComplete = levelCompleted;
     }
 
     public void TutorialComplete()

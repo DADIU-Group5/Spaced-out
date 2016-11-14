@@ -7,7 +7,10 @@ State	ID	Name	State Group			Notes
 	1651971902	on	power			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	640585335	effectsVolume			\Default Work Unit\effectsVolume	
+	2346531308	musicVolume			\Default Work Unit\musicVolume	
 	2371628509	jetpackChargeLevel			\Default Work Unit\jetpackChargeLevel	
+	2918011349	masterVolume			\Default Work Unit\masterVolume	
 	3097485287	masterLoPass			\Default Work Unit\masterLoPass	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes

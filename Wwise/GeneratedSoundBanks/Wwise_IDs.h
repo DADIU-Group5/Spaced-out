@@ -35,6 +35,9 @@ namespace AK
         static const AkUniqueID GALRANDOMNARATIVE = 2136770720U;
         static const AkUniqueID GAMESTART = 4058101365U;
         static const AkUniqueID GAS = 579662040U;
+        static const AkUniqueID MENUCLICKBACKWARDS = 4294846034U;
+        static const AkUniqueID MENUCLICKFORWARDS = 1075305830U;
+        static const AkUniqueID MENUSCROLL = 274288443U;
         static const AkUniqueID MUSICPLAY = 1205645828U;
     } // namespace EVENTS
 
@@ -71,9 +74,12 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID EFFECTSVOLUME = 640585335U;
         static const AkUniqueID JETPACKCHARGELEVEL = 2371628509U;
         static const AkUniqueID MASTERHIPASS = 3129080009U;
         static const AkUniqueID MASTERLOPASS = 3097485287U;
+        static const AkUniqueID MASTERVOLUME = 2918011349U;
+        static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
         static const AkUniqueID SS_AIR_FURY = 1029930033U;

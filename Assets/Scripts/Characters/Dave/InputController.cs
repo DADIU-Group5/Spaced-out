@@ -181,6 +181,7 @@ public class InputController : MonoBehaviour, Observer
                 playerPitchTransform = player.pitchTransform;
                 fuel = player.fuel;
                 break;
+            case EventName.PlayerWon:
             case EventName.PlayerDead:
                 inputDisabled = true;
                 break;

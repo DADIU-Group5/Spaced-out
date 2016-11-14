@@ -36,7 +36,7 @@ public class WinMenu : MonoBehaviour, Observer
                 StartCoroutine(Win());
                 break;
             case EventName.PlayerDead:
-                //playerIsDead = true;
+                playerIsDead = true;
                 break;
             case EventName.PlayerSpawned:
                 playerIsDead = false;

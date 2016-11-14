@@ -81,7 +81,7 @@ public class MenuSettings : MonoBehaviour {
 
     private void UpdateButtonText(Language lan)
     {
-        resetProgBtnTxt.text = Translator.instance.Get("resetProg");
+        //resetProgBtnTxt.text = Translator.instance.Get("resetProg");
         disableNotifyBtnTxt.text = Translator.instance.Get("disableNotify");
         creditsBtnTxt.text = Translator.instance.Get("credits");
         englishBtnTxt.text = Translator.instance.Get("english");

@@ -2,13 +2,13 @@
 
 public class InputController : MonoBehaviour, Observer
 {
-    private bool invertCameraControls = false;
-    private bool launchMode = false;
-    private bool inputDisabled = false;
+    private bool invertCameraControls = false,
+        launchMode = false,
+        inputDisabled = false;
     private Vector2 oldPoint;
 
-    public float cameraRotateSpeed = 4000f;
-    public float launchBuffer = 100f;
+    public float cameraRotateSpeed = 4000f,
+        launchBuffer = 100f;
     public Camera cam;
     public BehindCamera behindCamera;
     public PlayerController player;
@@ -16,17 +16,12 @@ public class InputController : MonoBehaviour, Observer
 
     public Collider hitboxCollider;
     
-    public Transform playerTransform;
-    public Transform playerPitchTransform;
-
-    private void Start()
-    {
-
-    }
+    public Transform playerTransform,
+        playerPitchTransform;
 
     private void Awake()
     {
-
+        Subject.instance.AddObserver(this);
     }
 
     private void Update()
@@ -43,10 +38,11 @@ public class InputController : MonoBehaviour, Observer
             return;
         }
 
-        // See if player was tapped. If he was, set launchMode to true, otherwise to false.
-        if (Input.GetMouseButtonDown(0))
+        // Sets launchmode if two fingers are registered.
+        if (Input.GetMouseButtonDown(1))
         {
-            launchMode = DetectPlayerTap();
+            //launchMode = DetectPlayerTap();
+            launchMode = true;
         }
 
         // Check if we are NOT in launchmode
@@ -60,6 +56,7 @@ public class InputController : MonoBehaviour, Observer
         }
     }
 
+    // Interprest input as launch mode.
     private void HandleLaunchMode()
     {
         // Save starting position of tap
@@ -79,17 +76,21 @@ public class InputController : MonoBehaviour, Observer
         }
 
         // Launch 
+        float launchForce = GetLaunchForce();
         if (Input.GetMouseButtonUp(0))
         {
-            var evt = new ObserverEvent(EventName.PlayerLaunch);
-
-            evt.payload.Add(PayloadConstants.LAUNCH_SPEED, GetLaunchForce());
-            Subject.instance.Notify(gameObject, evt);
-
+            if (launchForce > 0)
+            {
+                var evt = new ObserverEvent(EventName.PlayerLaunch);
+                evt.payload.Add(PayloadConstants.LAUNCH_FORCE, launchForce);
+                evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, GetLaunchDirection());
+                Subject.instance.Notify(gameObject, evt);
+            }
             launchMode = false;
         }
     }
 
+    // Interprets input as camera mode.
     private void HandleCameraMode()
     {
         // Save starting position of tap
@@ -122,7 +123,7 @@ public class InputController : MonoBehaviour, Observer
         return hitboxCollider.Raycast(ray, out hit, 1000f);
     }
 
-    // Calculate force from old mouse position and current mouse position
+    // Calculate force from old mouse position and current mouse position.
     private float GetLaunchForce()
     {
         float difference = oldPoint.y - Input.mousePosition.y;
@@ -131,17 +132,36 @@ public class InputController : MonoBehaviour, Observer
         return (difference / maxDifference).Clamp(0f, 1f);
     }
 
+    // Calculate the direction from the character position and the crosshair.
+    private Vector3 GetLaunchDirection()
+    {
+        Ray ray = cam.ScreenPointToRay(ScreenCenter());
+        RaycastHit hit;
+        int layerMask = ~(LayerMask.NameToLayer("Golfball") | LayerMask.NameToLayer("Ragdoll"));
+        if (Physics.Raycast(ray, out hit, layerMask))
+        {
+            return hit.point - player.transform.position;
+        }
+        else
+        {
+            return playerPitchTransform.forward;
+        }
+    }
+
+    // Resets the rotation.
     private void ResetRotation()
     {
         playerTransform.rotation = Quaternion.identity;
         playerPitchTransform.rotation = Quaternion.identity;
     }
 
+    // Returns the pixel center of the camera.
     private Vector2 ScreenCenter()
     {
         return new Vector2(cam.pixelWidth / 2f, cam.pixelHeight / 2f);
     }
 
+    // Rotates the assigned behindCamera in the direction of the offset.
     private void DirectedRotation(Vector2 offset)
     {
         float xScale = behindCamera.pitch.transform.up.y;
@@ -153,6 +173,15 @@ public class InputController : MonoBehaviour, Observer
     {
         switch (evt.eventName)
         {
+            case EventName.PlayerSpawned:
+                inputDisabled = false;
+                GameObject go = evt.payload[PayloadConstants.PLAYER] as GameObject;
+                player = go.GetComponent<PlayerController>();
+                playerTransform = player.transform;
+                playerPitchTransform = player.pitchTransform;
+                fuel = player.fuel;
+                break;
+            case EventName.PlayerWon:
             case EventName.PlayerDead:
                 inputDisabled = true;
                 break;

@@ -3,13 +3,13 @@ using System.Collections;
 
 public class RoomCreator : MonoBehaviour
 {
-
     //Prefabs, needs to get these from a database.
     public GameObject baseRoomPrefab;
     public GameObject environmentalObject;
     public GameObject floatingObject;
     public GameObject staticObject;
     public GameObject shapingObject;
+    public GameObject pickupObject;
     public GameObject DoorObject;
 
     Room currentRoom;
@@ -72,6 +72,13 @@ public class RoomCreator : MonoBehaviour
     {
         GameObject temp = Instantiate(shapingObject) as GameObject;
         currentRoom.AddShapingObject(temp);
+        return temp;
+    }
+
+    public GameObject AddNewPickupObject()
+    {
+        GameObject temp = Instantiate(pickupObject) as GameObject;
+        currentRoom.AddPickup(temp);
         return temp;
     }
 

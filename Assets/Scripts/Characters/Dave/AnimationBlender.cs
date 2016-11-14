@@ -1,16 +1,57 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-// a class that will hold useful information for each body part
-public class BodyPart
-{
-    public Transform transform;
-    public Vector3 storedPosition;
-    public Quaternion storedRotation;
-}
+
 
 public class AnimationBlender : MonoBehaviour
 {
+    // a class that will hold useful information for each body part
+    public class BodyPart
+    {
+        public Transform playerTransform;
+        public Transform bodyPartTransform;
+        private Vector3 storedPos;
+        private Quaternion storedRot;
+
+
+        public BodyPart(Transform player, Transform bodyPart)
+        {
+            playerTransform = player;
+            bodyPartTransform = bodyPart;
+        }
+
+        // creates a snapshot of the position and rotation
+        public void Snapshot()
+        {
+            storedPos = GetRelativePosition();
+            storedRot = GetRelativeRotation();
+        }
+
+        // returns the position relative to player
+        private Vector3 GetRelativePosition()
+        {
+            return bodyPartTransform.position - playerTransform.position;
+        }
+
+        // returns the rotation in euler angles relative to player
+        private Quaternion GetRelativeRotation()
+        {
+            return bodyPartTransform.rotation * Quaternion.Inverse(playerTransform.rotation);
+        }
+
+        // Lerps the position relative to the player
+        public Vector3 LerpPosition(float t)
+        {
+            return Vector3.Lerp(storedPos, GetRelativePosition(), t);
+        }
+
+        // Lerps the rotation relative to the player
+        public Quaternion LerpRotation(float t)
+        {
+            return Quaternion.Lerp(storedRot, GetRelativeRotation(), t);
+        }
+    }
+
     enum RagdollState
     {
         animated,    //Mecanim is fully in control
@@ -26,23 +67,20 @@ public class AnimationBlender : MonoBehaviour
     private RagdollState state = RagdollState.animated;
     private float blendStartTime = -1;
     private List<BodyPart> bodyParts = new List<BodyPart>();
-    private Animator animator;
+    public Animator animator;
 
     // Initialization, first frame of game
     void Start()
     {
         SetKinematic(true);
 
+        
         //For each of the transforms, create a BodyPart instance and store the transform 
         foreach (Transform t in hips.GetComponentsInChildren<Transform>())
         {
-            BodyPart bodyPart = new BodyPart();
-            bodyPart.transform = t;
-            bodyParts.Add(bodyPart);
+            //if (t != hips.transform)
+            bodyParts.Add(new BodyPart(transform, t));
         }
-
-        //Store the Animator component
-        animator = GetComponent<Animator>();
     }
 
     void LateUpdate()
@@ -60,6 +98,7 @@ public class AnimationBlender : MonoBehaviour
             {
                 state = RagdollState.animated;
                 animator.SetBool("Dance", false);
+                SetKinematic(true);
             }
             else
             {
@@ -79,7 +118,7 @@ public class AnimationBlender : MonoBehaviour
     // disables the ragdoll
     public void DisableRagdoll()
     {
-        SetKinematic(true);
+        //SetKinematic(true);
         blendStartTime = Time.time;
         animator.enabled = true;
         state = RagdollState.blendToAnim;
@@ -87,8 +126,7 @@ public class AnimationBlender : MonoBehaviour
         //Store the ragdolled position for blending
         foreach (BodyPart b in bodyParts)
         {
-            b.storedRotation = b.transform.rotation;
-            b.storedPosition = b.transform.position;
+            b.Snapshot();
         }
 
         //Initiate the get up animation
@@ -99,18 +137,14 @@ public class AnimationBlender : MonoBehaviour
     // t = 0 is full ragdoll, t = 1 is full animation
     private void BlendToAnimation(float t)
     {
-        // interpolate position and rotation of all bod parts
+        // interpolate position and rotation of all body parts
         foreach (BodyPart b in bodyParts)
         {
-            if (b.transform != transform)
-            {
-                // don't interpolate the position of the hip
-                if (b.transform == animator.GetBoneTransform(HumanBodyBones.Hips))
-                    b.transform.position = Vector3.Lerp(b.storedPosition, b.transform.position, t);
+            // don't interpolate hips position
+            if (b.bodyPartTransform != hips.transform)
+                b.bodyPartTransform.position = b.LerpPosition(t) + transform.position;
 
-                //rotation is interpolated for all body parts
-                b.transform.rotation = Quaternion.Slerp(b.storedRotation, b.transform.rotation, t);
-            }
+            b.bodyPartTransform.rotation = b.LerpRotation(t) * transform.rotation;
         }
     }
 

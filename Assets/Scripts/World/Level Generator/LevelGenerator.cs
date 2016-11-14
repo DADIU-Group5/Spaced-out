@@ -94,6 +94,7 @@ public class LevelGenerator : MonoBehaviour {
                 CheckpointManager.instance.SetSpawnDistance(playerDistanceFromDoor);
                 CheckpointManager.instance.SetNewCheckpoint(item.transform.position);
                 CheckpointManager.instance.SetNewCheckpointRotation(-item.transform.right);
+                CheckpointManager.instance.SetFuelCount(go.GetComponentInChildren<FuelController>().GetCurrentFuel());
                 var evt = new ObserverEvent(EventName.PlayerSpawned);
                 evt.payload.Add(PayloadConstants.PLAYER, go.GetComponentInChildren<PlayerController>().gameObject);
                 Subject.instance.Notify(gameObject, evt);

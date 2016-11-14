@@ -29,7 +29,11 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
         currentLevel = PlayerPrefs.GetInt("CurrentLevel");
 
         //This is how you set the number of collectibles:
-        SetMaxCollectiblesForLevel(currentLevel, 1);
+        //SetMaxCollectiblesForLevel(currentLevel, 1);
+
+        //Resets the collected collectibles, so you cannot get it over multiple playthroughs.
+        SetMaxCollectiblesForLevel(currentLevel, 0);
+        PlayerPrefs.SetInt("Level" + currentLevel + "CollectiblesCollected", 0);
     }
 
     /// <summary>
@@ -48,18 +52,24 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
         return PlayerPrefs.GetInt("MaxCollectiblesForLevel" + level);
     }
 
+    public void AddCollectibleToLevel()
+    {
+        PlayerPrefs.SetInt("MaxCollectiblesForLevel" + currentLevel, PlayerPrefs.GetInt("MaxCollectiblesForLevel" + currentLevel)+1);
+        Debug.Log("Currently there are: " + GetMaxCollectiblesForLevel(currentLevel)+" in this level.");
+    }
+
     /// <summary>
     /// You picked up a collectible.
     /// </summary>
-    public void AddCollectibles(int level)
+    public void AddCollectibles()
     {
-        int collected = GetCollectibles(level) + 1;
-        PlayerPrefs.SetInt("Level" + level + "CollectiblesCollected", collected);
+        int collected = GetCollectibles(currentLevel) + 1;
+        PlayerPrefs.SetInt("Level" + currentLevel + "CollectiblesCollected", collected);
 
         //Congratulations, you gained all of the achievements!
-        if (GetCollectibles(level) >= GetMaxCollectiblesForLevel(level))
+        if (GetCollectibles(currentLevel) >= GetMaxCollectiblesForLevel(currentLevel))
         {
-            AddAchievementToLevel(level, 3);
+            AddAchievementToLevel(currentLevel, 3);
         }
     }
 

@@ -1,19 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System;
 
-public class SoundManager : MonoBehaviour, Observer
+public class SoundManager : Singleton<SoundManager>, Observer
 {
     uint bankID;
 
+    // TODO: hide from editor 
     [Range(0, 100)]
-    public float masterVolume = 75;
+    public float masterVolume;
 
     [Range(0, 100)]
-    public float musicVolume = 75;
+    public float musicVolume;
 
     [Range(0, 100)]
-    public float effectsVolume = 75;
+    public float effectsVolume;
 
     public bool mute = false;
 
@@ -22,14 +22,17 @@ public class SoundManager : MonoBehaviour, Observer
     {
         AkSoundEngine.LoadBank("soundbank_alpha", AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
         AkSoundEngine.SetSwitch("galVersion", "v1", gameObject);
-        
-        SetMasterVolume(masterVolume);
-        SetMusicVolume(musicVolume);
-        SetEffectsVolume(effectsVolume);
+
+        var settings = SettingsManager.instance.settings;
+
+        SetMasterVolume(settings.masterVolume);
+        SetMusicVolume(settings.musicVolume);
+        SetEffectsVolume(settings.effectsVolume);
     }
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         Subject.instance.AddObserver(this);
     }
 
@@ -160,16 +163,19 @@ public class SoundManager : MonoBehaviour, Observer
 
     public void SetMasterVolume(float volume)
     {
-        AkSoundEngine.SetRTPCValue("MasterVolume", volume);
+        masterVolume = volume;
+        AkSoundEngine.SetRTPCValue("masterVolume", volume);
     }
 
     public void SetMusicVolume(float volume)
     {
-        AkSoundEngine.SetRTPCValue("MusicVolume", volume);
+        musicVolume = volume;
+        AkSoundEngine.SetRTPCValue("musicVolume", volume);
     }
 
     public void SetEffectsVolume(float volume)
     {
-        AkSoundEngine.SetRTPCValue("EffectsVolume", volume);
+        effectsVolume = volume;
+        AkSoundEngine.SetRTPCValue("effectsVolume", volume);
     }
 }

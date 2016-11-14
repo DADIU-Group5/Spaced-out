@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class ProgressManager : Singleton<ProgressManager> {
 
@@ -70,5 +71,25 @@ public class ProgressManager : Singleton<ProgressManager> {
 
         var levelProgress = progress.levels[level];
         return new bool[] { levelProgress.completed, levelProgress.allComics, levelProgress.noDeaths }; 
+    }
+
+    // add currency though purchase
+    public void BoughtCurrency(int amount)
+    {
+        progress.currency += amount;
+    }
+
+    // get current amount of currency
+    public int GetCurrency() {
+        return progress.currency;
+    }
+
+    // gets the number of minutes since last level generation
+    public float TimeUntilNextLevelGeneration()
+    {
+        // cooldown of level generation in minutes
+        float cooldown = 6 * 60; // 6 hours
+        float minsLeft = (float)(DateTime.Now - progress.levelGenerationTime).TotalMinutes - cooldown;
+        return minsLeft < 0f ? 0f : minsLeft;
     }
 }

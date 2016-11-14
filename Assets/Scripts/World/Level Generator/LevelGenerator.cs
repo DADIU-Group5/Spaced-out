@@ -30,9 +30,9 @@ public class LevelGenerator : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-        #if UNITY_EDITOR
-           // UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
-        #endif
+#if UNITY_EDITOR
+        // UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
+#endif
         GenerateLevel();
     }
 
@@ -59,12 +59,20 @@ public class LevelGenerator : MonoBehaviour {
 
     void SetupSeeds()
     {
-        Debug.Log("Gets seed from level: " + PlayerPrefs.GetString("CurrentLevel"));
-        exteriorSeed = PlayerPrefs.GetInt("extSeed" + PlayerPrefs.GetString("CurrentLevel"));
+        print("Key is: " + "extSeed" + PlayerPrefs.GetInt("CurrentLevel"));
+        if (PlayerPrefs.GetInt("extSeed" + PlayerPrefs.GetInt("CurrentLevel")) == 0)
+        {
+            PlayerPrefs.SetInt("extSeed" + PlayerPrefs.GetInt("CurrentLevel"), Random.Range(1, 10000));
+        }
+        if (PlayerPrefs.GetInt("intSeed") == 0)
+        {
+            PlayerPrefs.SetInt("intSeed", Random.Range(1, 10000));
+        }
+        exteriorSeed = PlayerPrefs.GetInt("extSeed" + PlayerPrefs.GetInt("CurrentLevel"));
         interiorSeed = PlayerPrefs.GetInt("intSeed");
         Debug.Log("extSeed: " + exteriorSeed);
         Debug.Log("intSeed: " + interiorSeed);
-        minRooms = PlayerPrefs.GetInt(PlayerPrefs.GetString("CurrentLevel") + "Length");
+        minRooms = PlayerPrefs.GetInt(PlayerPrefs.GetInt("CurrentLevel") + "Length");
         maxRooms = minRooms;
     }
 
@@ -94,6 +102,7 @@ public class LevelGenerator : MonoBehaviour {
                 CheckpointManager.instance.SetSpawnDistance(playerDistanceFromDoor);
                 CheckpointManager.instance.SetNewCheckpoint(item.transform.position);
                 CheckpointManager.instance.SetNewCheckpointRotation(-item.transform.right);
+                CheckpointManager.instance.SetFuelCount(go.GetComponentInChildren<FuelController>().GetCurrentFuel());
                 var evt = new ObserverEvent(EventName.PlayerSpawned);
                 evt.payload.Add(PayloadConstants.PLAYER, go.GetComponentInChildren<PlayerController>().gameObject);
                 Subject.instance.Notify(gameObject, evt);

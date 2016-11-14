@@ -9,8 +9,7 @@ public class WinMenu : MonoBehaviour, Observer
     private bool playerIsDead = false;
     private bool playerWon = false;
 
-    [HideInInspector]
-    public ScoreManager _scoreManager;
+    public Button nextLevelBtn;
 
     [HideInInspector]
     public int level = 1;
@@ -39,6 +38,9 @@ public class WinMenu : MonoBehaviour, Observer
             case EventName.PlayerDead:
                 playerIsDead = true;
                 break;
+            case EventName.PlayerSpawned:
+                playerIsDead = false;
+                break;
             default:
                 break;
         }
@@ -48,8 +50,15 @@ public class WinMenu : MonoBehaviour, Observer
     void Start()
     {
         Subject.instance.AddObserver(this);
-        _scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         level = PlayerPrefs.GetInt("CurrentLevel");
+
+        if(level == 5)
+        {
+            // TODO: make invisible
+            nextLevelBtn.enabled = false;
+            Debug.Log("last level reached, need to do something about it");
+            // transform the button
+        }
     }
 
     /// <summary>
@@ -59,7 +68,7 @@ public class WinMenu : MonoBehaviour, Observer
     {
         Scene scene = SceneManager.GetActiveScene();
         //player reset, so he hasn't died in this run yet.
-        _scoreManager.SetPlayerHasDiedThisLevel(level);
+        ScoreManager.instance.SetPlayerHasDiedThisLevel(level);
         SceneManager.LoadScene(scene.name);
     }
 
@@ -71,11 +80,29 @@ public class WinMenu : MonoBehaviour, Observer
         SceneManager.LoadScene(levelIndex);
     }
 
+    /// <summary>
+    /// Load Next Level
+    /// </summary>
+    public void LoadNextLevel()
+    {
+        level++;
+        if (level < 5)
+        {
+            PlayerPrefs.SetInt("CurrentLevel", level);
+
+            SceneManager.LoadScene("LevelGenerator");
+        }
+        else
+        {
+            Debug.Log("Loading main menu");
+        }
+    }
+
     void SetBadges()
     {
-        finished = (_scoreManager.GetAchievementFromLevel(level, 1) == 1) ? true : false; //ex: level2Achievement1
-        didntDie = (_scoreManager.GetAchievementFromLevel(level, 2) == 1) ? true : false; //ex: level2Achievement1
-        collectedAll = (_scoreManager.GetAchievementFromLevel(level, 3) == 1) ? true : false; //ex: level2Achievement1
+        finished = (ScoreManager.instance.GetAchievementFromLevel(level, 1) == 1) ? true : false; //ex: level2Achievement1
+        didntDie = (ScoreManager.instance.GetAchievementFromLevel(level, 2) == 1) ? true : false; //ex: level2Achievement1
+        collectedAll = (ScoreManager.instance.GetAchievementFromLevel(level, 3) == 1) ? true : false; //ex: level2Achievement1
 
         goodImages[0].SetActive(finished);
         badImages[0].SetActive(!finished);
@@ -105,6 +132,8 @@ public class WinMenu : MonoBehaviour, Observer
             playerWon = true;
             SetBadges();
 
+            //PlayerPrefs.SetString("FinishTime", DateTime.Now.ToBinary().ToString());
+            //PlayerPrefs.SetInt("FinishedGame", 1);
         }
         yield return null;
     }

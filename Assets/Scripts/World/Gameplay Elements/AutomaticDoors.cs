@@ -8,12 +8,13 @@ public class AutomaticDoors : MonoBehaviour {
     private Animator animator;
     private bool lastOnOff = true;
 
-    [HideInInspector]
-    public int doorsTouchingPlayer = 0;
+    // TODO: Old code for crushing player.
+    //[HideInInspector]
+    //public int doorsTouchingPlayer = 0;
 
-    private bool malfunctioning = false;
+    // private bool malfunctioning = false;
     private bool closed = true;
-    private bool crushingPlayer = false;
+    // private bool crushingPlayer = false;
 
     public void CloseOpenDoor()
     {
@@ -37,15 +38,17 @@ public class AutomaticDoors : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (doorsTouchingPlayer >= 2 && !crushingPlayer &&
-            this.animator.GetCurrentAnimatorStateInfo(0).IsName("DoorClose"))
-        {
-            crushingPlayer = true;
-            var evt = new ObserverEvent(EventName.Crushed);
-            Subject.instance.Notify(gameObject, evt);
+        // TODO: Old code for crushing player.
+        //
+        //if (doorsTouchingPlayer >= 2 && !crushingPlayer &&
+        //    this.animator.GetCurrentAnimatorStateInfo(0).IsName("DoorClose"))
+        //{
+        //    crushingPlayer = true;
+        //    var evt = new ObserverEvent(EventName.Crushed);
+        //    Subject.instance.Notify(gameObject, evt);
 
-            Debug.Log("Player has been crushed!");
-        }
+        //    Debug.Log("Player has been crushed!");
+        //}
 
         //this only opens/closes if the isOn state is changed.
         //if the door isOn == true, then malfunctioning is set to false.

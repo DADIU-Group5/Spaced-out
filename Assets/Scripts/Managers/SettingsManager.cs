@@ -12,11 +12,30 @@ public class SettingsManager : Singleton<SettingsManager> {
     public event LanguageChangedEventHandler onLanguageChanged;
     // settings 
     public GameSettings settings;
-    
-	public void SetVolume(float volume)
+
+    public void SetMasterVolume(float volume)
     {
-        settings.volume = volume;
-        AudioListener.volume = volume / 100f;
+        settings.masterVolume = volume;
+        SoundManager.instance.SetMasterVolume(volume);
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        settings.musicVolume = volume;
+        SoundManager.instance.SetMusicVolume(volume);
+    }
+
+    public void SetEffectsVolume(float volume)
+    {
+        settings.effectsVolume = volume;
+        SoundManager.instance.SetEffectsVolume(volume);
+    }
+
+    public void MuteSound(bool mute)
+    {
+        settings.mute = mute;
+
+        SoundManager.instance.MuteSound(mute);
     }
 
     public void SetLanguage(Language language)

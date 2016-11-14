@@ -20,6 +20,8 @@ public class Room : MonoBehaviour
     public List<GameObject> pickupObjects;
     public List<GameObject> doorObjects;
 
+    public List<HazardState> hazards;
+
     /// <summary>
     /// Adds a new enviromental object.
     /// </summary>
@@ -152,6 +154,19 @@ public class Room : MonoBehaviour
         return true;
     }
 
+    public void AddHazard(HazardState HS)
+    {
+        hazards.Add(HS);
+    }
+
+    public void SwitchWasTouched()
+    {
+        foreach (HazardState item in hazards)
+        {
+            item.EnabledOrDisableTrap();
+        }
+    }
+
     /// <summary>
     /// Randomizes all the interior objects in this room, that is not locked.
     /// </summary>
@@ -161,7 +176,7 @@ public class Room : MonoBehaviour
         {
             if (item.GetComponent<ObjectSelector>() != null)
             {
-                item.GetComponent<ObjectSelector>().Replace();
+                item.GetComponent<ObjectSelector>().Replace(this);
             }
             else
             {
@@ -172,7 +187,7 @@ public class Room : MonoBehaviour
         {
             if (item.GetComponent<ObjectSelector>() != null)
             {
-                item.GetComponent<ObjectSelector>().Replace();
+                item.GetComponent<ObjectSelector>().Replace(this);
             }
             else
             {
@@ -183,7 +198,7 @@ public class Room : MonoBehaviour
         {
             if (item.GetComponent<ObjectSelector>() != null)
             {
-                item.GetComponent<ObjectSelector>().Replace();
+                item.GetComponent<ObjectSelector>().Replace(this);
             }
             else
             {
@@ -194,7 +209,7 @@ public class Room : MonoBehaviour
         {
             if (item.GetComponent<ObjectSelector>() != null)
             {
-                item.GetComponent<ObjectSelector>().Replace();
+                item.GetComponent<ObjectSelector>().Replace(this);
             }
             else
             {
@@ -205,7 +220,7 @@ public class Room : MonoBehaviour
         {
             if (item.GetComponent<ObjectSelector>() != null)
             {
-                item.GetComponent<ObjectSelector>().Replace();
+                item.GetComponent<ObjectSelector>().Replace(this);
             }
             else
             {

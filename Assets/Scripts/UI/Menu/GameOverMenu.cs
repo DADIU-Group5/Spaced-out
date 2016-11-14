@@ -18,9 +18,6 @@ public class GameOverMenu : MonoBehaviour, Observer
     private float countingDown = 10;
     private int level = 1;
 
-    [HideInInspector]
-    public ScoreManager _scoreManager;
-
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
         switch (evt.eventName)
@@ -80,6 +77,16 @@ public class GameOverMenu : MonoBehaviour, Observer
         }
     }
 
+    public void RemoveGameOverScreen()
+    {
+        playerIsDead = false;
+        //turn on all the UI elements in the GameOverCanvas
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(false);
+        }
+    }
+
     /// <summary>
     /// Reset level
     /// </summary>
@@ -91,16 +98,15 @@ public class GameOverMenu : MonoBehaviour, Observer
         //if reset to level start:
         /* //player reset, so he hasn't died in this run yet.
         PlayerPrefs.SetInt("playerDiedThisLevel", 0);*/
-        _scoreManager.SetPlayerHasDiedThisLevel(level);
+
+        ScoreManager.instance.SetPlayerHasDiedThisLevel(level);
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
-        
     }
 
     void Start()
     {
         Subject.instance.AddObserver(this);
-        _scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         level = PlayerPrefs.GetInt("CurrentLevel");
     }
 
@@ -117,7 +123,7 @@ public class GameOverMenu : MonoBehaviour, Observer
         //if the countdown has reached zero, reset the level
         if (countingDown <= 0)
         {
-            ResetLevel();
+            RemoveGameOverScreen();
         }
 	}
 }

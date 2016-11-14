@@ -17,12 +17,19 @@ public class SwitchItem : MonoBehaviour {
     public bool oneTimeTrigger = false;
     private bool hasBeenTriggered = false;
 
+    Room inRoom;
+
     void Start()
     {
         foreach (GameObject hazard in assignedHazards)
         {
             hazard.GetComponent<HazardState>().hazardSwitch = this.gameObject;
         }
+    }
+
+    public void AssignRoom(Room r)
+    {
+        inRoom = r;
     }
 
     /// <summary>
@@ -57,12 +64,12 @@ public class SwitchItem : MonoBehaviour {
                 StartCoroutine(CountDown());
 
                 hasBeenTriggered = true;
-                Debug.Log("switch found player!");
-                foreach (GameObject hazard in assignedHazards)
+                /*foreach (GameObject hazard in assignedHazards)
                 {
                     Debug.Log("hazards being turned off! item: " + hazard.name);
                     hazard.GetComponent<HazardState>().EnabledOrDisableTrap();
-                }
+                }*/
+                inRoom.SwitchWasTouched();
             }
         }
     }

@@ -13,6 +13,7 @@ public class MenuSettings : MonoBehaviour {
     public Text disableNotifyBtnTxt;
     public Text creditsBtnTxt;
     public Text backBtnTxt;
+    public bool muteBtnState = false;
 
     void Start()
     {
@@ -39,6 +40,8 @@ public class MenuSettings : MonoBehaviour {
         soundManager.SetMasterVolume(settings.masterVolume);
         soundManager.SetMusicVolume(settings.musicVolume);
         soundManager.SetEffectsVolume(settings.effectsVolume);
+
+        SettingsManager.instance.MuteSound(settings.mute);
     }
 
     public void OnMasterSliderChanged(float value)
@@ -58,11 +61,8 @@ public class MenuSettings : MonoBehaviour {
 
     public void OnMuteClick()
     {
-        // TODO: kinda retarted, refactor
-        if(AudioListener.volume == 0)
-            SettingsManager.instance.SetMasterVolume(SettingsManager.instance.settings.masterVolume);
-        else
-            SettingsManager.instance.SetMasterVolume(0);
+        muteBtnState = !muteBtnState;
+        SettingsManager.instance.MuteSound(muteBtnState);
     }
 
     public void OnEnglishClick()

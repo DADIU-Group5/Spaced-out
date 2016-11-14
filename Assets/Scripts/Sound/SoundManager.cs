@@ -28,6 +28,8 @@ public class SoundManager : Singleton<SoundManager>, Observer
         SetMasterVolume(settings.masterVolume);
         SetMusicVolume(settings.musicVolume);
         SetEffectsVolume(settings.effectsVolume);
+
+        MuteSound(settings.mute);
     }
 
     protected override void Awake()
@@ -177,5 +179,15 @@ public class SoundManager : Singleton<SoundManager>, Observer
     {
         effectsVolume = volume;
         AkSoundEngine.SetRTPCValue("effectsVolume", volume);
+    }
+
+    public void MuteSound(bool mute)
+    {
+        this.mute = mute;
+
+        if (mute)
+            AkSoundEngine.SetRTPCValue("masterVolume", 0.0f);
+        else
+            AkSoundEngine.SetRTPCValue("masterVolume", masterVolume);
     }
 }

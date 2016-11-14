@@ -20,7 +20,8 @@ public class LevelLoader : MonoBehaviour {
 
     void Start()
     {
-        timeDifference = new TimeSpan(hoursFromWinToReset, 0, 0);
+        //timeDifference = new TimeSpan(hoursFromWinToReset, 0, 0);
+        timeDifference = new TimeSpan(0, hoursFromWinToReset, 0);
         PlayerPrefs.SetInt("1Length", levelLengths[0]);
         PlayerPrefs.SetInt("2Length", levelLengths[1]);
         PlayerPrefs.SetInt("3Length", levelLengths[2]);
@@ -37,12 +38,19 @@ public class LevelLoader : MonoBehaviour {
     /// <param name="level"></param>
     public void LoadLevel(int level)
     {
-        PlayerPrefs.SetString("CurrentLevel", level.ToString());
-        if (overrideSeed)
+        if (level == 0)
         {
-            OverrideSeeds(extSeed, intSeed, level.ToString());
+            SceneManager.LoadScene("Tutorial");
         }
-        SceneManager.LoadScene("LevelGenerator");
+        else
+        {
+            PlayerPrefs.SetString("CurrentLevel", level.ToString());
+            if (overrideSeed)
+            {
+                OverrideSeeds(extSeed, intSeed, level.ToString());
+            }
+            SceneManager.LoadScene("LevelGenerator");
+        }
     }
 
     /// <summary>

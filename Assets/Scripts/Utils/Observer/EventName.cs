@@ -7,7 +7,6 @@
     Pause,
     Unpause,
     QuitGame,
-    LevelCompleted,
     RestartLevel,
     PlayerFuelPickup,
     PlayerSpawned,

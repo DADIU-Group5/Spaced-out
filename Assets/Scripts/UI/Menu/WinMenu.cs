@@ -51,6 +51,7 @@ public class WinMenu : MonoBehaviour, Observer
 
         if(level == 5)
         {
+            // TODO: make invisible
             nextLevelBtn.enabled = false;
             Debug.Log("last level reached, need to do something about it");
             // transform the button
@@ -79,13 +80,14 @@ public class WinMenu : MonoBehaviour, Observer
     /// <summary>
     /// Load Next Level
     /// </summary>
-    public void LoadNextLevel(int levelIndex)
+    public void LoadNextLevel()
     {
-        levelIndex++;
-        if (levelIndex < 6)
+        level++;
+        if (level < 5)
         {
-            PlayerPrefs.SetInt("CurrentLevel", levelIndex);
-            SceneManager.LoadScene(levelIndex);
+            PlayerPrefs.SetInt("CurrentLevel", level);
+
+            SceneManager.LoadScene("LevelGenerator");
         }
         else
         {
@@ -127,6 +129,8 @@ public class WinMenu : MonoBehaviour, Observer
             playerWon = true;
             SetBadges();
 
+            //PlayerPrefs.SetString("FinishTime", DateTime.Now.ToBinary().ToString());
+            //PlayerPrefs.SetInt("FinishedGame", 1);
         }
         yield return null;
     }

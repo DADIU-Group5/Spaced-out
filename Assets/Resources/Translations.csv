@@ -1,13 +1,12 @@
-﻿key,english,danish,Description
+key,english,danish,Description
 danish,Danish,Dansk,
 english,English,Engelsk,
 start,Start,Start,
-levelSelect,Select Level,Vælg Level,
+levelSelect,Play,Spil,
 settings,Settings,Indstillinger,
 exit,Exit Game,Luk Spil,
 resetProg,Reset Progress,Nulstil forløb,
 disableNotify,Disable Notifications,Slå Notifikationer fra,
 credits,Credits,Rulletekster,
 back,Back,Tilbage,
-mute,Mute,Lyd fra,
-unmute,Unmute,Lyd til,
+shop,Shop,Butik,

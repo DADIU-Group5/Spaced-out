@@ -181,7 +181,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="effectsVolume" ID="{ED513413-85B0-45A9-B98F-EE61A42D635F}"/>
-							<Value>50</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Fury" ID="{A2AE79DC-CA3A-46BA-9652-9986C322A87B}"/>
@@ -213,7 +213,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="musicVolume" ID="{94967744-CEA3-4D37-893D-F4A043DFEB29}"/>
-							<Value>3.19148936170212</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Freefall" ID="{2F2DFE37-4F9E-4D94-83D8-53CCA39781AD}"/>

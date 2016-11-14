@@ -35,6 +35,9 @@ namespace AK
         static const AkUniqueID GALRANDOMNARATIVE = 2136770720U;
         static const AkUniqueID GAMESTART = 4058101365U;
         static const AkUniqueID GAS = 579662040U;
+        static const AkUniqueID MENUCLICKBACKWARDS = 4294846034U;
+        static const AkUniqueID MENUCLICKFORWARDS = 1075305830U;
+        static const AkUniqueID MENUSCROLL = 274288443U;
         static const AkUniqueID MUSICPLAY = 1205645828U;
     } // namespace EVENTS
 

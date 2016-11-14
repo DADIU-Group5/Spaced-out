@@ -765,6 +765,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="menuClickForwards" ID="{20E2F941-4CF7-4B08-8FAA-6F9A9D9E177E}">
+					<ChildrenList>
+						<Action Name="Play" ID="{B6FAD4A9-506D-430D-82AA-539CAF8883A6}" ShortID="1007046049" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{81E8A776-4E37-476F-82F2-8B902F8473E3}" Global="false">
+									<ObjectRef Name="menuclickforward" ID="{22780C8E-C3FE-4691-AC3D-8CE9E256035E}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="menuClickBackwards" ID="{9176F19D-0758-461F-B378-A836DF63A730}">
+					<ChildrenList>
+						<Action Name="Play" ID="{7C8CAFB9-52B2-4F25-89B9-A74A1DE9A8C8}" ShortID="335655497" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{B9CF223E-66C9-468C-96DD-A7459EAF1E64}" Global="false">
+									<ObjectRef Name="menuclickbackwards" ID="{9E0A4DA9-EAA0-44A6-B3F5-CC9701885B95}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="menuScroll" ID="{4D344409-048A-4DE4-A037-6283FB6086D9}">
+					<ChildrenList>
+						<Action Name="Play" ID="{B7E383CF-A8C0-4960-A985-F910A5176B9B}" ShortID="634654549" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{822591E2-A54D-44E4-A730-6CA51A9614FD}" Global="false">
+									<ObjectRef Name="scroll" ID="{5F6375F9-27C5-443C-AA31-781D8D334175}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

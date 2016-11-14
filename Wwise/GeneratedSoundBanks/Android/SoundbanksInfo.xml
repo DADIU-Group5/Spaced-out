@@ -78,6 +78,9 @@
 				<Event Id="2136770720" Name="galRandomNarative" ObjectPath="\Events\Default Work Unit\galRandomNarative"/>
 				<Event Id="4058101365" Name="gameStart" ObjectPath="\Events\Default Work Unit\gameStart"/>
 				<Event Id="579662040" Name="gas" ObjectPath="\Events\Default Work Unit\gas"/>
+				<Event Id="4294846034" Name="menuClickBackwards" ObjectPath="\Events\Default Work Unit\menuClickBackwards"/>
+				<Event Id="1075305830" Name="menuClickForwards" ObjectPath="\Events\Default Work Unit\menuClickForwards"/>
+				<Event Id="274288443" Name="menuScroll" ObjectPath="\Events\Default Work Unit\menuScroll"/>
 				<Event Id="1205645828" Name="musicPlay" ObjectPath="\Events\Default Work Unit\musicPlay"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
@@ -132,6 +135,10 @@
 				<File Id="211652015" Language="SFX">
 					<ShortName>dave, you are on fire v2.wav</ShortName>
 					<Path>SFX/dave, you are on fire v2_645155D0.wem</Path>
+				</File>
+				<File Id="213148062" Language="SFX">
+					<ShortName>menuScrollclick4.wav</ShortName>
+					<Path>SFX/menuScrollclick4_645155D0.wem</Path>
 				</File>
 				<File Id="261205730" Language="SFX">
 					<ShortName>electrocute5.wav</ShortName>
@@ -200,6 +207,10 @@
 					<ShortName>electrocute6.wav</ShortName>
 					<Path>SFX/electrocute6_54D27A1C.wem</Path>
 				</File>
+				<File Id="468680021" Language="SFX">
+					<ShortName>menuScrollclick2.wav</ShortName>
+					<Path>SFX/menuScrollclick2_645155D0.wem</Path>
+				</File>
 				<File Id="473138648" Language="SFX">
 					<ShortName>fireloop.wav</ShortName>
 					<Path>SFX/fireloop_824B34CA.wem</Path>
@@ -254,10 +265,6 @@
 					<ShortName>door shut10_1.wav</ShortName>
 					<Path>SFX/door shut10_1_C23FFF8B.wem</Path>
 				</File>
-				<File Id="625149348" Language="SFX">
-					<ShortName>kick.wav</ShortName>
-					<Path>SFX/kick_5DC25BB8.wem</Path>
-				</File>
 				<File Id="635038486" Language="SFX">
 					<ShortName>dave, you are an idiot.wav</ShortName>
 					<Path>SFX/dave, you are an idiot_645155D0.wem</Path>
@@ -285,6 +292,10 @@
 				<File Id="732145868" Language="SFX">
 					<ShortName>i love fireworks v3.wav</ShortName>
 					<Path>SFX/i love fireworks v3_645155D0.wem</Path>
+				</File>
+				<File Id="786633454" Language="SFX">
+					<ShortName>menuclickbackwards.wav</ShortName>
+					<Path>SFX/menuclickbackwards_645155D0.wem</Path>
 				</File>
 				<File Id="793887671" Language="SFX">
 					<ShortName>dave, you are on fire.wav</ShortName>
@@ -327,6 +338,10 @@
 					<ShortName>i love fireworks2 v3.wav</ShortName>
 					<Path>SFX/i love fireworks2 v3_645155D0.wem</Path>
 				</File>
+				<File Id="920814763" Language="SFX">
+					<ShortName>menuclickforward.wav</ShortName>
+					<Path>SFX/menuclickforward_645155D0.wem</Path>
+				</File>
 				<File Id="942376865" Language="SFX">
 					<ShortName>door shut7_1.wav</ShortName>
 					<Path>SFX/door shut7_1_8AF2D816.wem</Path>
@@ -339,6 +354,10 @@
 					<ShortName>wow, that was shocking.wav</ShortName>
 					<Path>SFX/wow, that was shocking_645155D0.wem</Path>
 				</File>
+				<File Id="997255121" Language="SFX">
+					<ShortName>menuScrollclick3.wav</ShortName>
+					<Path>SFX/menuScrollclick3_645155D0.wem</Path>
+				</File>
 				<File Id="1008444769" Language="SFX">
 					<ShortName>catchfire.wav</ShortName>
 					<Path>SFX/catchfire_645155D0.wem</Path>
@@ -350,6 +369,10 @@
 				<File Id="1034490362" Language="SFX">
 					<ShortName>i love fireworks2.wav</ShortName>
 					<Path>SFX/i love fireworks2_645155D0.wem</Path>
+				</File>
+				<File Id="1041668143" Language="SFX">
+					<ShortName>menuScrollclick.wav</ShortName>
+					<Path>SFX/menuScrollclick_645155D0.wem</Path>
 				</File>
 				<File Id="1054817587" Language="SFX">
 					<ShortName>wow that was shocking.wav</ShortName>

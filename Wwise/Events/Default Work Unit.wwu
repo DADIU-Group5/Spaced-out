@@ -695,6 +695,13 @@
 								</Element>
 							</ElementList>
 						</Action>
+						<Action Name="Play" ID="{9A6198CF-DE79-4666-B9A3-58A0D880E88E}" ShortID="1001679290" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{AD3F3DC5-F9F3-493C-BE8F-2171D96EFCA8}" Global="false">
+									<ObjectRef Name="gasonfire" ID="{E906ED12-D905-459F-99C3-58BC1C76FDEC}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+								</Element>
+							</ElementList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="electricity" ID="{466A4257-1126-4A03-83BA-658F604BB60A}">

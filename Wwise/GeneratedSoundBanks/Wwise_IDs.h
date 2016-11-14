@@ -71,9 +71,12 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID EFFECTSVOLUME = 640585335U;
         static const AkUniqueID JETPACKCHARGELEVEL = 2371628509U;
         static const AkUniqueID MASTERHIPASS = 3129080009U;
         static const AkUniqueID MASTERLOPASS = 3097485287U;
+        static const AkUniqueID MASTERVOLUME = 2918011349U;
+        static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
         static const AkUniqueID SS_AIR_FURY = 1029930033U;

@@ -16,6 +16,17 @@ public class PlayerController : MonoBehaviour, Observer
     public Transform pitchTransform;
     public Rigidbody rbPlayer;
     public FuelController fuel;
+
+    // For ensuring that the player at some point starts slowing
+    [Tooltip("Threshold for when velocity is reduced faster.")]
+    public float slowDownThreshold = 2;
+
+    [Tooltip("How many percent the speed is reduced each update cycle.")]
+    [Range(0,100)]
+    public float slowDownFactor = 2f;
+
+    [Tooltip("Speed is reduced to 0 when it goes below this value.")]
+    public float slowDownCutOff = 0.2f;
     
     void Awake ()
     {
@@ -45,6 +56,18 @@ public class PlayerController : MonoBehaviour, Observer
         else
         {
             UpdateVelocityUI("Velocity: " + rbPlayer.velocity.magnitude + "\nReady To Launch");
+        }
+
+        // Slows the player down faster when his velocity is below slowDownThreshold
+        if (rbPlayer.velocity.magnitude < slowDownThreshold)
+        {
+            rbPlayer.velocity = rbPlayer.velocity * (100f - slowDownFactor) / 100f;
+        }
+
+        // If velocity is below the set threshold, set to zero.
+        if (rbPlayer.velocity.magnitude < slowDownCutOff)
+        {
+            rbPlayer.velocity = Vector3.zero;
         }
     }
 

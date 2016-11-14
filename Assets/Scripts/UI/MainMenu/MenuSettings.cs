@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 
 public class MenuSettings : MonoBehaviour {
@@ -14,11 +13,17 @@ public class MenuSettings : MonoBehaviour {
     public Text disableNotifyBtnTxt;
     public Text creditsBtnTxt;
     public Text backBtnTxt;
+    public bool muteBtnState = false;
 
     void Start()
     {
         SettingsManager.instance.onLanguageChanged += UpdateButtonText;
-        UpdateButtonText(Language.Danish);
+
+        muteBtnState = SettingsManager.instance.settings.mute;
+
+        UpdateButtonText(SettingsManager.instance.settings.language);
+
+        SetUpSound();
     }
 
     void OnDestroy()
@@ -26,13 +31,42 @@ public class MenuSettings : MonoBehaviour {
         SettingsManager.instance.onLanguageChanged -= UpdateButtonText;
     }
 
+    public void SetUpSound()
+    {
+        var settings = SettingsManager.instance.settings;
+        var soundManager = SoundManager.instance;
+
+        masterSlider.value = settings.masterVolume;
+        musicSlider.value = settings.musicVolume;
+        effectsSlider.value = settings.effectsVolume;
+
+        soundManager.SetMasterVolume(settings.masterVolume);
+        soundManager.SetMusicVolume(settings.musicVolume);
+        soundManager.SetEffectsVolume(settings.effectsVolume);
+
+        SettingsManager.instance.MuteSound(settings.mute);
+    }
+
+    public void OnMasterSliderChanged(float value)
+    {
+        SettingsManager.instance.SetMasterVolume(value);
+    }
+
+    public void OnMusicSliderChanged(float value)
+    {
+        SettingsManager.instance.SetMusicVolume(value);
+    }
+
+    public void OnEffectsSliderChanged(float value)
+    {
+        SettingsManager.instance.SetEffectsVolume(value);
+    }
+
     public void OnMuteClick()
     {
-        // TODO: kinda retarted, refactor
-        if(AudioListener.volume == 0)
-            SettingsManager.instance.SetVolume(SettingsManager.instance.settings.volume);
-        else
-            SettingsManager.instance.SetVolume(0);
+        muteBtnState = !muteBtnState;
+        muteBtnTxt.text = muteBtnState ? Translator.instance.Get("unmute") : Translator.instance.Get("mute");
+        SettingsManager.instance.MuteSound(muteBtnState);
     }
 
     public void OnEnglishClick()
@@ -45,7 +79,6 @@ public class MenuSettings : MonoBehaviour {
         SettingsManager.instance.SetLanguage(Language.Danish);
     }
 
-
     private void UpdateButtonText(Language lan)
     {
         resetProgBtnTxt.text = Translator.instance.Get("resetProg");
@@ -54,5 +87,6 @@ public class MenuSettings : MonoBehaviour {
         englishBtnTxt.text = Translator.instance.Get("english");
         danishBtnTxt.text = Translator.instance.Get("danish");
         backBtnTxt.text = Translator.instance.Get("back");
+        muteBtnTxt.text = muteBtnState ? Translator.instance.Get("unmute") : Translator.instance.Get("mute");
     }
 }

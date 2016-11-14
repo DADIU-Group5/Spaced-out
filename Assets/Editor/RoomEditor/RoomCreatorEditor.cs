@@ -28,8 +28,9 @@ public class RoomCreatorEditor : Editor
     {
         EditorGUILayout.LabelField("YOU NEED TO USE THE 'ROOM EDITOR WINDOW!",EditorStyles.helpBox);
         RC = (RoomCreator)target;
+        DrawDefaultInspector();
         return;
-        //DrawDefaultInspector();
+
         /*if (rooms == null || rooms.Count == 0)
         {
             LoadRooms();

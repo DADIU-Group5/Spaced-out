@@ -36,6 +36,9 @@ public class WinMenu : MonoBehaviour, Observer
             case EventName.PlayerDead:
                 playerIsDead = true;
                 break;
+            case EventName.PlayerSpawned:
+                playerIsDead = false;
+                break;
             default:
                 break;
         }

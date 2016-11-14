@@ -18,6 +18,9 @@ public class MenuSettings : MonoBehaviour {
     void Start()
     {
         SettingsManager.instance.onLanguageChanged += UpdateButtonText;
+
+        muteBtnState = SettingsManager.instance.settings.mute;
+
         UpdateButtonText(SettingsManager.instance.settings.language);
 
         SetUpSound();
@@ -62,6 +65,7 @@ public class MenuSettings : MonoBehaviour {
     public void OnMuteClick()
     {
         muteBtnState = !muteBtnState;
+        muteBtnTxt.text = muteBtnState ? Translator.instance.Get("unmute") : Translator.instance.Get("mute");
         SettingsManager.instance.MuteSound(muteBtnState);
     }
 
@@ -83,5 +87,6 @@ public class MenuSettings : MonoBehaviour {
         englishBtnTxt.text = Translator.instance.Get("english");
         danishBtnTxt.text = Translator.instance.Get("danish");
         backBtnTxt.text = Translator.instance.Get("back");
+        muteBtnTxt.text = muteBtnState ? Translator.instance.Get("unmute") : Translator.instance.Get("mute");
     }
 }

@@ -29,7 +29,9 @@ public class SoundManager : Singleton<SoundManager>, Observer
         SetMusicVolume(settings.musicVolume);
         SetEffectsVolume(settings.effectsVolume);
 
-        MuteSound(settings.mute);
+        mute = settings.mute;
+
+        MuteSound(mute);
     }
 
     protected override void Awake()

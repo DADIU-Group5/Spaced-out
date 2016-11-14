@@ -9,6 +9,8 @@ public class WinMenu : MonoBehaviour, Observer
     private bool playerIsDead = false;
     private bool playerWon = false;
 
+    public Button nextLevelBtn;
+
     [HideInInspector]
     public int level = 1;
 
@@ -34,7 +36,7 @@ public class WinMenu : MonoBehaviour, Observer
                 StartCoroutine(Win());
                 break;
             case EventName.PlayerDead:
-                playerIsDead = true;
+                //playerIsDead = true;
                 break;
             default:
                 break;
@@ -46,6 +48,13 @@ public class WinMenu : MonoBehaviour, Observer
     {
         Subject.instance.AddObserver(this);
         level = PlayerPrefs.GetInt("CurrentLevel");
+
+        if(level == 5)
+        {
+            nextLevelBtn.enabled = false;
+            Debug.Log("last level reached, need to do something about it");
+            // transform the button
+        }
     }
 
     /// <summary>
@@ -65,6 +74,23 @@ public class WinMenu : MonoBehaviour, Observer
     public void LoadMainMenu(int levelIndex)
     {
         SceneManager.LoadScene(levelIndex);
+    }
+
+    /// <summary>
+    /// Load Next Level
+    /// </summary>
+    public void LoadNextLevel(int levelIndex)
+    {
+        levelIndex++;
+        if (levelIndex < 6)
+        {
+            PlayerPrefs.SetInt("CurrentLevel", levelIndex);
+            SceneManager.LoadScene(levelIndex);
+        }
+        else
+        {
+            Debug.Log("Loading main menu");
+        }
     }
 
     void SetBadges()

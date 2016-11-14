@@ -8,7 +8,7 @@ public class LevelProgress : Singleton<LevelProgress>
     public int levelsComplete = 0;
     //public Button[] levelButtons;
 
-	void Start ()
+    void Start ()
     {
         ResetLevelProgress();
 	}

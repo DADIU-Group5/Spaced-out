@@ -26,7 +26,7 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
     // Use this for initialization
     void Start () {
         Subject.instance.AddObserver(this);
-        currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+        currentLevel = int.Parse(PlayerPrefs.GetString("CurrentLevel"));
 
         //This is how you set the number of collectibles:
         //SetMaxCollectiblesForLevel(currentLevel, 1);
@@ -55,7 +55,6 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
     public void AddCollectibleToLevel()
     {
         PlayerPrefs.SetInt("MaxCollectiblesForLevel" + currentLevel, PlayerPrefs.GetInt("MaxCollectiblesForLevel" + currentLevel)+1);
-        Debug.Log("Currently there are: " + GetMaxCollectiblesForLevel(currentLevel)+" in this level.");
     }
 
     /// <summary>

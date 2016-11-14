@@ -22,6 +22,9 @@
 						<Property Name="SlewRateUp" Type="Real64" Value="500"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="musicVolume" ID="{94967744-CEA3-4D37-893D-F4A043DFEB29}"/>
+				<GameParameter Name="effectsVolume" ID="{ED513413-85B0-45A9-B98F-EE61A42D635F}"/>
+				<GameParameter Name="masterVolume" ID="{16D6A1BF-90EA-4458-897A-819BFBA4868A}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

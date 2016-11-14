@@ -15,6 +15,43 @@
 						<Property Name="ModulatorScope" Type="int32" Value="3"/>
 					</PropertyList>
 				</ModulatorLfo>
+				<ModulatorLfo Name="lfovent" ID="{088E20F1-E5DB-49C8-8C64-60BD1B01D272}" ShortID="210420181">
+					<PropertyList>
+						<Property Name="LfoFrequency" Type="Real64" Value="0.2">
+							<RTPCList>
+								<RTPC Name="" ID="{7EBECC2F-7994-4D28-93E7-9A2957DCF356}" ShortID="291010878">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="lfomodulator" ID="{DEC50063-FCCF-44A8-AAB1-6F93BC502327}" WorkUnitID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{19B85355-ADB0-48AB-ABFE-D95AB0E077BC}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="5"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0.55932</YPos>
+												<Flags>21</Flags>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>1.57131</YPos>
+												<Flags>53</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+				</ModulatorLfo>
+				<ModulatorLfo Name="lfomodulator" ID="{DEC50063-FCCF-44A8-AAB1-6F93BC502327}" ShortID="15575070">
+					<PropertyList>
+						<Property Name="LfoFrequency" Type="Real64" Value="0.05"/>
+					</PropertyList>
+				</ModulatorLfo>
 			</ChildrenList>
 		</WorkUnit>
 	</Modulators>

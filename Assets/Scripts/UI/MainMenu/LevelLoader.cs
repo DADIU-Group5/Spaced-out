@@ -37,30 +37,12 @@ public class LevelLoader : MonoBehaviour {
     /// <param name="level"></param>
     public void LoadLevel(int level)
     {
-        PlayerPrefs.SetInt("CurrentLevel", level);
+        PlayerPrefs.SetString("CurrentLevel", level.ToString());
         if (overrideSeed)
         {
             OverrideSeeds(extSeed, intSeed, level.ToString());
         }
-        else
-        {
-            SetSeeds(level.ToString());
-        }
         SceneManager.LoadScene("LevelGenerator");
-    }
-    
-    /// <summary>
-    /// Sets the seed of the level. if the seed is zero, either it has been reset (due to win) or not yet played.
-    /// </summary>
-    /// <param name="level"></param>
-    void SetSeeds(string level)
-    {
-        PlayerPrefs.SetString("CurrentLevel", level);
-        if(PlayerPrefs.GetInt("extSeed" + level) == 0)
-        {
-            PlayerPrefs.SetInt("extSeed" + level,UnityEngine.Random.Range(1,10000));
-        }
-        PlayerPrefs.SetInt("intSeed", UnityEngine.Random.Range(1, 10000));
     }
 
     /// <summary>
@@ -69,9 +51,8 @@ public class LevelLoader : MonoBehaviour {
     /// <param name="exterior"></param>
     /// <param name="interior"></param>
     /// <param name="level"></param>
-    void OverrideSeeds(int exterior, int interior,string level)
+    void OverrideSeeds(int exterior, int interior, string level)
     {
-        PlayerPrefs.SetString("CurrentLevel", level);
         PlayerPrefs.SetInt("extSeed" + level, exterior);
         PlayerPrefs.SetInt("intSeed", interior);
     }
@@ -79,7 +60,7 @@ public class LevelLoader : MonoBehaviour {
     void CheckRemakeSeed()
     {
         Debug.Log("As this is testing, the game will check for win everytime. Has to be changed, when the player can actually win the game.");
-        if(PlayerPrefs.GetInt("FinishedGame") == 0)
+        if(PlayerPrefs.GetInt("FinishedGame") == 1)
         {
             string finishTime = PlayerPrefs.GetString("FinishTime");
             long temp = Convert.ToInt64(finishTime);

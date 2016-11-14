@@ -37,26 +37,12 @@ public class LevelLoader : MonoBehaviour {
     /// <param name="level"></param>
     public void LoadLevel(int level)
     {
-        PlayerPrefs.SetInt("CurrentLevel", level);
         PlayerPrefs.SetString("CurrentLevel", level.ToString());
         if (overrideSeed)
         {
             OverrideSeeds(extSeed, intSeed, level.ToString());
         }
         SceneManager.LoadScene("LevelGenerator");
-    }
-    
-    /// <summary>
-    /// Sets the seed of the level. if the seed is zero, either it has been reset (due to win) or not yet played.
-    /// </summary>
-    /// <param name="level"></param>
-    void SetSeeds(string level)
-    {
-        if(PlayerPrefs.GetInt("extSeed" + level) == 0)
-        {
-            PlayerPrefs.SetInt("extSeed" + level,UnityEngine.Random.Range(1,10000));
-        }
-        PlayerPrefs.SetInt("intSeed", UnityEngine.Random.Range(1, 10000));
     }
 
     /// <summary>

@@ -61,13 +61,13 @@ public class PlayerController : MonoBehaviour, Observer
             UpdateVelocityUI("Velocity: " + rbPlayer.velocity.magnitude + "\nReady To Launch");
         }
 
-        // Slows the player down faster when his speed is below slowDownThreshold
+        // Slows the player down faster when his velocity is below slowDownThreshold
         if (rbPlayer.velocity.magnitude < slowDownThreshold)
         {
             rbPlayer.velocity = rbPlayer.velocity * (100f - slowDownFactor) / 100f;
         }
 
-        // 
+        // If velocity is below the set threshold, set to zero.
         if (rbPlayer.velocity.magnitude < slowDownCutOff)
         {
             rbPlayer.velocity = Vector3.zero;

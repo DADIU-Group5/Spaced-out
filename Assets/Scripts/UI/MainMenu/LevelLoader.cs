@@ -37,12 +37,19 @@ public class LevelLoader : MonoBehaviour {
     /// <param name="level"></param>
     public void LoadLevel(int level)
     {
-        PlayerPrefs.SetString("CurrentLevel", level.ToString());
-        if (overrideSeed)
+        if (level == 0)
         {
-            OverrideSeeds(extSeed, intSeed, level.ToString());
+            SceneManager.LoadScene("Tutorial");
         }
-        SceneManager.LoadScene("LevelGenerator");
+        else
+        {
+            PlayerPrefs.SetString("CurrentLevel", level.ToString());
+            if (overrideSeed)
+            {
+                OverrideSeeds(extSeed, intSeed, level.ToString());
+            }
+            SceneManager.LoadScene("LevelGenerator");
+        }
     }
 
     /// <summary>

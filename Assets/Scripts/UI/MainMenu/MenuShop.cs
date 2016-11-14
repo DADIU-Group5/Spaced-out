@@ -13,9 +13,9 @@ public class MenuShop : MonoBehaviour {
         }
 	}
 
-    public void OnBuy5Click()
+    public void OnBuy50Click()
     {
-        PlayerPrefs.SetInt("Medals", PlayerPrefs.GetInt("Medals") + 5);
+        PlayerPrefs.SetInt("Medals", PlayerPrefs.GetInt("Medals") + 50);
         header.UpdateMedalLabel();
     }
 

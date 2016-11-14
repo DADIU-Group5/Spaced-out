@@ -85,7 +85,13 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
     /// </summary>
     public void AddAchievementToLevel(int level, int achievement)
     {
-        PlayerPrefs.SetInt("level" + level+ "Achievement" + achievement, 1); //ex: level2Achievement1 = 1
+        string key = "level" + level + "Achievement" + achievement;
+
+        if (!PlayerPrefs.HasKey("key") || PlayerPrefs.GetInt(key) == 0)
+        {
+            PlayerPrefs.SetInt("Medals", PlayerPrefs.GetInt("Medals") + 1);
+            PlayerPrefs.SetInt(key, 1);
+        }
     }
 
     /// <summary>

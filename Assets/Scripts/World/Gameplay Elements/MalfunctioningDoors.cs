@@ -16,9 +16,11 @@ public class MalfunctioningDoors : MonoBehaviour {
     public HazardState state;
     private Animator animator;
 
-    [HideInInspector]
-    public int doorsTouchingPlayer = 0;
-    private bool crushingPlayer = false;
+    // TODO: Old code used for crushing and kiling player.
+    //
+    //[HideInInspector]
+    //public int doorsTouchingPlayer = 0;
+    //private bool crushingPlayer = false;
 
     public void CloseOpenDoor()
     {
@@ -52,15 +54,18 @@ public class MalfunctioningDoors : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (doorsTouchingPlayer >= 2 && !crushingPlayer &&
-            this.animator.GetCurrentAnimatorStateInfo(0).IsName("DoorClose"))
-        {
-            var evt = new ObserverEvent(EventName.Crushed);
-            Subject.instance.Notify(gameObject, evt);
-            crushingPlayer = true;
+        // TODO: Old code for killing player when crushed by doors.
+        //       Remove when no longer relevant.
+        //
+        //if (doorsTouchingPlayer >= 2 && !crushingPlayer &&
+        //    this.animator.GetCurrentAnimatorStateInfo(0).IsName("DoorClose"))
+        //{
+        //    var evt = new ObserverEvent(EventName.Crushed);
+        //    Subject.instance.Notify(gameObject, evt);
+        //    crushingPlayer = true;
 
-            Debug.Log("Player has been crushed!");
-        }
+        //    Debug.Log("Player has been crushed!");
+        //}
 
         if (doorIsMalfunctioning && !malfunctioning)
         {

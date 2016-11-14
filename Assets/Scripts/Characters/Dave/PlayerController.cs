@@ -31,9 +31,6 @@ public class PlayerController : MonoBehaviour, Observer
     void Awake ()
     {
         Subject.instance.AddObserver(this);
-        slowDownThreshold = 2f;
-        slowDownFactor = 2f;
-        slowDownCutOff = 0.2f;
     }
 
     public float GetMinLaunchForce()

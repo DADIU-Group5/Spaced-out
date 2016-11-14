@@ -122,4 +122,16 @@ public class LevelLoader : MonoBehaviour {
             PlayerPrefs.SetInt("extSeed" + i.ToString(), 0);
         }
     }
+
+    public void GenerateNewLevel()
+    {
+        for (int i = 1; i <= amountOfLevels; i++)
+        {
+            PlayerPrefs.SetInt("extSeed" + i.ToString(), 0);
+            PlayerPrefs.SetInt("level" + i + "Achievement0", 0);
+            PlayerPrefs.SetInt("level" + i + "Achievement1", 0);
+            PlayerPrefs.SetInt("level" + i + "Achievement2", 0);
+            PlayerPrefs.SetInt("Level" + i + "CollectiblesCollected", 0);
+        }
+    }
 }

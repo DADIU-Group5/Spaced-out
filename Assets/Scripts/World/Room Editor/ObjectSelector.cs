@@ -44,7 +44,7 @@ public class ObjectSelector : MonoBehaviour {
     public void ShowDefualt()
     {
         DestroyShowingModel();
-        gameObject.GetComponent<Renderer>().enabled = true;
+        transform.GetChild(0).gameObject.SetActive(true);
     }
 
     /// <summary>
@@ -61,10 +61,10 @@ public class ObjectSelector : MonoBehaviour {
     /// </summary>
     void ShowModel()
     {
-        gameObject.GetComponent<Renderer>().enabled = false;
+        transform.GetChild(0).gameObject.SetActive(false);
         DestroyShowingModel();
-        GOshowing = Instantiate((GameObject)canBe[showing],transform.position,Quaternion.identity,transform) as GameObject;
-        GOshowing.transform.rotation = gameObject.transform.rotation;
+        GOshowing = Instantiate((GameObject)canBe[showing], transform.GetChild(0).position,Quaternion.identity, transform.GetChild(0)) as GameObject;
+        GOshowing.transform.rotation = transform.GetChild(0).rotation;
     }
 
     /// <summary>
@@ -106,7 +106,7 @@ public class ObjectSelector : MonoBehaviour {
             showing = Random.Range(0, canBe.Count);
             ReplaceModel(canBe[showing]);
         }
-        Destroy(gameObject);
+        Destroy(transform.GetChild(0).gameObject);
     }
 
     //Replaces the 'dummy' object with a gameplay object.
@@ -115,9 +115,9 @@ public class ObjectSelector : MonoBehaviour {
         GOshowing = Instantiate((GameObject)obj, transform.position, Quaternion.identity, transform.parent) as GameObject;
         if (gameObject.transform.localScale != Vector3.one)
         {
-            GOshowing.transform.localScale = gameObject.transform.localScale;
+            GOshowing.transform.localScale = transform.GetChild(0).localScale;
         }
-        GOshowing.transform.rotation = gameObject.transform.rotation;
+        GOshowing.transform.rotation = transform.GetChild(0).rotation;
     }
 
     public void LockObject()
@@ -133,13 +133,13 @@ public class ObjectSelector : MonoBehaviour {
         {
             if (Application.isEditor)
             {
-                DestroyImmediate(transform.GetChild(0).gameObject);
+                DestroyImmediate(transform.GetChild(0).GetChild(0).gameObject);
             }
             else
             {
-                Destroy(transform.GetChild(0).gameObject);
+                Destroy(transform.GetChild(0).GetChild(0).gameObject);
             }
-            gameObject.GetComponent<Renderer>().enabled = true;
+            transform.GetChild(0).gameObject.SetActive(true);
         }
         lockedAs = null;
     }

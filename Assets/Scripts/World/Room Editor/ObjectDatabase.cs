@@ -12,6 +12,11 @@ public class ObjectDatabase : MonoBehaviour {
     List<Object> staticObjects = new List<Object>();
     List<Object> shapingObjects = new List<Object>();
     List<Object> pickupObjects = new List<Object>();
+    List<Object> walls = new List<Object>();
+    List<Object> outerCornors = new List<Object>();
+    List<Object> innerCornors = new List<Object>();
+    List<Object> floors = new List<Object>();
+    List<Object> doors = new List<Object>();
 
     void Awake()
     {
@@ -52,6 +57,11 @@ public class ObjectDatabase : MonoBehaviour {
         staticObjects = new List<Object>(Resources.LoadAll("ObjectDatabase/StaticObjects"));
         shapingObjects = new List<Object>(Resources.LoadAll("ObjectDatabase/ShapingObjects"));
         pickupObjects = new List<Object>(Resources.LoadAll("ObjectDatabase/Pickups"));
+        walls = new List<Object>(Resources.LoadAll("ObjectDatabase/Walls"));
+        outerCornors = new List<Object>(Resources.LoadAll("ObjectDatabase/OuterCornors"));
+        innerCornors = new List<Object>(Resources.LoadAll("ObjectDatabase/InnerCornors"));
+        floors = new List<Object>(Resources.LoadAll("ObjectDatabase/Floors"));
+        doors = new List<Object>(Resources.LoadAll("ObjectDatabase/Doors"));
     }
 
     public List<Object> GetEnviromentalObjects()
@@ -77,6 +87,31 @@ public class ObjectDatabase : MonoBehaviour {
     public List<Object> GetPickupObjects()
     {
         return pickupObjects;
+    }
+
+    public List<Object> GetWalls()
+    {
+        return walls;
+    }
+
+    public List<Object> GetFloors()
+    {
+        return floors;
+    }
+
+    public List<Object> GetOuterCornors()
+    {
+        return outerCornors;
+    }
+
+    public List<Object> GetInnerCornors()
+    {
+        return innerCornors;
+    }
+
+    public List<Object> GetDoors()
+    {
+        return doors;
     }
 
 }

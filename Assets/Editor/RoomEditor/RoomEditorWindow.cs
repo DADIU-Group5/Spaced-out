@@ -20,7 +20,7 @@ public class RoomEditorWindow : EditorWindow {
 
     string pathName = "Assets/Resources/Rooms/";
 
-    [MenuItem("RoomEditor/RoomWindow")]
+    //[MenuItem("RoomEditor/RoomWindow")]
     public static void ShowWindow()
     {
         window = (RoomEditorWindow)EditorWindow.GetWindow(typeof(RoomEditorWindow));

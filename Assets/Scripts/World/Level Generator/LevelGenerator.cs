@@ -31,7 +31,7 @@ public class LevelGenerator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         #if UNITY_EDITOR
-           // UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
+            UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
         #endif
         GenerateLevel();
     }
@@ -124,8 +124,13 @@ public class LevelGenerator : MonoBehaviour {
             //If it could not create a room from a position, remove the previous room, and try again.
             //Should make sure it never hits a dead end.
             else
-            {   
+            {
                 createdRooms--;
+                if(createdRooms == 0)
+                {
+                    Debug.Log("Ignores collision.");
+                    return;
+                }
                 Destroy(spawnedRooms[spawnedRooms.Count - 1].gameObject);
                 spawnedRooms.RemoveAt(spawnedRooms.Count - 1);
                 allBounds.RemoveAt(spawnedRooms.Count - 1);
@@ -176,11 +181,11 @@ public class LevelGenerator : MonoBehaviour {
         }
 
         //Gets the rotation of the room. Should be rotated equal to the difference between the last and new doors right axis.
-        Quaternion rot = Quaternion.FromToRotation(entranceDoor.transform.right, -lastDoor.transform.right);
+        Quaternion rot = Quaternion.FromToRotation(-entranceDoor.transform.right, lastDoor.transform.right);
         newRoom.transform.rotation = rot;
 
         //Moves the new room into position.
-        newRoom.transform.position = newRoom.transform.position + (lastDoor.transform.position - entranceDoor.transform.position) - (entranceDoor.transform.right * distanceBetweenRooms);
+        newRoom.transform.position = newRoom.transform.position + (lastDoor.transform.position - entranceDoor.transform.position) + (entranceDoor.transform.right * 7.3f);
 
         //Get bounds.
         Bounds newBound = newRoom.AddComponent<CalcBounds>().calc();
@@ -221,9 +226,12 @@ public class LevelGenerator : MonoBehaviour {
                 if (door.GetComponent<Door>().GetDoorType() == DoorType.entrance)
                 {
                     GameObject newDoor = Instantiate(doorPrefab);
-                    newDoor.transform.rotation = door.transform.rotation;
-                    newDoor.transform.position = door.transform.position + (door.transform.right * (distanceBetweenRooms / 2));
                     newDoor.transform.parent = door.transform.parent;
+                    newDoor.transform.position = door.transform.position + (-door.transform.right * (5.65f));
+
+                    Quaternion rot = Quaternion.FromToRotation(-newDoor.transform.right, door.transform.right);
+                    newDoor.transform.rotation = rot;
+
                     Destroy(door);
                 }
                 else

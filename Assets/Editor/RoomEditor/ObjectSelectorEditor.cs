@@ -41,7 +41,7 @@ public class ObjectSelectorEditor : Editor {
             OS.ShowPrev();
         }
         GUILayout.EndHorizontal();
-        if (OS.gameObject.GetComponent<Renderer>().enabled == false) {
+        if (OS.transform.GetChild(0).gameObject.activeSelf) {
             if (GUILayout.Button("LOCK"))
             {
                 OS.LockObject();

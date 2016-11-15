@@ -3,6 +3,7 @@
     Collision,
     CameraMoved,
     PlayerLaunch,
+    PlayerLaunchCancel,
     PlayerCollision,
     Pause,
     Unpause,
@@ -24,5 +25,6 @@
     BarrelExplosion,
     PlayerExploded,
     FuelEmpty,
-    UpdateStatus
+    UpdateStatus,
+    PlayerLaunchModeToggle
 }

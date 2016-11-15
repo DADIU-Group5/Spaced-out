@@ -11,11 +11,13 @@ public class PlayerController : MonoBehaviour, Observer
     private bool dead = false;
     
     private float launchForce = 0f;
+    public AnimationHandler animHandler;
 
     public float minLaunchForce = 0f, maxLaunchForce = 3000f, launchSideScale = 10f,  maxMagnitude = 30f;
     public Transform pitchTransform;
     public Rigidbody rbPlayer;
     public FuelController fuel;
+    public float ragdollVelocityThreshold = 1f;
 
     // For ensuring that the player at some point starts slowing
     [Tooltip("Threshold for when velocity is reduced faster.")]
@@ -27,10 +29,26 @@ public class PlayerController : MonoBehaviour, Observer
 
     [Tooltip("Speed is reduced to 0 when it goes below this value.")]
     public float slowDownCutOff = 0.2f;
-    
+
+    void Start ()
+    {
+        //animHandler = GetComponent<AnimationHandler>();
+    }
+
     void Awake ()
     {
         Subject.instance.AddObserver(this);
+    }
+
+    void OnCollisionEnter()
+    {
+        animHandler.SetRagdollMode(true);
+        Invoke("Shit", 2f);
+    }
+
+    private void Shit()
+    {
+        animHandler.SetRagdollMode(false);
     }
 
     public float GetMinLaunchForce()

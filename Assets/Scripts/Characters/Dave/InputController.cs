@@ -43,6 +43,9 @@ public class InputController : MonoBehaviour, Observer
         {
             //launchMode = DetectPlayerTap();
             launchMode = true;
+
+            var evt = new ObserverEvent(EventName.PlayerLaunchModeToggle);
+            Subject.instance.Notify(gameObject, evt);
         }
 
         // Check if we are NOT in launchmode
@@ -82,6 +85,13 @@ public class InputController : MonoBehaviour, Observer
             if (launchForce > 0)
             {
                 var evt = new ObserverEvent(EventName.PlayerLaunch);
+                evt.payload.Add(PayloadConstants.LAUNCH_FORCE, launchForce);
+                evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, GetLaunchDirection());
+                Subject.instance.Notify(gameObject, evt);
+            }
+            else
+            {
+                var evt = new ObserverEvent(EventName.PlayerLaunchCancel);
                 evt.payload.Add(PayloadConstants.LAUNCH_FORCE, launchForce);
                 evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, GetLaunchDirection());
                 Subject.instance.Notify(gameObject, evt);

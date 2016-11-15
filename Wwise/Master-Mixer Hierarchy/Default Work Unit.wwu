@@ -5,10 +5,33 @@
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
 					<PropertyList>
-						<Property Name="BypassEffect0" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
+						<Property Name="BusVolume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{C3725F65-9CBC-4E17-8618-B1A778CBA28F}" ShortID="1030260333">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="masterVolume" ID="{16D6A1BF-90EA-4458-897A-819BFBA4868A}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{DD2F4B5B-8884-466C-BBDE-781A9AD68E21}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
 						</Property>
 						<Property Name="Highpass" Type="int16">
 							<RTPCList>
@@ -98,6 +121,34 @@
 										<Value>-10</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{B983C671-8D9C-4220-89B5-6640FCFE3B4B}" ShortID="610924039">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="effectsVolume" ID="{ED513413-85B0-45A9-B98F-EE61A42D635F}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{E01CF34B-5764-4B71-A5BA-A1919FDDB4A6}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 							</PropertyList>
 						</Bus>
 						<Bus Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}">
@@ -106,6 +157,34 @@
 									<ValueList>
 										<Value>-10</Value>
 									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{4D63893B-3967-4846-91F9-68B8E5BB38BB}" ShortID="433062674">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="effectsVolume" ID="{ED513413-85B0-45A9-B98F-EE61A42D635F}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{F61A7323-CE4E-4A29-A462-9564F427882D}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
 								</Property>
 							</PropertyList>
 						</Bus>
@@ -116,6 +195,34 @@
 										<Value>-20</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{8A0CFF31-172C-45AC-9D9D-F2B1F5E04418}" ShortID="698817470">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="effectsVolume" ID="{ED513413-85B0-45A9-B98F-EE61A42D635F}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{F52FD771-8337-45CD-A239-53B1FE953836}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 							</PropertyList>
 						</Bus>
 						<Bus Name="music" ID="{CA906606-09FB-4986-B724-CAA394C96D8F}">
@@ -124,6 +231,34 @@
 									<ValueList>
 										<Value>-5</Value>
 									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{A7E6265E-8BC7-4D64-AC46-299D51509CFE}" ShortID="992768241">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="musicVolume" ID="{94967744-CEA3-4D37-893D-F4A043DFEB29}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{403A9F56-CC4B-487B-B883-26FC73F9A3EA}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
 								</Property>
 							</PropertyList>
 						</Bus>

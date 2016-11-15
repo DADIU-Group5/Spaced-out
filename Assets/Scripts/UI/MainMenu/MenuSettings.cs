@@ -13,10 +13,14 @@ public class MenuSettings : MonoBehaviour {
     public Text disableNotifyBtnTxt;
     public Text creditsBtnTxt;
     public Text backBtnTxt;
+    public bool muteBtnState = false;
 
     void Start()
     {
         SettingsManager.instance.onLanguageChanged += UpdateButtonText;
+
+        muteBtnState = SettingsManager.instance.settings.mute;
+
         UpdateButtonText(SettingsManager.instance.settings.language);
 
         SetUpSound();
@@ -39,6 +43,8 @@ public class MenuSettings : MonoBehaviour {
         soundManager.SetMasterVolume(settings.masterVolume);
         soundManager.SetMusicVolume(settings.musicVolume);
         soundManager.SetEffectsVolume(settings.effectsVolume);
+
+        SettingsManager.instance.MuteSound(settings.mute);
     }
 
     public void OnMasterSliderChanged(float value)
@@ -58,11 +64,9 @@ public class MenuSettings : MonoBehaviour {
 
     public void OnMuteClick()
     {
-        // TODO: kinda retarted, refactor
-        if(AudioListener.volume == 0)
-            SettingsManager.instance.SetMasterVolume(SettingsManager.instance.settings.masterVolume);
-        else
-            SettingsManager.instance.SetMasterVolume(0);
+        muteBtnState = !muteBtnState;
+        muteBtnTxt.text = muteBtnState ? Translator.instance.Get("unmute") : Translator.instance.Get("mute");
+        SettingsManager.instance.MuteSound(muteBtnState);
     }
 
     public void OnEnglishClick()
@@ -77,11 +81,12 @@ public class MenuSettings : MonoBehaviour {
 
     private void UpdateButtonText(Language lan)
     {
-        resetProgBtnTxt.text = Translator.instance.Get("resetProg");
+        //resetProgBtnTxt.text = Translator.instance.Get("resetProg");
         disableNotifyBtnTxt.text = Translator.instance.Get("disableNotify");
         creditsBtnTxt.text = Translator.instance.Get("credits");
         englishBtnTxt.text = Translator.instance.Get("english");
         danishBtnTxt.text = Translator.instance.Get("danish");
         backBtnTxt.text = Translator.instance.Get("back");
+        muteBtnTxt.text = muteBtnState ? Translator.instance.Get("unmute") : Translator.instance.Get("mute");
     }
 }

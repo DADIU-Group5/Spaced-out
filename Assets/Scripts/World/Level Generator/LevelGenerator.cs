@@ -59,6 +59,7 @@ public class LevelGenerator : MonoBehaviour {
 
     void SetupSeeds()
     {
+        print("Key is: " + "extSeed" + PlayerPrefs.GetInt("CurrentLevel"));
         if (PlayerPrefs.GetInt("extSeed" + PlayerPrefs.GetInt("CurrentLevel")) == 0)
         {
             PlayerPrefs.SetInt("extSeed" + PlayerPrefs.GetInt("CurrentLevel"), Random.Range(1, 10000));
@@ -71,7 +72,7 @@ public class LevelGenerator : MonoBehaviour {
         interiorSeed = PlayerPrefs.GetInt("intSeed");
         Debug.Log("extSeed: " + exteriorSeed);
         Debug.Log("intSeed: " + interiorSeed);
-        minRooms = PlayerPrefs.GetInt(PlayerPrefs.GetString("CurrentLevel") + "Length");
+        minRooms = PlayerPrefs.GetInt(PlayerPrefs.GetInt("CurrentLevel") + "Length");
         maxRooms = minRooms;
     }
 

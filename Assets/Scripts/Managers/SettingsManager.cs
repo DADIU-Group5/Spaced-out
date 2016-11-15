@@ -35,10 +35,7 @@ public class SettingsManager : Singleton<SettingsManager> {
     {
         settings.mute = mute;
 
-        if (mute)
-            AudioListener.volume = 0;
-        else
-            AudioListener.volume = settings.masterVolume / 100f;
+        SoundManager.instance.MuteSound(mute);
     }
 
     public void SetLanguage(Language language)

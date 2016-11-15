@@ -186,12 +186,13 @@ public class LevelGenerator : MonoBehaviour {
             firstDoor = entranceDoor.GetComponent<Door>();
         }
 
-        //Gets the rotation of the room. Should be rotated equal to the difference between the last and new doors right axis.
-        Quaternion rot = Quaternion.FromToRotation(entranceDoor.transform.right, -lastDoor.transform.right);
-        newRoom.transform.rotation = rot;
-
+        //Gets the rotation of the room.
+        float lastY = lastDoor.transform.eulerAngles.y + 180;
+        float newY = lastY - entranceDoor.transform.eulerAngles.y;
+        newRoom.transform.Rotate(new Vector3(0, newY, 0));
+        
         //Moves the new room into position.
-        newRoom.transform.position = newRoom.transform.position + (lastDoor.transform.position - entranceDoor.transform.position) - (entranceDoor.transform.right * distanceBetweenRooms);
+        newRoom.transform.position = newRoom.transform.position + (lastDoor.transform.position - entranceDoor.transform.position) - (-lastDoor.transform.right * distanceBetweenRooms);
 
         //Get bounds.
         Bounds newBound = newRoom.AddComponent<CalcBounds>().calc();

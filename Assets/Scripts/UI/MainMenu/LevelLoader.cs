@@ -20,7 +20,8 @@ public class LevelLoader : MonoBehaviour {
 
     void Start()
     {
-        timeDifference = new TimeSpan(hoursFromWinToReset, 0, 0);
+        //timeDifference = new TimeSpan(hoursFromWinToReset, 0, 0);
+        timeDifference = new TimeSpan(0, hoursFromWinToReset, 0);
         PlayerPrefs.SetInt("1Length", levelLengths[0]);
         PlayerPrefs.SetInt("2Length", levelLengths[1]);
         PlayerPrefs.SetInt("3Length", levelLengths[2]);
@@ -37,29 +38,20 @@ public class LevelLoader : MonoBehaviour {
     /// <param name="level"></param>
     public void LoadLevel(int level)
     {
-        if (overrideSeed)
+        if (level == 0)
         {
-            OverrideSeeds(extSeed, intSeed, level.ToString());
+            SceneManager.LoadScene("Tutorial");
         }
         else
         {
-            SetSeeds(level.ToString());
+            PlayerPrefs.SetInt("CurrentLevel", level);
+            if (overrideSeed)
+            {
+                OverrideSeeds(extSeed, intSeed, level.ToString());
+            }
+            PlayerPrefs.SetInt("intSeed", 0);
+            SceneManager.LoadScene("LevelGenerator");
         }
-        SceneManager.LoadScene("LevelGenerator");
-    }
-    
-    /// <summary>
-    /// Sets the seed of the level. if the seed is zero, either it has been reset (due to win) or not yet played.
-    /// </summary>
-    /// <param name="level"></param>
-    void SetSeeds(string level)
-    {
-        PlayerPrefs.SetString("CurrentLevel", level);
-        if(PlayerPrefs.GetInt("extSeed" + level) == 0)
-        {
-            PlayerPrefs.SetInt("extSeed" + level,UnityEngine.Random.Range(1,10000));
-        }
-        PlayerPrefs.SetInt("intSeed", UnityEngine.Random.Range(1, 10000));
     }
 
     /// <summary>
@@ -68,7 +60,7 @@ public class LevelLoader : MonoBehaviour {
     /// <param name="exterior"></param>
     /// <param name="interior"></param>
     /// <param name="level"></param>
-    void OverrideSeeds(int exterior, int interior,string level)
+    void OverrideSeeds(int exterior, int interior, string level)
     {
         PlayerPrefs.SetInt("extSeed" + level, exterior);
         PlayerPrefs.SetInt("intSeed", interior);
@@ -77,7 +69,7 @@ public class LevelLoader : MonoBehaviour {
     void CheckRemakeSeed()
     {
         Debug.Log("As this is testing, the game will check for win everytime. Has to be changed, when the player can actually win the game.");
-        if(PlayerPrefs.GetInt("FinishedGame") == 0)
+        if(PlayerPrefs.GetInt("FinishedGame") == 1)
         {
             string finishTime = PlayerPrefs.GetString("FinishTime");
             long temp = Convert.ToInt64(finishTime);
@@ -118,6 +110,21 @@ public class LevelLoader : MonoBehaviour {
         for (int i = 1; i <= amountOfLevels; i++)
         {
             PlayerPrefs.SetInt("extSeed" + i.ToString(), 0);
+        }
+    }
+
+    public void GenerateNewLevel()
+    {
+        PlayerPrefs.SetInt("Medals", PlayerPrefs.GetInt("Medals") - 15);
+
+        for (int i = 1; i <= amountOfLevels; i++)
+        {
+            print("Key is: extSeed" + i.ToString());
+            PlayerPrefs.SetInt("extSeed" + i.ToString(), 0);
+            PlayerPrefs.SetInt("level" + i + "Achievement0", 0);
+            PlayerPrefs.SetInt("level" + i + "Achievement1", 0);
+            PlayerPrefs.SetInt("level" + i + "Achievement2", 0);
+            PlayerPrefs.SetInt("Level" + i + "CollectiblesCollected", 0);
         }
     }
 }

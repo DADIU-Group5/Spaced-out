@@ -63,6 +63,7 @@ public class ObjectSelector : MonoBehaviour {
     {
         gameObject.GetComponent<Renderer>().enabled = false;
         DestroyShowingModel();
+        Debug.Log(canBe[showing].name);
         GOshowing = Instantiate((GameObject)canBe[showing],transform.position,Quaternion.identity,transform) as GameObject;
         GOshowing.transform.rotation = gameObject.transform.rotation;
     }
@@ -88,7 +89,7 @@ public class ObjectSelector : MonoBehaviour {
     /// <summary>
     /// Used in level generation to replace the object with a gameplay object.
     /// </summary>
-    public void Replace()
+    public void Replace(Room r)
     {
         if(canBe.Count == 0)
         {
@@ -106,12 +107,31 @@ public class ObjectSelector : MonoBehaviour {
             showing = Random.Range(0, canBe.Count);
             ReplaceModel(canBe[showing]);
         }
+        if(GOshowing == null)
+        {
+            return;
+        }
+        if(GOshowing.GetComponent<HazardState>() != null)
+        {
+            r.AddHazard(GOshowing.GetComponent<HazardState>());
+        }
+        if(GOshowing.GetComponent<SwitchItem>() != null)
+        {
+            GOshowing.GetComponent<SwitchItem>().AssignRoom(r);
+        }
         Destroy(gameObject);
     }
 
     //Replaces the 'dummy' object with a gameplay object.
     void ReplaceModel(Object obj)
     {
+
+        if(obj == null)
+        {
+            Debug.Log(lockObject);
+            Debug.Log(this.name+"error");
+            return;
+        }
         GOshowing = Instantiate((GameObject)obj, transform.position, Quaternion.identity, transform.parent) as GameObject;
         if (gameObject.transform.localScale != Vector3.one)
         {

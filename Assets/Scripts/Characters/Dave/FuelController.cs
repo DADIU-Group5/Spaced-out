@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FuelController : MonoBehaviour {
+public class FuelController : MonoBehaviour
+{
     public int maxFuel = 10;
     public float velocityToDie = 10f;
 
@@ -13,8 +14,6 @@ public class FuelController : MonoBehaviour {
     {
         player = gameObject.GetComponent<PlayerController>();
         rbPlayer = gameObject.GetComponent<Rigidbody>();
-
-        ReplenishFuel();
     }
 
     public void Update()
@@ -36,6 +35,18 @@ public class FuelController : MonoBehaviour {
     public bool HasFuel()
     {
         return currentFuel > 0;
+    }
+
+    public int GetCurrentFuel()
+    {
+        return currentFuel;
+    }
+
+    // Sets the fuel to the given value within allowed limits.
+    public void SetFuel(int fuel)
+    {
+        this.currentFuel = Mathf.Clamp(fuel, 0, maxFuel);
+        UpdateFuelUI();
     }
 
     public void ReplenishFuel()

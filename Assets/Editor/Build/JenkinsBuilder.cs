@@ -36,6 +36,12 @@ public class JenkinsBuilder : MonoBehaviour
         return version.ToString("D2");
     }
 
+    private static void SetBuildSettings()
+    {
+        PlayerSettings.allowedAutorotateToPortrait = false;
+        PlayerSettings.allowedAutorotateToPortraitUpsideDown = false;
+    }
+
     [MenuItem("Build Server/Build Game")]
     private static void Build()
     {
@@ -52,6 +58,7 @@ public class JenkinsBuilder : MonoBehaviour
         try
         {
             SignBuild();
+            SetBuildSettings();
             string version = string.Format("v{0}.{1}", PlayerSettings.bundleVersion, IncreaseBuildVersion());
             string path = string.Format("{0}/{1}_{2}.apk", buildFolder, appName, version);
             BuildPipeline.BuildPlayer(scenes, path, BuildTarget.Android, BuildOptions.None);

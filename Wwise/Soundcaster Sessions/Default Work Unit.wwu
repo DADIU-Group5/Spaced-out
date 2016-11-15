@@ -126,10 +126,6 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="daveElectrocute" ID="{AB4E9910-A4DB-4620-B4A4-796776254E1A}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
-							<Position X="0" Y="2"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="explosive" ID="{CC16C51D-1180-4AA8-8570-A72721A17064}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -154,14 +150,22 @@
 							<Position X="2" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="doors" ID="{BF4E15A6-DBD6-4FBB-8221-C7E51BEAF67F}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+							<ObjectRef Name="doorShut" ID="{9F393916-5E3D-4361-A042-6CBF80404CC9}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
 							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="gameStart" ID="{E2FC7F24-0D18-4BF5-953E-A20502CCB476}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<Position X="3" Y="1"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Turbulence" ID="{EDA87B19-73AA-40A0-9F19-2073606DB710}"/>
 							<Value>6</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="masterVolume" ID="{16D6A1BF-90EA-4458-897A-819BFBA4868A}"/>
+							<Value>50</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Month" ID="{09E2B445-C4A3-447F-B3CA-818A1D925EF7}"/>
@@ -174,6 +178,10 @@
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_RPM" ID="{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"/>
 							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="effectsVolume" ID="{ED513413-85B0-45A9-B98F-EE61A42D635F}"/>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Fury" ID="{A2AE79DC-CA3A-46BA-9652-9986C322A87B}"/>
@@ -202,6 +210,10 @@
 						<RTPCValue>
 							<GameParameterRef Name="masterHiPass" ID="{6BE69766-05F5-4CC4-BD22-B4CD8F23794C}"/>
 							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="musicVolume" ID="{94967744-CEA3-4D37-893D-F4A043DFEB29}"/>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Freefall" ID="{2F2DFE37-4F9E-4D94-83D8-53CCA39781AD}"/>

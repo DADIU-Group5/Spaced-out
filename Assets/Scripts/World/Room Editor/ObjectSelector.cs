@@ -44,7 +44,7 @@ public class ObjectSelector : MonoBehaviour {
     public void ShowDefualt()
     {
         DestroyShowingModel();
-        transform.GetChild(0).gameObject.SetActive(true);
+        gameObject.GetComponent<Renderer>().enabled = true;
     }
 
     /// <summary>
@@ -61,10 +61,11 @@ public class ObjectSelector : MonoBehaviour {
     /// </summary>
     void ShowModel()
     {
-        transform.GetChild(0).gameObject.SetActive(false);
+        gameObject.GetComponent<Renderer>().enabled = false;
         DestroyShowingModel();
-        GOshowing = Instantiate((GameObject)canBe[showing], transform.GetChild(0).position,Quaternion.identity, transform.GetChild(0)) as GameObject;
-        GOshowing.transform.rotation = transform.GetChild(0).rotation;
+        Debug.Log(canBe[showing].name);
+        GOshowing = Instantiate((GameObject)canBe[showing],transform.position,Quaternion.identity,transform) as GameObject;
+        GOshowing.transform.rotation = gameObject.transform.rotation;
     }
 
     /// <summary>
@@ -88,7 +89,7 @@ public class ObjectSelector : MonoBehaviour {
     /// <summary>
     /// Used in level generation to replace the object with a gameplay object.
     /// </summary>
-    public void Replace()
+    public void Replace(Room r)
     {
         if(canBe.Count == 0)
         {
@@ -106,18 +107,37 @@ public class ObjectSelector : MonoBehaviour {
             showing = Random.Range(0, canBe.Count);
             ReplaceModel(canBe[showing]);
         }
-        Destroy(transform.GetChild(0).gameObject);
+        if(GOshowing == null)
+        {
+            return;
+        }
+        if(GOshowing.GetComponent<HazardState>() != null)
+        {
+            r.AddHazard(GOshowing.GetComponent<HazardState>());
+        }
+        if(GOshowing.GetComponent<SwitchItem>() != null)
+        {
+            GOshowing.GetComponent<SwitchItem>().AssignRoom(r);
+        }
+        Destroy(gameObject);
     }
 
     //Replaces the 'dummy' object with a gameplay object.
     void ReplaceModel(Object obj)
     {
+
+        if(obj == null)
+        {
+            Debug.Log(lockObject);
+            Debug.Log(this.name+"error");
+            return;
+        }
         GOshowing = Instantiate((GameObject)obj, transform.position, Quaternion.identity, transform.parent) as GameObject;
         if (gameObject.transform.localScale != Vector3.one)
         {
-            GOshowing.transform.localScale = transform.GetChild(0).localScale;
+            GOshowing.transform.localScale = gameObject.transform.localScale;
         }
-        GOshowing.transform.rotation = transform.GetChild(0).rotation;
+        GOshowing.transform.rotation = gameObject.transform.rotation;
     }
 
     public void LockObject()
@@ -133,13 +153,13 @@ public class ObjectSelector : MonoBehaviour {
         {
             if (Application.isEditor)
             {
-                DestroyImmediate(transform.GetChild(0).GetChild(0).gameObject);
+                DestroyImmediate(transform.GetChild(0).gameObject);
             }
             else
             {
-                Destroy(transform.GetChild(0).GetChild(0).gameObject);
+                Destroy(transform.GetChild(0).gameObject);
             }
-            transform.GetChild(0).gameObject.SetActive(true);
+            gameObject.GetComponent<Renderer>().enabled = true;
         }
         lockedAs = null;
     }

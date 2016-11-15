@@ -16,12 +16,12 @@ public class GameOverMenu : MonoBehaviour, Observer
     private bool playerIsDead = false;
     private bool playerWon = false;
     private float countingDown = 10;
+    private int level = 1;
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
         switch (evt.eventName)
         {
-
             case EventName.PlayerDead:
                 var payload = evt.payload;
                 EventName causeOfDeath = (EventName)payload[PayloadConstants.DEATH_CAUSE];
@@ -43,11 +43,6 @@ public class GameOverMenu : MonoBehaviour, Observer
                     case EventName.FuelEmpty:
                         deathCause = "You ran out of oxygen";
                         break;
-                   /* case EventName.FuelEmpty:
-                        deathCause = "";
-                        break;*/
-
-
                 }
 
                 DeathCauseText.text = deathCause;
@@ -55,7 +50,7 @@ public class GameOverMenu : MonoBehaviour, Observer
                 StartCoroutine(GameOver());
                 break;
             case EventName.PlayerWon:
-                StartCoroutine(Win());
+                playerWon = true;
                 break;
             default:
                 break;
@@ -67,46 +62,29 @@ public class GameOverMenu : MonoBehaviour, Observer
     /// </summary>
     public IEnumerator GameOver()
     {
-        Debug.Log("Gameover called");
-        //wait set amount of time...
-        yield return new WaitForSeconds(timeTilGameOverScreen);
+        if (!playerWon && !playerIsDead) {
+            Debug.Log("Gameover called");
+            //wait set amount of time...
+            yield return new WaitForSeconds(timeTilGameOverScreen);
 
-        //turn on all the UI elements in the GameOverCanvas
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            if (transform.GetChild(i).gameObject.name == "ResetButton")
-                continue;
-            if (transform.GetChild(i).gameObject.name == "WinText")
-                continue;
-            transform.GetChild(i).gameObject.SetActive(true);
+            //turn on all the UI elements in the GameOverCanvas
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).gameObject.SetActive(true);
+            }
+            countingDown = timeTilReset;
+            playerIsDead = true;
         }
-        countingDown = timeTilReset;
-        playerIsDead = true;
-
     }
 
-    /// <summary>
-    /// Set Win Game
-    /// </summary>
-    public IEnumerator Win()
+    public void RemoveGameOverScreen()
     {
-        //wait set amount of time...
-        //yield return new WaitForSeconds(timeTilGameOverScreen);
-
+        playerIsDead = false;
         //turn on all the UI elements in the GameOverCanvas
         for (int i = 0; i < transform.childCount; i++)
         {
-            if (transform.GetChild(i).gameObject.name == "ResetCountDownText")
-                continue;
-            if (transform.GetChild(i).gameObject.name == "GameOverText")
-                continue;
-            if (transform.GetChild(i).gameObject.name == "DeathCauseText")
-                continue;
-            transform.GetChild(i).gameObject.SetActive(true);
+            transform.GetChild(i).gameObject.SetActive(false);
         }
-        playerWon = true;
-        yield return null;
-
     }
 
     /// <summary>
@@ -114,6 +92,14 @@ public class GameOverMenu : MonoBehaviour, Observer
     /// </summary>
     public void ResetLevel()
     {
+        //shouldn't we go to the last transformation point?
+        //when we add that logic, remember:
+
+        //if reset to level start:
+        /* //player reset, so he hasn't died in this run yet.
+        PlayerPrefs.SetInt("playerDiedThisLevel", 0);*/
+
+        ScoreManager.instance.SetPlayerHasDiedThisLevel(level);
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }
@@ -121,6 +107,7 @@ public class GameOverMenu : MonoBehaviour, Observer
     void Start()
     {
         Subject.instance.AddObserver(this);
+        level = PlayerPrefs.GetInt("CurrentLevel");
     }
 
     // Update is called once per frame
@@ -136,7 +123,7 @@ public class GameOverMenu : MonoBehaviour, Observer
         //if the countdown has reached zero, reset the level
         if (countingDown <= 0)
         {
-            ResetLevel();
+            RemoveGameOverScreen();
         }
 	}
 }

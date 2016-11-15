@@ -30,9 +30,9 @@ public class LevelGenerator : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-        #if UNITY_EDITOR
-            UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
-        #endif
+#if UNITY_EDITOR
+        // UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
+#endif
         GenerateLevel();
     }
 
@@ -59,12 +59,20 @@ public class LevelGenerator : MonoBehaviour {
 
     void SetupSeeds()
     {
-        Debug.Log("Gets seed from level: " + PlayerPrefs.GetString("CurrentLevel"));
-        exteriorSeed = PlayerPrefs.GetInt("extSeed" + PlayerPrefs.GetString("CurrentLevel"));
+        print("Key is: " + "extSeed" + PlayerPrefs.GetInt("CurrentLevel"));
+        if (PlayerPrefs.GetInt("extSeed" + PlayerPrefs.GetInt("CurrentLevel")) == 0)
+        {
+            PlayerPrefs.SetInt("extSeed" + PlayerPrefs.GetInt("CurrentLevel"), Random.Range(1, 10000));
+        }
+        if (PlayerPrefs.GetInt("intSeed") == 0)
+        {
+            PlayerPrefs.SetInt("intSeed", Random.Range(1, 10000));
+        }
+        exteriorSeed = PlayerPrefs.GetInt("extSeed" + PlayerPrefs.GetInt("CurrentLevel"));
         interiorSeed = PlayerPrefs.GetInt("intSeed");
         Debug.Log("extSeed: " + exteriorSeed);
         Debug.Log("intSeed: " + interiorSeed);
-        minRooms = PlayerPrefs.GetInt(PlayerPrefs.GetString("CurrentLevel") + "Length");
+        minRooms = PlayerPrefs.GetInt(PlayerPrefs.GetInt("CurrentLevel") + "Length");
         maxRooms = minRooms;
     }
 
@@ -94,6 +102,10 @@ public class LevelGenerator : MonoBehaviour {
                 CheckpointManager.instance.SetSpawnDistance(playerDistanceFromDoor);
                 CheckpointManager.instance.SetNewCheckpoint(item.transform.position);
                 CheckpointManager.instance.SetNewCheckpointRotation(-item.transform.right);
+                CheckpointManager.instance.SetFuelCount(go.GetComponentInChildren<FuelController>().GetCurrentFuel());
+                var evt = new ObserverEvent(EventName.PlayerSpawned);
+                evt.payload.Add(PayloadConstants.PLAYER, go.GetComponentInChildren<PlayerController>().gameObject);
+                Subject.instance.Notify(gameObject, evt);
                 break;
             }
         }
@@ -124,13 +136,8 @@ public class LevelGenerator : MonoBehaviour {
             //If it could not create a room from a position, remove the previous room, and try again.
             //Should make sure it never hits a dead end.
             else
-            {
+            {   
                 createdRooms--;
-                if(createdRooms == 0)
-                {
-                    Debug.Log("Ignores collision.");
-                    return;
-                }
                 Destroy(spawnedRooms[spawnedRooms.Count - 1].gameObject);
                 spawnedRooms.RemoveAt(spawnedRooms.Count - 1);
                 allBounds.RemoveAt(spawnedRooms.Count - 1);
@@ -181,11 +188,11 @@ public class LevelGenerator : MonoBehaviour {
         }
 
         //Gets the rotation of the room. Should be rotated equal to the difference between the last and new doors right axis.
-        Quaternion rot = Quaternion.FromToRotation(-entranceDoor.transform.right, lastDoor.transform.right);
+        Quaternion rot = Quaternion.FromToRotation(entranceDoor.transform.right, -lastDoor.transform.right);
         newRoom.transform.rotation = rot;
 
         //Moves the new room into position.
-        newRoom.transform.position = newRoom.transform.position + (lastDoor.transform.position - entranceDoor.transform.position) + (entranceDoor.transform.right * 7.3f);
+        newRoom.transform.position = newRoom.transform.position + (lastDoor.transform.position - entranceDoor.transform.position) - (entranceDoor.transform.right * distanceBetweenRooms);
 
         //Get bounds.
         Bounds newBound = newRoom.AddComponent<CalcBounds>().calc();
@@ -226,12 +233,9 @@ public class LevelGenerator : MonoBehaviour {
                 if (door.GetComponent<Door>().GetDoorType() == DoorType.entrance)
                 {
                     GameObject newDoor = Instantiate(doorPrefab);
+                    newDoor.transform.rotation = door.transform.rotation;
+                    newDoor.transform.position = door.transform.position + (door.transform.right * (distanceBetweenRooms / 2));
                     newDoor.transform.parent = door.transform.parent;
-                    newDoor.transform.position = door.transform.position + (-door.transform.right * (5.65f));
-
-                    Quaternion rot = Quaternion.FromToRotation(-newDoor.transform.right, door.transform.right);
-                    newDoor.transform.rotation = rot;
-
                     Destroy(door);
                 }
                 else

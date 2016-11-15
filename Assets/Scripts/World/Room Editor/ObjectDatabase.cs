@@ -30,10 +30,7 @@ public class ObjectDatabase : MonoBehaviour {
             Destroy(gameObject);
             return;
         }
-        if (enviromentalObjects.Count == 0)
-        {
-            LoadObjects();
-        }
+        LoadObjects();
     }
 
     #if UNITY_EDITOR

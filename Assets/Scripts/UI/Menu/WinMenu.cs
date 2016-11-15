@@ -89,7 +89,7 @@ public class WinMenu : MonoBehaviour, Observer
         if (level < 5)
         {
             PlayerPrefs.SetInt("CurrentLevel", level);
-
+            PlayerPrefs.SetInt("intSeed", 0);
             SceneManager.LoadScene("LevelGenerator");
         }
         else

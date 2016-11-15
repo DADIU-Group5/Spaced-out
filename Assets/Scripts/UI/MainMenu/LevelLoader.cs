@@ -49,6 +49,7 @@ public class LevelLoader : MonoBehaviour {
             {
                 OverrideSeeds(extSeed, intSeed, level.ToString());
             }
+            PlayerPrefs.SetInt("intSeed", 0);
             SceneManager.LoadScene("LevelGenerator");
         }
     }

@@ -18,6 +18,11 @@ public class ObjectDatabase : MonoBehaviour {
     List<Object> floors = new List<Object>();
     List<Object> doors = new List<Object>();
 
+    List<Object> small = new List<Object>();
+    List<Object> medium = new List<Object>();
+    List<Object> large = new List<Object>();
+    List<Object> xLarge = new List<Object>();
+
     void Awake()
     {
         if(instance == null)
@@ -59,6 +64,11 @@ public class ObjectDatabase : MonoBehaviour {
         innerCornors = new List<Object>(Resources.LoadAll("ObjectDatabase/InnerCornors"));
         floors = new List<Object>(Resources.LoadAll("ObjectDatabase/Floors"));
         doors = new List<Object>(Resources.LoadAll("ObjectDatabase/Doors"));
+
+        small = new List<Object>(Resources.LoadAll("ObjectDatabase/EnviromentalObjects/Small"));
+        medium = new List<Object>(Resources.LoadAll("ObjectDatabase/EnviromentalObjects/Medium"));
+        large = new List<Object>(Resources.LoadAll("ObjectDatabase/EnviromentalObjects/Large"));
+        xLarge = new List<Object>(Resources.LoadAll("ObjectDatabase/EnviromentalObjects/XLarge"));
     }
 
     public List<Object> GetEnviromentalObjects()
@@ -111,4 +121,22 @@ public class ObjectDatabase : MonoBehaviour {
         return doors;
     }
 
+    public List<Object> GetSmall()
+    {
+        return small;
+    }
+
+    public List<Object> GetMedium()
+    {
+        return medium;
+    }
+
+    public List<Object> GetLarge()
+    {
+        return large;
+    }
+    public List<Object> GetXLarge()
+    {
+        return xLarge;
+    }
 }

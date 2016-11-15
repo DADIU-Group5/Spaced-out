@@ -72,7 +72,8 @@ public class LevelGenerator : MonoBehaviour {
         interiorSeed = PlayerPrefs.GetInt("intSeed");
         Debug.Log("extSeed: " + exteriorSeed);
         Debug.Log("intSeed: " + interiorSeed);
-        minRooms = PlayerPrefs.GetInt(PlayerPrefs.GetInt("CurrentLevel") + "Length");
+        //minRooms = PlayerPrefs.GetInt(PlayerPrefs.GetInt("CurrentLevel") + "Length");
+        minRooms = 3;
         maxRooms = minRooms;
     }
 
@@ -97,8 +98,8 @@ public class LevelGenerator : MonoBehaviour {
         {
             if(item.GetComponent<Door>().GetDoorType() == DoorType.entrance)
             {
-                GameObject go = Instantiate(playerPrefab, item.transform.position - (item.transform.right*playerDistanceFromDoor), Quaternion.identity) as GameObject;
-                go.transform.LookAt(item.transform.position - (item.transform.right * (playerDistanceFromDoor+1)), Vector3.up);
+                GameObject go = Instantiate(playerPrefab, item.transform.position - (item.transform.right)+new Vector3(0,2,0), Quaternion.identity) as GameObject;
+                go.transform.LookAt(item.transform.position - (item.transform.right * (playerDistanceFromDoor+1) + new Vector3(0, 2, 0)), Vector3.up);
                 CheckpointManager.instance.SetSpawnDistance(playerDistanceFromDoor);
                 CheckpointManager.instance.SetNewCheckpoint(item.transform.position);
                 CheckpointManager.instance.SetNewCheckpointRotation(-item.transform.right);
@@ -117,7 +118,7 @@ public class LevelGenerator : MonoBehaviour {
     void SpawnKey()
     {
         Transform tempTrans = GetRandomDoor(spawnedRooms[spawnedRooms.Count - 1]).transform;
-        Instantiate(keyPrefab, tempTrans.position - (tempTrans.right*keyDistanceFromDoor), Quaternion.identity);
+        Instantiate(keyPrefab, tempTrans.position - (tempTrans.right*-keyDistanceFromDoor) + new Vector3(0, 2, 0), Quaternion.identity);
     }
 
     /// <summary>
@@ -188,19 +189,20 @@ public class LevelGenerator : MonoBehaviour {
         }
 
         //Gets the rotation of the room. Should be rotated equal to the difference between the last and new doors right axis.
-        Quaternion rot = Quaternion.FromToRotation(entranceDoor.transform.right, -lastDoor.transform.right);
-        newRoom.transform.rotation = rot;
+        float lastY = lastDoor.transform.eulerAngles.y + 180;
+        float newY = lastY - entranceDoor.transform.eulerAngles.y;
+        newRoom.transform.Rotate(new Vector3(0, newY, 0));
 
         //Moves the new room into position.
-        newRoom.transform.position = newRoom.transform.position + (lastDoor.transform.position - entranceDoor.transform.position) - (entranceDoor.transform.right * distanceBetweenRooms);
+        newRoom.transform.position = newRoom.transform.position + (lastDoor.transform.position - entranceDoor.transform.position) + (entranceDoor.transform.right * 7.3f);
 
         //Get bounds.
         Bounds newBound = newRoom.AddComponent<CalcBounds>().calc();
 
         if (DoesRoomIntersect(newBound))
         {
-            Destroy(newRoom);
-            return false;
+            /*Destroy(newRoom);
+            return false;*/
         }
         entranceDoor.GetComponent<Door>().ConnectRoom(lastDoor);
         if (lastDoor != null)
@@ -234,8 +236,9 @@ public class LevelGenerator : MonoBehaviour {
                 {
                     GameObject newDoor = Instantiate(doorPrefab);
                     newDoor.transform.rotation = door.transform.rotation;
-                    newDoor.transform.position = door.transform.position + (door.transform.right * (distanceBetweenRooms / 2));
+                    
                     newDoor.transform.parent = door.transform.parent;
+                    newDoor.transform.position = door.transform.position + (-door.transform.right * (5.65f));
                     Destroy(door);
                 }
                 else

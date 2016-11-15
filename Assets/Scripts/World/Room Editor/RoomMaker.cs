@@ -13,6 +13,18 @@ public class RoomMaker : MonoBehaviour {
     public GameObject outerCornorPrefab;
     public GameObject doorPrefab;
 
+    public GameObject hazardObject;
+
+    public GameObject switchObject;
+
+    public GameObject smallObect;
+    public GameObject mediumObject;
+    public GameObject largeObject;
+    public GameObject XLargeObject;
+
+    public GameObject fuel;
+    public GameObject comic;
+
     Room currentRoom;
 
     string rName;
@@ -96,6 +108,59 @@ public class RoomMaker : MonoBehaviour {
     {
         GameObject temp = Instantiate(doorPrefab, pos, Quaternion.identity) as GameObject;
         currentRoom.AddDoor(temp);
+        return temp;
+    }
+
+    public GameObject NewHazard(Vector3 pos, Quaternion rot)
+    {
+        GameObject temp = Instantiate(hazardObject, pos, rot) as GameObject;
+        currentRoom.AddHazardObject(temp);
+        return temp;
+    }
+
+    public GameObject NewSwitch(Vector3 pos, Quaternion rot)
+    {
+        GameObject temp = Instantiate(switchObject, pos, rot) as GameObject;
+        currentRoom.AddSwitch(temp);
+        return temp;
+    }
+
+    public GameObject NewProp(Vector3 pos, int size)
+    {
+        GameObject temp = null;
+        switch (size)
+        {
+            case 0:
+                temp = Instantiate(smallObect, pos, Quaternion.identity) as GameObject;
+                break;
+            case 1:
+                temp = Instantiate(mediumObject, pos, Quaternion.identity) as GameObject;
+                break;
+            case 2:
+                temp = Instantiate(largeObject, pos, Quaternion.identity) as GameObject;
+                break;
+            case 3:
+                temp = Instantiate(XLargeObject, pos, Quaternion.identity) as GameObject;
+                break;
+            default:
+                break;
+        }
+        currentRoom.AddEnviromentalObject(temp);
+        return temp;
+    }
+
+    public GameObject NewPickUp(Vector3 pos, int type)
+    {
+        GameObject temp = null;
+        if (type == 0)
+        {
+            temp = Instantiate(fuel, pos, Quaternion.identity) as GameObject;
+        }
+        else
+        {
+            temp = Instantiate(comic, pos, Quaternion.identity) as GameObject;
+        }
+        currentRoom.AddPickup(temp);
         return temp;
     }
 

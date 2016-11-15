@@ -3,13 +3,12 @@ using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 
-[CustomEditor(typeof(RoomMaker))]
 public class RoomMakerEditor : EditorWindow {
 
     public static RoomMakerEditor window;
     RoomMaker RM;
 
-    enum States { noRoom, Editing, Saving, Loading, CreateRoom }
+    enum States { noRoom, Editing, Saving, Loading, CreateRoom, Props }
     States states;
 
     string roomName;
@@ -20,6 +19,8 @@ public class RoomMakerEditor : EditorWindow {
     string pathName = "Assets/Resources/Rooms/";
 
     int objectToCreate = 0;
+
+    Vector3 tempPos = Vector3.zero;
 
     [MenuItem("RoomEditor/RoomMakerWindow")]
     public static void ShowWindow()
@@ -56,6 +57,9 @@ public class RoomMakerEditor : EditorWindow {
             case States.CreateRoom:
                 CreateBasicRoom();
                 break;
+            case States.Props:
+                PropCreation();
+                break;
             default:
                 break;
         }
@@ -78,6 +82,10 @@ public class RoomMakerEditor : EditorWindow {
                 return;
             }
             if (states == States.CreateRoom)
+            {
+                return;
+            }
+            if(states == States.Props)
             {
                 return;
             }
@@ -118,22 +126,39 @@ public class RoomMakerEditor : EditorWindow {
 
     void Editing()
     {
-        if (Selection.activeGameObject != null)
+        if (Selection.activeGameObject != null && Selection.activeGameObject.activeInHierarchy)
         {
-            if(Selection.activeGameObject.GetComponent<ObjectSelector>() == null && Selection.activeTransform.parent != null)
+            if(Selection.activeGameObject.GetComponent<ObjectSelector>() == null)
             {
-                if(Selection.activeTransform.parent.GetComponent<ObjectSelector>() != null)
+                if (Selection.activeTransform.parent != null)
                 {
-                    Selection.activeTransform = Selection.activeTransform.parent;
+                    if (Selection.activeTransform.parent.GetComponent<ObjectSelector>() != null)
+                    {
+                        Selection.activeTransform = Selection.activeTransform.parent;
+                    }
                 }
             }
             if (Selection.activeGameObject.GetComponent<ObjectSelector>() != null)
             {
                 EditorGUILayout.LabelField("Currently selected object: ", Selection.activeGameObject.name);
-                if (GUILayout.Button("Duplicate"))
+                EditorGUILayout.BeginHorizontal();
+                if (GUILayout.Button("Duplicate UP"))
                 {
-                    Duplicate(Selection.activeGameObject);
+                    Duplicate(Selection.activeGameObject, new Vector2(0, 4));
                 }
+                if (GUILayout.Button("Duplicate DOWN"))
+                {
+                    Duplicate(Selection.activeGameObject, new Vector2(0, -4));
+                }
+                if (GUILayout.Button("Duplicate RIGHT"))
+                {
+                    Duplicate(Selection.activeGameObject, new Vector2(4, 0));
+                }
+                if (GUILayout.Button("Duplicate LEFT"))
+                {
+                    Duplicate(Selection.activeGameObject, new Vector2(-4, 0)); ;
+                }
+                EditorGUILayout.EndHorizontal();
                 if (GUILayout.Button("Delete"))
                 {
                     DestroyImmediate(Selection.activeGameObject);
@@ -194,26 +219,34 @@ public class RoomMakerEditor : EditorWindow {
         GUILayout.FlexibleSpace();
         GUILayout.FlexibleSpace();
         objectToCreate = EditorGUILayout.Popup("Create new object: ", objectToCreate, new string[] { "Select", "Floor", "Wall", "InnerCornor", "OuterCornor", "Door" });
+        if(Selection.activeTransform != null)
+        {
+            tempPos = Selection.activeTransform.position;
+        }
+        else
+        {
+            tempPos = Vector3.zero;
+        }
         switch (objectToCreate)
         {
             case 1:
-                Selection.activeGameObject = RM.NewFloor(Vector3.zero);
+                Selection.activeGameObject = RM.NewFloor(tempPos);
                 objectToCreate = 0;
                 break;
             case 2:
-                Selection.activeGameObject = RM.NewWall(Vector3.zero);
+                Selection.activeGameObject = RM.NewWall(tempPos);
                 objectToCreate = 0;
                 break;
             case 3:
-                Selection.activeGameObject = RM.NewInner(Vector3.zero);
+                Selection.activeGameObject = RM.NewInner(tempPos);
                 objectToCreate = 0;
                 break;
             case 4:
-                Selection.activeGameObject = RM.NewOuter(Vector3.zero);
+                Selection.activeGameObject = RM.NewOuter(tempPos);
                 objectToCreate = 0;
                 break;
             case 5:
-                Selection.activeGameObject = RM.NewDoor(Vector3.zero);
+                Selection.activeGameObject = RM.NewDoor(tempPos);
                 objectToCreate = 0;
                 break;
             default:
@@ -230,7 +263,7 @@ public class RoomMakerEditor : EditorWindow {
         if (GUILayout.Button("Save!", GUILayout.Height(50)))
         {
             RM.GetRoom().CleanData();
-            //UpdateAll();
+            RM.GetRoom().UpdateLists();
             roomName = RM.GetName();
             if (RM.GetRoom().canBeRoom())
             {
@@ -239,11 +272,206 @@ public class RoomMakerEditor : EditorWindow {
         }
         EditorGUILayout.EndHorizontal();
         GUILayout.FlexibleSpace();
+        if (GUILayout.Button("Set Props", GUILayout.Height(50)))
+        {
+            states = States.Props;
+        }
     }
 
-    void Duplicate(GameObject toDuplicate)
+    void PropCreation()
     {
-        GameObject go = Instantiate(toDuplicate, toDuplicate.transform.position, toDuplicate.transform.rotation, toDuplicate.transform.parent) as GameObject;
+        if (Selection.activeGameObject != null && Selection.activeGameObject.activeInHierarchy)
+        {
+            if (Selection.activeGameObject.GetComponent<ObjectSelector>() == null)
+            {
+                if (Selection.activeTransform.parent != null)
+                {
+                    if (Selection.activeTransform.parent.GetComponent<ObjectSelector>() != null)
+                    {
+                        Selection.activeTransform = Selection.activeTransform.parent;
+                    }
+                }
+            }
+            if (Selection.activeGameObject.GetComponent<ObjectSelector>() != null)
+            {
+                EditorGUILayout.LabelField("Currently selected object: ", Selection.activeGameObject.name);
+                EditorGUILayout.BeginHorizontal();
+                if (GUILayout.Button("Duplicate UP"))
+                {
+                    Duplicate(Selection.activeGameObject, new Vector2(0, 4));
+                }
+                if (GUILayout.Button("Duplicate DOWN"))
+                {
+                    Duplicate(Selection.activeGameObject, new Vector2(0, -4));
+                }
+                if (GUILayout.Button("Duplicate RIGHT"))
+                {
+                    Duplicate(Selection.activeGameObject, new Vector2(4, 0));
+                }
+                if (GUILayout.Button("Duplicate LEFT"))
+                {
+                    Duplicate(Selection.activeGameObject, new Vector2(-4, 0)); ;
+                }
+                EditorGUILayout.EndHorizontal();
+                if (GUILayout.Button("Delete"))
+                {
+                    DestroyImmediate(Selection.activeGameObject);
+                    return;
+                }
+            }
+            else
+            {
+                EditorGUILayout.LabelField("No duplicatable object selected");
+                GUILayout.Space(42);
+            }
+            if (GUILayout.Button("Focus"))
+            {
+                SceneView.lastActiveSceneView.FrameSelected();
+            }
+            if (Selection.activeGameObject.GetComponent<SmallObjectSelector>() != null || Selection.activeGameObject.GetComponent<MediumObjectSelector>() != null || Selection.activeGameObject.GetComponent<LargeObjectSelector>() != null || Selection.activeGameObject.GetComponent<XLargeObjectSelector>() != null || Selection.activeGameObject.GetComponent<PickupSelector>() != null)
+            {
+                EditorGUILayout.LabelField("Rotable Object Selected.");
+                EditorGUILayout.BeginHorizontal();
+                if (GUILayout.Button("+90"))
+                {
+                    Selection.activeTransform.Rotate(new Vector3(0, 90, 0));
+                }
+                if (GUILayout.Button("-90"))
+                {
+                    Selection.activeTransform.Rotate(new Vector3(0, -90, 0));
+                }
+                EditorGUILayout.EndHorizontal();
+            }
+            SpawnHazardOrSwitch();
+        }
+        else
+        {
+            EditorGUILayout.LabelField("No Object selected");
+            GUILayout.Space(64);
+        }
+        GUILayout.FlexibleSpace();
+
+
+        GUILayout.FlexibleSpace();
+        objectToCreate = EditorGUILayout.Popup("Create new object: ", objectToCreate, new string[] { "Select", "Small Object", "Medium Object", "Large Object", "XLarge Object", "Fuel", "Comic" });
+        if (Selection.activeTransform != null)
+        {
+            tempPos = Selection.activeTransform.position;
+        }
+        else
+        {
+            tempPos = Vector3.zero;
+        }
+        switch (objectToCreate+2)
+        {
+            /*case 1:
+                Selection.activeGameObject = RM.NewHazard(tempPos);
+                objectToCreate = 0;
+                break;
+            case 2:
+                Selection.activeGameObject = RM.NewSwitch(tempPos);
+                objectToCreate = 0;
+                break;*/
+            case 3:
+                Selection.activeGameObject = RM.NewProp(tempPos, 0);
+                objectToCreate = 0;
+                break;
+            case 4:
+                Selection.activeGameObject = RM.NewProp(tempPos, 1);
+                objectToCreate = 0;
+                break;
+            case 5:
+                Selection.activeGameObject = RM.NewProp(tempPos, 2);
+                objectToCreate = 0;
+                break;
+            case 6:
+                Selection.activeGameObject = RM.NewProp(tempPos, 3);
+                objectToCreate = 0;
+                break;
+            case 7:
+                Selection.activeGameObject = RM.NewPickUp(tempPos,0);
+                objectToCreate = 0;
+                break;
+            case 8:
+                Selection.activeGameObject = RM.NewPickUp(tempPos,1);
+                objectToCreate = 0;
+                break;
+            default:
+                break;
+        }
+
+        GUILayout.FlexibleSpace();
+        if (GUILayout.Button("Edit room", GUILayout.Height(50)))
+        {
+            states = States.Editing;
+        }
+    }
+
+    void SpawnHazardOrSwitch()
+    {
+        if (Selection.activeGameObject.GetComponent<WallSelector>() != null)
+        {
+            EditorGUILayout.LabelField("Hazard/Switch spot");
+            EditorGUILayout.BeginHorizontal();
+            if (GUILayout.Button("Spawn Hazard here"))
+            {
+                RM.NewHazard(Selection.activeTransform.GetChild(0).position + new Vector3(0, 2, 0) + Selection.activeTransform.right * 0.5f, Selection.activeTransform.rotation);
+            }
+            if (GUILayout.Button("Spawn Switch here"))
+            {
+                RM.NewSwitch(Selection.activeTransform.GetChild(0).position + new Vector3(0, 2, 0) + Selection.activeTransform.right * 0.5f, Selection.activeTransform.rotation);
+            }
+            EditorGUILayout.EndHorizontal();
+        }
+        if (Selection.activeGameObject.GetComponent<InnerCornorSelector>() != null)
+        {
+            EditorGUILayout.LabelField("Hazard/Switch spot");
+            EditorGUILayout.BeginHorizontal();
+            if (GUILayout.Button("Spawn Hazard Left"))
+            {
+                RM.NewHazard(Selection.activeTransform.GetChild(1).position + Selection.activeTransform.GetChild(1).right * 0.5f, Selection.activeTransform.GetChild(1).rotation);
+            }
+            if (GUILayout.Button("Spawn Hazard Right"))
+            {
+                RM.NewHazard(Selection.activeTransform.GetChild(2).position + Selection.activeTransform.GetChild(2).right * 0.5f, Selection.activeTransform.GetChild(2).rotation);
+            }
+            if (GUILayout.Button("Spawn Switch Left"))
+            {
+                RM.NewSwitch(Selection.activeTransform.GetChild(1).position + Selection.activeTransform.GetChild(1).right * 0.5f, Selection.activeTransform.GetChild(1).rotation);
+            }
+            if (GUILayout.Button("Spawn Switch Right"))
+            {
+                RM.NewSwitch(Selection.activeTransform.GetChild(2).position + Selection.activeTransform.GetChild(2).right * 0.5f, Selection.activeTransform.GetChild(2).rotation);
+            }
+            EditorGUILayout.EndHorizontal();
+        }
+        if (Selection.activeGameObject.GetComponent<OuterCornorSelector>() != null)
+        {
+            EditorGUILayout.LabelField("Hazard/Switch spot");
+            EditorGUILayout.BeginHorizontal();
+            if (GUILayout.Button("Spawn Hazard Left"))
+            {
+                RM.NewHazard(Selection.activeTransform.GetChild(1).position + Selection.activeTransform.GetChild(1).right * 0.5f, Selection.activeTransform.GetChild(1).rotation);
+            }
+            if (GUILayout.Button("Spawn Hazard Right"))
+            {
+                RM.NewHazard(Selection.activeTransform.GetChild(2).position + Selection.activeTransform.GetChild(2).right * 0.5f, Selection.activeTransform.GetChild(2).rotation);
+            }
+            if (GUILayout.Button("Spawn Switch Left"))
+            {
+                RM.NewSwitch(Selection.activeTransform.GetChild(1).position + Selection.activeTransform.GetChild(1).right * 0.5f, Selection.activeTransform.GetChild(1).rotation);
+            }
+            if (GUILayout.Button("Spawn Switch Right"))
+            {
+                RM.NewSwitch(Selection.activeTransform.GetChild(2).position + Selection.activeTransform.GetChild(2).right * 0.5f, Selection.activeTransform.GetChild(2).rotation);
+            }
+            EditorGUILayout.EndHorizontal();
+        }
+    }
+
+    void Duplicate(GameObject toDuplicate, Vector2 offset)
+    {
+        GameObject go = Instantiate(toDuplicate, toDuplicate.transform.position+new Vector3(offset.x,0,offset.y), toDuplicate.transform.rotation, toDuplicate.transform.parent) as GameObject;
         go.name = toDuplicate.name;
         Selection.activeGameObject = go;
     }

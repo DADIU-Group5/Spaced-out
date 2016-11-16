@@ -25,7 +25,7 @@ public class MenuHeader : MonoBehaviour {
     public void ResetAll()
     {
         ProgressManager.instance.Reset();
-        GenerationDataManager.instance.
+        GenerationDataManager.instance.Reset();
         medalLabel.text = "0";
     }
 }

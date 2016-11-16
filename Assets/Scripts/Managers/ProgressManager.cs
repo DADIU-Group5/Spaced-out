@@ -60,8 +60,8 @@ public class ProgressManager : Singleton<ProgressManager> {
         return new bool[] { levelProgress.completed, levelProgress.allComics, levelProgress.noDeaths }; 
     }
 
-    // add currency though purchase
-    public void BuyCurrency(int amount)
+    // change the currency
+    public void ChangeCurrency(int amount)
     {
         progress.currency += amount;
     }
@@ -112,6 +112,6 @@ public class ProgressManager : Singleton<ProgressManager> {
             throw new UnityException("Invalid level: " + level);
         }
 
-        return progress.levels[level].unlocked; 
+        return progress.levels[level - 1].unlocked; 
     }
 }

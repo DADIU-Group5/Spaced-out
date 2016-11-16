@@ -26,5 +26,9 @@
     PlayerExploded,
     FuelEmpty,
     UpdateStatus,
+<<<<<<< HEAD
     PlayerLaunchModeToggle
+=======
+    ShowSubtile
+>>>>>>> beta
 }

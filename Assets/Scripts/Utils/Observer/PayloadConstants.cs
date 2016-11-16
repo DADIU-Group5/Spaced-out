@@ -11,4 +11,7 @@ public class PayloadConstants
     public const string DEATH_CAUSE = "deathCause";
     public const string STATUS = "status";
     public const string PLAYER = "player";
+    public const string SUBTITLE_TEXT = "subtitleText";
+    public const string SUBTITLE_START = "subtitleStart";
+    public const string SUBTITLE_DURATION = "subtitleDuration";
 }

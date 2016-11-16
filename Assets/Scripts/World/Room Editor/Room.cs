@@ -303,7 +303,7 @@ public class Room : MonoBehaviour
                 Debug.Log("not there");
             }
         }
-        foreach (GameObject item in shapingObjects)
+        /*foreach (GameObject item in shapingObjects)
         {
             if (item.GetComponent<ObjectSelector>() != null)
             {
@@ -324,6 +324,6 @@ public class Room : MonoBehaviour
             {
                 Debug.Log("not there");
             }
-        }
+        }*/
     }
 }

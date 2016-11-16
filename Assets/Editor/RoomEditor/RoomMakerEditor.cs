@@ -106,10 +106,18 @@ public class RoomMakerEditor : EditorWindow {
     {
         GUILayout.Label("Currently no room, create a new room or load an existing room.");
         GUILayout.FlexibleSpace();
+        EditorGUILayout.BeginHorizontal();
         if (GUILayout.Button("New room", GUILayout.Height(50)))
         {
+            RM.RegularRoom();
             NewRoom();
         }
+        if (GUILayout.Button("New tall room", GUILayout.Height(50)))
+        {
+            RM.TallRoom();
+            NewRoom();
+        }
+        EditorGUILayout.EndHorizontal();
         GUILayout.FlexibleSpace();
 
         if (GUILayout.Button("Load room", GUILayout.Height(50)))
@@ -353,7 +361,7 @@ public class RoomMakerEditor : EditorWindow {
 
 
         GUILayout.FlexibleSpace();
-        objectToCreate = EditorGUILayout.Popup("Create new object: ", objectToCreate, new string[] { "Select", "Small Object", "Medium Object", "Large Object", "XLarge Object", "Fuel", "Comic" });
+        objectToCreate = EditorGUILayout.Popup("Create new object: ", objectToCreate, new string[] { "Select", "Small Object", "Medium Object", "Large Object", "XLarge Object", "Props", "Fuel", "Comic" });
         if (Selection.activeTransform != null)
         {
             tempPos = Selection.activeTransform.position;
@@ -389,10 +397,14 @@ public class RoomMakerEditor : EditorWindow {
                 objectToCreate = 0;
                 break;
             case 7:
-                Selection.activeGameObject = RM.NewPickUp(tempPos,0);
+                Selection.activeGameObject = RM.NewFloatingProp(tempPos);
                 objectToCreate = 0;
                 break;
             case 8:
+                Selection.activeGameObject = RM.NewPickUp(tempPos,0);
+                objectToCreate = 0;
+                break;
+            case 9:
                 Selection.activeGameObject = RM.NewPickUp(tempPos,1);
                 objectToCreate = 0;
                 break;

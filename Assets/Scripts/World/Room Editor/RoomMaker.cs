@@ -22,12 +22,16 @@ public class RoomMaker : MonoBehaviour {
     public GameObject largeObject;
     public GameObject XLargeObject;
 
+    public GameObject props;
+
     public GameObject fuel;
     public GameObject comic;
 
     Room currentRoom;
 
     string rName;
+
+    public bool tallRoom = false;
 
     public bool EditingRoom()
     {
@@ -37,6 +41,16 @@ public class RoomMaker : MonoBehaviour {
     public Room GetRoom()
     {
         return currentRoom;
+    }
+
+    public void TallRoom()
+    {
+        tallRoom = true;
+    }
+
+    public void RegularRoom()
+    {
+        tallRoom = false;
     }
 
     public void LoadRoom(GameObject prefabToLoad)
@@ -77,7 +91,15 @@ public class RoomMaker : MonoBehaviour {
     public GameObject NewFloor(Vector3 pos)
     {
         GameObject temp = Instantiate(floorPrefab, pos, Quaternion.identity) as GameObject;
-        GameObject rTemp = Instantiate(roofPrefab, pos + new Vector3(0, 4, 0), roofPrefab.transform.rotation) as GameObject;
+        GameObject rTemp = null;
+        if (tallRoom)
+        {
+            rTemp = Instantiate(roofPrefab, pos + new Vector3(0, 8, 0), roofPrefab.transform.rotation) as GameObject;
+        }
+        else
+        {
+            rTemp = Instantiate(roofPrefab, pos + new Vector3(0, 4, 0), roofPrefab.transform.rotation) as GameObject;
+        }
         currentRoom.AddShapingObject(temp);
         rTemp.transform.parent = temp.transform;
         return temp;
@@ -85,28 +107,87 @@ public class RoomMaker : MonoBehaviour {
 
     public GameObject NewInner(Vector3 pos)
     {
-        GameObject temp = Instantiate(innerCornorPrefab, pos, Quaternion.identity) as GameObject;
+        GameObject temp = null;
+        if (tallRoom)
+        {
+            temp = Instantiate(innerCornorPrefab, pos, Quaternion.identity) as GameObject;
+            GameObject upsideDown = Instantiate(innerCornorPrefab, pos + new Vector3(0, 8, 0), Quaternion.AngleAxis(180, Vector3.right)) as GameObject;
+            upsideDown.transform.Rotate(Vector3.up, -90);
+            upsideDown.transform.parent = temp.transform;
+        }
+        else
+        {
+            temp = Instantiate(innerCornorPrefab, pos, Quaternion.identity) as GameObject;
+            GameObject roof = Instantiate(roofPrefab, pos + new Vector3(0, 4, 0), roofPrefab.transform.rotation) as GameObject;
+            roof.transform.parent = temp.transform;
+        }
         currentRoom.AddShapingObject(temp);
         return temp;
     }
 
     public GameObject NewOuter(Vector3 pos)
     {
-        GameObject temp = Instantiate(outerCornorPrefab, pos, Quaternion.identity) as GameObject;
+        GameObject temp = null;
+        if (tallRoom)
+        {
+            temp = Instantiate(outerCornorPrefab, pos, Quaternion.identity) as GameObject;
+            GameObject upsideDown = Instantiate(outerCornorPrefab, pos + new Vector3(0, 8, 0), Quaternion.AngleAxis(180, Vector3.right)) as GameObject;
+            upsideDown.transform.Rotate(Vector3.up, -90);
+            upsideDown.transform.parent = temp.transform;
+        }
+        else
+        {
+            temp = Instantiate(outerCornorPrefab, pos, Quaternion.identity) as GameObject;
+            GameObject roof = Instantiate(roofPrefab, pos + new Vector3(2.826f, 4, 0), roofPrefab.transform.rotation) as GameObject;
+            roof.transform.localScale = new Vector3(0.4177305f, 1, 1);
+            roof.transform.parent = temp.transform;
+            GameObject roof1 = Instantiate(roofPrefab, pos + new Vector3(2.826f, 4, -2.826f), roofPrefab.transform.rotation) as GameObject;
+            roof1.transform.localScale = new Vector3(0.4177305f, 1, 0.4177305f);
+            roof1.transform.parent = temp.transform;
+            GameObject roof2 = Instantiate(roofPrefab, pos + new Vector3(0, 4, -2.826f), roofPrefab.transform.rotation) as GameObject;
+            roof2.transform.localScale = new Vector3(1, 1, 0.4177305f);
+            roof2.transform.parent = temp.transform;
+        }
         currentRoom.AddShapingObject(temp);
         return temp;
     }
 
     public GameObject NewWall(Vector3 pos)
     {
-        GameObject temp = Instantiate(wallprefab, pos, Quaternion.identity) as GameObject;
+        GameObject temp = null;
+        if (tallRoom)
+        {
+            temp = Instantiate(wallprefab, pos, Quaternion.identity) as GameObject;
+            GameObject upsideDown = Instantiate(wallprefab, pos + new Vector3(0, 8, 0), Quaternion.AngleAxis(180, Vector3.right)) as GameObject;
+            upsideDown.transform.parent = temp.transform;
+        }
+        else
+        {
+            temp = Instantiate(wallprefab, pos, Quaternion.identity) as GameObject;
+            GameObject roof = Instantiate(roofPrefab, pos + new Vector3(-2.826f, 4, 0), roofPrefab.transform.rotation) as GameObject;
+            roof.transform.localScale = new Vector3(0.4177305f, 1, 1);
+            roof.transform.parent = temp.transform;
+        }
         currentRoom.AddShapingObject(temp);
         return temp;
     }
 
     public GameObject NewDoor(Vector3 pos)
     {
-        GameObject temp = Instantiate(doorPrefab, pos, Quaternion.identity) as GameObject;
+        GameObject temp = null;
+        if (tallRoom)
+        {
+            temp = Instantiate(doorPrefab, pos, Quaternion.identity) as GameObject;
+            GameObject upsideDown = Instantiate(wallprefab, pos + new Vector3(0, 8, 0), Quaternion.AngleAxis(180, Vector3.right)) as GameObject;
+            upsideDown.transform.parent = temp.transform;
+        }
+        else
+        {
+            temp = Instantiate(doorPrefab, pos, Quaternion.identity) as GameObject;
+            GameObject roof = Instantiate(roofPrefab, pos + new Vector3(-2.826f, 4, 0), roofPrefab.transform.rotation) as GameObject;
+            roof.transform.localScale = new Vector3(0.4177305f, 1, 1);
+            roof.transform.parent = temp.transform;
+        }
         currentRoom.AddDoor(temp);
         return temp;
     }
@@ -146,6 +227,13 @@ public class RoomMaker : MonoBehaviour {
                 break;
         }
         currentRoom.AddEnviromentalObject(temp);
+        return temp;
+    }
+
+    public GameObject NewFloatingProp(Vector3 pos)
+    {
+        GameObject temp = Instantiate(props, pos, Quaternion.identity) as GameObject;
+        currentRoom.AddFloatingObject(temp);
         return temp;
     }
 

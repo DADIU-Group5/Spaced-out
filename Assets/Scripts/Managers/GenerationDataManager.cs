@@ -40,6 +40,12 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
         this.level = level;
     }
 
+    // returns the current level
+    public int GetCurrentLevel()
+    {
+        return level;
+    }
+
     // Return the level data for generator
 	public GenerationData.LevelData GetLevelData()
     {

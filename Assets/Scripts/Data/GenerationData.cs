@@ -15,7 +15,7 @@ public class GenerationData : ScriptableObject {
         {
             levels[i] = new LevelData()
             {
-                length = i / 2 + 4,
+                rooms = i / 2 + 4,
                 exteriorSeed = i,
                 interiorSeed = i
             };
@@ -25,7 +25,7 @@ public class GenerationData : ScriptableObject {
     [Serializable]
     public struct LevelData
     {
-        public int length;
+        public int rooms;
         public int exteriorSeed;
         public int interiorSeed;
     }

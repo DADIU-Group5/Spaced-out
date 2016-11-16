@@ -107,7 +107,7 @@ public class GameOverMenu : MonoBehaviour, Observer
     void Start()
     {
         Subject.instance.AddObserver(this);
-        level = PlayerPrefs.GetInt("CurrentLevel");
+        level = GenerationDataManager.instance.GetCurrentLevel();
     }
 
     // Update is called once per frame

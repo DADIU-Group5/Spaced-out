@@ -8,7 +8,8 @@ public class DebugSeedText : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        seedText.text = "Exterior seed: " + PlayerPrefs.GetInt("extSeed" + PlayerPrefs.GetInt("CurrentLevel")) + "\nInterior seed: " + PlayerPrefs.GetInt("intSeed");
+        var data = GenerationDataManager.instance.GetLevelData();
+        seedText.text = "Exterior seed: " + data.exteriorSeed + "\nInterior seed: " + data.interiorSeed;
     }
 	
 }

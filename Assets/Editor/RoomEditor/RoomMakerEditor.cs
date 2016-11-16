@@ -112,11 +112,11 @@ public class RoomMakerEditor : EditorWindow {
             RM.RegularRoom();
             NewRoom();
         }
-        if (GUILayout.Button("New tall room", GUILayout.Height(50)))
+        /*if (GUILayout.Button("New tall room", GUILayout.Height(50)))
         {
             RM.TallRoom();
             NewRoom();
-        }
+        }*/
         EditorGUILayout.EndHorizontal();
         GUILayout.FlexibleSpace();
 

@@ -450,7 +450,7 @@ ModelImporter:
     4300004: daveGeo_v23:daveShirtOut01
     4300006: daveGeo_v23:daveShirtInd01
     4300008: daveGeo_v23:group6
-    7400000: _anim
+    7400000: death_fire
     9500000: //RootNode
     13700000: daveGeo_v23:dave
     13700002: daveGeo_v23:daveShirtInd01
@@ -466,7 +466,10 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip '_anim' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'daveGeo_v23:bind_spine_02' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 3
@@ -475,7 +478,501 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: death_fire
+      takeName: _anim
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: daveGeo_v23:grp_control
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:cnt_l_clavicle_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:cnt_neck_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:cnt_neck_01/daveGeo_v23:cnt_head_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:cnt_r_clavicle_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01/daveGeo_v23:cnt_l_arm_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01/daveGeo_v23:cnt_l_arm_01/daveGeo_v23:cnt_l_armBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01/daveGeo_v23:cnt_l_arm_01/daveGeo_v23:cnt_r_forearm_02
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01/daveGeo_v23:cnt_l_arm_01/daveGeo_v23:cnt_r_forearm_02/daveGeo_v23:cnt_l_forarmBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01/daveGeo_v23:cnt_l_arm_01/daveGeo_v23:cnt_r_forearm_02/daveGeo_v23:cnt_r_wrist_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01/daveGeo_v23:cnt_l_arm_01/daveGeo_v23:cnt_r_forearm_02/daveGeo_v23:cnt_r_wrist_01/daveGeo_v23:cnt_l_hand_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01/daveGeo_v23:cnt_l_arm_01/daveGeo_v23:cnt_r_forearm_02/daveGeo_v23:ikHandle4
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01/daveGeo_v23:cnt_l_arm_01/daveGeo_v23:ikHandle3
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01/daveGeo_v23:cnt_r_arm_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01/daveGeo_v23:cnt_r_arm_01/daveGeo_v23:cnt_r_armBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01/daveGeo_v23:cnt_r_arm_01/daveGeo_v23:cnt_r_forearm_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01/daveGeo_v23:cnt_r_arm_01/daveGeo_v23:cnt_r_forearm_01/daveGeo_v23:cnt_r_forarmBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01/daveGeo_v23:cnt_r_arm_01/daveGeo_v23:cnt_r_forearm_01/daveGeo_v23:cnt_r_wrist_01
+          1
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01/daveGeo_v23:cnt_r_arm_01/daveGeo_v23:cnt_r_forearm_01/daveGeo_v23:cnt_r_wrist_01
+          1/daveGeo_v23:cnt_r_hand_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01/daveGeo_v23:cnt_r_arm_01/daveGeo_v23:cnt_r_forearm_01/daveGeo_v23:ikHandle2
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01/daveGeo_v23:cnt_r_arm_01/daveGeo_v23:ikHandle1
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:wipControles:curve2
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:wipControles:curve2/daveGeo_v23:ikHandle5
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:grp_l_legBend_02
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:grp_l_legBend_02/daveGeo_v23:cnt_l_legBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:grp_l_upLegBend_02
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:grp_l_upLegBend_02/daveGeo_v23:cnt_l_upLegBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:grp_r_legBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:grp_r_legBend_01/daveGeo_v23:cnt_r_legBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:grp_r_upLegBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:grp_r_upLegBend_01/daveGeo_v23:cnt_r_upLegBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:loc_l_knee_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:loc_l_knee_01/daveGeo_v23:cnt_l_knee_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:loc_r_knee_02
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:loc_r_knee_02/daveGeo_v23:cnt_r_knee_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_r_foot_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_r_foot_02
+        weight: 0
+      - path: daveGeo_v23:grp_extra
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02/daveGeo_v23:jDrv_l_upLegBendMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02/daveGeo_v23:jDrv_l_upLegBendMiddel_01/daveGeo_v23:bind_l_upLegBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02/daveGeo_v23:loc_l_hell_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02/daveGeo_v23:loc_l_hell_01/daveGeo_v23:loc_l_toe_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02/daveGeo_v23:loc_l_hell_01/daveGeo_v23:loc_l_toe_01/daveGeo_v23:ikHandle_loc_l_ball_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02/daveGeo_v23:loc_l_hell_01/daveGeo_v23:loc_l_toe_01/daveGeo_v23:ikHandle_loc_l_toe_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02/daveGeo_v23:loc_l_hell_01/daveGeo_v23:loc_l_toe_01/daveGeo_v23:loc_l_ball_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02/daveGeo_v23:loc_l_hell_01/daveGeo_v23:loc_l_toe_01/daveGeo_v23:loc_l_ball_01/daveGeo_v23:ikHandle_loc_l_foot_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot/daveGeo_v23:loc_r_bankLeft_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot/daveGeo_v23:loc_r_bankLeft_01/daveGeo_v23:loc_r_bankRight_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot/daveGeo_v23:loc_r_bankLeft_01/daveGeo_v23:loc_r_bankRight_01/daveGeo_v23:loc_r_hell_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot/daveGeo_v23:loc_r_bankLeft_01/daveGeo_v23:loc_r_bankRight_01/daveGeo_v23:loc_r_hell_01/daveGeo_v23:loc_r_toe_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot/daveGeo_v23:loc_r_bankLeft_01/daveGeo_v23:loc_r_bankRight_01/daveGeo_v23:loc_r_hell_01/daveGeo_v23:loc_r_toe_01/daveGeo_v23:ikHandle_loc_r_ball_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot/daveGeo_v23:loc_r_bankLeft_01/daveGeo_v23:loc_r_bankRight_01/daveGeo_v23:loc_r_hell_01/daveGeo_v23:loc_r_toe_01/daveGeo_v23:ikHandle_loc_r_toe_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot/daveGeo_v23:loc_r_bankLeft_01/daveGeo_v23:loc_r_bankRight_01/daveGeo_v23:loc_r_hell_01/daveGeo_v23:loc_r_toe_01/daveGeo_v23:loc_r_ball_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot/daveGeo_v23:loc_r_bankLeft_01/daveGeo_v23:loc_r_bankRight_01/daveGeo_v23:loc_r_hell_01/daveGeo_v23:loc_r_toe_01/daveGeo_v23:loc_r_ball_01/daveGeo_v23:ikHandle_loc_r_ball_01
+          1
+        weight: 0
+      - path: daveGeo_v23:grp_extraCnt
+        weight: 0
+      - path: daveGeo_v23:grp_extraCnt/daveGeo_v23:cnt_headset_01
+        weight: 0
+      - path: daveGeo_v23:grp_extraCnt/daveGeo_v23:cnt_jectPack_01
+        weight: 0
+      - path: daveGeo_v23:grp_geo
+        weight: 0
+      - path: daveGeo_v23:grp_geo/daveGeo_v23:dave
+        weight: 0
+      - path: daveGeo_v23:grp_geo/daveGeo_v23:davejetpack01
+        weight: 0
+      - path: daveGeo_v23:grp_geo/daveGeo_v23:davejetpack01/daveGeo_v23:davejetpack01
+          1
+        weight: 0
+      - path: daveGeo_v23:grp_geo/daveGeo_v23:daveShirtInd01
+        weight: 0
+      - path: daveGeo_v23:grp_geo/daveGeo_v23:daveShirtOut01
+        weight: 0
+      - path: daveGeo_v23:grp_geo/daveGeo_v23:group6
+        weight: 0
+      - path: daveGeo_v23:grp_rig
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:bind_l_foot_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:bind_l_foot_01/daveGeo_v23:jDrv_l_toe_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:bind_l_foot_01/daveGeo_v23:jDrv_l_toe_01/daveGeo_v23:bind_l_toe_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:bind_l_foot_01/daveGeo_v23:jDrv_l_toe_01/daveGeo_v23:bind_l_toe_01/daveGeo_v23:be_l_toeEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:bind_l_foot_01/daveGeo_v23:jDrv_l_toe_01/daveGeo_v23:jDrvBe_l_toeEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legBendStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legBendStart_01/daveGeo_v23:jDrv_l_legBendMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legBendStart_01/daveGeo_v23:jDrv_l_legBendMiddel_01/daveGeo_v23:bind_l_legBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legMoveStart_01/daveGeo_v23:jDrv_l_legBendMoveMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legMoveStart_01/daveGeo_v23:jDrv_l_legBendMoveMiddel_01/daveGeo_v23:jDrv_l_legBendMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legNoneMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legNoneMoveStart_01/daveGeo_v23:jDrv_l_legNoneMoveMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legNoneMoveStart_01/daveGeo_v23:jDrv_l_legNoneMoveMiddel_01/daveGeo_v23:jDrv_l_legNoneMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_upLegBendStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_upLegBendStart_01/daveGeo_v23:jDrv_l_upLegBendMiddel_01
+          1
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_upLegBendStart_01/daveGeo_v23:jDrv_l_upLegBendMiddel_01
+          1/daveGeo_v23:bind_l_upLegBend_01 1
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_UpLegMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_UpLegMoveStart_01/daveGeo_v23:jDrv_l_UpLegMoveMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_UpLegMoveStart_01/daveGeo_v23:jDrv_l_UpLegMoveMiddel_01/daveGeo_v23:jDrv_l_UpLegMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_UpLegNoneMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_UpLegNoneMoveStart_01/daveGeo_v23:jDrv_l_UpLegNoneMoveMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_UpLegNoneMoveStart_01/daveGeo_v23:jDrv_l_UpLegNoneMoveMiddel_01/daveGeo_v23:jDrv_l_UpLegNoneMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_pelvisShirtBend_02
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_pelvisShirtBend_02/daveGeo_v23:bind_pelvisShirtBend_03
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_pelvisShirtBend_02/daveGeo_v23:bind_pelvisShirtBend_03/daveGeo_v23:be_pelvisShirtBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:bind_r_foot_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:bind_r_foot_01/daveGeo_v23:jDrv_r_toe_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:bind_r_foot_01/daveGeo_v23:jDrv_r_toe_01/daveGeo_v23:bind_r_toe_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:bind_r_foot_01/daveGeo_v23:jDrv_r_toe_01/daveGeo_v23:bind_r_toe_01/daveGeo_v23:be_r_toeEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:bind_r_foot_01/daveGeo_v23:jDrv_r_toe_01/daveGeo_v23:jDrvBe_r_toeEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legBendStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legBendStart_01/daveGeo_v23:jDrv_r_legBendMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legBendStart_01/daveGeo_v23:jDrv_r_legBendMiddel_01/daveGeo_v23:bind_r_legBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legMoveStart_01/daveGeo_v23:jDrv_r_legBendMoveMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legMoveStart_01/daveGeo_v23:jDrv_r_legBendMoveMiddel_01/daveGeo_v23:jDrv_r_legBendMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legNoneMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legNoneMoveStart_01/daveGeo_v23:jDrv_r_legNoneMoveMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legNoneMoveStart_01/daveGeo_v23:jDrv_r_legNoneMoveMiddel_01/daveGeo_v23:jDrv_r_legNoneMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_upLegBendStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_upLegBendStart_01/daveGeo_v23:jDrv_r_upLegBendMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_upLegBendStart_01/daveGeo_v23:jDrv_r_upLegBendMiddel_01/daveGeo_v23:bind_r_upLegBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_UpLegMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_UpLegMoveStart_01/daveGeo_v23:jDrv_r_UpLegMoveMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_UpLegMoveStart_01/daveGeo_v23:jDrv_r_UpLegMoveMiddel_01/daveGeo_v23:jDrv_r_UpLegMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_UpLegNoneMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_UpLegNoneMoveStart_01/daveGeo_v23:jDrv_r_UpLegNoneMoveMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_UpLegNoneMoveStart_01/daveGeo_v23:jDrv_r_UpLegNoneMoveMiddel_01/daveGeo_v23:jDrv_r_UpLegNoneMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_armSupDw_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_armSupUp_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_idx_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_idx_01/daveGeo_v23:bind_l_idx_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_idx_01/daveGeo_v23:bind_l_idx_02/daveGeo_v23:bind_l_idx_03
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_idx_01/daveGeo_v23:bind_l_idx_02/daveGeo_v23:bind_l_idx_03/daveGeo_v23:be_l_idxEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_mid_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_mid_01/daveGeo_v23:bind_l_mid_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_mid_01/daveGeo_v23:bind_l_mid_02/daveGeo_v23:bind_l_mid_03
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_mid_01/daveGeo_v23:bind_l_mid_02/daveGeo_v23:bind_l_mid_03/daveGeo_v23:be_l_midEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_palmPin_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_palmPin_01/daveGeo_v23:bind_l_pin_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_palmPin_01/daveGeo_v23:bind_l_pin_01/daveGeo_v23:bind_l_pin_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_palmPin_01/daveGeo_v23:bind_l_pin_01/daveGeo_v23:bind_l_pin_02/daveGeo_v23:bind_l_pin_03
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_palmPin_01/daveGeo_v23:bind_l_pin_01/daveGeo_v23:bind_l_pin_02/daveGeo_v23:bind_l_pin_03/daveGeo_v23:be_l_pinEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_ring_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_ring_01/daveGeo_v23:bind_l_ring_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_ring_01/daveGeo_v23:bind_l_ring_02/daveGeo_v23:bind_l_ring_03
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_ring_01/daveGeo_v23:bind_l_ring_02/daveGeo_v23:bind_l_ring_03/daveGeo_v23:be_l_ringEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_tmb_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_tmb_01/daveGeo_v23:bind_l_tmb_02
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_tmb_01/daveGeo_v23:bind_l_tmb_02/daveGeo_v23:bind_l_tmb_03
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_tmb_01/daveGeo_v23:bind_l_tmb_02/daveGeo_v23:bind_l_tmb_03/daveGeo_v23:be_l_tmbEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:jDrv_l_forearmBendStart_02
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:jDrv_l_forearmBendStart_02/daveGeo_v23:bind_l_forearmBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:jDrv_l_forearmMoveStart_02
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:jDrv_l_forearmMoveStart_02/daveGeo_v23:bind_l_forearmMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:jDrv_l_forearmNoneMoveStart_02
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:jDrv_l_forearmNoneMoveStart_02/daveGeo_v23:bind_l_forearmNoneMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armBendStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armBendStart_01/daveGeo_v23:bind_l_armBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armMoveStart_01/daveGeo_v23:jDrv_l_armMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armNoneMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armNoneMoveStart_01/daveGeo_v23:jDrv_l_armNoneMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_neck_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_neck_01/daveGeo_v23:bind_head_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_neck_01/daveGeo_v23:bind_head_01/daveGeo_v23:be_headEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_armSupDw_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_armSupUp_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_idx_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_idx_01/daveGeo_v23:bind_r_idx_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_idx_01/daveGeo_v23:bind_r_idx_02/daveGeo_v23:bind_r_idx_03
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_idx_01/daveGeo_v23:bind_r_idx_02/daveGeo_v23:bind_r_idx_03/daveGeo_v23:be_r_idxEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_mid_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_mid_01/daveGeo_v23:bind_r_mid_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_mid_01/daveGeo_v23:bind_r_mid_02/daveGeo_v23:bind_r_mid_03
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_mid_01/daveGeo_v23:bind_r_mid_02/daveGeo_v23:bind_r_mid_03/daveGeo_v23:be_r_midEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_palmPin_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_palmPin_01/daveGeo_v23:bind_r_pin_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_palmPin_01/daveGeo_v23:bind_r_pin_01/daveGeo_v23:bind_r_pin_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_palmPin_01/daveGeo_v23:bind_r_pin_01/daveGeo_v23:bind_r_pin_02/daveGeo_v23:bind_r_pin_03
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_palmPin_01/daveGeo_v23:bind_r_pin_01/daveGeo_v23:bind_r_pin_02/daveGeo_v23:bind_r_pin_03/daveGeo_v23:be_r_pinEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_ring_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_ring_01/daveGeo_v23:bind_r_ring_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_ring_01/daveGeo_v23:bind_r_ring_02/daveGeo_v23:bind_r_ring_03
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_ring_01/daveGeo_v23:bind_r_ring_02/daveGeo_v23:bind_r_ring_03/daveGeo_v23:be_r_ringEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_tmb_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_tmb_01/daveGeo_v23:bind_r_tmb_02
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_tmb_01/daveGeo_v23:bind_r_tmb_02/daveGeo_v23:bind_r_tmb_03
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_tmb_01/daveGeo_v23:bind_r_tmb_02/daveGeo_v23:bind_r_tmb_03/daveGeo_v23:be_r_tmbEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:jDrv_r_forearmBendStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:jDrv_r_forearmBendStart_01/daveGeo_v23:bind_r_forearmBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:jDrv_r_forearmMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:jDrv_r_forearmMoveStart_01/daveGeo_v23:bind_r_forearmMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:jDrv_r_forearmNoneMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:jDrv_r_forearmNoneMoveStart_01/daveGeo_v23:bind_r_forearmNoneMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:jDrv_r_armBendStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:jDrv_r_armBendStart_01/daveGeo_v23:bind_r_armBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:jDrv_r_armMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:jDrv_r_armMoveStart_01/daveGeo_v23:jDrv_r_armMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:jDrv_r_armNoneMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:jDrv_r_armNoneMoveStart_01/daveGeo_v23:jDrv_r_armNoneMoveEnd_01
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.96
     isReadable: 1
   meshes:
     lODScreenPercentages: []

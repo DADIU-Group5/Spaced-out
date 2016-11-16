@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 public class Fan : MonoBehaviour {
 
@@ -33,6 +32,9 @@ public class Fan : MonoBehaviour {
         coll.height = endPos.transform.localPosition.x;
         coll.center = new Vector3(coll.height/2, 0, 0);
         windDirection = Vector3.Normalize(endPos.position - startPos.position);
+
+        if (gameObject.name == "ReverseFan")
+            windDirection = -windDirection;
         itemState = this.gameObject.GetComponent<GameplayElement>();
     }
 	

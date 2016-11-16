@@ -3,7 +3,6 @@ using System.Collections;
 using System;
 
 public class ProgressManager : Singleton<ProgressManager> {
-    private const float generationCooldown = 6 * 60;
     public const int medalCompleted = 0;
     public const int medalAllComics = 1;
     public const int medalNoDeaths = 2;
@@ -49,31 +48,6 @@ public class ProgressManager : Singleton<ProgressManager> {
         }
     }
 
-    // set new seeds for levels
-    public void SetNewLevelSeeds(int[] seeds)
-    {
-        // seeds cannot be reset yet
-        float mins = TimeUntilNextLevelGeneration();
-        if (mins > 0)
-        {
-            throw new UnityException("Cannot generate levels, please wait " + mins + " minutes.");
-        }
-
-        // check for correct number of seeds
-        if (seeds.Length != progress.levels.Length)
-        {
-            throw new UnityException("Number of seeds doesn't match number of levels");
-        }
-
-        // change seeds for levels and reset level progress
-        progress.levelGenerationTime = DateTime.Now;
-        for (int i = 0; i < seeds.Length; i++)
-        {
-            progress.levels[i].seed = seeds[i];
-        }
-        ResetLevelProgress();
-    }
-
     // returns an array of 3 bools indicating if medals are completed
     public bool[] GetMedals(int level)
     {
@@ -97,21 +71,13 @@ public class ProgressManager : Singleton<ProgressManager> {
         return progress.currency;
     }
 
-    // gets the number of minutes since last level generation
-    public float TimeUntilNextLevelGeneration()
-    {
-        // cooldown of level generation in minutes
-        float minsLeft = (float)(DateTime.Now - progress.levelGenerationTime).TotalMinutes - generationCooldown;
-        return minsLeft < 0f ? 0f : minsLeft;
-    }
-
-    // reset the medals
+    // reset the currency
     public void ResetCurrency()
     {
         progress.currency = 0;
     }
 
-    // reset progress
+    // resets progress in levels to default
     public void ResetLevelProgress()
     {
         // keep same seeds but reset progress
@@ -124,5 +90,28 @@ public class ProgressManager : Singleton<ProgressManager> {
             level.noDeaths = false;
         }
         progress.levels[0].unlocked = true;
+    }
+
+    // Resets all progress to default
+    public void Reset()
+    {
+        progress.levels = new Progress.LevelProgress[5];
+        for (int i = 0; i < 5; i++)
+        {
+            progress.levels[i] = new Progress.LevelProgress();
+        }
+        progress.currency = 0;
+        progress.completedTutorial = false;
+    }
+
+    // is a level unlocked
+    public bool IsUnlocked(int level)
+    {
+        if (level < 1 || level > progress.levels.Length)
+        {
+            throw new UnityException("Invalid level: " + level);
+        }
+
+        return progress.levels[level].unlocked; 
     }
 }

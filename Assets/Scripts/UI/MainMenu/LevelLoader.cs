@@ -6,16 +6,11 @@ using System;
 public class LevelLoader : MonoBehaviour {
 
     public int[] levelLengths = new int[5];
-
     public bool overrideSeed = false;
-
     public int extSeed = 10;
     public int intSeed = 10;
-
     public int hoursFromWinToReset = 1;
-
     int amountOfLevels = 5;
-
     TimeSpan timeDifference;
 
     void Start()

@@ -5,34 +5,28 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Progress", menuName = "Progress", order = 1)]
 public class Progress : ScriptableObject
 {
-    public DateTime levelGenerationTime;
     public int currency;
     public bool completedTutorial;
-    public LevelData[] levels;
+    public LevelProgress[] levels;
 
     // called from unity editor
     void Reset()
     {
-        levelGenerationTime = DateTime.Now;
         currency = 0;
         completedTutorial = true;
 
         // create levels
-        levels = new LevelData[5];
+        levels = new LevelProgress[5];
         for (int i = 0; i < 5; i++)
         {
-            levels[i] = new LevelData()
-            {
-                seed = i
-            };
+            levels[i] = new LevelProgress();
         }
         levels[0].unlocked = true;
     }
 
     [Serializable]
-    public struct LevelData
+    public struct LevelProgress
     {
-        public int seed;
         public bool unlocked;
         public bool completed;
         public bool allComics;

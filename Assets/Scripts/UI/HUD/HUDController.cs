@@ -8,6 +8,7 @@ public class HUDController : MonoBehaviour, Observer {
     public Text chargeText;
     public Text launchText;
     public Text statusText;
+    public Text subtitleText;
     public Transform chargeArrow;
 
     private float chargeArrowYMin = 68f;
@@ -68,8 +69,29 @@ public class HUDController : MonoBehaviour, Observer {
                 gameOver = true;
                 break;
 
+            case EventName.ShowSubtile:
+                string subText = (string)evt.payload[PayloadConstants.SUBTITLE_TEXT];
+                float subStart = (float)evt.payload[PayloadConstants.SUBTITLE_START];
+                float subDuration = (float)evt.payload[PayloadConstants.SUBTITLE_DURATION];
+
+                StartCoroutine(ShowSubtitle(subText, subStart, subDuration));
+                break;
             default:
                 break;
         }
+    }
+
+    /// <summary>
+    /// Handle displaying the subtitle to the screen
+    /// </summary>
+    public IEnumerator ShowSubtitle(string subText, float subStart, float subDuration)
+    {
+        yield return new WaitForSeconds(subStart);
+
+        subtitleText.text = subText;
+
+        yield return new WaitForSeconds(subDuration);
+
+        subtitleText.text = "";
     }
 }

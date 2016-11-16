@@ -24,5 +24,7 @@
     BarrelExplosion,
     PlayerExploded,
     FuelEmpty,
-    UpdateStatus
+    UpdateStatus,
+    CameraZoomOut,
+    CameraZoomIn
 }

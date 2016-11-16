@@ -13,11 +13,11 @@ public class InputController : MonoBehaviour, Observer
     public BehindCamera behindCamera;
     public PlayerController player;
     public FuelController fuel;
-
-    public Collider hitboxCollider;
     
     public Transform playerTransform,
         playerPitchTransform;
+
+    public Collider hitboxCollider;
 
     private void Awake()
     {
@@ -112,6 +112,9 @@ public class InputController : MonoBehaviour, Observer
 
             DirectedRotation(offset);
             oldPoint = pos;
+
+            playerTransform.rotation = behindCamera.pitch.transform.rotation;
+
         }
     }
 

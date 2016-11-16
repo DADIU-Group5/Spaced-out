@@ -140,8 +140,13 @@ public class InputController : MonoBehaviour, Observer
     {
         Ray ray = cam.ScreenPointToRay(ScreenCenter());
         RaycastHit hit;
-        int layerMask = ~(LayerMask.NameToLayer("Golfball") | LayerMask.NameToLayer("Ragdoll"));
-        if (Physics.Raycast(ray, out hit, layerMask))
+        
+        // Create layermask that ignores all Golfball and Ragdoll layers
+        int layermask1 = 1 << LayerMask.NameToLayer("Golfball");
+        int layermask2 = 1 << LayerMask.NameToLayer("Ragdoll");
+        int finalmask = ~(layermask1 | layermask2);
+        
+        if (Physics.Raycast(ray, out hit, System.Int32.MaxValue, finalmask))
         //if (Physics.Raycast(ray, out hit))
         {
             return hit.point - player.transform.position;

@@ -58,7 +58,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 
             //Actual death.
             transform.parent.gameObject.SetActive(false);
-            CheckpointManager.instance.RespawnPlayer(transform.parent.gameObject);
+            //CheckpointManager.instance.RespawnPlayer(transform.parent.gameObject);
         }
     }
 
@@ -100,7 +100,6 @@ public class PlayerBehaviour : MonoBehaviour, Observer
                 break;
             case EventName.PlayerDead:
                 gameIsOver = true;
-                PlayerPrefs.SetInt("playerDiedThisLevel", 1);
                 if (onFire)
                 {
                     var statusEvent = new ObserverEvent(EventName.Extinguish);

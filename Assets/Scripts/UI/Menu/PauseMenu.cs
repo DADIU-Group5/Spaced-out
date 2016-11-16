@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
@@ -13,7 +11,7 @@ public class PauseMenu : MonoBehaviour {
 
     void Start()
     {
-        level = PlayerPrefs.GetInt("CurrentLevel");
+        level = GenerationDataManager.instance.GetCurrentLevel();
     }
 
     /// <summary>
@@ -47,7 +45,6 @@ public class PauseMenu : MonoBehaviour {
         PauseGame();
 
         //player reset, so he hasn't died in this run yet.
-        ScoreManager.instance.SetPlayerHasDiedThisLevel(level);
         SceneManager.LoadScene(scene.name);
     }
 

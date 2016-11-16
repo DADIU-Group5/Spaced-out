@@ -6,7 +6,7 @@ public class FuelController : MonoBehaviour
     public int maxFuel = 10;
     public float velocityToDie = 10f;
 
-    private int currentFuel;
+    private int currentFuel = 5;
     private Rigidbody rbPlayer;
     private PlayerController player;
 

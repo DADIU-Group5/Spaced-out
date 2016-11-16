@@ -13,11 +13,19 @@ public class MenuHeader : MonoBehaviour {
 
 	public void UpdateMedalLabel()
     {
-        medalLabel.text = PlayerPrefs.GetInt("Medals").ToString();
+        medalLabel.text = ProgressManager.instance.GetCurrency().ToString();
     }
 
     public void ResetMedals()
     {
-        PlayerPrefs.SetInt("Medals", 0);
+        ProgressManager.instance.ResetCurrency();
+        medalLabel.text = "0";
+    }
+
+    public void ResetAll()
+    {
+        ProgressManager.instance.Reset();
+        GenerationDataManager.instance.Reset();
+        medalLabel.text = "0";
     }
 }

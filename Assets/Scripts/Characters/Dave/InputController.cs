@@ -139,7 +139,7 @@ public class InputController : MonoBehaviour, Observer
         float difference = oldPoint.y - Input.mousePosition.y;
         float maxDifference = oldPoint.y - launchBuffer;
 
-        return Mathf.Clamp01(difference / maxDifference);
+        return (difference / maxDifference).Clamp(0f, 1f);
     }
 
     // Calculate the direction from the character position and the crosshair.

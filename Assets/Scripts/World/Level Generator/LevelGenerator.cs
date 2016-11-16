@@ -41,7 +41,7 @@ public class LevelGenerator : MonoBehaviour {
     /// </summary>
     void GenerateLevel()
     {
-        SetupSeeds();
+        GetGenerationData();
 
         Random.InitState(exteriorSeed);
 
@@ -57,13 +57,11 @@ public class LevelGenerator : MonoBehaviour {
         RandomizeInteriorForAll();
     }
 
-    void SetupSeeds()
+    void GetGenerationData()
     {
         var data = GenerationDataManager.instance.GetLevelData();
         exteriorSeed = data.exteriorSeed;
         interiorSeed = data.interiorSeed;
-        Debug.Log("extSeed: " + exteriorSeed);
-        Debug.Log("intSeed: " + interiorSeed);
         minRooms = data.rooms;
         maxRooms = minRooms;
     }

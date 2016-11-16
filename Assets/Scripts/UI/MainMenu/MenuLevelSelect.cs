@@ -24,7 +24,7 @@ public class MenuLevelSelect : MonoBehaviour {
         // can we afford it?
         if (ProgressManager.instance.GetCurrency() > 15)
         {
-            GenerationDataManager.instance.GenerateSeeds();
+            GenerationDataManager.instance.RandomizeSeeds();
             ProgressManager.instance.ChangeCurrency(-15);
         }
     }

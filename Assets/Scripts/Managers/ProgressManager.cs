@@ -23,6 +23,7 @@ public class ProgressManager : Singleton<ProgressManager> {
             throw new UnityException("No medals exists for level: " + level);
         }
 
+        level--;
         switch(medal)
         {
             case medalCompleted:
@@ -62,7 +63,7 @@ public class ProgressManager : Singleton<ProgressManager> {
             throw new UnityException("No medals exists for level: " + level);
         }
 
-        var levelProgress = progress.levels[level];
+        var levelProgress = progress.levels[level - 1];
         return new bool[] { levelProgress.completed, levelProgress.allComics, levelProgress.noDeaths }; 
     }
 

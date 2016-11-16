@@ -3,7 +3,7 @@ using System.Collections;
 using System;
 
 public class ProgressManager : Singleton<ProgressManager> {
-
+    private const float generationCooldown = 6 * 60;
     public const int medalCompleted = 0;
     public const int medalAllComics = 1;
     public const int medalNoDeaths = 2;
@@ -52,13 +52,26 @@ public class ProgressManager : Singleton<ProgressManager> {
     // set new seeds for levels
     public void SetNewLevelSeeds(int[] seeds)
     {
+        // seeds cannot be reset yet
+        float mins = TimeUntilNextLevelGeneration();
+        if (mins > 0)
+        {
+            throw new UnityException("Cannot generate levels, please wait " + mins + " minutes.");
+        }
+
         // check for correct number of seeds
         if (seeds.Length != progress.levels.Length)
         {
             throw new UnityException("Number of seeds doesn't match number of levels");
         }
 
-        progress.SetSeeds(seeds);
+        // change seeds for levels and reset level progress
+        progress.levelGenerationTime = DateTime.Now;
+        for (int i = 0; i < seeds.Length; i++)
+        {
+            progress.levels[i].seed = seeds[i];
+        }
+        ResetLevelProgress();
     }
 
     // returns an array of 3 bools indicating if medals are completed
@@ -74,7 +87,7 @@ public class ProgressManager : Singleton<ProgressManager> {
     }
 
     // add currency though purchase
-    public void BoughtCurrency(int amount)
+    public void BuyCurrency(int amount)
     {
         progress.currency += amount;
     }
@@ -88,8 +101,28 @@ public class ProgressManager : Singleton<ProgressManager> {
     public float TimeUntilNextLevelGeneration()
     {
         // cooldown of level generation in minutes
-        float cooldown = 6 * 60; // 6 hours
-        float minsLeft = (float)(DateTime.Now - progress.levelGenerationTime).TotalMinutes - cooldown;
+        float minsLeft = (float)(DateTime.Now - progress.levelGenerationTime).TotalMinutes - generationCooldown;
         return minsLeft < 0f ? 0f : minsLeft;
+    }
+
+    // reset the medals
+    public void ResetCurrency()
+    {
+        progress.currency = 0;
+    }
+
+    // reset progress
+    public void ResetLevelProgress()
+    {
+        // keep same seeds but reset progress
+        for (int i = 0; i < progress.levels.Length; i++)
+        {
+            var level = progress.levels[i];
+            level.unlocked = false;
+            level.completed = false;
+            level.allComics = false;
+            level.noDeaths = false;
+        }
+        progress.levels[0].unlocked = true;
     }
 }

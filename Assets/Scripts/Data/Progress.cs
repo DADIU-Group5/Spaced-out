@@ -10,25 +10,20 @@ public class Progress : ScriptableObject
     public bool completedTutorial;
     public LevelData[] levels;
 
+    // called from unity editor
     void Reset()
     {
         levelGenerationTime = DateTime.Now;
         currency = 0;
         completedTutorial = true;
 
-        SetSeeds(new int[] { 0, 1, 2, 3, 4 });
-    }
-
-    // store new seeds for levels and reset progress
-    public void SetSeeds(int[] seeds)
-    {
-        levelGenerationTime = DateTime.Now;
-        levels = new LevelData[seeds.Length];
-        for (int i = 0; i < seeds.Length; i++)
+        // create levels
+        levels = new LevelData[5];
+        for (int i = 0; i < 5; i++)
         {
             levels[i] = new LevelData()
             {
-                seed = seeds[i]
+                seed = i
             };
         }
         levels[0].unlocked = true;

@@ -1,0 +1,32 @@
+{
+	"englishSubtitles": {
+		"narrative": [{
+			"id": 1,
+			"text": "Hi, my name is Giorgos",
+			"start": 0.0,
+			"duration": 2.0
+		}],
+		"generalRemarks": [],
+		"wires": [],
+		"switches": [],
+		"fan": [],
+		"gasLeak": [],
+		"lowOxygen": [],
+		"outOfOxygen": []
+	},
+	"danishSubtitles": {
+		"narrative": [{
+			"id": 1,
+			"text": "Hej, jeg hedder Giorgos",
+			"start": 1.5,
+			"duration": 2.0
+		}],
+		"generalRemarks": [],
+		"wires": [],
+		"switches": [],
+		"fan": [],
+		"gasLeak": [],
+		"lowOxygen": [],
+		"outOfOxygen": []
+	}
+}

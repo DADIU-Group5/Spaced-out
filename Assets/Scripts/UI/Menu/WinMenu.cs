@@ -21,13 +21,6 @@ public class WinMenu : MonoBehaviour, Observer
     public List<GameObject> goodImages;
     public List<GameObject> badImages;
 
-    [HideInInspector]
-    public bool finished = false;
-    [HideInInspector]
-    public bool didntDie = false;
-    [HideInInspector]
-    public bool collectedAll = false;
-
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
         switch (evt.eventName)
@@ -50,7 +43,7 @@ public class WinMenu : MonoBehaviour, Observer
     void Start()
     {
         Subject.instance.AddObserver(this);
-        level = PlayerPrefs.GetInt("CurrentLevel");
+        level = GenerationDataManager.instance.GetCurrentLevel();
 
         if(level == 5)
         {
@@ -68,7 +61,6 @@ public class WinMenu : MonoBehaviour, Observer
     {
         Scene scene = SceneManager.GetActiveScene();
         //player reset, so he hasn't died in this run yet.
-        ScoreManager.instance.SetPlayerHasDiedThisLevel(level);
         SceneManager.LoadScene(scene.name);
     }
 
@@ -86,10 +78,9 @@ public class WinMenu : MonoBehaviour, Observer
     public void LoadNextLevel()
     {
         level++;
-        if (level < 5)
+        if (level <= 5)
         {
-            PlayerPrefs.SetInt("CurrentLevel", level);
-            PlayerPrefs.SetInt("intSeed", 0);
+            GenerationDataManager.instance.SetCurrentLevel(level);
             SceneManager.LoadScene("LevelGenerator");
         }
         else
@@ -100,9 +91,10 @@ public class WinMenu : MonoBehaviour, Observer
 
     void SetBadges()
     {
-        finished = (ScoreManager.instance.GetAchievementFromLevel(level, 1) == 1) ? true : false; //ex: level2Achievement1
-        didntDie = (ScoreManager.instance.GetAchievementFromLevel(level, 2) == 1) ? true : false; //ex: level2Achievement1
-        collectedAll = (ScoreManager.instance.GetAchievementFromLevel(level, 3) == 1) ? true : false; //ex: level2Achievement1
+        bool[] medals = ProgressManager.instance.GetMedals(level);
+        bool finished = medals[0];
+        bool collectedComics = medals[1];
+        bool didntDie = medals[2];
 
         goodImages[0].SetActive(finished);
         badImages[0].SetActive(!finished);
@@ -110,8 +102,8 @@ public class WinMenu : MonoBehaviour, Observer
         goodImages[1].SetActive(didntDie);
         badImages[1].SetActive(!didntDie);
 
-        goodImages[2].SetActive(collectedAll);
-        badImages[2].SetActive(!collectedAll);
+        goodImages[2].SetActive(collectedComics);
+        badImages[2].SetActive(!collectedComics);
     }
 
     /// <summary>
@@ -131,9 +123,6 @@ public class WinMenu : MonoBehaviour, Observer
             }
             playerWon = true;
             SetBadges();
-
-            //PlayerPrefs.SetString("FinishTime", DateTime.Now.ToBinary().ToString());
-            //PlayerPrefs.SetInt("FinishedGame", 1);
         }
         yield return null;
     }

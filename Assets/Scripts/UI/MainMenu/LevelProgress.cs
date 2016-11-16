@@ -21,6 +21,6 @@ public class LevelProgress : MonoBehaviour, Observer
 
     public void TutorialComplete()
     {
-        PlayerPrefs.SetInt("TutorialComplete", 1);
+        ProgressManager.instance.completeTutorial();
     }
 }

@@ -9,6 +9,12 @@ public class ProgressManager : Singleton<ProgressManager> {
 
     public Progress progress;
 
+    // sets the tutorial as completed
+    public void completeTutorial()
+    {
+        progress.completedTutorial = true;
+    }
+
     // set medal as completed for level
     public void SetMedal(int level, int medal)
     {

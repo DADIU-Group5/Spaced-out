@@ -15,6 +15,7 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
 
     protected override void Awake()
     {
+        base.Awake();
         // will be increased on start
         base.Awake();
         totalComics = 0;

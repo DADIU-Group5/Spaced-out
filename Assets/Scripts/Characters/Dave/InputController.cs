@@ -144,8 +144,9 @@ public class InputController : MonoBehaviour, Observer
         // Create layermask that ignores all Golfball and Ragdoll layers
         int layermask1 = 1 << LayerMask.NameToLayer("Golfball");
         int layermask2 = 1 << LayerMask.NameToLayer("Ragdoll");
-        int finalmask = ~(layermask1 | layermask2);
-        
+        int layermask3 = 1 << LayerMask.NameToLayer("Ignore Raycast");
+        int finalmask = ~(layermask1 | layermask2 | layermask3);
+
         if (Physics.Raycast(ray, out hit, System.Int32.MaxValue, finalmask))
         //if (Physics.Raycast(ray, out hit))
         {

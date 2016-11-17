@@ -2,10 +2,12 @@
 
 public class InputController : MonoBehaviour, Observer
 {
-    private bool invertCameraControls = false,
+    private bool invertCameraControls = true,
         launchMode = false,
         inputDisabled = false;
     private Vector2 oldPoint;
+
+    public float playerRotateSpeed = 200f;
 
     public float cameraRotateSpeed = 4000f,
         launchBuffer = 100f;
@@ -16,6 +18,8 @@ public class InputController : MonoBehaviour, Observer
     
     public Transform playerTransform,
         playerPitchTransform;
+
+    private Rigidbody playerRigidbody;
 
     public Collider hitboxCollider;
 
@@ -69,9 +73,7 @@ public class InputController : MonoBehaviour, Observer
         if (Input.GetMouseButton(0))
         {
             playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
-
-            // TODO: Implement an UIController that can handle updating the UI with method calls,
-            //       so we aren't updating this part of the UI every frame... /Malte
+            
             player.SetLaunchForce(GetLaunchForce());
         }
 
@@ -113,8 +115,10 @@ public class InputController : MonoBehaviour, Observer
             DirectedRotation(offset);
             oldPoint = pos;
 
-            playerTransform.rotation = behindCamera.pitch.transform.rotation;
-
+            if (playerRigidbody.velocity.magnitude < player.maxMagnitude)
+            {
+                playerTransform.rotation = Quaternion.RotateTowards(playerTransform.rotation, behindCamera.pitch.transform.rotation, playerRotateSpeed * Time.deltaTime);
+            }
         }
     }
 
@@ -175,6 +179,7 @@ public class InputController : MonoBehaviour, Observer
     private void DirectedRotation(Vector2 offset)
     {
         float xScale = behindCamera.pitch.transform.up.y;
+        xScale = Mathf.Sign(xScale);
         behindCamera.transform.Rotate(Vector3.up, Time.deltaTime * xScale * cameraRotateSpeed * (offset.x / ScreenCenter().magnitude));
         behindCamera.pitch.transform.Rotate(Vector3.right, Time.deltaTime * cameraRotateSpeed * (-offset.y / ScreenCenter().magnitude));
     }
@@ -189,6 +194,7 @@ public class InputController : MonoBehaviour, Observer
                 player = go.GetComponent<PlayerController>();
                 playerTransform = player.transform;
                 playerPitchTransform = player.pitchTransform;
+                playerRigidbody = player.GetComponent<Rigidbody>();
                 fuel = player.fuel;
                 break;
             case EventName.PlayerWon:

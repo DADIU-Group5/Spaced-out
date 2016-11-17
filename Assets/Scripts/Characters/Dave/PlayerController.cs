@@ -94,6 +94,11 @@ public class PlayerController : MonoBehaviour, Observer
         {
             rbPlayer.velocity = Vector3.zero;
             canSlowDown = false;
+            if (!fuel.HasFuel())
+            {
+                var evt = new ObserverEvent(EventName.FuelEmpty);
+                Subject.instance.Notify(gameObject, evt);
+            }
         }
     }
 

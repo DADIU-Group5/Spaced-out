@@ -80,8 +80,6 @@ public class GameOverMenu : MonoBehaviour, Observer
     public void RemoveGameOverScreen()
     {
         playerIsDead = false;
-        var evt = new ObserverEvent(EventName.RespawnPlayer);
-        Subject.instance.Notify(gameObject, evt);
         //turn on all the UI elements in the GameOverCanvas
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -113,14 +111,13 @@ public class GameOverMenu : MonoBehaviour, Observer
 	    if (playerIsDead)
         {
             countingDown -= Time.deltaTime;
-            ResetCountdown.text = "Resetting in "+ Mathf.Round( countingDown ) + "...";
-
-            //if the countdown has reached zero, reset the level
-            if (countingDown <= 0)
-            {   
-                RemoveGameOverScreen();
-            }
+            ResetCountdown.text = "Resetting in "+ Mathf.Round( countingDown ) + "..."; 
         }
 
+        //if the countdown has reached zero, reset the level
+        if (countingDown <= 0)
+        {
+            RemoveGameOverScreen();
+        }
 	}
 }

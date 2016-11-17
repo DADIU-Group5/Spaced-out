@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CheckpointManager : Singleton<CheckpointManager>, Observer {
+public class CheckpointManager : Singleton<CheckpointManager> {
 
     Vector3 position = Vector3.zero;
     Vector3 rotation = Vector3.zero;
@@ -11,29 +11,6 @@ public class CheckpointManager : Singleton<CheckpointManager>, Observer {
 
     public GameObject playerPrefab;
     GameObject temp;
-    bool spawnplayer = false;
-
-    void Start()
-    {
-        Subject.instance.AddObserver(this);
-    }
-
-    public void OnNotify(GameObject entity, ObserverEvent evt)
-    {
-        if(evt.eventName == EventName.RespawnPlayer)
-        {
-            spawnplayer = true;
-        }
-    }
-
-    void LateUpdate()
-    {
-        if (spawnplayer)
-        {
-            spawnplayer = false;
-            ActualRespawn();
-        }
-    }
 
     public void SetNewCheckpoint(Vector3 pos)
     {
@@ -73,17 +50,12 @@ public class CheckpointManager : Singleton<CheckpointManager>, Observer {
 
     void ActualRespawn()
     {
-        //Destroy(temp);
+        Destroy(temp);
         GameObject go = Instantiate(playerPrefab, position + (rotation * spawnDistance), Quaternion.identity) as GameObject;
         go.transform.LookAt(position + (rotation * (spawnDistance+1)), Vector3.up);
         go.GetComponentInChildren<FuelController>().SetFuel(++fuelCount);
         var evt = new ObserverEvent(EventName.PlayerSpawned);
         evt.payload.Add(PayloadConstants.PLAYER, go.GetComponentInChildren<PlayerController>().gameObject);
         Subject.instance.Notify(gameObject, evt);
-    }
-
-    void OnDestroy()
-    {
-        Subject.instance.RemoveObserver(this);
     }
 }

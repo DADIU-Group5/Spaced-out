@@ -26,5 +26,6 @@
     FuelEmpty,
     UpdateStatus,
     CameraZoomOut,
-    CameraZoomIn
+    CameraZoomIn,
+    ShowSubtile
 }

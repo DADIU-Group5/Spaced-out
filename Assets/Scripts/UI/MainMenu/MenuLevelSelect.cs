@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -7,15 +8,32 @@ public class MenuLevelSelect : MonoBehaviour {
 
     public Button generateLevelButton;
     public Button[] levelButtons;
-	
+    [System.Serializable]
+    public class achievementObjects
+    {
+        public List<GameObject> objects;
+    }
+    public List<achievementObjects> achievements = new List<achievementObjects>();
+
+
     void OnEnable()
     {
         generateLevelButton.interactable = ProgressManager.instance.GetCurrency() >= 15;
         // enable / disable level buttons
         for (int i = 0; i < levelButtons.Length; i++)
         {
-            levelButtons[i].interactable = ProgressManager.instance.IsUnlocked(i + 1);
+            levelButtons[i].interactable = ProgressManager.instance.IsUnlocked(i+1);
+
+
+            bool[] medals = ProgressManager.instance.GetMedals(i+1);
+
+            for (int j = 0; j < medals.Length; j++) {
+                achievements[i].objects[j].SetActive(medals[j]);
+            }
+
         }
+
+        //Update achievement list
     }
 
     // generates new seeds for levels

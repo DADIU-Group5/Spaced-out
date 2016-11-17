@@ -69,9 +69,7 @@ public class InputController : MonoBehaviour, Observer
         if (Input.GetMouseButton(0))
         {
             playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
-
-            // TODO: Implement an UIController that can handle updating the UI with method calls,
-            //       so we aren't updating this part of the UI every frame... /Malte
+            
             player.SetLaunchForce(GetLaunchForce());
         }
 
@@ -113,8 +111,9 @@ public class InputController : MonoBehaviour, Observer
             DirectedRotation(offset);
             oldPoint = pos;
 
-            playerTransform.rotation = behindCamera.pitch.transform.rotation;
-
+            // Commented out temporarily, do not remove!!!
+            // Soon™
+            //playerTransform.rotation = behindCamera.pitch.transform.rotation;
         }
     }
 

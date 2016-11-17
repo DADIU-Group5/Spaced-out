@@ -91,7 +91,7 @@ public class InputController : MonoBehaviour, Observer
     }
 
     // Interprets input as camera mode.
-    private void HandleCameraMode()
+    protected virtual void HandleCameraMode()
     {
         // Save starting position of tap
         if (Input.GetMouseButtonDown(0))

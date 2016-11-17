@@ -7,6 +7,8 @@ public class InputController : MonoBehaviour, Observer
         inputDisabled = false;
     private Vector2 oldPoint;
 
+    public float playerRotateSpeed = 200f;
+
     public float cameraRotateSpeed = 4000f,
         launchBuffer = 100f;
     public Camera cam;
@@ -16,6 +18,8 @@ public class InputController : MonoBehaviour, Observer
     
     public Transform playerTransform,
         playerPitchTransform;
+
+    private Rigidbody playerRigidbody;
 
     public Collider hitboxCollider;
 
@@ -111,9 +115,10 @@ public class InputController : MonoBehaviour, Observer
             DirectedRotation(offset);
             oldPoint = pos;
 
-            // Commented out temporarily, do not remove!!!
-            // Soon™
-            //playerTransform.rotation = behindCamera.pitch.transform.rotation;
+            if (playerRigidbody.velocity.magnitude < player.maxMagnitude)
+            {
+                playerTransform.rotation = Quaternion.RotateTowards(playerTransform.rotation, behindCamera.pitch.transform.rotation, playerRotateSpeed * Time.deltaTime);
+            }
         }
     }
 
@@ -189,6 +194,7 @@ public class InputController : MonoBehaviour, Observer
                 player = go.GetComponent<PlayerController>();
                 playerTransform = player.transform;
                 playerPitchTransform = player.pitchTransform;
+                playerRigidbody = player.GetComponent<Rigidbody>();
                 fuel = player.fuel;
                 break;
             case EventName.PlayerWon:

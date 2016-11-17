@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class LevelProgress : MonoBehaviour, Observer
+public class TutorialLevel : MonoBehaviour, Observer
 {
     public void Awake()
     {
@@ -21,6 +21,6 @@ public class LevelProgress : MonoBehaviour, Observer
 
     public void TutorialComplete()
     {
-        PlayerPrefs.SetInt("TutorialComplete", 1);
+        ProgressManager.instance.completeTutorial();
     }
 }

@@ -15,6 +15,7 @@ public class LevelGenerator : MonoBehaviour {
 
     public GameObject playerPrefab;
     public GameObject keyPrefab;
+    public GameObject keyDoorPrefab;
 
     public int exteriorSeed;
     public int interiorSeed;
@@ -55,6 +56,9 @@ public class LevelGenerator : MonoBehaviour {
         SpawnKey();
         RemoveUnusedDoors();
         RandomizeInteriorForAll();
+        DisableRooms();
+        spawnedRooms[0].EnteredThisRoom();
+        spawnedRooms[0].exitDoor.doorToLock.StartDoor();
     }
 
     void GetGenerationData()
@@ -88,10 +92,10 @@ public class LevelGenerator : MonoBehaviour {
             if(item.GetComponent<Door>().GetDoorType() == DoorType.entrance)
             {
                 GameObject go = Instantiate(playerPrefab, item.transform.position - (item.transform.right)+new Vector3(0,2,0), Quaternion.identity) as GameObject;
-                go.transform.LookAt(item.transform.position - (item.transform.right * (playerDistanceFromDoor+1) + new Vector3(0, 2, 0)), Vector3.up);
-                CheckpointManager.instance.SetSpawnDistance(playerDistanceFromDoor);
-                CheckpointManager.instance.SetNewCheckpoint(item.transform.position);
-                CheckpointManager.instance.SetNewCheckpointRotation(-item.transform.right);
+                go.transform.LookAt(item.transform.position + (item.transform.right * (playerDistanceFromDoor+1) + new Vector3(0, 2, 0)), Vector3.up);
+                CheckpointManager.instance.SetSpawnDistance(playerDistanceFromDoor+1);
+                CheckpointManager.instance.SetNewCheckpoint(item.transform.position + new Vector3(0, 2, 0));
+                CheckpointManager.instance.SetNewCheckpointRotation(item.transform.right);
                 go.GetComponentInChildren<FuelController>().ReplenishFuel();
                 CheckpointManager.instance.SetFuelCount(go.GetComponentInChildren<FuelController>().GetCurrentFuel());
                 var evt = new ObserverEvent(EventName.PlayerSpawned);
@@ -108,7 +112,16 @@ public class LevelGenerator : MonoBehaviour {
     void SpawnKey()
     {
         Transform tempTrans = GetRandomDoor(spawnedRooms[spawnedRooms.Count - 1]).transform;
-        Instantiate(keyPrefab, tempTrans.position - (tempTrans.right*-keyDistanceFromDoor) + new Vector3(0, 2, 0), Quaternion.identity);
+        Instantiate(keyPrefab, tempTrans.position - (tempTrans.right*-keyDistanceFromDoor) + new Vector3(0, 2, 0), Quaternion.identity,spawnedRooms[spawnedRooms.Count-1].transform);
+        tempTrans.GetComponent<Door>().SetDoorBehindKey();
+    }
+
+    void DisableRooms()
+    {
+        for (int i = 2; i < spawnedRooms.Count; i++)
+        {
+            spawnedRooms[i].LeftThisRoom();
+        }
     }
 
     /// <summary>
@@ -191,8 +204,8 @@ public class LevelGenerator : MonoBehaviour {
 
         if (DoesRoomIntersect(newBound))
         {
-            /*Destroy(newRoom);
-            return false;*/
+            Destroy(newRoom);
+            return false;
         }
         entranceDoor.GetComponent<Door>().ConnectRoom(lastDoor);
         if (lastDoor != null)
@@ -217,6 +230,7 @@ public class LevelGenerator : MonoBehaviour {
     /// </summary>
     void RemoveUnusedDoors()
     {
+        int iterator = 0;
         firstDoor.BreakConnection();
         foreach (Room item in spawnedRooms)
         {
@@ -227,7 +241,22 @@ public class LevelGenerator : MonoBehaviour {
                     GameObject newDoor = Instantiate(doorPrefab);
                     newDoor.transform.rotation = door.transform.rotation;
                     
-                    newDoor.transform.parent = door.transform.parent;
+                    //newDoor.transform.parent = door.transform.parent;
+                    newDoor.transform.position = door.transform.position + (-door.transform.right * (5.65f));
+
+                    InRoomDoor IRD = newDoor.GetComponent<InRoomDoor>();
+                    IRD.SetPrevRoom(spawnedRooms[iterator]);
+                    IRD.SetNextRoom(spawnedRooms[iterator + 1]);
+                    spawnedRooms[iterator].SetExitDoor(IRD);
+                    iterator++;
+                    Destroy(door);
+                }
+                else if (door.GetComponent<Door>().GetDoorType() == DoorType.Key)
+                {
+                    GameObject newDoor = Instantiate(keyDoorPrefab);
+                    newDoor.transform.rotation = door.transform.rotation;
+
+                    //newDoor.transform.parent = door.transform.parent;
                     newDoor.transform.position = door.transform.position + (-door.transform.right * (5.65f));
                     Destroy(door);
                 }

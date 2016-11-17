@@ -42,22 +42,14 @@ public class SubtitleManager : Singleton<SubtitleManager>, Observer
     {
         switch (evt.eventName)
         {
-            case EventName.PlayerLaunch:
-                Subject.instance.Notify(gameObject, MakeEventFromSubtitle(Language.Danish, SubtitleType.Narrative));
-                break;
-            case EventName.Extinguish:
-                break;
-            case EventName.Crushed:
+            case EventName.OnFire:
+                Subject.instance.Notify(gameObject, MakeEventFromSubtitle(Language.English, SubtitleType.GasLeak));
                 break;
             case EventName.Electrocuted:
                 Subject.instance.Notify(gameObject, MakeEventFromSubtitle(Language.Danish, SubtitleType.Wires));
                 break;
-            case EventName.PlayerExploded:
-                break;
             case EventName.FuelEmpty:
-                Subject.instance.Notify(gameObject, MakeEventFromSubtitle(Language.Danish, SubtitleType.OutOfOxygen));
-                break;
-            case EventName.PlayerDead:
+                Subject.instance.Notify(gameObject, MakeEventFromSubtitle(Language.English, SubtitleType.OutOfOxygen));
                 break;
             default:
                 break;
@@ -66,7 +58,10 @@ public class SubtitleManager : Singleton<SubtitleManager>, Observer
 
     private Subtitle GetRandomSubtitle(List<Subtitle> subtitles)
     {
-        return subtitles[UnityEngine.Random.Range(0, subtitles.Count)];
+        if (subtitles.Count == 0)
+            return new Subtitle();
+        else
+            return subtitles[UnityEngine.Random.Range(0, subtitles.Count)];
     }
 
     private ObserverEvent MakeEventFromSubtitle(Language language, SubtitleType subType)

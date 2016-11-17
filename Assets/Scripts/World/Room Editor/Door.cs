@@ -7,7 +7,7 @@ public class Door : MonoBehaviour {
     GameObject connectedTo;
     public GameObject unusedPrefab;
     
-    DoorType doorType = DoorType.unused;
+    public DoorType doorType = DoorType.unused;
 
 	public void ConnectRoom(GameObject go)
     {
@@ -37,11 +37,10 @@ public class Door : MonoBehaviour {
             if (doorType != DoorType.exit)
             {
                 GameObject go = Instantiate(unusedPrefab) as GameObject;
+                go.transform.parent = transform.parent;
                 go.transform.position = transform.position;
                 go.transform.rotation = transform.rotation;
-                go.transform.parent = transform.parent;
             }
-
             Destroy(gameObject);
         }
     }

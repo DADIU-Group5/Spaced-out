@@ -94,12 +94,6 @@ public class GameOverMenu : MonoBehaviour, Observer
     {
         //shouldn't we go to the last transformation point?
         //when we add that logic, remember:
-
-        //if reset to level start:
-        /* //player reset, so he hasn't died in this run yet.
-        PlayerPrefs.SetInt("playerDiedThisLevel", 0);*/
-
-        ScoreManager.instance.SetPlayerHasDiedThisLevel(level);
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }
@@ -107,7 +101,7 @@ public class GameOverMenu : MonoBehaviour, Observer
     void Start()
     {
         Subject.instance.AddObserver(this);
-        level = PlayerPrefs.GetInt("CurrentLevel");
+        level = GenerationDataManager.instance.GetCurrentLevel();
     }
 
     // Update is called once per frame

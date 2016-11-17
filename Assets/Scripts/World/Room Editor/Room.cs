@@ -272,9 +272,10 @@ public class Room : MonoBehaviour
     {
         foreach (GameObject item in floatingObjects)
         {
-            if (item.GetComponent<ObjectSelector>() != null)
+            
+            if (item.GetComponent<FloatingProps>() != null)
             {
-                item.GetComponent<ObjectSelector>().Replace(this);
+                item.GetComponent<FloatingProps>().Replace(this);
             }
             else
             {
@@ -294,13 +295,32 @@ public class Room : MonoBehaviour
         }
         foreach (GameObject item in enviromentalObjects)
         {
-            if (item.GetComponent<ObjectSelector>() != null)
+            if (item.GetComponent<SmallObjectSelector>() != null)
             {
-                item.GetComponent<ObjectSelector>().Replace(this);
+                item.GetComponent<SmallObjectSelector>().Replace(this);
+            }
+            else if (item.GetComponent<MediumObjectSelector>() != null)
+            {
+                item.GetComponent<MediumObjectSelector>().Replace(this);
+            }
+            else if (item.GetComponent<LargeObjectSelector>() != null)
+            {
+                item.GetComponent<LargeObjectSelector>().Replace(this);
+            }
+            else if (item.GetComponent<XLargeObjectSelector>() != null)
+            {
+                item.GetComponent<XLargeObjectSelector>().Replace(this);
             }
             else
             {
                 Debug.Log("not there");
+            }
+        }
+        foreach (GameObject item in switchObjects)
+        {
+            if (item.transform.GetChild(0) != null && item.transform.GetChild(0).GetComponent<SwitchItem>() != null)
+            {
+                item.transform.GetChild(0).GetComponent<SwitchItem>().AssignRoom(this);
             }
         }
         /*foreach (GameObject item in shapingObjects)

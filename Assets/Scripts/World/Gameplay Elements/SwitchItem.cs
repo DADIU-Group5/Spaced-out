@@ -6,7 +6,7 @@ public class SwitchItem : MonoBehaviour {
 
     //Should contain logic on on/off,
     // as well as which object it manipulates.
-   // [HideInInspector]
+    //[HideInInspector]
     public List<GameObject> assignedHazards;
 
     [Header("How long is the switch untouchable after collision?")]

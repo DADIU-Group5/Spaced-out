@@ -57,7 +57,14 @@ public class PlayerBehaviour : MonoBehaviour, Observer
             Subject.instance.Notify(gameObject, evt);
 
             //Actual death.
-            transform.parent.gameObject.SetActive(false);
+            if (transform.parent != null)
+            {
+                transform.parent.gameObject.SetActive(false);
+            }
+            else
+            {
+                transform.gameObject.SetActive(false);
+            }
             CheckpointManager.instance.RespawnPlayer(transform.parent.gameObject);
         }
     }

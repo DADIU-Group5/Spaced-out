@@ -2,7 +2,7 @@
 
 public class InputController : MonoBehaviour, Observer
 {
-    private bool invertCameraControls = false,
+    private bool invertCameraControls = true,
         launchMode = false,
         inputDisabled = false;
     private Vector2 oldPoint;
@@ -175,6 +175,7 @@ public class InputController : MonoBehaviour, Observer
     private void DirectedRotation(Vector2 offset)
     {
         float xScale = behindCamera.pitch.transform.up.y;
+        xScale = Mathf.Sign(xScale);
         behindCamera.transform.Rotate(Vector3.up, Time.deltaTime * xScale * cameraRotateSpeed * (offset.x / ScreenCenter().magnitude));
         behindCamera.pitch.transform.Rotate(Vector3.right, Time.deltaTime * cameraRotateSpeed * (-offset.y / ScreenCenter().magnitude));
     }

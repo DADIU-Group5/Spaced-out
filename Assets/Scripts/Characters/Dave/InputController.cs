@@ -2,7 +2,7 @@
 
 public class InputController : MonoBehaviour, Observer
 {
-    private bool invertCameraControls = false,
+    private bool invertCameraControls = true,
         launchMode = false,
         inputDisabled = false;
     private Vector2 oldPoint;
@@ -13,11 +13,11 @@ public class InputController : MonoBehaviour, Observer
     public BehindCamera behindCamera;
     public PlayerController player;
     public FuelController fuel;
-
-    public Collider hitboxCollider;
     
     public Transform playerTransform,
         playerPitchTransform;
+
+    public Collider hitboxCollider;
 
     private void Awake()
     {
@@ -69,9 +69,7 @@ public class InputController : MonoBehaviour, Observer
         if (Input.GetMouseButton(0))
         {
             playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
-
-            // TODO: Implement an UIController that can handle updating the UI with method calls,
-            //       so we aren't updating this part of the UI every frame... /Malte
+            
             player.SetLaunchForce(GetLaunchForce());
         }
 
@@ -112,6 +110,10 @@ public class InputController : MonoBehaviour, Observer
 
             DirectedRotation(offset);
             oldPoint = pos;
+
+            // Commented out temporarily, do not remove!!!
+            // Soon™
+            //playerTransform.rotation = behindCamera.pitch.transform.rotation;
         }
     }
 
@@ -137,8 +139,14 @@ public class InputController : MonoBehaviour, Observer
     {
         Ray ray = cam.ScreenPointToRay(ScreenCenter());
         RaycastHit hit;
-        int layerMask = ~(LayerMask.NameToLayer("Golfball") | LayerMask.NameToLayer("Ragdoll"));
-        if (Physics.Raycast(ray, out hit, layerMask))
+        
+        // Create layermask that ignores all Golfball and Ragdoll layers
+        int layermask1 = 1 << LayerMask.NameToLayer("Golfball");
+        int layermask2 = 1 << LayerMask.NameToLayer("Ragdoll");
+        int layermask3 = 1 << LayerMask.NameToLayer("Ignore Raycast");
+        int finalmask = ~(layermask1 | layermask2 | layermask3);
+
+        if (Physics.Raycast(ray, out hit, System.Int32.MaxValue, finalmask))
         //if (Physics.Raycast(ray, out hit))
         {
             return hit.point - player.transform.position;
@@ -166,6 +174,7 @@ public class InputController : MonoBehaviour, Observer
     private void DirectedRotation(Vector2 offset)
     {
         float xScale = behindCamera.pitch.transform.up.y;
+        xScale = Mathf.Sign(xScale);
         behindCamera.transform.Rotate(Vector3.up, Time.deltaTime * xScale * cameraRotateSpeed * (offset.x / ScreenCenter().magnitude));
         behindCamera.pitch.transform.Rotate(Vector3.right, Time.deltaTime * cameraRotateSpeed * (-offset.y / ScreenCenter().magnitude));
     }

@@ -206,6 +206,10 @@ public class Room : MonoBehaviour
         {
             item.EnabledOrDisableTrap();
         }
+        if(exitDoor != null)
+        {
+            exitDoor.doorToLock.Switch();
+        }
     }
 
     public void SetExitDoor(InRoomDoor ird)

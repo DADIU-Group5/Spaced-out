@@ -3,18 +3,18 @@ using System.Collections;
 
 public class InRoomDoor : MonoBehaviour {
 
-    public GameObject doorToLock;
+    public MalfunctioningDoors doorToLock;
     public Room prevRoom;
     public Room nextRoom;
 
 	public void UnlockDoor()
     {
-        doorToLock.SetActive(false);
+
     }
 
     public void LockDoor()
     {
-        doorToLock.SetActive(true);
+        doorToLock.LockDoor();
     }
 
     public void SetPrevRoom(Room room)
@@ -27,11 +27,22 @@ public class InRoomDoor : MonoBehaviour {
         nextRoom = room;
     }
 
+    public void DoorLocked()
+    {
+        prevRoom.LeftThisRoom();
+    }
+
     public void EnteredNextRoom()
     {
         LockDoor();
-        prevRoom.LeftThisRoom();
-        nextRoom.EnteredThisRoom();
+        if (nextRoom != null)
+        {
+            nextRoom.EnteredThisRoom();
+            if (nextRoom.exitDoor != null)
+            {
+                nextRoom.exitDoor.doorToLock.StartDoor();
+            }
+        }
     }
 
     public void PrepNextRoom()

@@ -7,11 +7,23 @@ public class ObjectDatabase : MonoBehaviour {
 
     public static ObjectDatabase instance;
 
-    List<Object> enviromentalObjects = new List<Object>();
-    List<Object> floatingObjects = new List<Object>();
-    List<Object> staticObjects = new List<Object>();
-    List<Object> shapingObjects = new List<Object>();
-    List<Object> pickupObjects = new List<Object>();
+    //List<GameObject> enviromentalObjects = new List<GameObject>();
+    List<GameObject> floatingObjects = new List<GameObject>();
+    List<GameObject> staticObjects = new List<GameObject>();
+    List<GameObject> shapingObjects = new List<GameObject>();
+    List<GameObject> pickupObjects = new List<GameObject>();
+    List<GameObject> walls = new List<GameObject>();
+    List<GameObject> outerCornors = new List<GameObject>();
+    List<GameObject> innerCornors = new List<GameObject>();
+    List<GameObject> floors = new List<GameObject>();
+    List<GameObject> doors = new List<GameObject>();
+
+    List<GameObject> small = new List<GameObject>();
+    List<GameObject> medium = new List<GameObject>();
+    List<GameObject> large = new List<GameObject>();
+    List<GameObject> xLarge = new List<GameObject>();
+
+    public Themes levelTheme;
 
     void Awake()
     {
@@ -25,6 +37,7 @@ public class ObjectDatabase : MonoBehaviour {
             Destroy(gameObject);
             return;
         }
+        //GET THE THEME FOR THE LEVEL!
         LoadObjects();
     }
 
@@ -44,36 +57,111 @@ public class ObjectDatabase : MonoBehaviour {
     /// </summary>
     public void LoadObjects()
     {
-        enviromentalObjects = new List<Object>(Resources.LoadAll("ObjectDatabase/EnviromentalObjects"));
-        floatingObjects = new List<Object>(Resources.LoadAll("ObjectDatabase/FloatingObjects"));
-        staticObjects = new List<Object>(Resources.LoadAll("ObjectDatabase/StaticObjects"));
-        shapingObjects = new List<Object>(Resources.LoadAll("ObjectDatabase/ShapingObjects"));
-        pickupObjects = new List<Object>(Resources.LoadAll("ObjectDatabase/Pickups"));
+        Debug.Log("Loading "+levelTheme.ToString());
+        //enviromentalObjects = LoadFromPathFiltered("ObjectDatabase/EnviromentalObjects");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/EnviromentalObjects"));
+        floatingObjects = LoadFromPathFiltered("ObjectDatabase/FloatingObjects");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/FloatingObjects"));
+        staticObjects = LoadFromPathFiltered("ObjectDatabase/StaticObjects");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/StaticObjects"));
+        shapingObjects = LoadFromPathFiltered("ObjectDatabase/ShapingObjects");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/ShapingObjects"));
+        pickupObjects = LoadFromPathFiltered("ObjectDatabase/Pickups");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/Pickups"));
+        walls = LoadFromPathFiltered("ObjectDatabase/Walls");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/Walls"));
+        outerCornors = LoadFromPathFiltered("ObjectDatabase/OuterCornors");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/OuterCornors"));
+        innerCornors = LoadFromPathFiltered("ObjectDatabase/InnerCornors");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/InnerCornors"));
+        floors = LoadFromPathFiltered("ObjectDatabase/Floors");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/Floors"));
+        doors = LoadFromPathFiltered("ObjectDatabase/Doors");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/Doors"));
+
+        small = LoadFromPathFiltered("ObjectDatabase/EnviromentalObjects/Small");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/EnviromentalObjects/Small"));
+        medium = LoadFromPathFiltered("ObjectDatabase/EnviromentalObjects/Medium");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/EnviromentalObjects/Medium"));
+        large = LoadFromPathFiltered("ObjectDatabase/EnviromentalObjects/Large");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/EnviromentalObjects/Large"));
+        xLarge = LoadFromPathFiltered("ObjectDatabase/EnviromentalObjects/XLarge");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/EnviromentalObjects/XLarge"));
     }
 
-    public List<Object> GetEnviromentalObjects()
+    List<GameObject> LoadFromPathFiltered(string path)
+    {
+        List<GameObject> toReturn = new List<GameObject>(Resources.LoadAll<GameObject>(path));
+        for (int i = toReturn.Count-1; i >= 0; i--)
+        {
+            if(toReturn[i].GetComponent<ThemeObject>() != null)
+            {
+                if(toReturn[i].GetComponent<ThemeObject>().GetTheme() != levelTheme)
+                {
+                    toReturn.RemoveAt(i);
+                }
+            }
+        }
+        return toReturn;
+    }
+
+    /*public List<GameObject> GetEnviromentalObjects()
     {
         return enviromentalObjects;
-    }
+    }*/
 
-    public List<Object> GetFloatingObjects()
+    public List<GameObject> GetFloatingObjects()
     {
         return floatingObjects;
     }
 
-    public List<Object> GetStaticObjects()
+    public List<GameObject> GetStaticObjects()
     {
         return staticObjects;
     }
 
-    public List<Object> GetShapingObjects()
+    public List<GameObject> GetShapingObjects()
     {
         return shapingObjects;
     }
 
-    public List<Object> GetPickupObjects()
+    public List<GameObject> GetPickupObjects()
     {
         return pickupObjects;
     }
 
+    public List<GameObject> GetWalls()
+    {
+        return walls;
+    }
+
+    public List<GameObject> GetFloors()
+    {
+        return floors;
+    }
+
+    public List<GameObject> GetOuterCornors()
+    {
+        return outerCornors;
+    }
+
+    public List<GameObject> GetInnerCornors()
+    {
+        return innerCornors;
+    }
+
+    public List<GameObject> GetDoors()
+    {
+        return doors;
+    }
+
+    public List<GameObject> GetSmall()
+    {
+        return small;
+    }
+
+    public List<GameObject> GetMedium()
+    {
+        return medium;
+    }
+
+    public List<GameObject> GetLarge()
+    {
+        return large;
+    }
+    public List<GameObject> GetXLarge()
+    {
+        return xLarge;
+    }
+}
+
+public enum Themes
+{
+    CommandCenter, Storage, Botanic, Cafeteria
 }

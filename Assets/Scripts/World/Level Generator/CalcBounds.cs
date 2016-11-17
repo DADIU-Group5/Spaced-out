@@ -6,11 +6,11 @@ public class CalcBounds : MonoBehaviour {
 
     Bounds bounds;
 
-    /*void OnDrawGizmos()
+    void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(bounds.center, bounds.size);
-    }*/
+    }
 
     // Use this for initialization
     public Bounds calc () {
@@ -19,11 +19,11 @@ public class CalcBounds : MonoBehaviour {
         return bounds;
 	}
 
-    /*void Update()
+    void Update()
     {
         bounds = new Bounds(transform.position, Vector3.zero);
         IncludeChildren(transform);
-    }*/
+    }
 
     void IncludeChildren(Transform t)
     {

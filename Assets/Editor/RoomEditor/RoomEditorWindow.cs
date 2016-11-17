@@ -20,7 +20,7 @@ public class RoomEditorWindow : EditorWindow {
 
     string pathName = "Assets/Resources/Rooms/";
 
-    [MenuItem("RoomEditor/RoomWindow")]
+    //[MenuItem("RoomEditor/RoomWindow")]
     public static void ShowWindow()
     {
         window = (RoomEditorWindow)EditorWindow.GetWindow(typeof(RoomEditorWindow));
@@ -150,7 +150,7 @@ public class RoomEditorWindow : EditorWindow {
                 objectToCreate = 0;
                 break;
             case 3:
-                Selection.activeGameObject = RC.AddStaticObject();
+                Selection.activeGameObject = RC.AddHazardObject();
                 objectToCreate = 0;
                 break;
             case 4:
@@ -377,11 +377,11 @@ public class RoomEditorWindow : EditorWindow {
                 RC.GetRoom().AddFloatingObject(child.gameObject);
             }
         }
-        foreach (Transform child in RC.GetRoom().staticObjectParent.transform)
+        foreach (Transform child in RC.GetRoom().hazardObjectParent.transform)
         {
-            if (!RC.GetRoom().staticObjects.Contains(child.gameObject))
+            if (!RC.GetRoom().hazardObjects.Contains(child.gameObject))
             {
-                RC.GetRoom().AddStaticObject(child.gameObject);
+                RC.GetRoom().AddHazardObject(child.gameObject);
             }
         }
         foreach (Transform child in RC.GetRoom().enviromentalObjectsParent.transform)
@@ -418,7 +418,7 @@ public class RoomEditorWindow : EditorWindow {
             }
         }
 
-        foreach (GameObject item in RC.GetRoom().staticObjects)
+        foreach (GameObject item in RC.GetRoom().hazardObjects)
         {
             if (item.GetComponent<ObjectSelector>() != null)
             {

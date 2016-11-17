@@ -102,7 +102,7 @@ public class RoomCreatorEditor : Editor
         }
         if (GUILayout.Button("Create Static Object"))
         {
-            RC.AddStaticObject();
+            RC.AddHazardObject();
         }
         if (GUILayout.Button("Create Shaping Object"))
         {
@@ -282,11 +282,11 @@ public class RoomCreatorEditor : Editor
                 RC.GetRoom().AddFloatingObject(child.gameObject);
             }
         }
-        foreach (Transform child in RC.GetRoom().staticObjectParent.transform)
+        foreach (Transform child in RC.GetRoom().hazardObjectParent.transform)
         {
-            if (!RC.GetRoom().staticObjects.Contains(child.gameObject))
+            if (!RC.GetRoom().hazardObjects.Contains(child.gameObject))
             {
-                RC.GetRoom().AddStaticObject(child.gameObject);
+                RC.GetRoom().AddHazardObject(child.gameObject);
             }
         }
         foreach (Transform child in RC.GetRoom().enviromentalObjectsParent.transform)
@@ -323,7 +323,7 @@ public class RoomCreatorEditor : Editor
             }
         }
 
-        foreach (GameObject item in RC.GetRoom().staticObjects)
+        foreach (GameObject item in RC.GetRoom().hazardObjects)
         {
             if (item.GetComponent<ObjectSelector>() != null)
             {

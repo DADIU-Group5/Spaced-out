@@ -11,6 +11,7 @@
     PlayerFuelPickup,
     PlayerSpawned,
     PlayerDead,
+    RespawnPlayer,
     OnFire,
     Extinguish,
     PlayerWon,

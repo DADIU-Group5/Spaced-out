@@ -347,7 +347,7 @@ public class Room : MonoBehaviour
         }
         foreach (GameObject item in switchObjects)
         {
-            if (item.transform.GetChild(0) != null && item.transform.GetChild(0).GetComponent<SwitchItem>() != null)
+            if (item.transform.GetChild(0).GetComponent<SwitchItem>() != null)
             {
                 item.transform.GetChild(0).GetComponent<SwitchItem>().AssignRoom(this);
             }

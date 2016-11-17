@@ -93,7 +93,7 @@ public class LevelGenerator : MonoBehaviour {
             {
                 GameObject go = Instantiate(playerPrefab, item.transform.position - (item.transform.right)+new Vector3(0,2,0), Quaternion.identity) as GameObject;
                 go.transform.LookAt(item.transform.position + (item.transform.right * (playerDistanceFromDoor+1) + new Vector3(0, 2, 0)), Vector3.up);
-                CheckpointManager.instance.SetSpawnDistance(playerDistanceFromDoor);
+                CheckpointManager.instance.SetSpawnDistance(playerDistanceFromDoor+1);
                 CheckpointManager.instance.SetNewCheckpoint(item.transform.position + new Vector3(0, 2, 0));
                 CheckpointManager.instance.SetNewCheckpointRotation(item.transform.right);
                 go.GetComponentInChildren<FuelController>().ReplenishFuel();

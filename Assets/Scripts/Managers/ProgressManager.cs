@@ -18,6 +18,7 @@ public class ProgressManager : Singleton<ProgressManager> {
     // set medal as completed for level
     public void SetMedal(int level, int medal)
     {
+        Debug.Log("Setting medals! level: "+ level + " medal: " + medal);
         if (level < 1 || level > progress.levels.Length)
         {
             throw new UnityException("No medals exists for level: " + level);
@@ -58,6 +59,7 @@ public class ProgressManager : Singleton<ProgressManager> {
     // returns an array of 3 bools indicating if medals are completed
     public bool[] GetMedals(int level)
     {
+        Debug.Log("Getting medals!");
         if (level < 1 || level > progress.levels.Length)
         {
             throw new UnityException("No medals exists for level: " + level);
@@ -102,10 +104,12 @@ public class ProgressManager : Singleton<ProgressManager> {
     // Resets all progress to default
     public void Reset()
     {
+        Debug.Log("Resetting level scores!");
         progress.levels = new Progress.LevelProgress[5];
         for (int i = 0; i < 5; i++)
         {
             progress.levels[i] = new Progress.LevelProgress();
+            Debug.Log("level " +i + " completed: " + progress.levels[i].completed + " no deaths: " + progress.levels[i].noDeaths + " all comics: " + progress.levels[i].allComics);
         }
         progress.currency = 0;
         progress.completedTutorial = false;

@@ -32,3 +32,4 @@ sysinfo.txt
 # DADIU Ignores
 /Assets/Local/
 /Assets/Local.meta
+Assets/Scripts/Managers/Level Generator/Checkpoint.cs

@@ -12,6 +12,7 @@ public class Progress : ScriptableObject
     // called from unity editor
     void Reset()
     {
+        Debug.Log("Reseting medals...");
         currency = 0;
         completedTutorial = true;
 
@@ -31,6 +32,5 @@ public class Progress : ScriptableObject
         public bool completed;
         public bool allComics;
         public bool noDeaths;
-
     }
 }

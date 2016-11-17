@@ -95,7 +95,7 @@ public class WinMenu : MonoBehaviour, Observer
         bool finished = medals[0];
         bool collectedComics = medals[1];
         bool didntDie = medals[2];
-
+        Debug.Log("Testing medals! Completion: " + finished + " comics: " + collectedComics + " and didn't die: " + didntDie);
         goodImages[0].SetActive(finished);
         badImages[0].SetActive(!finished);
 

@@ -2,23 +2,27 @@
 using System.Collections;
 using System.Collections.Generic;
 
-[ExecuteInEditMode]
 public class ObjectSelector : MonoBehaviour {
 
-    public List<Object> canBe;
+    public List<GameObject> canBe;
     GameObject GOshowing;
     int showing;
     public bool lockObject = false;
-    public Object lockedAs;
+    public GameObject lockedAs;
 
     // Use this for initialization
     void Start () {
-        LoadObjects();
+        //LoadObjects();
 	}
 
     public virtual void LoadObjects()
     {
+        /*if(gameObject.name[0] == 'x')
+        {
+            Debug.Log(gameObject.name);
+        }*/
         //Debug.Log("canbe: " + canBe.Count);
+        //Debug.Log(canBe[0].name);
     }
 
     public void ShowNext()
@@ -63,8 +67,7 @@ public class ObjectSelector : MonoBehaviour {
     {
         gameObject.GetComponent<Renderer>().enabled = false;
         DestroyShowingModel();
-        Debug.Log(canBe[showing].name);
-        GOshowing = Instantiate((GameObject)canBe[showing],transform.position,Quaternion.identity,transform) as GameObject;
+        GOshowing = Instantiate(canBe[showing],transform.position,Quaternion.identity,transform) as GameObject;
         GOshowing.transform.rotation = gameObject.transform.rotation;
     }
 
@@ -89,10 +92,12 @@ public class ObjectSelector : MonoBehaviour {
     /// <summary>
     /// Used in level generation to replace the object with a gameplay object.
     /// </summary>
-    public void Replace(Room r)
+    public virtual void Replace(Room r)
     {
+        LoadObjects();
         if(canBe.Count == 0)
         {
+            Debug.Log("is this why?");
             LoadObjects();
             if (canBe.Count == 0)
             {
@@ -127,7 +132,7 @@ public class ObjectSelector : MonoBehaviour {
     }
 
     //Replaces the 'dummy' object with a gameplay object.
-    void ReplaceModel(Object obj)
+    void ReplaceModel(GameObject obj)
     {
 
         if(obj == null)
@@ -136,18 +141,19 @@ public class ObjectSelector : MonoBehaviour {
             Debug.Log(this.name+"error");
             return;
         }
-        GOshowing = Instantiate((GameObject)obj, transform.position, Quaternion.identity, transform.parent) as GameObject;
-        if (gameObject.transform.localScale != Vector3.one)
+        
+        GOshowing = Instantiate(obj, transform.position, Quaternion.identity, transform.parent) as GameObject;
+        if (transform.localScale != Vector3.one)
         {
-            GOshowing.transform.localScale = gameObject.transform.localScale;
+            GOshowing.transform.localScale = transform.localScale;
         }
-        GOshowing.transform.rotation = gameObject.transform.rotation;
+        GOshowing.transform.rotation = transform.rotation;
     }
 
     public void LockObject()
     {
         lockObject = true;
-        lockedAs = (Object)GOshowing;
+        lockedAs = GOshowing;
     }
 
     public void UnlockObject()

@@ -212,6 +212,10 @@ public class RoomMakerEditor : EditorWindow {
                 {
                     Selection.activeTransform.Rotate(new Vector3(0, 90, 0));
                 }
+                if (GUILayout.Button("180"))
+                {
+                    Selection.activeTransform.Rotate(new Vector3(0, 180, 0));
+                }
                 if (GUILayout.Button("-90"))
                 {
                     Selection.activeTransform.Rotate(new Vector3(0, -90, 0));
@@ -343,6 +347,10 @@ public class RoomMakerEditor : EditorWindow {
                 if (GUILayout.Button("+90"))
                 {
                     Selection.activeTransform.Rotate(new Vector3(0, 90, 0));
+                }
+                if (GUILayout.Button("180"))
+                {
+                    Selection.activeTransform.Rotate(new Vector3(0, 180, 0));
                 }
                 if (GUILayout.Button("-90"))
                 {

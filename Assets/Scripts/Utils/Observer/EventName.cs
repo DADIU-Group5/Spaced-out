@@ -24,5 +24,6 @@
     BarrelExplosion,
     PlayerExploded,
     FuelEmpty,
-    UpdateStatus
+    UpdateStatus,
+    ShowSubtile
 }

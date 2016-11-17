@@ -16,28 +16,7 @@ public class GameOverMenu : MonoBehaviour, Observer
     private bool playerIsDead = false;
     private bool playerWon = false;
     private float countingDown = 10;
-
-    void Start()
-    {
-        Subject.instance.AddObserver(this);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //if the player is dead, start counting down to level reset
-        if (playerIsDead)
-        {
-            countingDown -= Time.deltaTime;
-            ResetCountdown.text = "Resetting in " + Mathf.Round(countingDown) + "...";
-        }
-
-        //if the countdown has reached zero, reset the level
-        if (countingDown <= 0)
-        {
-            RemoveGameOverScreen();
-        }
-    }
+    private int level = 1;
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
@@ -106,6 +85,8 @@ public class GameOverMenu : MonoBehaviour, Observer
         {
             transform.GetChild(i).gameObject.SetActive(false);
         }
+        var evt = new ObserverEvent(EventName.RespawnPlayer);
+        Subject.instance.Notify(gameObject, evt);
     }
 
     /// <summary>
@@ -119,5 +100,26 @@ public class GameOverMenu : MonoBehaviour, Observer
         SceneManager.LoadScene(scene.name);
     }
 
+    void Start()
+    {
+        Subject.instance.AddObserver(this);
+        level = GenerationDataManager.instance.GetCurrentLevel();
+    }
 
+    // Update is called once per frame
+    void Update () {
+
+        //if the player is dead, start counting down to level reset
+	    if (playerIsDead)
+        {
+            countingDown -= Time.deltaTime;
+            ResetCountdown.text = "Resetting in "+ Mathf.Round( countingDown ) + "...";
+
+            //if the countdown has reached zero, reset the level
+            if (countingDown <= 0)
+            {
+                RemoveGameOverScreen();
+            }
+        }
+	}
 }

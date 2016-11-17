@@ -24,6 +24,8 @@ public class Room : MonoBehaviour
 
     public List<HazardState> hazards;
 
+    public InRoomDoor exitDoor;
+
     /// <summary>
     /// Adds a new enviromental object.
     /// </summary>
@@ -204,6 +206,33 @@ public class Room : MonoBehaviour
         {
             item.EnabledOrDisableTrap();
         }
+        if(exitDoor != null)
+        {
+            exitDoor.doorToLock.Switch();
+        }
+    }
+
+    public void SetExitDoor(InRoomDoor ird)
+    {
+        exitDoor = ird;
+    }
+
+    public void EnteredThisRoom()
+    {
+        if(exitDoor != null)
+        {
+            exitDoor.PrepNextRoom();
+        }
+    }
+
+    public void PrepRoom()
+    {
+        gameObject.SetActive(true);
+    }
+
+    public void LeftThisRoom()
+    {
+        gameObject.SetActive(false);
     }
 
     public void UpdateLists()
@@ -318,9 +347,11 @@ public class Room : MonoBehaviour
         }
         foreach (GameObject item in switchObjects)
         {
-            if (item.transform.GetChild(0) != null && item.transform.GetChild(0).GetComponent<SwitchItem>() != null)
-            {
-                item.transform.GetChild(0).GetComponent<SwitchItem>().AssignRoom(this);
+            if (item.transform.childCount > 0) {
+                if (item.transform.GetChild(0).GetComponent<SwitchItem>() != null)
+                {
+                    item.transform.GetChild(0).GetComponent<SwitchItem>().AssignRoom(this);
+                }
             }
         }
         /*foreach (GameObject item in shapingObjects)

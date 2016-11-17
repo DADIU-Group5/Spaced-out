@@ -55,6 +55,8 @@ public class LevelGenerator : MonoBehaviour {
         SpawnKey();
         RemoveUnusedDoors();
         RandomizeInteriorForAll();
+        DisableRooms();
+        spawnedRooms[0].EnteredThisRoom();
     }
 
     void GetGenerationData()
@@ -108,7 +110,16 @@ public class LevelGenerator : MonoBehaviour {
     void SpawnKey()
     {
         Transform tempTrans = GetRandomDoor(spawnedRooms[spawnedRooms.Count - 1]).transform;
-        Instantiate(keyPrefab, tempTrans.position - (tempTrans.right*-keyDistanceFromDoor) + new Vector3(0, 2, 0), Quaternion.identity);
+        Instantiate(keyPrefab, tempTrans.position - (tempTrans.right*-keyDistanceFromDoor) + new Vector3(0, 2, 0), Quaternion.identity,spawnedRooms[spawnedRooms.Count-1].transform);
+
+    }
+
+    void DisableRooms()
+    {
+        for (int i = 2; i < spawnedRooms.Count; i++)
+        {
+            spawnedRooms[i].LeftThisRoom();
+        }
     }
 
     /// <summary>
@@ -217,6 +228,7 @@ public class LevelGenerator : MonoBehaviour {
     /// </summary>
     void RemoveUnusedDoors()
     {
+        int iterator = 0;
         firstDoor.BreakConnection();
         foreach (Room item in spawnedRooms)
         {
@@ -229,6 +241,12 @@ public class LevelGenerator : MonoBehaviour {
                     
                     newDoor.transform.parent = door.transform.parent;
                     newDoor.transform.position = door.transform.position + (-door.transform.right * (5.65f));
+                    InRoomDoor IRD = newDoor.GetComponent<InRoomDoor>();
+                    IRD.SetPrevRoom(spawnedRooms[iterator]);
+                    IRD.SetNextRoom(spawnedRooms[iterator + 1]);
+                    spawnedRooms[iterator].SetExitDoor(IRD);
+
+                    iterator++;
                     Destroy(door);
                 }
                 else

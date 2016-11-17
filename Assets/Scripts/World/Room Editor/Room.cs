@@ -24,6 +24,8 @@ public class Room : MonoBehaviour
 
     public List<HazardState> hazards;
 
+    public InRoomDoor exitDoor;
+
     /// <summary>
     /// Adds a new enviromental object.
     /// </summary>
@@ -204,6 +206,29 @@ public class Room : MonoBehaviour
         {
             item.EnabledOrDisableTrap();
         }
+    }
+
+    public void SetExitDoor(InRoomDoor ird)
+    {
+        exitDoor = ird;
+    }
+
+    public void EnteredThisRoom()
+    {
+        if(exitDoor != null)
+        {
+            exitDoor.PrepNextRoom();
+        }
+    }
+
+    public void PrepRoom()
+    {
+        gameObject.SetActive(true);
+    }
+
+    public void LeftThisRoom()
+    {
+        gameObject.SetActive(false);
     }
 
     public void UpdateLists()

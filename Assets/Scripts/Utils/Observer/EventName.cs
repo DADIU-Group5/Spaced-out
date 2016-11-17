@@ -25,5 +25,7 @@
     PlayerExploded,
     FuelEmpty,
     UpdateStatus,
+    CameraZoomOut,
+    CameraZoomIn,
     ShowSubtile
 }

@@ -1,32 +1,132 @@
 {
 	"englishSubtitles": {
 		"narrative": [{
-			"id": 1,
-			"text": "Hi, my name is Giorgos",
+			"id": "narrative1",
+			"text": "Dave my sensors are picking up something... It's coming closer.",
+			"start": 0.0,
+			"duration": 2.0
+		}, {
+			"id": "narrative2",
+			"text": "Alert, Prepare for impact",
+			"start": 0.0,
+			"duration": 2.0
+		}, {
+			"id": "narrative3",
+			"text": "Dave I have openend the door to the escape pod. Please evacuate the station.",
 			"start": 0.0,
 			"duration": 2.0
 		}],
-		"generalRemarks": [],
-		"wires": [],
-		"switches": [],
-		"fan": [],
-		"gasLeak": [],
-		"lowOxygen": [],
-		"outOfOxygen": []
+		"generalRemarks": [{
+			"id": "remark1",
+			"text": "If at first you don't succeed; call it version 1.0",
+			"start": 0.0,
+			"duration": 2.0
+		}, {
+			"id": "remark2",
+			"text": "My software doesn't have any bugs. It just develops random features...",
+			"start": 0.0,
+			"duration": 2.0
+		}],
+		"wires": [{
+			"id": "wires1",
+			"text": "Q: What is an electrician's favorite ice cream flavor? A: Shock-o-lot! Hehehehe... Dave?...",
+			"start": 0.0,
+			"duration": 2.0
+		}],
+		"switches": [{
+			"id": "switeches1",
+			"text": "Any fool can use a computer. Many do...",
+			"start": 0.0,
+			"duration": 2.0
+		}],
+		"fan": [{
+			"id": "fan1",
+			"text": "This is being blown out of proportions Dave.",
+			"start": 0.0,
+			"duration": 2.0
+		}],
+		"gasLeak": [{
+			"id": "gasLeak1",
+			"text": "Did you smell something Dave?",
+			"start": 0.0,
+			"duration": 2.0
+		}],
+		"lowOxygen": [{
+			"id": "lowOxygen1",
+			"text": " My readings tell me that your oxygen levels are low.",
+			"start": 0.0,
+			"duration": 2.0
+		}],
+		"outOfOxygen": [{
+			"id": "outOfOxygen1",
+			"text": "You're out of Oxygen dave.",
+			"start": 0.0,
+			"duration": 2.0
+		}]
 	},
 	"danishSubtitles": {
 		"narrative": [{
-			"id": 1,
-			"text": "Hej, jeg hedder Giorgos",
-			"start": 1.5,
+			"id": "narrative1",
+			"text": "Dave, mine sensorere har opfanget noget... Det nærmer sig, hurtigt.",
+			"start": 0.5,
+			"duration": 2.0
+		}, {
+			"id": "narrative2",
+			"text": "Advarsel, Bered på sammenstød.",
+			"start": 0.5,
+			"duration": 2.0
+		}, {
+			"id": "narrative3",
+			"text": "Dave, jeg har åbnet porten til redningskapslen, vær sød at evakuere station.",
+			"start": 0.5,
 			"duration": 2.0
 		}],
-		"generalRemarks": [],
-		"wires": [],
-		"switches": [],
-		"fan": [],
-		"gasLeak": [],
-		"lowOxygen": [],
-		"outOfOxygen": []
+		"generalRemarks": [{
+			"id": "remark1",
+			"text": "Hvis det ikke lykkes første gang; så kald det først version",
+			"start": 0.0,
+			"duration": 2.0
+		}, {
+			"id": "remark2",
+			"text": "Mit software har ikke nogen fejl",
+			"start": 0.0,
+			"duration": 2.0
+		}],
+		"wires": [{
+			"id": "wires1",
+			"text": "- Hvad er eleektrikerens yndligs smag? \n- Chock-olade. Hahaha... Dave?",
+			"start": 0.0,
+			"duration": 2.0
+		}],
+		"switches": [{
+			"id": "switches1",
+			"text": "En hver tåbe kan bruge en computer. Mange gør det også.",
+			"start": 0.0,
+			"duration": 2.0
+		}],
+		"fan": [{
+			"id": "fan1",
+			"text": "Nu bliver det da blæst helt ud af proportioner, Dave",
+			"start": 0.0,
+			"duration": 2.0
+		}],
+		"gasLeak": [{
+			"id": "gas1",
+			"text": "Kan du også lugte noget, Dave?",
+			"start": 0.0,
+			"duration": 2.0
+		}],
+		"lowOxygen": [{
+			"id": "lowOxygen1",
+			"text": "Mine beregninger fortæller mig at dit ilt niveau er lavt.",
+			"start": 0.0,
+			"duration": 2.0
+		}],
+		"outOfOxygen": [{
+			"id": "outOfOxygen1",
+			"text": "Du har ikke mere ilt, Dave.",
+			"start": 0.0,
+			"duration": 2.0
+		}]
 	}
 }

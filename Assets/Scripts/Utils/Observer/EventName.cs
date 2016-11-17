@@ -11,6 +11,7 @@
     PlayerFuelPickup,
     PlayerSpawned,
     PlayerDead,
+    RespawnPlayer,
     OnFire,
     Extinguish,
     PlayerWon,
@@ -25,5 +26,7 @@
     PlayerExploded,
     FuelEmpty,
     UpdateStatus,
+    CameraZoomOut,
+    CameraZoomIn,
     ShowSubtile
 }

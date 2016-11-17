@@ -56,5 +56,10 @@ public class Door : MonoBehaviour {
         connectedTo = null;
         doorType = DoorType.unused;
     }
+
+    public void SetDoorBehindKey()
+    {
+        doorType = DoorType.Key;
+    }
 }
-public enum DoorType { entrance, exit, unused };
+public enum DoorType { entrance, exit, unused, Key };

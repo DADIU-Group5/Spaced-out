@@ -3,12 +3,45 @@ using System.Collections;
 
 public class BehindCamera : MonoBehaviour, Observer
 {
-    public float angle = 0.1f, distance = 4;
     public GameObject target, pod, pitch, cam;
+    
+    public float zoomDuration = 1f;
+    public float camZoomOutPosition = -2f;
+    public float camZoomInPosition = -0.9f;
+    private float zoomCurrent = 0f;
+    private float zoomStartPosition = 0f;
+
+    private enum Zoom {NONE, IN, OUT};
+    Zoom zooming = Zoom.NONE;
 
     private void Awake()
     {
         Subject.instance.AddObserver(this);
+    }
+
+    void Update()
+    {
+        if (zooming == Zoom.OUT)
+        {
+            InterpCameraZ(zoomStartPosition, camZoomOutPosition);
+        }
+        else if (zooming == Zoom.IN)
+        {
+            InterpCameraZ(zoomStartPosition, camZoomInPosition);
+        }
+    }
+
+    private void InterpCameraZ(float a, float b)
+    {
+        if (zoomCurrent > zoomDuration)
+        {
+            zooming = Zoom.NONE;
+        }
+        else
+        {
+            zoomCurrent += Time.deltaTime;
+            cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, Mathf.Lerp(a, b, zoomCurrent / zoomDuration));
+        }
     }
 
     private void LateUpdate()
@@ -44,6 +77,18 @@ public class BehindCamera : MonoBehaviour, Observer
                 var payload = evt.payload;
                 GameObject player = (GameObject)payload[PayloadConstants.PLAYER];
                 target = player;
+                break;
+            case EventName.CameraZoomOut:
+                zooming = Zoom.OUT;
+                zoomCurrent = 0f;
+                zoomStartPosition = cam.transform.localPosition.z;
+                break;
+            case EventName.CameraZoomIn:
+                zooming = Zoom.IN;
+                zoomCurrent = 0f;
+                zoomStartPosition = cam.transform.localPosition.z;
+                break;
+            default:
                 break;
         }
     }

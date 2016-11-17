@@ -42,8 +42,8 @@ public class PlayerController : MonoBehaviour, Observer
 
     void OnCollisionEnter()
     {
-        animHandler.SetRagdollMode(true);
-        Invoke("Shit", 2f);
+        //animHandler.SetRagdollMode(true);
+        //Invoke("Shit", 2f);
     }
 
     private void Shit()

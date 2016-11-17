@@ -22,15 +22,19 @@ public class MenuLevelSelect : MonoBehaviour {
         // enable / disable level buttons
         for (int i = 0; i < levelButtons.Length; i++)
         {
-            levelButtons[i].interactable = ProgressManager.instance.IsUnlocked(i+1);
+            //if (i != 0)
+            if (i < ProgressManager.instance.progress.levels.Length-1)
+                levelButtons[i].interactable = ProgressManager.instance.IsUnlocked(i+1);
 
+            if (i < ProgressManager.instance.progress.levels.Length)
+            {
+                bool[] medals = ProgressManager.instance.GetMedals(i);
 
-            bool[] medals = ProgressManager.instance.GetMedals(i+1);
-
-            for (int j = 0; j < medals.Length; j++) {
-                achievements[i].objects[j].SetActive(medals[j]);
+                for (int j = 0; j < medals.Length; j++)
+                {
+                    achievements[i].objects[j].SetActive(medals[j]);
+                }
             }
-
         }
 
         //Update achievement list

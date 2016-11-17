@@ -19,12 +19,12 @@ public class ProgressManager : Singleton<ProgressManager> {
     public void SetMedal(int level, int medal)
     {
         Debug.Log("Setting medals! level: "+ level + " medal: " + medal);
-        if (level < 1 || level > progress.levels.Length)
+        if (level < 0 || level > progress.levels.Length)
         {
             throw new UnityException("No medals exists for level: " + level);
         }
 
-        level--;
+        //level--;
         switch(medal)
         {
             case medalCompleted:
@@ -60,13 +60,13 @@ public class ProgressManager : Singleton<ProgressManager> {
     public bool[] GetMedals(int level)
     {
         Debug.Log("Getting medals!");
-        if (level < 1 || level > progress.levels.Length)
+        if (level < 0 || level > progress.levels.Length)
         {
             throw new UnityException("No medals exists for level: " + level);
         }
 
-        var levelProgress = progress.levels[level - 1];
-        return new bool[] { levelProgress.completed, levelProgress.allComics, levelProgress.noDeaths }; 
+        var levelProgress = progress.levels[level]; //- 1];
+        return new bool[] { levelProgress.completed, levelProgress.noDeaths, levelProgress.allComics}; 
     }
 
     // change the currency
@@ -104,12 +104,10 @@ public class ProgressManager : Singleton<ProgressManager> {
     // Resets all progress to default
     public void Reset()
     {
-        Debug.Log("Resetting level scores!");
         progress.levels = new Progress.LevelProgress[5];
         for (int i = 0; i < 5; i++)
         {
             progress.levels[i] = new Progress.LevelProgress();
-            Debug.Log("level " +i + " completed: " + progress.levels[i].completed + " no deaths: " + progress.levels[i].noDeaths + " all comics: " + progress.levels[i].allComics);
         }
         progress.currency = 0;
         progress.completedTutorial = false;
@@ -118,11 +116,11 @@ public class ProgressManager : Singleton<ProgressManager> {
     // is a level unlocked
     public bool IsUnlocked(int level)
     {
-        if (level < 1 || level > progress.levels.Length)
+        if (level < 0 || level > progress.levels.Length-1)
         {
             throw new UnityException("Invalid level: " + level);
         }
 
-        return progress.levels[level - 1].unlocked; 
+        return progress.levels[level].unlocked;//-1].unlocked; 
     }
 }

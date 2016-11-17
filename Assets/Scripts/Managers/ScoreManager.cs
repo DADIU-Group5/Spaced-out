@@ -50,11 +50,12 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
         switch (evt.eventName)
         {
             case EventName.PlayerWon:
+                //added 1 because the system is weird
                 int level = GenerationDataManager.instance.GetCurrentLevel();
                 ProgressManager.instance.SetMedal(level, ProgressManager.medalCompleted);
                 if (!hasDied)
                     ProgressManager.instance.SetMedal(level, ProgressManager.medalNoDeaths);
-                if (comicsCollected == totalComics)
+                if (comicsCollected == totalComics && totalComics != 0)
                     ProgressManager.instance.SetMedal(level, ProgressManager.medalAllComics);
                 ResetValues();
                 break;

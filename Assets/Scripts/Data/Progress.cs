@@ -30,7 +30,7 @@ public class Progress : ScriptableObject
     {
         public bool unlocked;
         public bool completed;
-        public bool allComics;
         public bool noDeaths;
+        public bool allComics;
     }
 }

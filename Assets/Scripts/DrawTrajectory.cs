@@ -9,7 +9,7 @@ public class DrawTrajectory : MonoBehaviour, Observer {
     public int maxBounces = 4;
     public InputController inputCont;
 
-    private Transform target;
+    public Transform target;
     private List<Vector3> points = new List<Vector3>();
     private Vector3 direction;
 

@@ -10,7 +10,7 @@ public class RagdollController : MonoBehaviour {
     
     void Start()
     {
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         rigidbodies = GetComponentsInChildren<Rigidbody>();
         joints = GetComponentsInChildren<CharacterJoint>();
 
@@ -25,8 +25,8 @@ public class RagdollController : MonoBehaviour {
             joint.enableProjection = true;
         }
 
-        //Blend();
-        DisableRagdoll();
+        Blend();
+        //DisableRagdoll();
         //EnableRagdoll();
     }
 
@@ -39,7 +39,7 @@ public class RagdollController : MonoBehaviour {
         }
 
         // disable animations
-        animator.enabled = false;
+        //animator.enabled = false;
     }
 
     public void DisableRagdoll()
@@ -52,12 +52,12 @@ public class RagdollController : MonoBehaviour {
         ragdollRoot.isKinematic = false;
 
         // enable animations
-        animator.enabled = true;
+        //animator.enabled = true;
     }
 
     public void Blend()
     {
-        EnableRagdoll();
-        animator.enabled = true;
+        //EnableRagdoll();
+        //animator.enabled = true;
     }
 }

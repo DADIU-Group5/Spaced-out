@@ -18,12 +18,13 @@ public class ProgressManager : Singleton<ProgressManager> {
     // set medal as completed for level
     public void SetMedal(int level, int medal)
     {
-        if (level < 1 || level > progress.levels.Length)
+        Debug.Log("Setting medals! level: "+ level + " medal: " + medal);
+        if (level < 0 || level > progress.levels.Length)
         {
             throw new UnityException("No medals exists for level: " + level);
         }
 
-        level--;
+        //level--;
         switch(medal)
         {
             case medalCompleted:
@@ -58,13 +59,14 @@ public class ProgressManager : Singleton<ProgressManager> {
     // returns an array of 3 bools indicating if medals are completed
     public bool[] GetMedals(int level)
     {
-        if (level < 1 || level > progress.levels.Length)
+        Debug.Log("Getting medals!");
+        if (level < 0 || level > progress.levels.Length)
         {
             throw new UnityException("No medals exists for level: " + level);
         }
 
-        var levelProgress = progress.levels[level - 1];
-        return new bool[] { levelProgress.completed, levelProgress.allComics, levelProgress.noDeaths }; 
+        var levelProgress = progress.levels[level]; //- 1];
+        return new bool[] { levelProgress.completed, levelProgress.noDeaths, levelProgress.allComics}; 
     }
 
     // change the currency
@@ -114,11 +116,11 @@ public class ProgressManager : Singleton<ProgressManager> {
     // is a level unlocked
     public bool IsUnlocked(int level)
     {
-        if (level < 1 || level > progress.levels.Length)
+        if (level < 0 || level > progress.levels.Length-1)
         {
             throw new UnityException("Invalid level: " + level);
         }
 
-        return progress.levels[level - 1].unlocked; 
+        return progress.levels[level].unlocked;//-1].unlocked; 
     }
 }

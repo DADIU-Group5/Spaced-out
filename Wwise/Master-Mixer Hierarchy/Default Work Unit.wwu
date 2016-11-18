@@ -277,6 +277,23 @@
 							</ReferenceList>
 						</AuxBus>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="slowMotion" ID="{AD3BB683-1050-4B91-ADF9-E3970BDC3C31}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="on" ID="{6693B970-3CF2-4227-B97E-C1B04C064BD3}"/>
+								<State Name="Custom State" ID="{0FE45214-B38A-4203-A5FD-5123EFD701E3}" ShortID="775978487">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32" Value="-2400"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</Bus>
 				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}">
 					<ChildrenList>

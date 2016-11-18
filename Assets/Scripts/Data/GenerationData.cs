@@ -28,5 +28,6 @@ public class GenerationData : ScriptableObject {
         public int rooms;
         public int exteriorSeed;
         public int interiorSeed;
+        public Themes roomTheme;
     }
 }

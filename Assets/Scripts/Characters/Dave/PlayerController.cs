@@ -11,8 +11,10 @@ public class PlayerController : MonoBehaviour, Observer
     private bool dead = false;
     
     private float launchForce = 0f;
+    private bool firedZoomOut = false;
+    private bool canSlowDown = false;
 
-    public float minLaunchForce = 0f, maxLaunchForce = 3000f, launchSideScale = 10f,  maxMagnitude = 30f;
+    public float minLaunchForce = 0f, maxLaunchForce = 3000f,  maxMagnitude = 30f;
     public Transform pitchTransform;
     public Rigidbody rbPlayer;
     public FuelController fuel;
@@ -43,23 +45,49 @@ public class PlayerController : MonoBehaviour, Observer
         return maxLaunchForce;
     }
 
+    private string fuelText;
+
     private void Update()
     {
         if (!fuel.HasFuel())
         {
-            UpdateVelocityUI("Velocity: " + rbPlayer.velocity.magnitude + "\nNo More Fuel");
+            fuelText = "No More Fuel";
         }
         else if (rbPlayer.velocity.magnitude > maxMagnitude)
         {
-            UpdateVelocityUI("Velocity: " + rbPlayer.velocity.magnitude + "\nNot Ready To Launch");
+            fuelText = "Not Ready To Launch";
         }
         else
         {
-            UpdateVelocityUI("Velocity: " + rbPlayer.velocity.magnitude + "\nReady To Launch");
+            fuelText = "Ready To Launch";
+        }
+
+        UpdateVelocityUI(rbPlayer.velocity.magnitude.ToString()+"/"+ fuelText);
+        
+
+        if (rbPlayer.velocity.magnitude < slowDownThreshold && firedZoomOut)
+        {
+            var evt = new ObserverEvent(EventName.CameraZoomIn);
+            Subject.instance.Notify(gameObject, evt);
+            firedZoomOut = false;
+        }
+
+        if (rbPlayer.velocity.magnitude > slowDownThreshold && !firedZoomOut)
+        {
+            var evt = new ObserverEvent(EventName.CameraZoomOut);
+            Subject.instance.Notify(gameObject, evt);
+            firedZoomOut = true;
+        }
+
+
+
+        if (rbPlayer.velocity.magnitude > slowDownThreshold && !canSlowDown)
+        {
+            canSlowDown = true;
         }
 
         // Slows the player down faster when his velocity is below slowDownThreshold
-        if (rbPlayer.velocity.magnitude < slowDownThreshold)
+        if (rbPlayer.velocity.magnitude < slowDownThreshold && canSlowDown)
         {
             rbPlayer.velocity = rbPlayer.velocity * (100f - slowDownFactor) / 100f;
         }
@@ -68,19 +96,23 @@ public class PlayerController : MonoBehaviour, Observer
         if (rbPlayer.velocity.magnitude < slowDownCutOff)
         {
             rbPlayer.velocity = Vector3.zero;
+            canSlowDown = false;
+
+            if (!fuel.HasFuel())
+            {
+                var evt = new ObserverEvent(EventName.FuelEmpty);
+                Subject.instance.Notify(gameObject, evt);
+            }
         }
     }
 
     public void Launch(float force, Vector3 direction)
     {
-        if (rbPlayer.velocity.magnitude < maxMagnitude)
+        if (rbPlayer.velocity.magnitude < maxMagnitude && force > 0)
         {
             Rigidbody body = GetComponent<Rigidbody>();
             body.AddForce(force * maxLaunchForce * direction.normalized);
-            if (force > 0)
-            {
-                fuel.UseFuel();
-            }
+            fuel.UseFuel();
         }
         launchForce = 0;
         UpdateLaunchUI();

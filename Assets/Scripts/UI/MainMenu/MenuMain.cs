@@ -13,11 +13,6 @@ public class MenuMain : Singleton<MenuMain> {
     // The active view
     private GameObject view;
 
-    public void ResetPlayerPrefs()
-    {
-        PlayerPrefs.DeleteAll();
-    }
-
     void Start()
     {
         SettingsManager.instance.onLanguageChanged += UpdateButtonText;

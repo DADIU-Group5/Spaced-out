@@ -5,14 +5,16 @@ public class CollectibleElement : MonoBehaviour {
 
     void Start()
     {
-        ScoreManager.instance.AddCollectibleToLevel();
+        Debug.Log("adding comic...");
+        ScoreManager.instance.AddComics();
+        
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Player")
         {
-            ScoreManager.instance.AddCollectibles();
+            ScoreManager.instance.ComicCollected();
             Destroy(gameObject);
         }
     }

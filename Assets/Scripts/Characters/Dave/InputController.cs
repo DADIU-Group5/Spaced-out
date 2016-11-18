@@ -2,10 +2,22 @@
 
 public class InputController : MonoBehaviour, Observer
 {
-    private bool invertCameraControls = false,
-        launchMode = false,
-        inputDisabled = false;
+    private bool invertCameraControls;
+    private bool launchMode;
+    private bool inputDisabled;
+
+
+
+
+
+
+
+
+
+
     private Vector2 oldPoint;
+
+    public float playerRotateSpeed = 200f;
 
     public float cameraRotateSpeed = 4000f,
         launchBuffer = 100f;
@@ -13,25 +25,22 @@ public class InputController : MonoBehaviour, Observer
     public BehindCamera behindCamera;
     public PlayerController player;
     public FuelController fuel;
-
-    public Collider hitboxCollider;
     
     public Transform playerTransform,
         playerPitchTransform;
 
+    public Rigidbody playerRigidbody;
+
+    public Collider hitboxCollider;
+
     private void Awake()
     {
+        invertCameraControls = true;
         Subject.instance.AddObserver(this);
     }
 
     private void Update()
     {
-        // Quit
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
-
         // If input is disabled, stop.
         if (inputDisabled)
         {
@@ -56,6 +65,8 @@ public class InputController : MonoBehaviour, Observer
         }
     }
 
+
+
     // Interprest input as launch mode.
     private void HandleLaunchMode()
     {
@@ -69,9 +80,7 @@ public class InputController : MonoBehaviour, Observer
         if (Input.GetMouseButton(0))
         {
             playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
-
-            // TODO: Implement an UIController that can handle updating the UI with method calls,
-            //       so we aren't updating this part of the UI every frame... /Malte
+            
             player.SetLaunchForce(GetLaunchForce());
         }
 
@@ -91,7 +100,7 @@ public class InputController : MonoBehaviour, Observer
     }
 
     // Interprets input as camera mode.
-    private void HandleCameraMode()
+    protected virtual void HandleCameraMode()
     {
         // Save starting position of tap
         if (Input.GetMouseButtonDown(0))
@@ -112,6 +121,11 @@ public class InputController : MonoBehaviour, Observer
 
             DirectedRotation(offset);
             oldPoint = pos;
+
+            if (playerRigidbody.velocity.magnitude < player.maxMagnitude)
+            {
+                playerTransform.rotation = Quaternion.RotateTowards(playerTransform.rotation, behindCamera.pitch.transform.rotation, playerRotateSpeed * Time.deltaTime);
+            }
         }
     }
 
@@ -137,8 +151,14 @@ public class InputController : MonoBehaviour, Observer
     {
         Ray ray = cam.ScreenPointToRay(ScreenCenter());
         RaycastHit hit;
-        int layerMask = ~(LayerMask.NameToLayer("Golfball") | LayerMask.NameToLayer("Ragdoll"));
-        if (Physics.Raycast(ray, out hit, layerMask))
+        
+        // Create layermask that ignores all Golfball and Ragdoll layers
+        int layermask1 = 1 << LayerMask.NameToLayer("Golfball");
+        int layermask2 = 1 << LayerMask.NameToLayer("Ragdoll");
+        int layermask3 = 1 << LayerMask.NameToLayer("Ignore Raycast");
+        int finalmask = ~(layermask1 | layermask2 | layermask3);
+
+        if (Physics.Raycast(ray, out hit, System.Int32.MaxValue, finalmask))
         //if (Physics.Raycast(ray, out hit))
         {
             return hit.point - player.transform.position;
@@ -166,6 +186,7 @@ public class InputController : MonoBehaviour, Observer
     private void DirectedRotation(Vector2 offset)
     {
         float xScale = behindCamera.pitch.transform.up.y;
+        xScale = Mathf.Sign(xScale);
         behindCamera.transform.Rotate(Vector3.up, Time.deltaTime * xScale * cameraRotateSpeed * (offset.x / ScreenCenter().magnitude));
         behindCamera.pitch.transform.Rotate(Vector3.right, Time.deltaTime * cameraRotateSpeed * (-offset.y / ScreenCenter().magnitude));
     }
@@ -180,6 +201,7 @@ public class InputController : MonoBehaviour, Observer
                 player = go.GetComponent<PlayerController>();
                 playerTransform = player.transform;
                 playerPitchTransform = player.pitchTransform;
+                playerRigidbody = player.GetComponent<Rigidbody>();
                 fuel = player.fuel;
                 break;
             case EventName.PlayerWon:

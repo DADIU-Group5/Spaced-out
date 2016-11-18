@@ -1,23 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MenuShop : MonoBehaviour {
 
-	// Use this for initialization
-	void Awake () {
-	    if (!PlayerPrefs.HasKey("Medals"))
-        {
-            PlayerPrefs.SetInt("Medals", 0);
-        }
-	}
+    public Text buy20Text;
+    public Text buy50Text;
+
+    void Start()
+    {
+        SettingsManager.instance.onLanguageChanged += UpdateButtonText;
+        UpdateButtonText(Language.Danish);
+    }
+
+    private void UpdateButtonText(Language lan)
+    {
+        buy20Text.text = Translator.instance.Get("buy") + " " + 20 + " " + Translator.instance.Get("medals");
+        buy50Text.text = Translator.instance.Get("buy") + " " + 50 + " " + Translator.instance.Get("medals");
+    }
 
     public void OnBuy50Click()
     {
-        PlayerPrefs.SetInt("Medals", PlayerPrefs.GetInt("Medals") + 50);
+        ProgressManager.instance.ChangeCurrency(50);
     }
 
     public void OnBuy20Click()
     {
-        PlayerPrefs.SetInt("Medals", PlayerPrefs.GetInt("Medals") + 20);
+        ProgressManager.instance.ChangeCurrency(20);
     }
 }

@@ -1,39 +1,40 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
 
-    //keep track of whether we are pausing:
-    [HideInInspector]
-    public bool pausing = false;
+    public Text resumeText;
+    public Text restartText;
+    public Text mainMenuText;
 
-    private int level = 1;
+    //keep track of whether we are pausing:
+    private bool pause = false;
 
     void Start()
     {
-        level = PlayerPrefs.GetInt("CurrentLevel");
+        SettingsManager.instance.onLanguageChanged += UpdateButtonText;
+        UpdateButtonText(Language.Danish);
+    }
+
+    private void UpdateButtonText(Language lan)
+    {
+        resumeText.text = Translator.instance.Get("resume");
+        mainMenuText.text = Translator.instance.Get("main menu");
+        restartText.text = Translator.instance.Get("restart");
     }
 
     /// <summary>
-    /// Pause/UnpauseGame
+    /// Pause/Unpause game
     /// </summary>
-    public void PauseGame()
+    public void TogglePause()
     {
-        pausing = !pausing;
-
-        if (pausing)
-        {
-            Time.timeScale = 0;
-        } else
-        {
-            Time.timeScale = 1;
-        }
-
+        pause = !pause;
+        Time.timeScale = pause ? 0 : 1;
+        
         for (int i = 0; i < transform.childCount; i++)
         {
-            transform.GetChild(i).gameObject.SetActive(pausing);
+            transform.GetChild(i).gameObject.SetActive(pause);
         }
     }
 
@@ -44,20 +45,21 @@ public class PauseMenu : MonoBehaviour {
     {
         Scene scene = SceneManager.GetActiveScene();
         //remember to unpause;
-        PauseGame();
+        TogglePause();
 
         //player reset, so he hasn't died in this run yet.
-        ScoreManager.instance.SetPlayerHasDiedThisLevel(level);
         SceneManager.LoadScene(scene.name);
     }
 
     /// <summary>
     /// Load Main Menu
     /// </summary>
-    public void LoadMainMenu(int levelIndex)
+    public void LoadMainMenu()
     {
+        Debug.Log("Tring to load main menu");
         //remember to unpause;
-        PauseGame();
-        SceneManager.LoadScene(levelIndex);
+        TogglePause();
+        //SceneManager.LoadScene(levelIndex);
+        SceneManager.LoadScene("Main Menu");
     }
 }

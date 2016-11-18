@@ -78,7 +78,8 @@ public class HUDController : MonoBehaviour, Observer {
             case EventName.UpdateStatus:
                 var statusPayload = evt.payload;
                 string status = (string)statusPayload[PayloadConstants.STATUS];
-                statusText.text = status;
+
+                statusText.text = Translator.instance.Get(status);
                 break;
             case EventName.PlayerDead:
                 gameOver = true;
@@ -88,6 +89,7 @@ public class HUDController : MonoBehaviour, Observer {
                 break;
 
             case EventName.ShowSubtile:
+                //string subText = Translator.instance.Get((string)evt.payload[PayloadConstants.SUBTITLE_TEXT]);
                 string subText = (string)evt.payload[PayloadConstants.SUBTITLE_TEXT];
                 float subStart = (float)evt.payload[PayloadConstants.SUBTITLE_START];
                 float subDuration = (float)evt.payload[PayloadConstants.SUBTITLE_DURATION];

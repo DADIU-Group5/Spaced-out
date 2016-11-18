@@ -11,6 +11,9 @@ public class BehindCamera : MonoBehaviour, Observer
     private float zoomCurrent = 0f;
     private float zoomStartPosition = 0f;
 
+    private Vector3 direction;
+    private RaycastHit hit;
+
     private enum Zoom {NONE, IN, OUT};
     Zoom zooming = Zoom.NONE;
 
@@ -36,10 +39,6 @@ public class BehindCamera : MonoBehaviour, Observer
             default:
                 break;
         }
-
-
-
-
     }
 
     private void LateUpdate()
@@ -48,10 +47,8 @@ public class BehindCamera : MonoBehaviour, Observer
         {
             pod.transform.position = target.transform.position;
         }
-
-
-        Vector3 direction = cam.transform.position - target.transform.position;
-        RaycastHit hit;
+        
+        direction = cam.transform.position - target.transform.position;
         int layermask1 = 1 << LayerMask.NameToLayer("Golfball");
         int layermask2 = 1 << LayerMask.NameToLayer("Ragdoll");
         int layermask3 = 1 << LayerMask.NameToLayer("Ignore Raycast");
@@ -59,13 +56,7 @@ public class BehindCamera : MonoBehaviour, Observer
 
         if (Physics.Raycast(target.transform.position, direction, out hit, maxDistance: direction.magnitude, layerMask: finalmask))
         {
-            Debug.Log(hit.transform.name);
             cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, cam.transform.InverseTransformPoint(hit.point).z + camZoomInPosition);
-            
-        }
-        else
-        {
-            Debug.Log("No hit");
         }
 
         /*

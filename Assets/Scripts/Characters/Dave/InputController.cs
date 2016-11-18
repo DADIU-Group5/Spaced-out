@@ -29,7 +29,7 @@ public class InputController : MonoBehaviour, Observer
     public Transform playerTransform,
         playerPitchTransform;
 
-    private Rigidbody playerRigidbody;
+    public Rigidbody playerRigidbody;
 
     public Collider hitboxCollider;
 

@@ -13,6 +13,7 @@ public class ProgressManager : Singleton<ProgressManager> {
     public void completeTutorial()
     {
         progress.completedTutorial = true;
+        progress.levels[0].unlocked = true;
     }
 
     // set medal as completed for level

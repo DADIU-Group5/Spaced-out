@@ -33,6 +33,10 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 
     void OnCollisionEnter(Collision other)
     {
+        var evt = new ObserverEvent(EventName.Collision);
+        evt.payload.Add(PayloadConstants.COLLISION_STATIC, other.gameObject.layer != LayerMask.NameToLayer("Ignore Raycast"));
+        Subject.instance.Notify(gameObject, evt);
+
         if (onFire)
         {
             bounces += 1;
@@ -40,7 +44,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
             {
                 Debug.Log("Extinguishing");
                 bounces = 0;
-                var evt = new ObserverEvent(EventName.Extinguish);
+                evt = new ObserverEvent(EventName.Extinguish);
                 Subject.instance.Notify(gameObject, evt);
             }
         }
@@ -106,7 +110,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
             case EventName.PlayerExploded:
                 Kill(evt.eventName);
                 break;
-            case EventName.FuelEmpty:
+            case EventName.OxygenEmpty:
                 Kill(evt.eventName);
                 break;
             case EventName.PlayerDead:

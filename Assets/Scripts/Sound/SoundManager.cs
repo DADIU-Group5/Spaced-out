@@ -87,12 +87,14 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
                 break;
 
-            case EventName.BarrelTriggered:
-                PlayEvent(SoundEventConstants.EXPLOSIVE);
+            case EventName.Door: 
+                // TODO: remove
+                if((bool)evt.payload[PayloadConstants.DOOR_OPEN])
+                    PlayEvent(SoundEventConstants.DOOR_OPEN);
+                else
+                    PlayEvent(SoundEventConstants.DOOR_SHUT);
                 break;
-            case EventName.BarrelExplosion:
 
-                break;
             case EventName.PlayerCharge:
                 bool start = (bool)evt.payload[PayloadConstants.START_STOP];
                 if (start)
@@ -109,6 +111,16 @@ public class SoundManager : Singleton<SoundManager>, Observer
                     chargePlaying = false;
                 }
                 break;
+            case EventName.Collision:
+                if ((bool)evt.payload[PayloadConstants.COLLISION_STATIC])
+                {
+                    PlayEvent(SoundEventConstants.DAVE_STATIC_COLLISION);
+                }
+                else
+                {
+                    PlayEvent(SoundEventConstants.DAVE_OBJECT_COLLISION);
+                }
+                break;
             case EventName.PlayerDead:
                 var deathCause = (EventName)evt.payload[PayloadConstants.DEATH_CAUSE];
                 switch (deathCause)
@@ -123,8 +135,8 @@ public class SoundManager : Singleton<SoundManager>, Observer
                     case EventName.Crushed:
                         //PlayEvent(SoundEventConstants.gal);
                         break;
-                    case EventName.PlayerExploded:
-                        PlayEvent(SoundEventConstants.GAL_HAZARDS_EXPLOSION);
+                    case EventName.OxygenEmpty:
+                        PlayEvent(SoundEventConstants.DAVE_OUT_OF_OXYGEN);
                         break;
                 }
 

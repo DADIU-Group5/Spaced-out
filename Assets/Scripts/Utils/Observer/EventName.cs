@@ -24,12 +24,13 @@
     BarrelTriggered,
     BarrelExplosion,
     PlayerExploded,
-    FuelEmpty,
+    OxygenEmpty,
     UpdateStatus,
     CameraZoomOut,
     CameraZoomIn,
     ShowSubtile,
     PlayerLaunchModeToggle,
     PlayerLaunchCancel,
-    PlayerCharge
+    PlayerCharge,
+    Door
 }

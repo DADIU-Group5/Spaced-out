@@ -1,7 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
-using System;
 
 public class PlayerController : MonoBehaviour, Observer
 {
@@ -100,7 +97,7 @@ public class PlayerController : MonoBehaviour, Observer
 
             if (!fuel.HasFuel())
             {
-                var evt = new ObserverEvent(EventName.FuelEmpty);
+                var evt = new ObserverEvent(EventName.OxygenEmpty);
                 Subject.instance.Notify(gameObject, evt);
             }
         }

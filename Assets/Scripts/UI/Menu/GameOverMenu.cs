@@ -40,7 +40,7 @@ public class GameOverMenu : MonoBehaviour, Observer
                     case EventName.PlayerExploded:
                         deathCause = "You exploded";
                         break;
-                    case EventName.FuelEmpty:
+                    case EventName.OxygenEmpty:
                         deathCause = "You ran out of oxygen";
                         break;
                 }

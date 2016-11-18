@@ -16,7 +16,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Duplicate singeton");
+            Debug.LogError("Duplicate singetons of type: " + typeof(T));
             Destroy(gameObject);
         }
     }

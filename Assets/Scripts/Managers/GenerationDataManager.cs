@@ -4,7 +4,7 @@ using System;
 
 public class GenerationDataManager : Singleton<GenerationDataManager> {
 
-    private int level = 0;
+    private int level = 1;
     public GenerationData generationData;
 
     /// <summary>

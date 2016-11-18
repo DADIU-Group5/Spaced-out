@@ -8,6 +8,9 @@ public class MenuLevelSelect : MonoBehaviour {
 
     public Button generateLevelButton;
     public Button[] levelButtons;
+    public Text tutorialText;
+    public Text backText;
+    public Text generateText;
     [System.Serializable]
     public class achievementObjects
     {
@@ -15,8 +18,24 @@ public class MenuLevelSelect : MonoBehaviour {
     }
     public List<achievementObjects> achievements = new List<achievementObjects>();
 
+    void Start()
+    {
+        SettingsManager.instance.onLanguageChanged += UpdateButtonText;
+        UpdateButtonText(Language.Danish);
+    }
 
-    void OnEnable()
+    private void UpdateButtonText(Language lan)
+    {
+        tutorialText.text = Translator.instance.Get("tutorial");
+        backText.text = Translator.instance.Get("back");
+        generateText.text = Translator.instance.Get("generate levels (costs 15x medals)");
+        for (int i = 0; i < levelButtons.Length; i++)
+        {
+            levelButtons[i].GetComponentInChildren<Text>().text = Translator.instance.Get("level") + " " + (i+1);
+        }
+    }
+
+        void OnEnable()
     {
         generateLevelButton.interactable = ProgressManager.instance.GetCurrency() >= 15;
         // enable / disable level buttons

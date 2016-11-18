@@ -1,10 +1,28 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
 
+    public Text resumeText;
+    public Text restartText;
+    public Text mainMenuText;
+
     //keep track of whether we are pausing:
     private bool pause = false;
+
+    void Start()
+    {
+        SettingsManager.instance.onLanguageChanged += UpdateButtonText;
+        UpdateButtonText(Language.Danish);
+    }
+
+    private void UpdateButtonText(Language lan)
+    {
+        resumeText.text = Translator.instance.Get("resume");
+        mainMenuText.text = Translator.instance.Get("main menu");
+        restartText.text = Translator.instance.Get("restart");
+    }
 
     /// <summary>
     /// Pause/Unpause game
@@ -36,10 +54,12 @@ public class PauseMenu : MonoBehaviour {
     /// <summary>
     /// Load Main Menu
     /// </summary>
-    public void LoadMainMenu(int levelIndex)
+    public void LoadMainMenu()
     {
+        Debug.Log("Tring to load main menu");
         //remember to unpause;
         TogglePause();
-        SceneManager.LoadScene(levelIndex);
+        //SceneManager.LoadScene(levelIndex);
+        SceneManager.LoadScene("Main Menu");
     }
 }

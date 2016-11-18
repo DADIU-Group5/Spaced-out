@@ -61,7 +61,7 @@ public class LevelGenerator : MonoBehaviour {
         spawnedRooms[0].exitDoor.doorToLock.StartDoor();
         foreach (Room item in spawnedRooms)
         {
-            Destroy(item.gameObject.GetComponent<CalcBounds>());
+            Destroy(item.GetComponent<CalcBounds>());
         }
     }
 
@@ -116,7 +116,7 @@ public class LevelGenerator : MonoBehaviour {
     void SpawnKey()
     {
         Transform tempTrans = GetRandomDoor(spawnedRooms[spawnedRooms.Count - 1]).transform;
-        Instantiate(keyPrefab, tempTrans.position - (tempTrans.right*-keyDistanceFromDoor) + new Vector3(0, 2, 0), Quaternion.identity,spawnedRooms[spawnedRooms.Count-1].transform);
+        //Instantiate(keyPrefab, tempTrans.position - (tempTrans.right*-keyDistanceFromDoor) + new Vector3(0, 2, 0), Quaternion.identity,spawnedRooms[spawnedRooms.Count-1].transform);
         tempTrans.GetComponent<Door>().SetDoorBehindKey();
     }
 
@@ -217,8 +217,6 @@ public class LevelGenerator : MonoBehaviour {
             lastDoor.GetComponent<Door>().SetExit();
         }
 
-        newRoom.transform.parent = transform;
-
         //Make a random door the exit.
         lastDoor = GetRandomDoor(theRoom);
         if (lastDoor == entranceDoor)
@@ -254,7 +252,6 @@ public class LevelGenerator : MonoBehaviour {
                     IRD.SetPrevRoom(spawnedRooms[iterator]);
                     IRD.SetNextRoom(spawnedRooms[iterator + 1]);
                     spawnedRooms[iterator].SetExitDoor(IRD);
-                    newDoor.transform.parent = transform;
                     iterator++;
                     Destroy(door);
                 }
@@ -263,8 +260,8 @@ public class LevelGenerator : MonoBehaviour {
                     GameObject newDoor = Instantiate(keyDoorPrefab);
                     newDoor.transform.rotation = door.transform.rotation;
 
+                    //newDoor.transform.parent = door.transform.parent;
                     newDoor.transform.position = door.transform.position + (-door.transform.right * (5.65f));
-                    newDoor.transform.parent = transform;
                     Destroy(door);
                 }
                 else

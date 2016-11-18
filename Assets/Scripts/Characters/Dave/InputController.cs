@@ -204,6 +204,7 @@ public class InputController : MonoBehaviour, Observer
                 playerRigidbody = player.GetComponent<Rigidbody>();
                 fuel = player.fuel;
                 break;
+            case EventName.StartOutro:
             case EventName.PlayerWon:
             case EventName.PlayerDead:
                 inputDisabled = true;

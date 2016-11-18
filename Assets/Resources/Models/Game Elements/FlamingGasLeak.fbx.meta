@@ -1,29 +1,21 @@
 fileFormatVersion: 2
-guid: caf171062b4e22b4e8a731a02684028a
-timeCreated: 1457009314
-licenseType: Store
+guid: d9bd8031bbd218c42a76fd1946600158
+timeCreated: 1479469305
+licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Sci_Fi_floor_1
-    100004: Sci_Fi_floor_3
-    400000: //RootNode
-    400002: Sci_Fi_floor_1
-    400004: Sci_Fi_floor_3
-    2300000: Sci_Fi_floor_1
-    2300002: Sci_Fi_floor_3
-    2300004: //RootNode
-    3300000: Sci_Fi_floor_1
-    3300002: Sci_Fi_floor_3
-    3300004: //RootNode
-    4300000: Sci_Fi_floor_1
-    4300002: Sci_Fi_floor_3
-    9500000: //RootNode
+    100000: Flaming_Gas_Leak_01
+    100002: //RootNode
+    400000: Flaming_Gas_Leak_01
+    400002: //RootNode
+    2300000: Flaming_Gas_Leak_01
+    3300000: Flaming_Gas_Leak_01
+    4300000: Flaming_Gas_Leak_01
   materials:
     importMaterials: 1
     materialName: 0
-    materialSearch: 0
+    materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

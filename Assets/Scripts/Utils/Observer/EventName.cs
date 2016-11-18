@@ -28,5 +28,7 @@
     UpdateStatus,
     CameraZoomOut,
     CameraZoomIn,
-    ShowSubtile
+    ShowSubtile,
+    PlayerLaunchModeToggle,
+    PlayerLaunchCancel
 }

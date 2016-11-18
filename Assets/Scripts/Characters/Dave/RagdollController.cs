@@ -25,8 +25,8 @@ public class RagdollController : MonoBehaviour {
             joint.enableProjection = true;
         }
 
-        Blend();
-        //DisableRagdoll();
+        //Blend();
+        DisableRagdoll();
         //EnableRagdoll();
     }
 

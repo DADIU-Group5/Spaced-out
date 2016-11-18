@@ -1,0 +1,2430 @@
+fileFormatVersion: 2
+guid: 98eb30d9414132c4396a9b2148ea7838
+timeCreated: 1479325160
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: daveGeo_v23:be_headEnd_01
+    100004: daveGeo_v23:be_l_idxEnd_01
+    100006: daveGeo_v23:be_l_midEnd_01
+    100008: daveGeo_v23:be_l_pinEnd_01
+    100010: daveGeo_v23:be_l_ringEnd_01
+    100012: daveGeo_v23:be_l_tmbEnd_01
+    100014: daveGeo_v23:be_l_toeEnd_01
+    100016: daveGeo_v23:be_pelvisShirtBend_01
+    100018: daveGeo_v23:be_r_idxEnd_01
+    100020: daveGeo_v23:be_r_midEnd_01
+    100022: daveGeo_v23:be_r_pinEnd_01
+    100024: daveGeo_v23:be_r_ringEnd_01
+    100026: daveGeo_v23:be_r_tmbEnd_01
+    100028: daveGeo_v23:be_r_toeEnd_01
+    100030: daveGeo_v23:bind_chest_01
+    100032: daveGeo_v23:bind_head_01
+    100034: daveGeo_v23:bind_l_arm_01
+    100036: daveGeo_v23:bind_l_armBend_01
+    100038: daveGeo_v23:bind_l_armMoveEnd_01
+    100040: daveGeo_v23:bind_l_armNoneMoveEnd_01
+    100042: daveGeo_v23:bind_l_armSupDw_01
+    100044: daveGeo_v23:bind_l_armSupUp_01
+    100046: daveGeo_v23:bind_l_foot_01
+    100048: daveGeo_v23:bind_l_forearm_02
+    100050: daveGeo_v23:bind_l_forearmBend_01
+    100052: daveGeo_v23:bind_l_forearmMoveEnd_01
+    100054: daveGeo_v23:bind_l_forearmNoneMoveEnd_01
+    100056: daveGeo_v23:bind_l_idx_01
+    100058: daveGeo_v23:bind_l_idx_02
+    100060: daveGeo_v23:bind_l_idx_03
+    100062: daveGeo_v23:bind_l_leg_01
+    100064: daveGeo_v23:bind_l_legBend_01
+    100066: daveGeo_v23:bind_l_mid_01
+    100068: daveGeo_v23:bind_l_mid_02
+    100070: daveGeo_v23:bind_l_mid_03
+    100072: daveGeo_v23:bind_l_palm_01
+    100074: daveGeo_v23:bind_l_palmPin_01
+    100076: daveGeo_v23:bind_l_pin_01
+    100078: daveGeo_v23:bind_l_pin_02
+    100080: daveGeo_v23:bind_l_pin_03
+    100082: daveGeo_v23:bind_l_ring_01
+    100084: daveGeo_v23:bind_l_ring_02
+    100086: daveGeo_v23:bind_l_ring_03
+    100088: daveGeo_v23:bind_l_shoulders_01
+    100090: daveGeo_v23:bind_l_tmb_01
+    100092: daveGeo_v23:bind_l_tmb_02
+    100094: daveGeo_v23:bind_l_tmb_03
+    100096: daveGeo_v23:bind_l_toe_01
+    100098: daveGeo_v23:bind_l_upLeg_01
+    100100: daveGeo_v23:bind_l_upLegBend_01
+    100102: daveGeo_v23:bind_l_upLegBend_01 1
+    100104: daveGeo_v23:bind_l_wrist_01
+    100106: daveGeo_v23:bind_neck_01
+    100108: daveGeo_v23:bind_pelvis_01
+    100110: daveGeo_v23:bind_pelvisShirtBend_01
+    100112: daveGeo_v23:bind_pelvisShirtBend_02
+    100114: daveGeo_v23:bind_pelvisShirtBend_03
+    100116: daveGeo_v23:bind_r_arm_01
+    100118: daveGeo_v23:bind_r_armBend_01
+    100120: daveGeo_v23:bind_r_armSupDw_01
+    100122: daveGeo_v23:bind_r_armSupUp_01
+    100124: daveGeo_v23:bind_r_foot_01
+    100126: daveGeo_v23:bind_r_forearm_01
+    100128: daveGeo_v23:bind_r_forearmBend_01
+    100130: daveGeo_v23:bind_r_forearmMoveEnd_01
+    100132: daveGeo_v23:bind_r_forearmNoneMoveEnd_01
+    100134: daveGeo_v23:bind_r_idx_01
+    100136: daveGeo_v23:bind_r_idx_02
+    100138: daveGeo_v23:bind_r_idx_03
+    100140: daveGeo_v23:bind_r_leg_01
+    100142: daveGeo_v23:bind_r_legBend_01
+    100144: daveGeo_v23:bind_r_mid_01
+    100146: daveGeo_v23:bind_r_mid_02
+    100148: daveGeo_v23:bind_r_mid_03
+    100150: daveGeo_v23:bind_r_palm_01
+    100152: daveGeo_v23:bind_r_palmPin_01
+    100154: daveGeo_v23:bind_r_pin_01
+    100156: daveGeo_v23:bind_r_pin_02
+    100158: daveGeo_v23:bind_r_pin_03
+    100160: daveGeo_v23:bind_r_ring_01
+    100162: daveGeo_v23:bind_r_ring_02
+    100164: daveGeo_v23:bind_r_ring_03
+    100166: daveGeo_v23:bind_r_shoulders_01
+    100168: daveGeo_v23:bind_r_tmb_01
+    100170: daveGeo_v23:bind_r_tmb_02
+    100172: daveGeo_v23:bind_r_tmb_03
+    100174: daveGeo_v23:bind_r_toe_01
+    100176: daveGeo_v23:bind_r_upLeg_01
+    100178: daveGeo_v23:bind_r_upLegBend_01
+    100180: daveGeo_v23:bind_r_wrist_01
+    100182: daveGeo_v23:bind_spine_01
+    100184: daveGeo_v23:bind_spine_02
+    100186: daveGeo_v23:cnt_chest_01
+    100188: daveGeo_v23:cnt_l_arm_01
+    100190: daveGeo_v23:cnt_l_armBend_01
+    100192: daveGeo_v23:cnt_l_forarmBend_01
+    100194: daveGeo_v23:cnt_l_hand_01
+    100196: daveGeo_v23:cnt_l_knee_01
+    100198: daveGeo_v23:cnt_l_legBend_01
+    100200: daveGeo_v23:cnt_l_upLegBend_01
+    100202: daveGeo_v23:cnt_pelvis_01
+    100204: daveGeo_v23:cnt_r_arm_01
+    100206: daveGeo_v23:cnt_r_armBend_01
+    100208: daveGeo_v23:cnt_r_foot_01
+    100210: daveGeo_v23:cnt_r_foot_02
+    100212: daveGeo_v23:cnt_r_forarmBend_01
+    100214: daveGeo_v23:cnt_r_forearm_01
+    100216: daveGeo_v23:cnt_r_forearm_02
+    100218: daveGeo_v23:cnt_r_hand_01
+    100220: daveGeo_v23:cnt_r_knee_01
+    100222: daveGeo_v23:cnt_r_legBend_01
+    100224: daveGeo_v23:cnt_r_upLegBend_01
+    100226: daveGeo_v23:cnt_r_wrist_01
+    100228: daveGeo_v23:cnt_r_wrist_01 1
+    100230: daveGeo_v23:cnt_spine_01
+    100232: daveGeo_v23:cnt_spine_01 1
+    100234: daveGeo_v23:curve3
+    100236: daveGeo_v23:curve4
+    100238: daveGeo_v23:dave 1
+    100240: daveGeo_v23:grp_control
+    100242: daveGeo_v23:grp_extra
+    100244: daveGeo_v23:grp_geo
+    100246: daveGeo_v23:grp_l_arm_01
+    100248: daveGeo_v23:grp_l_foot
+    100250: daveGeo_v23:grp_l_legBend_02
+    100252: daveGeo_v23:grp_l_upLegBend_02
+    100254: daveGeo_v23:grp_r_arm_01
+    100256: daveGeo_v23:grp_r_foot
+    100258: daveGeo_v23:grp_r_legBend_01
+    100260: daveGeo_v23:grp_r_upLegBend_01
+    100262: daveGeo_v23:grp_rig
+    100264: daveGeo_v23:ikHandle1
+    100266: daveGeo_v23:ikHandle2
+    100268: daveGeo_v23:ikHandle3
+    100270: daveGeo_v23:ikHandle4
+    100272: daveGeo_v23:ikHandle_loc_l_ball_01
+    100274: daveGeo_v23:ikHandle_loc_l_foot_01
+    100276: daveGeo_v23:ikHandle_loc_l_toe_01
+    100278: daveGeo_v23:ikHandle_loc_r_ball_01
+    100280: daveGeo_v23:ikHandle_loc_r_ball_01 1
+    100282: daveGeo_v23:ikHandle_loc_r_toe_01
+    100284: daveGeo_v23:jDrv_l_armBendStart_01
+    100286: daveGeo_v23:jDrv_l_armMoveStart_01
+    100288: daveGeo_v23:jDrv_l_armNoneMoveStart_01
+    100290: daveGeo_v23:jDrv_l_forearmBendStart_02
+    100292: daveGeo_v23:jDrv_l_forearmMoveStart_02
+    100294: daveGeo_v23:jDrv_l_forearmNoneMoveStart_02
+    100296: daveGeo_v23:jDrv_l_legBendMiddel_01
+    100298: daveGeo_v23:jDrv_l_legBendMoveEnd_01
+    100300: daveGeo_v23:jDrv_l_legBendMoveMiddel_01
+    100302: daveGeo_v23:jDrv_l_legBendStart_01
+    100304: daveGeo_v23:jDrv_l_legMoveStart_01
+    100306: daveGeo_v23:jDrv_l_legNoneMoveEnd_01
+    100308: daveGeo_v23:jDrv_l_legNoneMoveMiddel_01
+    100310: daveGeo_v23:jDrv_l_legNoneMoveStart_01
+    100312: daveGeo_v23:jDrv_l_toe_01
+    100314: daveGeo_v23:jDrv_l_upLegBendMiddel_01
+    100316: daveGeo_v23:jDrv_l_upLegBendMiddel_01 1
+    100318: daveGeo_v23:jDrv_l_upLegBendStart_01
+    100320: daveGeo_v23:jDrv_l_UpLegMoveEnd_01
+    100322: daveGeo_v23:jDrv_l_UpLegMoveMiddel_01
+    100324: daveGeo_v23:jDrv_l_UpLegMoveStart_01
+    100326: daveGeo_v23:jDrv_l_UpLegNoneMoveEnd_01
+    100328: daveGeo_v23:jDrv_l_UpLegNoneMoveMiddel_01
+    100330: daveGeo_v23:jDrv_l_UpLegNoneMoveStart_01
+    100332: daveGeo_v23:jDrv_r_armBendStart_01
+    100334: daveGeo_v23:jDrv_r_armMoveEnd_01
+    100336: daveGeo_v23:jDrv_r_armMoveStart_01
+    100338: daveGeo_v23:jDrv_r_armNoneMoveEnd_01
+    100340: daveGeo_v23:jDrv_r_armNoneMoveStart_01
+    100342: daveGeo_v23:jDrv_r_forearmBendStart_01
+    100344: daveGeo_v23:jDrv_r_forearmMoveStart_01
+    100346: daveGeo_v23:jDrv_r_forearmNoneMoveStart_01
+    100348: daveGeo_v23:jDrv_r_legBendMiddel_01
+    100350: daveGeo_v23:jDrv_r_legBendMoveEnd_01
+    100352: daveGeo_v23:jDrv_r_legBendMoveMiddel_01
+    100354: daveGeo_v23:jDrv_r_legBendStart_01
+    100356: daveGeo_v23:jDrv_r_legMoveStart_01
+    100358: daveGeo_v23:jDrv_r_legNoneMoveEnd_01
+    100360: daveGeo_v23:jDrv_r_legNoneMoveMiddel_01
+    100362: daveGeo_v23:jDrv_r_legNoneMoveStart_01
+    100364: daveGeo_v23:jDrv_r_toe_01
+    100366: daveGeo_v23:jDrv_r_upLegBendMiddel_01
+    100368: daveGeo_v23:jDrv_r_upLegBendStart_01
+    100370: daveGeo_v23:jDrv_r_UpLegMoveEnd_01
+    100372: daveGeo_v23:jDrv_r_UpLegMoveMiddel_01
+    100374: daveGeo_v23:jDrv_r_UpLegMoveStart_01
+    100376: daveGeo_v23:jDrv_r_UpLegNoneMoveEnd_01
+    100378: daveGeo_v23:jDrv_r_UpLegNoneMoveMiddel_01
+    100380: daveGeo_v23:jDrv_r_UpLegNoneMoveStart_01
+    100382: daveGeo_v23:jDrvBe_l_toeEnd_01
+    100384: daveGeo_v23:jDrvBe_r_toeEnd_01
+    100386: daveGeo_v23:loc_l_ball_01
+    100388: daveGeo_v23:loc_l_bankLeft_02
+    100390: daveGeo_v23:loc_l_bankRight_01
+    100392: daveGeo_v23:loc_l_hell_01
+    100394: daveGeo_v23:loc_l_knee_01
+    100396: daveGeo_v23:loc_l_toe_01
+    100398: daveGeo_v23:loc_r_ball_01
+    100400: daveGeo_v23:loc_r_bankLeft_01
+    100402: daveGeo_v23:loc_r_bankRight_01
+    100404: daveGeo_v23:loc_r_hell_01
+    100406: daveGeo_v23:loc_r_knee_02
+    100408: daveGeo_v23:loc_r_toe_01
+    100410: daveGeo_v23:master_01
+    100412: daveGeo_v23:pelvis_05
+    100414: daveGeo_v23:pelvis_06
+    100416: daveGeo_v23:root_01
+    400000: //RootNode
+    400002: daveGeo_v23:be_headEnd_01
+    400004: daveGeo_v23:be_l_idxEnd_01
+    400006: daveGeo_v23:be_l_midEnd_01
+    400008: daveGeo_v23:be_l_pinEnd_01
+    400010: daveGeo_v23:be_l_ringEnd_01
+    400012: daveGeo_v23:be_l_tmbEnd_01
+    400014: daveGeo_v23:be_l_toeEnd_01
+    400016: daveGeo_v23:be_pelvisShirtBend_01
+    400018: daveGeo_v23:be_r_idxEnd_01
+    400020: daveGeo_v23:be_r_midEnd_01
+    400022: daveGeo_v23:be_r_pinEnd_01
+    400024: daveGeo_v23:be_r_ringEnd_01
+    400026: daveGeo_v23:be_r_tmbEnd_01
+    400028: daveGeo_v23:be_r_toeEnd_01
+    400030: daveGeo_v23:bind_chest_01
+    400032: daveGeo_v23:bind_head_01
+    400034: daveGeo_v23:bind_l_arm_01
+    400036: daveGeo_v23:bind_l_armBend_01
+    400038: daveGeo_v23:bind_l_armMoveEnd_01
+    400040: daveGeo_v23:bind_l_armNoneMoveEnd_01
+    400042: daveGeo_v23:bind_l_armSupDw_01
+    400044: daveGeo_v23:bind_l_armSupUp_01
+    400046: daveGeo_v23:bind_l_foot_01
+    400048: daveGeo_v23:bind_l_forearm_02
+    400050: daveGeo_v23:bind_l_forearmBend_01
+    400052: daveGeo_v23:bind_l_forearmMoveEnd_01
+    400054: daveGeo_v23:bind_l_forearmNoneMoveEnd_01
+    400056: daveGeo_v23:bind_l_idx_01
+    400058: daveGeo_v23:bind_l_idx_02
+    400060: daveGeo_v23:bind_l_idx_03
+    400062: daveGeo_v23:bind_l_leg_01
+    400064: daveGeo_v23:bind_l_legBend_01
+    400066: daveGeo_v23:bind_l_mid_01
+    400068: daveGeo_v23:bind_l_mid_02
+    400070: daveGeo_v23:bind_l_mid_03
+    400072: daveGeo_v23:bind_l_palm_01
+    400074: daveGeo_v23:bind_l_palmPin_01
+    400076: daveGeo_v23:bind_l_pin_01
+    400078: daveGeo_v23:bind_l_pin_02
+    400080: daveGeo_v23:bind_l_pin_03
+    400082: daveGeo_v23:bind_l_ring_01
+    400084: daveGeo_v23:bind_l_ring_02
+    400086: daveGeo_v23:bind_l_ring_03
+    400088: daveGeo_v23:bind_l_shoulders_01
+    400090: daveGeo_v23:bind_l_tmb_01
+    400092: daveGeo_v23:bind_l_tmb_02
+    400094: daveGeo_v23:bind_l_tmb_03
+    400096: daveGeo_v23:bind_l_toe_01
+    400098: daveGeo_v23:bind_l_upLeg_01
+    400100: daveGeo_v23:bind_l_upLegBend_01
+    400102: daveGeo_v23:bind_l_upLegBend_01 1
+    400104: daveGeo_v23:bind_l_wrist_01
+    400106: daveGeo_v23:bind_neck_01
+    400108: daveGeo_v23:bind_pelvis_01
+    400110: daveGeo_v23:bind_pelvisShirtBend_01
+    400112: daveGeo_v23:bind_pelvisShirtBend_02
+    400114: daveGeo_v23:bind_pelvisShirtBend_03
+    400116: daveGeo_v23:bind_r_arm_01
+    400118: daveGeo_v23:bind_r_armBend_01
+    400120: daveGeo_v23:bind_r_armSupDw_01
+    400122: daveGeo_v23:bind_r_armSupUp_01
+    400124: daveGeo_v23:bind_r_foot_01
+    400126: daveGeo_v23:bind_r_forearm_01
+    400128: daveGeo_v23:bind_r_forearmBend_01
+    400130: daveGeo_v23:bind_r_forearmMoveEnd_01
+    400132: daveGeo_v23:bind_r_forearmNoneMoveEnd_01
+    400134: daveGeo_v23:bind_r_idx_01
+    400136: daveGeo_v23:bind_r_idx_02
+    400138: daveGeo_v23:bind_r_idx_03
+    400140: daveGeo_v23:bind_r_leg_01
+    400142: daveGeo_v23:bind_r_legBend_01
+    400144: daveGeo_v23:bind_r_mid_01
+    400146: daveGeo_v23:bind_r_mid_02
+    400148: daveGeo_v23:bind_r_mid_03
+    400150: daveGeo_v23:bind_r_palm_01
+    400152: daveGeo_v23:bind_r_palmPin_01
+    400154: daveGeo_v23:bind_r_pin_01
+    400156: daveGeo_v23:bind_r_pin_02
+    400158: daveGeo_v23:bind_r_pin_03
+    400160: daveGeo_v23:bind_r_ring_01
+    400162: daveGeo_v23:bind_r_ring_02
+    400164: daveGeo_v23:bind_r_ring_03
+    400166: daveGeo_v23:bind_r_shoulders_01
+    400168: daveGeo_v23:bind_r_tmb_01
+    400170: daveGeo_v23:bind_r_tmb_02
+    400172: daveGeo_v23:bind_r_tmb_03
+    400174: daveGeo_v23:bind_r_toe_01
+    400176: daveGeo_v23:bind_r_upLeg_01
+    400178: daveGeo_v23:bind_r_upLegBend_01
+    400180: daveGeo_v23:bind_r_wrist_01
+    400182: daveGeo_v23:bind_spine_01
+    400184: daveGeo_v23:bind_spine_02
+    400186: daveGeo_v23:cnt_chest_01
+    400188: daveGeo_v23:cnt_l_arm_01
+    400190: daveGeo_v23:cnt_l_armBend_01
+    400192: daveGeo_v23:cnt_l_forarmBend_01
+    400194: daveGeo_v23:cnt_l_hand_01
+    400196: daveGeo_v23:cnt_l_knee_01
+    400198: daveGeo_v23:cnt_l_legBend_01
+    400200: daveGeo_v23:cnt_l_upLegBend_01
+    400202: daveGeo_v23:cnt_pelvis_01
+    400204: daveGeo_v23:cnt_r_arm_01
+    400206: daveGeo_v23:cnt_r_armBend_01
+    400208: daveGeo_v23:cnt_r_foot_01
+    400210: daveGeo_v23:cnt_r_foot_02
+    400212: daveGeo_v23:cnt_r_forarmBend_01
+    400214: daveGeo_v23:cnt_r_forearm_01
+    400216: daveGeo_v23:cnt_r_forearm_02
+    400218: daveGeo_v23:cnt_r_hand_01
+    400220: daveGeo_v23:cnt_r_knee_01
+    400222: daveGeo_v23:cnt_r_legBend_01
+    400224: daveGeo_v23:cnt_r_upLegBend_01
+    400226: daveGeo_v23:cnt_r_wrist_01
+    400228: daveGeo_v23:cnt_r_wrist_01 1
+    400230: daveGeo_v23:cnt_spine_01
+    400232: daveGeo_v23:cnt_spine_01 1
+    400234: daveGeo_v23:curve3
+    400236: daveGeo_v23:curve4
+    400238: daveGeo_v23:dave 1
+    400240: daveGeo_v23:grp_control
+    400242: daveGeo_v23:grp_extra
+    400244: daveGeo_v23:grp_geo
+    400246: daveGeo_v23:grp_l_arm_01
+    400248: daveGeo_v23:grp_l_foot
+    400250: daveGeo_v23:grp_l_legBend_02
+    400252: daveGeo_v23:grp_l_upLegBend_02
+    400254: daveGeo_v23:grp_r_arm_01
+    400256: daveGeo_v23:grp_r_foot
+    400258: daveGeo_v23:grp_r_legBend_01
+    400260: daveGeo_v23:grp_r_upLegBend_01
+    400262: daveGeo_v23:grp_rig
+    400264: daveGeo_v23:ikHandle1
+    400266: daveGeo_v23:ikHandle2
+    400268: daveGeo_v23:ikHandle3
+    400270: daveGeo_v23:ikHandle4
+    400272: daveGeo_v23:ikHandle_loc_l_ball_01
+    400274: daveGeo_v23:ikHandle_loc_l_foot_01
+    400276: daveGeo_v23:ikHandle_loc_l_toe_01
+    400278: daveGeo_v23:ikHandle_loc_r_ball_01
+    400280: daveGeo_v23:ikHandle_loc_r_ball_01 1
+    400282: daveGeo_v23:ikHandle_loc_r_toe_01
+    400284: daveGeo_v23:jDrv_l_armBendStart_01
+    400286: daveGeo_v23:jDrv_l_armMoveStart_01
+    400288: daveGeo_v23:jDrv_l_armNoneMoveStart_01
+    400290: daveGeo_v23:jDrv_l_forearmBendStart_02
+    400292: daveGeo_v23:jDrv_l_forearmMoveStart_02
+    400294: daveGeo_v23:jDrv_l_forearmNoneMoveStart_02
+    400296: daveGeo_v23:jDrv_l_legBendMiddel_01
+    400298: daveGeo_v23:jDrv_l_legBendMoveEnd_01
+    400300: daveGeo_v23:jDrv_l_legBendMoveMiddel_01
+    400302: daveGeo_v23:jDrv_l_legBendStart_01
+    400304: daveGeo_v23:jDrv_l_legMoveStart_01
+    400306: daveGeo_v23:jDrv_l_legNoneMoveEnd_01
+    400308: daveGeo_v23:jDrv_l_legNoneMoveMiddel_01
+    400310: daveGeo_v23:jDrv_l_legNoneMoveStart_01
+    400312: daveGeo_v23:jDrv_l_toe_01
+    400314: daveGeo_v23:jDrv_l_upLegBendMiddel_01
+    400316: daveGeo_v23:jDrv_l_upLegBendMiddel_01 1
+    400318: daveGeo_v23:jDrv_l_upLegBendStart_01
+    400320: daveGeo_v23:jDrv_l_UpLegMoveEnd_01
+    400322: daveGeo_v23:jDrv_l_UpLegMoveMiddel_01
+    400324: daveGeo_v23:jDrv_l_UpLegMoveStart_01
+    400326: daveGeo_v23:jDrv_l_UpLegNoneMoveEnd_01
+    400328: daveGeo_v23:jDrv_l_UpLegNoneMoveMiddel_01
+    400330: daveGeo_v23:jDrv_l_UpLegNoneMoveStart_01
+    400332: daveGeo_v23:jDrv_r_armBendStart_01
+    400334: daveGeo_v23:jDrv_r_armMoveEnd_01
+    400336: daveGeo_v23:jDrv_r_armMoveStart_01
+    400338: daveGeo_v23:jDrv_r_armNoneMoveEnd_01
+    400340: daveGeo_v23:jDrv_r_armNoneMoveStart_01
+    400342: daveGeo_v23:jDrv_r_forearmBendStart_01
+    400344: daveGeo_v23:jDrv_r_forearmMoveStart_01
+    400346: daveGeo_v23:jDrv_r_forearmNoneMoveStart_01
+    400348: daveGeo_v23:jDrv_r_legBendMiddel_01
+    400350: daveGeo_v23:jDrv_r_legBendMoveEnd_01
+    400352: daveGeo_v23:jDrv_r_legBendMoveMiddel_01
+    400354: daveGeo_v23:jDrv_r_legBendStart_01
+    400356: daveGeo_v23:jDrv_r_legMoveStart_01
+    400358: daveGeo_v23:jDrv_r_legNoneMoveEnd_01
+    400360: daveGeo_v23:jDrv_r_legNoneMoveMiddel_01
+    400362: daveGeo_v23:jDrv_r_legNoneMoveStart_01
+    400364: daveGeo_v23:jDrv_r_toe_01
+    400366: daveGeo_v23:jDrv_r_upLegBendMiddel_01
+    400368: daveGeo_v23:jDrv_r_upLegBendStart_01
+    400370: daveGeo_v23:jDrv_r_UpLegMoveEnd_01
+    400372: daveGeo_v23:jDrv_r_UpLegMoveMiddel_01
+    400374: daveGeo_v23:jDrv_r_UpLegMoveStart_01
+    400376: daveGeo_v23:jDrv_r_UpLegNoneMoveEnd_01
+    400378: daveGeo_v23:jDrv_r_UpLegNoneMoveMiddel_01
+    400380: daveGeo_v23:jDrv_r_UpLegNoneMoveStart_01
+    400382: daveGeo_v23:jDrvBe_l_toeEnd_01
+    400384: daveGeo_v23:jDrvBe_r_toeEnd_01
+    400386: daveGeo_v23:loc_l_ball_01
+    400388: daveGeo_v23:loc_l_bankLeft_02
+    400390: daveGeo_v23:loc_l_bankRight_01
+    400392: daveGeo_v23:loc_l_hell_01
+    400394: daveGeo_v23:loc_l_knee_01
+    400396: daveGeo_v23:loc_l_toe_01
+    400398: daveGeo_v23:loc_r_ball_01
+    400400: daveGeo_v23:loc_r_bankLeft_01
+    400402: daveGeo_v23:loc_r_bankRight_01
+    400404: daveGeo_v23:loc_r_hell_01
+    400406: daveGeo_v23:loc_r_knee_02
+    400408: daveGeo_v23:loc_r_toe_01
+    400410: daveGeo_v23:master_01
+    400412: daveGeo_v23:pelvis_05
+    400414: daveGeo_v23:pelvis_06
+    400416: daveGeo_v23:root_01
+    4300000: daveGeo_v23:dave
+    7400000: charge2
+    9500000: //RootNode
+    13700000: daveGeo_v23:dave 1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip '_anim' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'daveGeo_v23:bind_spine_02' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: charge2
+      takeName: _anim
+      firstFrame: 1
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: daveGeo_v23:grp_control
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:grp_l_legBend_02
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:grp_l_legBend_02/daveGeo_v23:cnt_l_legBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:grp_l_upLegBend_02
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:grp_l_upLegBend_02/daveGeo_v23:cnt_l_upLegBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:grp_r_legBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:grp_r_legBend_01/daveGeo_v23:cnt_r_legBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:grp_r_upLegBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:grp_r_upLegBend_01/daveGeo_v23:cnt_r_upLegBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:loc_l_knee_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:loc_l_knee_01/daveGeo_v23:cnt_l_knee_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:loc_r_knee_02
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:loc_r_knee_02/daveGeo_v23:cnt_r_knee_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:curve3
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:curve4
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01/daveGeo_v23:cnt_l_arm_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01/daveGeo_v23:cnt_l_arm_01/daveGeo_v23:cnt_l_armBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01/daveGeo_v23:cnt_l_arm_01/daveGeo_v23:cnt_r_forearm_02
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01/daveGeo_v23:cnt_l_arm_01/daveGeo_v23:cnt_r_forearm_02/daveGeo_v23:cnt_l_forarmBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01/daveGeo_v23:cnt_l_arm_01/daveGeo_v23:cnt_r_forearm_02/daveGeo_v23:cnt_r_wrist_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01/daveGeo_v23:cnt_l_arm_01/daveGeo_v23:cnt_r_forearm_02/daveGeo_v23:cnt_r_wrist_01/daveGeo_v23:cnt_l_hand_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01/daveGeo_v23:cnt_l_arm_01/daveGeo_v23:cnt_r_forearm_02/daveGeo_v23:ikHandle4
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_l_arm_01/daveGeo_v23:cnt_l_arm_01/daveGeo_v23:ikHandle3
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01/daveGeo_v23:cnt_r_arm_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01/daveGeo_v23:cnt_r_arm_01/daveGeo_v23:cnt_r_armBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01/daveGeo_v23:cnt_r_arm_01/daveGeo_v23:cnt_r_forearm_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01/daveGeo_v23:cnt_r_arm_01/daveGeo_v23:cnt_r_forearm_01/daveGeo_v23:cnt_r_forarmBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01/daveGeo_v23:cnt_r_arm_01/daveGeo_v23:cnt_r_forearm_01/daveGeo_v23:cnt_r_wrist_01
+          1
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01/daveGeo_v23:cnt_r_arm_01/daveGeo_v23:cnt_r_forearm_01/daveGeo_v23:cnt_r_wrist_01
+          1/daveGeo_v23:cnt_r_hand_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01/daveGeo_v23:cnt_r_arm_01/daveGeo_v23:cnt_r_forearm_01/daveGeo_v23:ikHandle2
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:grp_r_arm_01/daveGeo_v23:cnt_r_arm_01/daveGeo_v23:ikHandle1
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:pelvis_05
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_pelvis_01/daveGeo_v23:cnt_spine_01/daveGeo_v23:cnt_spine_01
+          1/daveGeo_v23:cnt_chest_01/daveGeo_v23:pelvis_05/daveGeo_v23:pelvis_06
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_r_foot_01
+        weight: 0
+      - path: daveGeo_v23:grp_control/daveGeo_v23:master_01/daveGeo_v23:cnt_r_foot_02
+        weight: 0
+      - path: daveGeo_v23:grp_extra
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02/daveGeo_v23:jDrv_l_upLegBendMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02/daveGeo_v23:jDrv_l_upLegBendMiddel_01/daveGeo_v23:bind_l_upLegBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02/daveGeo_v23:loc_l_hell_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02/daveGeo_v23:loc_l_hell_01/daveGeo_v23:loc_l_toe_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02/daveGeo_v23:loc_l_hell_01/daveGeo_v23:loc_l_toe_01/daveGeo_v23:ikHandle_loc_l_ball_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02/daveGeo_v23:loc_l_hell_01/daveGeo_v23:loc_l_toe_01/daveGeo_v23:ikHandle_loc_l_toe_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02/daveGeo_v23:loc_l_hell_01/daveGeo_v23:loc_l_toe_01/daveGeo_v23:loc_l_ball_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_l_foot/daveGeo_v23:loc_l_bankRight_01/daveGeo_v23:loc_l_bankLeft_02/daveGeo_v23:loc_l_hell_01/daveGeo_v23:loc_l_toe_01/daveGeo_v23:loc_l_ball_01/daveGeo_v23:ikHandle_loc_l_foot_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot/daveGeo_v23:loc_r_bankLeft_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot/daveGeo_v23:loc_r_bankLeft_01/daveGeo_v23:loc_r_bankRight_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot/daveGeo_v23:loc_r_bankLeft_01/daveGeo_v23:loc_r_bankRight_01/daveGeo_v23:loc_r_hell_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot/daveGeo_v23:loc_r_bankLeft_01/daveGeo_v23:loc_r_bankRight_01/daveGeo_v23:loc_r_hell_01/daveGeo_v23:loc_r_toe_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot/daveGeo_v23:loc_r_bankLeft_01/daveGeo_v23:loc_r_bankRight_01/daveGeo_v23:loc_r_hell_01/daveGeo_v23:loc_r_toe_01/daveGeo_v23:ikHandle_loc_r_ball_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot/daveGeo_v23:loc_r_bankLeft_01/daveGeo_v23:loc_r_bankRight_01/daveGeo_v23:loc_r_hell_01/daveGeo_v23:loc_r_toe_01/daveGeo_v23:ikHandle_loc_r_toe_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot/daveGeo_v23:loc_r_bankLeft_01/daveGeo_v23:loc_r_bankRight_01/daveGeo_v23:loc_r_hell_01/daveGeo_v23:loc_r_toe_01/daveGeo_v23:loc_r_ball_01
+        weight: 0
+      - path: daveGeo_v23:grp_extra/daveGeo_v23:grp_r_foot/daveGeo_v23:loc_r_bankLeft_01/daveGeo_v23:loc_r_bankRight_01/daveGeo_v23:loc_r_hell_01/daveGeo_v23:loc_r_toe_01/daveGeo_v23:loc_r_ball_01/daveGeo_v23:ikHandle_loc_r_ball_01
+          1
+        weight: 0
+      - path: daveGeo_v23:grp_geo
+        weight: 0
+      - path: daveGeo_v23:grp_geo/daveGeo_v23:dave 1
+        weight: 0
+      - path: daveGeo_v23:grp_rig
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:bind_l_foot_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:bind_l_foot_01/daveGeo_v23:jDrv_l_toe_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:bind_l_foot_01/daveGeo_v23:jDrv_l_toe_01/daveGeo_v23:bind_l_toe_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:bind_l_foot_01/daveGeo_v23:jDrv_l_toe_01/daveGeo_v23:bind_l_toe_01/daveGeo_v23:be_l_toeEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:bind_l_foot_01/daveGeo_v23:jDrv_l_toe_01/daveGeo_v23:jDrvBe_l_toeEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legBendStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legBendStart_01/daveGeo_v23:jDrv_l_legBendMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legBendStart_01/daveGeo_v23:jDrv_l_legBendMiddel_01/daveGeo_v23:bind_l_legBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legMoveStart_01/daveGeo_v23:jDrv_l_legBendMoveMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legMoveStart_01/daveGeo_v23:jDrv_l_legBendMoveMiddel_01/daveGeo_v23:jDrv_l_legBendMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legNoneMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legNoneMoveStart_01/daveGeo_v23:jDrv_l_legNoneMoveMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:bind_l_leg_01/daveGeo_v23:jDrv_l_legNoneMoveStart_01/daveGeo_v23:jDrv_l_legNoneMoveMiddel_01/daveGeo_v23:jDrv_l_legNoneMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_upLegBendStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_upLegBendStart_01/daveGeo_v23:jDrv_l_upLegBendMiddel_01
+          1
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_upLegBendStart_01/daveGeo_v23:jDrv_l_upLegBendMiddel_01
+          1/daveGeo_v23:bind_l_upLegBend_01 1
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_UpLegMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_UpLegMoveStart_01/daveGeo_v23:jDrv_l_UpLegMoveMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_UpLegMoveStart_01/daveGeo_v23:jDrv_l_UpLegMoveMiddel_01/daveGeo_v23:jDrv_l_UpLegMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_UpLegNoneMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_UpLegNoneMoveStart_01/daveGeo_v23:jDrv_l_UpLegNoneMoveMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_l_upLeg_01/daveGeo_v23:jDrv_l_UpLegNoneMoveStart_01/daveGeo_v23:jDrv_l_UpLegNoneMoveMiddel_01/daveGeo_v23:jDrv_l_UpLegNoneMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_pelvisShirtBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_pelvisShirtBend_01/daveGeo_v23:bind_pelvisShirtBend_02
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_pelvisShirtBend_01/daveGeo_v23:bind_pelvisShirtBend_02/daveGeo_v23:bind_pelvisShirtBend_03
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_pelvisShirtBend_01/daveGeo_v23:bind_pelvisShirtBend_02/daveGeo_v23:bind_pelvisShirtBend_03/daveGeo_v23:be_pelvisShirtBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:bind_r_foot_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:bind_r_foot_01/daveGeo_v23:jDrv_r_toe_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:bind_r_foot_01/daveGeo_v23:jDrv_r_toe_01/daveGeo_v23:bind_r_toe_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:bind_r_foot_01/daveGeo_v23:jDrv_r_toe_01/daveGeo_v23:bind_r_toe_01/daveGeo_v23:be_r_toeEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:bind_r_foot_01/daveGeo_v23:jDrv_r_toe_01/daveGeo_v23:jDrvBe_r_toeEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legBendStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legBendStart_01/daveGeo_v23:jDrv_r_legBendMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legBendStart_01/daveGeo_v23:jDrv_r_legBendMiddel_01/daveGeo_v23:bind_r_legBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legMoveStart_01/daveGeo_v23:jDrv_r_legBendMoveMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legMoveStart_01/daveGeo_v23:jDrv_r_legBendMoveMiddel_01/daveGeo_v23:jDrv_r_legBendMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legNoneMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legNoneMoveStart_01/daveGeo_v23:jDrv_r_legNoneMoveMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:bind_r_leg_01/daveGeo_v23:jDrv_r_legNoneMoveStart_01/daveGeo_v23:jDrv_r_legNoneMoveMiddel_01/daveGeo_v23:jDrv_r_legNoneMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_upLegBendStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_upLegBendStart_01/daveGeo_v23:jDrv_r_upLegBendMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_upLegBendStart_01/daveGeo_v23:jDrv_r_upLegBendMiddel_01/daveGeo_v23:bind_r_upLegBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_UpLegMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_UpLegMoveStart_01/daveGeo_v23:jDrv_r_UpLegMoveMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_UpLegMoveStart_01/daveGeo_v23:jDrv_r_UpLegMoveMiddel_01/daveGeo_v23:jDrv_r_UpLegMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_UpLegNoneMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_UpLegNoneMoveStart_01/daveGeo_v23:jDrv_r_UpLegNoneMoveMiddel_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_r_upLeg_01/daveGeo_v23:jDrv_r_UpLegNoneMoveStart_01/daveGeo_v23:jDrv_r_UpLegNoneMoveMiddel_01/daveGeo_v23:jDrv_r_UpLegNoneMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_armSupDw_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_armSupUp_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_idx_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_idx_01/daveGeo_v23:bind_l_idx_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_idx_01/daveGeo_v23:bind_l_idx_02/daveGeo_v23:bind_l_idx_03
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_idx_01/daveGeo_v23:bind_l_idx_02/daveGeo_v23:bind_l_idx_03/daveGeo_v23:be_l_idxEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_mid_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_mid_01/daveGeo_v23:bind_l_mid_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_mid_01/daveGeo_v23:bind_l_mid_02/daveGeo_v23:bind_l_mid_03
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_mid_01/daveGeo_v23:bind_l_mid_02/daveGeo_v23:bind_l_mid_03/daveGeo_v23:be_l_midEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_palmPin_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_palmPin_01/daveGeo_v23:bind_l_pin_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_palmPin_01/daveGeo_v23:bind_l_pin_01/daveGeo_v23:bind_l_pin_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_palmPin_01/daveGeo_v23:bind_l_pin_01/daveGeo_v23:bind_l_pin_02/daveGeo_v23:bind_l_pin_03
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_palmPin_01/daveGeo_v23:bind_l_pin_01/daveGeo_v23:bind_l_pin_02/daveGeo_v23:bind_l_pin_03/daveGeo_v23:be_l_pinEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_ring_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_ring_01/daveGeo_v23:bind_l_ring_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_ring_01/daveGeo_v23:bind_l_ring_02/daveGeo_v23:bind_l_ring_03
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_palm_01/daveGeo_v23:bind_l_ring_01/daveGeo_v23:bind_l_ring_02/daveGeo_v23:bind_l_ring_03/daveGeo_v23:be_l_ringEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_tmb_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_tmb_01/daveGeo_v23:bind_l_tmb_02
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_tmb_01/daveGeo_v23:bind_l_tmb_02/daveGeo_v23:bind_l_tmb_03
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:bind_l_arm_01/daveGeo_v23:bind_l_forearm_02/daveGeo_v23:bind_l_wrist_01/daveGeo_v23:bind_l_tmb_01/daveGeo_v23:bind_l_tmb_02/daveGeo_v23:bind_l_tmb_03/daveGeo_v23:be_l_tmbEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armBendStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armBendStart_01/daveGeo_v23:bind_l_armBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armBendStart_01/daveGeo_v23:jDrv_l_forearmBendStart_02
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armBendStart_01/daveGeo_v23:jDrv_l_forearmBendStart_02/daveGeo_v23:bind_l_forearmBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armBendStart_01/daveGeo_v23:jDrv_l_forearmMoveStart_02
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armBendStart_01/daveGeo_v23:jDrv_l_forearmMoveStart_02/daveGeo_v23:bind_l_forearmMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armBendStart_01/daveGeo_v23:jDrv_l_forearmNoneMoveStart_02
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armBendStart_01/daveGeo_v23:jDrv_l_forearmNoneMoveStart_02/daveGeo_v23:bind_l_forearmNoneMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armMoveStart_01/daveGeo_v23:bind_l_armMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armNoneMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_l_shoulders_01/daveGeo_v23:jDrv_l_armNoneMoveStart_01/daveGeo_v23:bind_l_armNoneMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_neck_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_neck_01/daveGeo_v23:bind_head_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_neck_01/daveGeo_v23:bind_head_01/daveGeo_v23:be_headEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_armSupDw_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_armSupUp_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_idx_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_idx_01/daveGeo_v23:bind_r_idx_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_idx_01/daveGeo_v23:bind_r_idx_02/daveGeo_v23:bind_r_idx_03
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_idx_01/daveGeo_v23:bind_r_idx_02/daveGeo_v23:bind_r_idx_03/daveGeo_v23:be_r_idxEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_mid_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_mid_01/daveGeo_v23:bind_r_mid_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_mid_01/daveGeo_v23:bind_r_mid_02/daveGeo_v23:bind_r_mid_03
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_mid_01/daveGeo_v23:bind_r_mid_02/daveGeo_v23:bind_r_mid_03/daveGeo_v23:be_r_midEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_palmPin_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_palmPin_01/daveGeo_v23:bind_r_pin_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_palmPin_01/daveGeo_v23:bind_r_pin_01/daveGeo_v23:bind_r_pin_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_palmPin_01/daveGeo_v23:bind_r_pin_01/daveGeo_v23:bind_r_pin_02/daveGeo_v23:bind_r_pin_03
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_palmPin_01/daveGeo_v23:bind_r_pin_01/daveGeo_v23:bind_r_pin_02/daveGeo_v23:bind_r_pin_03/daveGeo_v23:be_r_pinEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_ring_01
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_ring_01/daveGeo_v23:bind_r_ring_02
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_ring_01/daveGeo_v23:bind_r_ring_02/daveGeo_v23:bind_r_ring_03
+        weight: 1
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_palm_01/daveGeo_v23:bind_r_ring_01/daveGeo_v23:bind_r_ring_02/daveGeo_v23:bind_r_ring_03/daveGeo_v23:be_r_ringEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_tmb_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_tmb_01/daveGeo_v23:bind_r_tmb_02
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_tmb_01/daveGeo_v23:bind_r_tmb_02/daveGeo_v23:bind_r_tmb_03
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:bind_r_forearm_01/daveGeo_v23:bind_r_wrist_01/daveGeo_v23:bind_r_tmb_01/daveGeo_v23:bind_r_tmb_02/daveGeo_v23:bind_r_tmb_03/daveGeo_v23:be_r_tmbEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:jDrv_r_forearmBendStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:jDrv_r_forearmBendStart_01/daveGeo_v23:bind_r_forearmBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:jDrv_r_forearmMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:jDrv_r_forearmMoveStart_01/daveGeo_v23:bind_r_forearmMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:jDrv_r_forearmNoneMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:bind_r_arm_01/daveGeo_v23:jDrv_r_forearmNoneMoveStart_01/daveGeo_v23:bind_r_forearmNoneMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:jDrv_r_armBendStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:jDrv_r_armBendStart_01/daveGeo_v23:bind_r_armBend_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:jDrv_r_armMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:jDrv_r_armMoveStart_01/daveGeo_v23:jDrv_r_armMoveEnd_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:jDrv_r_armNoneMoveStart_01
+        weight: 0
+      - path: daveGeo_v23:grp_rig/daveGeo_v23:root_01/daveGeo_v23:bind_pelvis_01/daveGeo_v23:bind_spine_01/daveGeo_v23:bind_spine_02/daveGeo_v23:bind_chest_01/daveGeo_v23:bind_r_shoulders_01/daveGeo_v23:jDrv_r_armNoneMoveStart_01/daveGeo_v23:jDrv_r_armNoneMoveEnd_01
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.96
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human:
+    - boneName: daveGeo_v23:bind_pelvis_01
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_upLeg_01
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_upLeg_01
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_leg_01
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_leg_01
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_foot_01
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_foot_01
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_spine_01
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_chest_01
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_neck_01
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_head_01
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_shoulders_01
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_shoulders_01
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_arm_01
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_arm_01
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_forearm_02
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_forearm_01
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_wrist_01
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_wrist_01
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_toe_01
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_toe_01
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_idx_01
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_idx_02
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_idx_03
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_mid_01
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_mid_02
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_mid_03
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_pin_01
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_pin_02
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_pin_03
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_ring_01
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_ring_02
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_l_ring_03
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_idx_01
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_idx_02
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_idx_03
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_mid_01
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_mid_02
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_mid_03
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_pin_01
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_pin_02
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_pin_03
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_ring_01
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_ring_02
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: daveGeo_v23:bind_r_ring_03
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: dave(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:grp_control
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_pelvis_01
+      position: {x: -0, y: 1.2065521, z: 0.07161048}
+      rotation: {x: 0.060375772, y: 0.004461759, z: -0.07356367, w: 0.9954513}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_spine_01
+      position: {x: -0, y: 0.0825594, z: 0}
+      rotation: {x: 0.018446447, y: -0.001005525, z: 0.05442041, w: 0.9983472}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_spine_01 1
+      position: {x: 0.00021199073, y: 0.08255912, z: 2.5961377e-20}
+      rotation: {x: 0.045663565, y: 0.0065482934, z: 0.02621752, w: 0.99859136}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_chest_01
+      position: {x: 0.00021199073, y: 0.08255912, z: 2.5961377e-20}
+      rotation: {x: 0.22404245, y: 0.0048871837, z: 0.021253811, w: 0.9743354}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_l_clavicle_01
+      position: {x: -0.08426088, y: 0.121175036, z: 0.0018051501}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_neck_01
+      position: {x: -0, y: 0.16040996, z: 1.7860261e-16}
+      rotation: {x: 0.013391599, y: -0, z: -0, w: 0.99991035}
+      scale: {x: 0.35156626, y: 0.35156626, z: 0.35156626}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_head_01
+      position: {x: -1.6514567e-16, y: 0.17481028, z: 1.3585487e-16}
+      rotation: {x: 0.16124779, y: -0.018150643, z: -0.05899595, w: 0.98498183}
+      scale: {x: 2.9471695, y: 2.9471695, z: 2.9471695}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_r_clavicle_01
+      position: {x: 0.08426092, y: 0.12117619, z: 0.0018051529}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:grp_l_arm_01
+      position: {x: -0.13632298, y: 0.105315045, z: 0.0018051099}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_l_arm_01
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00744644, y: -0.6328875, z: 0.022212721, w: 0.77388924}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_l_armBend_01
+      position: {x: 0.14762852, y: -0.044702537, z: -0.17965494}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_r_forearm_02
+      position: {x: 0.27184147, y: -0.0825354, z: -0.0029629585}
+      rotation: {x: 0.17652719, y: -0.58472425, z: 0.0036080857, w: 0.79178447}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_l_forarmBend_01
+      position: {x: 0.096618935, y: -0.029939989, z: -0.17519233}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_r_wrist_01
+      position: {x: 0.19970283, y: -0.061864097, z: 0.0057602427}
+      rotation: {x: -0.41648343, y: 0.06174521, z: -0.2694388, w: 0.86610156}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_l_hand_01
+      position: {x: 0.026499989, y: 0.09299697, z: -7.9936054e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:ikHandle4
+      position: {x: 0.09840053, y: -0.030484619, z: 0.0028382586}
+      rotation: {x: 0.98864824, y: -0.14961468, z: 0.013724585, w: 0.0013511752}
+      scale: {x: 1, y: 1, z: -1}
+      transformModified: 1
+    - name: daveGeo_v23:ikHandle3
+      position: {x: 0.148562, y: -0.04525009, z: -0.0016243279}
+      rotation: {x: 0.98907995, y: -0.1472873, z: -0.0051724175, w: -0.0007701345}
+      scale: {x: 1, y: 1, z: -1}
+      transformModified: 1
+    - name: daveGeo_v23:grp_r_arm_01
+      position: {x: 0.13632277, y: 0.10531918, z: 0.0018051147}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_r_arm_01
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0.55932593, z: -0, w: 0.82894784}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_r_armBend_01
+      position: {x: 0.14678077, y: -0.044706676, z: -0.17965494}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_r_forearm_01
+      position: {x: 0.2709937, y: -0.08253954, z: -0.0029629632}
+      rotation: {x: -0.29393387, y: -0.18252526, z: -0.07935096, w: 0.9348748}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_r_forarmBend_01
+      position: {x: 0.096618935, y: -0.029939989, z: -0.17519233}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_r_wrist_01 1
+      position: {x: 0.19970283, y: -0.061864097, z: 0.0057602427}
+      rotation: {x: 0.018633127, y: -0.00023676638, z: -0.22159547, w: 0.9749606}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_r_hand_01
+      position: {x: 0.026499989, y: 0.09299697, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:ikHandle2
+      position: {x: 0.09840023, y: -0.030482559, z: 0.0028382635}
+      rotation: {x: 0.14961468, y: 0.98864824, z: -0.0013511752, w: 0.013724585}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:ikHandle1
+      position: {x: 0.14856206, y: -0.045249175, z: -0.0016243326}
+      rotation: {x: 0.1472873, y: 0.98907995, z: 0.0007701344, w: -0.0051724175}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:wipControles:curve2
+      position: {x: 0.15171507, y: -0.117684074, z: 0.0841365}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:ikHandle5
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:grp_l_legBend_02
+      position: {x: -0.1573577, y: 0.8328341, z: 0.1886742}
+      rotation: {x: 0.02625339, y: 0.9850754, z: 0.14288281, w: 0.09231306}
+      scale: {x: 1, y: 1, z: -1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_l_legBend_01
+      position: {x: -0.0005943268, y: -0.19036682, z: 0.19415645}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:grp_l_upLegBend_02
+      position: {x: -0.10985659, y: 1.172493, z: 0.067463875}
+      rotation: {x: 0.051156867, y: 0.9822618, z: -0.16008796, w: 0.08316663}
+      scale: {x: 1, y: 1, z: -1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_l_upLegBend_01
+      position: {x: -0.0006316243, y: -0.19036682, z: 0.19415645}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:grp_r_legBend_01
+      position: {x: 0.1100385, y: 0.7973115, z: 0.17827909}
+      rotation: {x: 0.13363762, y: 0.057631467, z: -0.0049119717, w: 0.98934096}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_r_legBend_01
+      position: {x: -0.0005943268, y: -0.19036682, z: 0.19415645}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:grp_r_upLegBend_01
+      position: {x: 0.095131464, y: 1.142253, z: 0.063781954}
+      rotation: {x: -0.14602834, y: 0.05916069, z: 0.010727062, w: 0.9874516}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_r_upLegBend_01
+      position: {x: -0.0006316243, y: -0.19036682, z: 0.19415645}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:loc_l_knee_01
+      position: {x: -0.2442222, y: 0.50082207, z: 0.5366787}
+      rotation: {x: -0.07592543, y: 0.8992868, z: 0.42919177, w: 0.036235925}
+      scale: {x: 1, y: 1, z: -1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_l_knee_01
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:loc_r_knee_02
+      position: {x: 0.1543839, y: 0.4481235, z: 0.5425166}
+      rotation: {x: 0.4351004, y: -0.03371449, z: -0.13374741, w: 0.8897543}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_r_knee_01
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:master_01
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_r_foot_01
+      position: {x: 0.09449378, y: 0.3396242, z: 0.023544187}
+      rotation: {x: 0.4351004, y: -0.03371449, z: -0.13374741, w: 0.8897543}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_r_foot_02
+      position: {x: -0.16397081, y: 0.3785765, z: 0.023544187}
+      rotation: {x: 0.42919168, y: -0.03623603, z: 0.07592548, w: 0.8992868}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:grp_extra
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:grp_l_foot
+      position: {x: -0.0473315, y: 0.3200949, z: -0.02003261}
+      rotation: {x: 0.42919168, y: -0.03623603, z: 0.07592548, w: 0.8992868}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:loc_l_bankRight_01
+      position: {x: -0.1949316, y: -0.0032166722, z: 0.053878687}
+      rotation: {x: -0.00048826885, y: -0.055950068, z: -0.0087128645, w: 0.99839544}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:loc_l_bankLeft_02
+      position: {x: 0.18865156, y: 0.0032178354, z: 0.028527612}
+      rotation: {x: -0.0009842153, y: 0.07902465, z: 0.0000780213, w: 0.9968722}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_upLegBendMiddel_01
+      position: {x: -0.10107271, y: 0.7355083, z: -0.100765444}
+      rotation: {x: 0.51467454, y: -0.49230394, z: 0.49920604, w: -0.493498}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_upLegBend_01
+      position: {x: -0, y: 0, z: 1.7763568e-17}
+      rotation: {x: -0.038766712, y: 0.10077148, z: -0.4238224, w: 0.8992868}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+      transformModified: 1
+    - name: daveGeo_v23:loc_l_hell_01
+      position: {x: -0.083288155, y: -0.003073201, z: -0.19977345}
+      rotation: {x: 0.0091991285, y: -0.055868633, z: 0.009171689, w: 0.99835366}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:loc_l_toe_01
+      position: {x: 0.01593888, y: -0.0059677106, z: 0.3359623}
+      rotation: {x: -2.4119413e-28, y: 0.03284119, z: 7.340295e-27, w: 0.9994606}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:ikHandle_loc_l_ball_01
+      position: {x: 0.0033441542, y: 0.007488739, z: -0.14407058}
+      rotation: {x: 0.66304165, y: -0.22043446, z: 0.6792563, w: -0.22448893}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:ikHandle_loc_l_toe_01
+      position: {x: -0.000030136107, y: 0.008926157, z: -0.000012664795}
+      rotation: {x: 0.69866514, y: 0.009089733, z: 0.71531296, w: 0.010574437}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:loc_l_ball_01
+      position: {x: 0.0033728117, y: 0.0009071912, z: -0.14406224}
+      rotation: {x: 0, y: -0, z: -6.7762636e-21, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:ikHandle_loc_l_foot_01
+      position: {x: 0.0028476142, y: 0.100541875, z: -0.11942375}
+      rotation: {x: -0.00812375, y: -0.00000902241, z: -0.0005800281, w: 0.99996686}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:grp_r_foot
+      position: {x: -0.0265243, y: 0.3011348, z: -0.029341979}
+      rotation: {x: 0.4351004, y: -0.03371449, z: -0.13374741, w: 0.8897543}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:loc_r_bankLeft_01
+      position: {x: 0.010648589, y: -3.779437e-10, z: 0.10330555}
+      rotation: {x: -0.00020189416, y: -0.02313478, z: -0.0087242, w: 0.9996943}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:loc_r_bankRight_01
+      position: {x: 0.18182734, y: 0, z: -0.057899985}
+      rotation: {x: 0, y: 0.055951487, z: -0, w: 0.99843353}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:loc_r_hell_01
+      position: {x: -0.08201862, y: 0, z: -0.15199608}
+      rotation: {x: 0.008721829, y: -0.03283584, z: 0.00028655404, w: 0.99942267}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:loc_r_toe_01
+      position: {x: 0.0062536136, y: 0.000010393457, z: 0.33633494}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:ikHandle_loc_r_ball_01
+      position: {x: -0.0033881303, y: -0.0016661728, z: -0.14405511}
+      rotation: {x: 0.2185783, y: 0.68128324, z: 0.22538857, w: 0.661269}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:ikHandle_loc_r_toe_01
+      position: {x: 1.7763568e-17, y: 7.049916e-17, z: -3.5527136e-17}
+      rotation: {x: -0.016822914, y: 0.71529037, z: -0.003828277, w: 0.69861436}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:loc_r_ball_01
+      position: {x: -0.0033881303, y: -0.0016661728, z: -0.14405511}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:ikHandle_loc_r_ball_01 1
+      position: {x: -0.004436614, y: 0.09375675, z: -0.11952759}
+      rotation: {x: -0.008726204, y: 0.00007615243, z: 0.008726204, w: 0.9999239}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:grp_extraCnt
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_headset_01
+      position: {x: 0.0037978825, y: 1.6171807, z: 0.25919598}
+      rotation: {x: 0.5013612, y: 0.0150466515, z: -0.034841266, w: 0.8644054}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:cnt_jectPack_01
+      position: {x: -4.1779017e-17, y: 1.2065521, z: 0.07161048}
+      rotation: {x: 0.060375772, y: 0.0044617583, z: -0.07356368, w: 0.9954513}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:grp_geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:dave
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:davejetpack01
+      position: {x: -4.1779017e-17, y: 1.2065521, z: 0.07161048}
+      rotation: {x: 0.060375772, y: 0.0044617583, z: -0.07356368, w: 0.9954513}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:davejetpack01 1
+      position: {x: -0, y: -0.9854373, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:daveShirtInd01
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:daveShirtOut01
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:group6
+      position: {x: 0.0037978825, y: 1.6171807, z: 0.25919598}
+      rotation: {x: 0.5013612, y: 0.0150466515, z: -0.034841266, w: 0.8644054}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:grp_rig
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:root_01
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_pelvis_01
+      position: {x: -2.0889508e-17, y: 1.0203738, z: 0.07161048}
+      rotation: {x: -5.4263036e-18, y: -7.2759565e-10, z: 0.000000006184563, w: 1}
+      scale: {x: 0.9999999, y: 1.0000002, z: 0.99999994}
+      transformModified: 1
+    - name: daveGeo_v23:bind_pelvisShirtBend_02
+      position: {x: 0.15695499, y: 0.017785663, z: 0.07836349}
+      rotation: {x: -0.042544354, y: -2.3487157e-10, z: -0.03861573, w: 0.99834806}
+      scale: {x: 1.0000001, y: 1, z: 1.0000007}
+      transformModified: 1
+    - name: daveGeo_v23:bind_pelvisShirtBend_03
+      position: {x: 0.0045841387, y: -0.03958225, z: -0.0006234107}
+      rotation: {x: -0, y: -0, z: -5.2090603e-11, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000002}
+      transformModified: 1
+    - name: daveGeo_v23:be_pelvisShirtBend_01
+      position: {x: 0.0006557772, y: -0.09588749, z: -0.005149599}
+      rotation: {x: -0, y: -0, z: -5.2090603e-11, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000002}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_upLeg_01
+      position: {x: -0.10362, y: -0.050086297, z: 0}
+      rotation: {x: 0.52216834, y: -0.5076551, z: 0.49182895, w: -0.47721153}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_upLegBendStart_01
+      position: {x: -0.000025980087, y: 0, z: 0.000054201984}
+      rotation: {x: 0, y: -0, z: -0.10726806, w: 0.99423015}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_upLegBendMiddel_01 1
+      position: {x: 0.20161153, y: -0.000000017646423, z: 0.00000032626306}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_upLegBend_01 1
+      position: {x: 0.02363142, y: 1.4210854e-16, z: -1.2325951e-33}
+      rotation: {x: 0.000000016413603, y: -0.0000000132167655, z: 0.10726806, w: 0.99423015}
+      scale: {x: 1.0000002, y: 0.9999998, z: 0.99999976}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_UpLegMoveStart_01
+      position: {x: -0.000025980087, y: 0, z: 0.000054201984}
+      rotation: {x: 0, y: -0, z: -0.10726806, w: 0.99423015}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_UpLegMoveMiddel_01
+      position: {x: 0.20161153, y: -0.000000017646423, z: 0.00000032626306}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_UpLegMoveEnd_01
+      position: {x: 0.02363142, y: -4.2632563e-16, z: -2.1316282e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_UpLegNoneMoveStart_01
+      position: {x: -0.000025980087, y: 0, z: 0.000054201984}
+      rotation: {x: 0, y: -0, z: -1.7449645e-19, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_UpLegNoneMoveMiddel_01
+      position: {x: 0.20161153, y: -0.000000017646423, z: 0.00000032626306}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_UpLegNoneMoveEnd_01
+      position: {x: -0, y: 0, z: 1.7763568e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_leg_01
+      position: {x: 0.36375335, y: -0.000000055438964, z: 0.0000005189495}
+      rotation: {x: -0.042148814, y: 0.00063323975, z: -0.04419321, w: -0.99813336}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000002}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_legBendStart_01
+      position: {x: -7.105427e-17, y: 1.3322676e-17, z: 3.5527136e-17}
+      rotation: {x: 0, y: -0, z: -0.008726535, w: 0.9999619}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_legBendMiddel_01
+      position: {x: 0.19070263, y: 0.000000035732725, z: 0.00000021449759}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_legBend_01
+      position: {x: -0, y: -0.000000004530132, z: -0.00000009318439}
+      rotation: {x: 0.000000014640521, y: 0.00000002993122, z: -0.00000008940696,
+        w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_legMoveStart_01
+      position: {x: -7.105427e-17, y: 1.3322676e-17, z: 3.5527136e-17}
+      rotation: {x: 0, y: -0, z: -0.15632586, w: 0.9877055}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_legBendMoveMiddel_01
+      position: {x: 0.19070287, y: 0.000000012644564, z: -0.0000003801751}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_legBendMoveEnd_01
+      position: {x: 0.03497481, y: 0.00000003163417, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_legNoneMoveStart_01
+      position: {x: -7.105427e-17, y: 1.3322676e-17, z: 3.5527136e-17}
+      rotation: {x: 0, y: -0, z: -0.008726535, w: 0.9999619}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_legNoneMoveMiddel_01
+      position: {x: 0.190703, y: 0.000000009640098, z: -0.00000018965466}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_legNoneMoveEnd_01
+      position: {x: -0, y: 0.000000014089355, z: 0.0000000091640455}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_foot_01
+      position: {x: 0.48338515, y: -0.000000004448663, z: -0.00000007935598}
+      rotation: {x: 0.000007726251, y: 0.000003688037, z: 0.46784753, w: -0.8838092}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000007}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_toe_01
+      position: {x: 0.15192348, y: 0.0040129046, z: 0.00010552082}
+      rotation: {x: 0.00000008808925, y: -0.00000023564765, z: -0.32779846, w: 0.9447477}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrvBe_l_toeEnd_01
+      position: {x: 0.14408162, y: 0.0025732573, z: 0.000019386}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_toe_01
+      position: {x: -1.7763568e-17, y: 1.4432899e-17, z: 1.7763568e-17}
+      rotation: {x: -0.00000012023841, y: 0.00000020405619, z: -0.0000009536742, w: 1}
+      scale: {x: 1.0000001, y: 1.0000005, z: 0.9999999}
+      transformModified: 1
+    - name: daveGeo_v23:be_l_toeEnd_01
+      position: {x: 0.14408162, y: 0.0025732573, z: 0.000019385809}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_upLeg_01
+      position: {x: 0.10361964, y: -0.050086454, z: 0}
+      rotation: {x: 0.4772073, y: 0.49182436, z: 0.50765914, w: 0.52217263}
+      scale: {x: 1.000001, y: 1.0000029, z: 1.000003}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_upLegBendStart_01
+      position: {x: -2.842171e-16, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0.10204904, w: 0.9947794}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_upLegBendMiddel_01
+      position: {x: -0.20161155, y: -4.440892e-18, z: 3.5527136e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_upLegBend_01
+      position: {x: -0.023428699, y: 3.1554436e-32, z: 2.6645352e-17}
+      rotation: {x: -0.000000014823368, y: -0.0000000015206492, z: 0.1020491, w: 0.9947794}
+      scale: {x: 1.0000008, y: 1.0000004, z: 1.0000002}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_UpLegMoveStart_01
+      position: {x: -2.842171e-16, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0.10204904, w: 0.9947794}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_UpLegMoveMiddel_01
+      position: {x: -0.20161155, y: -4.440892e-18, z: 3.5527136e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_UpLegMoveEnd_01
+      position: {x: -0.023428699, y: 3.1554436e-32, z: 2.6645352e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_UpLegNoneMoveStart_01
+      position: {x: -2.842171e-16, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -1.7449645e-19, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_UpLegNoneMoveMiddel_01
+      position: {x: -0.20161155, y: -4.440892e-18, z: 3.5527136e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_UpLegNoneMoveEnd_01
+      position: {x: -3.9991646e-20, y: 3.1554436e-32, z: 2.6645352e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_leg_01
+      position: {x: -0.36375305, y: 3.9968027e-17, z: -8.8817837e-17}
+      rotation: {x: 0.042148754, y: -0.00063318014, z: 0.04419312, w: 0.9981333}
+      scale: {x: 1.0000006, y: 0.99999976, z: 1.0000001}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_legBendStart_01
+      position: {x: -7.105427e-17, y: -8.881784e-18, z: 0}
+      rotation: {x: 0, y: -0, z: -0.008726535, w: 0.9999619}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_legBendMiddel_01
+      position: {x: -0.19070266, y: -3.1086245e-17, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_legBend_01
+      position: {x: -0.001, y: -1.065814e-16, z: 5.3290707e-17}
+      rotation: {x: 0.000000059862444, y: -0.000000029281045, z: -0.00000006053597,
+        w: 1}
+      scale: {x: 0.99999976, y: 0.9999996, z: 0.99999976}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_legMoveStart_01
+      position: {x: -7.105427e-17, y: -8.881784e-18, z: 0}
+      rotation: {x: 0, y: -0, z: -0.14432313, w: 0.9895306}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_legBendMoveMiddel_01
+      position: {x: -0.19070266, y: -3.1086245e-17, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_legBendMoveEnd_01
+      position: {x: -0.033192337, y: -1.0658141e-16, z: 5.3290704e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_legNoneMoveStart_01
+      position: {x: -7.105427e-17, y: -8.881784e-18, z: 0}
+      rotation: {x: 0, y: -0, z: -0.008726535, w: 0.9999619}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_legNoneMoveMiddel_01
+      position: {x: -0.19070266, y: -3.1086245e-17, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_legNoneMoveEnd_01
+      position: {x: -0.001, y: -1.0658141e-16, z: 5.3290704e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_foot_01
+      position: {x: -0.48338526, y: 3.8635761e-16, z: 3.5527136e-17}
+      rotation: {x: 0.000000029802326, y: 0.000000029802326, z: -0.46784756, w: 0.8838092}
+      scale: {x: 0.9999989, y: 1.0000007, z: 0.9999996}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_toe_01
+      position: {x: -0.15192348, y: -0.0040129167, z: -0.00010602091}
+      rotation: {x: 0.00000026307134, y: -0.00000070175207, z: -0.3277976, w: 0.944748}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrvBe_r_toeEnd_01
+      position: {x: -0.1440816, y: -0.0025732587, z: -0.000018573379}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_toe_01
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000045420353, y: 0.00000058492094, z: -0.0000017583366, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000004}
+      transformModified: 1
+    - name: daveGeo_v23:be_r_toeEnd_01
+      position: {x: -0.1440816, y: -0.0025732478, z: -0.000018573379}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_spine_01
+      position: {x: -0, y: 0.0825594, z: 0}
+      rotation: {x: -0.0000000046625477, y: -0.000000003569261, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1.0000029, y: 1.000003, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_spine_02
+      position: {x: -0.08255912, y: 0.00021199073, z: 2.5961377e-20}
+      rotation: {x: 3.1832312e-10, y: 0.0000000058207674, z: 1.4992646e-18, w: 1}
+      scale: {x: 1.0000006, y: 1.0000005, z: 1.0000002}
+      transformModified: 1
+    - name: daveGeo_v23:bind_chest_01
+      position: {x: -0.08255912, y: 0.00021199073, z: 2.5961377e-20}
+      rotation: {x: 0.0000000011823439, y: -0.000000023283064, z: 3.3748973e-18, w: 1}
+      scale: {x: 0.99999857, y: 0.9999995, z: 1.0000004}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_shoulders_01
+      position: {x: -0.121175036, y: -0.08426088, z: 0.0018051501}
+      rotation: {x: -0.00000025591518, y: -0.00000026625423, z: 0.5952457, w: -0.80354375}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_armBendStart_01
+      position: {x: 0.054424275, y: 0.0000027857502, z: -0.0000000018528397}
+      rotation: {x: -0.0000000018269993, y: 0.005229086, z: 0.0000003493869, w: 0.99998635}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_armBend_01
+      position: {x: 0.15530893, y: 0.0000007975892, z: 0.000000006421159}
+      rotation: {x: 0.000000023462952, y: -0.000000005122274, z: -0.000000021721771,
+        w: 1}
+      scale: {x: 1.0000011, y: 1.0000007, z: 1.0000001}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_armMoveStart_01
+      position: {x: 0.054424275, y: 0.0000027857502, z: -0.0000000018528397}
+      rotation: {x: -0.053773098, y: -0.5997622, z: 0.071294285, w: 0.7951798}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_armMoveEnd_01
+      position: {x: 0.15530893, y: 0.0000007975892, z: 0.000000006421159}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_armNoneMoveStart_01
+      position: {x: 0.054424275, y: 0.0000027857502, z: -0.0000000018528397}
+      rotation: {x: -0.0000000018269993, y: 0.005229086, z: 0.0000003493869, w: 0.99998635}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_armNoneMoveEnd_01
+      position: {x: 0.15530893, y: 0.0000007975892, z: 0.000000006421159}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_arm_01
+      position: {x: 0.054424275, y: 0.0000027857502, z: -0.0000000018528397}
+      rotation: {x: -0.00058027345, y: 0.0013859896, z: -0.1109774, w: 0.99382186}
+      scale: {x: 0.99999845, y: 0.9999996, z: 1.0000017}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_forearmBendStart_02
+      position: {x: 0.28411105, y: -0.0002416053, z: -0.000049376165}
+      rotation: {x: 0.11619716, y: -0.019147765, z: 0.00012416812, w: 0.99304163}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_forearmBend_01
+      position: {x: 0.10305262, y: -0.000002613895, z: -0.0000000069302373}
+      rotation: {x: -0.11682559, y: 0.0005483757, z: 0.004442803, w: 0.99314237}
+      scale: {x: 1.0000007, y: 1.0000008, z: 1.0000004}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_forearmMoveStart_02
+      position: {x: 0.28411105, y: -0.0002416053, z: -0.000049376165}
+      rotation: {x: -0.03325342, y: -0.48615518, z: 0.19055425, w: 0.8521951}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_forearmMoveEnd_01
+      position: {x: 0.10305262, y: -0.000002613895, z: -0.0000000069302373}
+      rotation: {x: 0.030180173, y: 0.46992636, z: -0.18879922, w: 0.8617502}
+      scale: {x: 1.0000013, y: 0.99999976, z: 0.9999992}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_l_forearmNoneMoveStart_02
+      position: {x: 0.28411105, y: -0.0002416053, z: -0.000049376165}
+      rotation: {x: 0.116197154, y: -0.019147765, z: 0.00012416796, w: 0.99304163}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_forearmNoneMoveEnd_01
+      position: {x: 0.10305262, y: -0.000002613895, z: -0.0000000069302373}
+      rotation: {x: -0.116825595, y: 0.0005483757, z: 0.004442803, w: 0.99314237}
+      scale: {x: 1.0000007, y: 1.0000008, z: 1.0000004}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_armSupDw_01
+      position: {x: 0.16365942, y: 0.14725164, z: 0.0017117419}
+      rotation: {x: 0.000000019790605, y: -0.0052290615, z: -0.0000002678705, w: 0.99998635}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000004}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_armSupUp_01
+      position: {x: 0.15159948, y: -0.043636635, z: 0.0015856442}
+      rotation: {x: 0.000000019790605, y: -0.0052290615, z: -0.0000002678705, w: 0.99998635}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000004}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_forearm_02
+      position: {x: 0.28411105, y: -0.00024643313, z: 0.000008481627}
+      rotation: {x: -0.0006975093, y: -0.019002648, z: 0.002362005, w: 0.9998164}
+      scale: {x: 1.0000013, y: 0.99999976, z: 0.9999986}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_wrist_01
+      position: {x: 0.20914379, y: -0.000003961203, z: 0.000000020482961}
+      rotation: {x: 0.000000042375166, y: 0.000000005587934, z: -0.0000000132113165,
+        w: 1}
+      scale: {x: 0.9999995, y: 0.99999994, z: 1.0000007}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_palm_01
+      position: {x: 0.09683255, y: -0.015301607, z: -0.0020480491}
+      rotation: {x: 0.00061864336, y: 0.018006044, z: 0.0034070562, w: 0.9998319}
+      scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_idx_01
+      position: {x: 0.044085186, y: 0.005549808, z: 0.0604182}
+      rotation: {x: -0.012286108, y: -0.39348796, z: -0.040256288, w: 0.9183659}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_idx_02
+      position: {x: 0.031704847, y: 0.000008068087, z: -0.00000004741385}
+      rotation: {x: -0.00000007729974, y: 0.00000029802308, z: 0.03872346, w: 0.99925005}
+      scale: {x: 1.0000006, y: 1.000001, z: 1.0000002}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_idx_03
+      position: {x: 0.034189053, y: -0.0000013170361, z: -0.000000023703437}
+      rotation: {x: -0.000000023396282, y: -0.00000004436822, z: 0.0028280169, w: 0.99999607}
+      scale: {x: 1, y: 0.99999994, z: 1.0000005}
+      transformModified: 1
+    - name: daveGeo_v23:be_l_idxEnd_01
+      position: {x: 0.036092, y: -0.0000027203016, z: 0.00000007629582}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_mid_01
+      position: {x: 0.04477639, y: 0.0020603442, z: 0.020287296}
+      rotation: {x: 0.00025662116, y: -0.0042294604, z: -0.029430961, w: 0.9995579}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_mid_02
+      position: {x: 0.03592894, y: -0.00000046379736, z: 0.00000005258637}
+      rotation: {x: 0.00000003568128, y: -0.0000006356274, z: 0.03884285, w: 0.99924535}
+      scale: {x: 0.9999993, y: 0.9999992, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_mid_03
+      position: {x: 0.038831715, y: -0.00000595114, z: -0.000000071122976}
+      rotation: {x: 5.336922e-10, y: -0.0000010674655, z: 0.005865447, w: 0.99998283}
+      scale: {x: 0.99999946, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:be_l_midEnd_01
+      position: {x: 0.040588316, y: 0.0000042920406, z: 0.000000052887206}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_palmPin_01
+      position: {x: 0.0019078667, y: 0.0053967033, z: -0.0572145}
+      rotation: {x: 0.01697265, y: 0.048026998, z: 0.005005335, w: 0.9986893}
+      scale: {x: 0.9999999, y: 0.99999964, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_pin_01
+      position: {x: 0.043224115, y: -0.000006474917, z: 0.00000006691141}
+      rotation: {x: -0.014932516, y: -0.052844938, z: -0.04159212, w: 0.9976245}
+      scale: {x: 1.0000002, y: 1.000001, z: 1.0000006}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_pin_02
+      position: {x: 0.028270258, y: 0.000002584685, z: -0.0000000144393635}
+      rotation: {x: 0.00000001303851, y: -0.00000014901154, z: 0.038526963, w: 0.99925756}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000006}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_pin_03
+      position: {x: 0.030348795, y: -0.0000002951648, z: 0.000000009266281}
+      rotation: {x: -0.000000038850366, y: 0.00000076807095, z: 0.01727629, w: 0.9998508}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000006}
+      transformModified: 1
+    - name: daveGeo_v23:be_l_pinEnd_01
+      position: {x: 0.03235853, y: 0.0000014673408, z: 0.000000047410847}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_ring_01
+      position: {x: 0.044993002, y: 0.0041806344, z: -0.0211371}
+      rotation: {x: 0.00028744523, y: -0.004230082, z: -0.03688354, w: 0.9993107}
+      scale: {x: 1.0000004, y: 1.0000014, z: 1.0000011}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_ring_02
+      position: {x: 0.03477458, y: 0.000007091197, z: -0.000000038146762}
+      rotation: {x: -0.000000018539131, y: 0.000000747386, z: 0.039679024, w: 0.99921256}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000006}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_ring_03
+      position: {x: 0.03704529, y: -0.000007223272, z: 0.000000061512694}
+      rotation: {x: 0.00000003029936, y: 0.00000054993905, z: -0.018784596, w: 0.9998236}
+      scale: {x: 0.99999964, y: 0.99999976, z: 1.0000011}
+      transformModified: 1
+    - name: daveGeo_v23:be_l_ringEnd_01
+      position: {x: 0.038241275, y: 0.0000022397746, z: 8.9406705e-13}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_tmb_01
+      position: {x: 0.029966125, y: -0.013436796, z: 0.04405826}
+      rotation: {x: -0.18039532, y: -0.47038853, z: 0.053586844, w: 0.8621605}
+      scale: {x: 0.99999976, y: 0.9999999, z: 0.99999994}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_tmb_02
+      position: {x: 0.040843077, y: -0.000002715104, z: 0.000000519629}
+      rotation: {x: -0, y: -0, z: 0.000000029802315, w: 1}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_l_tmb_03
+      position: {x: 0.054097485, y: 0.000007628761, z: -0.0000003442404}
+      rotation: {x: 0.18107603, y: 0.3541487, z: 0.047830846, w: 0.91624373}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000005}
+      transformModified: 1
+    - name: daveGeo_v23:be_l_tmbEnd_01
+      position: {x: 0.051444784, y: -0.0000069177468, z: -0.00000034098463}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_neck_01
+      position: {x: -0.16040996, y: 2.2898349e-18, z: 1.7860261e-16}
+      rotation: {x: -0.000000004183677, y: 0.000000023283064, z: 6.6133097e-17, w: 1}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_head_01
+      position: {x: -0.061457396, y: -4.4408918e-17, z: 4.7761988e-17}
+      rotation: {x: 0.0000000041836765, y: -0.000000023283068, z: -3.374898e-17, w: 1}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000001}
+      transformModified: 1
+    - name: daveGeo_v23:be_headEnd_01
+      position: {x: -0.3812386, y: 8.4723895e-17, z: -3.1554436e-32}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_shoulders_01
+      position: {x: -0.12117619, y: 0.08426092, z: 0.0018051529}
+      rotation: {x: -0.5952457, y: 0.80354375, z: -0.00000025132417, w: -0.0000002586321}
+      scale: {x: 1.0000005, y: 0.9999998, z: 1.0000011}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_armBendStart_01
+      position: {x: -0.05442316, y: 8.5265126e-16, z: 2.0261569e-17}
+      rotation: {x: -0.0000000018269918, y: 0.005229086, z: 0.00000034938546, w: 0.99998635}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_armBend_01
+      position: {x: -0.15530878, y: -8.5265126e-16, z: -1.3877787e-18}
+      rotation: {x: 0.000000023476245, y: -0.0000000055879354, z: -0.00000002143744,
+        w: 1}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000001}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_armMoveStart_01
+      position: {x: -0.05442316, y: 8.5265126e-16, z: 2.0261569e-17}
+      rotation: {x: -0.045427017, y: -0.5256524, z: 0.073140755, w: 0.8463311}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_armMoveEnd_01
+      position: {x: -0.15530878, y: -8.5265126e-16, z: -1.3877787e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_armNoneMoveStart_01
+      position: {x: -0.05442316, y: 8.5265126e-16, z: 2.0261569e-17}
+      rotation: {x: -0.0000000018269919, y: 0.005229086, z: 0.00000034938546, w: 0.99998635}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_armNoneMoveEnd_01
+      position: {x: -0.15530878, y: -8.5265126e-16, z: -1.3877787e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_arm_01
+      position: {x: -0.05442316, y: 0, z: 1.6431301e-16}
+      rotation: {x: -0.00058263936, y: 0.0013701315, z: -0.111430734, w: 0.9937711}
+      scale: {x: 0.99999887, y: 1.0000001, z: 1.0000018}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_forearmBendStart_01
+      position: {x: -0.28330046, y: -5.684342e-16, z: -9.939271e-16}
+      rotation: {x: -0.00069751416, y: -0.019002646, z: 0.0023619656, w: 0.9998164}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_forearmBend_01
+      position: {x: -0.10305262, y: 1.1368684e-15, z: 4.6074255e-17}
+      rotation: {x: -0.0000000061118035, y: 0.000000024214383, z: 0.000000009529685,
+        w: 1}
+      scale: {x: 1.0000005, y: 0.9999999, z: 0.99999994}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_forearmMoveStart_01
+      position: {x: -0.28330046, y: -5.684342e-16, z: -9.939271e-16}
+      rotation: {x: -0.0023855292, y: -0.28947988, z: 0.010248677, w: 0.95712626}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_forearmMoveEnd_01
+      position: {x: -0.10305262, y: 1.1368684e-15, z: 4.6074255e-17}
+      rotation: {x: 0.0022064706, y: 0.2712403, z: -0.007829501, w: 0.96247727}
+      scale: {x: 1.0000007, y: 0.9999999, z: 0.99999994}
+      transformModified: 1
+    - name: daveGeo_v23:jDrv_r_forearmNoneMoveStart_01
+      position: {x: -0.28330046, y: -5.684342e-16, z: -9.939271e-16}
+      rotation: {x: -0.00069751416, y: -0.019002646, z: 0.0023619658, w: 0.9998164}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_forearmNoneMoveEnd_01
+      position: {x: -0.10305262, y: 1.1368684e-15, z: 4.6074255e-17}
+      rotation: {x: -0.0000000061118035, y: 0.000000024214383, z: 0.000000009296854,
+        w: 1}
+      scale: {x: 1.0000005, y: 0.9999999, z: 0.99999994}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_armSupDw_01
+      position: {x: -0.16366158, y: -0.1472597, z: -0.0017117552}
+      rotation: {x: -0.00000000999599, y: -0.0052290577, z: -0.00000028312206, w: 0.99998635}
+      scale: {x: 1.0000007, y: 1.0000002, z: 1.000001}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_armSupUp_01
+      position: {x: -0.15160045, y: 0.04363266, z: -0.0015856448}
+      rotation: {x: -0.00000000999599, y: -0.0052290577, z: -0.00000028312206, w: 0.99998635}
+      scale: {x: 1.0000007, y: 1.0000002, z: 1.000001}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_forearm_01
+      position: {x: -0.28330046, y: -5.684342e-16, z: -9.914291e-16}
+      rotation: {x: -0.0006974869, y: -0.019002637, z: 0.0023620047, w: 0.9998164}
+      scale: {x: 1.0000008, y: 1.0000002, z: 1.0000004}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_wrist_01
+      position: {x: -0.20914486, y: 0, z: -4.2243984e-16}
+      rotation: {x: -0.000000023108436, y: 0.000000007450579, z: -0.0000000144063925,
+        w: 1}
+      scale: {x: 0.9999998, y: 0.99999994, z: 0.99999964}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_palm_01
+      position: {x: -0.096833125, y: 0.015297951, z: 0.0020480682}
+      rotation: {x: 0.00061867415, y: 0.018006016, z: 0.003407061, w: 0.9998319}
+      scale: {x: 1, y: 1.0000004, z: 1.0000001}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_idx_01
+      position: {x: -0.044086054, y: -0.0055513913, z: -0.060418166}
+      rotation: {x: -0.012384674, y: -0.39348406, z: -0.040215544, w: 0.9183679}
+      scale: {x: 1.0000002, y: 0.9999998, z: 1.0000001}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_idx_02
+      position: {x: -0.031703215, y: 8.5525506e-17, z: 1.8098536e-17}
+      rotation: {x: -0.00000005774198, y: 0.0000028908241, z: 0.03857029, w: 0.9992559}
+      scale: {x: 1.0000007, y: 1.0000007, z: 1.0000015}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_idx_03
+      position: {x: -0.034189004, y: 3.7266257e-16, z: 2.9140473e-18}
+      rotation: {x: 0.000000017099005, y: -0.00000008500729, z: 0.0028280467, w: 0.99999607}
+      scale: {x: 0.99999994, y: 1, z: 0.9999994}
+      transformModified: 1
+    - name: daveGeo_v23:be_r_idxEnd_01
+      position: {x: -0.036093578, y: 1.2983072e-16, z: 5.2770744e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_mid_01
+      position: {x: -0.044774164, y: -0.0020527637, z: -0.020287285}
+      rotation: {x: 0.00025664887, y: -0.0042294743, z: -0.029431, w: 0.9995579}
+      scale: {x: 1.0000001, y: 0.9999997, z: 1.0000005}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_mid_02
+      position: {x: -0.035929415, y: -3.9638938e-17, z: 2.3773504e-18}
+      rotation: {x: 0.0000000095751576, y: 0.0000004833563, z: 0.03876873, w: 0.99924827}
+      scale: {x: 0.9999998, y: 1.0000005, z: 0.99999964}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_mid_03
+      position: {x: -0.03883464, y: 1.8881943e-16, z: -7.175724e-19}
+      rotation: {x: -0.000000004827183, y: -0.0000010511974, z: 0.005865447, w: 0.99998283}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000006}
+      transformModified: 1
+    - name: daveGeo_v23:be_r_midEnd_01
+      position: {x: -0.040585518, y: 1.838756e-16, z: -4.4529874e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_palmPin_01
+      position: {x: -0.0019063015, y: -0.005389746, z: 0.057214506}
+      rotation: {x: 0.016972695, y: 0.048027076, z: 0.0050052702, w: 0.9986893}
+      scale: {x: 0.9999998, y: 0.99999946, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_pin_01
+      position: {x: -0.043225575, y: -2.8223952e-17, z: -8.092485e-18}
+      rotation: {x: -0.01493258, y: -0.052845035, z: -0.04159207, w: 0.9976245}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000004}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_pin_02
+      position: {x: -0.028270027, y: -3.3831555e-16, z: 1.7412066e-17}
+      rotation: {x: 0.000000042840824, y: -0.00000058114506, z: 0.03847689, w: 0.99925953}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1.0000006}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_pin_03
+      position: {x: -0.03034907, y: -2.0741651e-17, z: -4.193152e-18}
+      rotation: {x: -0.0000000065191883, y: 0.0000007462844, z: 0.017276281, w: 0.9998508}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000006}
+      transformModified: 1
+    - name: daveGeo_v23:be_r_pinEnd_01
+      position: {x: -0.032357574, y: -4.616484e-16, z: -8.508564e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_ring_01
+      position: {x: -0.044992805, y: -0.0041799196, z: 0.021137115}
+      rotation: {x: 0.00028743778, y: -0.004230098, z: -0.03688356, w: 0.9993107}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000011}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_ring_02
+      position: {x: -0.03477308, y: 6.1307775e-17, z: 3.2818122e-18}
+      rotation: {x: 6.1118016e-10, y: -0.000000079628045, z: 0.039472375, w: 0.9992207}
+      scale: {x: 0.99999994, y: 1.0000004, z: 0.99999964}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_ring_03
+      position: {x: -0.03704884, y: -1.0290656e-16, z: 3.408476e-10}
+      rotation: {x: -0.000000021237405, y: 0.0000005606671, z: -0.018784618, w: 0.9998236}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000004}
+      transformModified: 1
+    - name: daveGeo_v23:be_r_ringEnd_01
+      position: {x: -0.03824019, y: 1.7097434e-16, z: -8.1887014e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_tmb_01
+      position: {x: -0.029965743, y: 0.013435356, z: -0.04405831}
+      rotation: {x: -0.18039529, y: -0.47038853, z: 0.05358675, w: 0.8621604}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.9999998}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_tmb_02
+      position: {x: -0.040844522, y: 1.4224081e-16, z: 4.424412e-17}
+      rotation: {x: 0.000000014901161, y: -0, z: -0.000000014901161, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000004}
+      transformModified: 1
+    - name: daveGeo_v23:bind_r_tmb_03
+      position: {x: -0.054093506, y: 9.325873e-17, z: -8.881784e-18}
+      rotation: {x: 0.18107605, y: 0.35414878, z: 0.047830928, w: 0.9162436}
+      scale: {x: 1.0000007, y: 1.0000006, z: 0.99999994}
+      transformModified: 1
+    - name: daveGeo_v23:be_r_tmbEnd_01
+      position: {x: -0.051449344, y: -2.96152e-16, z: 8.8817837e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: b9a4d1629ac366349b7bda9b7104f66b,
+    type: 3}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

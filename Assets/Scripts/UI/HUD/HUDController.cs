@@ -10,6 +10,9 @@ public class HUDController : MonoBehaviour, Observer {
     public Text statusText;
     public Text subtitleText;
     public Transform chargeArrow;
+    public RectTransform chargeImagePivot,
+        chargeMaskPivot;
+
 
     private float chargeArrowYMin = 68f;
     private float chargeArrowYHeight = 350.0f;
@@ -43,8 +46,14 @@ public class HUDController : MonoBehaviour, Observer {
                 var launchPayload = evt.payload;
                 Vector2 launch = (Vector2)launchPayload[PayloadConstants.LAUNCH_FORCE];
 
+                float t = launch.x / launch.y;
+
                 chargeText.text = launch.x.ToString();
                 chargeArrow.position = new Vector3(chargeArrow.position.x, chargeArrowYMin + chargeArrowYHeight * launch.x / launch.y);
+
+                chargeMaskPivot.rotation = Quaternion.Euler(0f, 0f, (1 - t) * 180);
+
+                chargeImagePivot.rotation = Quaternion.Euler(0f, 0f, 180f);
 
                 break;
 

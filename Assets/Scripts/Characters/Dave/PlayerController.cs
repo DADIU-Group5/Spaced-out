@@ -45,22 +45,25 @@ public class PlayerController : MonoBehaviour, Observer
         return maxLaunchForce;
     }
 
+    private string fuelText;
+
     private void Update()
     {
         if (!fuel.HasFuel())
         {
-            UpdateVelocityUI("Velocity: " + rbPlayer.velocity.magnitude + "\nNo More Fuel");
+            fuelText = "No More Fuel";
         }
         else if (rbPlayer.velocity.magnitude > maxMagnitude)
         {
-            UpdateVelocityUI("Velocity: " + rbPlayer.velocity.magnitude + "\nNot Ready To Launch");
+            fuelText = "Not Ready To Launch";
         }
         else
         {
-            UpdateVelocityUI("Velocity: " + rbPlayer.velocity.magnitude + "\nReady To Launch");
+            fuelText = "Ready To Launch";
         }
-        
 
+        UpdateVelocityUI(rbPlayer.velocity.magnitude.ToString()+"/"+ fuelText);
+        
 
         if (rbPlayer.velocity.magnitude < slowDownThreshold && firedZoomOut)
         {

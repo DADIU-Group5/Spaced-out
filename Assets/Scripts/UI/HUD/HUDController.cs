@@ -9,6 +9,10 @@ public class HUDController : MonoBehaviour, Observer {
     public Text launchText;
     public Text statusText;
     public Text subtitleText;
+    public Text camControlsText;
+    public Text velocityText;
+    public Text currentFuelText;
+
     public Transform chargeArrow;
 
     private float chargeArrowYMin = 68f;
@@ -19,6 +23,19 @@ public class HUDController : MonoBehaviour, Observer {
     void Awake ()
     {
         Subject.instance.AddObserver(this);
+    }
+
+    void Start()
+    {
+        SettingsManager.instance.onLanguageChanged += UpdateButtonText;
+        UpdateButtonText(Language.Danish);
+    }
+
+    private void UpdateButtonText(Language lan)
+    {
+        camControlsText.text = Translator.instance.Get("invert camera controls");
+        velocityText.text = Translator.instance.Get("velocity");
+        //currentFuelText.text = Translator.instance.Get("current") + " " + Translator.instance.Get("fuel");
     }
 
     public void ToggleCameraControls()
@@ -34,8 +51,7 @@ public class HUDController : MonoBehaviour, Observer {
             case EventName.UpdateFuel:
                 var fuelPayload = evt.payload;
                 int fuel = (int)fuelPayload[PayloadConstants.FUEL];
-
-                fuelText.text = "Current fuel: " + fuel;
+                fuelText.text = Translator.instance.Get("current") + " " + Translator.instance.Get("fuel") + ": " + fuel.ToString();
 
                 break;
 
@@ -52,8 +68,10 @@ public class HUDController : MonoBehaviour, Observer {
                 var velocityPayload = evt.payload;
                 string velocity = "";
                 velocity = (string)velocityPayload[PayloadConstants.VELOCITY];
+                string[] substrings = velocity.Split('/');
 
-                launchText.text = velocity;
+                launchText.text = Translator.instance.Get("velocity") + ": " 
+                    + substrings[0] + "\n" + Translator.instance.Get(substrings[1]); ;
 
                 break;
 

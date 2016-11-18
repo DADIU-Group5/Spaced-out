@@ -5,13 +5,25 @@ using UnityEngine.UI;
 public class MenuHeader : MonoBehaviour {
 
     public Text medalLabel;
+    public Text medaltext;
+    public Text resetMedalstext;
+    public Text resetAlltext;
 
     public void Start()
     {
         UpdateMedalLabel();
+        SettingsManager.instance.onLanguageChanged += UpdateButtonText;
+        UpdateButtonText(Language.Danish);
     }
 
-	public void UpdateMedalLabel()
+    private void UpdateButtonText(Language lan)
+    {
+        medaltext.text = Translator.instance.Get("medals") + ":";//medaltext.text.ToString());
+        resetMedalstext.text = Translator.instance.Get(resetMedalstext.text.ToString());
+        resetAlltext.text = Translator.instance.Get(resetAlltext.text.ToString());
+    }
+
+    public void UpdateMedalLabel()
     {
         medalLabel.text = ProgressManager.instance.GetCurrency().ToString();
     }

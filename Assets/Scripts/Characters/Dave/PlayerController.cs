@@ -10,7 +10,8 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     [Tooltip("The minimum required force in order to launch. 1 = max launch force.")]
     [Range(0, 1)]
     public float minLaunchPower = 0f;
-    public float maxLaunchForce = 60000f;
+    [Range(5, 30)]
+    public float maxLaunchVelocity = 20f;
     [Tooltip("How fast does the player rotate towards aim point")]
     [Range(25f, 200f)]
     public float aimRotateSpeed = 100f;
@@ -26,22 +27,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
 
 
     
-    //private bool firedZoomOut = false;
-    //private bool canSlowDown = false;
 
-    //public float maxMagnitude = 30f;
-    //public Transform pitchTransform;
-
-    // For ensuring that the player at some point starts slowing
-    //[Tooltip("Threshold for when velocity is reduced faster.")]
-    //public float slowDownThreshold = 2;
-
-    //[Tooltip("How many percent the speed is reduced each update cycle.")]
-    //[Range(0,100)]
-    //public float slowDownFactor = 2f;
-
-    //[Tooltip("Speed is reduced to 0 when it goes below this value.")]
-    //public float slowDownCutOff = 0.2f;
     
     void Awake ()
     {
@@ -58,55 +44,19 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, aim, aimRotateSpeed * Time.deltaTime);
         }
-
-        //UpdateVelocityUI(rbPlayer.velocity.magnitude.ToString() + "/" + fuelText);
-
-
-        //if (rbPlayer.velocity.magnitude < slowDownThreshold && firedZoomOut)
-        //{
-        //    var evt = new ObserverEvent(EventName.CameraZoomIn);
-        //    Subject.instance.Notify(gameObject, evt);
-        //    firedZoomOut = false;
-        //}
-
-        //if (rbPlayer.velocity.magnitude > slowDownThreshold && !firedZoomOut)
-        //{
-        //    var evt = new ObserverEvent(EventName.CameraZoomOut);
-        //    Subject.instance.Notify(gameObject, evt);
-        //    firedZoomOut = true;
-        //}
-
-
-
-        //if (rbPlayer.velocity.magnitude > slowDownThreshold && !canSlowDown)
-        //{
-        //    canSlowDown = true;
-        //}
-
-        //// Slows the player down faster when his velocity is below slowDownThreshold
-        //if (rbPlayer.velocity.magnitude < slowDownThreshold && canSlowDown)
-        //{
-        //    rbPlayer.velocity = rbPlayer.velocity * (100f - slowDownFactor) / 100f;
-        //}
-
-        //// If velocity is below the set threshold, set to zero.
-        //if (rbPlayer.velocity.magnitude < slowDownCutOff)
-        //{
-        //    rbPlayer.velocity = Vector3.zero;
-        //    canSlowDown = false;
-
-        //    if (!oxygen.HasOxygen())
-        //    {
-        //        var evt = new ObserverEvent(EventName.FuelEmpty);
-        //        Subject.instance.Notify(gameObject, evt);
-        //    }
-        //}
     }
 
     // set the controller to ready for launch
     public void ReadyForLaunch()
     {
-        readyForLaunch = true;
+        if (oxygen.HasOxygen())
+            readyForLaunch = true;
+        else
+        {
+            // throw oxygen death event
+            var evt = new ObserverEvent(EventName.OxygenEmpty);
+            Subject.instance.Notify(gameObject, evt);
+        }
     }
 
     // aim the player at a certain point in world space
@@ -134,25 +84,27 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     {
         if (!readyForLaunch || power < minLaunchPower)
             return;
-        
+
         // perform the launch
-        body.AddForce(power * maxLaunchForce * transform.forward);
+        Vector3 dir = aim * Vector3.forward;
+        body.AddForce(power * maxLaunchVelocity * dir, ForceMode.VelocityChange);
         oxygen.UseOxygen();
         ThrowLaunchEvent();
         SetPower(0);
+        readyForLaunch = false;
     }
 
     private void ThrowLaunchPowerChangedEvent()
     {
         var evt = new ObserverEvent(EventName.LaunchPowerChanged);
-        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, new Vector2(power * maxLaunchForce, maxLaunchForce));
+        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, new Vector2(power * maxLaunchVelocity, maxLaunchVelocity));
         Subject.instance.Notify(gameObject, evt);
     }
 
     private void ThrowLaunchEvent()
     {
         var evt = new ObserverEvent(EventName.PlayerLaunch);
-        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, power * maxLaunchForce);
+        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, power * maxLaunchVelocity);
         evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, transform.forward);
         Subject.instance.Notify(gameObject, evt);
     }

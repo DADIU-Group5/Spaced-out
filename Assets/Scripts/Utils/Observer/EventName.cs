@@ -24,7 +24,7 @@
     BarrelTriggered,
     BarrelExplosion,
     PlayerExploded,
-    FuelEmpty,
+    OxygenEmpty,
     UpdateStatus,
     CameraZoomOut,
     CameraZoomIn,

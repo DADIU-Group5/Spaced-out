@@ -89,7 +89,7 @@ public class HUDController : MonoBehaviour, Observer {
                 break;
 
             case EventName.ShowSubtile:
-                string subText = (string)evt.payload[PayloadConstants.SUBTITLE_TEXT];
+                string subText = Translator.instance.Get((string)evt.payload[PayloadConstants.SUBTITLE_TEXT]);
                 float subStart = (float)evt.payload[PayloadConstants.SUBTITLE_START];
                 float subDuration = (float)evt.payload[PayloadConstants.SUBTITLE_DURATION];
 

@@ -2,9 +2,19 @@
 
 public class InputController : MonoBehaviour, Observer
 {
-    private bool invertCameraControls = true,
-        launchMode = false,
-        inputDisabled = false;
+    private bool invertCameraControls;
+    private bool launchMode;
+    private bool inputDisabled;
+
+
+
+
+
+
+
+
+
+
     private Vector2 oldPoint;
 
     public float playerRotateSpeed = 200f;
@@ -19,23 +29,18 @@ public class InputController : MonoBehaviour, Observer
     public Transform playerTransform,
         playerPitchTransform;
 
-    private Rigidbody playerRigidbody;
+    public Rigidbody playerRigidbody;
 
     public Collider hitboxCollider;
 
     private void Awake()
     {
+        invertCameraControls = true;
         Subject.instance.AddObserver(this);
     }
 
     private void Update()
     {
-        // Quit
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
-
         // If input is disabled, stop.
         if (inputDisabled)
         {
@@ -59,6 +64,8 @@ public class InputController : MonoBehaviour, Observer
             HandleLaunchMode();
         }
     }
+
+
 
     // Interprest input as launch mode.
     private void HandleLaunchMode()
@@ -93,7 +100,7 @@ public class InputController : MonoBehaviour, Observer
     }
 
     // Interprets input as camera mode.
-    private void HandleCameraMode()
+    protected virtual void HandleCameraMode()
     {
         // Save starting position of tap
         if (Input.GetMouseButtonDown(0))

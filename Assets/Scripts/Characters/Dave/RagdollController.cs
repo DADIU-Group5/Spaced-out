@@ -18,16 +18,13 @@ public class RagdollController : MonoBehaviour {
         foreach (Rigidbody body in rigidbodies)
         {
             body.useGravity = false;
+            body.isKinematic = true;
         }
         // projection limits unwanted stretches in model
         foreach (CharacterJoint joint in joints)
         {
             joint.enableProjection = true;
         }
-
-        Blend();
-        //DisableRagdoll();
-        //EnableRagdoll();
     }
 
     public void EnableRagdoll()

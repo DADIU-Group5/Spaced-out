@@ -2,25 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 
-/*
-A helper component that enables blending from Mecanim animation to ragdolling and back. 
-
-To use, do the following:
-
-Add "GetUpFromBelly" and "GetUpFromBack" bool inputs to the Animator controller
-and corresponding transitions from any state to the get up animations. When the ragdoll mode
-is turned on, Mecanim stops where it was and it needs to transition to the get up state immediately
-when it is resumed. Therefore, make sure that the blend times of the transitions to the get up animations are set to zero.
-
-TODO:
-
-Make matching the ragdolled and animated root rotation and position more elegant. Now the transition works only if the ragdoll has stopped, as
-the blending code will first wait for mecanim to start playing the get up animation to get the animated hip position and rotation. 
-Unfortunately Mecanim doesn't (presently) allow one to force an immediate transition in the same frame. 
-Perhaps there could be an editor script that precomputes the needed information.
-
-*/
-
 //Declare a class that will hold useful information for each body part
 public class BodyPart
 {
@@ -52,6 +33,40 @@ public class RagdollHelper : MonoBehaviour
     //Declare an Animator member variable, initialized in Start to point to this gameobject's Animator component.
     private Animator animator;
 
+
+    // Initialization, first frame of game
+    void Start()
+    {
+        // disable physics
+        SetKinematic(true);
+
+        //Find all the transforms in the character, assuming that this script is attached to the root
+        Component[] components = GetComponentsInChildren(typeof(Transform));
+
+        // disable physics and gravity
+        foreach (Rigidbody body in GetComponentsInChildren<Rigidbody>())
+        {
+            body.useGravity = false;
+            body.isKinematic = true;
+        }
+
+        // make ragdoll more stable
+        foreach (CharacterJoint joint in GetComponentsInChildren<CharacterJoint>())
+        {
+            joint.enableProjection = true;
+        }
+
+        //For each of the transforms, create a BodyPart instance and store the transform 
+        foreach (Transform t in GetComponentsInChildren<Transform>())
+        {
+            BodyPart bodyPart = new BodyPart();
+            bodyPart.transform = t;
+            bodyParts.Add(bodyPart);
+        }
+
+        //Store the Animator component
+        animator = GetComponent<Animator>();
+    }
 
     public void EnableRagdoll()
     {
@@ -104,25 +119,6 @@ public class RagdollHelper : MonoBehaviour
         }
     }
 
-    // Initialization, first frame of game
-    void Start()
-    {
-        SetKinematic(true);
-
-        //Find all the transforms in the character, assuming that this script is attached to the root
-        Component[] components = GetComponentsInChildren(typeof(Transform));
-
-        //For each of the transforms, create a BodyPart instance and store the transform 
-        foreach (Transform t in GetComponentsInChildren<Transform>())
-        {
-            BodyPart bodyPart = new BodyPart();
-            bodyPart.transform = t;
-            bodyParts.Add(bodyPart);
-        }
-
-        //Store the Animator component
-        animator = GetComponent<Animator>();
-    }
 
     private Vector3 GetBonePosition(HumanBodyBones bone) {
         return animator.GetBoneTransform(bone).position;
@@ -130,10 +126,6 @@ public class RagdollHelper : MonoBehaviour
 
     void LateUpdate()
     {
-        //Clear the get up animation controls so that we don't end up repeating the animations indefinitely
-        animator.SetBool("GetUpFromBelly", false);
-        animator.SetBool("GetUpFromBack", false);
-
         //Blending from ragdoll back to animated
         if (state == RagdollState.blendToAnim)
         {

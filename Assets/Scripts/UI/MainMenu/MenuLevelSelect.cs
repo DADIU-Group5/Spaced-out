@@ -42,8 +42,8 @@ public class MenuLevelSelect : MonoBehaviour {
         for (int i = 0; i < levelButtons.Length; i++)
         {
             //if (i != 0)
-            if (i < ProgressManager.instance.progress.levels.Length-1)
-                levelButtons[i].interactable = ProgressManager.instance.IsUnlocked(i+1);
+            if (i < ProgressManager.instance.progress.levels.Length)
+                levelButtons[i].interactable = ProgressManager.instance.IsUnlocked(i);
 
             if (i < ProgressManager.instance.progress.levels.Length)
             {

@@ -25,7 +25,7 @@ public class ProgressManager : Singleton<ProgressManager> {
             throw new UnityException("No medals exists for level: " + level);
         }
 
-        //level--;
+        level--;
         switch(medal)
         {
             case medalCompleted:

@@ -51,9 +51,9 @@ public class HUDController : MonoBehaviour, Observer {
     {
         switch (evt.eventName)
         {
-            case EventName.UpdateFuel:
+            case EventName.UpdateOxygen:
                 var fuelPayload = evt.payload;
-                int fuel = (int)fuelPayload[PayloadConstants.FUEL];
+                int fuel = (int)fuelPayload[PayloadConstants.Oxygen];
                 fuelText.text = Translator.instance.Get("current") + " " + Translator.instance.Get("fuel") + ": " + fuel.ToString();
 
                 break;

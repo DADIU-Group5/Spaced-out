@@ -15,7 +15,7 @@
     OnFire,
     Extinguish,
     PlayerWon,
-    UpdateFuel,
+    UpdateOxygen,
     UpdateLaunch,
     UpdateVelocity,
     ToggleCameraControls,

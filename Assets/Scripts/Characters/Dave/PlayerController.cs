@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour, Observer
     public float minLaunchForce = 0f, maxLaunchForce = 3000f,  maxMagnitude = 30f;
     public Transform pitchTransform;
     public Rigidbody rbPlayer;
-    public FuelController fuel;
+    public OxygenController fuel;
 
     // For ensuring that the player at some point starts slowing
     [Tooltip("Threshold for when velocity is reduced faster.")]
@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour, Observer
 
     private void Update()
     {
-        if (!fuel.HasFuel())
+        if (!fuel.HasOxygen())
         {
             fuelText = "No More Fuel";
         }
@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour, Observer
             rbPlayer.velocity = Vector3.zero;
             canSlowDown = false;
 
-            if (!fuel.HasFuel())
+            if (!fuel.HasOxygen())
             {
                 var evt = new ObserverEvent(EventName.FuelEmpty);
                 Subject.instance.Notify(gameObject, evt);
@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviour, Observer
         {
             Rigidbody body = GetComponent<Rigidbody>();
             body.AddForce(force * maxLaunchForce * direction.normalized);
-            fuel.UseFuel();
+            fuel.UseOxygen();
         }
         launchForce = 0;
         UpdateLaunchUI();
@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour, Observer
 
     public void SetLaunchForce(float force)
     {
-        if (fuel.HasFuel() && rbPlayer.velocity.magnitude < maxMagnitude)
+        if (fuel.HasOxygen() && rbPlayer.velocity.magnitude < maxMagnitude)
         {
             launchForce = force * maxLaunchForce;
             UpdateLaunchUI();

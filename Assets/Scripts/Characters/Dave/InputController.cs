@@ -24,7 +24,7 @@ public class InputController : MonoBehaviour, Observer
     public Camera cam;
     public BehindCamera behindCamera;
     public PlayerController player;
-    public FuelController fuel;
+    public OxygenController fuel;
     
     public Transform playerTransform,
         playerPitchTransform;
@@ -59,7 +59,7 @@ public class InputController : MonoBehaviour, Observer
         {
             HandleCameraMode();
         }
-        else if (fuel.HasFuel())
+        else if (fuel.HasOxygen())
         {
             HandleLaunchMode();
         }

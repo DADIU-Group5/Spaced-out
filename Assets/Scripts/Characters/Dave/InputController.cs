@@ -2,10 +2,22 @@
 
 public class InputController : MonoBehaviour, Observer
 {
-    private bool invertCameraControls = true,
-        launchMode = false,
-        inputDisabled = false;
+    private bool invertCameraControls;
+    private bool launchMode;
+    private bool inputDisabled;
+
+
+
+
+
+
+
+
+
+
     private Vector2 oldPoint;
+
+    public float playerRotateSpeed = 200f;
 
     public float cameraRotateSpeed = 4000f,
         launchBuffer = 100f;
@@ -17,21 +29,18 @@ public class InputController : MonoBehaviour, Observer
     public Transform playerTransform,
         playerPitchTransform;
 
+    public Rigidbody playerRigidbody;
+
     public Collider hitboxCollider;
 
     private void Awake()
     {
+        invertCameraControls = true;
         Subject.instance.AddObserver(this);
     }
 
     private void Update()
     {
-        // Quit
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
-
         // If input is disabled, stop.
         if (inputDisabled)
         {
@@ -43,6 +52,9 @@ public class InputController : MonoBehaviour, Observer
         {
             //launchMode = DetectPlayerTap();
             launchMode = true;
+
+            var evt = new ObserverEvent(EventName.PlayerLaunchModeToggle);
+            Subject.instance.Notify(gameObject, evt);
         }
 
         // Check if we are NOT in launchmode
@@ -55,6 +67,8 @@ public class InputController : MonoBehaviour, Observer
             HandleLaunchMode();
         }
     }
+
+
 
     // Interprest input as launch mode.
     private void HandleLaunchMode()
@@ -84,12 +98,19 @@ public class InputController : MonoBehaviour, Observer
                 evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, GetLaunchDirection());
                 Subject.instance.Notify(gameObject, evt);
             }
+            else
+            {
+                var evt = new ObserverEvent(EventName.PlayerLaunchCancel);
+                evt.payload.Add(PayloadConstants.LAUNCH_FORCE, launchForce);
+                evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, GetLaunchDirection());
+                Subject.instance.Notify(gameObject, evt);
+            }
             launchMode = false;
         }
     }
 
     // Interprets input as camera mode.
-    private void HandleCameraMode()
+    protected virtual void HandleCameraMode()
     {
         // Save starting position of tap
         if (Input.GetMouseButtonDown(0))
@@ -111,9 +132,10 @@ public class InputController : MonoBehaviour, Observer
             DirectedRotation(offset);
             oldPoint = pos;
 
-            // Commented out temporarily, do not remove!!!
-            // Soon™
-            //playerTransform.rotation = behindCamera.pitch.transform.rotation;
+            if (playerRigidbody.velocity.magnitude < player.maxMagnitude)
+            {
+                playerTransform.rotation = Quaternion.RotateTowards(playerTransform.rotation, behindCamera.pitch.transform.rotation, playerRotateSpeed * Time.deltaTime);
+            }
         }
     }
 
@@ -189,6 +211,7 @@ public class InputController : MonoBehaviour, Observer
                 player = go.GetComponent<PlayerController>();
                 playerTransform = player.transform;
                 playerPitchTransform = player.pitchTransform;
+                playerRigidbody = player.GetComponent<Rigidbody>();
                 fuel = player.fuel;
                 break;
             case EventName.PlayerWon:

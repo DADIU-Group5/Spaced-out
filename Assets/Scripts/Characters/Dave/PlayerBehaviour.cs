@@ -10,6 +10,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     Rigidbody rgb;
     //[HideInInspector]
     public bool onFire;
+    public bool electrocuted = false;
     [HideInInspector]
     public bool dead = false;
 
@@ -65,7 +66,6 @@ public class PlayerBehaviour : MonoBehaviour, Observer
             {
                 transform.gameObject.SetActive(false);
             }
-            CheckpointManager.instance.RespawnPlayer(transform.parent.gameObject);
         }
     }
 
@@ -97,7 +97,11 @@ public class PlayerBehaviour : MonoBehaviour, Observer
                 Kill(evt.eventName);
                 break;
             case EventName.Electrocuted:
-                Kill(evt.eventName);
+                if (!electrocuted)
+                {
+                    electrocuted = true;
+                    Kill(evt.eventName);
+                }
                 break;
             case EventName.PlayerExploded:
                 Kill(evt.eventName);

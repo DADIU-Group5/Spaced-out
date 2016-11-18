@@ -4,34 +4,19 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour {
 
     //keep track of whether we are pausing:
-    [HideInInspector]
-    public bool pausing = false;
-
-    private int level = 1;
-
-    void Start()
-    {
-        level = GenerationDataManager.instance.GetCurrentLevel();
-    }
+    private bool pause = false;
 
     /// <summary>
-    /// Pause/UnpauseGame
+    /// Pause/Unpause game
     /// </summary>
-    public void PauseGame()
+    public void TogglePause()
     {
-        pausing = !pausing;
-
-        if (pausing)
-        {
-            Time.timeScale = 0;
-        } else
-        {
-            Time.timeScale = 1;
-        }
-
+        pause = !pause;
+        Time.timeScale = pause ? 0 : 1;
+        
         for (int i = 0; i < transform.childCount; i++)
         {
-            transform.GetChild(i).gameObject.SetActive(pausing);
+            transform.GetChild(i).gameObject.SetActive(pause);
         }
     }
 
@@ -42,7 +27,7 @@ public class PauseMenu : MonoBehaviour {
     {
         Scene scene = SceneManager.GetActiveScene();
         //remember to unpause;
-        PauseGame();
+        TogglePause();
 
         //player reset, so he hasn't died in this run yet.
         SceneManager.LoadScene(scene.name);
@@ -54,7 +39,7 @@ public class PauseMenu : MonoBehaviour {
     public void LoadMainMenu(int levelIndex)
     {
         //remember to unpause;
-        PauseGame();
+        TogglePause();
         SceneManager.LoadScene(levelIndex);
     }
 }

@@ -3,182 +3,157 @@ using UnityEngine.UI;
 using System.Collections;
 using System;
 
-public class PlayerController : MonoBehaviour, Observer
+[RequireComponent(typeof(OxygenController))]
+[RequireComponent(typeof(Rigidbody))]
+public class PlayerController : MonoBehaviour, IPlayerControl
 {
-    [HideInInspector]
-    public bool onFire = false;
-    [HideInInspector]
-    private bool dead = false;
-    
-    private float launchForce = 0f;
-    private bool firedZoomOut = false;
-    private bool canSlowDown = false;
+    [Tooltip("The minimum required force in order to launch. 1 = max launch force.")]
+    [Range(0, 1)]
+    public float minLaunchPower = 0f;
+    public float maxLaunchForce = 60000f;
+    [Tooltip("How fast does the player rotate towards aim point")]
+    [Range(25f, 200f)]
+    public float aimRotateSpeed = 100f;
 
-    public float minLaunchForce = 0f, maxLaunchForce = 3000f,  maxMagnitude = 30f;
-    public Transform pitchTransform;
-    public Rigidbody rbPlayer;
-    public OxygenController fuel;
+    // the power of the shot. power is between 0 and 1, where 1 = max launch force
+    private float power;
+    // the desired rotation
+    private Quaternion aim;
+    private bool readyForLaunch;
+    private Rigidbody body;
+    private OxygenController oxygen;
+
+
+
+    
+    //private bool firedZoomOut = false;
+    //private bool canSlowDown = false;
+
+    //public float maxMagnitude = 30f;
+    //public Transform pitchTransform;
 
     // For ensuring that the player at some point starts slowing
-    [Tooltip("Threshold for when velocity is reduced faster.")]
-    public float slowDownThreshold = 2;
+    //[Tooltip("Threshold for when velocity is reduced faster.")]
+    //public float slowDownThreshold = 2;
 
-    [Tooltip("How many percent the speed is reduced each update cycle.")]
-    [Range(0,100)]
-    public float slowDownFactor = 2f;
+    //[Tooltip("How many percent the speed is reduced each update cycle.")]
+    //[Range(0,100)]
+    //public float slowDownFactor = 2f;
 
-    [Tooltip("Speed is reduced to 0 when it goes below this value.")]
-    public float slowDownCutOff = 0.2f;
+    //[Tooltip("Speed is reduced to 0 when it goes below this value.")]
+    //public float slowDownCutOff = 0.2f;
     
     void Awake ()
     {
-        Subject.instance.AddObserver(this);
+        readyForLaunch = true;
+        aim = transform.rotation;
+        body = GetComponent<Rigidbody>();
+        oxygen = GetComponent<OxygenController>();
     }
 
-    public float GetMinLaunchForce()
+    void Update()
     {
-        return minLaunchForce;
+        // rotate player towards aim
+        if (transform.rotation != aim)
+        {
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, aim, aimRotateSpeed * Time.deltaTime);
+        }
+
+        //UpdateVelocityUI(rbPlayer.velocity.magnitude.ToString() + "/" + fuelText);
+
+
+        //if (rbPlayer.velocity.magnitude < slowDownThreshold && firedZoomOut)
+        //{
+        //    var evt = new ObserverEvent(EventName.CameraZoomIn);
+        //    Subject.instance.Notify(gameObject, evt);
+        //    firedZoomOut = false;
+        //}
+
+        //if (rbPlayer.velocity.magnitude > slowDownThreshold && !firedZoomOut)
+        //{
+        //    var evt = new ObserverEvent(EventName.CameraZoomOut);
+        //    Subject.instance.Notify(gameObject, evt);
+        //    firedZoomOut = true;
+        //}
+
+
+
+        //if (rbPlayer.velocity.magnitude > slowDownThreshold && !canSlowDown)
+        //{
+        //    canSlowDown = true;
+        //}
+
+        //// Slows the player down faster when his velocity is below slowDownThreshold
+        //if (rbPlayer.velocity.magnitude < slowDownThreshold && canSlowDown)
+        //{
+        //    rbPlayer.velocity = rbPlayer.velocity * (100f - slowDownFactor) / 100f;
+        //}
+
+        //// If velocity is below the set threshold, set to zero.
+        //if (rbPlayer.velocity.magnitude < slowDownCutOff)
+        //{
+        //    rbPlayer.velocity = Vector3.zero;
+        //    canSlowDown = false;
+
+        //    if (!oxygen.HasOxygen())
+        //    {
+        //        var evt = new ObserverEvent(EventName.FuelEmpty);
+        //        Subject.instance.Notify(gameObject, evt);
+        //    }
+        //}
     }
 
-    public float GetMaxLaunchForce()
+    // set the controller to ready for launch
+    public void ReadyForLaunch()
     {
-        return maxLaunchForce;
+        readyForLaunch = true;
     }
 
-    private string fuelText;
-
-    private void Update()
+    // aim the player at a certain point in world space
+    public void Aim(Vector3 point)
     {
-        if (!fuel.HasOxygen())
-        {
-            fuelText = "No More Fuel";
-        }
-        else if (rbPlayer.velocity.magnitude > maxMagnitude)
-        {
-            fuelText = "Not Ready To Launch";
-        }
-        else
-        {
-            fuelText = "Ready To Launch";
-        }
+        if (!readyForLaunch)
+            return;
 
-        UpdateVelocityUI(rbPlayer.velocity.magnitude.ToString()+"/"+ fuelText);
+        Vector3 direction = (point - transform.position).normalized;
+        aim = Quaternion.LookRotation(direction);
+    }
+
+    // set power for next launch
+    public void SetPower(float power)
+    {
+        if (!readyForLaunch)
+            return;
+
+        this.power = Mathf.Clamp01(power);
+        ThrowLaunchPowerChangedEvent();
+    }
+
+    // launch the player
+    public void Launch()
+    {
+        if (!readyForLaunch || power < minLaunchPower)
+            return;
         
-
-        if (rbPlayer.velocity.magnitude < slowDownThreshold && firedZoomOut)
-        {
-            var evt = new ObserverEvent(EventName.CameraZoomIn);
-            Subject.instance.Notify(gameObject, evt);
-            firedZoomOut = false;
-        }
-
-        if (rbPlayer.velocity.magnitude > slowDownThreshold && !firedZoomOut)
-        {
-            var evt = new ObserverEvent(EventName.CameraZoomOut);
-            Subject.instance.Notify(gameObject, evt);
-            firedZoomOut = true;
-        }
-
-
-
-        if (rbPlayer.velocity.magnitude > slowDownThreshold && !canSlowDown)
-        {
-            canSlowDown = true;
-        }
-
-        // Slows the player down faster when his velocity is below slowDownThreshold
-        if (rbPlayer.velocity.magnitude < slowDownThreshold && canSlowDown)
-        {
-            rbPlayer.velocity = rbPlayer.velocity * (100f - slowDownFactor) / 100f;
-        }
-
-        // If velocity is below the set threshold, set to zero.
-        if (rbPlayer.velocity.magnitude < slowDownCutOff)
-        {
-            rbPlayer.velocity = Vector3.zero;
-            canSlowDown = false;
-
-            if (!fuel.HasOxygen())
-            {
-                var evt = new ObserverEvent(EventName.FuelEmpty);
-                Subject.instance.Notify(gameObject, evt);
-            }
-        }
+        // perform the launch
+        body.AddForce(power * maxLaunchForce * transform.forward);
+        oxygen.UseOxygen();
+        ThrowLaunchEvent();
+        SetPower(0);
     }
 
-    public void Launch(float force, Vector3 direction)
+    private void ThrowLaunchPowerChangedEvent()
     {
-        if (rbPlayer.velocity.magnitude < maxMagnitude && force > 0)
-        {
-            Rigidbody body = GetComponent<Rigidbody>();
-            body.AddForce(force * maxLaunchForce * direction.normalized);
-            fuel.UseOxygen();
-        }
-        launchForce = 0;
-        UpdateLaunchUI();
-    }
-
-    public void Launch(float force)
-    {
-        Launch(force, pitchTransform.forward);
-    }
-
-    public void SetLaunchForce(float force)
-    {
-        if (fuel.HasOxygen() && rbPlayer.velocity.magnitude < maxMagnitude)
-        {
-            launchForce = force * maxLaunchForce;
-            UpdateLaunchUI();
-        }
-    }
-
-    public bool IsDead()
-    {
-        return dead;
-    }
-
-    public void UpdateLaunchUI()
-    {
-        var evt = new ObserverEvent(EventName.UpdateLaunch);
-        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, new Vector2(launchForce, maxLaunchForce));
+        var evt = new ObserverEvent(EventName.LaunchPowerChanged);
+        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, new Vector2(power * maxLaunchForce, maxLaunchForce));
         Subject.instance.Notify(gameObject, evt);
     }
 
-    private void UpdateVelocityUI(string text)
+    private void ThrowLaunchEvent()
     {
-        var evt = new ObserverEvent(EventName.UpdateVelocity);
-        evt.payload.Add(PayloadConstants.VELOCITY, text);
+        var evt = new ObserverEvent(EventName.PlayerLaunch);
+        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, power * maxLaunchForce);
+        evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, transform.forward);
         Subject.instance.Notify(gameObject, evt);
-    }
-
-    /*internal void Kill()
-    {
-        dead = true;
-        StartCoroutine(gameOverMenu.GameOver());
-    }*/
-
-    public void OnNotify(GameObject entity, ObserverEvent evt)
-    {
-        switch (evt.eventName)
-        {
-            case EventName.PlayerLaunch:
-                var payload = evt.payload;
-                float launchForce = (float)payload[PayloadConstants.LAUNCH_FORCE];
-                Vector3 launchDirection = (Vector3)payload[PayloadConstants.LAUNCH_DIRECTION];
-                Launch(launchForce, launchDirection);
-                break;
-            /*case EventName.PlayerDead:
-                Debug.Log("calling on notify");
-                if (!dead)
-                    Kill(); //this keeps calling?*/
-                break;
-            default:
-                break;
-        }
-    }
-
-    void OnDestroy()
-    {
-        Subject.instance.RemoveObserver(this);
     }
 }

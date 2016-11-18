@@ -58,7 +58,7 @@ public class HUDController : MonoBehaviour, Observer {
 
                 break;
 
-            case EventName.UpdateLaunch:
+            case EventName.LaunchPowerChanged:
                 var launchPayload = evt.payload;
                 Vector2 launch = (Vector2)launchPayload[PayloadConstants.LAUNCH_FORCE];
 

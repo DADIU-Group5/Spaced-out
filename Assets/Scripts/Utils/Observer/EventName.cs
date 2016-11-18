@@ -16,7 +16,7 @@
     Extinguish,
     PlayerWon,
     UpdateOxygen,
-    UpdateLaunch,
+    LaunchPowerChanged,
     UpdateVelocity,
     ToggleCameraControls,
     Crushed,

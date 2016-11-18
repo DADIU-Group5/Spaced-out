@@ -2,39 +2,28 @@
 
 public class InputController : MonoBehaviour, Observer
 {
+    public PlayerController player;
+    public BehindCamera behindCamera;
+    public float playerRotateSpeed = 200f;
+    public float cameraRotateSpeed = 4000f,
+        launchBuffer = 100f;
+    public Collider hitboxCollider;
+    //public Transform playerPitchTransform;
+
     private bool invertCameraControls;
     private bool launchMode;
     private bool inputDisabled;
-
-
-
-
-
-
-
-
-
-
     private Vector2 oldPoint;
+    private Camera cam;
 
-    public float playerRotateSpeed = 200f;
 
-    public float cameraRotateSpeed = 4000f,
-        launchBuffer = 100f;
-    public Camera cam;
-    public BehindCamera behindCamera;
-    public PlayerController player;
-    public OxygenController fuel;
-    
-    public Transform playerTransform,
-        playerPitchTransform;
 
-    public Rigidbody playerRigidbody;
 
-    public Collider hitboxCollider;
+
 
     private void Awake()
     {
+        cam = Camera.main;
         invertCameraControls = true;
         Subject.instance.AddObserver(this);
     }
@@ -59,13 +48,11 @@ public class InputController : MonoBehaviour, Observer
         {
             HandleCameraMode();
         }
-        else if (fuel.HasOxygen())
+        else
         {
             HandleLaunchMode();
         }
     }
-
-
 
     // Interprest input as launch mode.
     private void HandleLaunchMode()
@@ -76,26 +63,19 @@ public class InputController : MonoBehaviour, Observer
             oldPoint = Input.mousePosition;
         }
 
+        // Launch 
+        if (Input.GetMouseButtonUp(0))
+        {
+            player.Launch();
+            launchMode = false;
+            return;
+        }
+
         // Rotate player pitch so it faces camera direction and update velocity meter according to where finger is on the screen
         if (Input.GetMouseButton(0))
         {
-            playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
-            
-            player.SetLaunchForce(GetLaunchForce());
-        }
-
-        // Launch 
-        float launchForce = GetLaunchForce();
-        if (Input.GetMouseButtonUp(0))
-        {
-            if (launchForce > 0)
-            {
-                var evt = new ObserverEvent(EventName.PlayerLaunch);
-                evt.payload.Add(PayloadConstants.LAUNCH_FORCE, launchForce);
-                evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, GetLaunchDirection());
-                Subject.instance.Notify(gameObject, evt);
-            }
-            launchMode = false;
+            //playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
+            player.SetPower(GetLaunchPower());
         }
     }
 
@@ -121,11 +101,7 @@ public class InputController : MonoBehaviour, Observer
 
             DirectedRotation(offset);
             oldPoint = pos;
-
-            if (playerRigidbody.velocity.magnitude < player.maxMagnitude)
-            {
-                playerTransform.rotation = Quaternion.RotateTowards(playerTransform.rotation, behindCamera.pitch.transform.rotation, playerRotateSpeed * Time.deltaTime);
-            }
+            player.Aim(GetAimPoint());
         }
     }
 
@@ -137,8 +113,8 @@ public class InputController : MonoBehaviour, Observer
         return hitboxCollider.Raycast(ray, out hit, 1000f);
     }
 
-    // Calculate force from old mouse position and current mouse position.
-    private float GetLaunchForce()
+    // Calculate power from old mouse position and current mouse position.
+    private float GetLaunchPower()
     {
         float difference = oldPoint.y - Input.mousePosition.y;
         float maxDifference = oldPoint.y - launchBuffer;
@@ -146,34 +122,28 @@ public class InputController : MonoBehaviour, Observer
         return (difference / maxDifference).Clamp(0f, 1f);
     }
 
-    // Calculate the direction from the character position and the crosshair.
-    public Vector3 GetLaunchDirection()
+    // get point where the player is aiming
+    private Vector3 GetAimPoint()
     {
         Ray ray = cam.ScreenPointToRay(ScreenCenter());
         RaycastHit hit;
-        
+
         // Create layermask that ignores all Golfball and Ragdoll layers
         int layermask1 = 1 << LayerMask.NameToLayer("Golfball");
         int layermask2 = 1 << LayerMask.NameToLayer("Ragdoll");
         int layermask3 = 1 << LayerMask.NameToLayer("Ignore Raycast");
         int finalmask = ~(layermask1 | layermask2 | layermask3);
 
-        if (Physics.Raycast(ray, out hit, System.Int32.MaxValue, finalmask))
-        //if (Physics.Raycast(ray, out hit))
-        {
-            return hit.point - player.transform.position;
-        }
+        if (Physics.Raycast(ray, out hit, float.MaxValue, finalmask)) 
+            return hit.point;
         else
-        {
-            return playerPitchTransform.forward;
-        }
+            return player.transform.position + player.transform.forward;
     }
-
-    // Resets the rotation.
-    private void ResetRotation()
+    
+    // Calculate the direction from the character position and the crosshair.
+    public Vector3 GetLaunchDirection()
     {
-        playerTransform.rotation = Quaternion.identity;
-        playerPitchTransform.rotation = Quaternion.identity;
+        return (GetAimPoint() - player.transform.position).normalized;
     }
 
     // Returns the pixel center of the camera.
@@ -199,10 +169,6 @@ public class InputController : MonoBehaviour, Observer
                 inputDisabled = false;
                 GameObject go = evt.payload[PayloadConstants.PLAYER] as GameObject;
                 player = go.GetComponent<PlayerController>();
-                playerTransform = player.transform;
-                playerPitchTransform = player.pitchTransform;
-                playerRigidbody = player.GetComponent<Rigidbody>();
-                fuel = player.fuel;
                 break;
             case EventName.PlayerWon:
             case EventName.PlayerDead:

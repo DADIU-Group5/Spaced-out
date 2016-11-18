@@ -59,6 +59,10 @@ public class LevelGenerator : MonoBehaviour {
         DisableRooms();
         spawnedRooms[0].EnteredThisRoom();
         spawnedRooms[0].exitDoor.doorToLock.StartDoor();
+        foreach (Room item in spawnedRooms)
+        {
+            Destroy(item.GetComponent<CalcBounds>());
+        }
     }
 
     void GetGenerationData()
@@ -112,7 +116,7 @@ public class LevelGenerator : MonoBehaviour {
     void SpawnKey()
     {
         Transform tempTrans = GetRandomDoor(spawnedRooms[spawnedRooms.Count - 1]).transform;
-        Instantiate(keyPrefab, tempTrans.position - (tempTrans.right*-keyDistanceFromDoor) + new Vector3(0, 2, 0), Quaternion.identity,spawnedRooms[spawnedRooms.Count-1].transform);
+        //Instantiate(keyPrefab, tempTrans.position - (tempTrans.right*-keyDistanceFromDoor) + new Vector3(0, 2, 0), Quaternion.identity,spawnedRooms[spawnedRooms.Count-1].transform);
         tempTrans.GetComponent<Door>().SetDoorBehindKey();
     }
 

@@ -90,10 +90,11 @@ public class PlayerController : MonoBehaviour, Observer
         }
 
         // If velocity is below the set threshold, set to zero.
-        if (rbPlayer.velocity.magnitude < slowDownCutOff && canSlowDown)
+        if (rbPlayer.velocity.magnitude < slowDownCutOff)
         {
             rbPlayer.velocity = Vector3.zero;
             canSlowDown = false;
+
             if (!fuel.HasFuel())
             {
                 var evt = new ObserverEvent(EventName.FuelEmpty);

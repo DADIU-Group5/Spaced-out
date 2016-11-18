@@ -21,27 +21,25 @@ public class BehindCamera : MonoBehaviour, Observer
 
     void Update()
     {
-        if (zooming == Zoom.OUT)
-        {
-            InterpCameraZ(zoomStartPosition, camZoomOutPosition);
-        }
-        else if (zooming == Zoom.IN)
-        {
-            InterpCameraZ(zoomStartPosition, camZoomInPosition);
-        }
-    }
 
-    private void InterpCameraZ(float a, float b)
-    {
-        if (zoomCurrent > zoomDuration)
+        switch(zooming)
         {
-            zooming = Zoom.NONE;
+            case Zoom.OUT:
+                InterpCameraZ(zoomStartPosition, camZoomOutPosition);
+                break;
+            case Zoom.IN:
+                InterpCameraZ(zoomStartPosition, camZoomInPosition);
+                break;
+            case Zoom.NONE:
+                cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, camZoomInPosition);
+                break;
+            default:
+                break;
         }
-        else
-        {
-            zoomCurrent += Time.deltaTime;
-            cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, Mathf.Lerp(a, b, zoomCurrent / zoomDuration));
-        }
+
+
+
+
     }
 
     private void LateUpdate()
@@ -50,6 +48,26 @@ public class BehindCamera : MonoBehaviour, Observer
         {
             pod.transform.position = target.transform.position;
         }
+
+
+        Vector3 direction = cam.transform.position - target.transform.position;
+        RaycastHit hit;
+        int layermask1 = 1 << LayerMask.NameToLayer("Golfball");
+        int layermask2 = 1 << LayerMask.NameToLayer("Ragdoll");
+        int layermask3 = 1 << LayerMask.NameToLayer("Ignore Raycast");
+        int finalmask = ~(layermask1 | layermask2 | layermask3);
+
+        if (Physics.Raycast(target.transform.position, direction, out hit, maxDistance: direction.magnitude, layerMask: finalmask))
+        {
+            Debug.Log(hit.transform.name);
+            cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, cam.transform.InverseTransformPoint(hit.point).z + camZoomInPosition);
+            
+        }
+        else
+        {
+            Debug.Log("No hit");
+        }
+
         /*
         //Vector3 direction = Vector3.SlerpUnclamped(-pitch.transform.forward, pitch.transform.up, angle);
         Vector3 direction = -pitch.transform.forward;
@@ -67,6 +85,19 @@ public class BehindCamera : MonoBehaviour, Observer
         }
         cam.transform.localPosition = direction.normalized * rayDistance;
         */
+    }
+
+    private void InterpCameraZ(float start, float end)
+    {
+        if (zoomCurrent > zoomDuration)
+        {
+            zooming = Zoom.NONE;
+        }
+        else
+        {
+            zoomCurrent += Time.deltaTime;
+            cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, Mathf.Lerp(start, end, zoomCurrent / zoomDuration));
+        }
     }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)

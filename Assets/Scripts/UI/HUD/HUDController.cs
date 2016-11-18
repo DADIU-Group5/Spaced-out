@@ -9,6 +9,10 @@ public class HUDController : MonoBehaviour, Observer {
     public Text launchText;
     public Text statusText;
     public Text subtitleText;
+    public Text camControlsText;
+    public Text velocityText;
+    public Text currentFuelText;
+
     public Transform chargeArrow;
     public RectTransform chargeImagePivot,
         chargeMaskPivot;
@@ -24,6 +28,19 @@ public class HUDController : MonoBehaviour, Observer {
         Subject.instance.AddObserver(this);
     }
 
+    void Start()
+    {
+        SettingsManager.instance.onLanguageChanged += UpdateButtonText;
+        UpdateButtonText(Language.Danish);
+    }
+
+    private void UpdateButtonText(Language lan)
+    {
+        camControlsText.text = Translator.instance.Get("invert camera controls");
+        velocityText.text = Translator.instance.Get("velocity");
+        //currentFuelText.text = Translator.instance.Get("current") + " " + Translator.instance.Get("fuel");
+    }
+
     public void ToggleCameraControls()
     {
         var evt = new ObserverEvent(EventName.ToggleCameraControls);
@@ -37,8 +54,7 @@ public class HUDController : MonoBehaviour, Observer {
             case EventName.UpdateFuel:
                 var fuelPayload = evt.payload;
                 int fuel = (int)fuelPayload[PayloadConstants.FUEL];
-
-                fuelText.text = "Current fuel: " + fuel;
+                fuelText.text = Translator.instance.Get("current") + " " + Translator.instance.Get("fuel") + ": " + fuel.ToString();
 
                 break;
 
@@ -61,15 +77,18 @@ public class HUDController : MonoBehaviour, Observer {
                 var velocityPayload = evt.payload;
                 string velocity = "";
                 velocity = (string)velocityPayload[PayloadConstants.VELOCITY];
+                string[] substrings = velocity.Split('/');
 
-                launchText.text = velocity;
+                launchText.text = Translator.instance.Get("velocity") + ": " 
+                    + substrings[0] + "\n" + Translator.instance.Get(substrings[1]); ;
 
                 break;
 
             case EventName.UpdateStatus:
                 var statusPayload = evt.payload;
                 string status = (string)statusPayload[PayloadConstants.STATUS];
-                statusText.text = status;
+
+                statusText.text = Translator.instance.Get(status);
                 break;
             case EventName.PlayerDead:
                 gameOver = true;
@@ -79,6 +98,7 @@ public class HUDController : MonoBehaviour, Observer {
                 break;
 
             case EventName.ShowSubtile:
+                //string subText = Translator.instance.Get((string)evt.payload[PayloadConstants.SUBTITLE_TEXT]);
                 string subText = (string)evt.payload[PayloadConstants.SUBTITLE_TEXT];
                 float subStart = (float)evt.payload[PayloadConstants.SUBTITLE_START];
                 float subDuration = (float)evt.payload[PayloadConstants.SUBTITLE_DURATION];

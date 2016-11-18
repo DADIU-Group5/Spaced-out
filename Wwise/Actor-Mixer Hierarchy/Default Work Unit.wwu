@@ -160,7 +160,7 @@
 										</RandomSequenceContainer>
 									</ChildrenList>
 									<GroupingInfo>
-										<GroupRef Name="galVersion" ID="{BBC04D70-2427-451B-8F93-8407A5EFD474}"/>
+										<GroupRef Name="galLanguage" ID="{BBC04D70-2427-451B-8F93-8407A5EFD474}"/>
 										<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
 										<GroupingBehaviorList>
 											<GroupingBehavior>
@@ -173,26 +173,6 @@
 												<ItemRef Name="electrocuted v3" ID="{E7E08199-B50A-4CFB-96C8-41F4E8F25576}"/>
 											</GroupingBehavior>
 										</GroupingBehaviorList>
-										<GroupingList>
-											<Grouping>
-												<SwitchRef Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
-												<ItemList>
-													<ItemRef Name="electrocuted" ID="{989F654C-E76E-41DB-B938-AF67CA4C0623}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="v3" ID="{68351F88-EA08-4001-B2DD-A7BB1D9C547B}"/>
-												<ItemList>
-													<ItemRef Name="electrocuted v3" ID="{E7E08199-B50A-4CFB-96C8-41F4E8F25576}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="v2" ID="{02705BA3-282A-40B4-B70C-52231142B581}"/>
-												<ItemList>
-													<ItemRef Name="electrocuted v2" ID="{B16BDE1F-6518-4732-B272-BCA164D71B0C}"/>
-												</ItemList>
-											</Grouping>
-										</GroupingList>
 									</GroupingInfo>
 								</SwitchContainer>
 								<SwitchContainer Name="explosion" ID="{18C59A2D-806E-45D5-BED2-500A685C3BA1}" ShortID="833542434">
@@ -357,7 +337,7 @@
 										</RandomSequenceContainer>
 									</ChildrenList>
 									<GroupingInfo>
-										<GroupRef Name="galVersion" ID="{BBC04D70-2427-451B-8F93-8407A5EFD474}"/>
+										<GroupRef Name="galLanguage" ID="{BBC04D70-2427-451B-8F93-8407A5EFD474}"/>
 										<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
 										<GroupingBehaviorList>
 											<GroupingBehavior>
@@ -370,26 +350,6 @@
 												<ItemRef Name="explosion" ID="{2C6F0CDE-A3FC-4398-B2F4-C4D53EDB029A}"/>
 											</GroupingBehavior>
 										</GroupingBehaviorList>
-										<GroupingList>
-											<Grouping>
-												<SwitchRef Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
-												<ItemList>
-													<ItemRef Name="explosion" ID="{2C6F0CDE-A3FC-4398-B2F4-C4D53EDB029A}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="v3" ID="{68351F88-EA08-4001-B2DD-A7BB1D9C547B}"/>
-												<ItemList>
-													<ItemRef Name="explosion v3" ID="{395FB2A7-037E-4F7C-B08B-6E3FC6782736}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="v2" ID="{02705BA3-282A-40B4-B70C-52231142B581}"/>
-												<ItemList>
-													<ItemRef Name="explosion v2" ID="{AD76268C-5A82-4290-84B4-9CF427ACEEE1}"/>
-												</ItemList>
-											</Grouping>
-										</GroupingList>
 									</GroupingInfo>
 								</SwitchContainer>
 								<SwitchContainer Name="on fire" ID="{A845CC58-F2FB-4294-929D-081B69393BA3}" ShortID="211463518">
@@ -614,7 +574,7 @@
 										</RandomSequenceContainer>
 									</ChildrenList>
 									<GroupingInfo>
-										<GroupRef Name="galVersion" ID="{BBC04D70-2427-451B-8F93-8407A5EFD474}"/>
+										<GroupRef Name="galLanguage" ID="{BBC04D70-2427-451B-8F93-8407A5EFD474}"/>
 										<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
 										<GroupingBehaviorList>
 											<GroupingBehavior>
@@ -627,26 +587,6 @@
 												<ItemRef Name="on fire" ID="{5EAA58B2-D6D4-4DE8-A8BA-B881A41E9509}"/>
 											</GroupingBehavior>
 										</GroupingBehaviorList>
-										<GroupingList>
-											<Grouping>
-												<SwitchRef Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
-												<ItemList>
-													<ItemRef Name="on fire" ID="{5EAA58B2-D6D4-4DE8-A8BA-B881A41E9509}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="v3" ID="{68351F88-EA08-4001-B2DD-A7BB1D9C547B}"/>
-												<ItemList>
-													<ItemRef Name="on fire v3" ID="{08160D7D-A04F-45E1-8BCD-D77BAE1FC131}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="v2" ID="{02705BA3-282A-40B4-B70C-52231142B581}"/>
-												<ItemList>
-													<ItemRef Name="on fire v2" ID="{8594FB7B-FBB6-4688-A39A-D642E34AC1DF}"/>
-												</ItemList>
-											</Grouping>
-										</GroupingList>
 									</GroupingInfo>
 								</SwitchContainer>
 								<SwitchContainer Name="random insults" ID="{557168DA-36CF-493E-ADD5-51D27F0D1381}" ShortID="836008813">
@@ -754,7 +694,7 @@
 										</RandomSequenceContainer>
 									</ChildrenList>
 									<GroupingInfo>
-										<GroupRef Name="galVersion" ID="{BBC04D70-2427-451B-8F93-8407A5EFD474}"/>
+										<GroupRef Name="galLanguage" ID="{BBC04D70-2427-451B-8F93-8407A5EFD474}"/>
 										<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
 										<GroupingBehaviorList>
 											<GroupingBehavior>
@@ -767,26 +707,6 @@
 												<ItemRef Name="random insults" ID="{D4B6B4B5-B9E5-4BF8-8DCA-ED7EA40047FE}"/>
 											</GroupingBehavior>
 										</GroupingBehaviorList>
-										<GroupingList>
-											<Grouping>
-												<SwitchRef Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
-												<ItemList>
-													<ItemRef Name="random insults" ID="{D4B6B4B5-B9E5-4BF8-8DCA-ED7EA40047FE}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="v3" ID="{68351F88-EA08-4001-B2DD-A7BB1D9C547B}"/>
-												<ItemList>
-													<ItemRef Name="random insults v3" ID="{FF987D1E-E53C-400A-88EC-C50569C9F0AB}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="v2" ID="{02705BA3-282A-40B4-B70C-52231142B581}"/>
-												<ItemList>
-													<ItemRef Name="random insults v2" ID="{54377A12-C2BE-40B5-B29D-617964D2C225}"/>
-												</ItemList>
-											</Grouping>
-										</GroupingList>
 									</GroupingInfo>
 								</SwitchContainer>
 							</ChildrenList>

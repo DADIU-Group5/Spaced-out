@@ -10,20 +10,12 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="galRandomInsult" ID="{4B8A1BF2-EFC6-4AC6-9BE2-1A481818C986}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
-							<Position X="0" Y="1"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="daveFirstLaunch_02" ID="{E2B13896-D24A-4F2F-9AA7-056068CB1021}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="explosion sequence" ID="{D3332EA2-2CA1-4CCC-BBCB-4A7E3B1ADEBF}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 							<Position X="1" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="galDaveOnFire" ID="{9A5A1229-5B77-4F5B-B243-29DBA0FF4771}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
-							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="daveCharge" ID="{B9F41EF2-D4FC-424A-A610-5226949576CC}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
@@ -111,9 +103,7 @@
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="on" ID="{47F04DF9-4A7D-4198-A709-3A5E13D6213A}"/>
 					</CurrentStateList>
-					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
-					</CurrentSwitchList>
+					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 				<SoundcasterSession Name="sfx" ID="{F075DF8B-9A32-42F7-AB20-258CF9B427F1}">
 					<ModuleList>
@@ -230,10 +220,9 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="on" ID="{47F04DF9-4A7D-4198-A709-3A5E13D6213A}"/>
+						<CurrentStateRef Name="off" ID="{F5211D7D-C006-4D0B-871A-CE84351A9D07}"/>
 					</CurrentStateList>
-					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
-					</CurrentSwitchList>
+					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>

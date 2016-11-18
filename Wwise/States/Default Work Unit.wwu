@@ -10,6 +10,27 @@
 						<State Name="off" ID="{8CE3E364-66FA-4DE3-9D14-E500C95C290B}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="slowMotion" ID="{AD3BB683-1050-4B91-ADF9-E3970BDC3C31}">
+					<ChildrenList>
+						<State Name="None" ID="{19D658AC-B690-4C40-9D7D-EB2CD27E55D2}"/>
+						<State Name="on" ID="{6693B970-3CF2-4227-B97E-C1B04C064BD3}"/>
+						<State Name="off" ID="{F5211D7D-C006-4D0B-871A-CE84351A9D07}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="off" ID="{F5211D7D-C006-4D0B-871A-CE84351A9D07}"/>
+							<EndState Name="on" ID="{6693B970-3CF2-4227-B97E-C1B04C064BD3}"/>
+							<Time>0</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="on" ID="{6693B970-3CF2-4227-B97E-C1B04C064BD3}"/>
+							<EndState Name="off" ID="{F5211D7D-C006-4D0B-871A-CE84351A9D07}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

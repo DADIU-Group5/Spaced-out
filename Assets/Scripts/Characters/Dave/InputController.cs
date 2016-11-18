@@ -6,16 +6,9 @@ public class InputController : MonoBehaviour, Observer
     private bool launchMode;
     private bool inputDisabled;
 
-
-
-
-
-
-
-
-
-
     private Vector2 oldPoint;
+
+    private ObserverEvent evt;
 
     public float playerRotateSpeed = 200f;
 
@@ -50,7 +43,6 @@ public class InputController : MonoBehaviour, Observer
         // Sets launchmode if two fingers are registered.
         if (Input.GetMouseButtonDown(1))
         {
-            //launchMode = DetectPlayerTap();
             launchMode = true;
         }
 
@@ -66,8 +58,9 @@ public class InputController : MonoBehaviour, Observer
     }
 
 
+    bool playingChargeSound = false;
 
-    // Interprest input as launch mode.
+    // Interprets input as launch mode.
     private void HandleLaunchMode()
     {
         // Save starting position of tap
@@ -76,13 +69,24 @@ public class InputController : MonoBehaviour, Observer
             oldPoint = Input.mousePosition;
         }
 
-        // Rotate player pitch so it faces camera direction and update velocity meter according to where finger is on the screen
+        
         if (Input.GetMouseButton(0))
         {
+            // Rotate player pitch so it faces camera direction
             playerPitchTransform.rotation = behindCamera.pitch.transform.rotation;
-            
+
+            // Updates the force value shown in UI
             player.SetLaunchForce(GetLaunchForce());
         }
+
+        //if (!playingChargeSound)
+        //{
+            // Post event about launching
+            evt = new ObserverEvent(EventName.PlayerCharge);
+            evt.payload[PayloadConstants.START_STOP] = true;
+            Subject.instance.Notify(gameObject, evt);
+            playingChargeSound = true;
+        //}
 
         // Launch 
         float launchForce = GetLaunchForce();
@@ -90,10 +94,15 @@ public class InputController : MonoBehaviour, Observer
         {
             if (launchForce > 0)
             {
-                var evt = new ObserverEvent(EventName.PlayerLaunch);
+                evt = new ObserverEvent(EventName.PlayerLaunch);
                 evt.payload.Add(PayloadConstants.LAUNCH_FORCE, launchForce);
                 evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, GetLaunchDirection());
                 Subject.instance.Notify(gameObject, evt);
+
+                evt = new ObserverEvent(EventName.PlayerCharge);
+                evt.payload[PayloadConstants.START_STOP] = false;
+                Subject.instance.Notify(gameObject, evt);
+                playingChargeSound = false;
             }
             launchMode = false;
         }

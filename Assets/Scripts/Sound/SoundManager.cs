@@ -5,6 +5,8 @@ public class SoundManager : Singleton<SoundManager>, Observer
 {
     uint bankID;
 
+    bool chargePlaying = false;
+
     // TODO: hide from editor 
     [Range(0, 100)]
     public float masterVolume;
@@ -90,6 +92,22 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 break;
             case EventName.BarrelExplosion:
 
+                break;
+            case EventName.PlayerCharge:
+                bool start = (bool)evt.payload[PayloadConstants.START_STOP];
+                if (start)
+                {
+                    if (!chargePlaying)
+                    {
+                        PlayEvent(SoundEventConstants.DAVE_CHARGE);
+                        chargePlaying = true;
+                    }
+                }
+                else
+                {
+                    StopEvent(SoundEventConstants.DAVE_CHARGE, 0);
+                    chargePlaying = false;
+                }
                 break;
             case EventName.PlayerDead:
                 var deathCause = (EventName)evt.payload[PayloadConstants.DEATH_CAUSE];

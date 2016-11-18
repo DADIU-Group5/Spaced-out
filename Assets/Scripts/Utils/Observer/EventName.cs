@@ -28,5 +28,6 @@
     UpdateStatus,
     CameraZoomOut,
     CameraZoomIn,
-    ShowSubtile
+    ShowSubtile,
+    PlayerCharge
 }

@@ -58,6 +58,11 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
         switch (evt.eventName)
         {
+            case EventName.Narrate:
+                var eventName = (string)evt.payload[PayloadConstants.NARRATIVE_ID];
+                PlayEvent(eventName);
+                break;
+
             case EventName.PlayerLaunch:
 
                 var payload = evt.payload;
@@ -84,34 +89,36 @@ public class SoundManager : Singleton<SoundManager>, Observer
             case EventName.Electrocuted:
                 PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
                 break;
+                /*
+                case EventName.BarrelTriggered:
+                    PlayEvent(SoundEventConstants.EXPLOSIVE);
+                    break;
+                case EventName.BarrelExplosion:
 
-            case EventName.BarrelTriggered:
-                PlayEvent(SoundEventConstants.EXPLOSIVE);
-                break;
-            case EventName.BarrelExplosion:
+                    break;
+                case EventName.PlayerDead:
+                    var deathCause = (EventName)evt.payload[PayloadConstants.DEATH_CAUSE];
+                    switch (deathCause)
+                    {
+                        case EventName.Electrocuted:
+                            PlayEvent(SoundEventConstants.GAL_DEATH_ELECTROCUTED);
+                            break;
+                        case EventName.OnFire:
+                            StopEvent(SoundEventConstants.DAVE_CATCH_FIRE, 0);
+                            PlayEvent(SoundEventConstants.GAL_DAVE_ON_FIRE);
+                            break;
+                        case EventName.Crushed:
+                            //PlayEvent(SoundEventConstants.gal);
+                            break;
+                        case EventName.PlayerExploded:
+                            PlayEvent(SoundEventConstants.GAL_HAZARDS_EXPLOSION);
+                            break;
+                    }
 
-                break;
-            case EventName.PlayerDead:
-                var deathCause = (EventName)evt.payload[PayloadConstants.DEATH_CAUSE];
-                switch (deathCause)
-                {
-                    case EventName.Electrocuted:
-                        PlayEvent(SoundEventConstants.GAL_DEATH_ELECTROCUTED);
-                        break;
-                    case EventName.OnFire:
-                        StopEvent(SoundEventConstants.DAVE_CATCH_FIRE, 0);
-                        PlayEvent(SoundEventConstants.GAL_DAVE_ON_FIRE);
-                        break;
-                    case EventName.Crushed:
-                        //PlayEvent(SoundEventConstants.gal);
-                        break;
-                    case EventName.PlayerExploded:
-                        PlayEvent(SoundEventConstants.GAL_HAZARDS_EXPLOSION);
-                        break;
-                }
-
-                break;
+                    break;
+            */
         }
+
     }
 
     private void PlayEvent(string eventName)

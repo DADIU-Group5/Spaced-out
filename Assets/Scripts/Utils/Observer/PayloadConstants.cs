@@ -14,4 +14,5 @@ public class PayloadConstants
     public const string SUBTITLE_TEXT = "subtitleText";
     public const string SUBTITLE_START = "subtitleStart";
     public const string SUBTITLE_DURATION = "subtitleDuration";
+    public const string NARRATIVE_ID = "narrativeId";
 }

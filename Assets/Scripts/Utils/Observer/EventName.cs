@@ -27,5 +27,8 @@
     UpdateStatus,
     CameraZoomOut,
     CameraZoomIn,
-    ShowSubtile
+    ShowSubtile,
+    PlaySound,
+    Narrate,
+    LowOnOxygen
 }

@@ -1,7 +1,6 @@
 ﻿public enum State
 {
-    Inactive,
-    Active,
-    Paused,
-    Terminated
+    Silent,
+    Narrative,
+    Mock,
 }

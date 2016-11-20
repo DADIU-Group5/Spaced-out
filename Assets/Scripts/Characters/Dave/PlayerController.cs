@@ -3,20 +3,29 @@ using UnityEngine.UI;
 using System.Collections;
 using System;
 
+public interface IPlayerControl
+{
+    void Aim(Vector3 point);
+    // 0 = min power, 1 = max power
+    void SetPower(float power);
+    void Launch();
+}
+
 [RequireComponent(typeof(OxygenController))]
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour, IPlayerControl
 {
-    [Tooltip("The minimum required force in order to launch. 1 = max launch force.")]
+    [Tooltip("The minimum required power in order to launch. 1 = max launch velocity.")]
     [Range(0, 1)]
     public float minLaunchPower = 0f;
+    [Tooltip("The maximum velocity change from launch.")]   
     [Range(5, 30)]
     public float maxLaunchVelocity = 20f;
     [Tooltip("How fast does the player rotate towards aim point")]
     [Range(25f, 200f)]
     public float aimRotateSpeed = 100f;
 
-    // the power of the shot. power is between 0 and 1, where 1 = max launch force
+    // the power of the shot. power is between 0 and 1, where 1 = max launch velocity
     private float power;
     // the desired rotation
     private Quaternion aim;

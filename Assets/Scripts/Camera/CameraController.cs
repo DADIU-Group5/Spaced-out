@@ -1,7 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
-public class BehindCamera : MonoBehaviour, Observer
+public interface ICameraController
+{
+    void SetViewDirection(Vector3 direction);
+}
+
+/// <summary>
+/// This class is responsible for controlling the camera.
+/// It should not affect the player in any way, only read properties
+/// </summary>
+public class CameraController : MonoBehaviour, ICameraController, Observer
 {
     public GameObject target, pod, pitch, cam;
     
@@ -113,5 +123,14 @@ public class BehindCamera : MonoBehaviour, Observer
             default:
                 break;
         }
+    }
+
+    /// <summary>
+    /// Sets the direction of the camera
+    /// </summary>
+    /// <param name="direction">Direction to look</param>
+    public void SetViewDirection(Vector3 direction)
+    {
+        throw new NotImplementedException();
     }
 }

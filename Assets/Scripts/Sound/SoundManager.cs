@@ -19,9 +19,13 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
     public bool mute = false;
 
+    private DoorOpenCloseTrigger doorTrigger;
+
     // Use this for initialization
     void Start()
     {
+        doorTrigger = GetComponent<DoorOpenCloseTrigger>();
+
         AkSoundEngine.LoadBank("soundbank_alpha", AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
         AkSoundEngine.SetSwitch("galVersion", "v1", gameObject);
 
@@ -87,12 +91,15 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
                 break;
 
-            case EventName.Door: 
+            case EventName.Door:
                 // TODO: remove
-                if((bool)evt.payload[PayloadConstants.DOOR_OPEN])
-                    PlayEvent(SoundEventConstants.DOOR_OPEN);
-                else
-                    PlayEvent(SoundEventConstants.DOOR_SHUT);
+                //if((bool)evt.payload[PayloadConstants.DOOR_OPEN])
+                //PlayEvent(SoundEventConstants.DOOR_OPEN);
+                //AkAmbient.
+                //else
+                //PlayEvent(SoundEventConstants.DOOR_SHUT);
+                doorTrigger.Open();
+
                 break;
 
             case EventName.PlayerCharge:

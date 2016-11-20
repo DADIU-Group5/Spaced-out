@@ -1,28 +1,28 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// This class is responsible for catching inputs from the player and call the according methods on the camera and player controller.
+/// It should NOT be responsible for determining if and how the player can perform an action. 
+/// </summary>
+[RequireComponent(typeof(CameraController))]
 public class InputController : MonoBehaviour, Observer
 {
     public PlayerController player;
-    public BehindCamera behindCamera;
     public float playerRotateSpeed = 200f;
     public float cameraRotateSpeed = 4000f,
         launchBuffer = 100f;
     public Collider hitboxCollider;
     //public Transform playerPitchTransform;
-
+    private CameraController cameraController;
     private bool invertCameraControls;
     private bool launchMode;
     private bool inputDisabled;
     private Vector2 oldPoint;
     private Camera cam;
 
-
-
-
-
-
     private void Awake()
     {
+        cameraController = GetComponent<CameraController>();
         cam = Camera.main;
         invertCameraControls = true;
         Subject.instance.AddObserver(this);
@@ -155,10 +155,10 @@ public class InputController : MonoBehaviour, Observer
     // Rotates the assigned behindCamera in the direction of the offset.
     private void DirectedRotation(Vector2 offset)
     {
-        float xScale = behindCamera.pitch.transform.up.y;
+        float xScale = cameraController.pitch.transform.up.y;
         xScale = Mathf.Sign(xScale);
-        behindCamera.transform.Rotate(Vector3.up, Time.deltaTime * xScale * cameraRotateSpeed * (offset.x / ScreenCenter().magnitude));
-        behindCamera.pitch.transform.Rotate(Vector3.right, Time.deltaTime * cameraRotateSpeed * (-offset.y / ScreenCenter().magnitude));
+        cameraController.transform.Rotate(Vector3.up, Time.deltaTime * xScale * cameraRotateSpeed * (offset.x / ScreenCenter().magnitude));
+        cameraController.pitch.transform.Rotate(Vector3.right, Time.deltaTime * cameraRotateSpeed * (-offset.y / ScreenCenter().magnitude));
     }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)

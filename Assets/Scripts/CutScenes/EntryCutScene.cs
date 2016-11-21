@@ -32,7 +32,7 @@ public class EntryCutScene : MonoBehaviour {
         key.SetActive(false);
         playerObj.parent = null;
 
-        CheckpointManager.instance.SetNewCheckpoint(playerPos.position + new Vector3(0, 2, 0));
+        CheckpointManager.instance.SetNewCheckpoint(playerPos.position);
         CheckpointManager.instance.SetNewCheckpointRotation(playerPos.right);
 
         cam.gameObject.SetActive(false);

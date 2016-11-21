@@ -24,9 +24,9 @@ public class FloatingProps : ObjectSelector {
         float z = 0;
         for (int i = 0; i < (int)toSpawn; i++)
         {
-            x = Random.Range(-halfSize.x + 0.5f, halfSize.x - 0.5f);
-            y = Random.Range(-halfSize.y + 0.5f, halfSize.y - 0.5f);
-            z = Random.Range(-halfSize.z + 0.5f, halfSize.z - 0.5f);
+            x = Random.Range(-halfSize.x, halfSize.x);
+            y = Random.Range(-halfSize.y, halfSize.y);
+            z = Random.Range(-halfSize.z, halfSize.z);
             Instantiate(canBe[Random.Range(0, canBe.Count)], transform.position+new Vector3(x, y, z), Quaternion.identity,transform.parent);
         }
         Destroy(gameObject);

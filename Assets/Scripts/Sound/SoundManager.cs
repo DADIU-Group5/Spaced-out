@@ -65,6 +65,11 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
         switch (evt.eventName)
         {
+            case EventName.Narrate:
+                var eventName = (string)evt.payload[PayloadConstants.NARRATIVE_ID];
+                PlayEvent(eventName);
+                break;
+
             case EventName.PlayerLaunch:
 
                 var payload = evt.payload;
@@ -134,27 +139,30 @@ public class SoundManager : Singleton<SoundManager>, Observer
             case EventName.PlayerVentilated:
                 PlayEvent(SoundEventConstants.DAVE_VENT);
                 break;
-            case EventName.PlayerDead:
-                var deathCause = (EventName)evt.payload[PayloadConstants.DEATH_CAUSE];
-                switch (deathCause)
-                {
-                    case EventName.Electrocuted:
-                        PlayEvent(SoundEventConstants.GAL_DEATH_ELECTROCUTED);
-                        break;
-                    case EventName.OnFire:
-                        StopEvent(SoundEventConstants.DAVE_CATCH_FIRE, 0);
-                        PlayEvent(SoundEventConstants.GAL_DAVE_ON_FIRE);
-                        break;
-                    case EventName.Crushed:
-                        //PlayEvent(SoundEventConstants.gal);
-                        break;
-                    case EventName.OxygenEmpty:
-                        PlayEvent(SoundEventConstants.DAVE_OUT_OF_OXYGEN);
-                        break;
-                }
 
-                break;
+            //case EventName.PlayerDead:
+            //    var deathCause = (EventName)evt.payload[PayloadConstants.DEATH_CAUSE];
+            //    switch (deathCause)
+            //    {
+            //        case EventName.Electrocuted:
+            //            PlayEvent(SoundEventConstants.GAL_DEATH_ELECTROCUTED);
+            //            break;
+            //        case EventName.OnFire:
+            //            StopEvent(SoundEventConstants.DAVE_CATCH_FIRE, 0);
+            //            PlayEvent(SoundEventConstants.GAL_DAVE_ON_FIRE);
+            //            break;
+            //        case EventName.Crushed:
+            //            //PlayEvent(SoundEventConstants.gal);
+            //            break;
+            //        case EventName.OxygenEmpty:
+            //            PlayEvent(SoundEventConstants.DAVE_OUT_OF_OXYGEN);
+            //            break;
+            //    }
+
+            //    break;
+
         }
+
     }
 
     private void PlayEvent(string eventName)

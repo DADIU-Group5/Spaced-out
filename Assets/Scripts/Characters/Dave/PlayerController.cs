@@ -71,6 +71,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
             var evt = new ObserverEvent(EventName.OxygenEmpty);
             Subject.instance.Notify(gameObject, evt);
         }
+
     }
 
     public void BurningToDeath()
@@ -109,6 +110,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         animator.SetBool("Launch Mode", true);
         animator.SetFloat("Power", power);
         ThrowLaunchPowerChangedEvent();
+        ThrowChargingPowerEvent(true);
     }
 
     // launch the player
@@ -122,11 +124,13 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         body.AddForce(power * maxLaunchVelocity * dir, ForceMode.VelocityChange);
         oxygen.UseOxygen();
         animator.SetBool("Launch Mode", false);
+
         ThrowLaunchEvent();
 
         // reset power
         power = 0;
         ThrowLaunchPowerChangedEvent();
+        ThrowChargingPowerEvent(false);
         readyForLaunch = false;
     }
 
@@ -135,6 +139,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         var evt = new ObserverEvent(EventName.LaunchPowerChanged);
         evt.payload.Add(PayloadConstants.LAUNCH_FORCE, new Vector2(power * maxLaunchVelocity, maxLaunchVelocity));
         Subject.instance.Notify(gameObject, evt);
+        // TODO sound
     }
 
     private void ThrowLaunchEvent()
@@ -142,6 +147,14 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         var evt = new ObserverEvent(EventName.PlayerLaunch);
         evt.payload.Add(PayloadConstants.LAUNCH_FORCE, power * maxLaunchVelocity);
         evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, transform.forward);
+        Subject.instance.Notify(gameObject, evt);
+        // TODO sound
+    }
+
+    private void ThrowChargingPowerEvent(bool start)
+    {
+        var evt = new ObserverEvent(EventName.PlayerCharge);
+        evt.payload.Add(PayloadConstants.START_STOP, start);
         Subject.instance.Notify(gameObject, evt);
     }
 }

@@ -10,20 +10,12 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="galRandomInsult" ID="{4B8A1BF2-EFC6-4AC6-9BE2-1A481818C986}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
-							<Position X="0" Y="1"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="daveFirstLaunch_02" ID="{E2B13896-D24A-4F2F-9AA7-056068CB1021}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="explosion sequence" ID="{D3332EA2-2CA1-4CCC-BBCB-4A7E3B1ADEBF}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 							<Position X="1" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="galDaveOnFire" ID="{9A5A1229-5B77-4F5B-B243-29DBA0FF4771}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
-							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="daveCharge" ID="{B9F41EF2-D4FC-424A-A610-5226949576CC}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
@@ -60,6 +52,10 @@
 							<Value>6</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="masterVolume" ID="{16D6A1BF-90EA-4458-897A-819BFBA4868A}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Month" ID="{09E2B445-C4A3-447F-B3CA-818A1D925EF7}"/>
 							<Value>6</Value>
 						</RTPCValue>
@@ -70,6 +66,10 @@
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_RPM" ID="{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"/>
 							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="effectsVolume" ID="{ED513413-85B0-45A9-B98F-EE61A42D635F}"/>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Fury" ID="{A2AE79DC-CA3A-46BA-9652-9986C322A87B}"/>
@@ -88,12 +88,20 @@
 							<Value>75</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}"/>
+							<Value>28</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="SS_Air_TimeOfDay" ID="{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}"/>
 							<Value>6</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="masterHiPass" ID="{6BE69766-05F5-4CC4-BD22-B4CD8F23794C}"/>
 							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="musicVolume" ID="{94967744-CEA3-4D37-893D-F4A043DFEB29}"/>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Freefall" ID="{2F2DFE37-4F9E-4D94-83D8-53CCA39781AD}"/>
@@ -109,10 +117,11 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
 						<CurrentStateRef Name="on" ID="{47F04DF9-4A7D-4198-A709-3A5E13D6213A}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
+						<CurrentSwitchRef Name="dan" ID="{067E8178-15B4-4628-AEDE-BD89FB2A8F68}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 				<SoundcasterSession Name="sfx" ID="{F075DF8B-9A32-42F7-AB20-258CF9B427F1}">
@@ -229,10 +238,12 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
 						<CurrentStateRef Name="on" ID="{47F04DF9-4A7D-4198-A709-3A5E13D6213A}"/>
+						<CurrentStateRef Name="off" ID="{F5211D7D-C006-4D0B-871A-CE84351A9D07}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
+						<CurrentSwitchRef Name="dan" ID="{067E8178-15B4-4628-AEDE-BD89FB2A8F68}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

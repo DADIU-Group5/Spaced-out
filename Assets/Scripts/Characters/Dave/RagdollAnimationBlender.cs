@@ -26,7 +26,7 @@ public class RagdollAnimationBlender : MonoBehaviour
     private float time;
 
     // Initialization, first frame of game
-    void Start()
+    void Awake()
     {
         animator = GetComponent<Animator>();
         SetupRagdoll();

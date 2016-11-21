@@ -9,8 +9,7 @@ public class OutroCutScene : MonoBehaviour {
 
     public void StartOutro(GameObject player)
     {
-        //TODO RemovePlayerControl.
-        //TODO ChangeCam
+        //TODO: Remove UI.
         player.transform.position = playerPos.position;
         player.transform.rotation = playerPos.rotation;
         player.transform.parent = playerPos;

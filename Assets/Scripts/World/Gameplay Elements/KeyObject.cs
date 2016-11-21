@@ -3,13 +3,6 @@ using System.Collections;
 
 public class KeyObject : MonoBehaviour {
 
-    public OutroCutScene outro;
-
-    void Start()
-    {
-        //outro.StartOutro();
-    }
-
     /// <summary>
     /// Check for player collision
     /// </summary>
@@ -17,7 +10,11 @@ public class KeyObject : MonoBehaviour {
     {
         if (other.transform.tag == "Player")
         {
-            outro.StartOutro(other.gameObject);
+            Debug.Log("found player!");
+            var evt = new ObserverEvent(EventName.PlayerWon);
+            Subject.instance.Notify(gameObject, evt);
+            Debug.Log("destroying key");
+            Destroy(this.gameObject);
         }
     }
 }

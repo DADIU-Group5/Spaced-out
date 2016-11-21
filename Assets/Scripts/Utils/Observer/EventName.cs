@@ -31,6 +31,8 @@
     ShowSubtile,
     PlayerLaunchModeToggle,
     PlayerLaunchCancel,
+    ComicsAdded,
+    GodMode,
     PlayerCharge,
     Door,
     PlayerVentilated,

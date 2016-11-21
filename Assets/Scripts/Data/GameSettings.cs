@@ -11,4 +11,5 @@ public class GameSettings : ScriptableObject {
     public bool mute;
     public bool notifications;
     public Language language;
+    public bool GodMode = false;
 }

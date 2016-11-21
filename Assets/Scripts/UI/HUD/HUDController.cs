@@ -12,6 +12,7 @@ public class HUDController : MonoBehaviour, Observer {
     public Text camControlsText;
     public Text velocityText;
     public Text currentFuelText;
+    public Text comicsLeftText;
 
     public Transform chargeArrow;
     public RectTransform chargeImagePivot,
@@ -104,6 +105,11 @@ public class HUDController : MonoBehaviour, Observer {
                 float subDuration = (float)evt.payload[PayloadConstants.SUBTITLE_DURATION];
 
                 StartCoroutine(ShowSubtitle(subText, subStart, subDuration));
+                break;
+            case EventName.ComicsAdded:
+                var comicsPayload = evt.payload;
+                int comics = (int)comicsPayload[PayloadConstants.COMICS];
+                comicsLeftText.text = comics.ToString();
                 break;
             default:
                 break;

@@ -170,7 +170,7 @@ public class InputController : MonoBehaviour, Observer
                 GameObject go = evt.payload[PayloadConstants.PLAYER] as GameObject;
                 player = go.GetComponent<PlayerController>();
                 break;
-            case EventName.StartOutro:
+            case EventName.StartCutscene:
             case EventName.PlayerWon:
             case EventName.PlayerDead:
                 inputDisabled = true;

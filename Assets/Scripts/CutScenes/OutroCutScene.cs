@@ -9,13 +9,18 @@ public class OutroCutScene : MonoBehaviour {
 
     public void StartOutro(GameObject player)
     {
-        //TODO: Remove UI.
+
         player.transform.position = playerPos.position;
         player.transform.rotation = playerPos.rotation;
         player.transform.parent = playerPos;
         cam.gameObject.SetActive(true);
-        var evt = new ObserverEvent(EventName.StartOutro);
+
+        var evt = new ObserverEvent(EventName.ToggleUI);
         Subject.instance.Notify(gameObject, evt);
+
+        evt = new ObserverEvent(EventName.StartCutscene);
+        Subject.instance.Notify(gameObject, evt);
+
         anim.SetTrigger("Open");
     }
 

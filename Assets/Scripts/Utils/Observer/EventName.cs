@@ -31,5 +31,6 @@
     ShowSubtile,
     PlayerLaunchModeToggle,
     PlayerLaunchCancel,
-    StartOutro
+    StartCutscene,
+    ToggleUI
 }

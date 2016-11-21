@@ -222,7 +222,9 @@
 						<CurrentStateRef Name="on" ID="{47F04DF9-4A7D-4198-A709-3A5E13D6213A}"/>
 						<CurrentStateRef Name="off" ID="{F5211D7D-C006-4D0B-871A-CE84351A9D07}"/>
 					</CurrentStateList>
-					<CurrentSwitchList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="dan" ID="{067E8178-15B4-4628-AEDE-BD89FB2A8F68}"/>
+					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>

@@ -141,6 +141,17 @@ namespace AK
 
     namespace STATES
     {
+        namespace GALLANGUAGE
+        {
+            static const AkUniqueID GROUP = 42812665U;
+
+            namespace STATE
+            {
+                static const AkUniqueID DAN = 311764526U;
+                static const AkUniqueID ENG = 529726535U;
+            } // namespace STATE
+        } // namespace GALLANGUAGE
+
         namespace POWER
         {
             static const AkUniqueID GROUP = 2391494160U;

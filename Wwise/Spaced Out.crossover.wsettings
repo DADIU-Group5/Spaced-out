@@ -3,7 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{DEDC5B82-926B-46DC-AD30-C2EA5168518E}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Desktop\Dadiu\Hold 5\GRADUATION GAME\UI"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Desktop\Dadiu\Hold 5\GRADUATION GAME\GAL\Danish\narrative\unprocessed"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
 						<Value Platform="Windows"></Value>
@@ -58,9 +58,9 @@
 				<Property Name="ProjectExplorer\Expanded_17_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\Expanded_18_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\Expanded_19_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\Expanded_1_1" Type="string" Value="2KQUFaYdKkGhfnXKDCFJ80PUh585Xb1Jheil4Z5Buel+vODSP3v+T6Zw+uAnYbYx"/>
+				<Property Name="ProjectExplorer\Expanded_1_1" Type="string" Value="Q9SHnzldvUmF6KXhnkG56Q=="/>
 				<Property Name="ProjectExplorer\Expanded_20_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\Expanded_2_1" Type="string" Value="VOwB28znw0CFITfBKLoO0j3nFNmNQDpEjdl61+UQ08n5dWNfxSc8RKoxeB2NM0F1VGbNA/2FOEeH2RIQluFrDVKhQVXA2GdIi+kQROmGixakVIAdAeZXSadWQS4fptV7+JWKKoAM+EmM7fb+0tW9rS/yJBzMWWJKlWeP3z6RyITUOCMyr4V4Sp4WuqxS/icTMChNGYPhj0uKhPg1uhMMxaIuM9OhLMxMu8tKfjsa3r/ZqkDtvX2lTapOfI48x+sGQQvPPhiKQ06ypGaV7mtSyZPXXbuF8nRPjR3fekuJMoCmFU6/1tu7T4Ihx+Ub6vZ/"/>
+				<Property Name="ProjectExplorer\Expanded_2_1" Type="string" Value="VOwB28znw0CFITfBKLoO0gP7oDwTW61Eucn73SaWYGJUZs0D/YU4R4fZEhCW4WsNja7hkh4zVEiaYokyY4wNTKRUgB0B5ldJp1ZBLh+m1Xv4lYoqgAz4SYzt9v7S1b2tL/IkHMxZYkqVZ4/fPpHIhDAoTRmD4Y9LioT4NboTDMU="/>
 				<Property Name="ProjectExplorer\Expanded_3_1" Type="string" Value="qI47ebapckCYmJKgqTPFqUosgeyMwiVIkJdnN3pUp0pG+LlNr7JSTI7oE7hgYr0y"/>
 				<Property Name="ProjectExplorer\Expanded_4_1" Type="string" Value="ekTOOHhV70S4/cr9+lIEvHBNwLsnJBtFj5OEB6Xv1HQ="/>
 				<Property Name="ProjectExplorer\Expanded_5_1" Type="string" Value="zNsrcBEpfkK331wuj+wR9+axqnfeQLFKhYXNN/XQyjaDtjutUBCRS63545cL3Dwx"/>
@@ -69,13 +69,13 @@
 				<Property Name="ProjectExplorer\Expanded_8_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
-				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{2388DAEA-9775-46C6-A2ED-C5222A397756}"/>
-				<Property Name="ProjectExplorer\FirstVisible_3_1" Type="string" Value="{FABF4B6D-90BB-474B-A3AE-F7110ED709BA}"/>
+				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{3CA0FB03-5B13-44AD-B9C9-FBDD26966062}"/>
+				<Property Name="ProjectExplorer\FirstVisible_3_1" Type="string" Value="{29D16A91-BAB9-4DDC-8A2B-2DDDE1A4DB05}"/>
 				<Property Name="ProjectExplorer\FirstVisible_4_1" Type="string" Value="{CB6175F1-6080-4A23-92EF-0807E304D0C1}"/>
 				<Property Name="ProjectExplorer\FirstVisible_6_1" Type="string" Value="{C98E673F-A24C-48A8-960F-10565FFE70A0}"/>
 				<Property Name="ProjectExplorer\FirstVisible_8_1" Type="string" Value="{41093F77-829F-4D88-8601-E8B25F3D4781}"/>
 				<Property Name="RTPC\GameParameterSimValue\{09E2B445-C4A3-447F-B3CA-818A1D925EF7}" Type="Real64" Value="6"/>
-				<Property Name="RTPC\GameParameterSimValue\{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}" Type="Real64" Value="0"/>
+				<Property Name="RTPC\GameParameterSimValue\{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}" Type="Real64" Value="89.4220283533261"/>
 				<Property Name="RTPC\GameParameterSimValue\{1329EBEF-A193-472E-A38C-64668B494879}" Type="Real64" Value="50"/>
 				<Property Name="RTPC\GameParameterSimValue\{16D6A1BF-90EA-4458-897A-819BFBA4868A}" Type="Real64" Value="50"/>
 				<Property Name="RTPC\GameParameterSimValue\{2F2DFE37-4F9E-4D94-83D8-53CCA39781AD}" Type="Real64" Value="75"/>

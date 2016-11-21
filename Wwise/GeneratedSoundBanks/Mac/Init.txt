@@ -1,8 +1,12 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	42812665	galLanguage			\Default Work Unit\galLanguage	
 	340593036	slowMotion			\Default Work Unit\slowMotion	
 	2391494160	power			\Default Work Unit\power	
 
 State	ID	Name	State Group			Notes
+	311764526	Dan	galLanguage			
+	529726535	Eng	galLanguage			
+	748895195	None	galLanguage			
 	748895195	None	slowMotion			
 	930712164	off	slowMotion			
 	1651971902	on	slowMotion			

@@ -31,6 +31,16 @@
 						</Transition>
 					</TransitionList>
 				</StateGroup>
+				<StateGroup Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{0CF72E74-2DE8-4F2C-8CB9-3215C1145F4A}"/>
+						<State Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+						<State Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

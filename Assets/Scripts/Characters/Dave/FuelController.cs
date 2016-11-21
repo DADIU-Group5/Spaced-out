@@ -19,6 +19,13 @@ public class FuelController : MonoBehaviour
     public void UseFuel()
     {
         currentFuel--;
+
+        if(currentFuel <= maxFuel / 3.0f)
+        {
+            var evt = new ObserverEvent(EventName.LowOnOxygen);
+            Subject.instance.Notify(gameObject, evt);
+        }
+
         UpdateFuelUI();
     }
 
@@ -47,8 +54,8 @@ public class FuelController : MonoBehaviour
 
     private void UpdateFuelUI()
     {
-        var evt = new ObserverEvent(EventName.UpdateFuel);
-        evt.payload.Add(PayloadConstants.FUEL, currentFuel);
+        var evt = new ObserverEvent(EventName.UpdateOxygen);
+        evt.payload.Add(PayloadConstants.OXYGEN, currentFuel);
         Subject.instance.Notify(gameObject, evt);
     }
 

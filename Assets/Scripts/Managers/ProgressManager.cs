@@ -9,6 +9,14 @@ public class ProgressManager : Singleton<ProgressManager> {
 
     public Progress progress;
 
+    public void UnlockAll()
+    {
+        for (int i = 0; i < progress.levels.Length; i++)
+        {
+            progress.levels[i].unlocked = true;
+        }
+    }
+
     // sets the tutorial as completed
     public void completeTutorial()
     {
@@ -25,7 +33,7 @@ public class ProgressManager : Singleton<ProgressManager> {
             throw new UnityException("No medals exists for level: " + level);
         }
 
-        //level--;
+        level--;
         switch(medal)
         {
             case medalCompleted:

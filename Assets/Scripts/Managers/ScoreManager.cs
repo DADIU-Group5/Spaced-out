@@ -28,7 +28,10 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
     public void AddComics()
     {
         totalComics++;
-        Debug.Log("totalComics: " + totalComics);
+        //update HUD comicCounter everytime a comic is added.
+        var evt = new ObserverEvent(EventName.ComicsAdded);
+        evt.payload.Add(PayloadConstants.COMICS, totalComics);
+        Subject.instance.Notify(gameObject, evt);
     }
 
     // comic collected

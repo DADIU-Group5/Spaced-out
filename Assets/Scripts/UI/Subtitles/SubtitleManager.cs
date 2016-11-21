@@ -48,7 +48,7 @@ public class SubtitleManager : Singleton<SubtitleManager>, Observer
             case EventName.Electrocuted:
                 Subject.instance.Notify(gameObject, MakeEventFromSubtitle(Language.Danish, SubtitleType.Wires));
                 break;
-            case EventName.FuelEmpty:
+            case EventName.OxygenEmpty:
                 Subject.instance.Notify(gameObject, MakeEventFromSubtitle(Language.English, SubtitleType.OutOfOxygen));
                 break;
             default:
@@ -76,5 +76,12 @@ public class SubtitleManager : Singleton<SubtitleManager>, Observer
         subtitleEvent.payload.Add(PayloadConstants.SUBTITLE_DURATION, subtitle.duration);
 
         return subtitleEvent;
+    }
+
+    public Subtitle GetRandomSubtitle(Language language, SubtitleType subType)
+    {
+        var subtitleByCategory = subtitles.GetSubtitles(language, subType);
+
+        return GetRandomSubtitle(subtitleByCategory);
     }
 }

@@ -73,6 +73,22 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         }
     }
 
+    public void BurningToDeath()
+    {
+        animator.SetTrigger("Death Fire");
+        Debug.Log("setting trigger for fire death");
+    }
+
+    public void ElectrocutedToDeath()
+    {
+        animator.SetTrigger("Death Electricity");
+    }
+
+   /* public void ChokingToDeath()
+    {
+        animator.SetTrigger("Death Fire");
+    }*/
+
     // aim the player at a certain point in world space
     public void Aim(Vector3 point)
     {

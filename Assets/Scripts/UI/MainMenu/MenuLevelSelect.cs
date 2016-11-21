@@ -17,6 +17,7 @@ public class MenuLevelSelect : MonoBehaviour {
         public List<GameObject> objects;
     }
     public List<achievementObjects> achievements = new List<achievementObjects>();
+    public Progress progress;
 
     void Start()
     {
@@ -35,7 +36,13 @@ public class MenuLevelSelect : MonoBehaviour {
         }
     }
 
-        void OnEnable()
+    public void UnlockAll()
+    {
+        ProgressManager.instance.UnlockAll();
+        OnEnable();
+    }
+
+    void OnEnable()
     {
         generateLevelButton.interactable = ProgressManager.instance.GetCurrency() >= 15;
         // enable / disable level buttons

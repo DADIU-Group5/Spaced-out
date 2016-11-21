@@ -1,49 +1,155 @@
 Event	ID	Name			Wwise Object Path	Notes
-	181220522	galDaveOnFire			\Default Work Unit\galDaveOnFire	
-	274288443	menuScroll			\Default Work Unit\menuScroll	
-	433216386	explosive			\Default Work Unit\explosive	
-	579662040	gas			\Default Work Unit\gas	
-	1075305830	menuClickForwards			\Default Work Unit\menuClickForwards	
-	1205645828	musicPlay			\Default Work Unit\musicPlay	
-	1537918958	daveFirstLaunch			\Default Work Unit\daveFirstLaunch	
-	1842267159	galRandomInsult			\Default Work Unit\galRandomInsult	
-	1952453951	galHazardsExplosion			\Default Work Unit\galHazardsExplosion	
-	2136770720	galRandomNarative			\Default Work Unit\galRandomNarative	
-	2392150155	daveCharge			\Default Work Unit\daveCharge	
-	2606874744	daveFirstLaunch_05			\Default Work Unit\daveFirstLaunch_05	
-	2606874745	daveFirstLaunch_04			\Default Work Unit\daveFirstLaunch_04	
-	2606874748	daveFirstLaunch_01			\Default Work Unit\daveFirstLaunch_01	
-	2606874750	daveFirstLaunch_03			\Default Work Unit\daveFirstLaunch_03	
-	2606874751	daveFirstLaunch_02			\Default Work Unit\daveFirstLaunch_02	
-	2917121896	electricity			\Default Work Unit\electricity	
-	3193570530	daveLaunch			\Default Work Unit\daveLaunch	
-	3465444258	davePutOutFire			\Default Work Unit\davePutOutFire	
-	3469266988	galDeathElectrocuted			\Default Work Unit\galDeathElectrocuted	
-	3536816288	daveCatchFire			\Default Work Unit\daveCatchFire	
-	3669325296	daveElectrocute			\Default Work Unit\daveElectrocute	
-	3782881839	doorShut			\Default Work Unit\doorShut	
-	4058101365	gameStart			\Default Work Unit\gameStart	
-	4153348305	daveFireWoosh			\Default Work Unit\daveFireWoosh	
-	4294846034	menuClickBackwards			\Default Work Unit\menuClickBackwards	
+	26822469	exit			\Default Work Unit\gameState\exit	
+	189158592	wire2			\Default Work Unit\gal\wire\wire2	
+	189158593	wire3			\Default Work Unit\gal\wire\wire3	
+	189158595	wire1			\Default Work Unit\gal\wire\wire1	
+	189158596	wire6			\Default Work Unit\gal\wire\wire6	
+	189158597	wire7			\Default Work Unit\gal\wire\wire7	
+	189158598	wire4			\Default Work Unit\gal\wire\wire4	
+	189158599	wire5			\Default Work Unit\gal\wire\wire5	
+	189158602	wire8			\Default Work Unit\gal\wire\wire8	
+	274288443	menuScroll			\Default Work Unit\UI\menuScroll	
+	433216386	explosive			\Default Work Unit\enviroment\explosive	
+	512507780	daveJetpackRandomExhaust			\Default Work Unit\dave\daveJetpackRandomExhaust	
+	522694124	daveRandomGrunt			\Default Work Unit\dave\daveRandomGrunt	
+	579662040	gas			\Default Work Unit\enviroment\gas	
+	584329514	musicWinPlay			\Default Work Unit\music\musicWinPlay	
+	607463598	daveobjectCollision			\Default Work Unit\dave\daveobjectCollision	
+	661603698	daveOutofOxygen			\Default Work Unit\dave\daveOutofOxygen	
+	668664389	newLevel			\Default Work Unit\gameState\newLevel	
+	779278001	death			\Default Work Unit\gameState\death	
+	877642273	cinematic1			\Default Work Unit\Cinematics\cinematic1	
+	877642274	cinematic2			\Default Work Unit\Cinematics\cinematic2	
+	877642275	cinematic3			\Default Work Unit\Cinematics\cinematic3	
+	877642276	cinematic4			\Default Work Unit\Cinematics\cinematic4	
+	877642277	cinematic5			\Default Work Unit\Cinematics\cinematic5	
+	1016866911	daveSquishBetweenDoors			\Default Work Unit\dave\daveSquishBetweenDoors	
+	1075305830	menuClickForwards			\Default Work Unit\UI\menuClickForwards	
+	1124785720	gasLeak7			\Default Work Unit\gal\gasLeak\gasLeak7	
+	1124785721	gasLeak6			\Default Work Unit\gal\gasLeak\gasLeak6	
+	1124785722	gasLeak5			\Default Work Unit\gal\gasLeak\gasLeak5	
+	1124785723	gasLeak4			\Default Work Unit\gal\gasLeak\gasLeak4	
+	1124785724	gasLeak3			\Default Work Unit\gal\gasLeak\gasLeak3	
+	1124785725	gasLeak2			\Default Work Unit\gal\gasLeak\gasLeak2	
+	1124785726	gasLeak1			\Default Work Unit\gal\gasLeak\gasLeak1	
+	1203400786	restart			\Default Work Unit\gameState\restart	
+	1242499422	switchOn			\Default Work Unit\enviroment\switchOn	
+	1356393137	musicMainStop			\Default Work Unit\music\musicMainStop	
+	1404805401	doorOpen			\Default Work Unit\enviroment\doorOpen	
+	1406654456	slowmotionStart			\Default Work Unit\gameState\slowmotionStart	
+	1537918958	daveFirstLaunch			\Default Work Unit\dave\daveFirstLaunch	
+	1590382663	switch8			\Default Work Unit\gal\switch\switch8	
+	1590382664	switch7			\Default Work Unit\gal\switch\switch7	
+	1590382665	switch6			\Default Work Unit\gal\switch\switch6	
+	1590382666	switch5			\Default Work Unit\gal\switch\switch5	
+	1590382667	switch4			\Default Work Unit\gal\switch\switch4	
+	1590382668	switch3			\Default Work Unit\gal\switch\switch3	
+	1590382669	switch2			\Default Work Unit\gal\switch\switch2	
+	1590382670	switch1			\Default Work Unit\gal\switch\switch1	
+	1861472432	outOfOxygen4			\Default Work Unit\gal\outofOxygen\outOfOxygen4	
+	1861472433	outOfOxygen5			\Default Work Unit\gal\outofOxygen\outOfOxygen5	
+	1861472434	outOfOxygen6			\Default Work Unit\gal\outofOxygen\outOfOxygen6	
+	1861472435	outOfOxygen7			\Default Work Unit\gal\outofOxygen\outOfOxygen7	
+	1861472437	outOfOxygen1			\Default Work Unit\gal\outofOxygen\outOfOxygen1	
+	1861472438	outOfOxygen2			\Default Work Unit\gal\outofOxygen\outOfOxygen2	
+	1861472439	outOfOxygen3			\Default Work Unit\gal\outofOxygen\outOfOxygen3	
+	1988531540	musicWinStop			\Default Work Unit\music\musicWinStop	
+	2017509636	slowmotionStop			\Default Work Unit\gameState\slowmotionStop	
+	2059739492	pickupComic			\Default Work Unit\enviroment\pickupComic	
+	2108630538	daveVent			\Default Work Unit\dave\daveVent	
+	2341326211	narrative8			\Default Work Unit\gal\Narrative\narrative8	
+	2341326216	narrative3			\Default Work Unit\gal\Narrative\narrative3	
+	2341326217	narrative2			\Default Work Unit\gal\Narrative\narrative2	
+	2341326218	narrative1			\Default Work Unit\gal\Narrative\narrative1	
+	2341326220	narrative7			\Default Work Unit\gal\Narrative\narrative7	
+	2341326221	narrative6			\Default Work Unit\gal\Narrative\narrative6	
+	2341326222	narrative5			\Default Work Unit\gal\Narrative\narrative5	
+	2341326223	narrative4			\Default Work Unit\gal\Narrative\narrative4	
+	2388995740	pickupTrex			\Default Work Unit\enviroment\pickupTrex	
+	2392150155	daveCharge			\Default Work Unit\dave\daveCharge	
+	2478829233	fan1			\Default Work Unit\gal\fan\fan1	
+	2478829234	fan2			\Default Work Unit\gal\fan\fan2	
+	2478829235	fan3			\Default Work Unit\gal\fan\fan3	
+	2478829236	fan4			\Default Work Unit\gal\fan\fan4	
+	2478829237	fan5			\Default Work Unit\gal\fan\fan5	
+	2478829238	fan6			\Default Work Unit\gal\fan\fan6	
+	2486930427	musicMainPlay			\Default Work Unit\music\musicMainPlay	
+	2519729295	daveStaticCollision			\Default Work Unit\dave\daveStaticCollision	
+	2606874744	daveFirstLaunch_05			\Default Work Unit\dave\daveFirstLaunch_05	
+	2606874745	daveFirstLaunch_04			\Default Work Unit\dave\daveFirstLaunch_04	
+	2606874748	daveFirstLaunch_01			\Default Work Unit\dave\daveFirstLaunch_01	
+	2606874750	daveFirstLaunch_03			\Default Work Unit\dave\daveFirstLaunch_03	
+	2606874751	daveFirstLaunch_02			\Default Work Unit\dave\daveFirstLaunch_02	
+	2648706865	musicMenuPlay			\Default Work Unit\music\musicMenuPlay	
+	2736691391	menuPressStart			\Default Work Unit\UI\menuPressStart	
+	2792775536	remark12			\Default Work Unit\gal\remarks\remark12	
+	2792775537	remark13			\Default Work Unit\gal\remarks\remark13	
+	2792775538	remark10			\Default Work Unit\gal\remarks\remark10	
+	2792775539	remark11			\Default Work Unit\gal\remarks\remark11	
+	2792775540	remark16			\Default Work Unit\gal\remarks\remark16	
+	2792775541	remark17			\Default Work Unit\gal\remarks\remark17	
+	2792775542	remark14			\Default Work Unit\gal\remarks\remark14	
+	2792775543	remark15			\Default Work Unit\gal\remarks\remark15	
+	2792775546	remark18			\Default Work Unit\gal\remarks\remark18	
+	2917121896	electricity			\Default Work Unit\enviroment\electricity	
+	3092587493	pause			\Default Work Unit\gameState\pause	
+	3110939813	pickupOxygen			\Default Work Unit\enviroment\pickupOxygen	
+	3193570530	daveLaunch			\Default Work Unit\dave\daveLaunch	
+	3321711160	vent			\Default Work Unit\enviroment\vent	
+	3412868374	unpause			\Default Work Unit\gameState\unpause	
+	3465444258	davePutOutFire			\Default Work Unit\dave\davePutOutFire	
+	3467920165	pickupKeys			\Default Work Unit\enviroment\pickupKeys	
+	3536816288	daveCatchFire			\Default Work Unit\dave\daveCatchFire	
+	3619358932	ventAir			\Default Work Unit\enviroment\ventAir	
+	3669325296	daveElectrocute			\Default Work Unit\dave\daveElectrocute	
+	3700176345	lowOxygen6			\Default Work Unit\gal\lowOxygen\lowOxygen6	
+	3700176346	lowOxygen5			\Default Work Unit\gal\lowOxygen\lowOxygen5	
+	3700176347	lowOxygen4			\Default Work Unit\gal\lowOxygen\lowOxygen4	
+	3700176348	lowOxygen3			\Default Work Unit\gal\lowOxygen\lowOxygen3	
+	3700176349	lowOxygen2			\Default Work Unit\gal\lowOxygen\lowOxygen2	
+	3700176350	lowOxygen1			\Default Work Unit\gal\lowOxygen\lowOxygen1	
+	3782881839	doorShut			\Default Work Unit\enviroment\doorShut	
+	3900225255	musicMenuStop			\Default Work Unit\music\musicMenuStop	
+	3953897988	switchOff			\Default Work Unit\enviroment\switchOff	
+	4046533872	remark7			\Default Work Unit\gal\remarks\remark7	
+	4046533873	remark6			\Default Work Unit\gal\remarks\remark6	
+	4046533874	remark5			\Default Work Unit\gal\remarks\remark5	
+	4046533875	remark4			\Default Work Unit\gal\remarks\remark4	
+	4046533876	remark3			\Default Work Unit\gal\remarks\remark3	
+	4046533877	remark2			\Default Work Unit\gal\remarks\remark2	
+	4046533878	remark1			\Default Work Unit\gal\remarks\remark1	
+	4046533886	remark9			\Default Work Unit\gal\remarks\remark9	
+	4046533887	remark8			\Default Work Unit\gal\remarks\remark8	
+	4058101365	gameStart			\Default Work Unit\gameState\gameStart	
+	4153348305	daveFireWoosh			\Default Work Unit\dave\daveFireWoosh	
+	4294846034	menuClickBackwards			\Default Work Unit\UI\menuClickBackwards	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
-	3851149549	galVersion			\Default Work Unit\galVersion	
+	42812665	galLanguage			\Default Work Unit\galLanguage	
 
 Switch	ID	Name	Switch Group			Notes
-	1534528632	v3	galVersion			
-	1534528633	v2	galVersion			
-	1534528634	v1	galVersion			
+	311764526	dan	galLanguage			
+	529726535	eng	galLanguage			
 
 State Group	ID	Name			Wwise Object Path	Notes
+	42812665	galLanguage			\Default Work Unit\galLanguage	
+	340593036	slowMotion			\Default Work Unit\slowMotion	
 	2391494160	power			\Default Work Unit\power	
 
 State	ID	Name	State Group			Notes
+	311764526	Dan	galLanguage			
+	529726535	Eng	galLanguage			
+	748895195	None	galLanguage			
+	748895195	None	slowMotion			
+	930712164	off	slowMotion			
+	1651971902	on	slowMotion			
 	748895195	None	power			
 	930712164	off	power			
 	1651971902	on	power			
 
 Custom State	ID	Name	State Group	Owner		Notes
 	298898746	off	power	\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electricity loop		
+	775978487	on	slowMotion	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	640585335	effectsVolume			\Default Work Unit\effectsVolume	
@@ -87,37 +193,44 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	19945158	blæser	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\blæser_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\blæser		100752
 	21575732	explosion1	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\explosion1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion1		11315
-	62533466	uh, i love fireworks	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\uh, i love fireworks_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\explosion\explosion\uh, i love fireworks		49218
+	40737861	My scans show an oxygen tank somwhere in this area i recomend you collect one	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\My scans show an oxygen tank somwhere in this area i recomend you collect one_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO22\My scans show an oxygen tank somwhere in this area i recomend you collect one		75138
 	68587342	electrocute4	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\electrocute4_C5470726.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute4		76719
 	69768843	explosive countdown	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\explosive countdown_55A8CA08.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosive countdown		48139
-	79167690	dave, cool down	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\dave, cool down_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\on fire\on fire\dave, cool down		23538
+	111064016	What are you doing dave you need to get to the escape pod (sweet)	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\unprocessed\What are you doing dave you need to get to the escape pod (sweet)_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative7\What are you doing dave you need to get to the escape pod (sweet)		47450
 	116050032	explosion6	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\explosion6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion6		10965
 	117874704	preexplosion	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\preexplosion_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\preexplosion		4029
-	135477313	dave, cool down v2	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\dave, cool down v2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\on fire\on fire v2\dave, cool down v2		35493
-	211652015	dave, you are on fire v2	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\dave, you are on fire v2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\on fire\on fire v2\dave, you are on fire v2		50679
+	119389034	Dave I have openend the door to the escape pod Please evacuate the station	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\unprocessed\Dave I have openend the door to the escape pod Please evacuate the station_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative3\Dave I have openend the door to the escape pod Please evacuate the station		79354
+	161486405	Husk nu Dave; Ned og rul!	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\Husk nu Dave; Ned og rul!_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\gas3\Husk nu Dave; Ned og rul!		36949
 	213148062	menuScrollclick4	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\menuScrollclick4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\scroll\menuScrollclick4		12703
+	230076930	Mit software har ikke nogen fejl	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\Mit software har ikke nogen fejl_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\GR2\Mit software har ikke nogen fejl		34796
 	261205730	electrocute5	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\electrocute5_57EF8D2F.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute5		41020
 	263781592	gasloop	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\gasloop_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\gasloop		169445
 	271878563	putoutfire3	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\putoutfire3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\putoutfire\putoutfire3		35666
 	278196675	boards of canada dawn chorus	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\boards of canada dawn chorus_824B34CA.wem		\Interactive Music Hierarchy\Default Work Unit\boards of canada dawn chorus\boards of canada dawn chorus		4202
 	278331299	black moth super rainbow gold splatter	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\black moth super rainbow gold splatter_824B34CA.wem		\Interactive Music Hierarchy\Default Work Unit\black moth super rainbow gold splatter\black moth super rainbow gold splatter		3596
 	289830870	souvlaki spacestation	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\souvlaki spacestation_824B34CA.wem		\Interactive Music Hierarchy\Default Work Unit\souvlaki spacestation\souvlaki spacestation		6828
-	336230544	wow that was shocking v3	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\wow that was shocking v3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\electrocuted\electrocuted v3\wow that was shocking v3		138320
+	305130721	Nu bliver det da blæst helt ud af proportioner, Dave	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\Nu bliver det da blæst helt ud af proportioner, Dave_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan1\Nu bliver det da blæst helt ud af proportioner, Dave		34213
+	309700752	jetpack dan	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\jetpack dan_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative5\jetpack dan		110306
+	338097124	Kan du også lugte noget, Dave	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\Kan du også lugte noget, Dave_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\gas1\Kan du også lugte noget, Dave		46142
+	341595437	Jeg har altid synes der var lidt meget luft mellem dine ører,	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\Jeg har altid synes der var lidt meget luft mellem dine ører,_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan3\Jeg har altid synes der var lidt meget luft mellem dine ører,		36810
 	343732216	explosion2	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\explosion2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion2		13013
+	345686519	vi har teknologien til bringe dig tilbage, når kommer galt afsted_ Heldigt for dig___	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\unprocessed\vi har teknologien til bringe dig tilbage, når kommer galt afsted. Heldigt for dig... _645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative8\vi har teknologien til bringe dig tilbage, når kommer galt afsted_ Heldigt for dig___		67939
 	369241998	electricity loop	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\electricity loop_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electricity loop		320087
-	382372623	dave you are on fire v3	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\dave you are on fire v3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\on fire\on fire v3\dave you are on fire v3		47004
-	387206771	dave get to the escape pod	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\dave get to the escape pod_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\random narative\dave get to the escape pod		44319
 	399586230	launch mockup1 medium	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\launch mockup1 medium_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launch\launch mockup1 medium		19842
 	401680823	door shut8_1	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\door shut8_1_1C3ABE54.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut8_1		8558
-	448903764	dave, cool down2	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\dave, cool down2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\on fire\on fire\dave, cool down2		30345
+	406379750	Dave my sensors are picking up something__ It's coming closer	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\Dave my sensors are picking up something.. It's coming closer_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative1\Dave my sensors are picking up something__ It's coming closer		79071
+	422434534	Mine scaninger viser at der er en ilt flaske et sted i nærheden, jeg foreslår du finder den	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\Mine scaninger viser at der er en ilt flaske et sted i nærheden, jeg foreslår du finder den_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO22\Mine scaninger viser at der er en ilt flaske et sted i nærheden, jeg foreslår du finder den		59816
+	449696872	Dave, jeg ville bare informere dig om at der er ild i dig	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\Dave, jeg ville bare informere dig om at der er ild i dig_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\gas2\Dave, jeg ville bare informere dig om at der er ild i dig		67052
 	453653314	explosion3	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\explosion3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion3		12899
 	456998750	electrocute6	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\electrocute6_54D27A1C.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute6		41408
 	468680021	menuScrollclick2	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\menuScrollclick2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\scroll\menuScrollclick2		12056
 	473138648	fireloop	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\fireloop_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\fire\fireloop		75050
-	473978001	dave cool down2 v3	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\dave cool down2 v3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\on fire\on fire v3\dave cool down2 v3		27156
+	477009085	De burde virkelig adskille ilt til luft og ilt til brændstof bedre i de her jetpacks___ Måske_	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\De burde virkelig adskille ilt til luft og ilt til brændstof bedre i de her jetpacks... Måske._645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO23\De burde virkelig adskille ilt til luft og ilt til brændstof bedre i de her jetpacks___ Måske_		86529
+	478495480	I always thought you were an airhead,	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\I always thought you were an airhead,_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan3\I always thought you were an airhead,		45336
+	489425779	I'm not anti-social; I'm just not user friendly Dave	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\I'm not anti-social; I'm just not user friendly Dave_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\GR3\I'm not anti-social; I'm just not user friendly Dave		54075
 	507642210	door shut9_1	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\door shut9_1_442763BD.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut9_1		8998
 	516794672	pink floyd breathe	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\pink floyd breathe_824B34CA.wem		\Interactive Music Hierarchy\Default Work Unit\pink floyd breathe\pink floyd breathe		3687
-	536631675	dave, you are an idiot v2	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\dave, you are an idiot v2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\random insults\random insults v2\dave, you are an idiot v2		43013
+	526762414	The hazards here dont seem too friendly___ you should go say hi!	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\The hazards here dont seem too friendly... you should go say hi!_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative6\The hazards here dont seem too friendly___ you should go say hi!		64673
 	556032845	gasonfire	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\gasonfire_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\gasonfire		87567
 	559213883	door shut2_1	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\door shut2_1_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut2_1		10639
 	560816914	electrocute3	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\electrocute3_E2B95D9C.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute3		93284
@@ -127,37 +240,48 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	598173962	door shut4_1	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\door shut4_1_F18FE6A0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut4_1		8963
 	621924902	door shut10_1	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\door shut10_1_C23FFF8B.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut10_1		7908
 	625149348	kick	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\kick_5DC25BB8.wem		\Actor-Mixer Hierarchy\Default Work Unit\music\kick		32294
-	635038486	dave, you are an idiot	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\dave, you are an idiot_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\random insults\random insults\dave, you are an idiot		34379
+	643284108	Dave, mine sensorere har opfanget noget__ det nærmer sig, hurtigt	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\unprocessed\Dave, mine sensorere har opfanget noget.. det nærmer sig, hurtigt_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative1\Dave, mine sensorere har opfanget noget__ det nærmer sig, hurtigt		67188
+	658598555	Mine beregninger fortæller mig at dit ilt niveau er lavt	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\Mine beregninger fortæller mig at dit ilt niveau er lavt_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO21\Mine beregninger fortæller mig at dit ilt niveau er lavt		37085
+	669704237	Dave, jeg har åbnet porten til redningskapslen, vær sød at evakuere station	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\unprocessed\Dave, jeg har åbnet porten til redningskapslen, vær sød at evakuere station_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative3\Dave, jeg har åbnet porten til redningskapslen, vær sød at evakuere station		107125
 	670195520	door shut6_1	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\door shut6_1_3DB3946E.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut6_1		9574
-	703440495	dave cool down v3	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\dave cool down v3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\on fire\on fire v3\dave cool down v3		30469
-	705258468	dave, cool down2 v2	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\dave, cool down2 v2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\on fire\on fire v2\dave, cool down2 v2		29369
-	711692435	i love fireworks	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\i love fireworks_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\explosion\explosion v2\i love fireworks		40744
+	691120774	this is being blown out of proportions Dave	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\this is being blown out of proportions Dave_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan1\this is being blown out of proportions Dave		33579
+	694615552	Did you smell something Dave	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\Did you smell something Dave_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\gas1\Did you smell something Dave		22063
+	694702258	jetpack eng	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\jetpack eng_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative5\jetpack eng		201393
+	698227094	Hvad har du gang i, Dave Du skal hen imod rednings kapslen	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\unprocessed\Hvad har du gang i, Dave Du skal hen imod rednings kapslen_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative7\Hvad har du gang i, Dave Du skal hen imod rednings kapslen		43375
+	719297784	advarsel, bered på sammenstød	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\advarsel, bered på sammenstød_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative2\advarsel, bered på sammenstød		46458
 	723073472	electrocute2	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\electrocute2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute2		48481
 	725214750	charge	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\charge_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\music\charge		189741
-	732145868	i love fireworks v3	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\i love fireworks v3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\explosion\explosion v3\i love fireworks v3		70216
+	732964349	Dave zero, natural selection one_	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\unprocessed\Dave zero, natural selection one. _645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative4\Dave zero, natural selection one_		43763
+	747686196	remember Dave; stop drop and roll	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\remember Dave; stop drop and roll_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\gas3\remember Dave; stop drop and roll		46620
+	781703881	if at first you dont succeed call it version 1	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\if at first you dont succeed call it version 1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\GR1\if at first you dont succeed call it version 1		51900
+	782658039	Your lucky we have the tecnology to bring you back when you hurt your self	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\unprocessed\Your lucky we have the tecnology to bring you back when you hurt your self_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative8\Your lucky we have the tecnology to bring you back when you hurt your self		78052
 	786633454	menuclickbackwards	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\menuclickbackwards_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\menuclickbackwards		12558
-	793887671	dave, you are on fire	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\dave, you are on fire_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\on fire\on fire\dave, you are on fire		44304
+	786840149	they really should seperate the oxygen for fuel and the oxygen for breathing in theese jetpacks_ or maybe not_ low oxygen	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\they really should seperate the oxygen for fuel and the oxygen for breathing in theese jetpacks. or maybe not. low oxygen_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO23\they really should seperate the oxygen for fuel and the oxygen for breathing in theese jetpacks_ or maybe not_ low oxygen		104689
+	803846981	Just go with the flow, spaceman	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\Just go with the flow, spaceman_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan2\Just go with the flow, spaceman		47297
+	810091116	bare følg med strømmen	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\bare følg med strømmen_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan2\bare følg med strømmen		32700
 	824586379	putoutfire2	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\putoutfire2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\putoutfire\putoutfire2		34493
 	846681906	door shut5_1	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\door shut5_1_3F3DDB45.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut5_1		8522
 	852010570	putoutfire1	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\putoutfire1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\putoutfire\putoutfire1		32583
 	854569370	le femme d'argent	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\le femme d'argent_824B34CA.wem		\Interactive Music Hierarchy\Default Work Unit\le femme d'argent\le femme d'argent		4755
-	867253049	dave you are an idiot v3	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\dave you are an idiot v3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\random insults\random insults v3\dave you are an idiot v3		51515
-	873260049	uh, i love fireworks2	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\uh, i love fireworks2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\explosion\explosion\uh, i love fireworks2		81655
+	854761104	Dave nul, (Charles) Darwin 1	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\unprocessed\Dave nul, (Charles) Darwin 1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative4\Dave nul, (Charles) Darwin 1		63226
 	877963907	electrocute1	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\electrocute1_E0C30CD6.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute1		88990
 	878892781	explosion4	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\explosion4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion4		37864
-	885339843	i love fireworks2 v3	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\i love fireworks2 v3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\explosion\explosion v3\i love fireworks2 v3		90133
 	920814763	menuclickforward	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\menuclickforward_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\menuclickforward		16992
+	926836453	det her sted virker ikke særligt sikkert___ men Hey! der er kun en måde at finde ud af det på	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\unprocessed\det her sted virker ikke særligt sikkert... men Hey! der er kun en måde at finde ud af det på_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative6\det her sted virker ikke særligt sikkert___ men Hey! der er kun en måde at finde ud af det på		76969
 	942376865	door shut7_1	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\door shut7_1_8AF2D816.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut7_1		9868
 	949012013	main atmos	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\main atmos_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\main atmos		364397
-	964967900	wow, that was shocking	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\wow, that was shocking_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\electrocuted\electrocuted\wow, that was shocking		53823
+	962457986	Hvis det ikke lykkes første gang; så kald det først version	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\Hvis det ikke lykkes første gang; så kald det først version_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\GR1\Hvis det ikke lykkes første gang; så kald det først version		57679
+	978568623	Jeg er ikke asocial, Dave_ jeg er bare ikke brugervenlig	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\Jeg er ikke asocial, Dave. jeg er bare ikke brugervenlig_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\GR3\Jeg er ikke asocial, Dave_ jeg er bare ikke brugervenlig		36344
+	980546618	Dave im just imforming you that your on fire	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\Dave im just imforming you that your on fire_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\gas2\Dave im just imforming you that your on fire		54015
 	997255121	menuScrollclick3	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\menuScrollclick3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\scroll\menuScrollclick3		11915
 	1008444769	catchfire	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\catchfire_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\fire\catchfire		75081
+	1019037759	My readings tell me that your oxygen levels are low	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\My readings tell me that your oxygen levels are low_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO21\My readings tell me that your oxygen levels are low		27374
 	1031646511	launch mockup1 long	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\launch mockup1 long_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launch\launch mockup1 long		17408
-	1034490362	i love fireworks2	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\i love fireworks2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\explosion\explosion v2\i love fireworks2		60077
 	1041668143	menuScrollclick	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\menuScrollclick_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\scroll\menuScrollclick		12602
-	1054817587	wow that was shocking	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\wow that was shocking_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\electrocuted\electrocuted v2\wow that was shocking		44898
+	1054853600	my software does not have any bugs___ 2	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\my software does not have any bugs... 2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\GR2\my software does not have any bugs___ 2		43790
 	1064419361	explosion5	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\explosion5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion5		10758
 	1066027588	door shut1_1	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\door shut1_1_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut1_1		8628
+	1068945317	alert, Prepare for impact	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\alert, Prepare for impact_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative2\alert, Prepare for impact		81502
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
 	278196675	boards of canada dawn chorus	Y:\Documents\WwiseProjects\Spaced Out\.cache\Windows\SFX\boards of canada dawn chorus_824B34CA.wem	278196675.wem	\Interactive Music Hierarchy\Default Work Unit\boards of canada dawn chorus\boards of canada dawn chorus	

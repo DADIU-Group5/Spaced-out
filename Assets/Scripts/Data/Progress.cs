@@ -22,6 +22,7 @@ public class Progress : ScriptableObject
         {
             levels[i] = new LevelProgress();
         }
+
         levels[0].unlocked = true;
     }
 

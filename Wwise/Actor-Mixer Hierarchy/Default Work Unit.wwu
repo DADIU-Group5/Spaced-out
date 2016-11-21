@@ -6,6 +6,13 @@
 				<Folder Name="Gal" ID="{92E1AE8D-331E-4854-9A62-8932638C0D4C}" ShortID="738396632">
 					<ChildrenList>
 						<ActorMixer Name="gal" ID="{F687B24D-DBD6-4AC4-9F76-6E5FA4F1970C}" ShortID="808935501">
+							<PropertyList>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
@@ -13,22 +20,11 @@
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
 								</Reference>
-								<Reference Name="UserAuxSend0">
-									<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<RandomSequenceContainer Name="random narative" ID="{55EA9F00-13FA-48BF-949A-66100FCA1EA1}" ShortID="51218123">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-										</Reference>
-									</ReferenceList>
+								<Folder Name="general remarks" ID="{C2A86418-676E-4848-8D3F-63161302C04C}" ShortID="688567249">
 									<ChildrenList>
-										<Sound Name="dave get to the escape pod" ID="{D6F2AE30-7218-4512-833C-DC1589A9417D}" ShortID="380414721" Type="SoundFX">
+										<SwitchContainer Name="GR1" ID="{78723581-4CDA-4272-85EC-3F9AAA66E0A1}" ShortID="364313899">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
@@ -38,31 +34,2195 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="dave get to the escape pod" ID="{97224699-3E87-4B8D-A095-F149B5BF9AEC}" ShortID="387206771">
-													<Language>SFX</Language>
-													<AudioFile>dave get to the escape pod.wav</AudioFile>
-												</AudioFileSource>
+												<Sound Name="Hvis det ikke lykkes første gang; så kald det først version" ID="{924893E2-DA4F-46D2-B84C-0F87C3353F01}" ShortID="1010678566" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Hvis det ikke lykkes første gang; så kald det først version" ID="{9A3A6515-D706-44BF-B8FA-2213982E435D}" ShortID="962457986">
+															<Language>SFX</Language>
+															<AudioFile>Hvis det ikke lykkes første gang; så kald det først version.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Hvis det ikke lykkes første gang; så kald det først version" ID="{9A3A6515-D706-44BF-B8FA-2213982E435D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="if at first you dont succeed call it version 1" ID="{7FE2D91A-66E8-493C-8DA8-DDF358362C8B}" ShortID="799020940" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="if at first you dont succeed call it version 1" ID="{6DF7F5EA-375C-4D5F-8198-4C6A1C6A7164}" ShortID="781703881">
+															<Language>SFX</Language>
+															<AudioFile>if at first you dont succeed call it version 1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="if at first you dont succeed call it version 1" ID="{6DF7F5EA-375C-4D5F-8198-4C6A1C6A7164}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="dave get to the escape pod" ID="{97224699-3E87-4B8D-A095-F149B5BF9AEC}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="if at first you dont succeed call it version 1" ID="{7FE2D91A-66E8-493C-8DA8-DDF358362C8B}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Hvis det ikke lykkes første gang; så kald det først version" ID="{924893E2-DA4F-46D2-B84C-0F87C3353F01}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="if at first you dont succeed call it version 1" ID="{7FE2D91A-66E8-493C-8DA8-DDF358362C8B}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="Hvis det ikke lykkes første gang; så kald det først version" ID="{924893E2-DA4F-46D2-B84C-0F87C3353F01}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="GR2" ID="{DBF8D642-D7A3-423C-B7A2-F4CA4BB3973B}" ShortID="491670608">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Mit software har ikke nogen fejl" ID="{1C67F83E-4B11-4CBC-A368-977B694BEB06}" ShortID="407408118" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mit software har ikke nogen fejl" ID="{864C86D0-6F8F-4098-8B7D-B4CAC32D465C}" ShortID="230076930">
+															<Language>SFX</Language>
+															<AudioFile>Mit software har ikke nogen fejl.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Mit software har ikke nogen fejl" ID="{864C86D0-6F8F-4098-8B7D-B4CAC32D465C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="my software does not have any bugs___ 2" ID="{06B5C546-AC56-4A6A-9E65-CDB93C54E5A5}" ShortID="441147786" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="my software does not have any bugs___ 2" ID="{8E0B78A1-96BE-447D-BA22-6EE0FD90B764}" ShortID="1054853600">
+															<Language>SFX</Language>
+															<AudioFile>my software does not have any bugs... 2.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="my software does not have any bugs___ 2" ID="{8E0B78A1-96BE-447D-BA22-6EE0FD90B764}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{BBC04D70-2427-451B-8F93-8407A5EFD474}"/>
+												<DefaultSwitchRef Name="eng" ID="{F0C72C25-FDD5-4B1C-9045-1FDCB8E9FD50}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Mit software har ikke nogen fejl" ID="{1C67F83E-4B11-4CBC-A368-977B694BEB06}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="my software does not have any bugs___ 2" ID="{06B5C546-AC56-4A6A-9E65-CDB93C54E5A5}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="eng" ID="{F0C72C25-FDD5-4B1C-9045-1FDCB8E9FD50}"/>
+														<ItemList>
+															<ItemRef Name="my software does not have any bugs___ 2" ID="{06B5C546-AC56-4A6A-9E65-CDB93C54E5A5}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="dan" ID="{067E8178-15B4-4628-AEDE-BD89FB2A8F68}"/>
+														<ItemList>
+															<ItemRef Name="Mit software har ikke nogen fejl" ID="{1C67F83E-4B11-4CBC-A368-977B694BEB06}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="GR3" ID="{A85FF6C4-E8F5-4EA6-A220-B9E74521C1FB}" ShortID="984398361">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="I'm not anti-social; I'm just not user friendly Dave" ID="{11E1A7A0-334B-4333-BEE6-A066AD562D7F}" ShortID="951408151" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="I'm not anti-social; I'm just not user friendly Dave" ID="{11E9D165-3A7E-4AE9-A4F5-9CB1123089B0}" ShortID="489425779">
+															<Language>SFX</Language>
+															<AudioFile>I'm not anti-social; I'm just not user friendly Dave.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="I'm not anti-social; I'm just not user friendly Dave" ID="{11E9D165-3A7E-4AE9-A4F5-9CB1123089B0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Jeg er ikke asocial, Dave_ jeg er bare ikke brugervenlig" ID="{DCDB16DE-498F-4CD5-A7C2-A8FA50070129}" ShortID="765313503" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Jeg er ikke asocial, Dave_ jeg er bare ikke brugervenlig" ID="{A9718601-E4CD-4DE8-B277-236538FD0454}" ShortID="978568623">
+															<Language>SFX</Language>
+															<AudioFile>Jeg er ikke asocial, Dave. jeg er bare ikke brugervenlig.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Jeg er ikke asocial, Dave_ jeg er bare ikke brugervenlig" ID="{A9718601-E4CD-4DE8-B277-236538FD0454}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="I'm not anti-social; I'm just not user friendly Dave" ID="{11E1A7A0-334B-4333-BEE6-A066AD562D7F}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Jeg er ikke asocial, Dave_ jeg er bare ikke brugervenlig" ID="{DCDB16DE-498F-4CD5-A7C2-A8FA50070129}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="I'm not anti-social; I'm just not user friendly Dave" ID="{11E1A7A0-334B-4333-BEE6-A066AD562D7F}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="Jeg er ikke asocial, Dave_ jeg er bare ikke brugervenlig" ID="{DCDB16DE-498F-4CD5-A7C2-A8FA50070129}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
 									</ChildrenList>
-								</RandomSequenceContainer>
-								<SwitchContainer Name="electrocuted" ID="{32B60418-E712-4B2E-AB33-360EA5F0E5CB}" ShortID="590241011">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-										</Reference>
-									</ReferenceList>
+								</Folder>
+								<Folder Name="wires" ID="{6BFCA106-CDEA-4336-A805-C1C043C24E27}" ShortID="237325166">
 									<ChildrenList>
-										<RandomSequenceContainer Name="electrocuted" ID="{989F654C-E76E-41DB-B938-AF67CA4C0623}" ShortID="58653269">
-											<PropertyList>
-												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-											</PropertyList>
+										<SwitchContainer Name="wires1" ID="{39358689-1115-4B9F-9FAC-8D80472754CA}" ShortID="226250978">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Q What is an electrician's favorite ice cream flavor  A Shock-o-lot! ehehehe__ Dave" ID="{1E87B7F7-0403-4EE3-A9C2-4580C29DEC9C}" ShortID="729256450" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Q What is an electrician's favorite ice cream flavor  A Shock-o-lot! ehehehe__ Dave" ID="{AC38262C-DE02-47B6-BD68-78E76A2ABD09}" ShortID="841432735">
+															<Language>SFX</Language>
+															<AudioFile>Q What is an electrician's favorite ice cream flavor  A Shock-o-lot! ehehehe.. Dave.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Q What is an electrician's favorite ice cream flavor  A Shock-o-lot! ehehehe__ Dave" ID="{AC38262C-DE02-47B6-BD68-78E76A2ABD09}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Spørgsmål Hvad er eleektrikerens yndligs smag svar Chock-olade_ hahaha_" ID="{10AB6220-8DE7-4CAE-82B6-2AEEC078C5A0}" ShortID="484540855" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Spørgsmål Hvad er eleektrikerens yndligs smag svar Chock-olade_ hahaha_" ID="{08163DC5-C143-4147-90E9-B7CA6BCD3512}" ShortID="916811906">
+															<Language>SFX</Language>
+															<AudioFile>Spørgsmål Hvad er eleektrikerens yndligs smag svar Chock-olade. hahaha..wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Spørgsmål Hvad er eleektrikerens yndligs smag svar Chock-olade_ hahaha_" ID="{08163DC5-C143-4147-90E9-B7CA6BCD3512}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Spørgsmål Hvad er eleektrikerens yndligs smag svar Chock-olade_ hahaha_" ID="{10AB6220-8DE7-4CAE-82B6-2AEEC078C5A0}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Q What is an electrician's favorite ice cream flavor  A Shock-o-lot! ehehehe__ Dave" ID="{1E87B7F7-0403-4EE3-A9C2-4580C29DEC9C}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="wires2" ID="{73C73E88-8003-4604-93CF-A06D64B124A6}" ShortID="594286474">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="din nuværende situation er simpelthen shockerende!" ID="{61E5B0D3-C7DC-4840-A534-90E2A07F3989}" ShortID="260136609" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="din nuværende situation er simpelthen shockerende!" ID="{7B9F59F3-D56D-47B6-91E4-57EFAE395E05}" ShortID="502518274">
+															<Language>SFX</Language>
+															<AudioFile>din nuværende situation er simpelthen shockerende!.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="din nuværende situation er simpelthen shockerende!" ID="{7B9F59F3-D56D-47B6-91E4-57EFAE395E05}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="I find the current situation shocking" ID="{F5F6EF0A-1B88-4914-AA81-B1ED8F65DD92}" ShortID="973788614" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="I find the current situation shocking" ID="{5CF6DDE1-9DCC-4354-BB29-651E2D5D39EB}" ShortID="742744779">
+															<Language>SFX</Language>
+															<AudioFile>I find the current situation shocking.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="I find the current situation shocking" ID="{5CF6DDE1-9DCC-4354-BB29-651E2D5D39EB}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="I find the current situation shocking" ID="{F5F6EF0A-1B88-4914-AA81-B1ED8F65DD92}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="din nuværende situation er simpelthen shockerende!" ID="{61E5B0D3-C7DC-4840-A534-90E2A07F3989}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="wires3" ID="{F62E3171-F96F-4563-9104-4157D8CA43E7}" ShortID="802131834">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="at se dig sådan her, Dave___ Det gør mig helt ekstatisk!" ID="{D9C906F3-3662-43EB-B34E-A2F9843A62F8}" ShortID="87077517" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="at se dig sådan her, Dave___ Det gør mig helt ekstatisk!" ID="{3E5520A4-5ADE-4DC1-A9E2-A215D79D2DCD}" ShortID="586212579">
+															<Language>SFX</Language>
+															<AudioFile>at se dig sådan her, Dave... Det gør mig helt ekstatisk!.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="at se dig sådan her, Dave___ Det gør mig helt ekstatisk!" ID="{3E5520A4-5ADE-4DC1-A9E2-A215D79D2DCD}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="You finally managed to get rid of that nasty electrical charge" ID="{A1330BB6-4EA7-43A1-872E-5FAC2AE8B3A8}" ShortID="303235011" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="You finally managed to get rid of that nasty electrical charge" ID="{BA8CF858-B641-4FCB-81D6-A18EBFD8CEDC}" ShortID="320306679">
+															<Language>SFX</Language>
+															<AudioFile>You finally managed to get rid of that nasty electrical charge.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="You finally managed to get rid of that nasty electrical charge" ID="{BA8CF858-B641-4FCB-81D6-A18EBFD8CEDC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="You finally managed to get rid of that nasty electrical charge" ID="{A1330BB6-4EA7-43A1-872E-5FAC2AE8B3A8}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="at se dig sådan her, Dave___ Det gør mig helt ekstatisk!" ID="{D9C906F3-3662-43EB-B34E-A2F9843A62F8}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+											</GroupingInfo>
+										</SwitchContainer>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="switches" ID="{DB472636-B342-428B-A05B-9AFD457B5691}" ShortID="910219218">
+									<ChildrenList>
+										<SwitchContainer Name="switch1" ID="{7D2A142D-654E-4934-89CA-519F801F22A7}" ShortID="150014918">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Any fool can use a computer_ Many do" ID="{D2E0E9A2-A6A9-4E94-A3E9-CE9089F3666F}" ShortID="540938102" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Any fool can use a computer_ Many do" ID="{8D2DF80B-333E-453C-942C-468FEDB3C6FF}" ShortID="320687540">
+															<Language>SFX</Language>
+															<AudioFile>Any fool can use a computer. Many do.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Any fool can use a computer_ Many do" ID="{8D2DF80B-333E-453C-942C-468FEDB3C6FF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="En hver tåbe kan bruge en computer_ Mange gør det også" ID="{7570F0A2-51B7-48E0-9FE9-C2EE2BA0E4D5}" ShortID="140633508" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="En hver tåbe kan bruge en computer_ Mange gør det også" ID="{916FCCD2-1BB1-4B66-B690-749CE650DBE9}" ShortID="779537226">
+															<Language>SFX</Language>
+															<AudioFile>En hver tåbe kan bruge en computer. Mange gør det også.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="En hver tåbe kan bruge en computer_ Mange gør det også" ID="{916FCCD2-1BB1-4B66-B690-749CE650DBE9}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Any fool can use a computer_ Many do" ID="{D2E0E9A2-A6A9-4E94-A3E9-CE9089F3666F}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="En hver tåbe kan bruge en computer_ Mange gør det også" ID="{7570F0A2-51B7-48E0-9FE9-C2EE2BA0E4D5}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="switch2" ID="{A494FFCB-2C5B-4FC6-99F6-BF66D08FECD2}" ShortID="725756455">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="hvor er det flot, Jeg har aldrig tvivlet på dine evner, om at udføre så svær en opgave_" ID="{860ED1FB-69FE-4F63-921F-558E2C4A47C8}" ShortID="687875122" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="hvor er det flot, Jeg har aldrig tvivlet på dine evner, om at udføre så svær en opgave_" ID="{C11CC8EA-D458-4663-B83B-6BC1B56C7369}" ShortID="551016797">
+															<Language>SFX</Language>
+															<AudioFile>hvor er det flot, Jeg har aldrig tvivlet på dine evner, om at udføre så svær en opgave..wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="hvor er det flot, Jeg har aldrig tvivlet på dine evner, om at udføre så svær en opgave_" ID="{C11CC8EA-D458-4663-B83B-6BC1B56C7369}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="I have never doubted your ability to complete a difficult task" ID="{1CE4C9C5-6F5E-4930-9A57-85457D421481}" ShortID="232574734" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="I have never doubted your ability to complete a difficult task" ID="{59C31C30-BF61-4133-B9F5-A94F0CB9380B}" ShortID="684018947">
+															<Language>SFX</Language>
+															<AudioFile>I have never doubted your ability to complete a difficult task.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="I have never doubted your ability to complete a difficult task" ID="{59C31C30-BF61-4133-B9F5-A94F0CB9380B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="I have never doubted your ability to complete a difficult task" ID="{1CE4C9C5-6F5E-4930-9A57-85457D421481}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="hvor er det flot, Jeg har aldrig tvivlet på dine evner, om at udføre så svær en opgave_" ID="{860ED1FB-69FE-4F63-921F-558E2C4A47C8}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="switch3" ID="{56A673F7-49A2-41D9-B4B1-1B261CE4480C}" ShortID="324431850">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Det er en virkelig stor knap" ID="{063A9CA6-FB7E-4D9C-B251-7D78B3647F46}" ShortID="558722542" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Det er en virkelig stor knap" ID="{377F1246-91D5-4CEF-BD27-080D48174E98}" ShortID="950476620">
+															<Language>SFX</Language>
+															<AudioFile>Det er en virkelig stor knap.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Det er en virkelig stor knap" ID="{377F1246-91D5-4CEF-BD27-080D48174E98}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="That is a really big button" ID="{AAE90312-5C29-4CF2-8FBE-D59D5E827F83}" ShortID="341795085" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="That is a really big button " ID="{E5FB923D-87CC-4336-A686-04E4E5B631B0}" ShortID="426579845">
+															<Language>SFX</Language>
+															<AudioFile>That is a really big button .wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="That is a really big button " ID="{E5FB923D-87CC-4336-A686-04E4E5B631B0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="That is a really big button" ID="{AAE90312-5C29-4CF2-8FBE-D59D5E827F83}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Det er en virkelig stor knap" ID="{063A9CA6-FB7E-4D9C-B251-7D78B3647F46}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+											</GroupingInfo>
+										</SwitchContainer>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="fan" ID="{F3DF8463-582D-493B-8C50-23A750F1879F}" ShortID="681737128">
+									<ChildrenList>
+										<SwitchContainer Name="fan1" ID="{DD64B8C6-2BF7-44F5-BC35-B37D1DFDF088}" ShortID="581991013">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Nu bliver det da blæst helt ud af proportioner, Dave" ID="{2FDF4DC8-DA67-4E36-A7A9-979BB81146C6}" ShortID="918895477" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nu bliver det da blæst helt ud af proportioner, Dave" ID="{ABD9628A-FC34-4F87-8482-CDF30A34876A}" ShortID="305130721">
+															<Language>SFX</Language>
+															<AudioFile>Nu bliver det da blæst helt ud af proportioner, Dave.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nu bliver det da blæst helt ud af proportioner, Dave" ID="{ABD9628A-FC34-4F87-8482-CDF30A34876A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="this is being blown out of proportions Dave" ID="{C677876F-80F1-4D09-ABAA-27C6EB511807}" ShortID="879470445" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="this is being blown out of proportions Dave" ID="{58EA08FE-96EA-405E-98FD-1F2A489B845D}" ShortID="691120774">
+															<Language>SFX</Language>
+															<AudioFile>this is being blown out of proportions Dave.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="this is being blown out of proportions Dave" ID="{58EA08FE-96EA-405E-98FD-1F2A489B845D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="this is being blown out of proportions Dave" ID="{C677876F-80F1-4D09-ABAA-27C6EB511807}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Nu bliver det da blæst helt ud af proportioner, Dave" ID="{2FDF4DC8-DA67-4E36-A7A9-979BB81146C6}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="this is being blown out of proportions Dave" ID="{C677876F-80F1-4D09-ABAA-27C6EB511807}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="Nu bliver det da blæst helt ud af proportioner, Dave" ID="{2FDF4DC8-DA67-4E36-A7A9-979BB81146C6}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="fan2" ID="{FA04C439-D21F-4361-8EBB-7C6FA25D9835}" ShortID="583298514">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="bare følg med strømmen" ID="{93F1C637-A48C-4ADF-BD67-0715F65AECA4}" ShortID="442360337" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="bare følg med strømmen" ID="{326DEBB3-8FB0-400E-9B11-96B8ABBCB85A}" ShortID="810091116">
+															<Language>SFX</Language>
+															<AudioFile>bare følg med strømmen.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="bare følg med strømmen" ID="{326DEBB3-8FB0-400E-9B11-96B8ABBCB85A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Just go with the flow, spaceman" ID="{8A89EAA9-D1BF-438D-9ADC-A1968E1EFDF4}" ShortID="94425325" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Just go with the flow, spaceman" ID="{E4EAC523-7CC9-4150-B1DB-C4A4BEF092CC}" ShortID="803846981">
+															<Language>SFX</Language>
+															<AudioFile>Just go with the flow, spaceman.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Just go with the flow, spaceman" ID="{E4EAC523-7CC9-4150-B1DB-C4A4BEF092CC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="bare følg med strømmen" ID="{93F1C637-A48C-4ADF-BD67-0715F65AECA4}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Just go with the flow, spaceman" ID="{8A89EAA9-D1BF-438D-9ADC-A1968E1EFDF4}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="Just go with the flow, spaceman" ID="{8A89EAA9-D1BF-438D-9ADC-A1968E1EFDF4}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="bare følg med strømmen" ID="{93F1C637-A48C-4ADF-BD67-0715F65AECA4}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="fan3" ID="{62241C76-0E34-4379-8895-1250F89EAD02}" ShortID="164401271">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="I always thought you were an airhead," ID="{C08D5C96-08E3-44BD-BA37-6064728B41E2}" ShortID="437664926" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="I always thought you were an airhead," ID="{30D3A44C-0510-4C0B-A96D-C0549E40A7A3}" ShortID="478495480">
+															<Language>SFX</Language>
+															<AudioFile>I always thought you were an airhead,.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="I always thought you were an airhead," ID="{30D3A44C-0510-4C0B-A96D-C0549E40A7A3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Jeg har altid synes der var lidt meget luft mellem dine ører," ID="{9CC61F16-4E92-43C6-837F-FDF0911F0CE9}" ShortID="775277973" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Jeg har altid synes der var lidt meget luft mellem dine ører," ID="{3DCB3D15-32C6-4791-8F3F-1781CE352EDD}" ShortID="341595437">
+															<Language>SFX</Language>
+															<AudioFile>Jeg har altid synes der var lidt meget luft mellem dine ører,.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Jeg har altid synes der var lidt meget luft mellem dine ører," ID="{3DCB3D15-32C6-4791-8F3F-1781CE352EDD}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Jeg har altid synes der var lidt meget luft mellem dine ører," ID="{9CC61F16-4E92-43C6-837F-FDF0911F0CE9}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="I always thought you were an airhead," ID="{C08D5C96-08E3-44BD-BA37-6064728B41E2}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="I always thought you were an airhead," ID="{C08D5C96-08E3-44BD-BA37-6064728B41E2}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="Jeg har altid synes der var lidt meget luft mellem dine ører," ID="{9CC61F16-4E92-43C6-837F-FDF0911F0CE9}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="gasleak" ID="{DC1C93C5-7AA9-4BA0-BE6A-7475054E3827}" ShortID="817065359">
+									<ChildrenList>
+										<SwitchContainer Name="gas1" ID="{2A475572-76BB-4EF0-ABA8-158C320158F5}" ShortID="623365087">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Did you smell something Dave" ID="{12ABB0B3-C4EF-4DB1-A8DD-91FBDADC33E8}" ShortID="492217896" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Did you smell something Dave" ID="{1525BF66-726E-416E-84CA-C7E702859F82}" ShortID="694615552">
+															<Language>SFX</Language>
+															<AudioFile>Did you smell something Dave.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Did you smell something Dave" ID="{1525BF66-726E-416E-84CA-C7E702859F82}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Kan du også lugte noget, Dave" ID="{CC7B4CA1-BF29-4C7E-84A4-424BCF99AF34}" ShortID="375621543" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Kan du også lugte noget, Dave" ID="{90310414-97E2-4AC6-A909-9010AF4F9EFC}" ShortID="338097124">
+															<Language>SFX</Language>
+															<AudioFile>Kan du også lugte noget, Dave.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Kan du også lugte noget, Dave" ID="{90310414-97E2-4AC6-A909-9010AF4F9EFC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Kan du også lugte noget, Dave" ID="{CC7B4CA1-BF29-4C7E-84A4-424BCF99AF34}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Did you smell something Dave" ID="{12ABB0B3-C4EF-4DB1-A8DD-91FBDADC33E8}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="Did you smell something Dave" ID="{12ABB0B3-C4EF-4DB1-A8DD-91FBDADC33E8}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="Kan du også lugte noget, Dave" ID="{CC7B4CA1-BF29-4C7E-84A4-424BCF99AF34}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="gas2" ID="{370C940B-6CCF-4CDE-B9A0-75BEFB1619F0}" ShortID="275370134">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Dave im just imforming you that your on fire" ID="{7CEB1C18-1DCA-4D28-814F-31DA75255EF0}" ShortID="1012224169" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Dave im just imforming you that your on fire" ID="{B7A96229-F286-4EFD-B45E-047B68B2CC04}" ShortID="980546618">
+															<Language>SFX</Language>
+															<AudioFile>Dave im just imforming you that your on fire.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Dave im just imforming you that your on fire" ID="{B7A96229-F286-4EFD-B45E-047B68B2CC04}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Dave, jeg ville bare informere dig om at der er ild i dig" ID="{A3C345DD-BAE4-40B1-8B22-1F2B8086AF06}" ShortID="589669683" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Dave, jeg ville bare informere dig om at der er ild i dig" ID="{7835F6CD-FCF0-4E9B-8C09-98372D4A3F52}" ShortID="449696872">
+															<Language>SFX</Language>
+															<AudioFile>Dave, jeg ville bare informere dig om at der er ild i dig.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Dave, jeg ville bare informere dig om at der er ild i dig" ID="{7835F6CD-FCF0-4E9B-8C09-98372D4A3F52}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Dave im just imforming you that your on fire" ID="{7CEB1C18-1DCA-4D28-814F-31DA75255EF0}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Dave, jeg ville bare informere dig om at der er ild i dig" ID="{A3C345DD-BAE4-40B1-8B22-1F2B8086AF06}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="Dave im just imforming you that your on fire" ID="{7CEB1C18-1DCA-4D28-814F-31DA75255EF0}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="Dave, jeg ville bare informere dig om at der er ild i dig" ID="{A3C345DD-BAE4-40B1-8B22-1F2B8086AF06}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="gas3" ID="{6DD11028-087C-402F-9858-3901E6983503}" ShortID="641517582">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Husk nu Dave; Ned og rul!" ID="{B141BB14-0D04-4BC3-8914-D2DF757A7406}" ShortID="47696904" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Husk nu Dave; Ned og rul!" ID="{176E0BF1-9E98-41E4-AA53-6FA0C72D00FA}" ShortID="161486405">
+															<Language>SFX</Language>
+															<AudioFile>Husk nu Dave; Ned og rul!.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Husk nu Dave; Ned og rul!" ID="{176E0BF1-9E98-41E4-AA53-6FA0C72D00FA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="remember Dave; stop drop and roll" ID="{484AE840-4532-489E-8D18-44EB1E380FA7}" ShortID="206628086" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="remember Dave; stop drop and roll" ID="{74CB7FAF-221F-4B08-9208-927287C4BB1B}" ShortID="747686196">
+															<Language>SFX</Language>
+															<AudioFile>remember Dave; stop drop and roll.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="remember Dave; stop drop and roll" ID="{74CB7FAF-221F-4B08-9208-927287C4BB1B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Husk nu Dave; Ned og rul!" ID="{B141BB14-0D04-4BC3-8914-D2DF757A7406}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="remember Dave; stop drop and roll" ID="{484AE840-4532-489E-8D18-44EB1E380FA7}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="remember Dave; stop drop and roll" ID="{484AE840-4532-489E-8D18-44EB1E380FA7}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="Husk nu Dave; Ned og rul!" ID="{B141BB14-0D04-4BC3-8914-D2DF757A7406}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="low oxygen" ID="{A7F8BADA-D7BA-41BD-A4DB-6243270367E6}" ShortID="983635236">
+									<ChildrenList>
+										<SwitchContainer Name="lowO21" ID="{41E8A490-3604-49FB-81D9-C35CD7DC877D}" ShortID="685160388">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Mine beregninger fortæller mig at dit ilt niveau er lavt" ID="{662A026A-7FA2-4849-BA4B-0E831BA29C46}" ShortID="358601825" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mine beregninger fortæller mig at dit ilt niveau er lavt" ID="{6F10B26F-038D-441E-9C7A-511CF2B39FEC}" ShortID="658598555">
+															<Language>SFX</Language>
+															<AudioFile>Mine beregninger fortæller mig at dit ilt niveau er lavt.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Mine beregninger fortæller mig at dit ilt niveau er lavt" ID="{6F10B26F-038D-441E-9C7A-511CF2B39FEC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="My readings tell me that your oxygen levels are low" ID="{90BE59C9-0FAE-40FE-BA9D-131FCFFBC3BF}" ShortID="744397839" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="My readings tell me that your oxygen levels are low" ID="{21571628-2AB0-4DB6-BE4E-D41B52A63176}" ShortID="1019037759">
+															<Language>SFX</Language>
+															<AudioFile>My readings tell me that your oxygen levels are low.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="My readings tell me that your oxygen levels are low" ID="{21571628-2AB0-4DB6-BE4E-D41B52A63176}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Mine beregninger fortæller mig at dit ilt niveau er lavt" ID="{662A026A-7FA2-4849-BA4B-0E831BA29C46}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="My readings tell me that your oxygen levels are low" ID="{90BE59C9-0FAE-40FE-BA9D-131FCFFBC3BF}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="My readings tell me that your oxygen levels are low" ID="{90BE59C9-0FAE-40FE-BA9D-131FCFFBC3BF}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="Mine beregninger fortæller mig at dit ilt niveau er lavt" ID="{662A026A-7FA2-4849-BA4B-0E831BA29C46}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="lowO22" ID="{D3E2509E-A7A9-428B-983E-3BFBBB88202B}" ShortID="749716695">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Mine scaninger viser at der er en ilt flaske et sted i nærheden, jeg foreslår du finder den" ID="{98CED0A7-18DD-4245-886A-F085D3974C05}" ShortID="1034628717" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mine scaninger viser at der er en ilt flaske et sted i nærheden, jeg foreslår du finder den" ID="{1D7FAFA6-AA82-4AB7-9A5A-74EF9CABEFCF}" ShortID="422434534">
+															<Language>SFX</Language>
+															<AudioFile>Mine scaninger viser at der er en ilt flaske et sted i nærheden, jeg foreslår du finder den.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Mine scaninger viser at der er en ilt flaske et sted i nærheden, jeg foreslår du finder den" ID="{1D7FAFA6-AA82-4AB7-9A5A-74EF9CABEFCF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="My scans show an oxygen tank somwhere in this area i recomend you collect one" ID="{D5460CFA-54A2-441B-B4FC-8142522983A4}" ShortID="699445464" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="My scans show an oxygen tank somwhere in this area i recomend you collect one" ID="{E13ED5F0-18C1-4088-987E-06F887F73DE0}" ShortID="40737861">
+															<Language>SFX</Language>
+															<AudioFile>My scans show an oxygen tank somwhere in this area i recomend you collect one.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="My scans show an oxygen tank somwhere in this area i recomend you collect one" ID="{E13ED5F0-18C1-4088-987E-06F887F73DE0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Mine scaninger viser at der er en ilt flaske et sted i nærheden, jeg foreslår du finder den" ID="{98CED0A7-18DD-4245-886A-F085D3974C05}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="My scans show an oxygen tank somwhere in this area i recomend you collect one" ID="{D5460CFA-54A2-441B-B4FC-8142522983A4}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="My scans show an oxygen tank somwhere in this area i recomend you collect one" ID="{D5460CFA-54A2-441B-B4FC-8142522983A4}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="Mine scaninger viser at der er en ilt flaske et sted i nærheden, jeg foreslår du finder den" ID="{98CED0A7-18DD-4245-886A-F085D3974C05}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="lowO23" ID="{30161C9A-AAC5-47C6-9D9B-0CA573F21771}" ShortID="597463259">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="De burde virkelig adskille ilt til luft og ilt til brændstof bedre i de her jetpacks___ Måske_" ID="{B5866C97-1157-4DDF-9C34-4B51BC5EC315}" ShortID="785485279" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="De burde virkelig adskille ilt til luft og ilt til brændstof bedre i de her jetpacks___ Måske_" ID="{71896BF4-A643-41CE-8505-F1CEF1611F36}" ShortID="477009085">
+															<Language>SFX</Language>
+															<AudioFile>De burde virkelig adskille ilt til luft og ilt til brændstof bedre i de her jetpacks... Måske..wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="De burde virkelig adskille ilt til luft og ilt til brændstof bedre i de her jetpacks___ Måske_" ID="{71896BF4-A643-41CE-8505-F1CEF1611F36}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="they really should seperate the oxygen for fuel and the oxygen for breathing in theese jetpacks_ or maybe not_ low oxygen" ID="{3AC49DC1-8FE7-4244-9600-1C640E0D9848}" ShortID="920201920" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="they really should seperate the oxygen for fuel and the oxygen for breathing in theese jetpacks_ or maybe not_ low oxygen" ID="{06EEA734-0C0D-4B5E-BF09-6DA7C08E5D6D}" ShortID="786840149">
+															<Language>SFX</Language>
+															<AudioFile>they really should seperate the oxygen for fuel and the oxygen for breathing in theese jetpacks. or maybe not. low oxygen.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="they really should seperate the oxygen for fuel and the oxygen for breathing in theese jetpacks_ or maybe not_ low oxygen" ID="{06EEA734-0C0D-4B5E-BF09-6DA7C08E5D6D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="De burde virkelig adskille ilt til luft og ilt til brændstof bedre i de her jetpacks___ Måske_" ID="{B5866C97-1157-4DDF-9C34-4B51BC5EC315}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="they really should seperate the oxygen for fuel and the oxygen for breathing in theese jetpacks_ or maybe not_ low oxygen" ID="{3AC49DC1-8FE7-4244-9600-1C640E0D9848}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="they really should seperate the oxygen for fuel and the oxygen for breathing in theese jetpacks_ or maybe not_ low oxygen" ID="{3AC49DC1-8FE7-4244-9600-1C640E0D9848}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="De burde virkelig adskille ilt til luft og ilt til brændstof bedre i de her jetpacks___ Måske_" ID="{B5866C97-1157-4DDF-9C34-4B51BC5EC315}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="out of oxygen" ID="{5D898540-6837-41F6-B495-0F985894AF16}" ShortID="600047952">
+									<ChildrenList>
+										<SwitchContainer Name="outofO2 1" ID="{335358E2-E349-4EBE-A357-20923256B14C}" ShortID="690794855">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Du har ikke mere ilt, Dave" ID="{E1315D68-9F8A-48E1-AE6A-E90CA516B53D}" ShortID="17442250" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Du har ikke mere ilt, Dave" ID="{3198A574-EDEE-4CAC-91E2-AFF762421B90}" ShortID="484363831">
+															<Language>SFX</Language>
+															<AudioFile>Du har ikke mere ilt, Dave.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Du har ikke mere ilt, Dave" ID="{3198A574-EDEE-4CAC-91E2-AFF762421B90}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="You're out of Oxygen dave" ID="{2B36C1D8-1C61-4DFF-93B0-4F1985C8231D}" ShortID="915548428" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="You're out of Oxygen dave" ID="{515A3913-C6C3-4F31-A61A-3F787300CC36}" ShortID="365594828">
+															<Language>SFX</Language>
+															<AudioFile>You're out of Oxygen dave.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="You're out of Oxygen dave" ID="{515A3913-C6C3-4F31-A61A-3F787300CC36}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Du har ikke mere ilt, Dave" ID="{E1315D68-9F8A-48E1-AE6A-E90CA516B53D}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="You're out of Oxygen dave" ID="{2B36C1D8-1C61-4DFF-93B0-4F1985C8231D}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="out of O2 2" ID="{05F282CB-452C-4D67-A2D6-BE2587B6CAF8}" ShortID="664170049">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Du ser mig nu noget forpustet ud, Dave_ Skal jeg åbne et vindue Nårh nej_" ID="{CB4C2B1F-33AA-4764-8AF1-C7115BF9C45F}" ShortID="797124778" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Du ser mig nu noget forpustet ud, Dave_ Skal jeg åbne et vindue Nårh nej_" ID="{B231F1EF-964F-4337-8C83-DCAE50B428D6}" ShortID="459857977">
+															<Language>SFX</Language>
+															<AudioFile>Du ser mig nu noget forpustet ud, Dave. Skal jeg åbne et vindue Nårh nej. .wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Du ser mig nu noget forpustet ud, Dave_ Skal jeg åbne et vindue Nårh nej_" ID="{B231F1EF-964F-4337-8C83-DCAE50B428D6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="You look breathless, Dave_ Want me to open a window oh" ID="{12114441-58E7-4110-A2BA-2A647DC9526F}" ShortID="816131073" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="You look breathless, Dave_ Want me to open a window oh" ID="{6CC61448-D9E6-4C72-AAB7-208329BA0F81}" ShortID="651369475">
+															<Language>SFX</Language>
+															<AudioFile>You look breathless, Dave. Want me to open a window oh .wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="You look breathless, Dave_ Want me to open a window oh" ID="{6CC61448-D9E6-4C72-AAB7-208329BA0F81}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Du ser mig nu noget forpustet ud, Dave_ Skal jeg åbne et vindue Nårh nej_" ID="{CB4C2B1F-33AA-4764-8AF1-C7115BF9C45F}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="You look breathless, Dave_ Want me to open a window oh" ID="{12114441-58E7-4110-A2BA-2A647DC9526F}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="out of O2 3" ID="{15849106-DA33-4B20-88C5-D7A838062384}" ShortID="683530440">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="All you had to do was take off your helmet, Dave - there's plenty of oxygen in the station" ID="{68C80A3C-8D36-4C9F-975F-D2A93DD0F0F8}" ShortID="479165221" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="All you had to do was take off your helmet, Dave - there's plenty of oxygen in the station" ID="{5A5B68D9-C950-4C07-9643-5230A101B433}" ShortID="798975668">
+															<Language>SFX</Language>
+															<AudioFile>All you had to do was take off your helmet, Dave - there's plenty of oxygen in the station.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="All you had to do was take off your helmet, Dave - there's plenty of oxygen in the station" ID="{5A5B68D9-C950-4C07-9643-5230A101B433}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Du skulle bare have taget hjelmen af, Dave, Der er masser af ilt på stationen" ID="{3DFB708A-509E-4CF5-9D66-B8C5E00B15D7}" ShortID="321034344" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Du skulle bare have taget hjelmen af, Dave, Der er masser af ilt på stationen " ID="{B58ED434-F4C4-4A9D-966C-D87BD4695741}" ShortID="187947066">
+															<Language>SFX</Language>
+															<AudioFile>Du skulle bare have taget hjelmen af, Dave, Der er masser af ilt på stationen .wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Du skulle bare have taget hjelmen af, Dave, Der er masser af ilt på stationen " ID="{B58ED434-F4C4-4A9D-966C-D87BD4695741}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="All you had to do was take off your helmet, Dave - there's plenty of oxygen in the station" ID="{68C80A3C-8D36-4C9F-975F-D2A93DD0F0F8}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Du skulle bare have taget hjelmen af, Dave, Der er masser af ilt på stationen" ID="{3DFB708A-509E-4CF5-9D66-B8C5E00B15D7}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+											</GroupingInfo>
+										</SwitchContainer>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="narrative" ID="{DF616C96-19FE-4F4B-8C4C-7A4130C35233}" ShortID="80002842">
+									<ChildrenList>
+										<SwitchContainer Name="narrative1" ID="{FC69FEF3-4F56-48CD-AACC-C2E72ED87440}" ShortID="538475337">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Dave my sensors are picking up something__ It's coming closer" ID="{6A45FC74-9B45-4463-828A-5068593C5608}" ShortID="1057293030" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Dave my sensors are picking up something__ It's coming closer" ID="{16F4965E-F02F-4CD4-A8BE-364CED9B7600}" ShortID="406379750">
+															<Language>SFX</Language>
+															<AudioFile>Dave my sensors are picking up something.. It's coming closer.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Dave my sensors are picking up something__ It's coming closer" ID="{16F4965E-F02F-4CD4-A8BE-364CED9B7600}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Dave, mine sensorere har opfanget noget__ det nærmer sig, hurtigt" ID="{6ACD5BAB-3C0F-4CDD-972B-69EF0BE26F95}" ShortID="938901743" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Dave, mine sensorere har opfanget noget__ det nærmer sig, hurtigt" ID="{4FE4B8A3-00F6-47A1-BB1B-F459425A5B6B}" ShortID="643284108">
+															<Language>SFX</Language>
+															<AudioFile>unprocessed\Dave, mine sensorere har opfanget noget.. det nærmer sig, hurtigt.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Dave, mine sensorere har opfanget noget__ det nærmer sig, hurtigt" ID="{4FE4B8A3-00F6-47A1-BB1B-F459425A5B6B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Dave my sensors are picking up something__ It's coming closer" ID="{6A45FC74-9B45-4463-828A-5068593C5608}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Dave, mine sensorere har opfanget noget__ det nærmer sig, hurtigt" ID="{6ACD5BAB-3C0F-4CDD-972B-69EF0BE26F95}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="Dave my sensors are picking up something__ It's coming closer" ID="{6A45FC74-9B45-4463-828A-5068593C5608}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="Dave, mine sensorere har opfanget noget__ det nærmer sig, hurtigt" ID="{6ACD5BAB-3C0F-4CDD-972B-69EF0BE26F95}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="narrative2" ID="{9E9CF310-F8AB-498C-97FF-5E2CF75F5A66}" ShortID="65357277">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="advarsel, bered på sammenstød" ID="{91EF5863-B8B6-43DA-A233-318576CA8415}" ShortID="634672751" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="advarsel, bered på sammenstød" ID="{07F6A1D8-3F28-4FAF-82C0-5869257D8140}" ShortID="719297784">
+															<Language>SFX</Language>
+															<AudioFile>advarsel, bered på sammenstød.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="advarsel, bered på sammenstød" ID="{07F6A1D8-3F28-4FAF-82C0-5869257D8140}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="alert, Prepare for impact" ID="{80FF0030-667E-4F11-9B74-C4DF6F109527}" ShortID="831690788" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="alert, Prepare for impact" ID="{2F20F422-7CA6-49C3-B7F9-D1C533187349}" ShortID="1068945317">
+															<Language>SFX</Language>
+															<AudioFile>alert, Prepare for impact.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="alert, Prepare for impact" ID="{2F20F422-7CA6-49C3-B7F9-D1C533187349}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="alert, Prepare for impact" ID="{80FF0030-667E-4F11-9B74-C4DF6F109527}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="advarsel, bered på sammenstød" ID="{91EF5863-B8B6-43DA-A233-318576CA8415}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="alert, Prepare for impact" ID="{80FF0030-667E-4F11-9B74-C4DF6F109527}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="advarsel, bered på sammenstød" ID="{91EF5863-B8B6-43DA-A233-318576CA8415}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="narrative3" ID="{55C20E28-9F30-414D-AB71-07B0E94387F5}" ShortID="755998259">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Dave I have openend the door to the escape pod Please evacuate the station" ID="{DD0A80CB-016B-4142-A264-F3F4B485D1A5}" ShortID="439562466" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Dave I have openend the door to the escape pod Please evacuate the station" ID="{348BD184-689E-4788-AA90-15E71A65664B}" ShortID="119389034">
+															<Language>SFX</Language>
+															<AudioFile>unprocessed\Dave I have openend the door to the escape pod Please evacuate the station.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Dave I have openend the door to the escape pod Please evacuate the station" ID="{348BD184-689E-4788-AA90-15E71A65664B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Dave, jeg har åbnet porten til redningskapslen, vær sød at evakuere station" ID="{F30A7382-CDD8-4D7B-812E-E076AA9402A7}" ShortID="59700874" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Dave, jeg har åbnet porten til redningskapslen, vær sød at evakuere station" ID="{64E6E394-025E-41E3-AF03-8B3C4DA23A64}" ShortID="669704237">
+															<Language>SFX</Language>
+															<AudioFile>unprocessed\Dave, jeg har åbnet porten til redningskapslen, vær sød at evakuere station.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Dave, jeg har åbnet porten til redningskapslen, vær sød at evakuere station" ID="{64E6E394-025E-41E3-AF03-8B3C4DA23A64}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Dave, jeg har åbnet porten til redningskapslen, vær sød at evakuere station" ID="{F30A7382-CDD8-4D7B-812E-E076AA9402A7}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Dave I have openend the door to the escape pod Please evacuate the station" ID="{DD0A80CB-016B-4142-A264-F3F4B485D1A5}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="Dave I have openend the door to the escape pod Please evacuate the station" ID="{DD0A80CB-016B-4142-A264-F3F4B485D1A5}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="Dave, jeg har åbnet porten til redningskapslen, vær sød at evakuere station" ID="{F30A7382-CDD8-4D7B-812E-E076AA9402A7}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="narrative4" ID="{0909C63A-497F-4DD7-B0B3-0B0B30C3FD3F}" ShortID="146992999">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Dave nul, (Charles) Darwin 1" ID="{920C316F-30E9-4673-8022-D42B2ABD2517}" ShortID="774936729" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Dave nul, (Charles) Darwin 1" ID="{2DE76195-F34B-444A-AA95-E69D67E9E2A0}" ShortID="854761104">
+															<Language>SFX</Language>
+															<AudioFile>unprocessed\Dave nul, (Charles) Darwin 1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Dave nul, (Charles) Darwin 1" ID="{2DE76195-F34B-444A-AA95-E69D67E9E2A0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Dave zero, natural selection one_" ID="{77B9EBC4-DA0D-4121-A8ED-27889859FE5A}" ShortID="151898648" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Dave zero, natural selection one_" ID="{FA5F99B6-3FB0-463D-8E59-7E1C44E43EAC}" ShortID="732964349">
+															<Language>SFX</Language>
+															<AudioFile>unprocessed\Dave zero, natural selection one. .wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Dave zero, natural selection one_" ID="{FA5F99B6-3FB0-463D-8E59-7E1C44E43EAC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Dave nul, (Charles) Darwin 1" ID="{920C316F-30E9-4673-8022-D42B2ABD2517}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Dave zero, natural selection one_" ID="{77B9EBC4-DA0D-4121-A8ED-27889859FE5A}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="Dave zero, natural selection one_" ID="{77B9EBC4-DA0D-4121-A8ED-27889859FE5A}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="Dave nul, (Charles) Darwin 1" ID="{920C316F-30E9-4673-8022-D42B2ABD2517}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="narrative6" ID="{4AD50806-DFCC-4218-8572-A083890AE955}" ShortID="777893312">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="det her sted virker ikke særligt sikkert___ men Hey! der er kun en måde at finde ud af det på" ID="{85BEA1A9-F0F9-4034-A842-C428155A6837}" ShortID="226876788" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="det her sted virker ikke særligt sikkert___ men Hey! der er kun en måde at finde ud af det på" ID="{3B05CC2C-55BC-40DC-921F-27AE4F34C180}" ShortID="926836453">
+															<Language>SFX</Language>
+															<AudioFile>unprocessed\det her sted virker ikke særligt sikkert... men Hey! der er kun en måde at finde ud af det på.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="det her sted virker ikke særligt sikkert___ men Hey! der er kun en måde at finde ud af det på" ID="{3B05CC2C-55BC-40DC-921F-27AE4F34C180}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="The hazards here dont seem too friendly___ you should go say hi!" ID="{49FD2547-30E7-4CB5-B1CB-B4B8636D0245}" ShortID="67534099" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="The hazards here dont seem too friendly___ you should go say hi!" ID="{C7231999-47C6-48BA-8B7E-913B141929D0}" ShortID="526762414">
+															<Language>SFX</Language>
+															<AudioFile>The hazards here dont seem too friendly... you should go say hi!.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="The hazards here dont seem too friendly___ you should go say hi!" ID="{C7231999-47C6-48BA-8B7E-913B141929D0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="The hazards here dont seem too friendly___ you should go say hi!" ID="{49FD2547-30E7-4CB5-B1CB-B4B8636D0245}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="det her sted virker ikke særligt sikkert___ men Hey! der er kun en måde at finde ud af det på" ID="{85BEA1A9-F0F9-4034-A842-C428155A6837}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="The hazards here dont seem too friendly___ you should go say hi!" ID="{49FD2547-30E7-4CB5-B1CB-B4B8636D0245}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="det her sted virker ikke særligt sikkert___ men Hey! der er kun en måde at finde ud af det på" ID="{85BEA1A9-F0F9-4034-A842-C428155A6837}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="narrative7" ID="{0B8E42C7-5DE4-4C43-8B71-7602A7E10BA7}" ShortID="613874816">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Hvad har du gang i, Dave Du skal hen imod rednings kapslen" ID="{7A4F464F-24E4-4EEB-AD43-D2CCD8130DDD}" ShortID="244577696" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Hvad har du gang i, Dave Du skal hen imod rednings kapslen" ID="{A10E129D-4323-4CCD-B85D-468BD6E2F20C}" ShortID="698227094">
+															<Language>SFX</Language>
+															<AudioFile>unprocessed\Hvad har du gang i, Dave Du skal hen imod rednings kapslen.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Hvad har du gang i, Dave Du skal hen imod rednings kapslen" ID="{A10E129D-4323-4CCD-B85D-468BD6E2F20C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="What are you doing dave you need to get to the escape pod (sweet)" ID="{1AFAA3CF-439E-4C63-B58A-AAFE99228F60}" ShortID="145760079" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="What are you doing dave you need to get to the escape pod (sweet)" ID="{76B4E317-A39C-4B6B-8D15-252AFFEC097A}" ShortID="111064016">
+															<Language>SFX</Language>
+															<AudioFile>unprocessed\What are you doing dave you need to get to the escape pod (sweet).wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="What are you doing dave you need to get to the escape pod (sweet)" ID="{76B4E317-A39C-4B6B-8D15-252AFFEC097A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Hvad har du gang i, Dave Du skal hen imod rednings kapslen" ID="{7A4F464F-24E4-4EEB-AD43-D2CCD8130DDD}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="What are you doing dave you need to get to the escape pod (sweet)" ID="{1AFAA3CF-439E-4C63-B58A-AAFE99228F60}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="What are you doing dave you need to get to the escape pod (sweet)" ID="{1AFAA3CF-439E-4C63-B58A-AAFE99228F60}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="Hvad har du gang i, Dave Du skal hen imod rednings kapslen" ID="{7A4F464F-24E4-4EEB-AD43-D2CCD8130DDD}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="narrative8" ID="{F66BC6AB-250F-4D53-9CBC-37960EE446D0}" ShortID="624547562">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="vi har teknologien til bringe dig tilbage, når kommer galt afsted_ Heldigt for dig___" ID="{D0DA65D4-6629-40A2-ADE5-5ADA77613F37}" ShortID="887847131" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vi har teknologien til bringe dig tilbage, når kommer galt afsted_ Heldigt for dig___" ID="{41974E1D-5A33-4CCF-81C3-59452C9CE7E4}" ShortID="345686519">
+															<Language>SFX</Language>
+															<AudioFile>unprocessed\vi har teknologien til bringe dig tilbage, når kommer galt afsted. Heldigt for dig... .wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="vi har teknologien til bringe dig tilbage, når kommer galt afsted_ Heldigt for dig___" ID="{41974E1D-5A33-4CCF-81C3-59452C9CE7E4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Your lucky we have the tecnology to bring you back when you hurt your self" ID="{63BBE5B9-0843-46BD-8D9C-8E16C321331C}" ShortID="164529796" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Your lucky we have the tecnology to bring you back when you hurt your self" ID="{20C0FC13-52B1-42A5-BB97-81245FF400F1}" ShortID="782658039">
+															<Language>SFX</Language>
+															<AudioFile>unprocessed\Your lucky we have the tecnology to bring you back when you hurt your self.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Your lucky we have the tecnology to bring you back when you hurt your self" ID="{20C0FC13-52B1-42A5-BB97-81245FF400F1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Your lucky we have the tecnology to bring you back when you hurt your self" ID="{63BBE5B9-0843-46BD-8D9C-8E16C321331C}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="vi har teknologien til bringe dig tilbage, når kommer galt afsted_ Heldigt for dig___" ID="{D0DA65D4-6629-40A2-ADE5-5ADA77613F37}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="Your lucky we have the tecnology to bring you back when you hurt your self" ID="{63BBE5B9-0843-46BD-8D9C-8E16C321331C}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="vi har teknologien til bringe dig tilbage, når kommer galt afsted_ Heldigt for dig___" ID="{D0DA65D4-6629-40A2-ADE5-5ADA77613F37}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="narrative5" ID="{569190A2-0526-4F65-8F94-142A9C245697}" ShortID="534653163">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
@@ -70,9 +2230,12 @@
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
 												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="wow, that was shocking" ID="{B741F330-9553-4FCA-B5DF-5DC06E8909D5}" ShortID="79515653" Type="SoundFX">
+												<Sound Name="jetpack eng" ID="{55409197-1BDB-4A6E-A5BA-587FF892B283}" ShortID="382725558" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
@@ -82,31 +2245,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="wow, that was shocking" ID="{74FEDEA2-C8E9-4C19-88D8-EE35994193AC}" ShortID="964967900">
+														<AudioFileSource Name="jetpack eng" ID="{064584EF-1C8A-4938-B631-1FE45313C7F8}" ShortID="694702258">
 															<Language>SFX</Language>
-															<AudioFile>wow, that was shocking.wav</AudioFile>
+															<AudioFile>jetpack eng.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="wow, that was shocking" ID="{74FEDEA2-C8E9-4C19-88D8-EE35994193AC}" Platform="Linked"/>
+														<ActiveSource Name="jetpack eng" ID="{064584EF-1C8A-4938-B631-1FE45313C7F8}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-											</ChildrenList>
-											<Playlist>
-												<ItemRef Name="wow, that was shocking" ID="{B741F330-9553-4FCA-B5DF-5DC06E8909D5}"/>
-											</Playlist>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="electrocuted v2" ID="{B16BDE1F-6518-4732-B272-BCA164D71B0C}" ShortID="740975207">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="wow that was shocking" ID="{159F1687-FC89-421B-A3F0-5EDB02E38AD0}" ShortID="979892023" Type="SoundFX">
+												<Sound Name="jetpack dan" ID="{D262BF93-A739-4213-A316-FA51BE453864}" ShortID="72712444" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
@@ -116,679 +2264,45 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="wow that was shocking" ID="{88AF168C-9E87-45DA-9E32-F7655525592F}" ShortID="1054817587">
+														<AudioFileSource Name="jetpack dan" ID="{C45487BA-C40E-444C-8BE9-456718CE4FB4}" ShortID="309700752">
 															<Language>SFX</Language>
-															<AudioFile>wow that was shocking.wav</AudioFile>
+															<AudioFile>jetpack dan.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="wow that was shocking" ID="{88AF168C-9E87-45DA-9E32-F7655525592F}" Platform="Linked"/>
+														<ActiveSource Name="jetpack dan" ID="{C45487BA-C40E-444C-8BE9-456718CE4FB4}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="electrocuted v3" ID="{E7E08199-B50A-4CFB-96C8-41F4E8F25576}" ShortID="491354205">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="wow that was shocking v3" ID="{8E6A2FA6-5F72-4907-B643-0558BADA2F7A}" ShortID="477044745" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="wow that was shocking v3" ID="{DDA97A74-DCE3-457D-9150-5F1A7FA8A9B1}" ShortID="336230544">
-															<Language>SFX</Language>
-															<AudioFile>wow that was shocking v3.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="wow that was shocking v3" ID="{DDA97A74-DCE3-457D-9150-5F1A7FA8A9B1}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
+											<GroupingInfo>
+												<GroupRef Name="galLanguage" ID="{36200E6C-C12C-4726-8C9E-996213F67768}"/>
+												<DefaultSwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="jetpack dan" ID="{D262BF93-A739-4213-A316-FA51BE453864}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="jetpack eng" ID="{55409197-1BDB-4A6E-A5BA-587FF892B283}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
+														<ItemList>
+															<ItemRef Name="jetpack eng" ID="{55409197-1BDB-4A6E-A5BA-587FF892B283}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Dan" ID="{1880E6BB-5EDA-45D0-A766-0A02E3F32493}"/>
+														<ItemList>
+															<ItemRef Name="jetpack dan" ID="{D262BF93-A739-4213-A316-FA51BE453864}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
 									</ChildrenList>
-									<GroupingInfo>
-										<GroupRef Name="galVersion" ID="{BBC04D70-2427-451B-8F93-8407A5EFD474}"/>
-										<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
-										<GroupingBehaviorList>
-											<GroupingBehavior>
-												<ItemRef Name="electrocuted v2" ID="{B16BDE1F-6518-4732-B272-BCA164D71B0C}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="electrocuted" ID="{989F654C-E76E-41DB-B938-AF67CA4C0623}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="electrocuted v3" ID="{E7E08199-B50A-4CFB-96C8-41F4E8F25576}"/>
-											</GroupingBehavior>
-										</GroupingBehaviorList>
-										<GroupingList>
-											<Grouping>
-												<SwitchRef Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
-												<ItemList>
-													<ItemRef Name="electrocuted" ID="{989F654C-E76E-41DB-B938-AF67CA4C0623}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="v3" ID="{68351F88-EA08-4001-B2DD-A7BB1D9C547B}"/>
-												<ItemList>
-													<ItemRef Name="electrocuted v3" ID="{E7E08199-B50A-4CFB-96C8-41F4E8F25576}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="v2" ID="{02705BA3-282A-40B4-B70C-52231142B581}"/>
-												<ItemList>
-													<ItemRef Name="electrocuted v2" ID="{B16BDE1F-6518-4732-B272-BCA164D71B0C}"/>
-												</ItemList>
-											</Grouping>
-										</GroupingList>
-									</GroupingInfo>
-								</SwitchContainer>
-								<SwitchContainer Name="explosion" ID="{18C59A2D-806E-45D5-BED2-500A685C3BA1}" ShortID="833542434">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<RandomSequenceContainer Name="explosion" ID="{2C6F0CDE-A3FC-4398-B2F4-C4D53EDB029A}" ShortID="655713949">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="uh, i love fireworks" ID="{2C180D3B-26A9-4AB5-B36A-F76FC3CB2E84}" ShortID="64618282" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="uh, i love fireworks" ID="{EBD770F6-3056-4EE8-B18F-2463A0A7859B}" ShortID="62533466">
-															<Language>SFX</Language>
-															<AudioFile>uh, i love fireworks.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="uh, i love fireworks" ID="{EBD770F6-3056-4EE8-B18F-2463A0A7859B}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="uh, i love fireworks2" ID="{174E4883-284B-4D7B-8B75-13341AE82C82}" ShortID="955111088" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="uh, i love fireworks2" ID="{6B7ECB50-30E9-4295-A410-8174477D9F73}" ShortID="873260049">
-															<Language>SFX</Language>
-															<AudioFile>uh, i love fireworks2.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="uh, i love fireworks2" ID="{6B7ECB50-30E9-4295-A410-8174477D9F73}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="explosion v2" ID="{AD76268C-5A82-4290-84B4-9CF427ACEEE1}" ShortID="456640602">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="i love fireworks" ID="{DFD44DD2-506F-43E9-A753-105CB418F71B}" ShortID="755105344" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="i love fireworks" ID="{958D2B36-B1F1-4833-A68E-903432EBF265}" ShortID="711692435">
-															<Language>SFX</Language>
-															<AudioFile>i love fireworks.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="i love fireworks" ID="{958D2B36-B1F1-4833-A68E-903432EBF265}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="i love fireworks2" ID="{C831B395-22E0-4601-9B3B-EE43D65867A8}" ShortID="961520493" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="i love fireworks2" ID="{7C931EAA-5D9C-4F2B-AB7F-C496CA1E6450}" ShortID="1034490362">
-															<Language>SFX</Language>
-															<AudioFile>i love fireworks2.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="i love fireworks2" ID="{7C931EAA-5D9C-4F2B-AB7F-C496CA1E6450}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="explosion v3" ID="{395FB2A7-037E-4F7C-B08B-6E3FC6782736}" ShortID="448647019">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="i love fireworks2 v3" ID="{9AE24314-2149-41E7-8984-94D36902618C}" ShortID="553743732" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="i love fireworks2 v3" ID="{B8CF10FC-9D45-45D8-8AEC-19B993E765DB}" ShortID="885339843">
-															<Language>SFX</Language>
-															<AudioFile>i love fireworks2 v3.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="i love fireworks2 v3" ID="{B8CF10FC-9D45-45D8-8AEC-19B993E765DB}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="i love fireworks v3" ID="{309F14F0-BBCF-4AB2-844A-D7501DF443E3}" ShortID="92401965" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="i love fireworks v3" ID="{D1812E14-A186-4FAD-8EEB-923BF439176E}" ShortID="732145868">
-															<Language>SFX</Language>
-															<AudioFile>i love fireworks v3.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="i love fireworks v3" ID="{D1812E14-A186-4FAD-8EEB-923BF439176E}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-									</ChildrenList>
-									<GroupingInfo>
-										<GroupRef Name="galVersion" ID="{BBC04D70-2427-451B-8F93-8407A5EFD474}"/>
-										<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
-										<GroupingBehaviorList>
-											<GroupingBehavior>
-												<ItemRef Name="explosion v2" ID="{AD76268C-5A82-4290-84B4-9CF427ACEEE1}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="explosion v3" ID="{395FB2A7-037E-4F7C-B08B-6E3FC6782736}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="explosion" ID="{2C6F0CDE-A3FC-4398-B2F4-C4D53EDB029A}"/>
-											</GroupingBehavior>
-										</GroupingBehaviorList>
-										<GroupingList>
-											<Grouping>
-												<SwitchRef Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
-												<ItemList>
-													<ItemRef Name="explosion" ID="{2C6F0CDE-A3FC-4398-B2F4-C4D53EDB029A}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="v3" ID="{68351F88-EA08-4001-B2DD-A7BB1D9C547B}"/>
-												<ItemList>
-													<ItemRef Name="explosion v3" ID="{395FB2A7-037E-4F7C-B08B-6E3FC6782736}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="v2" ID="{02705BA3-282A-40B4-B70C-52231142B581}"/>
-												<ItemList>
-													<ItemRef Name="explosion v2" ID="{AD76268C-5A82-4290-84B4-9CF427ACEEE1}"/>
-												</ItemList>
-											</Grouping>
-										</GroupingList>
-									</GroupingInfo>
-								</SwitchContainer>
-								<SwitchContainer Name="on fire" ID="{A845CC58-F2FB-4294-929D-081B69393BA3}" ShortID="211463518">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<RandomSequenceContainer Name="on fire" ID="{5EAA58B2-D6D4-4DE8-A8BA-B881A41E9509}" ShortID="508082855">
-											<PropertyList>
-												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="dave, you are on fire" ID="{580543AB-CAB1-455E-B741-43F0E188E532}" ShortID="640516745" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="dave, you are on fire" ID="{7C66E925-B6A1-4FCD-8FCF-DEE38E209EC1}" ShortID="793887671">
-															<Language>SFX</Language>
-															<AudioFile>dave, you are on fire.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="dave, you are on fire" ID="{7C66E925-B6A1-4FCD-8FCF-DEE38E209EC1}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="dave, cool down" ID="{D2572CEE-CC4D-409E-A803-A23083702862}" ShortID="306659350" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="dave, cool down" ID="{DF1D73C4-B118-4016-B737-4DEE9A1B8B38}" ShortID="79167690">
-															<Language>SFX</Language>
-															<AudioFile>dave, cool down.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="dave, cool down" ID="{DF1D73C4-B118-4016-B737-4DEE9A1B8B38}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="dave, cool down2" ID="{9F14A5E9-E7DF-485F-8EE5-C1AC3ADAD127}" ShortID="911293166" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="dave, cool down2" ID="{D8653CA2-45E1-4BEB-B307-75AB814B73AC}" ShortID="448903764">
-															<Language>SFX</Language>
-															<AudioFile>dave, cool down2.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="dave, cool down2" ID="{D8653CA2-45E1-4BEB-B307-75AB814B73AC}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="on fire v2" ID="{8594FB7B-FBB6-4688-A39A-D642E34AC1DF}" ShortID="510828031">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="dave, you are on fire v2" ID="{5FC6AC14-6607-40B5-9543-3D6CAEB5D571}" ShortID="580125937" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="dave, you are on fire v2" ID="{541A0D7F-9C4A-4883-9159-8BA1A5D85EF0}" ShortID="211652015">
-															<Language>SFX</Language>
-															<AudioFile>dave, you are on fire v2.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="dave, you are on fire v2" ID="{541A0D7F-9C4A-4883-9159-8BA1A5D85EF0}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="dave, cool down2 v2" ID="{C555EDAF-635D-4FEF-B53F-67C941CAAB6C}" ShortID="425065539" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="dave, cool down2 v2" ID="{C1BC6EF3-F28F-4C11-ACF6-6F14CEA02FCC}" ShortID="705258468">
-															<Language>SFX</Language>
-															<AudioFile>dave, cool down2 v2.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="dave, cool down2 v2" ID="{C1BC6EF3-F28F-4C11-ACF6-6F14CEA02FCC}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="dave, cool down v2" ID="{598E64BB-F4F8-4219-A89E-1DE7CD468F15}" ShortID="931124729" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="dave, cool down v2" ID="{E7EB32F4-873D-4338-8C18-A8329385AB2F}" ShortID="135477313">
-															<Language>SFX</Language>
-															<AudioFile>dave, cool down v2.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="dave, cool down v2" ID="{E7EB32F4-873D-4338-8C18-A8329385AB2F}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="on fire v3" ID="{08160D7D-A04F-45E1-8BCD-D77BAE1FC131}" ShortID="93950807">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="dave cool down2 v3" ID="{BF0E475F-E887-4D3B-A857-3427AE31314C}" ShortID="1049076955" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="dave cool down2 v3" ID="{794A871C-F656-45A2-BCD4-58A47047A0EF}" ShortID="473978001">
-															<Language>SFX</Language>
-															<AudioFile>dave cool down2 v3.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="dave cool down2 v3" ID="{794A871C-F656-45A2-BCD4-58A47047A0EF}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="dave cool down v3" ID="{1ADDEAC3-1FDB-42CE-A338-92E07C6B7C8F}" ShortID="317271296" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="dave cool down v3" ID="{73DC8780-E0E1-4FFC-89F3-773BE3BCDFF6}" ShortID="703440495">
-															<Language>SFX</Language>
-															<AudioFile>dave cool down v3.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="dave cool down v3" ID="{73DC8780-E0E1-4FFC-89F3-773BE3BCDFF6}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="dave you are on fire v3" ID="{AE71FF5B-C6A7-47DA-92D6-94F79FFE1473}" ShortID="332550781" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="dave you are on fire v3" ID="{8B6D0A69-8D31-47D7-B88F-08AC8EB1D8C6}" ShortID="382372623">
-															<Language>SFX</Language>
-															<AudioFile>dave you are on fire v3.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="dave you are on fire v3" ID="{8B6D0A69-8D31-47D7-B88F-08AC8EB1D8C6}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-									</ChildrenList>
-									<GroupingInfo>
-										<GroupRef Name="galVersion" ID="{BBC04D70-2427-451B-8F93-8407A5EFD474}"/>
-										<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
-										<GroupingBehaviorList>
-											<GroupingBehavior>
-												<ItemRef Name="on fire v2" ID="{8594FB7B-FBB6-4688-A39A-D642E34AC1DF}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="on fire v3" ID="{08160D7D-A04F-45E1-8BCD-D77BAE1FC131}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="on fire" ID="{5EAA58B2-D6D4-4DE8-A8BA-B881A41E9509}"/>
-											</GroupingBehavior>
-										</GroupingBehaviorList>
-										<GroupingList>
-											<Grouping>
-												<SwitchRef Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
-												<ItemList>
-													<ItemRef Name="on fire" ID="{5EAA58B2-D6D4-4DE8-A8BA-B881A41E9509}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="v3" ID="{68351F88-EA08-4001-B2DD-A7BB1D9C547B}"/>
-												<ItemList>
-													<ItemRef Name="on fire v3" ID="{08160D7D-A04F-45E1-8BCD-D77BAE1FC131}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="v2" ID="{02705BA3-282A-40B4-B70C-52231142B581}"/>
-												<ItemList>
-													<ItemRef Name="on fire v2" ID="{8594FB7B-FBB6-4688-A39A-D642E34AC1DF}"/>
-												</ItemList>
-											</Grouping>
-										</GroupingList>
-									</GroupingInfo>
-								</SwitchContainer>
-								<SwitchContainer Name="random insults" ID="{557168DA-36CF-493E-ADD5-51D27F0D1381}" ShortID="836008813">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<RandomSequenceContainer Name="random insults" ID="{D4B6B4B5-B9E5-4BF8-8DCA-ED7EA40047FE}" ShortID="709025686">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Gal" ID="{8C511F8A-5D37-4A37-A023-D80AEE9A256E}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="dave, you are an idiot" ID="{7ACF12E4-2E9F-492C-A2C5-EF0A0666C80B}" ShortID="904824150" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="dave, you are an idiot" ID="{3A1880CC-E144-45FF-A7F7-B94149FA61DC}" ShortID="635038486">
-															<Language>SFX</Language>
-															<AudioFile>dave, you are an idiot.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="dave, you are an idiot" ID="{3A1880CC-E144-45FF-A7F7-B94149FA61DC}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="random insults v2" ID="{54377A12-C2BE-40B5-B29D-617964D2C225}" ShortID="385573609">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="dave, you are an idiot v2" ID="{2F4F22CA-5C82-467D-82DC-E57AE37DF8BF}" ShortID="577050235" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="dave, you are an idiot v2" ID="{F42EDFED-09D4-43BF-846D-6301DB09FDFE}" ShortID="536631675">
-															<Language>SFX</Language>
-															<AudioFile>dave, you are an idiot v2.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="dave, you are an idiot v2" ID="{F42EDFED-09D4-43BF-846D-6301DB09FDFE}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="random insults v3" ID="{FF987D1E-E53C-400A-88EC-C50569C9F0AB}" ShortID="420738621">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="dave you are an idiot v3" ID="{03E0FE45-2545-4CF1-92A8-DD986DB34D7E}" ShortID="939310412" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="dave you are an idiot v3" ID="{4C4A7888-1B98-4DBA-989B-1F98B8DE72EA}" ShortID="867253049">
-															<Language>SFX</Language>
-															<AudioFile>dave you are an idiot v3.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="dave you are an idiot v3" ID="{4C4A7888-1B98-4DBA-989B-1F98B8DE72EA}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-									</ChildrenList>
-									<GroupingInfo>
-										<GroupRef Name="galVersion" ID="{BBC04D70-2427-451B-8F93-8407A5EFD474}"/>
-										<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
-										<GroupingBehaviorList>
-											<GroupingBehavior>
-												<ItemRef Name="random insults v2" ID="{54377A12-C2BE-40B5-B29D-617964D2C225}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="random insults v3" ID="{FF987D1E-E53C-400A-88EC-C50569C9F0AB}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="random insults" ID="{D4B6B4B5-B9E5-4BF8-8DCA-ED7EA40047FE}"/>
-											</GroupingBehavior>
-										</GroupingBehaviorList>
-										<GroupingList>
-											<Grouping>
-												<SwitchRef Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
-												<ItemList>
-													<ItemRef Name="random insults" ID="{D4B6B4B5-B9E5-4BF8-8DCA-ED7EA40047FE}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="v3" ID="{68351F88-EA08-4001-B2DD-A7BB1D9C547B}"/>
-												<ItemList>
-													<ItemRef Name="random insults v3" ID="{FF987D1E-E53C-400A-88EC-C50569C9F0AB}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="v2" ID="{02705BA3-282A-40B4-B70C-52231142B581}"/>
-												<ItemList>
-													<ItemRef Name="random insults v2" ID="{54377A12-C2BE-40B5-B29D-617964D2C225}"/>
-												</ItemList>
-											</Grouping>
-										</GroupingList>
-									</GroupingInfo>
-								</SwitchContainer>
+								</Folder>
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>
@@ -1546,6 +3060,7 @@
 								<Sound Name="gasloop" ID="{533D6B45-FCEB-4537-AD96-BD49B01BFAD1}" ShortID="407497455" Type="SoundFX">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -2069,7 +3584,7 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-10</Value>
+												<Value>-20</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>

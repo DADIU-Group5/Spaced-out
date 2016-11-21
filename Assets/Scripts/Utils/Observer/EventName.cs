@@ -31,6 +31,9 @@
     ShowSubtile,
     PlayerLaunchModeToggle,
     PlayerLaunchCancel,
+    PlayerCharge,
+    Door,
+    PlayerVentilated,
     StartCutscene,
     ToggleUI
 }

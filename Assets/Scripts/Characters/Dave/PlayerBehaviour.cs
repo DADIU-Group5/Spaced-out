@@ -1,14 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-// my thought was that this script could be used for
-// collisions, and player behaviour.
-// input/movement would be a separate script.
 public class PlayerBehaviour : MonoBehaviour, Observer
 {
 
-    Rigidbody rgb;
-    //[HideInInspector]
+	// Use this for initialization
+	void Start () {
+        Subject.instance.AddObserver(this);
+    }
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+
+    [HideInInspector]
     public bool onFire;
     public bool electrocuted = false;
     [HideInInspector]
@@ -25,18 +31,9 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 
     private bool gameIsOver = false;
 
-    void Start()
-    {
-        rgb = this.gameObject.GetComponent<Rigidbody>();
-        Subject.instance.AddObserver(this);
-    }
 
     void OnCollisionEnter(Collision other)
     {
-        var evt = new ObserverEvent(EventName.Collision);
-        evt.payload.Add(PayloadConstants.COLLISION_STATIC, other.gameObject.layer != LayerMask.NameToLayer("Ignore Raycast"));
-        Subject.instance.Notify(gameObject, evt);
-
         if (onFire)
         {
             bounces += 1;
@@ -44,7 +41,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
             {
                 Debug.Log("Extinguishing");
                 bounces = 0;
-                evt = new ObserverEvent(EventName.Extinguish);
+                var evt = new ObserverEvent(EventName.Extinguish);
                 Subject.instance.Notify(gameObject, evt);
             }
         }
@@ -78,8 +75,10 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         switch (evt.eventName)
         {
             case EventName.OnFire:
+                Debug.Log("OnFire notification in movementbehaviour!");
                 if (!onFire && !gameIsOver)
                 {
+                    Debug.Log("Player is not on fire...");
                     onFire = true;
 
                     StartCoroutine(BurnToDeath());
@@ -148,8 +147,5 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         }
     }
 
-    void OnDestroy()
-    {
-        Subject.instance.RemoveObserver(this);
-    }
+
 }

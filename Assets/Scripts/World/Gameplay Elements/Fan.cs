@@ -55,5 +55,13 @@ public class Fan : MonoBehaviour {
             }
         }
     }
-	
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (itemState.On && other.transform.tag == "Player")
+        {
+            var evt = new ObserverEvent(EventName.PlayerVentilated);
+            Subject.instance.Notify(gameObject, evt);
+        }
+    }
 }

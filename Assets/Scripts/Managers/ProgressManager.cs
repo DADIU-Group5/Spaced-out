@@ -9,6 +9,14 @@ public class ProgressManager : Singleton<ProgressManager> {
 
     public Progress progress;
 
+    public void UnlockAll()
+    {
+        for (int i = 0; i < progress.levels.Length; i++)
+        {
+            progress.levels[i].unlocked = true;
+        }
+    }
+
     // sets the tutorial as completed
     public void completeTutorial()
     {

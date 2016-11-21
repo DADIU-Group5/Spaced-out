@@ -9350,6 +9350,7 @@
 			</SharedValues>
 			<UsedLanguageList>
 				<Language VolumeOffset="0">English(US)</Language>
+				<Language VolumeOffset="0">Danish</Language>
 			</UsedLanguageList>
 			<EnvironmentalSettings>
 				<ObsOccCurves>

@@ -18,4 +18,5 @@ public class PayloadConstants
     public const string START_STOP = "startStop";
     public const string COLLISION_STATIC = "collisionWith";
     public const string DOOR_OPEN = "doorOpen";
+    public const string COMICS = "comics";
 }

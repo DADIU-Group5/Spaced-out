@@ -15,9 +15,9 @@ public class HUDController : MonoBehaviour, Observer {
     public Text comicsLeftText;
 
     public Transform chargeArrow;
+    public Image gal;
     public RectTransform chargeImagePivot,
         chargeMaskPivot;
-
 
     private float chargeArrowYMin = 68f;
     private float chargeArrowYHeight = 350.0f;
@@ -27,6 +27,7 @@ public class HUDController : MonoBehaviour, Observer {
     void Awake ()
     {
         Subject.instance.AddObserver(this);
+        gal.enabled = false;
     }
 
     void Start()
@@ -98,8 +99,7 @@ public class HUDController : MonoBehaviour, Observer {
                 gameOver = true;
                 break;
 
-            case EventName.ShowSubtile:
-                //string subText = Translator.instance.Get((string)evt.payload[PayloadConstants.SUBTITLE_TEXT]);
+            case EventName.Narrate:
                 string subText = (string)evt.payload[PayloadConstants.SUBTITLE_TEXT];
                 float subStart = (float)evt.payload[PayloadConstants.SUBTITLE_START];
                 float subDuration = (float)evt.payload[PayloadConstants.SUBTITLE_DURATION];
@@ -124,9 +124,11 @@ public class HUDController : MonoBehaviour, Observer {
         yield return new WaitForSeconds(subStart);
 
         subtitleText.text = subText;
+        gal.enabled = true;
 
         yield return new WaitForSeconds(subDuration);
 
         subtitleText.text = "";
+        gal.enabled = false;
     }
 }

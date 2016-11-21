@@ -77,4 +77,11 @@ public class SubtitleManager : Singleton<SubtitleManager>, Observer
 
         return subtitleEvent;
     }
+
+    public Subtitle GetRandomSubtitle(Language language, SubtitleType subType)
+    {
+        var subtitleByCategory = subtitles.GetSubtitles(language, subType);
+
+        return GetRandomSubtitle(subtitleByCategory);
+    }
 }

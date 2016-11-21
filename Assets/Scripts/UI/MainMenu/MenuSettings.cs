@@ -93,7 +93,7 @@ public class MenuSettings : MonoBehaviour {
         muteBtnTxt.text = muteBtnState ? Translator.instance.Get("unmute") : Translator.instance.Get("mute");
         musicTxt.text = Translator.instance.Get("music");
         effectsTxt.text = Translator.instance.Get("effects");
-        if (muteTxt.text == "mute")
+        if (muteTxt.text == Translator.instance.Get("mute"))
         {
             muteTxt.text = Translator.instance.Get("mute");
         }else

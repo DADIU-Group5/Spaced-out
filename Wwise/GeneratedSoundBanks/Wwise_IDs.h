@@ -194,6 +194,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID EFFECTSVOLUME = 640585335U;
+        static const AkUniqueID FANFORCE = 911290369U;
         static const AkUniqueID JETPACKCHARGELEVEL = 2371628509U;
         static const AkUniqueID MASTERHIPASS = 3129080009U;
         static const AkUniqueID MASTERLOPASS = 3097485287U;

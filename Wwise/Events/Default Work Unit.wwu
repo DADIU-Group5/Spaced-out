@@ -1184,12 +1184,24 @@
 						</Event>
 						<Event Name="daveStaticCollision" ID="{8C5165B1-A54B-4957-A6F1-4064ECC02255}">
 							<ChildrenList>
-								<Action Name="Play" ID="{A47CACD1-5DA2-4250-A825-619F6D3210B3}" ShortID="299648698" Type="Play" Scope="One" Global="false"/>
+								<Action Name="Play" ID="{A47CACD1-5DA2-4250-A825-619F6D3210B3}" ShortID="299648698" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{03364062-484E-4F44-8502-127D0C552623}" Global="false">
+											<ObjectRef Name="wall impacts" ID="{76D41AAB-6280-4BF7-B2B3-978573092B07}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="daveobjectCollision" ID="{A261AB7A-38C8-4BC5-85FB-C7EF60109A8B}">
 							<ChildrenList>
-								<Action Name="Play" ID="{DC8AE968-C071-4DA8-8065-F243FD7B904F}" ShortID="460174609" Type="Play" Scope="One" Global="false"/>
+								<Action Name="Play" ID="{DC8AE968-C071-4DA8-8065-F243FD7B904F}" ShortID="460174609" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{B570C43B-A40A-4E8C-88A1-C5F79407DC32}" Global="false">
+											<ObjectRef Name="object impacts" ID="{2F77B4D7-79D6-4D86-9DD9-050C2479DD08}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="daveJetpackRandomExhaust" ID="{1D9D1416-C6B1-4A0A-BBC6-A2EAD791389D}">
@@ -1210,7 +1222,13 @@
 						<Event Name="daveOutofOxygen" ID="{29D16A91-BAB9-4DDC-8A2B-2DDDE1A4DB05}"/>
 						<Event Name="daveVent" ID="{61D326B8-41B3-4F62-9696-75FEAEC489A2}">
 							<ChildrenList>
-								<Action Name="Play" ID="{CDC291D3-7121-4FAE-BD45-DA8E02ED3AFD}" ShortID="131811180" Type="Play" Scope="One" Global="false"/>
+								<Action Name="Play" ID="{CDC291D3-7121-4FAE-BD45-DA8E02ED3AFD}" ShortID="131811180" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{E10CDA6A-D4AA-4D98-9EA7-4FA03ED14BF6}" Global="false">
+											<ObjectRef Name="airdrag" ID="{F531F20F-7E93-44CF-9E05-98BE0E6F2967}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>
@@ -1350,6 +1368,13 @@
 										</Element>
 									</ElementList>
 								</Action>
+								<Action Name="Play" ID="{542E96E5-5B13-4BED-B8DA-BCAEFC8EA1DB}" ShortID="471822009" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{B9F8BDFC-ADCA-4BF5-A5A5-EC06B8CE30FC}" Global="false">
+											<ObjectRef Name="fanair" ID="{5F8D3812-4A81-46D0-AC89-8C9487F79949}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="ventAir" ID="{63694199-89B1-4D0F-8472-12B42F956FC3}">
@@ -1357,7 +1382,7 @@
 								<Action Name="Play" ID="{FCD4252F-3F49-4DD6-A441-56DA4A915E35}" ShortID="663316393" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{58FBB1A4-243C-4310-B031-64FACB369422}" Global="false">
-											<ObjectRef Name="air" ID="{F531F20F-7E93-44CF-9E05-98BE0E6F2967}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}"/>
+											<ObjectRef Name="airdrag" ID="{F531F20F-7E93-44CF-9E05-98BE0E6F2967}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -1423,13 +1448,6 @@
 									<ElementList>
 										<Element ID="{F5013A39-CED3-4648-85F4-FDA054881AB2}" Global="false">
 											<ObjectRef Name="main atmos" ID="{1D2E4926-39CC-487E-B02C-23F3E7439A0D}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Play" ID="{95A5CAD8-C777-4A84-9F33-A5724BFD70E6}" ShortID="77247366" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{A5956F6A-C569-412B-B0EA-00E661FA2325}" Global="false">
-											<ObjectRef Name="air" ID="{F531F20F-7E93-44CF-9E05-98BE0E6F2967}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}"/>
 										</Element>
 									</ElementList>
 								</Action>

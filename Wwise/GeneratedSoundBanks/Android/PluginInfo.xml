@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginInfo Project="Spaced Out" Platform="Android" BasePlatform="Android">
 	<Plugins>
+		<Plugin Name="Wwise Silence" ID="6619138" DLL="SilenceGenerator"/>
 		<Plugin Name="McDSP ML1" ID="6754307" DLL="McDSP"/>
 		<Plugin Name="Wwise Parametric EQ" ID="6881283" DLL="ParametricEQ"/>
 		<Plugin Name="SoundSeed Air/SoundSeed Wind" ID="7798786" DLL="AkSoundSeedAir"/>

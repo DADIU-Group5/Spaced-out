@@ -11345,7 +11345,7 @@ Presence is roughly related to distance and occlusion</Comment>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="air" ID="{F531F20F-7E93-44CF-9E05-98BE0E6F2967}" ShortID="144602667" Type="SoundFX">
+								<Sound Name="airdrag" ID="{F531F20F-7E93-44CF-9E05-98BE0E6F2967}" ShortID="144602667" Type="SoundFX">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 									</PropertyList>
@@ -11365,7 +11365,7 @@ Presence is roughly related to distance and occlusion</Comment>
 														<RTPC Name="" ID="{2D6D7630-FDFC-4526-B2DE-F12C0D036D43}" ShortID="935575447">
 															<ReferenceList>
 																<Reference Name="ControlInput">
-																	<ObjectRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+																	<ObjectRef Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 																</Reference>
 															</ReferenceList>
 															<Curve Name="" ID="{031B873E-A362-43FD-8350-51C7A6A66AAF}">
@@ -11406,7 +11406,7 @@ Presence is roughly related to distance and occlusion</Comment>
 														<RTPC Name="" ID="{57984B72-D32B-4613-A572-6F0E26FA2567}" ShortID="297726860">
 															<ReferenceList>
 																<Reference Name="ControlInput">
-																	<ObjectRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+																	<ObjectRef Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 																</Reference>
 															</ReferenceList>
 															<Curve Name="" ID="{50E7258C-C1FC-43AD-A1E6-88DD7A3A1B28}">
@@ -11434,7 +11434,7 @@ Presence is roughly related to distance and occlusion</Comment>
 														<RTPC Name="" ID="{FA1089A1-60EC-48F2-825A-B64E8A91E7C1}" ShortID="629582307">
 															<ReferenceList>
 																<Reference Name="ControlInput">
-																	<ObjectRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+																	<ObjectRef Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 																</Reference>
 															</ReferenceList>
 															<Curve Name="" ID="{B0F8147F-58A3-48ED-A113-842D1FA30963}">
@@ -11469,7 +11469,7 @@ Presence is roughly related to distance and occlusion</Comment>
 														<RTPC Name="" ID="{00CB805C-6EE8-4321-AE4B-7EBD04EC9D0E}" ShortID="485302491">
 															<ReferenceList>
 																<Reference Name="ControlInput">
-																	<ObjectRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+																	<ObjectRef Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 																</Reference>
 															</ReferenceList>
 															<Curve Name="" ID="{6ADA3465-669D-41F2-B385-C815553BB68A}">
@@ -11498,7 +11498,7 @@ Presence is roughly related to distance and occlusion</Comment>
 														<RTPC Name="" ID="{3DBFC87A-A665-44D0-B38E-FBD79D2FCA9F}" ShortID="852955300">
 															<ReferenceList>
 																<Reference Name="ControlInput">
-																	<ObjectRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+																	<ObjectRef Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 																</Reference>
 															</ReferenceList>
 															<Curve Name="" ID="{45750D57-6400-4F63-94AE-B95FA3E55174}">
@@ -11527,7 +11527,7 @@ Presence is roughly related to distance and occlusion</Comment>
 														<RTPC Name="" ID="{3DEEF8D2-03B8-4B22-9D62-CD7240F11A04}" ShortID="1025494638">
 															<ReferenceList>
 																<Reference Name="ControlInput">
-																	<ObjectRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+																	<ObjectRef Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 																</Reference>
 															</ReferenceList>
 															<Curve Name="" ID="{08A8D1FB-4218-469D-AF71-3894FBD680D3}">
@@ -11852,6 +11852,234 @@ Presence is roughly related to distance and occlusion</Comment>
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="fireblaze" ID="{4C07ECF3-A2E3-45A3-9371-EB21F0B7E065}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="fanair" ID="{5F8D3812-4A81-46D0-AC89-8C9487F79949}" ShortID="415597548" Type="SoundFX">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="electricity" ID="{3AB70FE9-DBA1-46D2-9FA1-A024962E697E}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="airdrag" ID="{637C5AA0-A699-4FFF-A333-A762310376D5}" ShortID="776741295" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+											<PropertyList>
+												<Property Name="AverageVelocity" Type="Real32">
+													<RTPCList>
+														<RTPC Name="" ID="{789CC835-2700-47FB-93BC-044E1F3D4304}" ShortID="541663117">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="fanair" ID="{F2389AAE-EA41-4327-9BAD-B40679DD7800}" WorkUnitID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{596B0D37-40F2-4D28-97D9-DC550F42FAB5}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-1058.31325</YPos>
+																		<Flags>21</Flags>
+																		<SegmentShape>Exp3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-948.43373</YPos>
+																		<Flags>53</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="FrequencyScale" Type="Real32">
+													<RTPCList>
+														<RTPC Name="" ID="{FCC1DC24-5A9A-495D-831A-FF13E9C29771}" ShortID="849096011">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="fanair" ID="{F2389AAE-EA41-4327-9BAD-B40679DD7800}" WorkUnitID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{948CBA27-E7FC-45C9-AA5F-F1F808158B7E}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0.5397</YPos>
+																		<Flags>21</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>0.63618</YPos>
+																		<Flags>53</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="GainOffset" Type="Real32">
+													<RTPCList>
+														<RTPC Name="" ID="{619990D9-9D9C-4120-90AA-0FED596CC3EE}" ShortID="105851252">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="fanair" ID="{F2389AAE-EA41-4327-9BAD-B40679DD7800}" WorkUnitID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{5D4D37FA-822D-4B4D-9EA9-E4EA8E9C6A26}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-7.53363</YPos>
+																		<Flags>21</Flags>
+																		<SegmentShape>Exp3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-6.09145</YPos>
+																		<Flags>53</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="Gustiness" Type="Real32">
+													<RTPCList>
+														<RTPC Name="" ID="{5CD197A7-EE61-4A76-B6A4-A79148EB4807}" ShortID="964030469">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="fanair" ID="{F2389AAE-EA41-4327-9BAD-B40679DD7800}" WorkUnitID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{3069DC70-01B8-49ED-8F91-6B746BC6DF01}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0.03855</YPos>
+																		<Flags>21</Flags>
+																		<SegmentShape>Exp3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>0.05662</YPos>
+																		<Flags>53</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="QFactorScale" Type="Real32">
+													<RTPCList>
+														<RTPC Name="" ID="{D20254DA-9607-4585-8126-37FB4A2DB3E9}" ShortID="886324524">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="fanair" ID="{F2389AAE-EA41-4327-9BAD-B40679DD7800}" WorkUnitID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{BD7D7674-6C82-4DF3-AEE9-E6B1AAD80C8E}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-3.28675</YPos>
+																		<Flags>21</Flags>
+																		<SegmentShape>Exp1</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-3.10363</YPos>
+																		<Flags>53</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="Variability" Type="Real32">
+													<RTPCList>
+														<RTPC Name="" ID="{F2BC4A6E-9715-4455-BC69-F714727C94B3}" ShortID="675104175">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="fanair" ID="{F2389AAE-EA41-4327-9BAD-B40679DD7800}" WorkUnitID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{248275CC-77D3-47C7-AE6B-346250ED6777}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0.01928</YPos>
+																		<Flags>21</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>0.03374</YPos>
+																		<Flags>53</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<Language>SFX</Language>
+											<PluginData>
+	<CurveList Version="1">
+		<CurveInfo Name="AverageVelocity">
+			<Curve Name="" ID="{9E540704-2041-45FB-B4C4-ECF9D29D710F}">
+				<PropertyList>
+					<Property Name="Flags" Type="int32" Value="1"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>18.25095</YPos>
+						<Flags>5</Flags>
+					</Point>
+					<Point>
+						<XPos>10</XPos>
+						<YPos>-2400</YPos>
+						<Flags>37</Flags>
+					</Point>
+				</PointList>
+			</Curve>
+		</CurveInfo>
+	</CurveList>
+</PluginData>
+											<PluginInnerObjectList>
+												<List Name="Deflectors">
+													<PluginInnerObject Name="" ID="{8FF9DACF-3D67-4F6C-9CA3-1C8B4545287C}" PluginName="Deflector" CompanyID="0" PluginID="121"/>
+												</List>
+											</PluginInnerObjectList>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="airdrag" ID="{637C5AA0-A699-4FFF-A333-A762310376D5}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

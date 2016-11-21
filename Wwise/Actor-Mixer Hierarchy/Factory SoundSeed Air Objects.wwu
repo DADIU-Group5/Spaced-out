@@ -12078,6 +12078,24 @@ Presence is roughly related to distance and occlusion</Comment>
 											</PluginInnerObjectList>
 										</SourcePlugin>
 									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="power" ID="{77AAB1E6-40DE-4AB1-8585-CD37F5D0CA36}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="off" ID="{8CE3E364-66FA-4DE3-9D14-E500C95C290B}"/>
+												<State Name="Custom State" ID="{87198D93-7DC4-452A-B983-DF05E12ADA5E}" ShortID="327007126">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32" Value="-2400"/>
+														<Property Name="Volume" Type="Real64" Value="-96"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 									<ActiveSourceList>
 										<ActiveSource Name="airdrag" ID="{637C5AA0-A699-4FFF-A333-A762310376D5}" Platform="Linked"/>
 									</ActiveSourceList>

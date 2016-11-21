@@ -1110,16 +1110,6 @@
 										</Element>
 									</ElementList>
 								</Action>
-								<Action Name="Set Voice Volume" ID="{E8F76F13-C5B6-498C-96D2-A9D566335FB6}" ShortID="274781296" Type="ChangeVolume" Scope="One" Global="true">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-20"/>
-									</PropertyList>
-									<ElementList>
-										<Element ID="{40A37368-8478-4898-B2A5-B3B661734C2D}" Global="true">
-											<ObjectRef Name="gasloop" ID="{533D6B45-FCEB-4537-AD96-BD49B01BFAD1}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
-										</Element>
-									</ElementList>
-								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="daveElectrocute" ID="{AB4E9910-A4DB-4620-B4A4-796776254E1A}">
@@ -1211,7 +1201,13 @@
 						</Event>
 						<Event Name="daveSquishBetweenDoors" ID="{6904D5CC-4E58-4F8A-85ED-2FE81C7C2577}">
 							<ChildrenList>
-								<Action Name="Play" ID="{384FC4E2-49B6-4B4C-B185-0F48C9FD8C28}" ShortID="318350910" Type="Play" Scope="One" Global="false"/>
+								<Action Name="Play" ID="{384FC4E2-49B6-4B4C-B185-0F48C9FD8C28}" ShortID="318350910" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{207E2142-2E0E-447A-A403-644155957BFF}" Global="false">
+											<ObjectRef Name="door squeeze" ID="{81410CC2-B2A4-4150-A7FB-B43D3FC08471}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="daveRandomGrunt" ID="{748D9C5A-EC83-4094-A317-67FD94B617FE}">
@@ -1351,12 +1347,53 @@
 						</Event>
 						<Event Name="switchOn" ID="{606B4472-D0D4-4B6C-97D5-1E1E7245DF83}">
 							<ChildrenList>
-								<Action Name="Play" ID="{98B20516-086E-4053-A105-1AF97D6EE060}" ShortID="220775958" Type="Play" Scope="One" Global="false"/>
+								<Action Name="Play" ID="{98B20516-086E-4053-A105-1AF97D6EE060}" ShortID="220775958" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{F295DEF2-1FFB-4621-ACB4-A9CD9B5EFDAB}" Global="false">
+											<ObjectRef Name="power up" ID="{7B98E50C-A038-452E-99E9-F1612D3AE1D8}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{754B5EB4-B8A9-48A9-9DB7-91F57F35A7F4}" ShortID="450604657" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{C7B16FDC-FD44-4A51-99AA-6165CAB7B44B}" Global="false">
+											<ObjectRef Name="switch on" ID="{3BD5564D-3D1E-4539-A96E-AD28EF60BD69}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Set State" ID="{F111EE86-F4A0-4754-967C-C8709CA990C0}" ShortID="764927684" Type="SetState" Scope="All" Global="true">
+									<SetItemParam>
+										<Group Name="power" ID="{77AAB1E6-40DE-4AB1-8585-CD37F5D0CA36}"/>
+										<GroupItem Name="on" ID="{47F04DF9-4A7D-4198-A709-3A5E13D6213A}"/>
+									</SetItemParam>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="switchOff" ID="{3428C509-9DEE-40C9-AE0F-B38D83962DC2}">
 							<ChildrenList>
-								<Action Name="Play" ID="{AEC5852F-B936-495E-B65A-59230769C95C}" ShortID="552982660" Type="Play" Scope="One" Global="false"/>
+								<Action Name="Play" ID="{AEC5852F-B936-495E-B65A-59230769C95C}" ShortID="552982660" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{C774A48A-5C6A-4E48-87DA-111B026F76DA}" Global="false">
+											<ObjectRef Name="switch off" ID="{9586D436-B249-4634-9831-86DB337A4C68}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{C486856F-0B2D-476D-83BC-3260405396AE}" ShortID="761494412" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{4C2162D2-3CCC-47F0-88A1-64FCF3DFA0B0}" Global="false">
+											<ObjectRef Name="power down" ID="{F0FA3640-75E6-4690-B726-6CC02193D9F9}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Set State" ID="{9B96395A-F374-4E0C-A90A-72A6066526E1}" ShortID="836487267" Type="SetState" Scope="All" Global="true">
+									<SetItemParam>
+										<Group Name="power" ID="{77AAB1E6-40DE-4AB1-8585-CD37F5D0CA36}"/>
+										<GroupItem Name="off" ID="{8CE3E364-66FA-4DE3-9D14-E500C95C290B}"/>
+									</SetItemParam>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="vent" ID="{6CA9B287-104C-426C-AA95-28B98DBE076E}">

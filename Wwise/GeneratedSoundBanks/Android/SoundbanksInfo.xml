@@ -216,7 +216,7 @@
 				</File>
 				<File Id="111064016" Language="SFX">
 					<ShortName>unprocessed\What are you doing dave you need to get to the escape pod (sweet).wav</ShortName>
-					<Path>SFX/unprocessed/What are you doing dave you need to get to the escape pod (sweet)_645155D0.wem</Path>
+					<Path>SFX/unprocessed/What are you doing dave you need to get to the escape pod (sweet)_BBED3B89.wem</Path>
 				</File>
 				<File Id="112371414" Language="SFX">
 					<ShortName>impacts\object impact light6.wav</ShortName>
@@ -242,6 +242,10 @@
 					<ShortName>Husk nu Dave; Ned og rul!.wav</ShortName>
 					<Path>SFX/Husk nu Dave; Ned og rul!_645155D0.wem</Path>
 				</File>
+				<File Id="202362747" Language="SFX">
+					<ShortName>switches\switch on.wav</ShortName>
+					<Path>SFX/switches/switch on_645155D0.wem</Path>
+				</File>
 				<File Id="213148062" Language="SFX">
 					<ShortName>menuScrollclick4.wav</ShortName>
 					<Path>SFX/menuScrollclick4_645155D0.wem</Path>
@@ -253,6 +257,10 @@
 				<File Id="230076930" Language="SFX">
 					<ShortName>Mit software har ikke nogen fejl.wav</ShortName>
 					<Path>SFX/Mit software har ikke nogen fejl_645155D0.wem</Path>
+				</File>
+				<File Id="257012564" Language="SFX">
+					<ShortName>switches\switch off.wav</ShortName>
+					<Path>SFX/switches/switch off_645155D0.wem</Path>
 				</File>
 				<File Id="261205730" Language="SFX">
 					<ShortName>electrocute5.wav</ShortName>
@@ -303,11 +311,15 @@
 				</File>
 				<File Id="345686519" Language="SFX">
 					<ShortName>unprocessed\vi har teknologien til bringe dig tilbage, når kommer galt afsted. Heldigt for dig... .wav</ShortName>
-					<Path>SFX/unprocessed/vi har teknologien til bringe dig tilbage, når kommer galt afsted. Heldigt for dig... _645155D0.wem</Path>
+					<Path>SFX/unprocessed/vi har teknologien til bringe dig tilbage, når kommer galt afsted. Heldigt for dig... _7B6C9FE6.wem</Path>
 				</File>
 				<File Id="369241998" Language="SFX">
 					<ShortName>electricity loop.wav</ShortName>
 					<Path>SFX/electricity loop_824B34CA.wem</Path>
+				</File>
+				<File Id="399449157" Language="SFX">
+					<ShortName>power down.wav</ShortName>
+					<Path>SFX/power down_645155D0.wem</Path>
 				</File>
 				<File Id="399586230" Language="SFX">
 					<ShortName>launch mockup1 medium.wav</ShortName>
@@ -392,7 +404,7 @@
 				</File>
 				<File Id="526762414" Language="SFX">
 					<ShortName>The hazards here dont seem too friendly... you should go say hi!.wav</ShortName>
-					<Path>SFX/The hazards here dont seem too friendly... you should go say hi!_645155D0.wem</Path>
+					<Path>SFX/The hazards here dont seem too friendly... you should go say hi!_68599667.wem</Path>
 				</File>
 				<File Id="538281099" Language="SFX">
 					<ShortName>AK_Factory_IR\Rooms\AK Hamburg Echo Chamber.wav</ShortName>
@@ -443,6 +455,10 @@
 					<ShortName>unprocessed\Dave, mine sensorere har opfanget noget.. det nærmer sig, hurtigt.wav</ShortName>
 					<Path>SFX/unprocessed/Dave, mine sensorere har opfanget noget.. det nærmer sig, hurtigt_645155D0.wem</Path>
 				</File>
+				<File Id="647898339" Language="SFX">
+					<ShortName>door squeeze.wav</ShortName>
+					<Path>SFX/door squeeze_645155D0.wem</Path>
+				</File>
 				<File Id="658598555" Language="SFX">
 					<ShortName>Mine beregninger fortæller mig at dit ilt niveau er lavt.wav</ShortName>
 					<Path>SFX/Mine beregninger fortæller mig at dit ilt niveau er lavt_645155D0.wem</Path>
@@ -469,7 +485,7 @@
 				</File>
 				<File Id="698227094" Language="SFX">
 					<ShortName>unprocessed\Hvad har du gang i, Dave Du skal hen imod rednings kapslen.wav</ShortName>
-					<Path>SFX/unprocessed/Hvad har du gang i, Dave Du skal hen imod rednings kapslen_645155D0.wem</Path>
+					<Path>SFX/unprocessed/Hvad har du gang i, Dave Du skal hen imod rednings kapslen_2B767C12.wem</Path>
 				</File>
 				<File Id="719297784" Language="SFX">
 					<ShortName>advarsel, bered på sammenstød.wav</ShortName>
@@ -505,7 +521,7 @@
 				</File>
 				<File Id="782658039" Language="SFX">
 					<ShortName>unprocessed\Your lucky we have the tecnology to bring you back when you hurt your self.wav</ShortName>
-					<Path>SFX/unprocessed/Your lucky we have the tecnology to bring you back when you hurt your self_645155D0.wem</Path>
+					<Path>SFX/unprocessed/Your lucky we have the tecnology to bring you back when you hurt your self_E2BB845C.wem</Path>
 				</File>
 				<File Id="786633454" Language="SFX">
 					<ShortName>menuclickbackwards.wav</ShortName>
@@ -556,6 +572,10 @@
 					<ShortName>unprocessed\Dave nul, (Charles) Darwin 1.wav</ShortName>
 					<Path>SFX/unprocessed/Dave nul, (Charles) Darwin 1_645155D0.wem</Path>
 				</File>
+				<File Id="867057375" Language="SFX">
+					<ShortName>power up.wav</ShortName>
+					<Path>SFX/power up_645155D0.wem</Path>
+				</File>
 				<File Id="877963907" Language="SFX">
 					<ShortName>electrocute1.wav</ShortName>
 					<Path>SFX/electrocute1_E0C30CD6.wem</Path>
@@ -582,7 +602,7 @@
 				</File>
 				<File Id="926836453" Language="SFX">
 					<ShortName>unprocessed\det her sted virker ikke særligt sikkert... men Hey! der er kun en måde at finde ud af det på.wav</ShortName>
-					<Path>SFX/unprocessed/det her sted virker ikke særligt sikkert... men Hey! der er kun en måde at finde ud af det på_645155D0.wem</Path>
+					<Path>SFX/unprocessed/det her sted virker ikke særligt sikkert... men Hey! der er kun en måde at finde ud af det på_195BD716.wem</Path>
 				</File>
 				<File Id="938445351" Language="SFX">
 					<ShortName>impacts\object impact6.wav</ShortName>

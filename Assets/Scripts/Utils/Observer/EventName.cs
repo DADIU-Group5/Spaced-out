@@ -32,5 +32,6 @@
     PlayerLaunchModeToggle,
     PlayerLaunchCancel,
     PlayerCharge,
-    Door
+    Door,
+    PlayerVentilated
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class SoundManager : Singleton<SoundManager>, Observer
 {
@@ -122,11 +123,16 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 if ((bool)evt.payload[PayloadConstants.COLLISION_STATIC])
                 {
                     PlayEvent(SoundEventConstants.DAVE_STATIC_COLLISION);
+                    PlayEvent(SoundEventConstants.DAVE_RANDOM_GRUNT);
                 }
                 else
                 {
                     PlayEvent(SoundEventConstants.DAVE_OBJECT_COLLISION);
+                    PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
                 }
+                break;
+            case EventName.PlayerVentilated:
+                PlayEvent(SoundEventConstants.DAVE_VENT);
                 break;
             case EventName.PlayerDead:
                 var deathCause = (EventName)evt.payload[PayloadConstants.DEATH_CAUSE];

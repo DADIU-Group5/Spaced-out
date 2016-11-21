@@ -21,6 +21,8 @@ public class SoundEventConstants
     public const string DAVE_FIRST_LAUNCH_5 = "daveFirstLaunch_05";
     public const string DAVE_OBJECT_COLLISION = "daveobjectCollision";
     public const string DAVE_STATIC_COLLISION = "daveStaticCollision";
+    public const string DAVE_RANDOM_GRUNT = "daveRandomGrunt";
+    public const string DAVE_VENT = "daveVent";
 
     // Dave hazard sounds
     public const string DAVE_CATCH_FIRE = "daveCatchFire";

@@ -34,17 +34,20 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 
     void OnCollisionEnter(Collision other)
     {
-        if (onFire)
-        {
-            bounces += 1;
-            if (bounces >= JumpsToExtinguish)
-            {
-                Debug.Log("Extinguishing");
-                bounces = 0;
-                var evt = new ObserverEvent(EventName.Extinguish);
-                Subject.instance.Notify(gameObject, evt);
-            }
-        }
+        var evt = new ObserverEvent(EventName.Collision);
+        evt.payload.Add(PayloadConstants.COLLISION_STATIC, other.gameObject.layer != LayerMask.NameToLayer("Ignore Raycast"));
+        Subject.instance.Notify(gameObject, evt);
+        //if (onFire)
+        //{
+        //    bounces += 1;
+        //    if (bounces >= JumpsToExtinguish)
+        //    {
+        //        Debug.Log("Extinguishing");
+        //        bounces = 0;
+        //        var evt = new ObserverEvent(EventName.Extinguish);
+        //        Subject.instance.Notify(gameObject, evt);
+        //    }
+        //}
     }
 
     internal void Kill(EventName causeOfDeath)

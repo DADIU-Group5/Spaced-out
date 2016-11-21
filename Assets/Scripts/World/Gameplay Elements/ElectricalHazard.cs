@@ -18,22 +18,31 @@ public class ElectricalHazard : MonoBehaviour {
         itemState = this.gameObject.GetComponent<GameplayElement>();
     }
 
-
     void OnTriggerStay(Collider other)
     {
-        if (other.transform.tag == "Player" && itemState.On)
+        if (other.transform.tag == "Player" && itemState.On && !shockingPlayer)
         {
+            //set shockingplayer to true, to avoid multiple notifies (mostly for subtitles/voices, etc.)
+            shockingPlayer = true;
             StartCoroutine(ShockToDeath());
         }
     }
 
+    //if player exits trigger, reset player detection
+    void OnTriggerExit(Collider other)
+    {
+        if (other.transform.tag == "Player" && itemState.On)
+        {
+            shockingPlayer = false;
+        }
+    }
+
     /// <summary>
-    /// Burn the player to death, if fire is not put out.
+    /// Shocks the player to death.
     /// </summary>
     public IEnumerator ShockToDeath()
     {
         yield return new WaitForSeconds(TimeUntilShockToDeath);
-        Debug.Log("Player was electrocuted!");
         //player.GetComponent<PlayerController>().Kill();
         var evt = new ObserverEvent(EventName.Electrocuted);
         Subject.instance.Notify(gameObject, evt);

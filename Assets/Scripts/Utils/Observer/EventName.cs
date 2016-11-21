@@ -33,6 +33,9 @@
     PlayerLaunchCancel,
     ComicsAdded,
     GodMode,
+    PlayerCharge,
+    Door,
+    PlayerVentilated,
     StartCutscene,
     ToggleUI
 }

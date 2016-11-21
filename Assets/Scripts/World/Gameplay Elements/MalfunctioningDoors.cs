@@ -20,14 +20,19 @@ public class MalfunctioningDoors : MonoBehaviour {
 
     public void CloseOpenDoor()
     {
+        var evt = new ObserverEvent(EventName.Door);
+
         if (closed)
         {
             animator.SetTrigger("Open");
+            evt.payload.Add(PayloadConstants.DOOR_OPEN, true);
         }
         else
         {
             animator.SetTrigger("Close");
+            evt.payload.Add(PayloadConstants.DOOR_OPEN, false);
         }
+        Subject.instance.Notify(gameObject, evt);
     }
 
     public void LockDoor()

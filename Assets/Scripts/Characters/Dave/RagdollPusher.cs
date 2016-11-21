@@ -30,7 +30,7 @@ public class RagdollPusher : MonoBehaviour
                 if (hit.rigidbody != null)
                 {
                     //find the RagdollHelper component and activate ragdolling
-                    RagdollHelper helper = GetComponent<RagdollHelper>();
+                    RagdollAnimationBlender helper = GetComponent<RagdollAnimationBlender>();
                     helper.EnableRagdoll();
 
                     //set the impact target to whatever the ray hit
@@ -51,7 +51,7 @@ public class RagdollPusher : MonoBehaviour
         //a RagdollHelper script
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            RagdollHelper helper = GetComponent<RagdollHelper>();
+            RagdollAnimationBlender helper = GetComponent<RagdollAnimationBlender>();
             helper.DisableRagdoll();
         }
 

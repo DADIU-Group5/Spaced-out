@@ -21,17 +21,29 @@ public class MovementBehaviour : MonoBehaviour
     private Rigidbody body;
     private OxygenController oxygen;
     private PlayerController playerController;
+    private RagdollAnimationBlender animationBlender;
+    private bool ragdolling;
 
     void Start()
     {
         body = GetComponent<Rigidbody>();
         oxygen = GetComponent<OxygenController>();
         playerController = GetComponent<PlayerController>();
+        animationBlender = GetComponentInChildren<RagdollAnimationBlender>();
     }
 
-    void Update()
+    void LateUpdate()
     {
-        //print(body.velocity.magnitude);
+        // do nothing if player is not moving
+        if (body.velocity == Vector3.zero)
+            return;
+
+        // disable ragdoll
+        if (ragdolling && body.velocity.magnitude < ragdollThreshold)
+        {
+            animationBlender.DisableRagdoll();
+            ragdolling = false;
+        }
 
         // slow down player
         if (body.velocity.magnitude < slowThreshold)
@@ -47,7 +59,16 @@ public class MovementBehaviour : MonoBehaviour
         }
     }
 
-
+    private void OnCollisionEnter()
+    {
+        // enable ragdoll
+        print("Velocity: " + body.velocity.magnitude);
+        if (body.velocity.magnitude > ragdollThreshold)
+        {
+            animationBlender.EnableRagdoll();
+            ragdolling = true;
+        }
+    }
 
 
     //[HideInInspector]

@@ -11,13 +11,17 @@ public interface IPlayerControl
     void Launch();
 }
 
+/// <summary>
+/// This class is responsible for controlling the player launches.
+/// Input controller should only comunicate through the above interface
+/// </summary>
 [RequireComponent(typeof(OxygenController))]
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour, IPlayerControl
 {
     [Tooltip("The minimum required power in order to launch. 1 = max launch velocity.")]
     [Range(0, 1)]
-    public float minLaunchPower = 0f;
+    public float minLaunchPower = 0.05f;
     [Tooltip("The maximum velocity change from launch.")]   
     [Range(5, 30)]
     public float maxLaunchVelocity = 20f;
@@ -32,11 +36,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     private bool readyForLaunch;
     private Rigidbody body;
     private OxygenController oxygen;
-
-
-
-    
-
+    private Animator animator;
     
     void Awake ()
     {
@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         aim = transform.rotation;
         body = GetComponent<Rigidbody>();
         oxygen = GetComponent<OxygenController>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -59,10 +60,14 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     public void ReadyForLaunch()
     {
         if (oxygen.HasOxygen())
+        {
             readyForLaunch = true;
+            animator.SetTrigger("Ready To Launch");
+        }
         else
         {
             // throw oxygen death event
+            animator.SetTrigger("Death Oxygen");
             var evt = new ObserverEvent(EventName.OxygenEmpty);
             Subject.instance.Notify(gameObject, evt);
         }
@@ -85,6 +90,8 @@ public class PlayerController : MonoBehaviour, IPlayerControl
             return;
 
         this.power = Mathf.Clamp01(power);
+        animator.SetBool("Launch Mode", true);
+        animator.SetFloat("Power", power);
         ThrowLaunchPowerChangedEvent();
     }
 
@@ -98,8 +105,12 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         Vector3 dir = aim * Vector3.forward;
         body.AddForce(power * maxLaunchVelocity * dir, ForceMode.VelocityChange);
         oxygen.UseOxygen();
+        animator.SetBool("Launch Mode", false);
         ThrowLaunchEvent();
-        SetPower(0);
+
+        // reset power
+        power = 0;
+        ThrowLaunchPowerChangedEvent();
         readyForLaunch = false;
     }
 

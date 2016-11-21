@@ -112,12 +112,13 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 bool start = (bool)evt.payload[PayloadConstants.START_STOP];
                 if (start)
                 {
-                    float force = (float)evt.payload[PayloadConstants.LAUNCH_FORCE];
                     if (!chargePlaying)
                     {
                         PlayEvent(SoundEventConstants.DAVE_CHARGE);
                         chargePlaying = true;
                     }
+                    float force = (float)evt.payload[PayloadConstants.LAUNCH_FORCE];
+                    AkSoundEngine.SetRTPCValue("jetpackChargeLevel", force);
                 }
                 else
                 {

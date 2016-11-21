@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         animator.SetBool("Launch Mode", true);
         animator.SetFloat("Power", power);
         ThrowLaunchPowerChangedEvent();
-        ThrowChargingPowerEvent(true);
+        ThrowChargingPowerEvent(true, this.power);
     }
 
     // launch the player

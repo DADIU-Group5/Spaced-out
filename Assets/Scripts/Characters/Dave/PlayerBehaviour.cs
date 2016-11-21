@@ -116,7 +116,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
                 if (!electrocuted)
                 {
                     electrocuted = true;
-                    Kill(evt.eventName);
+                    ElectrocutingToDeath();
                 }
                 break;
             case EventName.PlayerExploded:
@@ -161,5 +161,15 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         }
     }
 
+    public void ElectrocutingToDeath()
+    {
+        //yield return new WaitForSeconds(TimeUntilBurnToDeath);
+        if (electrocuted)
+        {
+            Debug.Log("Player has been electrocuted to death!");
+            Kill(EventName.Electrocuted);
+            playerController.ElectrocutedToDeath();
+        }
+    }
 
 }

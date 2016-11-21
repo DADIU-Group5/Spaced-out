@@ -112,6 +112,7 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 bool start = (bool)evt.payload[PayloadConstants.START_STOP];
                 if (start)
                 {
+                    float force = (float)evt.payload[PayloadConstants.LAUNCH_FORCE];
                     if (!chargePlaying)
                     {
                         PlayEvent(SoundEventConstants.DAVE_CHARGE);
@@ -128,12 +129,10 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 if ((bool)evt.payload[PayloadConstants.COLLISION_STATIC])
                 {
                     PlayEvent(SoundEventConstants.DAVE_STATIC_COLLISION);
-                    PlayEvent(SoundEventConstants.DAVE_RANDOM_GRUNT);
                 }
                 else
                 {
                     PlayEvent(SoundEventConstants.DAVE_OBJECT_COLLISION);
-                    PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
                 }
                 break;
             case EventName.PlayerVentilated:

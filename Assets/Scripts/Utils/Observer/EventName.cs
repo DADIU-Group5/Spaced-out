@@ -34,6 +34,8 @@
     LowOnOxygen,
     PlayerLaunchModeToggle,
     PlayerLaunchCancel,
+    ComicsAdded,
+    GodMode,
     PlayerCharge,
     Door,
     PlayerVentilated,

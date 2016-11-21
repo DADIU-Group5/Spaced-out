@@ -32,5 +32,8 @@
     PlayerLaunchModeToggle,
     PlayerLaunchCancel,
     StartCutscene,
-    ToggleUI
+    ToggleUI,
+    EPILOGUE_EVENTONE,
+    EPILOGUE_EVENTTWO,
+    EPILOGUE_EVENTTHREE
 }

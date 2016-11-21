@@ -1,13 +1,7 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class KeyObject : MonoBehaviour {
-
-    GameOverMenu gameOverMenu;
-
-	// Use this for initialization
-	void Start () {
-        //gameOverMenu = GameObject.Find("GameOverCanvas").GetComponent<GameOverMenu>();
-	}
 
     /// <summary>
     /// Check for player collision
@@ -17,7 +11,6 @@ public class KeyObject : MonoBehaviour {
         if (other.transform.tag == "Player")
         {
             Debug.Log("found player!");
-            //StartCoroutine(gameOverMenu.Win());
             var evt = new ObserverEvent(EventName.PlayerWon);
             Subject.instance.Notify(gameObject, evt);
             Debug.Log("destroying key");

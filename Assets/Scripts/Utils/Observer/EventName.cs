@@ -32,5 +32,7 @@
     PlayerLaunchModeToggle,
     PlayerLaunchCancel,
     ComicsAdded,
-    GodMode
+    GodMode,
+    StartCutscene,
+    ToggleUI
 }

@@ -52,6 +52,11 @@
 						<Property Name="LfoFrequency" Type="Real64" Value="0.05"/>
 					</PropertyList>
 				</ModulatorLfo>
+				<ModulatorLfo Name="fanair" ID="{F2389AAE-EA41-4327-9BAD-B40679DD7800}" ShortID="150950941">
+					<PropertyList>
+						<Property Name="LfoFrequency" Type="Real64" Value="0.1"/>
+					</PropertyList>
+				</ModulatorLfo>
 			</ChildrenList>
 		</WorkUnit>
 	</Modulators>

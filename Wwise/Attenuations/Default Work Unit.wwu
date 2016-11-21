@@ -5,6 +5,16 @@
 			<ChildrenList>
 				<Attenuation Name="electricity" ID="{3AB70FE9-DBA1-46D2-9FA1-A024962E697E}" ShortID="584252117">
 					<PropertyList>
+						<Property Name="ConeHighPassFilterValue" Type="int32">
+							<ValueList>
+								<Value>30</Value>
+							</ValueList>
+						</Property>
+						<Property Name="ConeLowPassFilterValue" Type="int32">
+							<ValueList>
+								<Value>20</Value>
+							</ValueList>
+						</Property>
 						<Property Name="ConeUse" Type="bool">
 							<ValueList>
 								<Value>True</Value>
@@ -26,7 +36,7 @@
 											<SegmentShape>Log3</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>15.10015</XPos>
+											<XPos>14.79199</XPos>
 											<YPos>-200</YPos>
 											<Flags>0</Flags>
 											<SegmentShape>Exp3</SegmentShape>

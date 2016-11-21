@@ -210,9 +210,17 @@
 					<ShortName>explosive countdown.wav</ShortName>
 					<Path>SFX/explosive countdown_55A8CA08.wem</Path>
 				</File>
+				<File Id="104585137" Language="SFX">
+					<ShortName>impacts\object impact light3.wav</ShortName>
+					<Path>SFX/impacts/object impact light3_4BB5E179.wem</Path>
+				</File>
 				<File Id="111064016" Language="SFX">
 					<ShortName>unprocessed\What are you doing dave you need to get to the escape pod (sweet).wav</ShortName>
 					<Path>SFX/unprocessed/What are you doing dave you need to get to the escape pod (sweet)_645155D0.wem</Path>
+				</File>
+				<File Id="112371414" Language="SFX">
+					<ShortName>impacts\object impact light6.wav</ShortName>
+					<Path>SFX/impacts/object impact light6_66F1127E.wem</Path>
 				</File>
 				<File Id="116050032" Language="SFX">
 					<ShortName>explosion6.wav</ShortName>
@@ -237,6 +245,10 @@
 				<File Id="213148062" Language="SFX">
 					<ShortName>menuScrollclick4.wav</ShortName>
 					<Path>SFX/menuScrollclick4_645155D0.wem</Path>
+				</File>
+				<File Id="221557103" Language="SFX">
+					<ShortName>impacts\object impact light2.wav</ShortName>
+					<Path>SFX/impacts/object impact light2_C95A066E.wem</Path>
 				</File>
 				<File Id="230076930" Language="SFX">
 					<ShortName>Mit software har ikke nogen fejl.wav</ShortName>
@@ -309,9 +321,25 @@
 					<ShortName>Dave my sensors are picking up something.. It's coming closer.wav</ShortName>
 					<Path>SFX/Dave my sensors are picking up something.. It's coming closer_645155D0.wem</Path>
 				</File>
+				<File Id="408124425" Language="SFX">
+					<ShortName>impacts\object impact light5.wav</ShortName>
+					<Path>SFX/impacts/object impact light5_A44290DA.wem</Path>
+				</File>
+				<File Id="421879619" Language="SFX">
+					<ShortName>impacts\heavy impact2.wav</ShortName>
+					<Path>SFX/impacts/heavy impact2_645155D0.wem</Path>
+				</File>
+				<File Id="422239685" Language="SFX">
+					<ShortName>impacts\heavy impact8.wav</ShortName>
+					<Path>SFX/impacts/heavy impact8_645155D0.wem</Path>
+				</File>
 				<File Id="422434534" Language="SFX">
 					<ShortName>Mine scaninger viser at der er en ilt flaske et sted i nærheden, jeg foreslår du finder den.wav</ShortName>
 					<Path>SFX/Mine scaninger viser at der er en ilt flaske et sted i nærheden, jeg foreslår du finder den_645155D0.wem</Path>
+				</File>
+				<File Id="448290045" Language="SFX">
+					<ShortName>impacts\heavy impact7.wav</ShortName>
+					<Path>SFX/impacts/heavy impact7_645155D0.wem</Path>
 				</File>
 				<File Id="449696872" Language="SFX">
 					<ShortName>Dave, jeg ville bare informere dig om at der er ild i dig.wav</ShortName>
@@ -320,6 +348,10 @@
 				<File Id="453653314" Language="SFX">
 					<ShortName>explosion3.wav</ShortName>
 					<Path>SFX/explosion3_645155D0.wem</Path>
+				</File>
+				<File Id="456412154" Language="SFX">
+					<ShortName>impacts\light impact1.wav</ShortName>
+					<Path>SFX/impacts/light impact1_645155D0.wem</Path>
 				</File>
 				<File Id="456998750" Language="SFX">
 					<ShortName>electrocute6.wav</ShortName>
@@ -340,6 +372,10 @@
 				<File Id="478495480" Language="SFX">
 					<ShortName>I always thought you were an airhead,.wav</ShortName>
 					<Path>SFX/I always thought you were an airhead,_645155D0.wem</Path>
+				</File>
+				<File Id="485270404" Language="SFX">
+					<ShortName>impacts\light impact2.wav</ShortName>
+					<Path>SFX/impacts/light impact2_271621F8.wem</Path>
 				</File>
 				<File Id="489425779" Language="SFX">
 					<ShortName>I'm not anti-social; I'm just not user friendly Dave.wav</ShortName>
@@ -362,6 +398,10 @@
 					<ShortName>AK_Factory_IR\Rooms\AK Hamburg Echo Chamber.wav</ShortName>
 					<Path>Plugins/Wwise Convolution Reverb/AK_Factory_IR/Rooms/AK Hamburg Echo Chamber_BB274964.wem</Path>
 				</File>
+				<File Id="555734377" Language="SFX">
+					<ShortName>impacts\heavy impact4.wav</ShortName>
+					<Path>SFX/impacts/heavy impact4_645155D0.wem</Path>
+				</File>
 				<File Id="556032845" Language="SFX">
 					<ShortName>gasonfire.wav</ShortName>
 					<Path>SFX/gasonfire_824B34CA.wem</Path>
@@ -379,6 +419,10 @@
 					<Path>SFX/mirrors edge shard_824B34CA.wem</Path>
 					<PrefetchSize>4928</PrefetchSize>
 				</File>
+				<File Id="581417438" Language="SFX">
+					<ShortName>impacts\object impact2.wav</ShortName>
+					<Path>SFX/impacts/object impact2_B50F3897.wem</Path>
+				</File>
 				<File Id="585615623" Language="SFX">
 					<ShortName>door shut3_1.wav</ShortName>
 					<Path>SFX/door shut3_1_480D3426.wem</Path>
@@ -390,6 +434,10 @@
 				<File Id="621924902" Language="SFX">
 					<ShortName>door shut10_1.wav</ShortName>
 					<Path>SFX/door shut10_1_C23FFF8B.wem</Path>
+				</File>
+				<File Id="635644102" Language="SFX">
+					<ShortName>impacts\object impact light1.wav</ShortName>
+					<Path>SFX/impacts/object impact light1_B97387B8.wem</Path>
 				</File>
 				<File Id="643284108" Language="SFX">
 					<ShortName>unprocessed\Dave, mine sensorere har opfanget noget.. det nærmer sig, hurtigt.wav</ShortName>
@@ -406,6 +454,10 @@
 				<File Id="691120774" Language="SFX">
 					<ShortName>this is being blown out of proportions Dave.wav</ShortName>
 					<Path>SFX/this is being blown out of proportions Dave_645155D0.wem</Path>
+				</File>
+				<File Id="691152910" Language="SFX">
+					<ShortName>impacts\light impact8.wav</ShortName>
+					<Path>SFX/impacts/light impact8_F7CEBAAB.wem</Path>
 				</File>
 				<File Id="694615552" Language="SFX">
 					<ShortName>Did you smell something Dave.wav</ShortName>
@@ -439,6 +491,14 @@
 					<ShortName>remember Dave; stop drop and roll.wav</ShortName>
 					<Path>SFX/remember Dave; stop drop and roll_645155D0.wem</Path>
 				</File>
+				<File Id="751321384" Language="SFX">
+					<ShortName>impacts\light impact7.wav</ShortName>
+					<Path>SFX/impacts/light impact7_645155D0.wem</Path>
+				</File>
+				<File Id="755883233" Language="SFX">
+					<ShortName>impacts\object impact7.wav</ShortName>
+					<Path>SFX/impacts/object impact7_CFFCE5FB.wem</Path>
+				</File>
 				<File Id="781703881" Language="SFX">
 					<ShortName>if at first you dont succeed call it version 1.wav</ShortName>
 					<Path>SFX/if at first you dont succeed call it version 1_645155D0.wem</Path>
@@ -467,6 +527,14 @@
 					<ShortName>putoutfire2.wav</ShortName>
 					<Path>SFX/putoutfire2_645155D0.wem</Path>
 				</File>
+				<File Id="836593034" Language="SFX">
+					<ShortName>impacts\object impact1.wav</ShortName>
+					<Path>SFX/impacts/object impact1_B8C2D582.wem</Path>
+				</File>
+				<File Id="837404966" Language="SFX">
+					<ShortName>impacts\heavy impact6.wav</ShortName>
+					<Path>SFX/impacts/heavy impact6_645155D0.wem</Path>
+				</File>
 				<File Id="846681906" Language="SFX">
 					<ShortName>door shut5_1.wav</ShortName>
 					<Path>SFX/door shut5_1_3F3DDB45.wem</Path>
@@ -474,6 +542,10 @@
 				<File Id="852010570" Language="SFX">
 					<ShortName>putoutfire1.wav</ShortName>
 					<Path>SFX/putoutfire1_645155D0.wem</Path>
+				</File>
+				<File Id="853230804" Language="SFX">
+					<ShortName>impacts\object impact5.wav</ShortName>
+					<Path>SFX/impacts/object impact5_BEB9ED22.wem</Path>
 				</File>
 				<File Id="854569370" Language="SFX">
 					<ShortName>le femme d'argent.wav</ShortName>
@@ -492,6 +564,18 @@
 					<ShortName>explosion4.wav</ShortName>
 					<Path>SFX/explosion4_645155D0.wem</Path>
 				</File>
+				<File Id="888007184" Language="SFX">
+					<ShortName>impacts\light impact4.wav</ShortName>
+					<Path>SFX/impacts/light impact4_645155D0.wem</Path>
+				</File>
+				<File Id="914127829" Language="SFX">
+					<ShortName>impacts\heavy impact1.wav</ShortName>
+					<Path>SFX/impacts/heavy impact1_645155D0.wem</Path>
+				</File>
+				<File Id="920506848" Language="SFX">
+					<ShortName>impacts\object impact light7.wav</ShortName>
+					<Path>SFX/impacts/object impact light7_1D39E7FE.wem</Path>
+				</File>
 				<File Id="920814763" Language="SFX">
 					<ShortName>menuclickforward.wav</ShortName>
 					<Path>SFX/menuclickforward_645155D0.wem</Path>
@@ -499,6 +583,10 @@
 				<File Id="926836453" Language="SFX">
 					<ShortName>unprocessed\det her sted virker ikke særligt sikkert... men Hey! der er kun en måde at finde ud af det på.wav</ShortName>
 					<Path>SFX/unprocessed/det her sted virker ikke særligt sikkert... men Hey! der er kun en måde at finde ud af det på_645155D0.wem</Path>
+				</File>
+				<File Id="938445351" Language="SFX">
+					<ShortName>impacts\object impact6.wav</ShortName>
+					<Path>SFX/impacts/object impact6_AC43FDF4.wem</Path>
 				</File>
 				<File Id="942376865" Language="SFX">
 					<ShortName>door shut7_1.wav</ShortName>
@@ -519,6 +607,22 @@
 				<File Id="980546618" Language="SFX">
 					<ShortName>Dave im just imforming you that your on fire.wav</ShortName>
 					<Path>SFX/Dave im just imforming you that your on fire_645155D0.wem</Path>
+				</File>
+				<File Id="981090303" Language="SFX">
+					<ShortName>impacts\light impact6.wav</ShortName>
+					<Path>SFX/impacts/light impact6_645155D0.wem</Path>
+				</File>
+				<File Id="981487521" Language="SFX">
+					<ShortName>impacts\light impact5.wav</ShortName>
+					<Path>SFX/impacts/light impact5_645155D0.wem</Path>
+				</File>
+				<File Id="984498401" Language="SFX">
+					<ShortName>impacts\heavy impact3.wav</ShortName>
+					<Path>SFX/impacts/heavy impact3_645155D0.wem</Path>
+				</File>
+				<File Id="990388538" Language="SFX">
+					<ShortName>impacts\light impact3.wav</ShortName>
+					<Path>SFX/impacts/light impact3_645155D0.wem</Path>
 				</File>
 				<File Id="997255121" Language="SFX">
 					<ShortName>menuScrollclick3.wav</ShortName>
@@ -544,9 +648,17 @@
 					<ShortName>my software does not have any bugs... 2.wav</ShortName>
 					<Path>SFX/my software does not have any bugs... 2_645155D0.wem</Path>
 				</File>
+				<File Id="1061219038" Language="SFX">
+					<ShortName>impacts\object impact3.wav</ShortName>
+					<Path>SFX/impacts/object impact3_D3B5EBE8.wem</Path>
+				</File>
 				<File Id="1064419361" Language="SFX">
 					<ShortName>explosion5.wav</ShortName>
 					<Path>SFX/explosion5_645155D0.wem</Path>
+				</File>
+				<File Id="1064649682" Language="SFX">
+					<ShortName>impacts\heavy impact5.wav</ShortName>
+					<Path>SFX/impacts/heavy impact5_645155D0.wem</Path>
 				</File>
 				<File Id="1066027588" Language="SFX">
 					<ShortName>door shut1_1.wav</ShortName>

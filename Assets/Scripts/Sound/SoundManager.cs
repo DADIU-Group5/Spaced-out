@@ -117,6 +117,8 @@ public class SoundManager : Singleton<SoundManager>, Observer
                         PlayEvent(SoundEventConstants.DAVE_CHARGE);
                         chargePlaying = true;
                     }
+                    float force1 = (float)evt.payload[PayloadConstants.LAUNCH_FORCE];
+                    AkSoundEngine.SetRTPCValue("jetpackChargeLevel", force1);
                 }
                 else
                 {
@@ -125,15 +127,15 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 }
                 break;
             case EventName.Collision:
+                float force = (float)evt.payload[PayloadConstants.VELOCITY];
+                AkSoundEngine.SetRTPCValue("velocity", force * 10);
                 if ((bool)evt.payload[PayloadConstants.COLLISION_STATIC])
                 {
                     PlayEvent(SoundEventConstants.DAVE_STATIC_COLLISION);
-                    PlayEvent(SoundEventConstants.DAVE_RANDOM_GRUNT);
                 }
                 else
                 {
                     PlayEvent(SoundEventConstants.DAVE_OBJECT_COLLISION);
-                    PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
                 }
                 break;
             case EventName.PlayerVentilated:

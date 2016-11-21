@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         animator.SetBool("Launch Mode", true);
         animator.SetFloat("Power", power);
         ThrowLaunchPowerChangedEvent();
-        ThrowChargingPowerEvent(true);
+        ThrowChargingPowerEvent(true, this.power);
     }
 
     // launch the player
@@ -151,10 +151,11 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         // TODO sound
     }
 
-    private void ThrowChargingPowerEvent(bool start)
+    private void ThrowChargingPowerEvent(bool start, float force = 0)
     {
         var evt = new ObserverEvent(EventName.PlayerCharge);
         evt.payload.Add(PayloadConstants.START_STOP, start);
+        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, force * 100);
         Subject.instance.Notify(gameObject, evt);
     }
 }

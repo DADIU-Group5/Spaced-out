@@ -17,14 +17,24 @@
 				</GameParameter>
 				<GameParameter Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}">
 					<PropertyList>
-						<Property Name="RTPCRamping" Type="int16" Value="1"/>
-						<Property Name="SlewRateDown" Type="Real64" Value="500"/>
-						<Property Name="SlewRateUp" Type="Real64" Value="500"/>
+						<Property Name="FilterTimeDown" Type="Real64" Value="1"/>
+						<Property Name="FilterTimeUp" Type="Real64" Value="1"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="RTPCRamping" Type="int16" Value="2"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="10"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="10"/>
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="musicVolume" ID="{94967744-CEA3-4D37-893D-F4A043DFEB29}"/>
 				<GameParameter Name="effectsVolume" ID="{ED513413-85B0-45A9-B98F-EE61A42D635F}"/>
 				<GameParameter Name="masterVolume" ID="{16D6A1BF-90EA-4458-897A-819BFBA4868A}"/>
+				<GameParameter Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}">
+					<PropertyList>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="500"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="500"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

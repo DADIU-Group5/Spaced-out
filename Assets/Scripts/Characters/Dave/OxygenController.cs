@@ -6,6 +6,8 @@ public class OxygenController : MonoBehaviour
 {
     public int maxOxygen = 10;
     private int oxygen;
+    [HideInInspector]
+    public bool godMode = false;
 
     public GameObject oxygenObject;
     private List<Renderer> oxygenRenderers;
@@ -26,8 +28,11 @@ public class OxygenController : MonoBehaviour
 
     public void UseOxygen()
     {
-        oxygen--;
-        ThrowOxygenChangedEvent();
+        if (!godMode)
+        {
+            oxygen--;
+            ThrowOxygenChangedEvent();
+        }
     }
 
     public bool HasOxygen()

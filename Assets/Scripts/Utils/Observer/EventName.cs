@@ -30,5 +30,10 @@
     CameraZoomIn,
     ShowSubtile,
     PlayerLaunchModeToggle,
-    PlayerLaunchCancel
+    PlayerLaunchCancel,
+    StartCutscene,
+    ToggleUI,
+    EPILOGUE_EVENTONE,
+    EPILOGUE_EVENTTWO,
+    EPILOGUE_EVENTTHREE
 }

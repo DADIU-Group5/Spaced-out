@@ -105,6 +105,9 @@ public class HUDController : MonoBehaviour, Observer {
 
                 StartCoroutine(ShowSubtitle(subText, subStart, subDuration));
                 break;
+            case EventName.ToggleUI:
+                gameObject.SetActive(!gameObject.activeSelf);
+                break;
             default:
                 break;
         }

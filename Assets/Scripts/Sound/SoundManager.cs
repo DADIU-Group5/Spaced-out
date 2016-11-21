@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class SoundManager : Singleton<SoundManager>, Observer
 {
     uint bankID;
+
+    bool chargePlaying = false;
 
     // TODO: hide from editor 
     [Range(0, 100)]
@@ -17,9 +20,13 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
     public bool mute = false;
 
+    private DoorOpenCloseTrigger doorTrigger;
+
     // Use this for initialization
     void Start()
     {
+        doorTrigger = GetComponent<DoorOpenCloseTrigger>();
+
         AkSoundEngine.LoadBank("soundbank_alpha", AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
         AkSoundEngine.SetSwitch("galVersion", "v1", gameObject);
 
@@ -58,6 +65,11 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
         switch (evt.eventName)
         {
+            case EventName.Narrate:
+                var eventName = (string)evt.payload[PayloadConstants.NARRATIVE_ID];
+                PlayEvent(eventName);
+                break;
+
             case EventName.PlayerLaunch:
 
                 var payload = evt.payload;
@@ -85,33 +97,72 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
                 break;
 
-            case EventName.BarrelTriggered:
-                PlayEvent(SoundEventConstants.EXPLOSIVE);
-                break;
-            case EventName.BarrelExplosion:
+            case EventName.Door:
+                // TODO: remove
+                //if((bool)evt.payload[PayloadConstants.DOOR_OPEN])
+                //PlayEvent(SoundEventConstants.DOOR_OPEN);
+                //AkAmbient.
+                //else
+                //PlayEvent(SoundEventConstants.DOOR_SHUT);
+                doorTrigger.Open();
 
                 break;
-            case EventName.PlayerDead:
-                var deathCause = (EventName)evt.payload[PayloadConstants.DEATH_CAUSE];
-                switch (deathCause)
+
+            case EventName.PlayerCharge:
+                bool start = (bool)evt.payload[PayloadConstants.START_STOP];
+                if (start)
                 {
-                    case EventName.Electrocuted:
-                        PlayEvent(SoundEventConstants.GAL_DEATH_ELECTROCUTED);
-                        break;
-                    case EventName.OnFire:
-                        StopEvent(SoundEventConstants.DAVE_CATCH_FIRE, 0);
-                        PlayEvent(SoundEventConstants.GAL_DAVE_ON_FIRE);
-                        break;
-                    case EventName.Crushed:
-                        //PlayEvent(SoundEventConstants.gal);
-                        break;
-                    case EventName.PlayerExploded:
-                        PlayEvent(SoundEventConstants.GAL_HAZARDS_EXPLOSION);
-                        break;
+                    if (!chargePlaying)
+                    {
+                        PlayEvent(SoundEventConstants.DAVE_CHARGE);
+                        chargePlaying = true;
+                    }
                 }
-
+                else
+                {
+                    StopEvent(SoundEventConstants.DAVE_CHARGE, 0);
+                    chargePlaying = false;
+                }
                 break;
+            case EventName.Collision:
+                if ((bool)evt.payload[PayloadConstants.COLLISION_STATIC])
+                {
+                    PlayEvent(SoundEventConstants.DAVE_STATIC_COLLISION);
+                    PlayEvent(SoundEventConstants.DAVE_RANDOM_GRUNT);
+                }
+                else
+                {
+                    PlayEvent(SoundEventConstants.DAVE_OBJECT_COLLISION);
+                    PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
+                }
+                break;
+            case EventName.PlayerVentilated:
+                PlayEvent(SoundEventConstants.DAVE_VENT);
+                break;
+
+            //case EventName.PlayerDead:
+            //    var deathCause = (EventName)evt.payload[PayloadConstants.DEATH_CAUSE];
+            //    switch (deathCause)
+            //    {
+            //        case EventName.Electrocuted:
+            //            PlayEvent(SoundEventConstants.GAL_DEATH_ELECTROCUTED);
+            //            break;
+            //        case EventName.OnFire:
+            //            StopEvent(SoundEventConstants.DAVE_CATCH_FIRE, 0);
+            //            PlayEvent(SoundEventConstants.GAL_DAVE_ON_FIRE);
+            //            break;
+            //        case EventName.Crushed:
+            //            //PlayEvent(SoundEventConstants.gal);
+            //            break;
+            //        case EventName.OxygenEmpty:
+            //            PlayEvent(SoundEventConstants.DAVE_OUT_OF_OXYGEN);
+            //            break;
+            //    }
+
+            //    break;
+
         }
+
     }
 
     private void PlayEvent(string eventName)

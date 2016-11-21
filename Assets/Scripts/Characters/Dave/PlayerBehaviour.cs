@@ -18,6 +18,8 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 	}
 
     [HideInInspector]
+    public bool godMode = false;
+    [HideInInspector]
     public bool onFire;
     [HideInInspector]
     public bool electrocuted = false;
@@ -41,17 +43,20 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 
     void OnCollisionEnter(Collision other)
     {
-        if (onFire)
-        {
-            bounces += 1;
-            if (bounces >= JumpsToExtinguish)
-            {
-                Debug.Log("Extinguishing");
-                bounces = 0;
-                var evt = new ObserverEvent(EventName.Extinguish);
-                Subject.instance.Notify(gameObject, evt);
-            }
-        }
+        var evt = new ObserverEvent(EventName.Collision);
+        evt.payload.Add(PayloadConstants.COLLISION_STATIC, other.gameObject.layer != LayerMask.NameToLayer("Ignore Raycast"));
+        Subject.instance.Notify(gameObject, evt);
+        //if (onFire)
+        //{
+        //    bounces += 1;
+        //    if (bounces >= JumpsToExtinguish)
+        //    {
+        //        Debug.Log("Extinguishing");
+        //        bounces = 0;
+        //        var evt = new ObserverEvent(EventName.Extinguish);
+        //        Subject.instance.Notify(gameObject, evt);
+        //    }
+        //}
     }
 
     IEnumerator SendKillNotification(EventName causeOfDeath)
@@ -90,7 +95,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         switch (evt.eventName)
         {
             case EventName.OnFire:
-                if (!onFire && !gameIsOver)
+                if (!onFire && !gameIsOver && !godMode)
                 {
                     onFire = true;
 
@@ -110,20 +115,23 @@ public class PlayerBehaviour : MonoBehaviour, Observer
                 Subject.instance.Notify(gameObject, ExtinguishEvent);
                 break;
             case EventName.Crushed:
-                Kill(evt.eventName);
+                if (!godMode)
+                    Kill(evt.eventName);
                 break;
             case EventName.Electrocuted:
-                if (!electrocuted)
+                if (!electrocuted && !godMode)
                 {
                     electrocuted = true;
                     ElectrocutingToDeath();
                 }
                 break;
             case EventName.PlayerExploded:
-                Kill(evt.eventName);
+                if (!godMode)
+                    Kill(evt.eventName);
                 break;
             case EventName.OxygenEmpty:
-                Kill(evt.eventName);
+                if (!godMode)
+                    Kill(evt.eventName);
                 break;
             case EventName.PlayerDead:
                 gameIsOver = true;
@@ -136,6 +144,16 @@ public class PlayerBehaviour : MonoBehaviour, Observer
                 break;
             case EventName.PlayerWon:
                 gameIsOver = true;
+                if (onFire)
+                {
+                    var statusEvent = new ObserverEvent(EventName.Extinguish);
+                    Subject.instance.Notify(gameObject, statusEvent);
+                }
+                break;
+            case EventName.GodMode:
+                godMode = !godMode;
+
+                //if godmode is activated while player in on fire, extinguish
                 if (onFire)
                 {
                     var statusEvent = new ObserverEvent(EventName.Extinguish);

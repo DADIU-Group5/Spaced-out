@@ -35,10 +35,10 @@ public class GameOverMenu : MonoBehaviour, Observer
                         deathCause = "You got crushed";
                         break;
                     case EventName.Electrocuted:
-                        deathCause = "You got electricuted";
+                        deathCause = "You got electrocuted";
                         break;
                     case EventName.PlayerExploded:
-                        deathCause = "You exploded";
+                        deathCause = "Cool guys don't look back explosions... but they don't usually explode themselves, either!";
                         break;
                     case EventName.OxygenEmpty:
                         deathCause = "You ran out of oxygen";

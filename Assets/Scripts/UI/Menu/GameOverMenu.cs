@@ -40,7 +40,7 @@ public class GameOverMenu : MonoBehaviour, Observer
                     case EventName.PlayerExploded:
                         deathCause = "You exploded";
                         break;
-                    case EventName.FuelEmpty:
+                    case EventName.OxygenEmpty:
                         deathCause = "You ran out of oxygen";
                         break;
                 }
@@ -85,6 +85,8 @@ public class GameOverMenu : MonoBehaviour, Observer
         {
             transform.GetChild(i).gameObject.SetActive(false);
         }
+        var evt = new ObserverEvent(EventName.RespawnPlayer);
+        Subject.instance.Notify(gameObject, evt);
     }
 
     /// <summary>
@@ -111,13 +113,13 @@ public class GameOverMenu : MonoBehaviour, Observer
 	    if (playerIsDead)
         {
             countingDown -= Time.deltaTime;
-            ResetCountdown.text = "Resetting in "+ Mathf.Round( countingDown ) + "..."; 
-        }
+            ResetCountdown.text = "Resetting in "+ Mathf.Round( countingDown ) + "...";
 
-        //if the countdown has reached zero, reset the level
-        if (countingDown <= 0)
-        {
-            RemoveGameOverScreen();
+            //if the countdown has reached zero, reset the level
+            if (countingDown <= 0)
+            {
+                RemoveGameOverScreen();
+            }
         }
 	}
 }

@@ -5,7 +5,9 @@ public class CollectibleElement : MonoBehaviour {
 
     void Start()
     {
+        Debug.Log("adding comic...");
         ScoreManager.instance.AddComics();
+        
     }
 
     void OnTriggerEnter(Collider other)

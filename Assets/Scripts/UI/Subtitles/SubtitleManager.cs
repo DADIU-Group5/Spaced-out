@@ -48,7 +48,7 @@ public class SubtitleManager : Singleton<SubtitleManager>, Observer
             case EventName.Electrocuted:
                 Subject.instance.Notify(gameObject, MakeEventFromSubtitle(Language.Danish, SubtitleType.Wires));
                 break;
-            case EventName.FuelEmpty:
+            case EventName.OxygenEmpty:
                 Subject.instance.Notify(gameObject, MakeEventFromSubtitle(Language.English, SubtitleType.OutOfOxygen));
                 break;
             default:

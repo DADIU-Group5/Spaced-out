@@ -37,46 +37,31 @@ public class Fan : MonoBehaviour {
             windDirection = -windDirection;
         itemState = this.gameObject.GetComponent<GameplayElement>();
     }
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-        //if the fan is off, stop influencing stuff.
-        if (!itemState.On)
-        {
-            objects.Clear();
-        }
-        for (int i = 0; i < objects.Count; i++)
-        {
-            //foreach object in fan's influence, push in winddirection.
-            Rigidbody rgb = objects[i].GetComponent<Rigidbody>();
-            appliedForce = fanForce / (1f + distance * distance) * 1;
-            rgb.AddForce(windDirection * appliedForce);
-        }
-    }
 
-    void OnTriggerEnter(Collider other)
+    //for every frame, for every collider touching trigger.
+    void OnTriggerStay(Collider other)
     {
+
         if (itemState.On)
         {
             if (other.transform.tag == "Player" || other.transform.tag == "object" &&
                 other.transform.GetComponent<GameplayElement>().movement == Movement.floatingItem)
-            {   //if it's an object with a rigidbody (moveable),
-                //add to list of objects in collider...
-                objects.Add(other);
+            {
+
+                Rigidbody rgb = other.GetComponent<Rigidbody>();
+                appliedForce = fanForce / (1f + distance * distance) * 1;
+                rgb.AddForce(windDirection * appliedForce);
+
             }
         }
     }
 
-    void OnTriggerExit(Collider other)
+    void OnCollisionEnter(Collision other)
     {
-        if (other.transform.tag == "Player" || other.transform.tag == "object" &&
-            other.transform.GetComponent<GameplayElement>().movement == Movement.floatingItem)
-        {   //if the objects leave the collider, remove from list.
-            if (objects.Contains(other))
-            {
-                objects.Remove(other);
-            }
+        if (itemState.On && other.transform.tag == "Player")
+        {
+            var evt = new ObserverEvent(EventName.PlayerVentilated);
+            Subject.instance.Notify(gameObject, evt);
         }
-
     }
 }

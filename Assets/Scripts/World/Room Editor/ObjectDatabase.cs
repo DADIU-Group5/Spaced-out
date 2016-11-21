@@ -57,22 +57,26 @@ public class ObjectDatabase : MonoBehaviour {
     /// </summary>
     public void LoadObjects()
     {
-        Debug.Log("Loading "+levelTheme.ToString());
-        //enviromentalObjects = LoadFromPathFiltered("ObjectDatabase/EnviromentalObjects");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/EnviromentalObjects"));
-        floatingObjects = LoadFromPathFiltered("ObjectDatabase/FloatingObjects");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/FloatingObjects"));
-        staticObjects = LoadFromPathFiltered("ObjectDatabase/StaticObjects");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/StaticObjects"));
-        shapingObjects = LoadFromPathFiltered("ObjectDatabase/ShapingObjects");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/ShapingObjects"));
-        pickupObjects = LoadFromPathFiltered("ObjectDatabase/Pickups");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/Pickups"));
-        walls = LoadFromPathFiltered("ObjectDatabase/Walls");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/Walls"));
-        outerCornors = LoadFromPathFiltered("ObjectDatabase/OuterCornors");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/OuterCornors"));
-        innerCornors = LoadFromPathFiltered("ObjectDatabase/InnerCornors");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/InnerCornors"));
-        floors = LoadFromPathFiltered("ObjectDatabase/Floors");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/Floors"));
-        doors = LoadFromPathFiltered("ObjectDatabase/Doors");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/Doors"));
+        
+        if(GenerationDataManager.instance != null)
+        {
+            levelTheme = GenerationDataManager.instance.GetLevelData().roomTheme;
+        }
+        
+        floatingObjects = LoadFromPathFiltered("ObjectDatabase/FloatingObjects");
+        staticObjects = LoadFromPathFiltered("ObjectDatabase/StaticObjects");
+        shapingObjects = LoadFromPathFiltered("ObjectDatabase/ShapingObjects");
+        pickupObjects = LoadFromPathFiltered("ObjectDatabase/Pickups");
+        walls = LoadFromPathFiltered("ObjectDatabase/Walls");
+        outerCornors = LoadFromPathFiltered("ObjectDatabase/OuterCornors");
+        innerCornors = LoadFromPathFiltered("ObjectDatabase/InnerCornors");
+        floors = LoadFromPathFiltered("ObjectDatabase/Floors");
+        doors = LoadFromPathFiltered("ObjectDatabase/Doors");
 
-        small = LoadFromPathFiltered("ObjectDatabase/EnviromentalObjects/Small");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/EnviromentalObjects/Small"));
-        medium = LoadFromPathFiltered("ObjectDatabase/EnviromentalObjects/Medium");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/EnviromentalObjects/Medium"));
-        large = LoadFromPathFiltered("ObjectDatabase/EnviromentalObjects/Large");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/EnviromentalObjects/Large"));
-        xLarge = LoadFromPathFiltered("ObjectDatabase/EnviromentalObjects/XLarge");//new List<GameObject>(Resources.LoadAll("ObjectDatabase/EnviromentalObjects/XLarge"));
+        small = LoadFromPathFiltered("ObjectDatabase/EnviromentalObjects/Small");
+        medium = LoadFromPathFiltered("ObjectDatabase/EnviromentalObjects/Medium");
+        large = LoadFromPathFiltered("ObjectDatabase/EnviromentalObjects/Large");
+        xLarge = LoadFromPathFiltered("ObjectDatabase/EnviromentalObjects/XLarge");
     }
 
     List<GameObject> LoadFromPathFiltered(string path)

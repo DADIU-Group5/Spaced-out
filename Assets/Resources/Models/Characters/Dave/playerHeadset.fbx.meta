@@ -22,6 +22,7 @@ ModelImporter:
     2300000: headset 1
     3300000: headset 1
     4300000: headset
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

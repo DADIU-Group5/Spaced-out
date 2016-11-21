@@ -4,34 +4,79 @@ using System.Collections;
 public class MalfunctioningDoors : MonoBehaviour {
 
     public bool doorIsMalfunctioning = true;
+    bool staticDoor = true;
 
     [Header("The Random range between Close/Open doors:")]
-    public float minRange = 2f;
+    public float minRange = 1f;
     public float maxRange = 4f;
 
     private bool malfunctioning = false;
     private bool closed = true;
 
-    [HideInInspector]
-    public HazardState state;
-    private Animator animator;
+    bool started = false;
 
-    // TODO: Old code used for crushing and kiling player.
-    //
-    //[HideInInspector]
-    //public int doorsTouchingPlayer = 0;
-    //private bool crushingPlayer = false;
+    [HideInInspector]
+    private Animator animator;
 
     public void CloseOpenDoor()
     {
-        if (!state.isOn || closed)
+        var evt = new ObserverEvent(EventName.Door);
+
+        if (closed)
         {
             animator.SetTrigger("Open");
+            evt.payload.Add(PayloadConstants.DOOR_OPEN, true);
         }
         else
         {
             animator.SetTrigger("Close");
+            evt.payload.Add(PayloadConstants.DOOR_OPEN, false);
         }
+        Subject.instance.Notify(gameObject, evt);
+    }
+
+    public void LockDoor()
+    {
+        doorIsMalfunctioning = false;
+        animator.SetTrigger("Locked");
+        closed = false;
+    }
+
+    public void DoorLocked()
+    {
+        transform.parent.GetComponent<InRoomDoor>().DoorLocked();
+    }
+
+    public void UnlockDoor()
+    {
+        if (staticDoor)
+        {
+            return;
+        }
+        doorIsMalfunctioning = false;
+        animator.SetTrigger("Open");
+        closed = false;
+    }
+
+    public void StartDoor()
+    {
+        started = true;
+        if (staticDoor)
+        {
+            animator.SetTrigger("Open");
+            closed = false;
+        }
+    }
+
+    public void Switch()
+    {
+        if (staticDoor)
+        {
+            return;
+        }
+        doorIsMalfunctioning = !doorIsMalfunctioning;
+        animator.SetTrigger("Open");
+        closed = false;
     }
 
     public IEnumerator Malfunctioning()
@@ -45,27 +90,24 @@ public class MalfunctioningDoors : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
-        state = gameObject.GetComponent<HazardState>();
+    void Awake () {
         animator = gameObject.GetComponent<Animator>();
-        //this is how you assign an object to a switch programmatically.
-        //GameObject.Find("SwitchTest").GetComponent<SwitchItem>().AssignHazardToSwitch(this.gameObject);
+        if(Random.Range(0,2) == 0)
+        {
+            staticDoor = false;
+        }
     }
 	
 	// Update is called once per frame
 	void Update () {
-        // TODO: Old code for killing player when crushed by doors.
-        //       Remove when no longer relevant.
-        //
-        //if (doorsTouchingPlayer >= 2 && !crushingPlayer &&
-        //    this.animator.GetCurrentAnimatorStateInfo(0).IsName("DoorClose"))
-        //{
-        //    var evt = new ObserverEvent(EventName.Crushed);
-        //    Subject.instance.Notify(gameObject, evt);
-        //    crushingPlayer = true;
-
-        //    Debug.Log("Player has been crushed!");
-        //}
+        if (staticDoor)
+        {
+            return;
+        }
+        if (!started)
+        {
+            return;
+        }
 
         if (doorIsMalfunctioning && !malfunctioning)
         {

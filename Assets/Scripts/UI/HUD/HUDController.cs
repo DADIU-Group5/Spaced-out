@@ -9,8 +9,14 @@ public class HUDController : MonoBehaviour, Observer {
     public Text launchText;
     public Text statusText;
     public Text subtitleText;
+    public Text camControlsText;
+    public Text velocityText;
+    public Text currentFuelText;
+
     public Transform chargeArrow;
     public Image gal;
+    public RectTransform chargeImagePivot,
+        chargeMaskPivot;
 
     private float chargeArrowYMin = 68f;
     private float chargeArrowYHeight = 350.0f;
@@ -23,6 +29,19 @@ public class HUDController : MonoBehaviour, Observer {
         gal.enabled = false;
     }
 
+    void Start()
+    {
+        SettingsManager.instance.onLanguageChanged += UpdateButtonText;
+        UpdateButtonText(Language.Danish);
+    }
+
+    private void UpdateButtonText(Language lan)
+    {
+        camControlsText.text = Translator.instance.Get("invert camera controls");
+        velocityText.text = Translator.instance.Get("velocity");
+        //currentFuelText.text = Translator.instance.Get("current") + " " + Translator.instance.Get("fuel");
+    }
+
     public void ToggleCameraControls()
     {
         var evt = new ObserverEvent(EventName.ToggleCameraControls);
@@ -33,20 +52,25 @@ public class HUDController : MonoBehaviour, Observer {
     {
         switch (evt.eventName)
         {
-            case EventName.UpdateFuel:
+            case EventName.UpdateOxygen:
                 var fuelPayload = evt.payload;
-                int fuel = (int)fuelPayload[PayloadConstants.FUEL];
-
-                fuelText.text = "Current fuel: " + fuel;
+                int fuel = (int)fuelPayload[PayloadConstants.Oxygen];
+                fuelText.text = Translator.instance.Get("current") + " " + Translator.instance.Get("fuel") + ": " + fuel.ToString();
 
                 break;
 
-            case EventName.UpdateLaunch:
+            case EventName.LaunchPowerChanged:
                 var launchPayload = evt.payload;
                 Vector2 launch = (Vector2)launchPayload[PayloadConstants.LAUNCH_FORCE];
 
+                float t = launch.x / launch.y;
+
                 chargeText.text = launch.x.ToString();
                 chargeArrow.position = new Vector3(chargeArrow.position.x, chargeArrowYMin + chargeArrowYHeight * launch.x / launch.y);
+
+                chargeMaskPivot.rotation = Quaternion.Euler(0f, 0f, (1 - t) * 180);
+
+                chargeImagePivot.rotation = Quaternion.Euler(0f, 0f, 180f);
 
                 break;
 
@@ -54,15 +78,18 @@ public class HUDController : MonoBehaviour, Observer {
                 var velocityPayload = evt.payload;
                 string velocity = "";
                 velocity = (string)velocityPayload[PayloadConstants.VELOCITY];
+                string[] substrings = velocity.Split('/');
 
-                launchText.text = velocity;
+                launchText.text = Translator.instance.Get("velocity") + ": " 
+                    + substrings[0] + "\n" + Translator.instance.Get(substrings[1]); ;
 
                 break;
 
             case EventName.UpdateStatus:
                 var statusPayload = evt.payload;
                 string status = (string)statusPayload[PayloadConstants.STATUS];
-                statusText.text = status;
+
+                statusText.text = Translator.instance.Get(status);
                 break;
             case EventName.PlayerDead:
                 gameOver = true;
@@ -77,6 +104,9 @@ public class HUDController : MonoBehaviour, Observer {
                 float subDuration = (float)evt.payload[PayloadConstants.SUBTITLE_DURATION];
 
                 StartCoroutine(ShowSubtitle(subText, subStart, subDuration));
+                break;
+            case EventName.ToggleUI:
+                gameObject.SetActive(!gameObject.activeSelf);
                 break;
             default:
                 break;

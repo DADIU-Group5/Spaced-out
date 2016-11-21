@@ -1,19 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-// my thought was that this script could be used for
-// collisions, and player behaviour.
-// input/movement would be a separate script.
 public class PlayerBehaviour : MonoBehaviour, Observer
 {
 
-    Rigidbody rgb;
-    //[HideInInspector]
+    PlayerController playerController;
+
+    // Use this for initialization
+    void Start () {
+        Subject.instance.AddObserver(this);
+        playerController = GetComponent<PlayerController>();
+    }
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+
+    [HideInInspector]
     public bool onFire;
+    [HideInInspector]
+    public bool electrocuted = false;
     [HideInInspector]
     public bool dead = false;
 
     private PayloadConstants payload;
+
+    [Tooltip("Set the time for animations to play before Game Over:")]
+    public float timeBeforeDeathScreen = 2f;
 
     [Tooltip("Time until burn death:")]
     public float TimeUntilBurnToDeath = 5f;
@@ -24,48 +38,53 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 
     private bool gameIsOver = false;
 
-    void Start()
-    {
-        rgb = this.gameObject.GetComponent<Rigidbody>();
-        Subject.instance.AddObserver(this);
-    }
 
     void OnCollisionEnter(Collision other)
     {
-        if (onFire)
+        var evt = new ObserverEvent(EventName.Collision);
+        evt.payload.Add(PayloadConstants.COLLISION_STATIC, other.gameObject.layer != LayerMask.NameToLayer("Ignore Raycast"));
+        Subject.instance.Notify(gameObject, evt);
+        //if (onFire)
+        //{
+        //    bounces += 1;
+        //    if (bounces >= JumpsToExtinguish)
+        //    {
+        //        Debug.Log("Extinguishing");
+        //        bounces = 0;
+        //        var evt = new ObserverEvent(EventName.Extinguish);
+        //        Subject.instance.Notify(gameObject, evt);
+        //    }
+        //}
+    }
+
+    IEnumerator SendKillNotification(EventName causeOfDeath)
+    {
+        Debug.Log("kill function is waiting");
+        yield return new WaitForSeconds(2f);
+        var evt = new ObserverEvent(EventName.PlayerDead);
+        evt.payload.Add(PayloadConstants.DEATH_CAUSE, causeOfDeath);
+        dead = true;
+
+        Subject.instance.Notify(gameObject, evt);
+
+        //Actual death.
+        if (transform.parent != null)
         {
-            bounces += 1;
-            if (bounces >= JumpsToExtinguish)
-            {
-                Debug.Log("Extinguishing");
-                bounces = 0;
-                var evt = new ObserverEvent(EventName.Extinguish);
-                Subject.instance.Notify(gameObject, evt);
-            }
+            transform.parent.gameObject.SetActive(false);
+        }
+        else
+        {
+            transform.gameObject.SetActive(false);
         }
     }
 
     internal void Kill(EventName causeOfDeath)
     {
+        Debug.Log("kill function was called");
         if (!dead && !gameIsOver)
-        {
+        {      
             Debug.Log("Killing player!");
-            var evt = new ObserverEvent(EventName.PlayerDead);
-            evt.payload.Add(PayloadConstants.DEATH_CAUSE, causeOfDeath);
-            dead = true;
-
-            Subject.instance.Notify(gameObject, evt);
-
-            //Actual death.
-            if (transform.parent != null)
-            {
-                transform.parent.gameObject.SetActive(false);
-            }
-            else
-            {
-                transform.gameObject.SetActive(false);
-            }
-            CheckpointManager.instance.RespawnPlayer(transform.parent.gameObject);
+            StartCoroutine(SendKillNotification(causeOfDeath));    
         }
     }
 
@@ -97,12 +116,16 @@ public class PlayerBehaviour : MonoBehaviour, Observer
                 Kill(evt.eventName);
                 break;
             case EventName.Electrocuted:
-                Kill(evt.eventName);
+                if (!electrocuted)
+                {
+                    electrocuted = true;
+                    ElectrocutingToDeath();
+                }
                 break;
             case EventName.PlayerExploded:
                 Kill(evt.eventName);
                 break;
-            case EventName.FuelEmpty:
+            case EventName.OxygenEmpty:
                 Kill(evt.eventName);
                 break;
             case EventName.PlayerDead:
@@ -137,11 +160,19 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         {
             Debug.Log("Player has burned to death!");
             Kill(EventName.OnFire);
+            playerController.BurningToDeath();
         }
     }
 
-    void OnDestroy()
+    public void ElectrocutingToDeath()
     {
-        Subject.instance.RemoveObserver(this);
+        //yield return new WaitForSeconds(TimeUntilBurnToDeath);
+        if (electrocuted)
+        {
+            Debug.Log("Player has been electrocuted to death!");
+            Kill(EventName.Electrocuted);
+            playerController.ElectrocutedToDeath();
+        }
     }
+
 }

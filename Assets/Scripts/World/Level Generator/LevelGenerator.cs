@@ -15,6 +15,8 @@ public class LevelGenerator : MonoBehaviour {
 
     public GameObject playerPrefab;
     public GameObject keyPrefab;
+    public GameObject keyDoorPrefab;
+    public GameObject entryDoorPrefab;
 
     public int exteriorSeed;
     public int interiorSeed;
@@ -24,6 +26,9 @@ public class LevelGenerator : MonoBehaviour {
     public float playerDistanceFromDoor = 1;
     public float keyDistanceFromDoor = 1;
 
+    Transform playerSpawnPoint;
+    EntryCutScene ECS;
+
     Door firstDoor = null;
 
     List<Bounds> allBounds = new List<Bounds>();
@@ -31,7 +36,7 @@ public class LevelGenerator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 #if UNITY_EDITOR
-        // UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
+        //UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
 #endif
         GenerateLevel();
     }
@@ -51,10 +56,17 @@ public class LevelGenerator : MonoBehaviour {
 
         CreateLevel(roomsToCreate);
 
-        SpawnPlayer();
         SpawnKey();
         RemoveUnusedDoors();
         RandomizeInteriorForAll();
+        DisableRooms();
+        spawnedRooms[0].EnteredThisRoom();
+        spawnedRooms[0].exitDoor.doorToLock.StartDoor();
+        foreach (Room item in spawnedRooms)
+        {
+            Destroy(item.GetComponent<CalcBounds>());
+        }
+        SpawnPlayer();
     }
 
     void GetGenerationData()
@@ -83,23 +95,18 @@ public class LevelGenerator : MonoBehaviour {
     /// </summary>
     void SpawnPlayer()
     {
-        foreach (GameObject item in spawnedRooms[0].doorObjects)
-        {
-            if(item.GetComponent<Door>().GetDoorType() == DoorType.entrance)
-            {
-                GameObject go = Instantiate(playerPrefab, item.transform.position - (item.transform.right)+new Vector3(0,2,0), Quaternion.identity) as GameObject;
-                go.transform.LookAt(item.transform.position - (item.transform.right * (playerDistanceFromDoor+1) + new Vector3(0, 2, 0)), Vector3.up);
-                CheckpointManager.instance.SetSpawnDistance(playerDistanceFromDoor);
-                CheckpointManager.instance.SetNewCheckpoint(item.transform.position);
-                CheckpointManager.instance.SetNewCheckpointRotation(-item.transform.right);
-                go.GetComponentInChildren<FuelController>().ReplenishFuel();
-                CheckpointManager.instance.SetFuelCount(go.GetComponentInChildren<FuelController>().GetCurrentFuel());
-                var evt = new ObserverEvent(EventName.PlayerSpawned);
-                evt.payload.Add(PayloadConstants.PLAYER, go.GetComponentInChildren<PlayerController>().gameObject);
-                Subject.instance.Notify(gameObject, evt);
-                break;
-            }
-        }
+        CheckpointManager.instance.SetSpawnDistance(playerDistanceFromDoor + 1);
+        GameObject go = Instantiate(playerPrefab, playerSpawnPoint.position, Quaternion.identity) as GameObject;
+        go.transform.LookAt(transform.position + new Vector3(0, 2, 0), Vector3.up);
+        go.GetComponentInChildren<OxygenController>().ReplenishOxygen();
+        CheckpointManager.instance.SetFuelCount(go.GetComponentInChildren<OxygenController>().GetOxygen());
+
+        var evt = new ObserverEvent(EventName.PlayerSpawned);
+        evt.payload.Add(PayloadConstants.PLAYER, go.GetComponentInChildren<PlayerController>().gameObject);
+        Subject.instance.Notify(gameObject, evt);
+        evt = new ObserverEvent(EventName.StartCutscene);
+        Subject.instance.Notify(gameObject, evt);
+        ECS.StartCutScene(go);
     }
 
     /// <summary>
@@ -108,7 +115,16 @@ public class LevelGenerator : MonoBehaviour {
     void SpawnKey()
     {
         Transform tempTrans = GetRandomDoor(spawnedRooms[spawnedRooms.Count - 1]).transform;
-        Instantiate(keyPrefab, tempTrans.position - (tempTrans.right*-keyDistanceFromDoor) + new Vector3(0, 2, 0), Quaternion.identity);
+        //Instantiate(keyPrefab, tempTrans.position - (tempTrans.right*-keyDistanceFromDoor) + new Vector3(0, 2, 0), Quaternion.identity,spawnedRooms[spawnedRooms.Count-1].transform);
+        tempTrans.GetComponent<Door>().SetDoorBehindKey();
+    }
+
+    void DisableRooms()
+    {
+        for (int i = 2; i < spawnedRooms.Count; i++)
+        {
+            spawnedRooms[i].LeftThisRoom();
+        }
     }
 
     /// <summary>
@@ -191,8 +207,8 @@ public class LevelGenerator : MonoBehaviour {
 
         if (DoesRoomIntersect(newBound))
         {
-            /*Destroy(newRoom);
-            return false;*/
+            Destroy(newRoom);
+            return false;
         }
         entranceDoor.GetComponent<Door>().ConnectRoom(lastDoor);
         if (lastDoor != null)
@@ -217,17 +233,37 @@ public class LevelGenerator : MonoBehaviour {
     /// </summary>
     void RemoveUnusedDoors()
     {
-        firstDoor.BreakConnection();
+        int iterator = 0;
+        firstDoor.SetExit();
+        GameObject newDoor = Instantiate(entryDoorPrefab);
+        newDoor.transform.rotation = firstDoor.transform.rotation;
+        newDoor.transform.position = firstDoor.transform.position + (-firstDoor.transform.right * (5.65f));
+        ECS = newDoor.GetComponent<EntryCutScene>();
+        playerSpawnPoint = ECS.GetPlayerSpawnPos();
+
         foreach (Room item in spawnedRooms)
         {
             foreach (GameObject door in item.doorObjects)
             {
                 if (door.GetComponent<Door>().GetDoorType() == DoorType.entrance)
                 {
-                    GameObject newDoor = Instantiate(doorPrefab);
+                    newDoor = Instantiate(doorPrefab);
                     newDoor.transform.rotation = door.transform.rotation;
                     
-                    newDoor.transform.parent = door.transform.parent;
+                    newDoor.transform.position = door.transform.position + (-door.transform.right * (5.65f));
+
+                    InRoomDoor IRD = newDoor.GetComponent<InRoomDoor>();
+                    IRD.SetPrevRoom(spawnedRooms[iterator]);
+                    IRD.SetNextRoom(spawnedRooms[iterator + 1]);
+                    spawnedRooms[iterator].SetExitDoor(IRD);
+                    iterator++;
+                    Destroy(door);
+                }
+                else if (door.GetComponent<Door>().GetDoorType() == DoorType.Key)
+                {
+                    newDoor = Instantiate(keyDoorPrefab);
+                    newDoor.transform.rotation = door.transform.rotation;
+
                     newDoor.transform.position = door.transform.position + (-door.transform.right * (5.65f));
                     Destroy(door);
                 }
@@ -247,7 +283,6 @@ public class LevelGenerator : MonoBehaviour {
         rooms = new List<Object>(Resources.LoadAll("Rooms"));
         availableRooms = new List<Object>(rooms);
     }
-
     
     bool DoesRoomIntersect(Bounds newB)
     {

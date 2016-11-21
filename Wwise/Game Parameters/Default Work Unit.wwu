@@ -17,8 +17,10 @@
 				</GameParameter>
 				<GameParameter Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}">
 					<PropertyList>
+						<Property Name="FilterTimeDown" Type="Real64" Value="1"/>
+						<Property Name="FilterTimeUp" Type="Real64" Value="1"/>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
-						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="2"/>
 						<Property Name="SlewRateDown" Type="Real64" Value="10"/>
 						<Property Name="SlewRateUp" Type="Real64" Value="10"/>
 					</PropertyList>

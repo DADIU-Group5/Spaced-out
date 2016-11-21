@@ -655,9 +655,9 @@ ModelImporter:
       - path: grp_geo/dave
         weight: 0
       - path: grp_geo/davejetpack01
-        weight: 1
+        weight: 0
       - path: grp_geo/davejetpack01/davejetpack01 1
-        weight: 1
+        weight: 0
       - path: grp_geo/daveShirtInd01
         weight: 1
       - path: grp_geo/daveShirtOut01

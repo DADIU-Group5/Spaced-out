@@ -2000,6 +2000,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="det her sted virker ikke særligt sikkert___ men Hey! der er kun en måde at finde ud af det på" ID="{3B05CC2C-55BC-40DC-921F-27AE4F34C180}" ShortID="926836453">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.216843316921954"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.729382066010212"/>
+																<Property Name="TrimEnd" Type="Real64" Value="6.64329070933625"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>unprocessed\det her sted virker ikke særligt sikkert... men Hey! der er kun en måde at finde ud af det på.wav</AudioFile>
 														</AudioFileSource>
@@ -2022,6 +2027,10 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="The hazards here dont seem too friendly___ you should go say hi!" ID="{C7231999-47C6-48BA-8B7E-913B141929D0}" ShortID="526762414">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.251390408460978"/>
+																<Property Name="TrimEnd" Type="Real64" Value="5.13464909281546"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>The hazards here dont seem too friendly... you should go say hi!.wav</AudioFile>
 														</AudioFileSource>
@@ -2082,6 +2091,10 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Hvad har du gang i, Dave Du skal hen imod rednings kapslen" ID="{A10E129D-4323-4CCD-B85D-468BD6E2F20C}" ShortID="698227094">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0430342815463166"/>
+																<Property Name="TrimBegin" Type="Real64" Value="1.14040846097739"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>unprocessed\Hvad har du gang i, Dave Du skal hen imod rednings kapslen.wav</AudioFile>
 														</AudioFileSource>
@@ -2104,6 +2117,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="What are you doing dave you need to get to the escape pod (sweet)" ID="{76B4E317-A39C-4B6B-8D15-252AFFEC097A}" ShortID="111064016">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.194835544310722"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.490040914478483"/>
+																<Property Name="TrimEnd" Type="Real64" Value="3.7432040937272"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>unprocessed\What are you doing dave you need to get to the escape pod (sweet).wav</AudioFile>
 														</AudioFileSource>
@@ -2164,6 +2182,9 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="vi har teknologien til bringe dig tilbage, når kommer galt afsted_ Heldigt for dig___" ID="{41974E1D-5A33-4CCF-81C3-59452C9CE7E4}" ShortID="345686519">
+															<PropertyList>
+																<Property Name="TrimEnd" Type="Real64" Value="6.6282606218089"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>unprocessed\vi har teknologien til bringe dig tilbage, når kommer galt afsted. Heldigt for dig... .wav</AudioFile>
 														</AudioFileSource>
@@ -2186,6 +2207,9 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Your lucky we have the tecnology to bring you back when you hurt your self" ID="{20C0FC13-52B1-42A5-BB97-81245FF400F1}" ShortID="782658039">
+															<PropertyList>
+																<Property Name="TrimBegin" Type="Real64" Value="3.60475929978118"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>unprocessed\Your lucky we have the tecnology to bring you back when you hurt your self.wav</AudioFile>
 														</AudioFileSource>
@@ -3074,7 +3098,7 @@
 										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-22</Value>
+												<Value>-35</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -3486,11 +3510,6 @@
 												<Value>-20</Value>
 											</ValueList>
 										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-8</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -3695,6 +3714,24 @@
 											<AudioFile>blæser.wav</AudioFile>
 										</AudioFileSource>
 									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="power" ID="{77AAB1E6-40DE-4AB1-8585-CD37F5D0CA36}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="off" ID="{8CE3E364-66FA-4DE3-9D14-E500C95C290B}"/>
+												<State Name="Custom State" ID="{EDD922F2-C087-41C5-9D2B-BB0F5D371AA9}" ShortID="1070632189">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32" Value="-2400"/>
+														<Property Name="Volume" Type="Real64" Value="-96"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 									<ActiveSourceList>
 										<ActiveSource Name="blæser" ID="{DBA8AD60-AF78-4C01-8FC3-7A9792C91610}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -3706,6 +3743,13 @@
 				<Folder Name="atmos" ID="{D914E73D-408D-443A-8DD9-7AD7E510D3C9}" ShortID="3256818">
 					<ChildrenList>
 						<ActorMixer Name="atmos" ID="{5541A152-D8C0-4867-8BE9-1044E9868B16}" ShortID="52105874">
+							<PropertyList>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
@@ -3726,9 +3770,37 @@
 											</ValueList>
 										</Property>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<RTPCList>
+												<RTPC Name="" ID="{5AC5C617-B60A-4CE4-B845-5692E545EA1B}" ShortID="799700748">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="amience1" ID="{6EA74454-6DB8-44F9-9B8C-47278809CA4F}" WorkUnitID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{91535EF5-3767-4734-ACFC-D02F2B04875E}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>21</Flags>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>59</YPos>
+																<Flags>53</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-20</Value>
+												<Value>-15</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -3935,6 +4007,7 @@
 												</RTPC>
 											</RTPCList>
 										</Property>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -3946,6 +4019,49 @@
 													</Modifier>
 												</ModifierInfo>
 											</ModifierList>
+										</Property>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UserAuxSendVolume1" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+											<RTPCList>
+												<RTPC Name="" ID="{DF6E8A72-33CC-4099-849F-D33A88CDAC8F}" ShortID="462962291">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{44336032-F480-4C29-956E-DA1BD680AE19}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Exp3</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>29.65426</XPos>
+																<YPos>-200</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Exp3</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>-0.12932</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<RTPCList>
@@ -3983,6 +4099,12 @@
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend1">
+											<ObjectRef Name="rvb2" ID="{6ED94C33-AE4C-4CBC-AD75-760C4272D1B7}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -4952,9 +5074,20 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="menuclickforward" ID="{22780C8E-C3FE-4691-AC3D-8CE9E256035E}" ShortID="184948297" Type="SoundFX">
+							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+								</Reference>
+								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Bass_Remover_10" ID="{287D6D72-F596-4384-9D18-757381CC5968}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
@@ -4971,6 +5104,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<RandomSequenceContainer Name="scroll" ID="{5F6375F9-27C5-443C-AA31-781D8D334175}" ShortID="444985574">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
@@ -5059,9 +5199,20 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<Sound Name="menuclickbackwards" ID="{C21D5051-D6EA-4767-93CF-087140240FCE}" ShortID="913067230" Type="SoundFX">
+							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+								</Reference>
+								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Bass_Remover_10" ID="{287D6D72-F596-4384-9D18-757381CC5968}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
@@ -5079,6 +5230,200 @@
 						</Sound>
 					</ChildrenList>
 				</ActorMixer>
+				<Folder Name="enviroment" ID="{CD587C0C-0D65-47EF-8142-D514249D66C6}" ShortID="1014626234">
+					<ChildrenList>
+						<ActorMixer Name="enviroment" ID="{6A921F3F-8F01-429B-84E1-01D88BC0065F}" ShortID="661846251">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="door squeeze" ID="{81410CC2-B2A4-4150-A7FB-B43D3FC08471}" ShortID="62779911" Type="SoundFX">
+									<PropertyList>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{BF58EE59-CFE0-43CF-BE30-370BE17B37E7}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-500"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="door squeeze" ID="{19B0B293-719D-4D63-9381-56EB73CAFF4A}" ShortID="647898339">
+											<Language>SFX</Language>
+											<AudioFile>door squeeze.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="door squeeze" ID="{19B0B293-719D-4D63-9381-56EB73CAFF4A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="power down" ID="{F0FA3640-75E6-4690-B726-6CC02193D9F9}" ShortID="145630737" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-20</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="power up" ID="{BB6FFF15-9FE6-40A9-81AC-736C95EE75BF}" ShortID="867057375">
+											<Language>SFX</Language>
+											<AudioFile>power up.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="power up" ID="{BB6FFF15-9FE6-40A9-81AC-736C95EE75BF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="power up" ID="{7B98E50C-A038-452E-99E9-F1612D3AE1D8}" ShortID="66649419" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-20</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="power down" ID="{C2830B45-845E-46E2-A289-C0A3075DE891}" ShortID="399449157">
+											<Language>SFX</Language>
+											<AudioFile>power down.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="power down" ID="{C2830B45-845E-46E2-A289-C0A3075DE891}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="switch off" ID="{9586D436-B249-4634-9831-86DB337A4C68}" ShortID="538709596" Type="SoundFX">
+									<PropertyList>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E67B3A3A-AD4E-4240-BC7D-6EB422BA3FD8}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="switch off" ID="{6B7BC191-AB91-4337-A91A-18FAC49B5ADE}" ShortID="257012564">
+											<Language>SFX</Language>
+											<AudioFile>switches\switch off.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="switch off" ID="{6B7BC191-AB91-4337-A91A-18FAC49B5ADE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="switch on" ID="{3BD5564D-3D1E-4539-A96E-AD28EF60BD69}" ShortID="100011873" Type="SoundFX">
+									<PropertyList>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D7D26134-1559-4844-AF7D-18387FD034E3}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="switch on" ID="{5DEF0678-FAB2-421C-B16A-87187B1E1076}" ShortID="202362747">
+											<Language>SFX</Language>
+											<AudioFile>switches\switch on.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="switch on" ID="{5DEF0678-FAB2-421C-B16A-87187B1E1076}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

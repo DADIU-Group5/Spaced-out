@@ -10,17 +10,17 @@ public class OxygenController : MonoBehaviour
     public GameObject oxygenObject;
     private List<Renderer> oxygenRenderers;
 
-    public void Start()
+    public void Awake()
     {
         oxygen = maxOxygen;
         
-        oxygenRenderers = new List<Renderer>(oxygenObject.transform.childCount);
 
+
+        oxygenRenderers = new List<Renderer>(oxygenObject.transform.childCount);
         for (int i = 0; i < oxygenObject.transform.childCount; i++)
         {
             oxygenRenderers.Add(oxygenObject.transform.GetChild(i).GetComponent<Renderer>());
         }
-        
         UpdateOxygenMeter();
     }
 

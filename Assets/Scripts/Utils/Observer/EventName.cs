@@ -33,5 +33,7 @@
     PlayerLaunchCancel,
     PlayerCharge,
     Door,
-    PlayerVentilated
+    PlayerVentilated,
+    StartCutscene,
+    ToggleUI
 }

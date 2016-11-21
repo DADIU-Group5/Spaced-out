@@ -2,10 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class FireHazard : MonoBehaviour {
-
-    //public float TimeUntilBurnToDeath = 20f;
-
+public class FireHazard : MonoBehaviour
+{
     [HideInInspector]
     public GameObject player;
     public bool extinquishFlames = false;
@@ -13,37 +11,34 @@ public class FireHazard : MonoBehaviour {
     [HideInInspector]
     public GameplayElement itemState;
 
+    //keep track of whether the player is burning...
+    //so that we don't send multiple burn notifications
+    //to scripts that can't handle it (GAL lines, ex.)
+    private bool burningPlayer = false;
+
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         player = GameObject.FindGameObjectWithTag("Player");
         itemState = this.gameObject.GetComponent<GameplayElement>();
     }
 
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
-        if (other.transform.tag == "Player" && itemState.On)
+        if (other.transform.tag == "Player" && itemState.On && !burningPlayer)
         {
-           // player.GetComponent<PlayerController>().onFire = true;
+            burningPlayer = true;
             var evt = new ObserverEvent(EventName.OnFire);
             Subject.instance.Notify(gameObject, evt);
-
-            //StartCoroutine(BurnToDeath());
         }
     }
 
-    /// <summary>
-    /// Burn the player to death, if fire is not put out.
-    /// </summary>
-    /*public IEnumerator BurnToDeath()
+    void OnTriggerExit(Collider other)
     {
-        yield return new WaitForSeconds(TimeUntilBurnToDeath);
-
-        //if the player is still on fire after this time, die.
-        if (player.GetComponent < PlayerBehaviour >(). onFire)
+        if (other.transform.tag == "Player")
         {
-            Debug.Log("Player has burned to death!");
-            
+            burningPlayer = false;
         }
-    }*/
+    }
 }

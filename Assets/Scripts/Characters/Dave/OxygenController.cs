@@ -92,7 +92,7 @@ public class OxygenController : MonoBehaviour
         UpdateOxygenMeter();
 
         var evt = new ObserverEvent(EventName.UpdateOxygen);
-        evt.payload.Add(PayloadConstants.Oxygen, oxygen);
+        evt.payload.Add(PayloadConstants.OXYGEN, oxygen);
         Subject.instance.Notify(gameObject, evt);
     }
 

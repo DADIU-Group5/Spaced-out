@@ -152,7 +152,6 @@ public class PlayerBehaviour : MonoBehaviour, Observer
                 break;
             case EventName.GodMode:
                 godMode = !godMode;
-                Debug.Log("godmode is set to: " + godMode);
                 GameObject.FindObjectOfType<OxygenController>().godMode = godMode;
                 //if godmode is activated while player in on fire, extinguish
                 if (onFire)

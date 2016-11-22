@@ -68,6 +68,9 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 
     internal void Kill(EventName causeOfDeath)
     {
+        var evt = new ObserverEvent(EventName.DisableInput);
+        Subject.instance.Notify(gameObject, evt);
+
         Debug.Log("kill function was called");
         if (!dead && !gameIsOver)
         {      

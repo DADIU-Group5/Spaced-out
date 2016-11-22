@@ -21,6 +21,11 @@ public class Door : MonoBehaviour {
         doorType = DoorType.exit;
     }
 
+    public void SetEntry()
+    {
+        doorType = DoorType.entryhall;
+    }
+
     public bool Connected()
     {
         if(doorType == DoorType.exit)
@@ -62,4 +67,4 @@ public class Door : MonoBehaviour {
         doorType = DoorType.Key;
     }
 }
-public enum DoorType { entrance, exit, unused, Key };
+public enum DoorType { entrance, exit, unused, Key, entryhall };

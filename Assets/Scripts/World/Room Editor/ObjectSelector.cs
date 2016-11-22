@@ -124,9 +124,9 @@ public class ObjectSelector : MonoBehaviour {
         {
             r.AddHazard(GOshowing.GetComponent<HazardState>());
         }
-        if(GOshowing.GetComponent<SwitchItem>() != null)
+        if(GOshowing.GetComponentInChildren<SwitchItem>() != null)
         {
-            GOshowing.GetComponent<SwitchItem>().AssignRoom(r);
+            GOshowing.transform.GetChild(0).GetComponent<SwitchItem>().AssignRoom(r);
         }
         Destroy(gameObject);
     }

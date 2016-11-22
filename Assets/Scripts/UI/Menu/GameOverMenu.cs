@@ -29,14 +29,6 @@ public class GameOverMenu : MonoBehaviour, Observer
     {
         Subject.instance.AddObserver(this);
         level = GenerationDataManager.instance.GetCurrentLevel();
-        SettingsManager.instance.onLanguageChanged += UpdateButtonText;
-        UpdateButtonText(Language.Danish);
-    }
-
-    private void UpdateButtonText(Language lan)
-    {
-        
-        
     }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
@@ -116,8 +108,6 @@ public class GameOverMenu : MonoBehaviour, Observer
     /// </summary>
     public void ResetLevel()
     {
-        //shouldn't we go to the last transformation point?
-        //when we add that logic, remember:
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }

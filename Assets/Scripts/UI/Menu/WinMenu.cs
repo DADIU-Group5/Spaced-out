@@ -11,6 +11,8 @@ public class WinMenu : MonoBehaviour, Observer
 
     public Button nextLevelBtn;
 
+    public Text winText;
+
     [HideInInspector]
     public int level = 1;
 
@@ -44,14 +46,6 @@ public class WinMenu : MonoBehaviour, Observer
     {
         Subject.instance.AddObserver(this);
         level = GenerationDataManager.instance.GetCurrentLevel();
-
-        if(level == 5)
-        {
-            // TODO: make invisible
-            nextLevelBtn.enabled = false;
-            Debug.Log("last level reached, need to do something about it");
-            // transform the button
-        }
     }
 
     /// <summary>
@@ -59,7 +53,13 @@ public class WinMenu : MonoBehaviour, Observer
     /// </summary>
     public void ResetLevel()
     {
+        //reset current level if we restart entirely.
+        //ProgressManager.instance.resetCurrentLevel(level);
         Scene scene = SceneManager.GetActiveScene();
+
+        var evt = new ObserverEvent(EventName.RestartLevel);
+        Subject.instance.Notify(gameObject, evt);
+
         //player reset, so he hasn't died in this run yet.
         SceneManager.LoadScene(scene.name);
     }
@@ -85,7 +85,7 @@ public class WinMenu : MonoBehaviour, Observer
         }
         else
         {
-            Debug.Log("Loading main menu");
+            SceneManager.LoadScene("Epilogue");
         }
     }
 
@@ -123,6 +123,10 @@ public class WinMenu : MonoBehaviour, Observer
                 transform.GetChild(i).gameObject.SetActive(true);
             }
             playerWon = true;
+
+            if (winText != null)
+                winText.text = Translator.instance.Get("you win") + "!";
+
             SetBadges();
         }
         yield return null;

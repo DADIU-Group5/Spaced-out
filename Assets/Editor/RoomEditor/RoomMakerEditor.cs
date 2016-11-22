@@ -369,7 +369,7 @@ public class RoomMakerEditor : EditorWindow {
 
 
         GUILayout.FlexibleSpace();
-        objectToCreate = EditorGUILayout.Popup("Create new object: ", objectToCreate, new string[] { "Select", "Small Object", "Medium Object", "Large Object", "XLarge Object", "Props", "Fuel", "Comic" });
+        objectToCreate = EditorGUILayout.Popup("Create new object: ", objectToCreate, new string[] { "Select", "Small Object", "Medium Object", "Large Object", "XLarge Object", "Props", "Fuel", "Comic", "Exploding barrel" });
         if (Selection.activeTransform != null)
         {
             tempPos = Selection.activeTransform.position;
@@ -414,6 +414,10 @@ public class RoomMakerEditor : EditorWindow {
                 break;
             case 9:
                 Selection.activeGameObject = RM.NewPickUp(tempPos,1);
+                objectToCreate = 0;
+                break;
+            case 10:
+                Selection.activeGameObject = RM.NewBarrel(tempPos);
                 objectToCreate = 0;
                 break;
             default:
@@ -517,6 +521,13 @@ public class RoomMakerEditor : EditorWindow {
             {
                 RM.DestroyRoom();
             }
+        }
+        GUILayout.FlexibleSpace();
+        if (GUILayout.Button("FixRoom", GUILayout.Height(50)))
+        {
+            RoomFixer RF = RM.GetRoom().gameObject.AddComponent<RoomFixer>();
+            RF.Fix();
+            DestroyImmediate(RF);
         }
         GUILayout.FlexibleSpace();
         if (GUILayout.Button("Back", GUILayout.Height(50)))

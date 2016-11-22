@@ -47,5 +47,6 @@
     EPILOGUE_EVENTTWO,
     EPILOGUE_EVENTTHREE,
     DisableInput,
+    GALAnimate,
     EnableInput
 }

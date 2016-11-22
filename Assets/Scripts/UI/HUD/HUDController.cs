@@ -15,7 +15,7 @@ public class HUDController : MonoBehaviour, Observer {
     public Text comicsLeftText;
 
     public Transform chargeArrow;
-    //public Image gal;
+    public Animator animator;
     public RectTransform chargeImagePivot,
         chargeMaskPivot;
 
@@ -124,11 +124,11 @@ public class HUDController : MonoBehaviour, Observer {
         yield return new WaitForSeconds(subStart);
 
         subtitleText.text = subText;
-        //gal.enabled = true;
+        animator.Play("angryTalk");
 
         yield return new WaitForSeconds(subDuration);
 
-        subtitleText.text = "";
+        animator.Play("idle_anim");
         //gal.enabled = false;
     }
 }

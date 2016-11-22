@@ -15,6 +15,8 @@ public class LevelGenerator : MonoBehaviour {
 
     public GameObject playerPrefab;
     public GameObject keyPrefab;
+    public GameObject keyDoorPrefab;
+    public GameObject entryDoorPrefab;
 
     public int exteriorSeed;
     public int interiorSeed;
@@ -24,14 +26,18 @@ public class LevelGenerator : MonoBehaviour {
     public float playerDistanceFromDoor = 1;
     public float keyDistanceFromDoor = 1;
 
-    Door firstDoor = null;
+    Transform playerSpawnPoint;
+    EntryCutScene ECS;
 
-    List<Bounds> allBounds = new List<Bounds>();
+    Door firstDoor = null;
+    GameObject EntryHall;
+
+    public List<Bounds> allBounds = new List<Bounds>();
     
 	// Use this for initialization
 	void Start () {
 #if UNITY_EDITOR
-        // UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
+        //UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
 #endif
         GenerateLevel();
     }
@@ -41,7 +47,7 @@ public class LevelGenerator : MonoBehaviour {
     /// </summary>
     void GenerateLevel()
     {
-        SetupSeeds();
+        GetGenerationData();
 
         Random.InitState(exteriorSeed);
 
@@ -50,28 +56,28 @@ public class LevelGenerator : MonoBehaviour {
         int roomsToCreate = Random.Range(minRooms, maxRooms);
 
         CreateLevel(roomsToCreate);
+        //StartCoroutine(test(roomsToCreate));
 
-        SpawnPlayer();
         SpawnKey();
         RemoveUnusedDoors();
         RandomizeInteriorForAll();
+        DisableRooms();
+        spawnedRooms[0].EnteredThisRoom();
+        spawnedRooms[0].exitDoor.doorToLock.StartDoor();
+        foreach (Room item in spawnedRooms)
+        {
+            Destroy(item.GetComponent<CalcBounds>());
+        }
+        Destroy(EntryHall.GetComponent<CalcBounds>());
+        SpawnPlayer();
     }
 
-    void SetupSeeds()
+    void GetGenerationData()
     {
-        if (PlayerPrefs.GetInt("extSeed" + PlayerPrefs.GetInt("CurrentLevel")) == 0)
-        {
-            PlayerPrefs.SetInt("extSeed" + PlayerPrefs.GetInt("CurrentLevel"), Random.Range(1, 10000));
-        }
-        if (PlayerPrefs.GetInt("intSeed") == 0)
-        {
-            PlayerPrefs.SetInt("intSeed", Random.Range(1, 10000));
-        }
-        exteriorSeed = PlayerPrefs.GetInt("extSeed" + PlayerPrefs.GetInt("CurrentLevel"));
-        interiorSeed = PlayerPrefs.GetInt("intSeed");
-        Debug.Log("extSeed: " + exteriorSeed);
-        Debug.Log("intSeed: " + interiorSeed);
-        minRooms = PlayerPrefs.GetInt(PlayerPrefs.GetString("CurrentLevel") + "Length");
+        var data = GenerationDataManager.instance.GetLevelData();
+        exteriorSeed = data.exteriorSeed;
+        interiorSeed = data.interiorSeed;
+        minRooms = data.rooms;
         maxRooms = minRooms;
     }
 
@@ -92,22 +98,18 @@ public class LevelGenerator : MonoBehaviour {
     /// </summary>
     void SpawnPlayer()
     {
-        foreach (GameObject item in spawnedRooms[0].doorObjects)
-        {
-            if(item.GetComponent<Door>().GetDoorType() == DoorType.entrance)
-            {
-                GameObject go = Instantiate(playerPrefab, item.transform.position - (item.transform.right*playerDistanceFromDoor), Quaternion.identity) as GameObject;
-                go.transform.LookAt(item.transform.position - (item.transform.right * (playerDistanceFromDoor+1)), Vector3.up);
-                CheckpointManager.instance.SetSpawnDistance(playerDistanceFromDoor);
-                CheckpointManager.instance.SetNewCheckpoint(item.transform.position);
-                CheckpointManager.instance.SetNewCheckpointRotation(-item.transform.right);
-                CheckpointManager.instance.SetFuelCount(go.GetComponentInChildren<FuelController>().GetCurrentFuel());
-                var evt = new ObserverEvent(EventName.PlayerSpawned);
-                evt.payload.Add(PayloadConstants.PLAYER, go.GetComponentInChildren<PlayerController>().gameObject);
-                Subject.instance.Notify(gameObject, evt);
-                break;
-            }
-        }
+        CheckpointManager.instance.SetSpawnDistance(playerDistanceFromDoor + 1);
+        GameObject go = Instantiate(playerPrefab, playerSpawnPoint.position, Quaternion.identity) as GameObject;
+        go.transform.LookAt(transform.position /*+ new Vector3(0, 2, 0)*/, Vector3.up);
+        go.GetComponentInChildren<OxygenController>().ReplenishOxygen();
+        CheckpointManager.instance.SetFuelCount(go.GetComponentInChildren<OxygenController>().GetOxygen());
+
+        var evt = new ObserverEvent(EventName.PlayerSpawned);
+        evt.payload.Add(PayloadConstants.PLAYER, go.GetComponentInChildren<PlayerController>().gameObject);
+        Subject.instance.Notify(gameObject, evt);
+        evt = new ObserverEvent(EventName.StartCutscene);
+        Subject.instance.Notify(gameObject, evt);
+        ECS.StartCutScene(go);
     }
 
     /// <summary>
@@ -116,7 +118,16 @@ public class LevelGenerator : MonoBehaviour {
     void SpawnKey()
     {
         Transform tempTrans = GetRandomDoor(spawnedRooms[spawnedRooms.Count - 1]).transform;
-        Instantiate(keyPrefab, tempTrans.position - (tempTrans.right*keyDistanceFromDoor), Quaternion.identity);
+        //Instantiate(keyPrefab, tempTrans.position - (tempTrans.right*-keyDistanceFromDoor) + new Vector3(0, 2, 0), Quaternion.identity,spawnedRooms[spawnedRooms.Count-1].transform);
+        tempTrans.GetComponent<Door>().SetDoorBehindKey();
+    }
+
+    void DisableRooms()
+    {
+        for (int i = 2; i < spawnedRooms.Count; i++)
+        {
+            spawnedRooms[i].LeftThisRoom();
+        }
     }
 
     /// <summary>
@@ -125,7 +136,7 @@ public class LevelGenerator : MonoBehaviour {
     void CreateLevel(int lenght)
     {
         int createdRooms = 0;
-        int tries = 100000;
+        int tries = 1000;
         while (createdRooms < lenght)
         {
             if (CreateRoom())
@@ -137,16 +148,24 @@ public class LevelGenerator : MonoBehaviour {
             else
             {   
                 createdRooms--;
-                Destroy(spawnedRooms[spawnedRooms.Count - 1].gameObject);
-                spawnedRooms.RemoveAt(spawnedRooms.Count - 1);
-                allBounds.RemoveAt(spawnedRooms.Count - 1);
-                lastDoor = GetRandomDoor(spawnedRooms[spawnedRooms.Count - 1]);
-                foreach (GameObject item in spawnedRooms[spawnedRooms.Count-1].doorObjects)
+                if (createdRooms > 0)
                 {
-                    if(item.GetComponent<Door>().GetDoorType() == DoorType.exit)
+                    Destroy(spawnedRooms[spawnedRooms.Count - 1].gameObject);
+                    allBounds.RemoveAt(allBounds.Count - 1);
+                    spawnedRooms.RemoveAt(spawnedRooms.Count - 1);
+                    lastDoor = GetRandomDoor(spawnedRooms[spawnedRooms.Count - 1]);
+                    foreach (GameObject item in spawnedRooms[spawnedRooms.Count - 1].doorObjects)
                     {
-                        item.GetComponent<Door>().BreakConnection();
+                        if (item.GetComponent<Door>().GetDoorType() == DoorType.exit)
+                        {
+                            item.GetComponent<Door>().BreakConnection();
+                        }
                     }
+                }
+                else
+                {
+                    Debug.LogError("Something went wrong! This should NOT be possible. Talk to Frederik.");
+                    break;
                 }
             }
             //Makes sure that it does not end in an infinite loop, should not actually happen.
@@ -159,13 +178,59 @@ public class LevelGenerator : MonoBehaviour {
         }
     }
 
+    /*IEnumerator test(int lenght)
+    {
+        int createdRooms = 0;
+        int tries = 1000;
+        while (createdRooms < lenght)
+        {
+            yield return new WaitForSeconds(1);
+            if (CreateRoom())
+            {
+                createdRooms++;
+            }
+            //If it could not create a room from a position, remove the previous room, and try again.
+            //Should make sure it never hits a dead end.
+            else
+            {
+                createdRooms--;
+                if (createdRooms > 0)
+                {
+                    Destroy(spawnedRooms[spawnedRooms.Count - 1].gameObject);
+                    allBounds.RemoveAt(allBounds.Count - 1);
+                    spawnedRooms.RemoveAt(spawnedRooms.Count - 1);
+                    lastDoor = GetRandomDoor(spawnedRooms[spawnedRooms.Count - 1]);
+                    foreach (GameObject item in spawnedRooms[spawnedRooms.Count - 1].doorObjects)
+                    {
+                        if (item.GetComponent<Door>().GetDoorType() == DoorType.exit)
+                        {
+                            item.GetComponent<Door>().BreakConnection();
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.LogError("Something went wrong! This should NOT be possible. Talk to Frederik.");
+                    break;
+                }
+            }
+            //Makes sure that it does not end in an infinite loop, should not actually happen.
+            tries--;
+            if (tries == 0)
+            {
+                Debug.Log("tried more than 100000 times");
+                break;
+            }
+        }
+    }*/
+
     /// <summary>
     /// Creates a new room, has 3 tries to do it, before it will say it cannot create it there.
     /// </summary>
     /// <returns></returns>
     bool CreateRoom()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 10; i++)
         {
             if (CreateNewRoom())
             {
@@ -181,17 +246,14 @@ public class LevelGenerator : MonoBehaviour {
         GameObject newRoom = Instantiate(GetavailableRoom()) as GameObject;
         Room theRoom = newRoom.GetComponent<Room>();
         GameObject entranceDoor = GetRandomDoor(theRoom);
-        if (firstDoor == null)
-        {
-            firstDoor = entranceDoor.GetComponent<Door>();
-        }
 
         //Gets the rotation of the room. Should be rotated equal to the difference between the last and new doors right axis.
-        Quaternion rot = Quaternion.FromToRotation(entranceDoor.transform.right, -lastDoor.transform.right);
-        newRoom.transform.rotation = rot;
+        float lastY = lastDoor.transform.eulerAngles.y + 180;
+        float newY = lastY - entranceDoor.transform.eulerAngles.y;
+        newRoom.transform.Rotate(new Vector3(0, newY, 0));
 
         //Moves the new room into position.
-        newRoom.transform.position = newRoom.transform.position + (lastDoor.transform.position - entranceDoor.transform.position) - (entranceDoor.transform.right * distanceBetweenRooms);
+        newRoom.transform.position = newRoom.transform.position + (lastDoor.transform.position - entranceDoor.transform.position) + (entranceDoor.transform.right * 7.3f);
 
         //Get bounds.
         Bounds newBound = newRoom.AddComponent<CalcBounds>().calc();
@@ -216,6 +278,17 @@ public class LevelGenerator : MonoBehaviour {
         spawnedRooms.Add(theRoom);
         lastSpawnedRoom = (Object)newRoom;
         allBounds.Add(newBound);
+        if (firstDoor == null)
+        {
+            firstDoor = entranceDoor.GetComponent<Door>();
+            firstDoor.SetEntry();
+            EntryHall = Instantiate(entryDoorPrefab);
+            EntryHall.transform.rotation = firstDoor.transform.rotation;
+            EntryHall.transform.position = firstDoor.transform.position + (-firstDoor.transform.right * (5.65f));
+            ECS = EntryHall.GetComponent<EntryCutScene>();
+            playerSpawnPoint = ECS.GetPlayerSpawnPos();
+            allBounds.Add(EntryHall.GetComponent<CalcBounds>().calc());
+        }
         return true;
     }
 
@@ -224,17 +297,34 @@ public class LevelGenerator : MonoBehaviour {
     /// </summary>
     void RemoveUnusedDoors()
     {
-        firstDoor.BreakConnection();
+        int iterator = 0;
+
+        GameObject newDoor;
+
         foreach (Room item in spawnedRooms)
         {
             foreach (GameObject door in item.doorObjects)
             {
                 if (door.GetComponent<Door>().GetDoorType() == DoorType.entrance)
                 {
-                    GameObject newDoor = Instantiate(doorPrefab);
+                    newDoor = Instantiate(doorPrefab);
                     newDoor.transform.rotation = door.transform.rotation;
-                    newDoor.transform.position = door.transform.position + (door.transform.right * (distanceBetweenRooms / 2));
-                    newDoor.transform.parent = door.transform.parent;
+                    
+                    newDoor.transform.position = door.transform.position + (-door.transform.right * (5.65f));
+
+                    InRoomDoor IRD = newDoor.GetComponent<InRoomDoor>();
+                    IRD.SetPrevRoom(spawnedRooms[iterator]);
+                    IRD.SetNextRoom(spawnedRooms[iterator + 1]);
+                    spawnedRooms[iterator].SetExitDoor(IRD);
+                    iterator++;
+                    Destroy(door);
+                }
+                else if (door.GetComponent<Door>().GetDoorType() == DoorType.Key)
+                {
+                    newDoor = Instantiate(keyDoorPrefab);
+                    newDoor.transform.rotation = door.transform.rotation;
+
+                    newDoor.transform.position = door.transform.position + (-door.transform.right * (5.65f));
                     Destroy(door);
                 }
                 else
@@ -253,7 +343,6 @@ public class LevelGenerator : MonoBehaviour {
         rooms = new List<Object>(Resources.LoadAll("Rooms"));
         availableRooms = new List<Object>(rooms);
     }
-
     
     bool DoesRoomIntersect(Bounds newB)
     {
@@ -322,7 +411,6 @@ public class LevelGenerator : MonoBehaviour {
         {
             return GetavailableRoom();
         }
-
         return go;
     }
 }

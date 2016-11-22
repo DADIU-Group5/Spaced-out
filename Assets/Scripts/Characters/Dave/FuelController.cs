@@ -6,7 +6,7 @@ public class FuelController : MonoBehaviour
     public int maxFuel = 10;
     public float velocityToDie = 10f;
 
-    private int currentFuel;
+    private int currentFuel = 5;
     private Rigidbody rbPlayer;
     private PlayerController player;
 
@@ -14,23 +14,18 @@ public class FuelController : MonoBehaviour
     {
         player = gameObject.GetComponent<PlayerController>();
         rbPlayer = gameObject.GetComponent<Rigidbody>();
-
-        ReplenishFuel();
-    }
-
-    public void Update()
-    {
-        // Check if player is traveling slowly and also has no more fuel, and if so, fire PlayerDead event.
-        if (rbPlayer.velocity.magnitude < velocityToDie && currentFuel <= 0 && !player.IsDead())
-        {
-            var evt = new ObserverEvent(EventName.FuelEmpty);
-            Subject.instance.Notify(gameObject, evt);
-        }
     }
 
     public void UseFuel()
     {
         currentFuel--;
+
+        if(currentFuel <= maxFuel / 3.0f)
+        {
+            var evt = new ObserverEvent(EventName.LowOnOxygen);
+            Subject.instance.Notify(gameObject, evt);
+        }
+
         UpdateFuelUI();
     }
 
@@ -48,6 +43,7 @@ public class FuelController : MonoBehaviour
     public void SetFuel(int fuel)
     {
         this.currentFuel = Mathf.Clamp(fuel, 0, maxFuel);
+        UpdateFuelUI();
     }
 
     public void ReplenishFuel()
@@ -58,8 +54,8 @@ public class FuelController : MonoBehaviour
 
     private void UpdateFuelUI()
     {
-        var evt = new ObserverEvent(EventName.UpdateFuel);
-        evt.payload.Add(PayloadConstants.FUEL, currentFuel);
+        var evt = new ObserverEvent(EventName.UpdateOxygen);
+        evt.payload.Add(PayloadConstants.OXYGEN, currentFuel);
         Subject.instance.Notify(gameObject, evt);
     }
 

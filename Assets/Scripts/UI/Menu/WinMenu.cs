@@ -9,6 +9,10 @@ public class WinMenu : MonoBehaviour, Observer
     private bool playerIsDead = false;
     private bool playerWon = false;
 
+    public Button nextLevelBtn;
+
+    public Text winText;
+
     [HideInInspector]
     public int level = 1;
 
@@ -18,13 +22,6 @@ public class WinMenu : MonoBehaviour, Observer
 
     public List<GameObject> goodImages;
     public List<GameObject> badImages;
-
-    [HideInInspector]
-    public bool finished = false;
-    [HideInInspector]
-    public bool didntDie = false;
-    [HideInInspector]
-    public bool collectedAll = false;
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
@@ -36,6 +33,9 @@ public class WinMenu : MonoBehaviour, Observer
             case EventName.PlayerDead:
                 playerIsDead = true;
                 break;
+            case EventName.PlayerSpawned:
+                playerIsDead = false;
+                break;
             default:
                 break;
         }
@@ -45,7 +45,7 @@ public class WinMenu : MonoBehaviour, Observer
     void Start()
     {
         Subject.instance.AddObserver(this);
-        level = PlayerPrefs.GetInt("CurrentLevel");
+        level = GenerationDataManager.instance.GetCurrentLevel();
     }
 
     /// <summary>
@@ -53,9 +53,14 @@ public class WinMenu : MonoBehaviour, Observer
     /// </summary>
     public void ResetLevel()
     {
+        //reset current level if we restart entirely.
+        //ProgressManager.instance.resetCurrentLevel(level);
         Scene scene = SceneManager.GetActiveScene();
+
+        var evt = new ObserverEvent(EventName.RestartLevel);
+        Subject.instance.Notify(gameObject, evt);
+
         //player reset, so he hasn't died in this run yet.
-        ScoreManager.instance.SetPlayerHasDiedThisLevel(level);
         SceneManager.LoadScene(scene.name);
     }
 
@@ -67,20 +72,39 @@ public class WinMenu : MonoBehaviour, Observer
         SceneManager.LoadScene(levelIndex);
     }
 
+    /// <summary>
+    /// Load Next Level
+    /// </summary>
+    public void LoadNextLevel()
+    {
+        level++;
+        if (level <= 5)
+        {
+            GenerationDataManager.instance.SetCurrentLevel(level);
+            SceneManager.LoadScene("LevelGenerator");
+        }
+        else
+        {
+            SceneManager.LoadScene("Epilogue");
+        }
+    }
+
     void SetBadges()
     {
-        finished = (ScoreManager.instance.GetAchievementFromLevel(level, 1) == 1) ? true : false; //ex: level2Achievement1
-        didntDie = (ScoreManager.instance.GetAchievementFromLevel(level, 2) == 1) ? true : false; //ex: level2Achievement1
-        collectedAll = (ScoreManager.instance.GetAchievementFromLevel(level, 3) == 1) ? true : false; //ex: level2Achievement1
-
+        bool[] medals = ProgressManager.instance.GetMedals(level-1);
+        bool finished = medals[0];
+        bool didntDie = medals[1];
+        bool collectedComics = medals[2];
+        
+        Debug.Log("Testing medals! Completion: " + finished + " comics: " + collectedComics + " and didn't die: " + didntDie);
         goodImages[0].SetActive(finished);
         badImages[0].SetActive(!finished);
 
         goodImages[1].SetActive(didntDie);
         badImages[1].SetActive(!didntDie);
 
-        goodImages[2].SetActive(collectedAll);
-        badImages[2].SetActive(!collectedAll);
+        goodImages[2].SetActive(collectedComics);
+        badImages[2].SetActive(!collectedComics);
     }
 
     /// <summary>
@@ -99,8 +123,11 @@ public class WinMenu : MonoBehaviour, Observer
                 transform.GetChild(i).gameObject.SetActive(true);
             }
             playerWon = true;
-            SetBadges();
 
+            if (winText != null)
+                winText.text = Translator.instance.Get("you win") + "!";
+
+            SetBadges();
         }
         yield return null;
     }

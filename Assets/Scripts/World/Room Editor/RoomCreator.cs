@@ -61,10 +61,10 @@ public class RoomCreator : MonoBehaviour
         return temp;
     }
 
-    public GameObject AddStaticObject()
+    public GameObject AddHazardObject()
     {
         GameObject temp = Instantiate(staticObject) as GameObject;
-        currentRoom.AddStaticObject(temp);
+        currentRoom.AddHazardObject(temp);
         return temp;
     }
 

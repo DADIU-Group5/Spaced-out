@@ -66,6 +66,7 @@ public class LevelGenerator : MonoBehaviour {
         {
             Destroy(item.GetComponent<CalcBounds>());
         }
+        Destroy(firstDoor.GetComponent<CalcBounds>());
         SpawnPlayer();
     }
 
@@ -189,10 +190,7 @@ public class LevelGenerator : MonoBehaviour {
         GameObject newRoom = Instantiate(GetavailableRoom()) as GameObject;
         Room theRoom = newRoom.GetComponent<Room>();
         GameObject entranceDoor = GetRandomDoor(theRoom);
-        if (firstDoor == null)
-        {
-            firstDoor = entranceDoor.GetComponent<Door>();
-        }
+
 
         //Gets the rotation of the room. Should be rotated equal to the difference between the last and new doors right axis.
         float lastY = lastDoor.transform.eulerAngles.y + 180;
@@ -225,6 +223,17 @@ public class LevelGenerator : MonoBehaviour {
         spawnedRooms.Add(theRoom);
         lastSpawnedRoom = (Object)newRoom;
         allBounds.Add(newBound);
+        if (firstDoor == null)
+        {
+            firstDoor = entranceDoor.GetComponent<Door>();
+            firstDoor.SetExit();
+            GameObject newDoor = Instantiate(entryDoorPrefab);
+            newDoor.transform.rotation = firstDoor.transform.rotation;
+            newDoor.transform.position = firstDoor.transform.position + (-firstDoor.transform.right * (5.65f));
+            ECS = newDoor.GetComponent<EntryCutScene>();
+            playerSpawnPoint = ECS.GetPlayerSpawnPos();
+            allBounds.Add(newDoor.GetComponent<CalcBounds>().calc());
+        }
         return true;
     }
 
@@ -234,12 +243,8 @@ public class LevelGenerator : MonoBehaviour {
     void RemoveUnusedDoors()
     {
         int iterator = 0;
-        firstDoor.SetExit();
-        GameObject newDoor = Instantiate(entryDoorPrefab);
-        newDoor.transform.rotation = firstDoor.transform.rotation;
-        newDoor.transform.position = firstDoor.transform.position + (-firstDoor.transform.right * (5.65f));
-        ECS = newDoor.GetComponent<EntryCutScene>();
-        playerSpawnPoint = ECS.GetPlayerSpawnPos();
+
+        GameObject newDoor;
 
         foreach (Room item in spawnedRooms)
         {

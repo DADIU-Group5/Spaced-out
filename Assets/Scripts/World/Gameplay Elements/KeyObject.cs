@@ -6,7 +6,7 @@ public class KeyObject : MonoBehaviour {
     /// <summary>
     /// Check for player collision
     /// </summary>
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Player")
         {

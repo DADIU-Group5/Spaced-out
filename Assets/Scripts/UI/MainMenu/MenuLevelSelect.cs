@@ -82,7 +82,11 @@ public class MenuLevelSelect : MonoBehaviour {
     {
         if (level == 0)
         {
-            SceneManager.LoadScene("Tutorial");
+            SceneManager.LoadScene("Intro Tutorial");
+        }
+        else if (level == 1)
+        {
+            SceneManager.LoadScene("Intro Level 1");
         }
         else
         {

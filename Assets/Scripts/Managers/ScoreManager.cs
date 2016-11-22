@@ -24,6 +24,11 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
         Subject.instance.AddObserver(this);
     }
 
+    void Start()
+    {
+        hasDied = ProgressManager.instance.GetMedals(GenerationDataManager.instance.GetCurrentLevel())[2];
+    }
+
     // add comic to level
     public void AddComics()
     {
@@ -40,14 +45,6 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
         comicsCollected++;
     }
 
-    // Reset Values before next level starts
-    public void ResetValues()
-    {
-        totalComics = 0;
-        comicsCollected = 0;
-        hasDied = false;
-    }
-
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
         switch (evt.eventName)
@@ -60,7 +57,7 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
                     ProgressManager.instance.SetMedal(level, ProgressManager.medalNoDeaths);
                 if (comicsCollected == totalComics && totalComics != 0)
                     ProgressManager.instance.SetMedal(level, ProgressManager.medalAllComics);
-                ResetValues();
+                
                 break;
             case EventName.PlayerDead:
                 hasDied = true;

@@ -95,6 +95,14 @@ public class ProgressManager : Singleton<ProgressManager> {
         progress.currency = 0;
     }
 
+    public void resetCurrentLevel(int levelNumber)
+    {
+        var level = progress.levels[levelNumber];
+        level.completed = false;
+        level.allComics = false;
+        level.noDeaths = false;
+    }
+
     // resets progress in levels to default
     public void ResetLevelProgress()
     {

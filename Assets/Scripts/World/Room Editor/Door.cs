@@ -39,7 +39,7 @@ public class Door : MonoBehaviour {
     {
         if (doorType != DoorType.entrance)
         {
-            if (doorType != DoorType.exit)
+            if (doorType != DoorType.exit && doorType != DoorType.entryhall)
             {
                 GameObject go = Instantiate(unusedPrefab) as GameObject;
                 go.transform.parent = transform.parent;

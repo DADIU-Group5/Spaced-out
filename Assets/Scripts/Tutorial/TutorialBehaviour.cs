@@ -24,13 +24,13 @@ public class TutorialBehaviour : MonoBehaviour {
             coll.gameObject.SetActive(false);
             SetStaticCamera();
             GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity.normalized * 4.5f;
-            GetComponent<PlayerController>().ReadyForLaunch();
         }
         else if (coll.CompareTag("Tutorial Trigger"))
         {
             coll.gameObject.SetActive(false);
             key.gameObject.SetActive(true);
             Invoke("StartMovingCamera", 2.5f);
+            GetComponent<PlayerController>().ReadyForLaunch();
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             animator.SetTrigger("Missing Keys");
             var statusEvent = new ObserverEvent(EventName.DisableInput);

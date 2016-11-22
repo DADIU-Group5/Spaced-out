@@ -28,8 +28,9 @@ public class TutorialWinMenu : MonoBehaviour, Observer {
         }
     }
 
-    public void ReturnToMenu()
+    public void NextLevel()
     {
-        SceneManager.LoadScene("Main Menu");
+        GenerationDataManager.instance.SetCurrentLevel(1);
+        SceneManager.LoadScene("LevelGenerator");
     }
 }

@@ -63,10 +63,14 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
     public IEnumerator Exploder()
     {
         //start flashing
-        StartCoroutine(Flasher());
+        //StartCoroutine(Flasher());
 
         //wait...
         yield return new WaitForSeconds(timeToExplode);
+
+        var evtExp = new ObserverEvent(EventName.BarrelExplosion);
+        Subject.instance.Notify(gameObject, evtExp);
+
 
         //Explode, and destroy object/start animation:
 

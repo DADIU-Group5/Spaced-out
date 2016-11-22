@@ -21,7 +21,10 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
         totalComics = 0;
         comicsCollected = 0;
         hasDied = false;
-        Subject.instance.AddObserver(this);
+        if (Subject.instance != null)
+        {
+            Subject.instance.AddObserver(this);
+        }
     }
 
     void Start()

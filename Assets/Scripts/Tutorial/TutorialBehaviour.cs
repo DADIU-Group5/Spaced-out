@@ -5,6 +5,7 @@ public class TutorialBehaviour : MonoBehaviour {
 
     public GameObject playerCamera;
     public GameObject staticCamera;
+    public GameObject keysCamera;
     public InputController input;
     public Transform key;
     private Animator animator;
@@ -21,36 +22,39 @@ public class TutorialBehaviour : MonoBehaviour {
         if (coll.CompareTag("Tutorial Room"))
         {
             coll.gameObject.SetActive(false);
-            SetStaticCamera(true);
+            SetStaticCamera();
             GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity.normalized * 4.5f;
+            GetComponent<PlayerController>().ReadyForLaunch();
         }
         else if (coll.CompareTag("Tutorial Trigger"))
         {
             coll.gameObject.SetActive(false);
             key.gameObject.SetActive(true);
+            Invoke("StartMovingCamera", 2.5f);
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             animator.SetTrigger("Missing Keys");
             var statusEvent = new ObserverEvent(EventName.DisableInput);
             Subject.instance.Notify(gameObject, statusEvent);
-            Invoke("RotateCamera", 2.5f);
-        }
-        else if (coll.CompareTag("Tutorial Goal"))
-        {
-            // TODO: make door open and key move out
-            var evt = new ObserverEvent(EventName.PlayerWon);
-            Subject.instance.Notify(gameObject, evt);
         }
     }
 
-    void SetStaticCamera(bool isActive)
+    void SetStaticCamera()
     {
-        playerCamera.SetActive(!isActive);
-        staticCamera.SetActive(isActive);
+        playerCamera.SetActive(false);
+        staticCamera.SetActive(true);
     }
 
-    void RotateCamera()
+    void StartMovingCamera()
     {
-        SetStaticCamera(false);
+        staticCamera.SetActive(false);
+        keysCamera.SetActive(true);
+        keysCamera.GetComponent<TutorialCamera>().Animate();
+    }
+
+    public void EnableControl()
+    {
+        keysCamera.SetActive(false);
+        playerCamera.SetActive(true);
         input.SetViewDirection(key.position);
         var statusEvent = new ObserverEvent(EventName.EnableInput);
         Subject.instance.Notify(gameObject, statusEvent);

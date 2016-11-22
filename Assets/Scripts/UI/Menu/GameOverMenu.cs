@@ -19,18 +19,16 @@ public class GameOverMenu : MonoBehaviour, Observer
     private float countingDown = 10;
     private int level = 1;
 
+    void Awake()
+    {
+        // It is really weird that we have to do this, even though it has been drag'n'dropped in unity..
+        LostText = transform.GetChild(1).GetComponent<Text>();
+    }
+
     void Start()
     {
         Subject.instance.AddObserver(this);
         level = GenerationDataManager.instance.GetCurrentLevel();
-        SettingsManager.instance.onLanguageChanged += UpdateButtonText;
-        UpdateButtonText(Language.Danish);
-    }
-
-    private void UpdateButtonText(Language lan)
-    {
-        
-        
     }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
@@ -110,8 +108,6 @@ public class GameOverMenu : MonoBehaviour, Observer
     /// </summary>
     public void ResetLevel()
     {
-        //shouldn't we go to the last transformation point?
-        //when we add that logic, remember:
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }

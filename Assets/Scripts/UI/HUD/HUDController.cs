@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class HUDController : MonoBehaviour, Observer {
 
@@ -24,9 +25,12 @@ public class HUDController : MonoBehaviour, Observer {
 
     private bool gameOver = false;
 
+    private List<string> animationStates = new List<string> { "angryTalk", "sadTalk", "happyTalk"};
+
     void Awake ()
     {
         Subject.instance.AddObserver(this);
+        //animator.StartPlayback();
         //gal.enabled = false;
     }
 
@@ -124,11 +128,19 @@ public class HUDController : MonoBehaviour, Observer {
         yield return new WaitForSeconds(subStart);
 
         subtitleText.text = subText;
-        animator.Play("angryTalk");
+        animator.Play(animationStates[Random.Range(0, animationStates.Count)]);
+        //animator.Play("angryTalk");
+        //animator.SetTrigger
+
+        //var triggerName = animationStates[Random.Range(0, animationStates.Count)];
+        //animator.SetTrigger(triggerName);
 
         yield return new WaitForSeconds(subDuration);
 
+        subtitleText.text = "";
+
         animator.Play("idle_anim");
+        
         //gal.enabled = false;
     }
 }

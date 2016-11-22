@@ -14,6 +14,8 @@ public class HUDController : MonoBehaviour, Observer {
     public Text currentFuelText;
     public Text comicsLeftText;
 
+    public Image subtitleBackdrop;
+
     public Transform chargeArrow;
     public RectTransform chargeImagePivot,
         chargeMaskPivot;
@@ -124,6 +126,7 @@ public class HUDController : MonoBehaviour, Observer {
         yield return new WaitForSeconds(subStart);
 
         subtitleText.text = subText;
+        subtitleBackdrop.enabled = true;
 
         var evt = new ObserverEvent(EventName.GALAnimate);
         evt.payload.Add(PayloadConstants.START_STOP, true);
@@ -132,5 +135,6 @@ public class HUDController : MonoBehaviour, Observer {
         yield return new WaitForSeconds(subDuration);
 
         subtitleText.text = "";
+        subtitleBackdrop.enabled = false;
     }
 }

@@ -5,7 +5,7 @@ public class CollectibleElement : MonoBehaviour {
 
     bool added = false;
 
-    void Start()
+    void Awake()
     {
         if (!added)
         {

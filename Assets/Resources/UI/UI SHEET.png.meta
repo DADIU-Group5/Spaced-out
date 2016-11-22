@@ -1,0 +1,213 @@
+fileFormatVersion: 2
+guid: a6b4608f0eca3094083078203c385a5a
+timeCreated: 1479825091
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MedalFinishedPositive
+    21300002: MedalNoDeathsPositive
+    21300004: MedalCollectiblesPositive
+    21300006: MedalFinishedNegative
+    21300008: MedalNoDeathsNegative
+    21300010: MedalsCollectiblesNegative
+    21300012: ForwardButton
+    21300014: Button
+    21300016: HeaderBanner
+    21300018: UIScrollerLight
+    21300020: UIScrolleDark
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MedalFinishedPositive
+      rect:
+        serializedVersion: 2
+        x: 3871
+        y: 95
+        width: 229
+        height: 404
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MedalNoDeathsPositive
+      rect:
+        serializedVersion: 2
+        x: 4117
+        y: 103
+        width: 272
+        height: 402
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MedalCollectiblesPositive
+      rect:
+        serializedVersion: 2
+        x: 4399
+        y: 66
+        width: 298
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MedalFinishedNegative
+      rect:
+        serializedVersion: 2
+        x: 3871
+        y: 562
+        width: 252
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MedalNoDeathsNegative
+      rect:
+        serializedVersion: 2
+        x: 4127
+        y: 566
+        width: 252
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MedalsCollectiblesNegative
+      rect:
+        serializedVersion: 2
+        x: 4391
+        y: 545
+        width: 298
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ForwardButton
+      rect:
+        serializedVersion: 2
+        x: 3415
+        y: 717
+        width: 297
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Button
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 565
+        width: 1160
+        height: 406
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HeaderBanner
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 1044
+        width: 4707
+        height: 563
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIScrollerLight
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 871
+        width: 1907
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UIScrolleDark
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 642
+        width: 1907
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: MenuUI
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

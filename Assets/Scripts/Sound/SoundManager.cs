@@ -140,9 +140,6 @@ public class SoundManager : Singleton<SoundManager>, Observer
             case EventName.PlayerVentilated:
                 PlayEvent(SoundEventConstants.DAVE_VENT);
                 break;
-            case EventName.PlayerDead:
-                Debug.Log("called it");
-                break;
         }
 
     }

@@ -47,7 +47,7 @@ ModelImporter:
     4300010: geo_LBlush
     4300012: geo_brow
     4300014: geo_lip
-    7400000: Take 001
+    7400000: idle_anim
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -69,7 +69,53 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle_anim
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 72
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: geo_brow
+        weight: 1
+      - path: geo_Head
+        weight: 1
+      - path: geo_LBlush
+        weight: 1
+      - path: geo_LEye
+        weight: 1
+      - path: geo_lip
+        weight: 1
+      - path: geo_mouth
+        weight: 1
+      - path: geo_RBlush
+        weight: 1
+      - path: geo_REye
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []

@@ -4,14 +4,19 @@ using System.Collections;
 
 public class Brain : Singleton<Brain>, Observer
 {
-    private bool speaking;
     public State state;
     private ObserverEvent currentEvent;
-    private ObserverEvent queueEvent;
+//    private ObserverEvent queueEvent;
     public int seconds = 6;
     public float chance = 0.3f;
-    public float windowToPlaySound = 1.5f;
+    //public float windowToPlaySound = 1.5f;
     public SubtitleManager subtitleManager;
+
+    void Start()
+    {
+        Subject.instance.AddObserverToBegining(this);
+        NextState();
+    }
 
     IEnumerator SilentState()
     {
@@ -98,12 +103,6 @@ public class Brain : Singleton<Brain>, Observer
 
         state = State.Silent;
         Debug.Log("Mock: Exit");
-        NextState();
-    }
-
-    void Start()
-    {
-        Subject.instance.AddObserver(this);
         NextState();
     }
 

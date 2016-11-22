@@ -27,7 +27,7 @@ public class HUDController : MonoBehaviour, Observer {
     void Awake ()
     {
         Subject.instance.AddObserver(this);
-        gal.enabled = false;
+        //gal.enabled = false;
     }
 
     void Start()
@@ -124,11 +124,11 @@ public class HUDController : MonoBehaviour, Observer {
         yield return new WaitForSeconds(subStart);
 
         subtitleText.text = subText;
-        gal.enabled = true;
+        //gal.enabled = true;
 
         yield return new WaitForSeconds(subDuration);
 
         subtitleText.text = "";
-        gal.enabled = false;
+        //gal.enabled = false;
     }
 }

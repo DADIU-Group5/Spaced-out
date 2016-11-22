@@ -86,7 +86,6 @@ public class MovementBehaviour : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         // enable ragdoll
-        print("Velocity: " + body.velocity.magnitude);
         if (body.velocity.magnitude > ragdollThreshold)
         {
             animationBlender.EnableRagdoll();

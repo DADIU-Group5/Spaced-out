@@ -10,7 +10,6 @@ public class CollectibleElement : MonoBehaviour {
         if (!added)
         {
             added = true;
-            Debug.Log("adding comic...");
             ScoreManager.instance.AddComics();
         }
     }

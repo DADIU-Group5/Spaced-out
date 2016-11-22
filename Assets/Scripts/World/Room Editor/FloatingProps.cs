@@ -3,7 +3,7 @@ using System.Collections;
 
 public class FloatingProps : ObjectSelector {
 
-    float density = 0.6f;
+    float density = 0.8f;
 
     public override void LoadObjects()
     {

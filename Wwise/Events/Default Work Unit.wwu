@@ -1327,17 +1327,35 @@
 						</Event>
 						<Event Name="pickupTrex" ID="{39789651-38FC-497E-BEAE-9BB1033BB90D}">
 							<ChildrenList>
-								<Action Name="Play" ID="{D4FF24CD-17F5-4DD2-A6BE-70E37420123E}" ShortID="157298679" Type="Play" Scope="One" Global="false"/>
+								<Action Name="Play" ID="{D4FF24CD-17F5-4DD2-A6BE-70E37420123E}" ShortID="157298679" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{E4FF8766-2B2B-4F94-8D56-517402A8FB19}" Global="false">
+											<ObjectRef Name="comic_ shitty" ID="{6DC55AB2-2E89-4E54-B461-CF88DE509C2B}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="pickupComic" ID="{7D9E9279-40A3-4A89-BEA7-78151672BE9A}">
 							<ChildrenList>
-								<Action Name="Play" ID="{2B0414CA-734C-4A32-8FC9-68FCEEEF9571}" ShortID="911144612" Type="Play" Scope="One" Global="false"/>
+								<Action Name="Play" ID="{2B0414CA-734C-4A32-8FC9-68FCEEEF9571}" ShortID="911144612" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{0061995E-C297-498A-925E-9D816CFFD5E5}" Global="false">
+											<ObjectRef Name="comic_ shitty" ID="{6DC55AB2-2E89-4E54-B461-CF88DE509C2B}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="pickupOxygen" ID="{067CD7EA-896E-4FF0-A370-7A114A6F631B}">
 							<ChildrenList>
-								<Action Name="Play" ID="{DCAE0ED9-AD21-4620-A03F-47EEE09597D3}" ShortID="712330725" Type="Play" Scope="One" Global="false"/>
+								<Action Name="Play" ID="{DCAE0ED9-AD21-4620-A03F-47EEE09597D3}" ShortID="712330725" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{6AA223D8-D409-4743-AFC4-6FFF4C8BDCF7}" Global="false">
+											<ObjectRef Name="oxygen" ID="{C53E9EA0-3E35-44F3-83A1-ACD808D25983}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="doorOpen" ID="{867C81DB-4DF1-4764-9A46-8F96B2DC1059}">
@@ -1463,7 +1481,7 @@
 								<Action Name="Play" ID="{1CBD0B57-249D-4549-9E46-DAB54422125F}" ShortID="998077567" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{4D1F581C-8F81-4398-B7EF-116E23E0769C}" Global="false">
-											<ObjectRef Name="souvlaki spacestation" ID="{3D16A1B8-CF01-444D-AFDC-D5E4DC2C4420}" WorkUnitID="{F5948B08-8EA0-455A-9A43-E3F403D87912}"/>
+											<ObjectRef Name="music1" ID="{39E16313-562B-43A4-86B3-28E14EA66D46}" WorkUnitID="{F5948B08-8EA0-455A-9A43-E3F403D87912}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -1471,7 +1489,17 @@
 						</Event>
 						<Event Name="musicWinPlay" ID="{2C210BAC-4F9C-4024-AC10-D1A32A2B1BB9}"/>
 						<Event Name="musicMenuPlay" ID="{CF3369D1-31B8-4367-A5F9-E8A61F262D4D}"/>
-						<Event Name="musicMainStop" ID="{60F4096D-3070-4B3B-8F39-D4B5D486FB13}"/>
+						<Event Name="musicMainStop" ID="{60F4096D-3070-4B3B-8F39-D4B5D486FB13}">
+							<ChildrenList>
+								<Action Name="Play" ID="{C1ECAE3D-04E2-49EA-B406-3BF966862B37}" ShortID="822127235" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{9EAFF826-E2B9-4306-978F-6ED5718AD852}" Global="false">
+											<ObjectRef Name="music1" ID="{39E16313-562B-43A4-86B3-28E14EA66D46}" WorkUnitID="{F5948B08-8EA0-455A-9A43-E3F403D87912}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="musicMenuStop" ID="{653A2808-86B3-46BE-9EE1-2331E89EE71A}"/>
 						<Event Name="musicWinStop" ID="{DA915DC8-5822-4A10-92E0-20A2736C9236}"/>
 					</ChildrenList>

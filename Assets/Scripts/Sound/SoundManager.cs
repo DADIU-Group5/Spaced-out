@@ -32,7 +32,8 @@ public class SoundManager : Singleton<SoundManager>, Observer
         var settings = SettingsManager.instance.settings;
 
         SetMasterVolume(settings.masterVolume);
-        SetMusicVolume(settings.musicVolume);
+        // TODO: Fix this shit.
+        SetMusicVolume(30);
         SetEffectsVolume(settings.effectsVolume);
 
         mute = settings.mute;
@@ -73,13 +74,18 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
                 var payload = evt.payload;
                 float launchForce = (float)payload[PayloadConstants.LAUNCH_FORCE];
+                bool playMusic = (bool)payload[PayloadConstants.START_STOP];
                 //Debug.Log("Launch force: " + launchForce);
                 // add game manager class that keeps track of charges so that he can do it only once
                 //if(launchForce > 0.75)
                 //    PlayEvent(SoundEventConstants.DAVE_CHARGE);
                 //else
                 PlayEvent(SoundEventConstants.DAVE_LAUNCH);
-
+                if (playMusic)
+                {
+                    PlayEvent(SoundEventConstants.MUSIC_MAIN_STOP);
+                    PlayEvent(SoundEventConstants.MUSIC_MAIN_PLAY);
+                }
                 //if (firstLaunch)
                 //{
                 //    PlayEvent(SoundEventConstants.DAVE_FIRST_LAUNCH);

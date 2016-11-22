@@ -108,10 +108,9 @@ public class HUDController : MonoBehaviour, Observer {
 
                 StartCoroutine(ShowSubtitle(subText, subStart, subDuration));
                 break;
-            case EventName.ComicsAdded:
+            case EventName.ComicsUpdate:
                 var comicsPayload = evt.payload;
-                int comics = (int)comicsPayload[PayloadConstants.COMICS];
-                comicsLeftText.text = comics.ToString();
+                comicsLeftText.text = (string)comicsPayload[PayloadConstants.COMICS] + " "+Translator.instance.Get("comics");
                 break;
             default:
                 break;

@@ -3,12 +3,13 @@ using System.Collections;
 
 public class PlayerBehaviour : MonoBehaviour, Observer
 {
-
+    private Animator animator; 
     PlayerController playerController;
 
     // Use this for initialization
     void Start () {
         Subject.instance.AddObserver(this);
+        animator = GetComponentInChildren<Animator>();
         playerController = GetComponent<PlayerController>();
     }
 	
@@ -85,6 +86,10 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     {
         switch (evt.eventName)
         {
+            case EventName.PlayerFuelPickup:
+            case EventName.ComicPickup:
+                animator.SetTrigger("Pick Up");
+                break;
             case EventName.OnFire:
                 if (!onFire && !gameIsOver && !godMode)
                 {

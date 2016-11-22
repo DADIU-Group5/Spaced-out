@@ -14,8 +14,7 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
     public static bool hasDied;
 
     protected override void Awake()
-    {
-        base.Awake();
+    {   
         // will be increased on start
         base.Awake();
         totalComics = 0;
@@ -37,8 +36,8 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
     {
         totalComics++;
         //update HUD comicCounter everytime a comic is added.
-        var evt = new ObserverEvent(EventName.ComicsAdded);
-        evt.payload.Add(PayloadConstants.COMICS, totalComics);
+        var evt = new ObserverEvent(EventName.ComicsUpdate);
+        evt.payload.Add(PayloadConstants.COMICS, comicsCollected+"/"+totalComics);
         Subject.instance.Notify(gameObject, evt);
     }
 
@@ -46,6 +45,9 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
     public void ComicCollected()
     {
         comicsCollected++;
+        var evt = new ObserverEvent(EventName.ComicsUpdate);
+        evt.payload.Add(PayloadConstants.COMICS, comicsCollected + "/" + totalComics);
+        Subject.instance.Notify(gameObject, evt);
     }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)

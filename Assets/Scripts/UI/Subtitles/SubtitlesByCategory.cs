@@ -23,7 +23,7 @@ public class SubtitlesByCategory
                 return generalRemarks;
             case SubtitleType.Wires:
                 return wires;
-            case SubtitleType.Switch:
+            case SubtitleType.SwitchPressed:
                 return switches;
             case SubtitleType.Fan:
                 return fan;

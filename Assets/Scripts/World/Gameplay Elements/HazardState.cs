@@ -10,6 +10,7 @@ public class HazardState : MonoBehaviour {
 
     [HideInInspector]
     public GameObject hazardSwitch;
+    public GameObject particles;
 
     private Behaviour behaviour;
 
@@ -23,19 +24,11 @@ public class HazardState : MonoBehaviour {
     {
         isOn = !isOn;
         TagChanger();
-
-        //this is for appearances sake:
-        if (isOn)
+        if(particles != null)
         {
-            if (gameObject.GetComponent<Renderer>() != null)
-                GetComponent<Renderer>().material.color = orgColour;
+            particles.SetActive(!particles.activeSelf);
         }
-        else
-        {
-            if (gameObject.GetComponent<Renderer>() != null)
-                GetComponent<Renderer>().material.color = flashColour;
-        }
-        Debug.Log("An object was turned On: "+ isOn);
+        
     }
 
     void TagChanger()

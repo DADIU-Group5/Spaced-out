@@ -16,6 +16,10 @@ public class MovementBehaviour : MonoBehaviour
     [Tooltip("How fast will the player be slowed down")]
     [Range(0, 1)]
     public float slowFactor = 0.02f;
+    
+    // For ensuring that the player at some point starts slowing
+    [Tooltip("Threshold for when velocity is reduced faster.")]
+    public float slowDownThreshold = 2;
 
     private bool canSlowDown;
     private Rigidbody body;
@@ -23,6 +27,24 @@ public class MovementBehaviour : MonoBehaviour
     private PlayerController playerController;
     private RagdollAnimationBlender animationBlender;
     private bool ragdolling;
+    private bool firedZoomOut = false;
+
+    void Update()
+    {
+        if (body.velocity.magnitude < slowDownThreshold && firedZoomOut)
+        {
+            var evt = new ObserverEvent(EventName.CameraZoomIn);
+            Subject.instance.Notify(gameObject, evt);
+            firedZoomOut = false;
+        }
+
+        if (body.velocity.magnitude > slowDownThreshold && !firedZoomOut)
+        {
+            var evt = new ObserverEvent(EventName.CameraZoomOut);
+            Subject.instance.Notify(gameObject, evt);
+            firedZoomOut = true;
+        }
+    }
 
     void Start()
     {
@@ -36,7 +58,9 @@ public class MovementBehaviour : MonoBehaviour
     {
         // do nothing if player is not moving
         if (body.velocity == Vector3.zero)
+        {
             return;
+        }
 
         // disable ragdoll
         if (ragdolling && body.velocity.magnitude < ragdollThreshold)

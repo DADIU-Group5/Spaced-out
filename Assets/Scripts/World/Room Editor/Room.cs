@@ -347,11 +347,15 @@ public class Room : MonoBehaviour
         }
         foreach (GameObject item in switchObjects)
         {
-            if (item.transform.childCount > 0) {
+           /* if (item.transform.childCount > 0) {
                 if (item.transform.GetChild(0).GetComponent<SwitchItem>() != null)
                 {
                     item.transform.GetChild(0).GetComponent<SwitchItem>().AssignRoom(this);
                 }
+            }*/
+            if(item.GetComponent<ObjectSelector>() != null)
+            {
+                item.GetComponent<ObjectSelector>().Replace(this);
             }
         }
         /*foreach (GameObject item in shapingObjects)
@@ -364,7 +368,7 @@ public class Room : MonoBehaviour
             {
                 Debug.Log("not there");
             }
-        }
+        }*/
         foreach (GameObject item in pickupObjects)
         {
             if (item.GetComponent<ObjectSelector>() != null)
@@ -375,6 +379,6 @@ public class Room : MonoBehaviour
             {
                 Debug.Log("not there");
             }
-        }*/
+        }
     }
 }

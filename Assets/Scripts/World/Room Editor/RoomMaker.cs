@@ -14,6 +14,7 @@ public class RoomMaker : MonoBehaviour {
     public GameObject doorPrefab;
 
     public GameObject hazardObject;
+    public GameObject explodingBarrelPrefab;
 
     public GameObject switchObject;
 
@@ -249,6 +250,13 @@ public class RoomMaker : MonoBehaviour {
             temp = Instantiate(comic, pos, Quaternion.identity) as GameObject;
         }
         currentRoom.AddPickup(temp);
+        return temp;
+    }
+
+    public GameObject NewBarrel(Vector3 pos)
+    {
+        GameObject temp = Instantiate(explodingBarrelPrefab, pos, Quaternion.identity) as GameObject;
+        currentRoom.AddHazardObject(temp);
         return temp;
     }
 

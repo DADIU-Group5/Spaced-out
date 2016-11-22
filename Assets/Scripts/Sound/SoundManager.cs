@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System;
 
 public class SoundManager : Singleton<SoundManager>, Observer
 {
@@ -117,6 +116,8 @@ public class SoundManager : Singleton<SoundManager>, Observer
                         PlayEvent(SoundEventConstants.DAVE_CHARGE);
                         chargePlaying = true;
                     }
+                    float force1 = (float)evt.payload[PayloadConstants.LAUNCH_FORCE];
+                    AkSoundEngine.SetRTPCValue("jetpackChargeLevel", force1);
                 }
                 else
                 {
@@ -125,42 +126,23 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 }
                 break;
             case EventName.Collision:
+                float force = (float)evt.payload[PayloadConstants.VELOCITY];
+                AkSoundEngine.SetRTPCValue("velocity", force * 10);
                 if ((bool)evt.payload[PayloadConstants.COLLISION_STATIC])
                 {
                     PlayEvent(SoundEventConstants.DAVE_STATIC_COLLISION);
-                    PlayEvent(SoundEventConstants.DAVE_RANDOM_GRUNT);
                 }
                 else
                 {
                     PlayEvent(SoundEventConstants.DAVE_OBJECT_COLLISION);
-                    PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
                 }
                 break;
             case EventName.PlayerVentilated:
                 PlayEvent(SoundEventConstants.DAVE_VENT);
                 break;
-
-            //case EventName.PlayerDead:
-            //    var deathCause = (EventName)evt.payload[PayloadConstants.DEATH_CAUSE];
-            //    switch (deathCause)
-            //    {
-            //        case EventName.Electrocuted:
-            //            PlayEvent(SoundEventConstants.GAL_DEATH_ELECTROCUTED);
-            //            break;
-            //        case EventName.OnFire:
-            //            StopEvent(SoundEventConstants.DAVE_CATCH_FIRE, 0);
-            //            PlayEvent(SoundEventConstants.GAL_DAVE_ON_FIRE);
-            //            break;
-            //        case EventName.Crushed:
-            //            //PlayEvent(SoundEventConstants.gal);
-            //            break;
-            //        case EventName.OxygenEmpty:
-            //            PlayEvent(SoundEventConstants.DAVE_OUT_OF_OXYGEN);
-            //            break;
-            //    }
-
-            //    break;
-
+            case EventName.PlayerDead:
+                Debug.Log("called it");
+                break;
         }
 
     }

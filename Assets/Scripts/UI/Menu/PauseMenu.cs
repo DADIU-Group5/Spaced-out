@@ -7,6 +7,9 @@ public class PauseMenu : MonoBehaviour {
     public Text resumeText;
     public Text restartText;
     public Text mainMenuText;
+    [Tooltip("Get this from the HUD!")]
+    public GameObject GodModeIcon;
+    private bool godMode = false;
 
     //keep track of whether we are pausing:
     private bool pause = false;
@@ -31,6 +34,17 @@ public class PauseMenu : MonoBehaviour {
     {
         var evt = new ObserverEvent(EventName.GodMode);
         Subject.instance.Notify(gameObject, evt);
+
+        godMode = !godMode;
+
+        if (GodModeIcon != null)
+        {
+            for (int i = 0; i < GodModeIcon.transform.childCount; i++)
+            {
+                GodModeIcon.transform.GetChild(i).gameObject.SetActive(godMode);
+            }
+        }
+            
     }
 
     /// <summary>

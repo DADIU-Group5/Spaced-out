@@ -64,6 +64,10 @@ public class SwitchItem : MonoBehaviour {
                 StartCoroutine(CountDown());
 
                 hasBeenTriggered = true;
+
+                var evt = new ObserverEvent(EventName.SwitchPressed);
+                Subject.instance.Notify(gameObject, evt);
+
                 /*foreach (GameObject hazard in assignedHazards)
                 {
                     Debug.Log("hazards being turned off! item: " + hazard.name);

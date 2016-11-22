@@ -122,8 +122,8 @@ public class Brain : Singleton<Brain>, Observer
     {
         switch (evt.eventName)
         {
-            //case EventName.SwitchTurned:
-            //    goto case EventName.PlayerDead;
+            case EventName.SwitchPressed:
+                goto case EventName.PlayerDead;
             case EventName.PlayerVentilated:
                 goto case EventName.PlayerDead;       // YEAH BEBE! I used goto in production code ;)
             case EventName.LowOnOxygen:
@@ -133,6 +133,8 @@ public class Brain : Singleton<Brain>, Observer
                 {
                     currentEvent = evt;
                     state = State.Mock;
+                    StopCoroutine(SilentState());
+                    NextState();
                 }
 
                 break;

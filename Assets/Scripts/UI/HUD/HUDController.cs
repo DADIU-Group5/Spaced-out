@@ -15,7 +15,7 @@ public class HUDController : MonoBehaviour, Observer {
     public Text comicsLeftText;
 
     public Transform chargeArrow;
-    public Image gal;
+    //public Image gal;
     public RectTransform chargeImagePivot,
         chargeMaskPivot;
 

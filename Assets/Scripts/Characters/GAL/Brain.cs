@@ -8,7 +8,7 @@ public class Brain : Singleton<Brain>, Observer
     public State state;
     private ObserverEvent currentEvent;
     private ObserverEvent queueEvent;
-    public int seconds = 5;
+    public int seconds = 12;
     public float chance = 0.3f;
     public float windowToPlaySound = 1.5f;
     public SubtitleManager subtitleManager;
@@ -18,7 +18,7 @@ public class Brain : Singleton<Brain>, Observer
         Debug.Log("Idle: Enter");
         while (state == State.Silent)
         {
-            yield return new WaitForSeconds(seconds);
+            yield return new WaitForSeconds(seconds); // TODO: refactor this, it should be wrong
 
             if (Random.value < chance)
             {
@@ -33,7 +33,12 @@ public class Brain : Singleton<Brain>, Observer
     {
         Debug.Log("Narrative: Enter");
 
-        var sub = subtitleManager.GetRandomSubtitle(Language.English, SubtitleType.Narrative); // TODO: fix this, idiot -> currentEvent.eventName);
+        SubtitleType type = SubtitleType.Narrative;
+
+        if (Random.value < 0.5f)
+            type = SubtitleType.GeneralRemarks;
+        
+        var sub = subtitleManager.GetRandomSubtitle(Language.English, type);
 
         var narEvt = new ObserverEvent(EventName.Narrate);
         narEvt.payload.Add(PayloadConstants.NARRATIVE_ID, sub.id);
@@ -43,7 +48,7 @@ public class Brain : Singleton<Brain>, Observer
 
         Subject.instance.Notify(gameObject, narEvt);
 
-        yield return 0;
+        yield return new WaitForSeconds(sub.duration);
 
         state = State.Silent;
         Debug.Log("Narrative: Exit");
@@ -54,20 +59,44 @@ public class Brain : Singleton<Brain>, Observer
     {
         Debug.Log("Mock: Enter");
 
-        var sub = subtitleManager.GetRandomSubtitle(Language.English, SubtitleType.LowOxygen); // TODO: fix this, idiot -> currentEvent.eventName);
+        SubtitleType type = SubtitleType.Narrative;
+
+        if (currentEvent.eventName == EventName.PlayerDead)
+        {
+            var deathCause = (EventName)currentEvent.payload[PayloadConstants.DEATH_CAUSE];
+
+            switch (deathCause)
+            {
+                case EventName.Electrocuted:
+                    type = SubtitleType.Wires;
+                    break;
+                case EventName.OnFire:
+                    type = SubtitleType.GasLeak;
+                    break;
+                case EventName.OxygenEmpty:
+                    type = SubtitleType.OutOfOxygen;
+                    break;
+            }
+        }
+        else
+        {
+            type = currentEvent.eventName.EventToSubtitleType();   
+        }
+
+        var subtitle = subtitleManager.GetRandomSubtitle(Language.English, type);
 
         var narEvt = new ObserverEvent(EventName.Narrate);
-        narEvt.payload.Add(PayloadConstants.NARRATIVE_ID, sub.id);
-        narEvt.payload.Add(PayloadConstants.SUBTITLE_TEXT, sub.text);
-        narEvt.payload.Add(PayloadConstants.SUBTITLE_START, sub.start);
-        narEvt.payload.Add(PayloadConstants.SUBTITLE_DURATION, sub.duration);
+        narEvt.payload.Add(PayloadConstants.NARRATIVE_ID, subtitle.id);
+        narEvt.payload.Add(PayloadConstants.SUBTITLE_TEXT, subtitle.text);
+        narEvt.payload.Add(PayloadConstants.SUBTITLE_START, subtitle.start);
+        narEvt.payload.Add(PayloadConstants.SUBTITLE_DURATION, subtitle.duration);
 
         Subject.instance.Notify(gameObject, narEvt);
 
-        while (state == State.Mock)
-        {
-            yield return 0;
-        }
+        yield return new WaitForSeconds(subtitle.duration);
+
+
+        state = State.Silent;
         Debug.Log("Mock: Exit");
         NextState();
     }
@@ -93,13 +122,16 @@ public class Brain : Singleton<Brain>, Observer
     {
         switch (evt.eventName)
         {
-            case EventName.OnFire:
-
-                break;
-
+            //case EventName.SwitchTurned:
+            //    goto case EventName.PlayerDead;
+            case EventName.PlayerVentilated:
+                goto case EventName.PlayerDead;       // YEAH BEBE! I used goto in production code ;)
             case EventName.LowOnOxygen:
+                goto case EventName.PlayerDead;
+            case EventName.PlayerDead:
                 if (state == State.Silent)
                 {
+                    currentEvent = evt;
                     state = State.Mock;
                 }
 

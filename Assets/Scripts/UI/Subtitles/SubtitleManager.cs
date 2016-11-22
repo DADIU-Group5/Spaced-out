@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SubtitleManager : Singleton<SubtitleManager>, Observer
+public class SubtitleManager : Singleton<SubtitleManager>
 {
     public TextAsset json;
     private Subtitles subtitles;
 
     // Use this for initialization
     void Start () {
-        // Register ourselves to receive events
-        Subject.instance.AddObserver(this);
-
         // Load of all subtitles
         subtitles = JsonUtility.FromJson<Subtitles>(json.text);
 
@@ -38,23 +35,23 @@ public class SubtitleManager : Singleton<SubtitleManager>, Observer
 	
 	}
 
-    public void OnNotify(GameObject entity, ObserverEvent evt)
-    {
-        switch (evt.eventName)
-        {
-            case EventName.OnFire:
-                Subject.instance.Notify(gameObject, MakeEventFromSubtitle(Language.English, SubtitleType.GasLeak));
-                break;
-            case EventName.Electrocuted:
-                Subject.instance.Notify(gameObject, MakeEventFromSubtitle(Language.Danish, SubtitleType.Wires));
-                break;
-            case EventName.OxygenEmpty:
-                Subject.instance.Notify(gameObject, MakeEventFromSubtitle(Language.English, SubtitleType.OutOfOxygen));
-                break;
-            default:
-                break;
-        }
-    }
+    //public void OnNotify(GameObject entity, ObserverEvent evt)
+    //{
+    //    switch (evt.eventName)
+    //    {
+    //        case EventName.OnFire:
+    //            Subject.instance.Notify(gameObject, MakeEventFromSubtitle(Language.English, SubtitleType.GasLeak));
+    //            break;
+    //        case EventName.Electrocuted:
+    //            Subject.instance.Notify(gameObject, MakeEventFromSubtitle(Language.Danish, SubtitleType.Wires));
+    //            break;
+    //        case EventName.OxygenEmpty:
+    //            Subject.instance.Notify(gameObject, MakeEventFromSubtitle(Language.English, SubtitleType.OutOfOxygen));
+    //            break;
+    //        default:
+    //            break;
+    //    }
+    //}
 
     private Subtitle GetRandomSubtitle(List<Subtitle> subtitles)
     {

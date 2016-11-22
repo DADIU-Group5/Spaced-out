@@ -32,7 +32,8 @@ public class SoundManager : Singleton<SoundManager>, Observer
         var settings = SettingsManager.instance.settings;
 
         SetMasterVolume(settings.masterVolume);
-        SetMusicVolume(settings.musicVolume);
+        // TODO: Fix this shit.
+        SetMusicVolume(30);
         SetEffectsVolume(settings.effectsVolume);
 
         mute = settings.mute;

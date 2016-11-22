@@ -36,7 +36,9 @@ public class MovementBehaviour : MonoBehaviour
     {
         // do nothing if player is not moving
         if (body.velocity == Vector3.zero)
+        {
             return;
+        }
 
         // disable ragdoll
         if (ragdolling && body.velocity.magnitude < ragdollThreshold)

@@ -44,5 +44,6 @@
     EPILOGUE_EVENTONE,
     EPILOGUE_EVENTTWO,
     EPILOGUE_EVENTTHREE,
-    DisableInput
+    DisableInput,
+    EnableInput
 }

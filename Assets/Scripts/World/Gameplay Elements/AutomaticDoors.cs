@@ -18,15 +18,21 @@ public class AutomaticDoors : MonoBehaviour {
 
     public void CloseOpenDoor()
     {
+        var evt = new ObserverEvent(EventName.Door);
+
         if (closed)
         {
-            closed = false;
             animator.SetTrigger("Open");
-        } else
-        {
-            closed = true;
-            animator.SetTrigger("Close");
+            closed = false;
+            evt.payload.Add(PayloadConstants.DOOR_OPEN, true);
         }
+        else
+        {
+            animator.SetTrigger("Close");
+            closed = true;
+            evt.payload.Add(PayloadConstants.DOOR_OPEN, false);
+        }
+        Subject.instance.Notify(gameObject, evt);
     }
 
 	// Use this for initialization

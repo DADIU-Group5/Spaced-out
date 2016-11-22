@@ -12,11 +12,24 @@ public class GameOverMenu : MonoBehaviour, Observer
 
     public Text ResetCountdown;
     public Text DeathCauseText;
+    public Text LostText;
 
     private bool playerIsDead = false;
     private bool playerWon = false;
     private float countingDown = 10;
     private int level = 1;
+
+    void Awake()
+    {
+        // It is really weird that we have to do this, even though it has been drag'n'dropped in unity..
+        LostText = transform.GetChild(1).GetComponent<Text>();
+    }
+
+    void Start()
+    {
+        Subject.instance.AddObserver(this);
+        level = GenerationDataManager.instance.GetCurrentLevel();
+    }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
@@ -25,27 +38,28 @@ public class GameOverMenu : MonoBehaviour, Observer
             case EventName.PlayerDead:
                 var payload = evt.payload;
                 EventName causeOfDeath = (EventName)payload[PayloadConstants.DEATH_CAUSE];
-                string deathCause = "You lost...";
+                LostText.text = Translator.instance.Get("you lost") + "...";
+                string deathCause = "";
                 switch (causeOfDeath)
                 {
                     case EventName.OnFire:
-                        deathCause = "You burned to death";
+                        deathCause = Translator.instance.Get("you burned to death");
                         break;
                     case EventName.Crushed:
-                        deathCause = "You got crushed";
+                        deathCause = Translator.instance.Get("you got crushed");
                         break;
                     case EventName.Electrocuted:
-                        deathCause = "You got electricuted";
+                        deathCause = Translator.instance.Get("you got electrocuted");
                         break;
                     case EventName.PlayerExploded:
-                        deathCause = "You exploded";
+                        deathCause = Translator.instance.Get("you exploded");
                         break;
-                    case EventName.FuelEmpty:
-                        deathCause = "You ran out of oxygen";
+                    case EventName.OxygenEmpty:
+                        deathCause = Translator.instance.Get("you ran out of oxygen");
                         break;
                 }
 
-                DeathCauseText.text = deathCause;
+                DeathCauseText.text = deathCause + "!";
 
                 StartCoroutine(GameOver());
                 break;
@@ -85,6 +99,8 @@ public class GameOverMenu : MonoBehaviour, Observer
         {
             transform.GetChild(i).gameObject.SetActive(false);
         }
+        var evt = new ObserverEvent(EventName.RespawnPlayer);
+        Subject.instance.Notify(gameObject, evt);
     }
 
     /// <summary>
@@ -92,22 +108,8 @@ public class GameOverMenu : MonoBehaviour, Observer
     /// </summary>
     public void ResetLevel()
     {
-        //shouldn't we go to the last transformation point?
-        //when we add that logic, remember:
-
-        //if reset to level start:
-        /* //player reset, so he hasn't died in this run yet.
-        PlayerPrefs.SetInt("playerDiedThisLevel", 0);*/
-
-        ScoreManager.instance.SetPlayerHasDiedThisLevel(level);
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
-    }
-
-    void Start()
-    {
-        Subject.instance.AddObserver(this);
-        level = PlayerPrefs.GetInt("CurrentLevel");
     }
 
     // Update is called once per frame
@@ -117,13 +119,13 @@ public class GameOverMenu : MonoBehaviour, Observer
 	    if (playerIsDead)
         {
             countingDown -= Time.deltaTime;
-            ResetCountdown.text = "Resetting in "+ Mathf.Round( countingDown ) + "..."; 
-        }
+            ResetCountdown.text = Translator.instance.Get("resetting in") + " " + Mathf.Round( countingDown ) + "...";
 
-        //if the countdown has reached zero, reset the level
-        if (countingDown <= 0)
-        {
-            RemoveGameOverScreen();
+            //if the countdown has reached zero, reset the level
+            if (countingDown <= 0)
+            {
+                RemoveGameOverScreen();
+            }
         }
 	}
 }

@@ -7,7 +7,7 @@ public class Door : MonoBehaviour {
     GameObject connectedTo;
     public GameObject unusedPrefab;
     
-    DoorType doorType = DoorType.unused;
+    public DoorType doorType = DoorType.unused;
 
 	public void ConnectRoom(GameObject go)
     {
@@ -19,6 +19,11 @@ public class Door : MonoBehaviour {
     public void SetExit()
     {
         doorType = DoorType.exit;
+    }
+
+    public void SetEntry()
+    {
+        doorType = DoorType.entryhall;
     }
 
     public bool Connected()
@@ -34,14 +39,13 @@ public class Door : MonoBehaviour {
     {
         if (doorType != DoorType.entrance)
         {
-            if (doorType != DoorType.exit)
+            if (doorType != DoorType.exit && doorType != DoorType.entryhall)
             {
                 GameObject go = Instantiate(unusedPrefab) as GameObject;
+                go.transform.parent = transform.parent;
                 go.transform.position = transform.position;
                 go.transform.rotation = transform.rotation;
-                go.transform.parent = transform.parent;
             }
-
             Destroy(gameObject);
         }
     }
@@ -57,5 +61,10 @@ public class Door : MonoBehaviour {
         connectedTo = null;
         doorType = DoorType.unused;
     }
+
+    public void SetDoorBehindKey()
+    {
+        doorType = DoorType.Key;
+    }
 }
-public enum DoorType { entrance, exit, unused };
+public enum DoorType { entrance, exit, unused, Key, entryhall };

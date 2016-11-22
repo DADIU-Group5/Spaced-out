@@ -13,11 +13,6 @@ public class MenuMain : Singleton<MenuMain> {
     // The active view
     private GameObject view;
 
-    public void ResetPlayerPrefs()
-    {
-        PlayerPrefs.DeleteAll();
-    }
-
     void Start()
     {
         SettingsManager.instance.onLanguageChanged += UpdateButtonText;
@@ -27,7 +22,7 @@ public class MenuMain : Singleton<MenuMain> {
     public void UpdateButtonText(Language lan)
     {
         print("Translated his");
-        startBtnTxt.text = Translator.instance.Get("start");
+        //startBtnTxt.text = Translator.instance.Get("start");
         levelSelectBtnTxt.text = Translator.instance.Get("levelSelect");
         settingsBtnTxt.text = Translator.instance.Get("settings");
         shopBtnTxt.text = Translator.instance.Get("shop");

@@ -160,11 +160,15 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         // TODO sound
     }
 
+    private bool playMusic = true;
+
     private void ThrowLaunchEvent()
     {
         var evt = new ObserverEvent(EventName.PlayerLaunch);
         evt.payload.Add(PayloadConstants.LAUNCH_FORCE, power * maxLaunchVelocity);
         evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, transform.forward);
+        evt.payload.Add(PayloadConstants.START_STOP, playMusic);
+        playMusic = false;
         Subject.instance.Notify(gameObject, evt);
         // TODO sound
     }

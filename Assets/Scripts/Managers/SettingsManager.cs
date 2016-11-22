@@ -10,8 +10,22 @@ public class SettingsManager : Singleton<SettingsManager> {
     // event
     public delegate void LanguageChangedEventHandler(Language language);
     public event LanguageChangedEventHandler onLanguageChanged;
+
+    // event
+    /*public delegate void GodModeChangedEventHandler(bool godMode);
+    public event GodModeChangedEventHandler onGodModeChanged;*/
     // settings 
     public GameSettings settings;
+
+    /*public void SetGodMode(bool godmode)
+    {
+        if (settings.GodMode != godmode)
+        {
+            print("Changed godMode to: " + godmode);
+            settings.GodMode = godmode;
+            onGodModeChanged(godmode);
+        }
+    }*/
 
     public void SetMasterVolume(float volume)
     {

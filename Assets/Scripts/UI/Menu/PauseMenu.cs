@@ -25,6 +25,15 @@ public class PauseMenu : MonoBehaviour {
     }
 
     /// <summary>
+    /// Enable God Mode
+    /// </summary>
+    public void ToggleGodMode()
+    {
+        var evt = new ObserverEvent(EventName.GodMode);
+        Subject.instance.Notify(gameObject, evt);
+    }
+
+    /// <summary>
     /// Pause/Unpause game
     /// </summary>
     public void TogglePause()

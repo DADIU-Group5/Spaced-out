@@ -3,11 +3,10 @@
 	<Switches>
 		<WorkUnit Name="Default Work Unit" ID="{38CE447A-5578-44EF-B8FD-CAFDFA5204BC}" PersistMode="Standalone">
 			<ChildrenList>
-				<SwitchGroup Name="galVersion" ID="{BBC04D70-2427-451B-8F93-8407A5EFD474}">
+				<SwitchGroup Name="galLanguage" ID="{BBC04D70-2427-451B-8F93-8407A5EFD474}">
 					<ChildrenList>
-						<Switch Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
-						<Switch Name="v2" ID="{02705BA3-282A-40B4-B70C-52231142B581}"/>
-						<Switch Name="v3" ID="{68351F88-EA08-4001-B2DD-A7BB1D9C547B}"/>
+						<Switch Name="eng" ID="{F0C72C25-FDD5-4B1C-9045-1FDCB8E9FD50}"/>
+						<Switch Name="dan" ID="{067E8178-15B4-4628-AEDE-BD89FB2A8F68}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>

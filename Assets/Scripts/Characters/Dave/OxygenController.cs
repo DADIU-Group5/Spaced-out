@@ -6,6 +6,8 @@ public class OxygenController : MonoBehaviour
 {
     public int maxOxygen = 10;
     private int oxygen;
+    [HideInInspector]
+    public bool godMode = false;
 
     public GameObject oxygenObject;
     private List<Renderer> oxygenRenderers;
@@ -26,8 +28,11 @@ public class OxygenController : MonoBehaviour
 
     public void UseOxygen()
     {
-        oxygen--;
-        ThrowOxygenChangedEvent();
+        if (!godMode)
+        {
+            oxygen--;
+            ThrowOxygenChangedEvent();
+        }
     }
 
     public bool HasOxygen()
@@ -87,14 +92,14 @@ public class OxygenController : MonoBehaviour
         UpdateOxygenMeter();
 
         var evt = new ObserverEvent(EventName.UpdateOxygen);
-        evt.payload.Add(PayloadConstants.Oxygen, oxygen);
+        evt.payload.Add(PayloadConstants.OXYGEN, oxygen);
         Subject.instance.Notify(gameObject, evt);
     }
 
     // when hitting oxygen pickup
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Oxygen"))
+        if (other.gameObject.CompareTag("Fuel Pickup"))
         {
             ReplenishOxygen();
             Destroy(other.gameObject);

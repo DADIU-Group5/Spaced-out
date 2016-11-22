@@ -10,7 +10,7 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="galRandomInsult" ID="{4B8A1BF2-EFC6-4AC6-9BE2-1A481818C986}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<ObjectRef Name="daveobjectCollision" ID="{A261AB7A-38C8-4BC5-85FB-C7EF60109A8B}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
@@ -22,7 +22,7 @@
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="galDaveOnFire" ID="{9A5A1229-5B77-4F5B-B243-29DBA0FF4771}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<ObjectRef Name="daveStaticCollision" ID="{8C5165B1-A54B-4957-A6F1-4064ECC02255}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
@@ -53,11 +53,19 @@
 							<ObjectRef Name="daveFirstLaunch_01" ID="{D7A64F16-E8A8-4F2D-9804-FB9894FA7767}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
 							<Position X="3" Y="2"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="ventAir" ID="{63694199-89B1-4D0F-8472-12B42F956FC3}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<Position X="4" Y="1"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Turbulence" ID="{EDA87B19-73AA-40A0-9F19-2073606DB710}"/>
 							<Value>6</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="masterVolume" ID="{16D6A1BF-90EA-4458-897A-819BFBA4868A}"/>
+							<Value>63.031914893617</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Month" ID="{09E2B445-C4A3-447F-B3CA-818A1D925EF7}"/>
@@ -70,6 +78,10 @@
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_RPM" ID="{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"/>
 							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="effectsVolume" ID="{ED513413-85B0-45A9-B98F-EE61A42D635F}"/>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Fury" ID="{A2AE79DC-CA3A-46BA-9652-9986C322A87B}"/>
@@ -88,12 +100,24 @@
 							<Value>75</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}"/>
+							<Value>99.0691489361702</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}"/>
+							<Value>76.3905325443787</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="SS_Air_TimeOfDay" ID="{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}"/>
 							<Value>6</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="masterHiPass" ID="{6BE69766-05F5-4CC4-BD22-B4CD8F23794C}"/>
 							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="musicVolume" ID="{94967744-CEA3-4D37-893D-F4A043DFEB29}"/>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Freefall" ID="{2F2DFE37-4F9E-4D94-83D8-53CCA39781AD}"/>
@@ -109,10 +133,11 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
 						<CurrentStateRef Name="on" ID="{47F04DF9-4A7D-4198-A709-3A5E13D6213A}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
+						<CurrentSwitchRef Name="dan" ID="{067E8178-15B4-4628-AEDE-BD89FB2A8F68}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 				<SoundcasterSession Name="sfx" ID="{F075DF8B-9A32-42F7-AB20-258CF9B427F1}">
@@ -229,10 +254,12 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
 						<CurrentStateRef Name="on" ID="{47F04DF9-4A7D-4198-A709-3A5E13D6213A}"/>
+						<CurrentStateRef Name="off" ID="{F5211D7D-C006-4D0B-871A-CE84351A9D07}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="v1" ID="{52E3857A-268A-4562-A660-2CA47DD21B07}"/>
+						<CurrentSwitchRef Name="dan" ID="{067E8178-15B4-4628-AEDE-BD89FB2A8F68}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

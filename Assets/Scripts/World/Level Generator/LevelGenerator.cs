@@ -30,8 +30,9 @@ public class LevelGenerator : MonoBehaviour {
     EntryCutScene ECS;
 
     Door firstDoor = null;
+    GameObject EntryHall;
 
-    List<Bounds> allBounds = new List<Bounds>();
+    public List<Bounds> allBounds = new List<Bounds>();
     
 	// Use this for initialization
 	void Start () {
@@ -55,6 +56,7 @@ public class LevelGenerator : MonoBehaviour {
         int roomsToCreate = Random.Range(minRooms, maxRooms);
 
         CreateLevel(roomsToCreate);
+        //StartCoroutine(test(roomsToCreate));
 
         SpawnKey();
         RemoveUnusedDoors();
@@ -66,6 +68,7 @@ public class LevelGenerator : MonoBehaviour {
         {
             Destroy(item.GetComponent<CalcBounds>());
         }
+        Destroy(EntryHall.GetComponent<CalcBounds>());
         SpawnPlayer();
     }
 
@@ -133,7 +136,7 @@ public class LevelGenerator : MonoBehaviour {
     void CreateLevel(int lenght)
     {
         int createdRooms = 0;
-        int tries = 100000;
+        int tries = 1000;
         while (createdRooms < lenght)
         {
             if (CreateRoom())
@@ -145,16 +148,24 @@ public class LevelGenerator : MonoBehaviour {
             else
             {   
                 createdRooms--;
-                Destroy(spawnedRooms[spawnedRooms.Count - 1].gameObject);
-                spawnedRooms.RemoveAt(spawnedRooms.Count - 1);
-                allBounds.RemoveAt(spawnedRooms.Count - 1);
-                lastDoor = GetRandomDoor(spawnedRooms[spawnedRooms.Count - 1]);
-                foreach (GameObject item in spawnedRooms[spawnedRooms.Count-1].doorObjects)
+                if (createdRooms > 0)
                 {
-                    if(item.GetComponent<Door>().GetDoorType() == DoorType.exit)
+                    Destroy(spawnedRooms[spawnedRooms.Count - 1].gameObject);
+                    allBounds.RemoveAt(allBounds.Count - 1);
+                    spawnedRooms.RemoveAt(spawnedRooms.Count - 1);
+                    lastDoor = GetRandomDoor(spawnedRooms[spawnedRooms.Count - 1]);
+                    foreach (GameObject item in spawnedRooms[spawnedRooms.Count - 1].doorObjects)
                     {
-                        item.GetComponent<Door>().BreakConnection();
+                        if (item.GetComponent<Door>().GetDoorType() == DoorType.exit)
+                        {
+                            item.GetComponent<Door>().BreakConnection();
+                        }
                     }
+                }
+                else
+                {
+                    Debug.LogError("Something went wrong! This should NOT be possible. Talk to Frederik.");
+                    break;
                 }
             }
             //Makes sure that it does not end in an infinite loop, should not actually happen.
@@ -173,8 +184,9 @@ public class LevelGenerator : MonoBehaviour {
     /// <returns></returns>
     bool CreateRoom()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 10; i++)
         {
+            print("try: " + i);
             if (CreateNewRoom())
             {
                 return true;
@@ -189,10 +201,6 @@ public class LevelGenerator : MonoBehaviour {
         GameObject newRoom = Instantiate(GetavailableRoom()) as GameObject;
         Room theRoom = newRoom.GetComponent<Room>();
         GameObject entranceDoor = GetRandomDoor(theRoom);
-        if (firstDoor == null)
-        {
-            firstDoor = entranceDoor.GetComponent<Door>();
-        }
 
         //Gets the rotation of the room. Should be rotated equal to the difference between the last and new doors right axis.
         float lastY = lastDoor.transform.eulerAngles.y + 180;
@@ -225,6 +233,17 @@ public class LevelGenerator : MonoBehaviour {
         spawnedRooms.Add(theRoom);
         lastSpawnedRoom = (Object)newRoom;
         allBounds.Add(newBound);
+        if (firstDoor == null)
+        {
+            firstDoor = entranceDoor.GetComponent<Door>();
+            firstDoor.SetExit();
+            EntryHall = Instantiate(entryDoorPrefab);
+            EntryHall.transform.rotation = firstDoor.transform.rotation;
+            EntryHall.transform.position = firstDoor.transform.position + (-firstDoor.transform.right * (5.65f));
+            ECS = EntryHall.GetComponent<EntryCutScene>();
+            playerSpawnPoint = ECS.GetPlayerSpawnPos();
+            allBounds.Add(EntryHall.GetComponent<CalcBounds>().calc());
+        }
         return true;
     }
 
@@ -234,12 +253,8 @@ public class LevelGenerator : MonoBehaviour {
     void RemoveUnusedDoors()
     {
         int iterator = 0;
-        firstDoor.SetExit();
-        GameObject newDoor = Instantiate(entryDoorPrefab);
-        newDoor.transform.rotation = firstDoor.transform.rotation;
-        newDoor.transform.position = firstDoor.transform.position + (-firstDoor.transform.right * (5.65f));
-        ECS = newDoor.GetComponent<EntryCutScene>();
-        playerSpawnPoint = ECS.GetPlayerSpawnPos();
+
+        GameObject newDoor;
 
         foreach (Room item in spawnedRooms)
         {
@@ -351,7 +366,7 @@ public class LevelGenerator : MonoBehaviour {
         {
             return GetavailableRoom();
         }
-
+        print("tries room: " + go.name);
         return go;
     }
 }

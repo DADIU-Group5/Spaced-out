@@ -46,14 +46,6 @@ public class WinMenu : MonoBehaviour, Observer
     {
         Subject.instance.AddObserver(this);
         level = GenerationDataManager.instance.GetCurrentLevel();
-
-        if(level == 5)
-        {
-            // TODO: make invisible
-            nextLevelBtn.enabled = false;
-            Debug.Log("last level reached, need to do something about it");
-            // transform the button
-        }
     }
 
     /// <summary>
@@ -93,7 +85,7 @@ public class WinMenu : MonoBehaviour, Observer
         }
         else
         {
-            Debug.Log("Loading main menu");
+            SceneManager.LoadScene("Epilogue");
         }
     }
 

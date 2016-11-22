@@ -35,6 +35,7 @@
     PlayerLaunchModeToggle,
     PlayerLaunchCancel,
     ComicsAdded,
+    ComicPickup,
     GodMode,
     PlayerCharge,
     Door,

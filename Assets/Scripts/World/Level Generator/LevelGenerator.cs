@@ -178,6 +178,52 @@ public class LevelGenerator : MonoBehaviour {
         }
     }
 
+    /*IEnumerator test(int lenght)
+    {
+        int createdRooms = 0;
+        int tries = 1000;
+        while (createdRooms < lenght)
+        {
+            yield return new WaitForSeconds(1);
+            if (CreateRoom())
+            {
+                createdRooms++;
+            }
+            //If it could not create a room from a position, remove the previous room, and try again.
+            //Should make sure it never hits a dead end.
+            else
+            {
+                createdRooms--;
+                if (createdRooms > 0)
+                {
+                    Destroy(spawnedRooms[spawnedRooms.Count - 1].gameObject);
+                    allBounds.RemoveAt(allBounds.Count - 1);
+                    spawnedRooms.RemoveAt(spawnedRooms.Count - 1);
+                    lastDoor = GetRandomDoor(spawnedRooms[spawnedRooms.Count - 1]);
+                    foreach (GameObject item in spawnedRooms[spawnedRooms.Count - 1].doorObjects)
+                    {
+                        if (item.GetComponent<Door>().GetDoorType() == DoorType.exit)
+                        {
+                            item.GetComponent<Door>().BreakConnection();
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.LogError("Something went wrong! This should NOT be possible. Talk to Frederik.");
+                    break;
+                }
+            }
+            //Makes sure that it does not end in an infinite loop, should not actually happen.
+            tries--;
+            if (tries == 0)
+            {
+                Debug.Log("tried more than 100000 times");
+                break;
+            }
+        }
+    }*/
+
     /// <summary>
     /// Creates a new room, has 3 tries to do it, before it will say it cannot create it there.
     /// </summary>
@@ -186,7 +232,6 @@ public class LevelGenerator : MonoBehaviour {
     {
         for (int i = 0; i < 10; i++)
         {
-            print("try: " + i);
             if (CreateNewRoom())
             {
                 return true;
@@ -236,7 +281,7 @@ public class LevelGenerator : MonoBehaviour {
         if (firstDoor == null)
         {
             firstDoor = entranceDoor.GetComponent<Door>();
-            firstDoor.SetExit();
+            firstDoor.SetEntry();
             EntryHall = Instantiate(entryDoorPrefab);
             EntryHall.transform.rotation = firstDoor.transform.rotation;
             EntryHall.transform.position = firstDoor.transform.position + (-firstDoor.transform.right * (5.65f));
@@ -366,7 +411,6 @@ public class LevelGenerator : MonoBehaviour {
         {
             return GetavailableRoom();
         }
-        print("tries room: " + go.name);
         return go;
     }
 }

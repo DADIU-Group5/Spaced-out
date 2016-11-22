@@ -52,7 +52,7 @@ public class GameOverMenu : MonoBehaviour, Observer
                         deathCause = Translator.instance.Get("you got electrocuted");
                         break;
                     case EventName.PlayerExploded:
-                        deathCause = Translator.instance.Get("cool guys don't look back explosions") +"..."+ Translator.instance.Get("but they also don't usually explode themselves");
+                        deathCause = Translator.instance.Get("you exploded");
                         break;
                     case EventName.OxygenEmpty:
                         deathCause = Translator.instance.Get("you ran out of oxygen");

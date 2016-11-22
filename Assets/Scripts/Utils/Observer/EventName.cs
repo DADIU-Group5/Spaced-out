@@ -41,6 +41,7 @@
     PlayerVentilated,
     StartCutscene,
     ToggleUI,
+    SwitchPressed,
     EPILOGUE_EVENTONE,
     EPILOGUE_EVENTTWO,
     EPILOGUE_EVENTTHREE,

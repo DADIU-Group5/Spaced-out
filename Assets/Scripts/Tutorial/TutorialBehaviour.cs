@@ -32,6 +32,11 @@ public class TutorialBehaviour : MonoBehaviour {
             Subject.instance.Notify(gameObject, statusEvent);
             Invoke("RotateCamera", 2.5f);
         }
+        else if (coll.CompareTag("Tutorial Goal"))
+        {
+            var evt = new ObserverEvent(EventName.PlayerWon);
+            Subject.instance.Notify(gameObject, evt);
+        }
     }
 
     void RotateCamera()

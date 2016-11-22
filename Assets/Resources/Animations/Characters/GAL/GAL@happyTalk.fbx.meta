@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 9d44363813da66c4793b783a87d48e4c
-timeCreated: 1479809008
+guid: 9fd19689e8f5ee24a92f312d7d5b0374
+timeCreated: 1479816630
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -56,14 +56,14 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 1
+    resampleCurves: 0
     optimizeGameObjects: 0
-    motionNodeName: 
+    motionNodeName: <Root Transform>
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 0
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5

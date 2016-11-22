@@ -68,7 +68,6 @@ public class ProgressManager : Singleton<ProgressManager> {
     // returns an array of 3 bools indicating if medals are completed
     public bool[] GetMedals(int level)
     {
-        Debug.Log("Getting medals!");
         if (level < 0 || level > progress.levels.Length)
         {
             throw new UnityException("No medals exists for level: " + level);

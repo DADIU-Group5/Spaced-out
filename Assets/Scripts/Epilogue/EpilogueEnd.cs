@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class EpilogueEnd : MonoBehaviour {
 
@@ -7,9 +8,9 @@ public class EpilogueEnd : MonoBehaviour {
     {
         if(other.tag == "Player")
         {
-            Debug.Log("GOOD JOB! LOADING CINEMATIC.");
-            Debug.Log("JK! IT IS NOT IN THE GAME. GOING TO MAIN MENU!");
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            Debug.Log("GOOD JOB! LOADING END CINEMATIC.");
+            //UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            SceneManager.LoadScene("Outro Cinematic");
         }
     }
 }

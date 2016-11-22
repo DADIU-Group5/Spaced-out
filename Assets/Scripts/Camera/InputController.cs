@@ -54,6 +54,17 @@ public class InputController : MonoBehaviour, Observer
         }
     }
 
+    // sets the view direction of the camera and player
+    public void SetViewDirection(Vector3 point)
+    {
+        Vector3 direction = (point - player.transform.position).normalized;
+        Vector3 rotation = Quaternion.LookRotation(direction).eulerAngles;
+
+        player.Aim(point);
+        cameraController.transform.rotation = Quaternion.Euler(rotation.x, 0, 0);
+        cameraController.pitch.transform.rotation = Quaternion.Euler(0, rotation.y, 0);
+    }
+
     // Interprest input as launch mode.
     private void HandleLaunchMode()
     {
@@ -178,6 +189,9 @@ public class InputController : MonoBehaviour, Observer
                 break;
             case EventName.ToggleCameraControls:
                 invertCameraControls = !invertCameraControls;
+                break;
+            case EventName.EnableInput:
+                inputDisabled = false;
                 break;
             default:
                 break;

@@ -68,6 +68,7 @@ public class ParticleSpawner : MonoBehaviour, Observer {
                 break;
 
             case EventName.BarrelExplosion:
+                SpawnParticles(explodingBarrel, go.transform.position);
                 break;
 
             case EventName.ComicPickup:

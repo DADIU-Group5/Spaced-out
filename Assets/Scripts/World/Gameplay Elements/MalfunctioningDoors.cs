@@ -108,6 +108,10 @@ public class MalfunctioningDoors : MonoBehaviour {
             EnableParticles();
             staticDoor = false;
         }
+        else
+        {
+            DisableParticles();
+        }
     }
 	
 	// Update is called once per frame

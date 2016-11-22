@@ -40,5 +40,7 @@ public class SoundEventConstants
 
     // Scene sounds
     public const string MUSIC = "musicPlay";                               // v
+    public const string MUSIC_MAIN_PLAY = "musicMainPlay";
+    public const string MUSIC_MAIN_STOP = "musicMainStop";
     public const string GAME_START = "gameStart";                          // v
 }

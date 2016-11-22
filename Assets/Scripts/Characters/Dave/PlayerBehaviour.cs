@@ -22,6 +22,8 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     [HideInInspector]
     public bool onFire;
     [HideInInspector]
+    public bool exploded = false;
+    [HideInInspector]
     public bool electrocuted = false;
     [HideInInspector]
     public bool dead = false;
@@ -116,7 +118,10 @@ public class PlayerBehaviour : MonoBehaviour, Observer
                 break;
             case EventName.PlayerExploded:
                 if (!godMode)
-                    Kill(evt.eventName);
+                    exploded = true;
+                //Kill(evt.eventName);
+                var explosionEvent = new ObserverEvent(EventName.OnFire);
+                Subject.instance.Notify(gameObject, explosionEvent);
                 break;
             case EventName.OxygenEmpty:
                 if (!godMode)
@@ -163,7 +168,11 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         if (onFire)
         {
             Debug.Log("Player has burned to death!");
-            Kill(EventName.OnFire);
+            if (exploded)
+            {
+                Kill(EventName.PlayerExploded);
+            } else
+                Kill(EventName.OnFire);
             playerController.BurningToDeath();
         }
     }

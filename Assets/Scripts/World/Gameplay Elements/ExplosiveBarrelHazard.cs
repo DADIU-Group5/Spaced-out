@@ -14,7 +14,7 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
     [Header("In the damaging radius:")]
     public float explosionRadius = 10f;
     [Header("In the pushing radius:")]
-    public float pushRadius = 5f;
+    public float pushRadius = 50f;
 
     //direction of the push, based on collision
     [HideInInspector]

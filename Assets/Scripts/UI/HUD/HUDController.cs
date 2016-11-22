@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using System.Collections.Generic;
 
 public class HUDController : MonoBehaviour, Observer {
 
@@ -15,8 +14,9 @@ public class HUDController : MonoBehaviour, Observer {
     public Text currentFuelText;
     public Text comicsLeftText;
 
+    public Image subtitleBackdrop;
+
     public Transform chargeArrow;
-    public Animator animator;
     public RectTransform chargeImagePivot,
         chargeMaskPivot;
 
@@ -24,8 +24,6 @@ public class HUDController : MonoBehaviour, Observer {
     private float chargeArrowYHeight = 350.0f;
 
     private bool gameOver = false;
-
-    private List<string> animationStates = new List<string> { "angryTalk", "sadTalk", "happyTalk"};
 
     void Awake ()
     {
@@ -128,19 +126,15 @@ public class HUDController : MonoBehaviour, Observer {
         yield return new WaitForSeconds(subStart);
 
         subtitleText.text = subText;
-        animator.Play(animationStates[Random.Range(0, animationStates.Count)]);
-        //animator.Play("angryTalk");
-        //animator.SetTrigger
+        subtitleBackdrop.enabled = true;
 
-        //var triggerName = animationStates[Random.Range(0, animationStates.Count)];
-        //animator.SetTrigger(triggerName);
+        var evt = new ObserverEvent(EventName.GALAnimate);
+        evt.payload.Add(PayloadConstants.START_STOP, true);
+        Subject.instance.Notify(gameObject, evt);
 
         yield return new WaitForSeconds(subDuration);
 
         subtitleText.text = "";
-
-        animator.Play("idle_anim");
-        
-        //gal.enabled = false;
+        subtitleBackdrop.enabled = false;
     }
 }

@@ -1,11 +1,11 @@
 ﻿public enum SubtitleType
 {
-    Narrative,
-    GeneralRemarks,
-    Wires,
+    Narrative,      // do better 
+    GeneralRemarks, // do better
+    Wires,          // done
     Switch,
-    Fan,
-    GasLeak,
-    LowOxygen,
-    OutOfOxygen
+    Fan,            // done
+    GasLeak,        // done
+    LowOxygen,      // done
+    OutOfOxygen     // done
 }

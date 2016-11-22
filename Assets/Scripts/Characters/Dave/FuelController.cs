@@ -54,8 +54,8 @@ public class FuelController : MonoBehaviour
 
     private void UpdateFuelUI()
     {
-        var evt = new ObserverEvent(EventName.UpdateFuel);
-        evt.payload.Add(PayloadConstants.FUEL, currentFuel);
+        var evt = new ObserverEvent(EventName.UpdateOxygen);
+        evt.payload.Add(PayloadConstants.OXYGEN, currentFuel);
         Subject.instance.Notify(gameObject, evt);
     }
 

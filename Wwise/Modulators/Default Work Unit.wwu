@@ -52,6 +52,16 @@
 						<Property Name="LfoFrequency" Type="Real64" Value="0.05"/>
 					</PropertyList>
 				</ModulatorLfo>
+				<ModulatorLfo Name="fanair" ID="{F2389AAE-EA41-4327-9BAD-B40679DD7800}" ShortID="150950941">
+					<PropertyList>
+						<Property Name="LfoFrequency" Type="Real64" Value="0.1"/>
+					</PropertyList>
+				</ModulatorLfo>
+				<ModulatorLfo Name="amience1" ID="{6EA74454-6DB8-44F9-9B8C-47278809CA4F}" ShortID="388351619">
+					<PropertyList>
+						<Property Name="LfoFrequency" Type="Real64" Value="0.02"/>
+					</PropertyList>
+				</ModulatorLfo>
 			</ChildrenList>
 		</WorkUnit>
 	</Modulators>

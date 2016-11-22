@@ -59,7 +59,7 @@ public class MovementBehaviour : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter()
+    private void OnCollisionEnter(Collision other)
     {
         // enable ragdoll
         print("Velocity: " + body.velocity.magnitude);
@@ -68,7 +68,11 @@ public class MovementBehaviour : MonoBehaviour
             animationBlender.EnableRagdoll();
             ragdolling = true;
         }
-        // TODO sound
+
+        var evt = new ObserverEvent(EventName.Collision);
+        evt.payload.Add(PayloadConstants.COLLISION_STATIC, other.gameObject.layer != LayerMask.NameToLayer("Ignore Raycast"));
+        evt.payload.Add(PayloadConstants.VELOCITY, body.velocity.magnitude);
+        Subject.instance.Notify(gameObject, evt);
     }
 
 

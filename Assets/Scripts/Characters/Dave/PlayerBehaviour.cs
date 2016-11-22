@@ -43,20 +43,6 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 
     void OnCollisionEnter(Collision other)
     {
-        var evt = new ObserverEvent(EventName.Collision);
-        evt.payload.Add(PayloadConstants.COLLISION_STATIC, other.gameObject.layer != LayerMask.NameToLayer("Ignore Raycast"));
-        Subject.instance.Notify(gameObject, evt);
-        //if (onFire)
-        //{
-        //    bounces += 1;
-        //    if (bounces >= JumpsToExtinguish)
-        //    {
-        //        Debug.Log("Extinguishing");
-        //        bounces = 0;
-        //        var evt = new ObserverEvent(EventName.Extinguish);
-        //        Subject.instance.Notify(gameObject, evt);
-        //    }
-        //}
     }
 
     IEnumerator SendKillNotification(EventName causeOfDeath)
@@ -82,6 +68,9 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 
     internal void Kill(EventName causeOfDeath)
     {
+        var evt = new ObserverEvent(EventName.DisableInput);
+        Subject.instance.Notify(gameObject, evt);
+
         Debug.Log("kill function was called");
         if (!dead && !gameIsOver)
         {      
@@ -152,7 +141,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
                 break;
             case EventName.GodMode:
                 godMode = !godMode;
-
+                GameObject.FindObjectOfType<OxygenController>().godMode = godMode;
                 //if godmode is activated while player in on fire, extinguish
                 if (onFire)
                 {

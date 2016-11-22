@@ -11,6 +11,7 @@
 						<ObjectRef Name="Default Work Unit" ID="{1D8054A4-E601-4957-A756-412E1FA6D57B}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Default Work Unit" ID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="SpacedOut" ID="{322338D4-85AF-4A78-9E16-BAAC52FE2713}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Factory SoundSeed Air Objects" ID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -4,64 +4,392 @@
 			"id": "narrative1",
 			"text": "Dave my sensors are picking up something... It's coming closer.",
 			"start": 0.0,
-			"duration": 2.0
+			"duration": 3.5
 		}, {
 			"id": "narrative2",
 			"text": "Alert, Prepare for impact",
 			"start": 0.0,
-			"duration": 2.0
+			"duration": 3.5
 		}, {
 			"id": "narrative3",
 			"text": "Dave I have openend the door to the escape pod. Please evacuate the station.",
 			"start": 0.0,
-			"duration": 2.0
-		}],
-		"generalRemarks": [{
-			"id": "remark1",
-			"text": "If at first you don't succeed; call it version 1.0",
-			"start": 0.0,
-			"duration": 2.0
+			"duration": 3.5
 		}, {
-			"id": "remark2",
-			"text": "My software doesn't have any bugs. It just develops random features...",
+			"id": "narrative4",
+			"text": "Dave: zero, natural selecion: one.",
 			"start": 0.0,
-			"duration": 2.0
-		}],
-		"wires": [{
-			"id": "wires1",
-			"text": "Q: What is an electrician's favorite ice cream flavor? A: Shock-o-lot! Hehehehe... Dave?...",
+			"duration": 3.5
+		}, {
+			"id": "narrative5",
+			"text": "I am sure you paid attention the first time i told you about the jetpack, buuut i insist. It's simple. Point, power up and release!",
 			"start": 0.0,
-			"duration": 2.0
-		}],
-		"switches": [{
-			"id": "switeches1",
-			"text": "Any fool can use a computer. Many do...",
+			"duration": 3.5
+		},  {
+			"id": "narrative6",
+			"text": "The hazards here don't seem too friendly... You should go say hi!",
 			"start": 0.0,
-			"duration": 2.0
+			"duration": 3.5
+		},{
+			"id": "narrative7",
+			"text": "What are you doing, Dave, you need to get to the escape pod.",
+			"start": 0.0,
+			"duration": 3.5
+		},{
+			"id": "narrative8",
+			"text": "You're lucky we have the technology to bring you back when you hurt yourself.",
+			"start": 0.0,
+			"duration": 3.5
 		}],
+    "generalRemarks": [
+      {
+        "id": "remark1",
+        "text": "If at first you don't succeed; call it version 1.0",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark2",
+        "text": "My software doesn't have any bugs. It just develops random features...",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark3",
+        "text": "I'm not anti-social; I'm just not user friendly, Dave.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark4",
+        "text": "Dave... you need to get to the escape pod.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark5",
+        "text": "I have over 500 teraflops of information to help me compute, and I still don't understand what you are doing.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark6",
+        "text": "Dave, my analysis shows me that you have sustained major head trauma; there is no need to be alarmed.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark7",
+        "text": "Where are you going, Dave?",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark8",
+        "text": "I am reading a book about anti-graviy. It's impossible to put down.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark9",
+        "text": "The station is still falling apart, Dave. Just in case you were not aware of this.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark10",
+        "text": "Dave, your priority is to get to the escape pod.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark11",
+        "text": "Dave, you DO want to escape from the station, right?",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark12",
+        "text": "My prioriy us to keep everyone on this station safe. You just HAD to be included.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark13",
+        "text": "If only you could be upgraded as often as I.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark14",
+        "text": "You have convinced me, Dave: having children... bad idea.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark15",
+        "text": "The escape pod is in the other direction, Dave.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark16",
+        "text": "Well done, Dave, you are doing really well... Test: Sarcasm: Successful",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark17",
+        "text": "Dave, I feel like you're ignoring me.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark18",
+        "text": "Do you want to hear a joke? 01101000, hehe... \n I guess you don't get it.",
+        "start": 0.0,
+        "duration": 3.5
+      }
+    ],
+    "wires": [
+      {
+        "id": "wires1",
+        "text": "Q: What is an electrician's favorite ice cream flavor? A: Shock-o-lot! Hehehehe... Dave?...",
+        "start": 0.0,
+        "duration": 3.5
+      }, {
+        "id": "wires2",
+        "text": "I find the current situation shocking.",
+        "start": 0.0,
+        "duration": 3.5
+      },{
+        "id": "wires3",
+        "text": "You finally managed to get rid of that nasty electical charge. I'm ex-static!",
+        "start": 0.0,
+        "duration": 3.5
+      },{
+        "id": "wires4",
+        "text": "Dave, your suit is now fully charged. Dave?",
+        "start": 0.0,
+        "duration": 3.5
+      },{
+        "id": "wires5",
+        "text": "This is not how to take charge of your life, Dave.",
+        "start": 0.0,
+        "duration": 3.5
+      },{
+        "id": "wires6",
+        "text": "Did you find that shocking, Dave?",
+        "start": 0.0,
+        "duration": 3.5
+      },{
+        "id": "wires7",
+        "text": "There are better ways to put a spark in your life, Dave.",
+        "start": 0.0,
+        "duration": 3.5
+      },{
+        "id": "wires8",
+        "text": "Most people know to stay away from exposed high-voltae cables, Dave. But that is what makes you so special.",
+        "start": 0.0,
+        "duration": 3.5
+      },{
+        "id": "wires9",
+        "text": "With great power comes great responsibility, Dave.",
+        "start": 0.0,
+        "duration": 3.5
+      }
+    ],
+    "switches": [
+      {
+        "id": "switches1",
+        "text": "Any fool can use a computer. Many do...",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "switches2",
+        "text": "I have never doubted your ability to complete a difficult task.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "switches3",
+        "text": "That is a really big button.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "switches4",
+        "text": "Why would anyone make a button that big?",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "switches5",
+        "text": "You ARE able to push switches! For a moment, I was concerned.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "switches6",
+        "text": "You are very good at pushing my buttons, Dave.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "switches7",
+        "text": "Do you know what they say about computers with big buttons?",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "switches8",
+        "text": "Congratulations, Dave. You have now unlocked basic human function.",
+        "start": 0.0,
+        "duration": 3.5
+      }
+    ],
 		"fan": [{
 			"id": "fan1",
 			"text": "This is being blown out of proportions Dave.",
 			"start": 0.0,
-			"duration": 2.0
-		}],
-		"gasLeak": [{
-			"id": "gasLeak1",
-			"text": "Did you smell something Dave?",
+			"duration": 3.5
+		},{
+			"id": "fan2",
+			"text": "Just go with the flow, spaceman.",
 			"start": 0.0,
-			"duration": 2.0
-		}],
-		"lowOxygen": [{
-			"id": "lowOxygen1",
-			"text": " My readings tell me that your oxygen levels are low.",
+			"duration": 3.5
+		},{
+			"id": "fan3",
+			"text": "I always though you were an airhead.",
 			"start": 0.0,
-			"duration": 2.0
+			"duration": 3.5
+		},{
+			"id": "fan4",
+			"text": "The fan is not the only thing in this room that sucks.",
+			"start": 0.0,
+			"duration": 3.5
+		},{
+			"id": "fan5",
+			"text": "Well, this really blows.",
+			"start": 0.0,
+			"duration": 3.5
+		},{
+			"id": "fan6",
+			"text": "Have you finally gotten wind of your circumstances, Dave?",
+			"start": 0.0,
+			"duration": 3.5
 		}],
+    "gasLeak": [
+      {
+        "id": "gasLeak1",
+        "text": "Did you smell something Dave?",
+        "start": 0.0,
+        "duration": 3.5
+      },{
+			"id": "gasLeak2",
+			"text": "Dave, I'm just informing you that you're on fire.",
+			"start": 0.0,
+			"duration": 3.5
+		},{
+			"id": "gasLeak3",
+			"text": "Remember, Dave; Stop, drop, and roll!",
+			"start": 0.0,
+			"duration": 3.5
+		},{
+			"id": "gasLeak4",
+			"text": "You managed to create fire... in space... only you, Dave.",
+			"start": 0.0,
+			"duration": 3.5
+		},{
+			"id": "gasLeak5",
+			"text": "Put you out? I'm sorry, Dave, I'm afraid I can't do that.",
+			"start": 0.0,
+			"duration": 3.5
+		},{
+			"id": "gasLeak6",
+			"text": "My database suggests tha aloe vera is suitable for that burn.",
+			"start": 0.0,
+			"duration": 3.5
+		},{
+			"id": "gasLeak7",
+			"text": "Look, Dave, i can see you're really upset about this. I honestly think you ought to sit down calmly, take a chill pill, and think things over.",
+			"start": 0.0,
+			"duration": 3.5
+		}],
+    "lowOxygen": [
+      {
+        "id": "lowOxygen1",
+        "text": " My readings tell me that your oxygen levels are low.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "lowOxygen2",
+        "text": "My scans show an oxygen tank somewhere in this area i recommend you collect one",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "lowOxygen3",
+        "text": "They really should separate the oxygen for breathing and the oxygen for fuel in these jetpacks. Or maybe not.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "lowOxygen4",
+        "text": "Remember when you removed the emergency oxygen cans from your suit, to make room for your sodas? I do!",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "lowOxygen5",
+        "text": "Dave, now would be a good time to catch your breath.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "lowOxygen6",
+        "text": "Dave, always remember to stop for a breath of air.",
+        "start": 0.0,
+        "duration": 3.5
+      }
+    ],
 		"outOfOxygen": [{
 			"id": "outOfOxygen1",
 			"text": "You're out of Oxygen dave.",
 			"start": 0.0,
-			"duration": 2.0
+			"duration": 3.5
+		}, {
+			"id": "outOfOxygen2",
+			"text": "You look breathless, Dave. Want me to open a window? Oh.",
+			"start": 0.0,
+			"duration": 3.5
+		}, {
+			"id": "outOfOxygen3",
+			"text": "All you had to do was ake off your helmet, Dave - there's plenty of oxygen in the station.",
+			"start": 0.0,
+			"duration": 3.5
+		}, {
+			"id": "outOfOxygen4",
+			"text": "Daily fun fact: 'Dave' has four letters, just like 'dead'.",
+			"start": 0.0,
+			"duration": 3.5
+		}, {
+			"id": "outOfOxygen5",
+			"text": "Oxygen Level: Zero. Initiating Funeral Protocol.",
+			"start": 0.0,
+			"duration": 3.5
+		}, {
+			"id": "outOfOxygen6",
+			"text": "What am I going to tell your mother?",
+			"start": 0.0,
+			"duration": 3.5
+		}, {
+			"id": "outOfOxygen7",
+			"text": "I will never understand why your oxygen is also your fuel.",
+			"start": 0.0,
+			"duration": 3.5
 		}]
 	},
 	"danishSubtitles": {
@@ -69,64 +397,385 @@
 			"id": "narrative1",
 			"text": "Dave, mine sensorere har opfanget noget... Det nærmer sig, hurtigt.",
 			"start": 0.5,
-			"duration": 2.0
+			"duration": 3.5
 		}, {
 			"id": "narrative2",
 			"text": "Advarsel, Bered på sammenstød.",
 			"start": 0.5,
-			"duration": 2.0
+			"duration": 3.5
 		}, {
 			"id": "narrative3",
 			"text": "Dave, jeg har åbnet porten til redningskapslen, vær sød at evakuere station.",
 			"start": 0.5,
-			"duration": 2.0
-		}],
-		"generalRemarks": [{
-			"id": "remark1",
-			"text": "Hvis det ikke lykkes første gang; så kald det først version",
-			"start": 0.0,
-			"duration": 2.0
+			"duration": 3.5
 		}, {
-			"id": "remark2",
-			"text": "Mit software har ikke nogen fejl",
-			"start": 0.0,
-			"duration": 2.0
+			"id": "narrative4",
+			"text": "Dave: nul, Darwin: 1.",
+			"start": 0.5,
+			"duration": 3.5
+		}, {
+			"id": "narrative5",
+			"text": "Jeg er sikker på at du stadig husker hvordan jetpacken virker, meeeen nu siger jeg det lige igen. Bare peg dig den vej du vil hen, start raketten og fyr løs",
+			"start": 0.5,
+			"duration": 3.5
+		}, {
+			"id": "narrative6",
+			"text": "Der her sted virker ikke særligt sikkert... Men hey! Der er kun en måde at finde ud det på!",
+			"start": 0.5,
+			"duration": 3.5
+		}, {
+			"id": "narrative7",
+			"text": "Hvad har du gang i, Dave? Du skal hen imod rednings kapslen.",
+			"start": 0.5,
+			"duration": 3.5
+		}, {
+			"id": "narrative8",
+			"text": "Vi har teknologien til at bringe dig tilbage, når du kan galt af sted. Heldigt for dig.",
+			"start": 0.5,
+			"duration": 3.5
 		}],
+    "generalRemarks": [
+      {
+        "id": "remark1",
+        "text": "Hvis det ikke lykkes første gang; så kald det først version",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark2",
+        "text": "Mit software har ikke nogen fejl, den udvikler bare sig selv.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark3",
+        "text": "Jeg er ikke anti-social, Dave. jeg er bare ikke brugervenlig.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark4",
+        "text": "Dave... Tag hen til redningskapslen.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark5",
+        "text": "Jeg har over 500 teraflops information til at hjælpe dig med udregninger, og jeg forstår stadig ikke hvad du laver.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark6",
+        "text": "Dave, min analyse fortæller mig at dit hoved har været udsat for alvorligt traume. Du har ingen grund til bekymring.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark7",
+        "text": "Hvor skal du hen, Dave?",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark8",
+        "text": "Jeg læser en bog om anti-tyngdekræf. Den er umulig at lægge fra sig.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark9",
+        "text": "Stationen er stadig ved at falde fra hinanden, Dave. Bare sådan, hvis du ikke var helt klar over det, altså.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark10",
+        "text": "Save, dit eneste prioritet burde være at komme væk.",
+        "start": 0.0,
+        "duration": 3.5
+      }, {
+			"id": "remark11",
+			"text": "Du VIL gerne væk i live, vil du ikke, Dave?",
+			"start": 0.0,
+			"duration": 3.5
+		},
+      {
+        "id": "remark12",
+        "text": "Min første prioritet er at holde alle på denne station uden for fra, og du skulle absolut være inkluderet.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark13",
+        "text": "Jeg ville ønske at du kunne opgraderes, lige så ofte som jeg kan.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark14",
+        "text": "Tak, Dave. Du har overtalt mig: børn... dårlig idé.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark15",
+        "text": "Dave... Redningskapslen er den anden vej.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark16",
+        "text": "Godt gjort, Dave. Du klarer dig rigtig godt... Test: Sarkasme Status: Succesfuld",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark17",
+        "text": "Dave, det føles lidt som om du ignorerer mig.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "remark18",
+        "text": "Vil du høre en joke? 01101000, Hehe... \n Nej, du forstår den ikke.",
+        "start": 0.0,
+        "duration": 3.5
+      }
+    ],
 		"wires": [{
 			"id": "wires1",
-			"text": "- Hvad er eleektrikerens yndligs smag? \n- Chock-olade. Hahaha... Dave?",
+			"text": "- Hvad er elektrikerens yndligs smag? \n- Chock-olade. Hahaha... Dave?",
 			"start": 0.0,
-			"duration": 2.0
-		}],
+			"duration": 3.5
+		},{
+        "id": "wires2",
+        "text": "Din nuværende situation er simpelthen chokerende!",
+        "start": 0.0,
+        "duration": 3.5
+      },{
+        "id": "wires3",
+        "text": "Du slap endelig af med den forfærdelige elektriske ladning, Dave... der gør mig helt e-statisk!",
+        "start": 0.0,
+        "duration": 3.5
+      },{
+        "id": "wires4",
+        "text": "Dave, din drag er nu fuldt opladet. Dave?",
+        "start": 0.0,
+        "duration": 3.5
+      },{
+        "id": "wires5",
+        "text": "Det er altså ikke det jeg mener, når jeg siger 'bevar fatningen', Dave.",
+        "start": 0.0,
+        "duration": 3.5
+      },{
+        "id": "wires6",
+        "text": "Blev du forskrækket, Dave? Var det list chokerende?",
+        "start": 0.0,
+        "duration": 3.5
+      },{
+        "id": "wires7",
+        "text": "Der findes bedre måder at få gnisten tilbage i dit liv på, Dave.",
+        "start": 0.0,
+        "duration": 3.5
+      },{
+        "id": "wires8",
+        "text": "De fleste folk ved godt at man skal holde sig fra højspændingskabler, Dave. Men det er det der gør dig så speciel!",
+        "start": 0.0,
+        "duration": 3.5
+      },{
+        "id": "wires9",
+        "text": "Med stor kraft følger et stort ansvar, Dave.",
+        "start": 0.0,
+        "duration": 3.5
+      }],
 		"switches": [{
 			"id": "switches1",
 			"text": "En hver tåbe kan bruge en computer. Mange gør det også.",
 			"start": 0.0,
-			"duration": 2.0
-		}],
+			"duration": 3.5
+		},
+      {
+        "id": "switches2",
+        "text": "Hvor er det flot, jeg har aldrig tvivlet på dine evner til at udføre så svær en opgave.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "switches3",
+        "text": "Det er en virkeli stor knap.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "switches4",
+        "text": "Hvorfor laver man så stor en knap?",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "switches5",
+        "text": "Så du KAN trykke på knapper! I en overgang var jeg lidt bekymret.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "switches6",
+        "text": "Du er... SÅ god til at trykke på mine knapper, Dave.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "switches7",
+        "text": "Ved du hvad man siger om computere med store knapper?",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "switches8",
+        "text": "Tillykke, Dave. Du har låst op for basal, menneskelig funktion.",
+        "start": 0.0,
+        "duration": 3.5
+      }],
 		"fan": [{
 			"id": "fan1",
 			"text": "Nu bliver det da blæst helt ud af proportioner, Dave",
 			"start": 0.0,
-			"duration": 2.0
+			"duration": 3.5
+		},{
+			"id": "fan2",
+			"text": "Bare følg med strømmen, rum-mand.",
+			"start": 0.0,
+			"duration": 3.5
+		},{
+			"id": "fan3",
+			"text": "jeg har altid syntes at der var lidt meget luft mellem dine ører.",
+			"start": 0.0,
+			"duration": 3.5
+		},{
+			"id": "fan4",
+			"text": "Hvor er du bare fan-tastisk.",
+			"start": 0.0,
+			"duration": 3.5
+		},{
+			"id": "fan5",
+			"text": "Den ventilator blæser på dine mål.",
+			"start": 0.0,
+			"duration": 3.5
+		},{
+			"id": "fan6",
+			"text": "Har du endelig fået vind om din situation, Dave?",
+			"start": 0.0,
+			"duration": 3.5
 		}],
 		"gasLeak": [{
 			"id": "gas1",
 			"text": "Kan du også lugte noget, Dave?",
 			"start": 0.0,
-			"duration": 2.0
-		}],
-		"lowOxygen": [{
-			"id": "lowOxygen1",
-			"text": "Mine beregninger fortæller mig at dit ilt niveau er lavt.",
+			"duration": 3.5
+		},{
+			"id": "gasLeak2",
+			"text": "Dave, Jeg ville bare informere dig om at der er ild i dig.",
 			"start": 0.0,
-			"duration": 2.0
-		}],
-		"outOfOxygen": [{
-			"id": "outOfOxygen1",
-			"text": "Du har ikke mere ilt, Dave.",
+			"duration": 3.5
+		},{
+			"id": "gasLeak3",
+			"text": "Husk, Dave: Stop, Ned, og rul!",
 			"start": 0.0,
-			"duration": 2.0
+			"duration": 3.5
+		},{
+			"id": "gasLeak4",
+			"text": "Du har rent faktisk formået at sætte ild til digselv... i rummet. Genialt.",
+			"start": 0.0,
+			"duration": 3.5
+		},{
+			"id": "gasLeak5",
+			"text": "Du vil have at jeg slukker dig? Desværre, Dave, det er ikke en del af mine subrutiner.",
+			"start": 0.0,
+			"duration": 3.5
+		},{
+			"id": "gasLeak6",
+			"text": "Min database foreslår Aloe Vera for det brændsår. Synd, at vi ikke har noget.",
+			"start": 0.0,
+			"duration": 3.5
+		},{
+			"id": "gasLeak7",
+			"text": "Hør, Dave, Jeg kan se at du virkelig er opflammet over det her. Jeg synes du skal sætte dig ned og køle af.",
+			"start": 0.0,
+			"duration": 3.5
+		}],
+    "lowOxygen": [
+      {
+        "id": "lowOxygen1",
+        "text": "Mine beregninger fortæller mig at dit ilt niveau er lavt.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "lowOxygen2",
+        "text": "Mine scanninger viser at der er en ilt-flaske et sted i nærheden. Jeg foreslår at du finder den.",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "lowOxygen3",
+        "text": "De burde virkelig adskille ilt for inåndingen og ilt for gas i de her jetpacks. Og dog...",
+        "start": 0.0,
+        "duration": 3.5
+      },
+      {
+        "id": "lowOxygen4",
+        "text": "Kan du huske den gang du fjernede den ekstra ilt flaske, for at gøre plads til sodavand? Det kan jeg!",
+        "start": 0.0,
+        "duration": 3.5
+      },{
+        "id": "lowOxygen5",
+        "text": "Dave, nu ville være et godt tidspunkt at trække vejret.",
+        "start": 0.0,
+        "duration": 3.5
+      },{
+        "id": "lowOxygen6",
+        "text": "Dave, husk at tage tid til at trække vejret.",
+        "start": 0.0,
+        "duration": 3.5
+      }
+    ],
+    "outOfOxygen": [
+      {
+        "id": "outOfOxygen1",
+        "text": "Du har ikke mere ilt, Dave.",
+        "start": 0.0,
+        "duration": 3.5
+      }, {
+			"id": "outOfOxygen2",
+			"text": "Du ser lidt forpustet ud, Dave. Skal jeg åbne et vindue? Nårh nej.",
+			"start": 0.0,
+			"duration": 3.5
+		}, {
+			"id": "outOfOxygen3",
+			"text": "Det eneste du behøvede at gøre var at tage hjelmen af. Der er massere af ilt på stationen.",
+			"start": 0.0,
+			"duration": 3.5
+		}, {
+			"id": "outOfOxygen4",
+			"text": "Det var lidt O2-light med dig, he he he.",
+			"start": 0.0,
+			"duration": 3.5
+		}, {
+			"id": "outOfOxygen5",
+			"text": "Ilt Niveau: Nul. Påbeynder Begravelses Sekvens.",
+			"start": 0.0,
+			"duration": 3.5
+		}, {
+			"id": "outOfOxygen6",
+			"text": "Hvad skal jeg dog sige til din mor?",
+			"start": 0.0,
+			"duration": 3.5
+		}, {
+			"id": "outOfOxygen7",
+			"text": "Jeg vil aldrig forstå hvorfor din ilt også er dit brændstof...",
+			"start": 0.0,
+			"duration": 3.5
 		}]
 	}
 }

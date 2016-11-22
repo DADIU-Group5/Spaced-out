@@ -12,11 +12,26 @@ public class GameOverMenu : MonoBehaviour, Observer
 
     public Text ResetCountdown;
     public Text DeathCauseText;
+    public Text LostText;
 
     private bool playerIsDead = false;
     private bool playerWon = false;
     private float countingDown = 10;
     private int level = 1;
+
+    void Start()
+    {
+        Subject.instance.AddObserver(this);
+        level = GenerationDataManager.instance.GetCurrentLevel();
+        SettingsManager.instance.onLanguageChanged += UpdateButtonText;
+        UpdateButtonText(Language.Danish);
+    }
+
+    private void UpdateButtonText(Language lan)
+    {
+        
+        
+    }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
@@ -25,27 +40,28 @@ public class GameOverMenu : MonoBehaviour, Observer
             case EventName.PlayerDead:
                 var payload = evt.payload;
                 EventName causeOfDeath = (EventName)payload[PayloadConstants.DEATH_CAUSE];
-                string deathCause = "You lost...";
+                LostText.text = Translator.instance.Get("you lost") + "...";
+                string deathCause = "";
                 switch (causeOfDeath)
                 {
                     case EventName.OnFire:
-                        deathCause = "You burned to death";
+                        deathCause = Translator.instance.Get("you burned to death");
                         break;
                     case EventName.Crushed:
-                        deathCause = "You got crushed";
+                        deathCause = Translator.instance.Get("you got crushed");
                         break;
                     case EventName.Electrocuted:
-                        deathCause = "You got electricuted";
+                        deathCause = Translator.instance.Get("you got electrocuted");
                         break;
                     case EventName.PlayerExploded:
-                        deathCause = "You exploded";
+                        deathCause = Translator.instance.Get("cool guys don't look back explosions") +"..."+ Translator.instance.Get("but they also don't usually explode themselves");
                         break;
-                    case EventName.FuelEmpty:
-                        deathCause = "You ran out of oxygen";
+                    case EventName.OxygenEmpty:
+                        deathCause = Translator.instance.Get("you ran out of oxygen");
                         break;
                 }
 
-                DeathCauseText.text = deathCause;
+                DeathCauseText.text = deathCause + "!";
 
                 StartCoroutine(GameOver());
                 break;
@@ -100,12 +116,6 @@ public class GameOverMenu : MonoBehaviour, Observer
         SceneManager.LoadScene(scene.name);
     }
 
-    void Start()
-    {
-        Subject.instance.AddObserver(this);
-        level = GenerationDataManager.instance.GetCurrentLevel();
-    }
-
     // Update is called once per frame
     void Update () {
 
@@ -113,7 +123,7 @@ public class GameOverMenu : MonoBehaviour, Observer
 	    if (playerIsDead)
         {
             countingDown -= Time.deltaTime;
-            ResetCountdown.text = "Resetting in "+ Mathf.Round( countingDown ) + "...";
+            ResetCountdown.text = Translator.instance.Get("resetting in") + " " + Mathf.Round( countingDown ) + "...";
 
             //if the countdown has reached zero, reset the level
             if (countingDown <= 0)

@@ -8,7 +8,7 @@ public class Brain : Singleton<Brain>, Observer
     public State state;
     private ObserverEvent currentEvent;
     private ObserverEvent queueEvent;
-    public int seconds = 12;
+    public int seconds = 6;
     public float chance = 0.3f;
     public float windowToPlaySound = 1.5f;
     public SubtitleManager subtitleManager;
@@ -110,11 +110,12 @@ public class Brain : Singleton<Brain>, Observer
     void NextState()
     {
         string methodName = state.ToString() + "State";
-        System.Reflection.MethodInfo info =
-            GetType().GetMethod(methodName,
-                                System.Reflection.BindingFlags.NonPublic |
-                                System.Reflection.BindingFlags.Instance);
-        StartCoroutine((IEnumerator)info.Invoke(this, null));
+        StartCoroutine(methodName);
+        //System.Reflection.MethodInfo info =
+        //    GetType().GetMethod(methodName,
+        //                        System.Reflection.BindingFlags.NonPublic |
+        //                        System.Reflection.BindingFlags.Instance);
+        //StartCoroutine((IEnumerator)info.Invoke(this, null));
     }
 
 
@@ -131,9 +132,9 @@ public class Brain : Singleton<Brain>, Observer
             case EventName.PlayerDead:
                 if (state == State.Silent)
                 {
+                    StopCoroutine("SilentState");
                     currentEvent = evt;
                     state = State.Mock;
-                    StopCoroutine(SilentState());
                     NextState();
                 }
 

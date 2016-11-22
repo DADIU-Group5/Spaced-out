@@ -10,6 +10,8 @@ public class MalfunctioningDoors : MonoBehaviour {
     public float minRange = 1f;
     public float maxRange = 4f;
 
+    public GameObject[] particles;
+
     private bool malfunctioning = false;
     private bool closed = true;
 
@@ -40,6 +42,7 @@ public class MalfunctioningDoors : MonoBehaviour {
         doorIsMalfunctioning = false;
         animator.SetTrigger("Locked");
         closed = false;
+        DisableParticles();
     }
 
     public void DoorLocked()
@@ -77,6 +80,14 @@ public class MalfunctioningDoors : MonoBehaviour {
         doorIsMalfunctioning = !doorIsMalfunctioning;
         animator.SetTrigger("Open");
         closed = false;
+        if (doorIsMalfunctioning)
+        {
+            EnableParticles();
+        }
+        else
+        {
+            DisableParticles();
+        }
     }
 
     public IEnumerator Malfunctioning()
@@ -94,6 +105,7 @@ public class MalfunctioningDoors : MonoBehaviour {
         animator = gameObject.GetComponent<Animator>();
         if(Random.Range(0,2) == 0)
         {
+            EnableParticles();
             staticDoor = false;
         }
     }
@@ -111,13 +123,28 @@ public class MalfunctioningDoors : MonoBehaviour {
 
         if (doorIsMalfunctioning && !malfunctioning)
         {
-            
             malfunctioning = true;
             StartCoroutine(Malfunctioning());
         }
         else if (!doorIsMalfunctioning)
         {
             malfunctioning = false;
+        }
+    }
+
+    void EnableParticles()
+    {
+        foreach (GameObject item in particles)
+        {
+            item.SetActive(true);
+        }
+    }
+
+    void DisableParticles()
+    {
+        foreach (GameObject item in particles)
+        {
+            item.SetActive(false);
         }
     }
 }

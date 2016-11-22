@@ -4,14 +4,19 @@ using System.Collections;
 
 public class Brain : Singleton<Brain>, Observer
 {
-    private bool speaking;
     public State state;
     private ObserverEvent currentEvent;
-    private ObserverEvent queueEvent;
-    public int seconds = 12;
+//    private ObserverEvent queueEvent;
+    public int seconds = 6;
     public float chance = 0.3f;
-    public float windowToPlaySound = 1.5f;
+    //public float windowToPlaySound = 1.5f;
     public SubtitleManager subtitleManager;
+
+    void Start()
+    {
+        Subject.instance.AddObserverToBegining(this);
+        NextState();
+    }
 
     IEnumerator SilentState()
     {
@@ -101,20 +106,15 @@ public class Brain : Singleton<Brain>, Observer
         NextState();
     }
 
-    void Start()
-    {
-        Subject.instance.AddObserver(this);
-        NextState();
-    }
-
     void NextState()
     {
         string methodName = state.ToString() + "State";
-        System.Reflection.MethodInfo info =
-            GetType().GetMethod(methodName,
-                                System.Reflection.BindingFlags.NonPublic |
-                                System.Reflection.BindingFlags.Instance);
-        StartCoroutine((IEnumerator)info.Invoke(this, null));
+        StartCoroutine(methodName);
+        //System.Reflection.MethodInfo info =
+        //    GetType().GetMethod(methodName,
+        //                        System.Reflection.BindingFlags.NonPublic |
+        //                        System.Reflection.BindingFlags.Instance);
+        //StartCoroutine((IEnumerator)info.Invoke(this, null));
     }
 
 
@@ -122,8 +122,8 @@ public class Brain : Singleton<Brain>, Observer
     {
         switch (evt.eventName)
         {
-            //case EventName.SwitchTurned:
-            //    goto case EventName.PlayerDead;
+            case EventName.SwitchPressed:
+                goto case EventName.PlayerDead;
             case EventName.PlayerVentilated:
                 goto case EventName.PlayerDead;       // YEAH BEBE! I used goto in production code ;)
             case EventName.LowOnOxygen:
@@ -131,8 +131,10 @@ public class Brain : Singleton<Brain>, Observer
             case EventName.PlayerDead:
                 if (state == State.Silent)
                 {
+                    StopCoroutine("SilentState");
                     currentEvent = evt;
                     state = State.Mock;
+                    NextState();
                 }
 
                 break;

@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     [Tooltip("How fast does the player rotate towards aim point")]
     [Range(25f, 200f)]
     public float aimRotateSpeed = 100f;
+    public GameObject chargeParticle;
 
     // the power of the shot. power is between 0 and 1, where 1 = max launch velocity
     private float power;
@@ -53,6 +54,23 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         if (transform.rotation != aim)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, aim, aimRotateSpeed * Time.deltaTime);
+        }
+        if (chargeParticle != null)
+        {
+            if (power > 0)
+            {
+                if (!chargeParticle.activeSelf)
+                {
+                    chargeParticle.SetActive(true);
+                }
+            }
+            else
+            {
+                if (chargeParticle.activeSelf)
+                {
+                    chargeParticle.SetActive(false);
+                }
+            }
         }
     }
 

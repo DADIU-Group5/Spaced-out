@@ -67,6 +67,7 @@ public class LevelGenerator : MonoBehaviour {
         foreach (Room item in spawnedRooms)
         {
             Destroy(item.GetComponent<CalcBounds>());
+            item.SetStatic();
         }
         Destroy(EntryHall.GetComponent<CalcBounds>());
         SpawnPlayer();

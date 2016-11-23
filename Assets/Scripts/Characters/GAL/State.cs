@@ -2,5 +2,6 @@
 {
     Silent,
     Narrative,
+    GeneralRemarks,
     Mock,
 }

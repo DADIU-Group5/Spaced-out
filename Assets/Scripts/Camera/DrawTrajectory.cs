@@ -101,4 +101,9 @@ public class DrawTrajectory : MonoBehaviour, Observer {
                 break;
         }
     }
+
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
+    }
 }

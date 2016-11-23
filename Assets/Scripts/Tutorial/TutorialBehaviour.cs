@@ -5,9 +5,13 @@ public class TutorialBehaviour : MonoBehaviour {
 
     public GameObject playerCamera;
     public GameObject staticCamera;
+    public GameObject doorCamera;
     public GameObject keysCamera;
     public InputController input;
     public Transform key;
+
+    public GameObject tutorialTrigger; 
+
     private Animator animator;
     private PlayerController playerController;
 
@@ -23,7 +27,13 @@ public class TutorialBehaviour : MonoBehaviour {
         {
             coll.gameObject.SetActive(false);
             SetStaticCamera();
-            GetComponent<Rigidbody>().velocity = new Vector3(4.5f, 0, 0);
+            GetComponent<Rigidbody>().velocity = new Vector3(7.5f, 0, 0);
+        }
+        else if (coll.CompareTag("Tutorial Door"))
+        {
+            coll.gameObject.SetActive(false);
+            SetDoorCamera();
+            Invoke("ToggleKeyTrigger", 2.5f);
         }
         else if (coll.CompareTag("Tutorial Trigger"))
         {
@@ -46,9 +56,21 @@ public class TutorialBehaviour : MonoBehaviour {
 
     void StartMovingCamera()
     {
+        doorCamera.SetActive(false);
         staticCamera.SetActive(false);
         keysCamera.SetActive(true);
         keysCamera.GetComponent<TutorialCamera>().Animate();
+    }
+
+    void SetDoorCamera()
+    {
+        staticCamera.SetActive(false);
+        doorCamera.SetActive(true);
+    }
+
+    private void ToggleKeyTrigger()
+    {
+        tutorialTrigger.SetActive(true);
     }
 
     public void EnableControl()

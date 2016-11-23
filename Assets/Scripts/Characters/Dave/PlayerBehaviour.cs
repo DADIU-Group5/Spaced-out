@@ -127,11 +127,6 @@ public class PlayerBehaviour : MonoBehaviour, Observer
             case EventName.PlayerDead:
                 gameIsOver = true;
                 PlayerPrefs.SetInt("playerDiedThisLevel", 1);
-                if (onFire)
-                {
-                    var statusEvent = new ObserverEvent(EventName.Extinguish);
-                    Subject.instance.Notify(gameObject, statusEvent);
-                }
                 break;
             case EventName.PlayerWon:
                 gameIsOver = true;
@@ -154,6 +149,11 @@ public class PlayerBehaviour : MonoBehaviour, Observer
             default:
                 break;
         }
+    }
+
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
     }
 
     public IEnumerator BurnToDeath()

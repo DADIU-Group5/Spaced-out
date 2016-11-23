@@ -72,5 +72,8 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
         }
     }
 
-
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
+    }
 }

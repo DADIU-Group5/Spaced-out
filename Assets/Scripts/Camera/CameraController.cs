@@ -24,11 +24,14 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
     private Vector3 direction;
     private RaycastHit hit;
 
+    private Vector3 defaultCam = Vector3.zero;
+
     private enum Zoom {NONE, IN, OUT};
     Zoom zooming = Zoom.NONE;
 
     private void Awake()
     {
+        defaultCam = new Vector3(cam.transform.position.x, cam.transform.position.y, camZoomInPosition);
         Subject.instance.AddObserver(this);
     }
 
@@ -54,7 +57,7 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
                 InterpCameraZ(zoomStartPosition, camZoomInPosition);
                 break;
             case Zoom.NONE:
-                cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, camZoomInPosition);
+                cam.transform.localPosition = defaultCam;
                 break;
             default:
                 break;
@@ -69,7 +72,7 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
 
         if (Physics.Raycast(target.transform.position, direction, out hit, maxDistance: direction.magnitude, layerMask: finalmask))
         {
-            cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, cam.transform.InverseTransformPoint(hit.point).z + camZoomInPosition);
+            cam.transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
         }
     }
 

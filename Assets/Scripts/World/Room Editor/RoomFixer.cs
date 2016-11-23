@@ -24,6 +24,10 @@ public class RoomFixer : MonoBehaviour {
         MakeStatic(room.doorParent);
         MakeStatic(room.pickupParent);
         MakeStatic(GameObject.Find("Decor").transform);
+        if(room.decorParent == null)
+        {
+            room.decorParent = GameObject.Find("Decor").transform;
+        }
     }
 
     void MakeStatic(Transform parent)

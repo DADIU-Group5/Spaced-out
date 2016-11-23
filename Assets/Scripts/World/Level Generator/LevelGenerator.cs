@@ -37,7 +37,7 @@ public class LevelGenerator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 #if UNITY_EDITOR
-        //UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
+        UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
 #endif
         GenerateLevel();
     }
@@ -67,7 +67,7 @@ public class LevelGenerator : MonoBehaviour {
         foreach (Room item in spawnedRooms)
         {
             Destroy(item.GetComponent<CalcBounds>());
-            StaticBatchingUtility.Combine(item.gameObject);
+            item.SetStatic();
         }
         Destroy(EntryHall.GetComponent<CalcBounds>());
         SpawnPlayer();

@@ -12,6 +12,7 @@ public class Room : MonoBehaviour
     public Transform shapingParent;
     public Transform pickupParent;
     public Transform doorParent;
+    public Transform decorParent;
 
     //Lists of the objects in the room.
     public List<GameObject> enviromentalObjects;
@@ -25,6 +26,16 @@ public class Room : MonoBehaviour
     public List<HazardState> hazards;
 
     public InRoomDoor exitDoor;
+
+    public void SetStatic()
+    {
+        StaticBatchingUtility.Combine(enviromentalObjectsParent.gameObject);
+        //StaticBatchingUtility.Combine(hazardObjectParent.gameObject);
+        StaticBatchingUtility.Combine(switchParent.gameObject);
+        StaticBatchingUtility.Combine(pickupParent.gameObject);
+        //StaticBatchingUtility.Combine(decorParent.gameObject);
+       // StaticBatchingUtility.Combine(doorParent.gameObject);
+    }
 
     /// <summary>
     /// Adds a new enviromental object.

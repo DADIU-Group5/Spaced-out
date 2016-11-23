@@ -38,7 +38,8 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     private Rigidbody body;
     private OxygenController oxygen;
     private Animator animator;
-    
+    private InputController inputCont;
+
     void Awake ()
     {
         readyForLaunch = true;
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         body = GetComponent<Rigidbody>();
         oxygen = GetComponent<OxygenController>();
         animator = GetComponentInChildren<Animator>();
+        inputCont = Camera.main.transform.parent.parent.GetComponent<InputController>();
     }
 
     void Update()
@@ -138,7 +140,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
             return;
 
         // perform the launch
-        Vector3 dir = aim * Vector3.forward;
+        Vector3 dir = inputCont.GetLaunchDirection();
         body.AddForce(power * maxLaunchVelocity * dir, ForceMode.VelocityChange);
         oxygen.UseOxygen();
         animator.SetBool("Launch Mode", false);

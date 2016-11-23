@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-
-public class DoorOpenCloseTrigger : AkTriggerBase
+﻿public class DoorOpenCloseTrigger : AkTriggerBase
 {
     public void Open()
     {

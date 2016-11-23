@@ -36,6 +36,11 @@ public class CheckpointManager : Singleton<CheckpointManager>, Observer {
         }
     }
 
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
+    }
+
     public void SetNewCheckpoint(Vector3 pos)
     {
         position = pos;

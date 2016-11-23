@@ -92,7 +92,7 @@ public class ParticleSpawner : MonoBehaviour, Observer {
         }
     }
 
-    void OnDestroy()
+    public void OnDestroy()
     {
         if (Subject.instance != null)
         {

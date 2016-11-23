@@ -41,7 +41,10 @@ public class Fan : MonoBehaviour {
     //for every frame, for every collider touching trigger.
     void OnTriggerStay(Collider other)
     {
-
+        if(itemState == null)
+        {
+            return;
+        }
         if (itemState.On)
         {
             if (other.transform.tag == "Player" || other.transform.tag == "object" &&

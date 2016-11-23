@@ -22,6 +22,10 @@ public class MenuSettings : MonoBehaviour {
     {
         SettingsManager.instance.onLanguageChanged += UpdateButtonText;
 
+        masterSlider.onValueChanged.AddListener(OnMasterSliderChanged);
+        musicSlider.onValueChanged.AddListener(OnMusicSliderChanged);
+        effectsSlider.onValueChanged.AddListener(OnEffectsSliderChanged);
+
         muteBtnState = SettingsManager.instance.settings.mute;
 
         UpdateButtonText(SettingsManager.instance.settings.language);

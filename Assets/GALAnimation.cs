@@ -7,7 +7,7 @@ public class GALAnimation : MonoBehaviour, Observer
 {
     private Animator animator;
 
-    private List<string> animationStates = new List<string> { "angryTalk", "sadTalk" };
+    private List<string> animationStates = new List<string> { "angryTalk", "sadTalk", "happyTalk" };
 
     // Use this for initialization
     void Awake ()
@@ -28,5 +28,10 @@ public class GALAnimation : MonoBehaviour, Observer
                 }
                 break;
         }
+    }
+
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
     }
 }

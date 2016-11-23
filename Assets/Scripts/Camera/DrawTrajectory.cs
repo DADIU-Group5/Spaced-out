@@ -23,22 +23,27 @@ public class DrawTrajectory : MonoBehaviour, Observer {
     }
     
     void LateUpdate () {
+        // First, check if there is a target, and if not, don't do anything.
         if(target == null)
         {
             return;
         }
+
+        // Initialize variables used
         points.Clear();
         lengthLeft = length;
         currentBounces = 0;
-        
         AddPoint(target.position);
-
         currentRayPos = target.position;
         currentDirection = inputCont.GetLaunchDirection();
 
+        // While there is still length left of the line, or max number of bounces has not been reached
         while (lengthLeft > 0 && currentBounces <= maxBounces)
         {
+            // Add next point and set lengthLeft according to how long the line drawn was.
             lengthLeft = TryAddPoint(currentRayPos, currentDirection, lengthLeft);
+
+            // Update variables for next iteration
             currentRayPos = globalHit.point;
             currentDirection = Vector3.Reflect(currentDirection, globalHit.normal);
             currentBounces++;
@@ -95,5 +100,10 @@ public class DrawTrajectory : MonoBehaviour, Observer {
                 target = player.transform;
                 break;
         }
+    }
+
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
     }
 }

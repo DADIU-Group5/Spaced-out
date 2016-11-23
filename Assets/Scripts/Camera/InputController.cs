@@ -24,7 +24,7 @@ public class InputController : MonoBehaviour, Observer
     {
         cameraController = GetComponent<CameraController>();
         cam = Camera.main;
-        invertCameraControls = true;
+        invertCameraControls = false;
         Subject.instance.AddObserver(this);
     }
 

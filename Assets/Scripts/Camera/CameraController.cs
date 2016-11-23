@@ -96,12 +96,15 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
     {
         if (zoomCurrent > zoomDuration)
         {
-            zooming = Zoom.NONE;
+            if (zooming == Zoom.IN)
+            {
+                zooming = Zoom.NONE;
+            }
         }
-        else
+        else if (zoomCurrent / zoomDuration < 1f)
         {
             zoomCurrent += Time.deltaTime;
-            cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, Mathf.Lerp(start, end, zoomCurrent / zoomDuration));
+            cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, Mathf.SmoothStep(start, end, zoomCurrent / zoomDuration));
         }
     }
 

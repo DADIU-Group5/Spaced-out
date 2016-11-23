@@ -45,9 +45,6 @@ public class GameOverMenu : MonoBehaviour, Observer
                     case EventName.OnFire:
                         deathCause = Translator.instance.Get("you burned to death");
                         break;
-                    case EventName.Crushed:
-                        deathCause = Translator.instance.Get("you got crushed");
-                        break;
                     case EventName.Electrocuted:
                         deathCause = Translator.instance.Get("you got electrocuted");
                         break;
@@ -100,7 +97,7 @@ public class GameOverMenu : MonoBehaviour, Observer
             transform.GetChild(i).gameObject.SetActive(false);
         }
         var evt = new ObserverEvent(EventName.RespawnPlayer);
-        Subject.instance.Notify(gameObject, evt);
+        //Subject.instance.Notify(gameObject, evt);
     }
 
     /// <summary>

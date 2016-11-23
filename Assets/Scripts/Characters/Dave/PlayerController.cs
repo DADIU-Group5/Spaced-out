@@ -47,7 +47,10 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         body = GetComponent<Rigidbody>();
         oxygen = GetComponent<OxygenController>();
         animator = GetComponentInChildren<Animator>();
-        inputCont = Camera.main.transform.parent.parent.GetComponent<InputController>();
+        
+        if (Camera.main.transform.parent) {
+            inputCont = Camera.main.transform.parent.parent.GetComponent<InputController>();
+        }
     }
 
     void Update()

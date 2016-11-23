@@ -20,6 +20,7 @@ public class SoundManager : Singleton<SoundManager>, Observer
     public bool mute = false;
 
     private DoorOpenCloseTrigger doorTrigger;
+    public BarrelTrigger barrelTrigger;
 
     // Use this for initialization
     void Start()
@@ -97,16 +98,21 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
                 break;
 
-            case EventName.Door:
+            //case EventName.BarrelTriggered:
+                //PlayEvent(SoundEventConstants.EXPLOSIVE);
+                //barrelTrigger.TriggerBarrel();
+            //    break;
+
+            //case EventName.Door:
                 // TODO: remove
                 //if((bool)evt.payload[PayloadConstants.DOOR_OPEN])
                 //PlayEvent(SoundEventConstants.DOOR_OPEN);
                 //AkAmbient.
                 //else
                 //PlayEvent(SoundEventConstants.DOOR_SHUT);
-                doorTrigger.Open();
+            //    doorTrigger.Open();
 
-                break;
+            //    break;
 
             case EventName.PlayerCharge:
                 bool start = (bool)evt.payload[PayloadConstants.START_STOP];

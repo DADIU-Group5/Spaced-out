@@ -1,0 +1,731 @@
+fileFormatVersion: 2
+guid: 632f71356a1dbf24f9c5528682261749
+timeCreated: 1479911258
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: GALImagecollectionTestingHappy_0
+    21300002: GALImagecollectionTestingHappy_1
+    21300004: GALImagecollectionTestingHappy_2
+    21300006: GALImagecollectionTestingHappy_3
+    21300008: GALImagecollectionTestingHappy_4
+    21300010: GALImagecollectionTestingHappy_5
+    21300012: GALImagecollectionTestingHappy_6
+    21300014: GALImagecollectionTestingHappy_7
+    21300016: GALImagecollectionTestingHappy_8
+    21300018: GALImagecollectionTestingHappy_9
+    21300020: GALImagecollectionTestingHappy_10
+    21300022: GALImagecollectionTestingHappy_11
+    21300024: GALImagecollectionTestingHappy_12
+    21300026: GALImagecollectionTestingHappy_13
+    21300028: GALImagecollectionTestingHappy_14
+    21300030: GALImagecollectionTestingHappy_15
+    21300032: GALImagecollectionTestingHappy_16
+    21300034: GALImagecollectionTestingHappy_17
+    21300036: GALImagecollectionTestingHappy_18
+    21300038: GALImagecollectionTestingHappy_19
+    21300040: GALImagecollectionTestingHappy_20
+    21300042: GALImagecollectionTestingHappy_21
+    21300044: GALImagecollectionTestingHappy_22
+    21300046: GALImagecollectionTestingHappy_23
+    21300048: GALImagecollectionTestingHappy_24
+    21300050: GALImagecollectionTestingHappy_25
+    21300052: GALImagecollectionTestingHappy_26
+    21300054: GALImagecollectionTestingHappy_27
+    21300056: GALImagecollectionTestingHappy_28
+    21300058: GALImagecollectionTestingHappy_29
+    21300060: GALImagecollectionTestingHappy_30
+    21300062: GALImagecollectionTestingHappy_31
+    21300064: GALImagecollectionTestingHappy_32
+    21300066: GALImagecollectionTestingHappy_33
+    21300068: GALImagecollectionTestingHappy_34
+    21300070: GALImagecollectionTestingHappy_35
+    21300072: GALImagecollectionTestingHappy_36
+    21300074: GALImagecollectionTestingHappy_37
+    21300076: GALImagecollectionTestingHappy_38
+    21300078: GALImagecollectionTestingHappy_39
+    21300080: GALImagecollectionTestingHappy_40
+    21300082: GALImagecollectionTestingHappy_41
+    21300084: GALImagecollectionTestingHappy_42
+    21300086: GALImagecollectionTestingHappy_43
+    21300088: GALImagecollectionTestingHappy_44
+    21300090: GALImagecollectionTestingHappy_45
+    21300092: GALImagecollectionTestingHappy_46
+    21300094: GALImagecollectionTestingHappy_47
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_1
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_2
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_3
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_4
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_5
+      rect:
+        serializedVersion: 2
+        x: 4585
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_6
+      rect:
+        serializedVersion: 2
+        x: 5502
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_7
+      rect:
+        serializedVersion: 2
+        x: 6419
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_8
+      rect:
+        serializedVersion: 2
+        x: 7336
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_9
+      rect:
+        serializedVersion: 2
+        x: 8253
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_10
+      rect:
+        serializedVersion: 2
+        x: 9170
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_11
+      rect:
+        serializedVersion: 2
+        x: 10087
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_13
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_14
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_15
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_16
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_17
+      rect:
+        serializedVersion: 2
+        x: 4585
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_18
+      rect:
+        serializedVersion: 2
+        x: 5502
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_19
+      rect:
+        serializedVersion: 2
+        x: 6419
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_20
+      rect:
+        serializedVersion: 2
+        x: 7336
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_21
+      rect:
+        serializedVersion: 2
+        x: 8253
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_22
+      rect:
+        serializedVersion: 2
+        x: 9170
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_23
+      rect:
+        serializedVersion: 2
+        x: 10087
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_25
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_26
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_27
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_28
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_29
+      rect:
+        serializedVersion: 2
+        x: 4585
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_30
+      rect:
+        serializedVersion: 2
+        x: 5502
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_31
+      rect:
+        serializedVersion: 2
+        x: 6419
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_32
+      rect:
+        serializedVersion: 2
+        x: 7336
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_33
+      rect:
+        serializedVersion: 2
+        x: 8253
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_34
+      rect:
+        serializedVersion: 2
+        x: 9170
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_35
+      rect:
+        serializedVersion: 2
+        x: 10087
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_37
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_38
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_39
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_40
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_41
+      rect:
+        serializedVersion: 2
+        x: 4585
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_42
+      rect:
+        serializedVersion: 2
+        x: 5502
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_43
+      rect:
+        serializedVersion: 2
+        x: 6419
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_44
+      rect:
+        serializedVersion: 2
+        x: 7336
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_45
+      rect:
+        serializedVersion: 2
+        x: 8253
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_46
+      rect:
+        serializedVersion: 2
+        x: 9170
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingHappy_47
+      rect:
+        serializedVersion: 2
+        x: 10087
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -124,6 +124,9 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
                 zoomCurrent = 0f;
                 zoomStartPosition = cam.transform.localPosition.z;
                 break;
+            case EventName.ToggleUI:
+                gameObject.SetActive(!gameObject.activeSelf);
+                break;
             default:
                 break;
         }

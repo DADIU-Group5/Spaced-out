@@ -112,6 +112,9 @@ public class HUDController : MonoBehaviour, Observer {
                 var comicsPayload = evt.payload;
                 comicsLeftText.text = (string)comicsPayload[PayloadConstants.COMICS] + " "+Translator.instance.Get("comics");
                 break;
+            case EventName.ToggleUI:
+                gameObject.SetActive(!gameObject.activeSelf);
+                break;
             default:
                 break;
         }

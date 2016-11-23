@@ -19,6 +19,11 @@ public class TutorialLevel : MonoBehaviour, Observer
         }
     }
 
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
+    }
+
     public void TutorialComplete()
     {
         ProgressManager.instance.completeTutorial();

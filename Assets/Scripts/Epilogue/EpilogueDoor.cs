@@ -20,6 +20,11 @@ public class EpilogueDoor : MonoBehaviour, Observer {
         }
     }
 
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
+    }
+
     public void Ended()
     {
         var evt = new ObserverEvent(EventName.ToggleUI);

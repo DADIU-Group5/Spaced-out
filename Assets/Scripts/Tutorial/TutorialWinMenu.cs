@@ -21,6 +21,11 @@ public class TutorialWinMenu : MonoBehaviour, Observer {
         }
     }
 
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
+    }
+
     private void ShowMenu() {
         foreach (Transform child in transform)
         {

@@ -197,4 +197,9 @@ public class InputController : MonoBehaviour, Observer
                 break;
         }
     }
+
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
+    }
 }

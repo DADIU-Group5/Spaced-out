@@ -5,4 +5,5 @@
 public interface Observer
 {
     void OnNotify(GameObject entity, ObserverEvent evt);
+    void OnDestroy();
 }

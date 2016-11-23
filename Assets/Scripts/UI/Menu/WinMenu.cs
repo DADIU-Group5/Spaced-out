@@ -41,6 +41,11 @@ public class WinMenu : MonoBehaviour, Observer
         }
     }
 
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
+    }
+
     // Use this for initialization
     void Start()
     {

@@ -29,4 +29,9 @@ public class GALAnimation : MonoBehaviour, Observer
                 break;
         }
     }
+
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
+    }
 }

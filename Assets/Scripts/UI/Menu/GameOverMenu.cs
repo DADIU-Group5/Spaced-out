@@ -71,6 +71,11 @@ public class GameOverMenu : MonoBehaviour, Observer
         }
     }
 
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
+    }
+
     /// <summary>
     /// Set Game Over
     /// </summary>

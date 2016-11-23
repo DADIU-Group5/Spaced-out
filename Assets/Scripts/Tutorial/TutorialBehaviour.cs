@@ -23,7 +23,7 @@ public class TutorialBehaviour : MonoBehaviour {
         {
             coll.gameObject.SetActive(false);
             SetStaticCamera();
-            GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity.normalized * 4.5f;
+            GetComponent<Rigidbody>().velocity = new Vector3(4.5f, 0, 0);
         }
         else if (coll.CompareTag("Tutorial Trigger"))
         {

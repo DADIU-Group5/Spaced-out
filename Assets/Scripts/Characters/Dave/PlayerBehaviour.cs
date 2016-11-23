@@ -58,15 +58,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 
         Subject.instance.Notify(gameObject, evt);
 
-        //Actual death.
-        if (transform.parent != null)
-        {
-            transform.parent.gameObject.SetActive(false);
-        }
-        else
-        {
-            transform.gameObject.SetActive(false);
-        }
+        Destroy(gameObject);
     }
 
     internal void Kill(EventName causeOfDeath)

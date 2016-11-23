@@ -11,12 +11,15 @@ public class ObjectDatabase : MonoBehaviour {
     List<GameObject> floatingObjects = new List<GameObject>();
     List<GameObject> staticObjects = new List<GameObject>();
     List<GameObject> shapingObjects = new List<GameObject>();
-    List<GameObject> pickupObjects = new List<GameObject>();
+    List<GameObject> fuel = new List<GameObject>();
+    List<GameObject> comics = new List<GameObject>();
     List<GameObject> walls = new List<GameObject>();
     List<GameObject> outerCornors = new List<GameObject>();
     List<GameObject> innerCornors = new List<GameObject>();
     List<GameObject> floors = new List<GameObject>();
     List<GameObject> doors = new List<GameObject>();
+    List<GameObject> barrels = new List<GameObject>();
+    List<GameObject> switchObj = new List<GameObject>();
 
     List<GameObject> small = new List<GameObject>();
     List<GameObject> medium = new List<GameObject>();
@@ -66,12 +69,16 @@ public class ObjectDatabase : MonoBehaviour {
         floatingObjects = LoadFromPathFiltered("ObjectDatabase/FloatingObjects");
         staticObjects = LoadFromPathFiltered("ObjectDatabase/StaticObjects");
         shapingObjects = LoadFromPathFiltered("ObjectDatabase/ShapingObjects");
-        pickupObjects = LoadFromPathFiltered("ObjectDatabase/Pickups");
+        fuel = LoadFromPathFiltered("ObjectDatabase/Pickups/Fuel");
+        comics = LoadFromPathFiltered("ObjectDatabase/Pickups/Comics");
+
         walls = LoadFromPathFiltered("ObjectDatabase/Walls");
         outerCornors = LoadFromPathFiltered("ObjectDatabase/OuterCornors");
         innerCornors = LoadFromPathFiltered("ObjectDatabase/InnerCornors");
         floors = LoadFromPathFiltered("ObjectDatabase/Floors");
         doors = LoadFromPathFiltered("ObjectDatabase/Doors");
+        barrels = LoadFromPathFiltered("ObjectDatabase/ExplodingBarrel");
+        switchObj = LoadFromPathFiltered("ObjectDatabase/Switch");
 
         small = LoadFromPathFiltered("ObjectDatabase/EnviromentalObjects/Small");
         medium = LoadFromPathFiltered("ObjectDatabase/EnviromentalObjects/Medium");
@@ -115,9 +122,24 @@ public class ObjectDatabase : MonoBehaviour {
         return shapingObjects;
     }
 
-    public List<GameObject> GetPickupObjects()
+    public List<GameObject> GetFuel()
     {
-        return pickupObjects;
+        return fuel;
+    }
+
+    public List<GameObject> GetComic()
+    {
+        return comics;
+    }
+
+    public List<GameObject> GetBarrel()
+    {
+        return barrels;
+    }
+
+    public List<GameObject> GetSwitch()
+    {
+        return switchObj;
     }
 
     public List<GameObject> GetWalls()

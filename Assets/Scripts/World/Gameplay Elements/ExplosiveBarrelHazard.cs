@@ -14,7 +14,7 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
     [Header("In the damaging radius:")]
     public float explosionRadius = 10f;
     [Header("In the pushing radius:")]
-    public float pushRadius = 5f;
+    public float pushRadius = 50f;
 
     //direction of the push, based on collision
     [HideInInspector]
@@ -63,10 +63,14 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
     public IEnumerator Exploder()
     {
         //start flashing
-        StartCoroutine(Flasher());
+        //StartCoroutine(Flasher());
 
         //wait...
         yield return new WaitForSeconds(timeToExplode);
+
+        var evtExp = new ObserverEvent(EventName.BarrelExplosion);
+        Subject.instance.Notify(gameObject, evtExp);
+
 
         //Explode, and destroy object/start animation:
 

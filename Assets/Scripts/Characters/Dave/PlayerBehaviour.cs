@@ -3,12 +3,13 @@ using System.Collections;
 
 public class PlayerBehaviour : MonoBehaviour, Observer
 {
-
+    private Animator animator; 
     PlayerController playerController;
 
     // Use this for initialization
     void Start () {
         Subject.instance.AddObserver(this);
+        animator = GetComponentInChildren<Animator>();
         playerController = GetComponent<PlayerController>();
     }
 	
@@ -21,6 +22,8 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     public bool godMode = false;
     [HideInInspector]
     public bool onFire;
+    [HideInInspector]
+    public bool exploded = false;
     [HideInInspector]
     public bool electrocuted = false;
     [HideInInspector]
@@ -55,19 +58,14 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 
         Subject.instance.Notify(gameObject, evt);
 
-        //Actual death.
-        if (transform.parent != null)
-        {
-            transform.parent.gameObject.SetActive(false);
-        }
-        else
-        {
-            transform.gameObject.SetActive(false);
-        }
+        Destroy(gameObject);
     }
 
     internal void Kill(EventName causeOfDeath)
     {
+        var evt = new ObserverEvent(EventName.DisableInput);
+        Subject.instance.Notify(gameObject, evt);
+
         Debug.Log("kill function was called");
         if (!dead && !gameIsOver)
         {      
@@ -80,6 +78,10 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     {
         switch (evt.eventName)
         {
+            case EventName.PlayerFuelPickup:
+            case EventName.ComicPickup:
+                animator.SetTrigger("Pick Up");
+                break;
             case EventName.OnFire:
                 if (!onFire && !gameIsOver && !godMode)
                 {
@@ -113,7 +115,10 @@ public class PlayerBehaviour : MonoBehaviour, Observer
                 break;
             case EventName.PlayerExploded:
                 if (!godMode)
-                    Kill(evt.eventName);
+                    exploded = true;
+                //Kill(evt.eventName);
+                var explosionEvent = new ObserverEvent(EventName.OnFire);
+                Subject.instance.Notify(gameObject, explosionEvent);
                 break;
             case EventName.OxygenEmpty:
                 if (!godMode)
@@ -160,7 +165,11 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         if (onFire)
         {
             Debug.Log("Player has burned to death!");
-            Kill(EventName.OnFire);
+            if (exploded)
+            {
+                Kill(EventName.PlayerExploded);
+            } else
+                Kill(EventName.OnFire);
             playerController.BurningToDeath();
         }
     }

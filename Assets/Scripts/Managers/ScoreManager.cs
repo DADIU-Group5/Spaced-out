@@ -14,14 +14,21 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
     public static bool hasDied;
 
     protected override void Awake()
-    {
-        base.Awake();
+    {   
         // will be increased on start
         base.Awake();
         totalComics = 0;
         comicsCollected = 0;
         hasDied = false;
-        Subject.instance.AddObserver(this);
+        if (Subject.instance != null)
+        {
+            Subject.instance.AddObserver(this);
+        }
+    }
+
+    void Start()
+    {
+        hasDied = ProgressManager.instance.GetMedals(GenerationDataManager.instance.GetCurrentLevel())[2];
     }
 
     // add comic to level
@@ -29,8 +36,8 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
     {
         totalComics++;
         //update HUD comicCounter everytime a comic is added.
-        var evt = new ObserverEvent(EventName.ComicsAdded);
-        evt.payload.Add(PayloadConstants.COMICS, totalComics);
+        var evt = new ObserverEvent(EventName.ComicsUpdate);
+        evt.payload.Add(PayloadConstants.COMICS, comicsCollected+"/"+totalComics);
         Subject.instance.Notify(gameObject, evt);
     }
 
@@ -38,14 +45,9 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
     public void ComicCollected()
     {
         comicsCollected++;
-    }
-
-    // Reset Values before next level starts
-    public void ResetValues()
-    {
-        totalComics = 0;
-        comicsCollected = 0;
-        hasDied = false;
+        var evt = new ObserverEvent(EventName.ComicsUpdate);
+        evt.payload.Add(PayloadConstants.COMICS, comicsCollected + "/" + totalComics);
+        Subject.instance.Notify(gameObject, evt);
     }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
@@ -60,7 +62,7 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
                     ProgressManager.instance.SetMedal(level, ProgressManager.medalNoDeaths);
                 if (comicsCollected == totalComics && totalComics != 0)
                     ProgressManager.instance.SetMedal(level, ProgressManager.medalAllComics);
-                ResetValues();
+                
                 break;
             case EventName.PlayerDead:
                 hasDied = true;

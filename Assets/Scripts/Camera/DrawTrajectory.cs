@@ -11,7 +11,6 @@ public class DrawTrajectory : MonoBehaviour, Observer {
 
     public Transform target;
     private List<Vector3> points = new List<Vector3>();
-    private Vector3 direction;
 
     private float lengthLeft;
     private int currentBounces;
@@ -24,10 +23,13 @@ public class DrawTrajectory : MonoBehaviour, Observer {
     }
     
     void LateUpdate () {
+        if(target == null)
+        {
+            return;
+        }
         points.Clear();
         lengthLeft = length;
         currentBounces = 0;
-        direction = inputCont.GetLaunchDirection();
         
         AddPoint(target.position);
 

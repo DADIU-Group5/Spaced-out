@@ -57,6 +57,10 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
         {
             pod.transform.position = target.transform.position;
         }
+        else
+        {
+            return;
+        }
         
         direction = cam.transform.position - target.transform.position;
         int layermask1 = 1 << LayerMask.NameToLayer("Golfball");

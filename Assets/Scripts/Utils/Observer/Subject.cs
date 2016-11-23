@@ -21,6 +21,11 @@ public class Subject : Singleton<Subject>
     //Add observer to the list
     public void AddObserver(Observer observer)
     {
+        observers.Insert(0, observer);
+    }
+
+    public void AddObserverToBegining(Observer observer)
+    {
         observers.Add(observer);
     }
 

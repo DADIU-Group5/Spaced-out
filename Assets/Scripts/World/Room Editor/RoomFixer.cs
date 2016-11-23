@@ -16,8 +16,24 @@ public class RoomFixer : MonoBehaviour {
     public void Fix()
     {
         Setup();
-        FixSwitch();
-        FixPickups();
+        //FixSwitch();
+        //FixPickups();
+        MakeStatic(room.shapingParent);
+        MakeStatic(room.switchParent);
+        MakeStatic(room.enviromentalObjectsParent);
+        MakeStatic(room.doorParent);
+        MakeStatic(room.pickupParent);
+        MakeStatic(GameObject.Find("Decor").transform);
+    }
+
+    void MakeStatic(Transform parent)
+    {
+        foreach (Transform item in parent)
+        {
+            item.gameObject.isStatic = true;
+            MakeStatic(item);
+        }
+        parent.gameObject.isStatic = true;
     }
 
     void FixSwitch()

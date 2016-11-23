@@ -117,6 +117,11 @@ public class HUDController : MonoBehaviour, Observer {
         }
     }
 
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
+    }
+
     /// <summary>
     /// Handle displaying the subtitle to the screen
     /// </summary>

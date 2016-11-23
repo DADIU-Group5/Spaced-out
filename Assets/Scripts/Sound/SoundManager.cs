@@ -24,6 +24,8 @@ public class SoundManager : Singleton<SoundManager>, Observer
     // Use this for initialization
     void Start()
     {
+        Subject.instance.AddObserver(this);
+
         doorTrigger = GetComponent<DoorOpenCloseTrigger>();
 
         AkSoundEngine.LoadBank("soundbank_alpha", AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
@@ -32,19 +34,12 @@ public class SoundManager : Singleton<SoundManager>, Observer
         var settings = SettingsManager.instance.settings;
 
         SetMasterVolume(settings.masterVolume);
-        // TODO: Fix this shit.
-        SetMusicVolume(30);
+        SetMusicVolume(settings.musicVolume);
         SetEffectsVolume(settings.effectsVolume);
 
         mute = settings.mute;
 
         MuteSound(mute);
-    }
-
-    protected override void Awake()
-    {
-        base.Awake();
-        Subject.instance.AddObserver(this);
     }
 
     private class Waiter
@@ -227,5 +222,10 @@ public class SoundManager : Singleton<SoundManager>, Observer
             AkSoundEngine.SetRTPCValue("masterVolume", 0.0f);
         else
             AkSoundEngine.SetRTPCValue("masterVolume", masterVolume);
+    }
+
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
     }
 }

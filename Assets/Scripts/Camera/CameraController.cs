@@ -129,6 +129,11 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
         }
     }
 
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
+    }
+
     /// <summary>
     /// Sets the direction of the camera
     /// </summary>

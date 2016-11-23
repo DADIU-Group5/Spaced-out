@@ -156,6 +156,11 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         }
     }
 
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
+    }
+
     public IEnumerator BurnToDeath()
     {
         Debug.Log("burning coroutine");

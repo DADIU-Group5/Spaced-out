@@ -14,7 +14,7 @@ public class Brain : Singleton<Brain>, Observer
 
     void Start()
     {
-        Subject.instance.AddObserverToBegining(this);
+        Subject.instance.AddObserver(this);
         NextState();
     }
 
@@ -139,5 +139,10 @@ public class Brain : Singleton<Brain>, Observer
 
                 break;
         }
+    }
+
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
     }
 }

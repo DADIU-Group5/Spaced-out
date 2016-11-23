@@ -32,10 +32,20 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
         Subject.instance.AddObserver(this);
     }
 
+    // First do zooming in Update(), place camera in front of objects
     void Update()
     {
+        // First, check if there is a target. If not, don't do anything.
+        if (!target)
+        {
+            return;
+        }
 
-        switch(zooming)
+        // Set position of pod to player position.
+        pod.transform.position = target.transform.position;
+
+        // Perform the zooming of the camera if needed.
+        switch (zooming)
         {
             case Zoom.OUT:
                 InterpCameraZ(zoomStartPosition, camZoomOutPosition);
@@ -49,19 +59,8 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
             default:
                 break;
         }
-    }
 
-    private void LateUpdate()
-    {
-        if (target)
-        {
-            pod.transform.position = target.transform.position;
-        }
-        else
-        {
-            return;
-        }
-        
+        // Check if camera is inside an object, and if so, put it in front of the object.
         direction = cam.transform.position - target.transform.position;
         int layermask1 = 1 << LayerMask.NameToLayer("Golfball");
         int layermask2 = 1 << LayerMask.NameToLayer("Ragdoll");
@@ -72,6 +71,11 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
         {
             cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, cam.transform.InverseTransformPoint(hit.point).z + camZoomInPosition);
         }
+    }
+
+    private void LateUpdate()
+    {
+        
 
         /*
         //Vector3 direction = Vector3.SlerpUnclamped(-pitch.transform.forward, pitch.transform.up, angle);

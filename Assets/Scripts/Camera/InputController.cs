@@ -17,6 +17,7 @@ public class InputController : MonoBehaviour, Observer
     private bool invertCameraControls;
     private bool launchMode;
     private bool inputDisabled;
+    private bool cameraInputDisabled;
     private Vector2 oldPoint;
     private Camera cam;
 
@@ -26,6 +27,9 @@ public class InputController : MonoBehaviour, Observer
         cam = Camera.main;
         invertCameraControls = false;
         Subject.instance.AddObserver(this);
+
+        inputDisabled = false;
+        cameraInputDisabled = false;
     }
 
     private void LateUpdate()
@@ -43,12 +47,12 @@ public class InputController : MonoBehaviour, Observer
             launchMode = true;
         }
 
-        // Check if we are NOT in launchmode
-        if (!launchMode)
+        // Check if we are NOT in launchmode and camera input NOT disables
+        if (!launchMode && !cameraInputDisabled)
         {
             HandleCameraMode();
         }
-        else
+        else if (launchMode)
         {
             HandleLaunchMode();
         }
@@ -182,6 +186,7 @@ public class InputController : MonoBehaviour, Observer
         {
             case EventName.PlayerSpawned:
                 inputDisabled = false;
+                cameraInputDisabled = false;
                 GameObject go = evt.payload[PayloadConstants.PLAYER] as GameObject;
                 player = go.GetComponent<PlayerController>();
                 break;
@@ -190,12 +195,20 @@ public class InputController : MonoBehaviour, Observer
             case EventName.PlayerWon:
             case EventName.PlayerDead:
                 inputDisabled = true;
+                cameraInputDisabled = true;
                 break;
             case EventName.ToggleCameraControls:
                 invertCameraControls = !invertCameraControls;
                 break;
             case EventName.EnableInput:
                 inputDisabled = false;
+                cameraInputDisabled = false;
+                break;
+            case EventName.DisableCameraInput:
+                cameraInputDisabled = true;
+                break;
+            case EventName.EnableCameraInput:
+                cameraInputDisabled = false;
                 break;
             default:
                 break;

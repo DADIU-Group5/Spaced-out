@@ -14,7 +14,7 @@ public class HUDController : MonoBehaviour, Observer {
     public Text currentFuelText;
     public Text comicsLeftText;
 
-    public Image subtitleBackdrop;
+    public GameObject subtitleBackdrop;
 
     public Transform chargeArrow;
     public RectTransform chargeImagePivot,
@@ -128,12 +128,12 @@ public class HUDController : MonoBehaviour, Observer {
     /// <summary>
     /// Handle displaying the subtitle to the screen
     /// </summary>
-    public IEnumerator ShowSubtitle(string subText, float subStart, float subDuration)
+    public IEnumerator ShowSubtitle(string subText, float subStart, float subDuration)//, int emotion)
     {
         yield return new WaitForSeconds(subStart);
 
         subtitleText.text = subText;
-        subtitleBackdrop.enabled = true;
+        subtitleBackdrop.SetActive(true);
 
         var evt = new ObserverEvent(EventName.GALAnimate);
         evt.payload.Add(PayloadConstants.START_STOP, true);
@@ -142,6 +142,6 @@ public class HUDController : MonoBehaviour, Observer {
         yield return new WaitForSeconds(subDuration);
 
         subtitleText.text = "";
-        subtitleBackdrop.enabled = false;
+        subtitleBackdrop.SetActive(false);
     }
 }

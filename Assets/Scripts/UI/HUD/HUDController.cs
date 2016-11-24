@@ -14,8 +14,9 @@ public class HUDController : MonoBehaviour, Observer {
     public Text currentFuelText;
     public Text comicsLeftText;
 
+    public Image subtitleBackdrop;
+
     public Transform chargeArrow;
-    public Image gal;
     public RectTransform chargeImagePivot,
         chargeMaskPivot;
 
@@ -27,7 +28,8 @@ public class HUDController : MonoBehaviour, Observer {
     void Awake ()
     {
         Subject.instance.AddObserver(this);
-        gal.enabled = false;
+        //animator.StartPlayback();
+        //gal.enabled = false;
     }
 
     void Start()
@@ -106,14 +108,21 @@ public class HUDController : MonoBehaviour, Observer {
 
                 StartCoroutine(ShowSubtitle(subText, subStart, subDuration));
                 break;
-            case EventName.ComicsAdded:
+            case EventName.ComicsUpdate:
                 var comicsPayload = evt.payload;
-                int comics = (int)comicsPayload[PayloadConstants.COMICS];
-                comicsLeftText.text = comics.ToString();
+                comicsLeftText.text = (string)comicsPayload[PayloadConstants.COMICS] + " "+Translator.instance.Get("comics");
+                break;
+            case EventName.ToggleUI:
+                gameObject.SetActive(!gameObject.activeSelf);
                 break;
             default:
                 break;
         }
+    }
+
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
     }
 
     /// <summary>
@@ -124,11 +133,15 @@ public class HUDController : MonoBehaviour, Observer {
         yield return new WaitForSeconds(subStart);
 
         subtitleText.text = subText;
-        gal.enabled = true;
+        subtitleBackdrop.enabled = true;
+
+        var evt = new ObserverEvent(EventName.GALAnimate);
+        evt.payload.Add(PayloadConstants.START_STOP, true);
+        Subject.instance.Notify(gameObject, evt);
 
         yield return new WaitForSeconds(subDuration);
 
         subtitleText.text = "";
-        gal.enabled = false;
+        subtitleBackdrop.enabled = false;
     }
 }

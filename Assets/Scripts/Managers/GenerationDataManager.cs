@@ -47,7 +47,7 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
 
         this.level = level;
         if (randomizeSeeds)
-            generationData.levels[level].interiorSeed = RandomSeed();
+            generationData.levels[level-1].interiorSeed = RandomSeed();
     }
 
     /// <summary>

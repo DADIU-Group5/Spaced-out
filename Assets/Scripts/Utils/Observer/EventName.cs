@@ -34,14 +34,19 @@
     LowOnOxygen,
     PlayerLaunchModeToggle,
     PlayerLaunchCancel,
-    ComicsAdded,
+    ComicsUpdate,
+    ComicPickup,
     GodMode,
     PlayerCharge,
     Door,
     PlayerVentilated,
     StartCutscene,
     ToggleUI,
+    SwitchPressed,
     EPILOGUE_EVENTONE,
     EPILOGUE_EVENTTWO,
-    EPILOGUE_EVENTTHREE
+    EPILOGUE_EVENTTHREE,
+    DisableInput,
+    GALAnimate,
+    EnableInput
 }

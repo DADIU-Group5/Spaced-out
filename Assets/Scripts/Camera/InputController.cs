@@ -24,11 +24,11 @@ public class InputController : MonoBehaviour, Observer
     {
         cameraController = GetComponent<CameraController>();
         cam = Camera.main;
-        invertCameraControls = true;
+        invertCameraControls = false;
         Subject.instance.AddObserver(this);
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         // If input is disabled, stop.
         if (inputDisabled)
@@ -52,6 +52,17 @@ public class InputController : MonoBehaviour, Observer
         {
             HandleLaunchMode();
         }
+    }
+
+    // sets the view direction of the camera and player
+    public void SetViewDirection(Vector3 point)
+    {
+        Vector3 direction = (point - player.transform.position).normalized;
+        Vector3 rotation = Quaternion.LookRotation(direction).eulerAngles;
+
+        player.Aim(point);
+        cameraController.transform.rotation = Quaternion.Euler(rotation.x, 0, 0);
+        cameraController.pitch.transform.rotation = Quaternion.Euler(0, rotation.y, 0);
     }
 
     // Interprest input as launch mode.
@@ -125,7 +136,7 @@ public class InputController : MonoBehaviour, Observer
     // get point where the player is aiming
     private Vector3 GetAimPoint()
     {
-        Ray ray = cam.ScreenPointToRay(ScreenCenter());
+        Ray ray = cam.ScreenPointToRay(ScreenCenter()); 
         RaycastHit hit;
 
         // Create layermask that ignores all Golfball and Ragdoll layers
@@ -134,10 +145,14 @@ public class InputController : MonoBehaviour, Observer
         int layermask3 = 1 << LayerMask.NameToLayer("Ignore Raycast");
         int finalmask = ~(layermask1 | layermask2 | layermask3);
 
-        if (Physics.Raycast(ray, out hit, float.MaxValue, finalmask)) 
+        if (Physics.Raycast(ray, out hit, float.MaxValue, finalmask))
+        {
             return hit.point;
+        }
         else
+        {
             return player.transform.position + player.transform.forward;
+        }
     }
     
     // Calculate the direction from the character position and the crosshair.
@@ -170,6 +185,7 @@ public class InputController : MonoBehaviour, Observer
                 GameObject go = evt.payload[PayloadConstants.PLAYER] as GameObject;
                 player = go.GetComponent<PlayerController>();
                 break;
+            case EventName.DisableInput:
             case EventName.StartCutscene:
             case EventName.PlayerWon:
             case EventName.PlayerDead:
@@ -178,8 +194,16 @@ public class InputController : MonoBehaviour, Observer
             case EventName.ToggleCameraControls:
                 invertCameraControls = !invertCameraControls;
                 break;
+            case EventName.EnableInput:
+                inputDisabled = false;
+                break;
             default:
                 break;
         }
+    }
+
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
     }
 }

@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     [Tooltip("How fast does the player rotate towards aim point")]
     [Range(25f, 200f)]
     public float aimRotateSpeed = 100f;
+    public GameObject chargeParticle;
 
     // the power of the shot. power is between 0 and 1, where 1 = max launch velocity
     private float power;
@@ -37,7 +38,8 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     private Rigidbody body;
     private OxygenController oxygen;
     private Animator animator;
-    
+    private InputController inputCont;
+
     void Awake ()
     {
         readyForLaunch = true;
@@ -45,6 +47,10 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         body = GetComponent<Rigidbody>();
         oxygen = GetComponent<OxygenController>();
         animator = GetComponentInChildren<Animator>();
+        
+        if (Camera.main.transform.parent) {
+            inputCont = Camera.main.transform.parent.parent.GetComponent<InputController>();
+        }
     }
 
     void Update()
@@ -53,6 +59,23 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         if (transform.rotation != aim)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, aim, aimRotateSpeed * Time.deltaTime);
+        }
+        if (chargeParticle != null)
+        {
+            if (power > 0)
+            {
+                if (!chargeParticle.activeSelf)
+                {
+                    chargeParticle.SetActive(true);
+                }
+            }
+            else
+            {
+                if (chargeParticle.activeSelf)
+                {
+                    chargeParticle.SetActive(false);
+                }
+            }
         }
     }
 
@@ -120,7 +143,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
             return;
 
         // perform the launch
-        Vector3 dir = aim * Vector3.forward;
+        Vector3 dir = inputCont.GetLaunchDirection();
         body.AddForce(power * maxLaunchVelocity * dir, ForceMode.VelocityChange);
         oxygen.UseOxygen();
         animator.SetBool("Launch Mode", false);
@@ -142,11 +165,15 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         // TODO sound
     }
 
+    private bool playMusic = true;
+
     private void ThrowLaunchEvent()
     {
         var evt = new ObserverEvent(EventName.PlayerLaunch);
         evt.payload.Add(PayloadConstants.LAUNCH_FORCE, power * maxLaunchVelocity);
         evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, transform.forward);
+        evt.payload.Add(PayloadConstants.START_STOP, playMusic);
+        playMusic = false;
         Subject.instance.Notify(gameObject, evt);
         // TODO sound
     }

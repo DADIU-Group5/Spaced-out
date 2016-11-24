@@ -14,10 +14,6 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="daveFirstLaunch_02" ID="{E2B13896-D24A-4F2F-9AA7-056068CB1021}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
-							<Position X="0" Y="2"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="explosion sequence" ID="{D3332EA2-2CA1-4CCC-BBCB-4A7E3B1ADEBF}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -30,28 +26,12 @@
 							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="daveFirstLaunch_03" ID="{CB3CBF12-5D31-41F5-8A96-E1F2FFA809FA}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
-							<Position X="2" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="daveFirstLaunch_05" ID="{A90A1D31-88DF-4EFA-BE4C-4D30A53E8F2B}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
-							<Position X="2" Y="1"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="daveLaunch" ID="{FABF4B6D-90BB-474B-A3AE-F7110ED709BA}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
 							<Position X="2" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="daveFirstLaunch_04" ID="{E37E832C-4E8F-4463-9139-9411742DC40F}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
-							<Position X="3" Y="0"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="daveFirstLaunch" ID="{2550C575-219E-4DEC-B001-F0B5745648B4}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
 							<Position X="3" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="daveFirstLaunch_01" ID="{D7A64F16-E8A8-4F2D-9804-FB9894FA7767}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
-							<Position X="3" Y="2"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="ventAir" ID="{63694199-89B1-4D0F-8472-12B42F956FC3}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
@@ -227,6 +207,10 @@
 						<RTPCValue>
 							<GameParameterRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}"/>
 							<Value>28</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}"/>
+							<Value>76.3905325443787</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_TimeOfDay" ID="{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}"/>

@@ -1,0 +1,731 @@
+fileFormatVersion: 2
+guid: 2183d570afa0ed54881b9d0184ae9e45
+timeCreated: 1479912017
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: GALImagecollectionTestingSad_0
+    21300002: GALImagecollectionTestingSad_1
+    21300004: GALImagecollectionTestingSad_2
+    21300006: GALImagecollectionTestingSad_3
+    21300008: GALImagecollectionTestingSad_4
+    21300010: GALImagecollectionTestingSad_5
+    21300012: GALImagecollectionTestingSad_6
+    21300014: GALImagecollectionTestingSad_7
+    21300016: GALImagecollectionTestingSad_8
+    21300018: GALImagecollectionTestingSad_9
+    21300020: GALImagecollectionTestingSad_10
+    21300022: GALImagecollectionTestingSad_11
+    21300024: GALImagecollectionTestingSad_12
+    21300026: GALImagecollectionTestingSad_13
+    21300028: GALImagecollectionTestingSad_14
+    21300030: GALImagecollectionTestingSad_15
+    21300032: GALImagecollectionTestingSad_16
+    21300034: GALImagecollectionTestingSad_17
+    21300036: GALImagecollectionTestingSad_18
+    21300038: GALImagecollectionTestingSad_19
+    21300040: GALImagecollectionTestingSad_20
+    21300042: GALImagecollectionTestingSad_21
+    21300044: GALImagecollectionTestingSad_22
+    21300046: GALImagecollectionTestingSad_23
+    21300048: GALImagecollectionTestingSad_24
+    21300050: GALImagecollectionTestingSad_25
+    21300052: GALImagecollectionTestingSad_26
+    21300054: GALImagecollectionTestingSad_27
+    21300056: GALImagecollectionTestingSad_28
+    21300058: GALImagecollectionTestingSad_29
+    21300060: GALImagecollectionTestingSad_30
+    21300062: GALImagecollectionTestingSad_31
+    21300064: GALImagecollectionTestingSad_32
+    21300066: GALImagecollectionTestingSad_33
+    21300068: GALImagecollectionTestingSad_34
+    21300070: GALImagecollectionTestingSad_35
+    21300072: GALImagecollectionTestingSad_36
+    21300074: GALImagecollectionTestingSad_37
+    21300076: GALImagecollectionTestingSad_38
+    21300078: GALImagecollectionTestingSad_39
+    21300080: GALImagecollectionTestingSad_40
+    21300082: GALImagecollectionTestingSad_41
+    21300084: GALImagecollectionTestingSad_42
+    21300086: GALImagecollectionTestingSad_43
+    21300088: GALImagecollectionTestingSad_44
+    21300090: GALImagecollectionTestingSad_45
+    21300092: GALImagecollectionTestingSad_46
+    21300094: GALImagecollectionTestingSad_47
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6182
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_1
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 6182
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_2
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 6182
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_3
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 6182
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5620
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_5
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 5620
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_6
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 5620
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_7
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 5620
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5058
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_9
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 5058
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_10
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 5058
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_11
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 5058
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4496
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_13
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 4496
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_14
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 4496
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_15
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 4496
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3934
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_17
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 3934
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_18
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 3934
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_19
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 3934
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3372
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_21
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 3372
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_22
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 3372
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_23
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 3372
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2810
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_25
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 2810
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_26
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 2810
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_27
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 2810
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2248
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_29
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 2248
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_30
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 2248
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_31
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 2248
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_33
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_34
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_35
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_37
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_38
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_39
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_41
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_42
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_43
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_45
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_46
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingSad_47
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

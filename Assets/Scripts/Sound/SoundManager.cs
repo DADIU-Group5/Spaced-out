@@ -20,10 +20,13 @@ public class SoundManager : Singleton<SoundManager>, Observer
     public bool mute = false;
 
     private DoorOpenCloseTrigger doorTrigger;
+    public BarrelTrigger barrelTrigger;
 
     // Use this for initialization
     void Start()
     {
+        Subject.instance.AddObserver(this);
+
         doorTrigger = GetComponent<DoorOpenCloseTrigger>();
 
         AkSoundEngine.LoadBank("soundbank_alpha", AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
@@ -38,12 +41,6 @@ public class SoundManager : Singleton<SoundManager>, Observer
         mute = settings.mute;
 
         MuteSound(mute);
-    }
-
-    protected override void Awake()
-    {
-        base.Awake();
-        Subject.instance.AddObserver(this);
     }
 
     private class Waiter
@@ -73,13 +70,18 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
                 var payload = evt.payload;
                 float launchForce = (float)payload[PayloadConstants.LAUNCH_FORCE];
+                bool playMusic = (bool)payload[PayloadConstants.START_STOP];
                 //Debug.Log("Launch force: " + launchForce);
                 // add game manager class that keeps track of charges so that he can do it only once
                 //if(launchForce > 0.75)
                 //    PlayEvent(SoundEventConstants.DAVE_CHARGE);
                 //else
                 PlayEvent(SoundEventConstants.DAVE_LAUNCH);
-
+                if (playMusic)
+                {
+                    PlayEvent(SoundEventConstants.MUSIC_MAIN_STOP);
+                    PlayEvent(SoundEventConstants.MUSIC_MAIN_PLAY);
+                }
                 //if (firstLaunch)
                 //{
                 //    PlayEvent(SoundEventConstants.DAVE_FIRST_LAUNCH);
@@ -96,16 +98,21 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
                 break;
 
-            case EventName.Door:
+            //case EventName.BarrelTriggered:
+                //PlayEvent(SoundEventConstants.EXPLOSIVE);
+                //barrelTrigger.TriggerBarrel();
+            //    break;
+
+            //case EventName.Door:
                 // TODO: remove
                 //if((bool)evt.payload[PayloadConstants.DOOR_OPEN])
                 //PlayEvent(SoundEventConstants.DOOR_OPEN);
                 //AkAmbient.
                 //else
                 //PlayEvent(SoundEventConstants.DOOR_SHUT);
-                doorTrigger.Open();
+            //    doorTrigger.Open();
 
-                break;
+            //    break;
 
             case EventName.PlayerCharge:
                 bool start = (bool)evt.payload[PayloadConstants.START_STOP];
@@ -139,9 +146,6 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 break;
             case EventName.PlayerVentilated:
                 PlayEvent(SoundEventConstants.DAVE_VENT);
-                break;
-            case EventName.PlayerDead:
-                Debug.Log("called it");
                 break;
         }
 
@@ -224,5 +228,10 @@ public class SoundManager : Singleton<SoundManager>, Observer
             AkSoundEngine.SetRTPCValue("masterVolume", 0.0f);
         else
             AkSoundEngine.SetRTPCValue("masterVolume", masterVolume);
+    }
+
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
     }
 }

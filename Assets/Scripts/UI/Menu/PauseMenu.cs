@@ -70,6 +70,9 @@ public class PauseMenu : MonoBehaviour {
         //remember to unpause;
         TogglePause();
 
+        var evt = new ObserverEvent(EventName.RestartLevel);
+        Subject.instance.Notify(gameObject, evt);
+
         //player reset, so he hasn't died in this run yet.
         SceneManager.LoadScene(scene.name);
     }

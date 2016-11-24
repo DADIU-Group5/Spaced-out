@@ -12,6 +12,7 @@ public class Room : MonoBehaviour
     public Transform shapingParent;
     public Transform pickupParent;
     public Transform doorParent;
+    public Transform decorParent;
 
     //Lists of the objects in the room.
     public List<GameObject> enviromentalObjects;
@@ -25,6 +26,16 @@ public class Room : MonoBehaviour
     public List<HazardState> hazards;
 
     public InRoomDoor exitDoor;
+
+    public void SetStatic()
+    {
+        StaticBatchingUtility.Combine(enviromentalObjectsParent.gameObject);
+        //StaticBatchingUtility.Combine(hazardObjectParent.gameObject);
+        StaticBatchingUtility.Combine(switchParent.gameObject);
+        StaticBatchingUtility.Combine(pickupParent.gameObject);
+        StaticBatchingUtility.Combine(decorParent.gameObject);
+        //StaticBatchingUtility.Combine(doorParent.gameObject);
+    }
 
     /// <summary>
     /// Adds a new enviromental object.
@@ -219,6 +230,10 @@ public class Room : MonoBehaviour
 
     public void EnteredThisRoom()
     {
+        if (Debug.isDebugBuild)
+        {
+            GameObject.FindObjectOfType<DebugSeedText>().EnteredRoom(gameObject.name);
+        }
         if(exitDoor != null)
         {
             exitDoor.PrepNextRoom();
@@ -347,11 +362,15 @@ public class Room : MonoBehaviour
         }
         foreach (GameObject item in switchObjects)
         {
-            if (item.transform.childCount > 0) {
+           /* if (item.transform.childCount > 0) {
                 if (item.transform.GetChild(0).GetComponent<SwitchItem>() != null)
                 {
                     item.transform.GetChild(0).GetComponent<SwitchItem>().AssignRoom(this);
                 }
+            }*/
+            if(item.GetComponent<ObjectSelector>() != null)
+            {
+                item.GetComponent<ObjectSelector>().Replace(this);
             }
         }
         /*foreach (GameObject item in shapingObjects)
@@ -364,7 +383,7 @@ public class Room : MonoBehaviour
             {
                 Debug.Log("not there");
             }
-        }
+        }*/
         foreach (GameObject item in pickupObjects)
         {
             if (item.GetComponent<ObjectSelector>() != null)
@@ -375,6 +394,6 @@ public class Room : MonoBehaviour
             {
                 Debug.Log("not there");
             }
-        }*/
+        }
     }
 }

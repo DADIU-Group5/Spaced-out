@@ -101,6 +101,8 @@ public class OxygenController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Fuel Pickup"))
         {
+            var evt = new ObserverEvent(EventName.PlayerFuelPickup);
+            Subject.instance.Notify(gameObject, evt);
             ReplenishOxygen();
             Destroy(other.gameObject);
         }

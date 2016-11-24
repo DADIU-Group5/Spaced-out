@@ -3,7 +3,7 @@
     Narrative,      // do better 
     GeneralRemarks, // do better
     Wires,          // done
-    Switch,
+    SwitchPressed,
     Fan,            // done
     GasLeak,        // done
     LowOxygen,      // done

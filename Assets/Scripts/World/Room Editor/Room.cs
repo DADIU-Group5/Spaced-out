@@ -131,6 +131,11 @@ public class Room : MonoBehaviour
         doorObjects.Add(go);
     }
 
+    public void AddDecorObject(GameObject go)
+    {
+        go.transform.parent = decorParent;
+    }
+
     /// <summary>
     /// Cleans the lists, removes null entries.
     /// </summary>

@@ -101,14 +101,11 @@ public class LevelGenerator : MonoBehaviour {
     {
         CheckpointManager.instance.SetSpawnDistance(playerDistanceFromDoor + 1);
         GameObject go = Instantiate(playerPrefab, playerSpawnPoint.position, Quaternion.identity) as GameObject;
-        go.transform.LookAt(transform.position /*+ new Vector3(0, 2, 0)*/, Vector3.up);
+        go.transform.LookAt(transform.position, Vector3.up);
         go.GetComponentInChildren<OxygenController>().ReplenishOxygen();
         CheckpointManager.instance.SetFuelCount(go.GetComponentInChildren<OxygenController>().GetOxygen());
 
-        var evt = new ObserverEvent(EventName.PlayerSpawned);
-        evt.payload.Add(PayloadConstants.PLAYER, go.GetComponentInChildren<PlayerController>().gameObject);
-        Subject.instance.Notify(gameObject, evt);
-        evt = new ObserverEvent(EventName.StartCutscene);
+        var evt = new ObserverEvent(EventName.StartCutscene);
         Subject.instance.Notify(gameObject, evt);
         ECS.StartCutScene(go);
     }

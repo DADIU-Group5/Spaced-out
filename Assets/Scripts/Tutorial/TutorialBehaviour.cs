@@ -1,29 +1,38 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TutorialBehaviour : MonoBehaviour {
+public class TutorialBehaviour : MonoBehaviour
+{
 
     public GameObject playerCamera;
     public GameObject staticCamera;
     public GameObject doorCamera;
     public GameObject keysCamera;
+    public GuidanceImageController guidanceObject;
     public InputController input;
     public Transform key;
+    public GameObject aimCollider;
 
-    public GameObject tutorialTrigger; 
+    public GameObject tutorialTrigger;
 
     private Animator animator;
     private PlayerController playerController;
 
-	// Use this for initialization
-	void Start () {
+    private bool aimSpotted = false;
+
+    // Use this for initialization
+    void Start()
+    {
         animator = GetComponentInChildren<Animator>();
         playerController = GetComponent<PlayerController>();
-	}
+        guidanceObject.Activate();
+        AkSoundEngine.PostEvent("narrative3", gameObject);
+    }
 
     void Update()
     {
-        CheckTutorialAim();
+        if(!aimSpotted)
+            CheckTutorialAim();
     }
 
     void OnTriggerEnter(Collider coll)
@@ -85,6 +94,7 @@ public class TutorialBehaviour : MonoBehaviour {
         input.SetViewDirection(key.position);
         var statusEvent = new ObserverEvent(EventName.EnableInput);
         Subject.instance.Notify(gameObject, statusEvent);
+        AkSoundEngine.PostEvent("narrative7", gameObject);
     }
 
     // get point where the player is aiming
@@ -102,7 +112,12 @@ public class TutorialBehaviour : MonoBehaviour {
         {
             if (hit.transform.CompareTag("Tutorial Aim"))
             {
-                Debug.Log("Hit correctly");
+                aimCollider.SetActive(false);
+                aimSpotted = true;
+                StopSoundEvent("narrative3", 0.5f);
+                AkSoundEngine.PostEvent("narrative5", gameObject);
+                guidanceObject.ChangeBackground();
+                guidanceObject.Activate();
             }
         }
     }
@@ -111,5 +126,18 @@ public class TutorialBehaviour : MonoBehaviour {
     private Vector2 ScreenCenter()
     {
         return new Vector2(Camera.main.pixelWidth / 2f, Camera.main.pixelHeight / 2f);
+    }
+
+    private void StopSoundEvent(string eventName, float fadeout)
+    {
+        uint eventID;
+        eventID = AkSoundEngine.GetIDFromString(eventName);
+        int fadeoutMs = (int)fadeout * 1000;
+        AkSoundEngine.ExecuteActionOnEvent(
+            eventID,
+            AkActionOnEventType.AkActionOnEventType_Stop,
+            gameObject, fadeoutMs,
+            AkCurveInterpolation.
+            AkCurveInterpolation_Sine);
     }
 }

@@ -57,6 +57,13 @@ public class RagdollAnimationBlender : MonoBehaviour
         }
     }
 
+    // should be fixed to be done in PlayerBehaviour
+    // called by the animator when death animation is done
+    public void DeathAnimationOver()
+    {
+        GetComponentInParent<PlayerBehaviour>().DeathAnimationOver();
+    }
+
     public void EnableRagdoll()
     {
         SetKinematic(false);

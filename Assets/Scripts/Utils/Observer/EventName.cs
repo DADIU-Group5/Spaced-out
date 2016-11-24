@@ -48,5 +48,6 @@
     EPILOGUE_EVENTTHREE,
     DisableInput,
     GALAnimate,
-    EnableInput
+    EnableInput,
+    UIButton
 }

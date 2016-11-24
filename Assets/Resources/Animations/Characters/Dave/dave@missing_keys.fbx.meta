@@ -450,7 +450,7 @@ ModelImporter:
     4300004: daveShirtOut01
     4300006: daveShirtInd01
     4300008: group6
-    7400000: missing_keys
+    7400000: missing keys
     9500000: //RootNode
     13700000: dave
     13700002: daveShirtInd01
@@ -484,7 +484,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: missing_keys
+      name: missing keys
       takeName: outro
       firstFrame: 1
       lastFrame: 60
@@ -496,7 +496,7 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0

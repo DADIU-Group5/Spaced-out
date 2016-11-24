@@ -233,7 +233,7 @@ public class RoomMaker : MonoBehaviour {
 
     public GameObject NewFloatingProp(Vector3 pos)
     {
-        GameObject temp = Instantiate(props, pos, Quaternion.identity) as GameObject;
+        GameObject temp = Instantiate(props, pos+new Vector3(0,2,0), Quaternion.identity) as GameObject;
         currentRoom.AddFloatingObject(temp);
         return temp;
     }
@@ -260,4 +260,10 @@ public class RoomMaker : MonoBehaviour {
         return temp;
     }
 
+    public GameObject NewDecorObject(Vector3 pos, GameObject toSpawn)
+    {
+        GameObject temp = Instantiate(toSpawn, pos, Quaternion.identity) as GameObject;
+        currentRoom.AddDecorObject(temp);
+        return temp;
+    }
 }

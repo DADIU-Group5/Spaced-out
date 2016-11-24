@@ -57,8 +57,6 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
-        //Debug.Log(evt.eventName.ToString());
-
         switch (evt.eventName)
         {
             case EventName.Narrate:
@@ -71,22 +69,13 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 var payload = evt.payload;
                 float launchForce = (float)payload[PayloadConstants.LAUNCH_FORCE];
                 bool playMusic = (bool)payload[PayloadConstants.START_STOP];
-                //Debug.Log("Launch force: " + launchForce);
-                // add game manager class that keeps track of charges so that he can do it only once
-                //if(launchForce > 0.75)
-                //    PlayEvent(SoundEventConstants.DAVE_CHARGE);
-                //else
+
                 PlayEvent(SoundEventConstants.DAVE_LAUNCH);
                 if (playMusic)
                 {
                     PlayEvent(SoundEventConstants.MUSIC_MAIN_STOP);
                     PlayEvent(SoundEventConstants.MUSIC_MAIN_PLAY);
                 }
-                //if (firstLaunch)
-                //{
-                //    PlayEvent(SoundEventConstants.DAVE_FIRST_LAUNCH);
-                //    firstLaunch = false;
-                //}
 
                 break;
 
@@ -97,22 +86,6 @@ public class SoundManager : Singleton<SoundManager>, Observer
             case EventName.Electrocuted:
                 PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
                 break;
-
-            //case EventName.BarrelTriggered:
-                //PlayEvent(SoundEventConstants.EXPLOSIVE);
-                //barrelTrigger.TriggerBarrel();
-            //    break;
-
-            //case EventName.Door:
-                // TODO: remove
-                //if((bool)evt.payload[PayloadConstants.DOOR_OPEN])
-                //PlayEvent(SoundEventConstants.DOOR_OPEN);
-                //AkAmbient.
-                //else
-                //PlayEvent(SoundEventConstants.DOOR_SHUT);
-            //    doorTrigger.Open();
-
-            //    break;
 
             case EventName.PlayerCharge:
                 bool start = (bool)evt.payload[PayloadConstants.START_STOP];
@@ -132,6 +105,7 @@ public class SoundManager : Singleton<SoundManager>, Observer
                     chargePlaying = false;
                 }
                 break;
+
             case EventName.Collision:
                 float force = (float)evt.payload[PayloadConstants.VELOCITY];
                 AkSoundEngine.SetRTPCValue("velocity", force * 10);
@@ -146,6 +120,11 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 break;
             case EventName.PlayerVentilated:
                 PlayEvent(SoundEventConstants.DAVE_VENT);
+                break;
+
+            case EventName.ToggleUI:
+                // TODO: Use payload for different clicks.
+                PlayEvent(SoundEventConstants.MENU_CLICK_FORWARDS);
                 break;
         }
 

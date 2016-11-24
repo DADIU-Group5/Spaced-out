@@ -43,4 +43,10 @@ public class SoundEventConstants
     public const string MUSIC_MAIN_PLAY = "musicMainPlay";
     public const string MUSIC_MAIN_STOP = "musicMainStop";
     public const string GAME_START = "gameStart";                          // v
+
+    // UI sounds
+    public const string MENU_CLICK_BACKWARDS = "menuClickBackwards";
+    public const string MENU_CLICK_FORWARDS = "menuClickForwards";
+    public const string MENU_PRESS_START = "menuPressStart";
+    public const string MENU_SCROLL = "menuScroll";
 }

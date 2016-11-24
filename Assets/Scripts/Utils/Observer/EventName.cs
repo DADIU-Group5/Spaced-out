@@ -14,6 +14,7 @@
     RespawnPlayer,
     OnFire,
     Extinguish,
+    PlayerGotKey,
     PlayerWon,
     UpdateOxygen,
     LaunchPowerChanged,
@@ -48,5 +49,8 @@
     EPILOGUE_EVENTTHREE,
     DisableInput,
     GALAnimate,
-    EnableInput
+    EnableInput,
+    UIButton,
+    DisableCameraInput,
+    EnableCameraInput
 }

@@ -2,7 +2,7 @@
 using System.Collections;
 
 /// <summary>
-/// This class is responsible for logic regarding player deaths. This involves animations and events.
+/// This class is responsible for logic regarding player deaths and win. This involves animations and events.
 /// </summary>
 public class PlayerBehaviour : MonoBehaviour, Observer
 {
@@ -121,6 +121,17 @@ public class PlayerBehaviour : MonoBehaviour, Observer
                 break;
             default:
                 break;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Key"))
+        {
+            // in case we hit a key we throw win event and destroy key
+            var evt = new ObserverEvent(EventName.PlayerGotKey);
+            Subject.instance.Notify(gameObject, evt);
+            Destroy(other.gameObject);
         }
     }
 

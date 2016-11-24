@@ -7,6 +7,14 @@ public class GALAnimation : MonoBehaviour, Observer
 {
     private Animator animator;
 
+    public enum Emotion
+    {
+        Idle, Happy, Sad, Angry
+    }
+
+    [HideInInspector]
+    public SubtitleManager subtitleManager;
+
     private List<string> animationStates = new List<string> { "angryTalk", "sadTalk", "happyTalk" };
 
     // Use this for initialization
@@ -21,10 +29,12 @@ public class GALAnimation : MonoBehaviour, Observer
         switch(evt.eventName)
         {
             case EventName.GALAnimate:
-                bool random = (bool)evt.payload[PayloadConstants.START_STOP];
-                if (random)
+                bool animNum = (bool)evt.payload[PayloadConstants.START_STOP];
+                if (animNum)
                 {
                     animator.SetTrigger(animationStates[UnityEngine.Random.Range(0, animationStates.Count)]);
+                    /*var subtitle = subtitleManager.GetRandomSubtitle(Language.English, type);
+                    animator.SetTrigger(animationStates[animNum]);*/
                 }
                 break;
         }

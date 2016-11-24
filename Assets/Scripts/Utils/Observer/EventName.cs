@@ -14,6 +14,7 @@
     RespawnPlayer,
     OnFire,
     Extinguish,
+    PlayerGotKey,
     PlayerWon,
     UpdateOxygen,
     LaunchPowerChanged,

@@ -38,7 +38,7 @@ public class OutroCutScene : MonoBehaviour, Observer {
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
-        if (evt.eventName == EventName.PlayerWon)
+        if (evt.eventName == EventName.PlayerGotKey)
         {
             StartOutro(entity);
         }

@@ -49,5 +49,7 @@
     DisableInput,
     GALAnimate,
     EnableInput,
-    UIButton
+    UIButton,
+    DisableCameraInput,
+    EnableCameraInput
 }

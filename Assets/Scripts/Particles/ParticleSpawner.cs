@@ -56,15 +56,13 @@ public class ParticleSpawner : MonoBehaviour, Observer {
                 }
                 break;
 
+            case EventName.PlayerExploded:
             case EventName.OnFire:
                 SpawnParticles(onFire, playerpos.position, true);
                 break;
 
             case EventName.Electrocuted:
                 SpawnParticles(electro, playerpos.position, true);
-                break;
-
-            case EventName.BarrelTriggered:
                 break;
 
             case EventName.BarrelExplosion:

@@ -3,11 +3,18 @@ using System.Collections;
 
 public class EntryCutScene : MonoBehaviour {
 
+    public GameObject keyPrefab;
     public Animator anim;
     public Camera cam;
     public Transform playerPos;
     public GameObject key;
     Transform playerObj;
+
+    void Awake()
+    {
+        GameObject keyModel = Instantiate(keyPrefab, key.transform.position, Quaternion.identity, key.transform) as GameObject;
+        keyModel.GetComponent<SphereCollider>().enabled = false;
+    }
 
 	public void StartCutScene(GameObject player)
     {

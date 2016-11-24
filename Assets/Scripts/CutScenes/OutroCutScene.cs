@@ -1,11 +1,17 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class OutroCutScene : MonoBehaviour {
-
+public class OutroCutScene : MonoBehaviour, Observer {
+    public GameObject keyPrefab;
     public Animator anim;
     public Camera cam;
     public Transform playerPos;
+    public Transform keyPos;
+
+    void Start()
+    {
+        Subject.instance.AddObserver(this);
+        Instantiate(keyPrefab,keyPos.transform.position, Quaternion.identity, keyPos);
+    }
 
     public void StartOutro(GameObject player)
     {
@@ -28,5 +34,18 @@ public class OutroCutScene : MonoBehaviour {
     {
         var evt = new ObserverEvent(EventName.PlayerWon);
         Subject.instance.Notify(gameObject, evt);
+    }
+
+    public void OnNotify(GameObject entity, ObserverEvent evt)
+    {
+        if (evt.eventName == EventName.PlayerGotKey)
+        {
+            StartOutro(entity);
+        }
+    }
+
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
     }
 }

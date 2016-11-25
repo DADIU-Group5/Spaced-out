@@ -27,7 +27,7 @@ public class OutroCutScene : MonoBehaviour, Observer {
         player.GetComponent<PlayerController>().Aim(keyPos.transform.position);
 
         cam.gameObject.SetActive(true);
-
+        player.GetComponentInChildren<Animator>().ResetTrigger("Pick Up");
         player.GetComponentInChildren<Animator>().SetTrigger("FakeFly");
 
 

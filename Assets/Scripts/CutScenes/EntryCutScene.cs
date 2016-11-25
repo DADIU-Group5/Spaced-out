@@ -24,9 +24,7 @@ public class EntryCutScene : MonoBehaviour {
         Subject.instance.Notify(gameObject, evt);
 
         player.GetComponent<PlayerController>().Aim(key.transform.position);
-
-
-
+        
         playerObj = player.transform;
 
         playerObj.position = playerPos.position;
@@ -53,14 +51,25 @@ public class EntryCutScene : MonoBehaviour {
 
         cam.gameObject.SetActive(false);
 
-        particles.SetActive(false);
-        playerObj.gameObject.GetComponent<PlayerController>().chargeParticle = particles;
-        playerObj.gameObject.GetComponentInChildren<Animator>().SetTrigger("Ready To Launch");
-
         evt = new ObserverEvent(EventName.PlayerSpawned);
         evt.payload.Add(PayloadConstants.PLAYER, playerObj.GetComponentInChildren<PlayerController>().gameObject);
         Subject.instance.Notify(gameObject, evt);
+    }
 
+    public void StopPlayerFly()
+    {
+        particles.SetActive(false);
+        playerObj.gameObject.GetComponent<PlayerController>().chargeParticle = particles;
+        playerObj.gameObject.GetComponentInChildren<Animator>().SetTrigger("Ready To Launch");
+    }
+
+    public void StartPlayerFly()
+    {
+        var evt = new ObserverEvent(EventName.PlayerLaunch);
+        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, 0.5f);
+        evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, playerObj.transform.forward);
+        evt.payload.Add(PayloadConstants.START_STOP, true);
+        Subject.instance.Notify(playerObj.gameObject, evt);
     }
 
     public Transform GetPlayerSpawnPos()

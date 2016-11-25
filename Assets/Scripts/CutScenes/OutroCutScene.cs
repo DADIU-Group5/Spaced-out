@@ -29,15 +29,19 @@ public class OutroCutScene : MonoBehaviour, Observer {
         cam.gameObject.SetActive(true);
 
         player.GetComponentInChildren<Animator>().SetTrigger("FakeFly");
-        particles = player.GetComponent<PlayerController>().chargeParticle;
-        player.GetComponent<PlayerController>().chargeParticle = null;
-        particles.SetActive(true);
+
 
         var evt = new ObserverEvent(EventName.ToggleUI);
         Subject.instance.Notify(gameObject, evt);
 
         evt = new ObserverEvent(EventName.StartCutscene);
         Subject.instance.Notify(gameObject, evt);
+
+        evt = new ObserverEvent(EventName.PlayerLaunch);
+        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, 0.5f);
+        evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, player.transform.forward);
+        evt.payload.Add(PayloadConstants.START_STOP, true);
+        Subject.instance.Notify(player, evt);
 
         anim.SetTrigger("Open");
     }

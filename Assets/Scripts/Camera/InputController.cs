@@ -20,6 +20,7 @@ public class InputController : MonoBehaviour, Observer
     private bool cameraInputDisabled;
     private Vector2 oldPoint;
     private Camera cam;
+    private bool paused = false;
 
     private void Awake()
     {
@@ -97,26 +98,29 @@ public class InputController : MonoBehaviour, Observer
     // Interprets input as camera mode.
     protected virtual void HandleCameraMode()
     {
-        // Save starting position of tap
-        if (Input.GetMouseButtonDown(0))
+        if (!paused)
         {
-            oldPoint = Input.mousePosition;
-        }
-
-        // Look around and change position of camera
-        if (Input.GetMouseButton(0))
-        {
-            Vector2 pos = Input.mousePosition;
-            Vector2 offset = pos - oldPoint;
-
-            if (invertCameraControls)
+            // Save starting position of tap
+            if (Input.GetMouseButtonDown(0))
             {
-                offset = -offset;
+                oldPoint = Input.mousePosition;
             }
 
-            DirectedRotation(offset);
-            oldPoint = pos;
-            player.Aim(GetAimPoint());
+            // Look around and change position of camera
+            if (Input.GetMouseButton(0))
+            {
+                Vector2 pos = Input.mousePosition;
+                Vector2 offset = pos - oldPoint;
+
+                if (invertCameraControls)
+                {
+                    offset = -offset;
+                }
+
+                DirectedRotation(offset);
+                oldPoint = pos;
+                player.Aim(GetAimPoint());
+            }
         }
     }
 
@@ -209,6 +213,10 @@ public class InputController : MonoBehaviour, Observer
                 break;
             case EventName.EnableCameraInput:
                 cameraInputDisabled = false;
+                break;
+            case EventName.Pause:
+                paused = !paused;
+                inputDisabled = paused; //if paused, input is disabled = true.
                 break;
             default:
                 break;

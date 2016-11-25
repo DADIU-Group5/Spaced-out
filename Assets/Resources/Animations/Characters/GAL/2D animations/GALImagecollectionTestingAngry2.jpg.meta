@@ -1,0 +1,731 @@
+fileFormatVersion: 2
+guid: 560dba67df22d134db2ea32a3c9b5cd2
+timeCreated: 1480065180
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: GALImagecollectionTestingAngry2_0
+    21300002: GALImagecollectionTestingAngry2_1
+    21300004: GALImagecollectionTestingAngry2_2
+    21300006: GALImagecollectionTestingAngry2_3
+    21300008: GALImagecollectionTestingAngry2_4
+    21300010: GALImagecollectionTestingAngry2_5
+    21300012: GALImagecollectionTestingAngry2_6
+    21300014: GALImagecollectionTestingAngry2_7
+    21300016: GALImagecollectionTestingAngry2_8
+    21300018: GALImagecollectionTestingAngry2_9
+    21300020: GALImagecollectionTestingAngry2_10
+    21300022: GALImagecollectionTestingAngry2_11
+    21300024: GALImagecollectionTestingAngry2_12
+    21300026: GALImagecollectionTestingAngry2_13
+    21300028: GALImagecollectionTestingAngry2_14
+    21300030: GALImagecollectionTestingAngry2_15
+    21300032: GALImagecollectionTestingAngry2_16
+    21300034: GALImagecollectionTestingAngry2_17
+    21300036: GALImagecollectionTestingAngry2_18
+    21300038: GALImagecollectionTestingAngry2_19
+    21300040: GALImagecollectionTestingAngry2_20
+    21300042: GALImagecollectionTestingAngry2_21
+    21300044: GALImagecollectionTestingAngry2_22
+    21300046: GALImagecollectionTestingAngry2_23
+    21300048: GALImagecollectionTestingAngry2_24
+    21300050: GALImagecollectionTestingAngry2_25
+    21300052: GALImagecollectionTestingAngry2_26
+    21300054: GALImagecollectionTestingAngry2_27
+    21300056: GALImagecollectionTestingAngry2_28
+    21300058: GALImagecollectionTestingAngry2_29
+    21300060: GALImagecollectionTestingAngry2_30
+    21300062: GALImagecollectionTestingAngry2_31
+    21300064: GALImagecollectionTestingAngry2_32
+    21300066: GALImagecollectionTestingAngry2_33
+    21300068: GALImagecollectionTestingAngry2_34
+    21300070: GALImagecollectionTestingAngry2_35
+    21300072: GALImagecollectionTestingAngry2_36
+    21300074: GALImagecollectionTestingAngry2_37
+    21300076: GALImagecollectionTestingAngry2_38
+    21300078: GALImagecollectionTestingAngry2_39
+    21300080: GALImagecollectionTestingAngry2_40
+    21300082: GALImagecollectionTestingAngry2_41
+    21300084: GALImagecollectionTestingAngry2_42
+    21300086: GALImagecollectionTestingAngry2_43
+    21300088: GALImagecollectionTestingAngry2_44
+    21300090: GALImagecollectionTestingAngry2_45
+    21300092: GALImagecollectionTestingAngry2_46
+    21300094: GALImagecollectionTestingAngry2_47
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3372
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_1
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 3372
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_2
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 3372
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_3
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 3372
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_4
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 3372
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_5
+      rect:
+        serializedVersion: 2
+        x: 4585
+        y: 3372
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_6
+      rect:
+        serializedVersion: 2
+        x: 5502
+        y: 3372
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2810
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_8
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 2810
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_9
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 2810
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_10
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 2810
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_11
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 2810
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_12
+      rect:
+        serializedVersion: 2
+        x: 4585
+        y: 2810
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_13
+      rect:
+        serializedVersion: 2
+        x: 5502
+        y: 2810
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2248
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_15
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 2248
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_16
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 2248
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_17
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 2248
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_18
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 2248
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_19
+      rect:
+        serializedVersion: 2
+        x: 4585
+        y: 2248
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_20
+      rect:
+        serializedVersion: 2
+        x: 5502
+        y: 2248
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_22
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_23
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_24
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_25
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_26
+      rect:
+        serializedVersion: 2
+        x: 4585
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_27
+      rect:
+        serializedVersion: 2
+        x: 5502
+        y: 1686
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_29
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_30
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_31
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_32
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_33
+      rect:
+        serializedVersion: 2
+        x: 4585
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_34
+      rect:
+        serializedVersion: 2
+        x: 5502
+        y: 1124
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_36
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_37
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_38
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_39
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_40
+      rect:
+        serializedVersion: 2
+        x: 4585
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_41
+      rect:
+        serializedVersion: 2
+        x: 5502
+        y: 562
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_43
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_44
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_45
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_46
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GALImagecollectionTestingAngry2_47
+      rect:
+        serializedVersion: 2
+        x: 4585
+        y: 0
+        width: 917
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

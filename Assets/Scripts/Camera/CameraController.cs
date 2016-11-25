@@ -18,24 +18,27 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
     public float zoomDuration = 1f;
     public float camZoomOutPosition = -2f;
     public float camZoomInPosition = -0.9f;
-    private float zoomCurrent = 0f;
-    private float zoomStartPosition = 0f;
+    
+    private enum Zoom { NONE, IN, OUT };
+    private Zoom zooming = Zoom.NONE;
 
+    private Vector3 camZoomOut, camZoomIn, camZoomCurrent, camZoomStartPos;
+    private float zoomCurrent = 0f;
+    
     private Vector3 direction;
     private RaycastHit hit;
-
-    private Vector3 defaultCam = Vector3.zero;
-
-    private enum Zoom {NONE, IN, OUT};
-    Zoom zooming = Zoom.NONE;
-
+    
     private void Awake()
     {
-        defaultCam = new Vector3(cam.transform.position.x, cam.transform.position.y, camZoomInPosition);
         Subject.instance.AddObserver(this);
+        
+        camZoomOut = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, camZoomOutPosition);
+        camZoomIn = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, camZoomInPosition);
+        camZoomCurrent = camZoomIn;
+        camZoomStartPos = camZoomIn;
     }
 
-    // First do zooming in Update(), place camera in front of objects
+    // First do zooming in Update(), then place camera in front of objects if the current zoom position is incorrect
     void Update()
     {
         // First, check if there is a target. If not, don't do anything.
@@ -46,22 +49,23 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
 
         // Set position of pod to player position.
         pod.transform.position = target.transform.position;
-
+        
         // Perform the zooming of the camera if needed.
         switch (zooming)
         {
             case Zoom.OUT:
-                InterpCameraZ(zoomStartPosition, camZoomOutPosition);
+                PerformCameraZoom(camZoomStartPos, camZoomOut);
                 break;
             case Zoom.IN:
-                InterpCameraZ(zoomStartPosition, camZoomInPosition);
+                PerformCameraZoom(camZoomStartPos, camZoomIn);
                 break;
             case Zoom.NONE:
-                cam.transform.localPosition = defaultCam;
+                //camZoomCurrent = camZoomIn;
                 break;
             default:
                 break;
         }
+        cam.transform.localPosition = camZoomCurrent;
 
         // Check if camera is inside an object, and if so, put it in front of the object.
         direction = cam.transform.position - target.transform.position;
@@ -69,49 +73,34 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
         int layermask2 = 1 << LayerMask.NameToLayer("Ragdoll");
         int layermask3 = 1 << LayerMask.NameToLayer("Ignore Raycast");
         int finalmask = ~(layermask1 | layermask2 | layermask3);
-
-        if (Physics.Raycast(target.transform.position, direction, out hit, maxDistance: direction.magnitude, layerMask: finalmask))
-        {
-            cam.transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
-        }
-    }
-
-    private void LateUpdate()
-    {
         
+        // TODO: Use SphereCast instead
+        //Physics.SphereCast(target.transform.position, 1f, direction, out hit, direction.magnitude, finalmask);
 
-        /*
-        //Vector3 direction = Vector3.SlerpUnclamped(-pitch.transform.forward, pitch.transform.up, angle);
-        Vector3 direction = -pitch.transform.forward;
-        Ray ray = new Ray(target.transform.position, direction);
-        RaycastHit hit;
-        int layerMask = LayerMask.NameToLayer("Wall");
-        float rayDistance;
-        if (Physics.Raycast(ray, out hit, distance, layerMask))
+        if (Physics.Raycast(target.transform.position, direction.normalized, out hit, maxDistance: direction.magnitude, layerMask: finalmask))
         {
-            rayDistance = hit.distance;
+            cam.transform.position = hit.point;
         }
-        else
-        {
-            rayDistance = distance;
-        }
-        cam.transform.localPosition = direction.normalized * rayDistance;
-        */
     }
 
-    private void InterpCameraZ(float start, float end)
+    private void PerformCameraZoom(Vector3 start, Vector3 end)
     {
+        float t = zoomCurrent / zoomDuration;
+
         if (zoomCurrent > zoomDuration)
         {
             if (zooming == Zoom.IN)
             {
+                camZoomCurrent = camZoomIn;
+                cam.transform.localPosition = camZoomCurrent;
                 zooming = Zoom.NONE;
             }
         }
-        else if (zoomCurrent / zoomDuration < 1f)
+        else if (t < 1f)
         {
             zoomCurrent += Time.deltaTime;
-            cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, Mathf.SmoothStep(start, end, zoomCurrent / zoomDuration));
+            camZoomCurrent = new Vector3(Mathf.SmoothStep(start.x, end.x, t), Mathf.SmoothStep(start.y, end.y, t), Mathf.SmoothStep(start.z, end.z, t));
+            cam.transform.localPosition = camZoomCurrent;
         }
     }
 
@@ -127,12 +116,12 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
             case EventName.CameraZoomOut:
                 zooming = Zoom.OUT;
                 zoomCurrent = 0f;
-                zoomStartPosition = cam.transform.localPosition.z;
+                camZoomStartPos = camZoomCurrent;
                 break;
             case EventName.CameraZoomIn:
                 zooming = Zoom.IN;
                 zoomCurrent = 0f;
-                zoomStartPosition = cam.transform.localPosition.z;
+                camZoomStartPos = camZoomCurrent;
                 break;
             case EventName.ToggleUI:
                 gameObject.SetActive(!gameObject.activeSelf);

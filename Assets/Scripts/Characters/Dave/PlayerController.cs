@@ -118,9 +118,13 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     {
         if (!readyForLaunch)
             return;
-
         Vector3 direction = (point - transform.position).normalized;
         aim = Quaternion.LookRotation(direction);
+    }
+
+    public void OverrideReadyForLaunch()
+    {
+        readyForLaunch = true;
     }
 
     // set power for next launch

@@ -27,7 +27,7 @@ public class OutroCutScene : MonoBehaviour, Observer {
         player.GetComponent<PlayerController>().Aim(keyPos.transform.position);
 
         cam.gameObject.SetActive(true);
-
+        player.GetComponentInChildren<Animator>().ResetTrigger("Pick Up");
         player.GetComponentInChildren<Animator>().SetTrigger("FakeFly");
 
 
@@ -48,6 +48,7 @@ public class OutroCutScene : MonoBehaviour, Observer {
 
     public void StartFly()
     {
+        playerPos.GetChild(0).GetComponent<PlayerController>().Aim(keyPos.transform.position);
         var evt = new ObserverEvent(EventName.PlayerLaunch);
         evt.payload.Add(PayloadConstants.LAUNCH_FORCE, 0.5f);
         evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, playerPos.transform.forward);

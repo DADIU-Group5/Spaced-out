@@ -17,14 +17,19 @@ public class SwitchItem : MonoBehaviour {
     public bool oneTimeTrigger = false;
     private bool hasBeenTriggered = false;
 
+    private Color greenColor = new Color(0,1f,0,1f);
+    private Color redColor = new Color(1f, 0, 0, 1f);
+
     Room inRoom;
 
     void Start()
     {
+        //orgColor = this.GetComponent<Renderer>().material;
         foreach (GameObject hazard in assignedHazards)
         {
             hazard.GetComponent<HazardState>().hazardSwitch = this.gameObject;
         }
+        GetComponent<Renderer>().material.color = hasBeenTriggered ? redColor : greenColor;
     }
 
     public void AssignRoom(Room r)
@@ -56,6 +61,8 @@ public class SwitchItem : MonoBehaviour {
     {
         if (other.transform.tag == "Player" || other.transform.tag == "object")
         {
+            hasBeenTriggered = !hasBeenTriggered;
+            GetComponent<Renderer>().material.color = hasBeenTriggered ? redColor : greenColor;
             //if we are allowed to trigger more than once || it hasn't been triggered yet:
             if (!oneTimeTrigger && !countingDown|| !hasBeenTriggered)
             {

@@ -108,19 +108,18 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         animator.SetTrigger("Death Electricity");
     }
 
-   /* public void ChokingToDeath()
-    {
-        animator.SetTrigger("Death Fire");
-    }*/
-
     // aim the player at a certain point in world space
     public void Aim(Vector3 point)
     {
         if (!readyForLaunch)
             return;
-
         Vector3 direction = (point - transform.position).normalized;
         aim = Quaternion.LookRotation(direction);
+    }
+
+    public void OverrideReadyForLaunch()
+    {
+        readyForLaunch = true;
     }
 
     // set power for next launch

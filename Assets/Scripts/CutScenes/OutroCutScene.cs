@@ -7,6 +7,8 @@ public class OutroCutScene : MonoBehaviour, Observer {
     public Transform playerPos;
     public Transform keyPos;
 
+    GameObject particles;
+
     void Start()
     {
         Subject.instance.AddObserver(this);
@@ -15,11 +17,19 @@ public class OutroCutScene : MonoBehaviour, Observer {
 
     public void StartOutro(GameObject player)
     {
-
         player.transform.position = playerPos.position;
         player.transform.rotation = playerPos.rotation;
         player.transform.parent = playerPos;
+
+        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+
+        player.GetComponent<PlayerController>().OverrideReadyForLaunch();
+        player.GetComponent<PlayerController>().Aim(keyPos.transform.position);
+
         cam.gameObject.SetActive(true);
+
+        player.GetComponentInChildren<Animator>().SetTrigger("FakeFly");
+
 
         var evt = new ObserverEvent(EventName.ToggleUI);
         Subject.instance.Notify(gameObject, evt);
@@ -36,9 +46,18 @@ public class OutroCutScene : MonoBehaviour, Observer {
         Subject.instance.Notify(gameObject, evt);
     }
 
+    public void StartFly()
+    {
+        var evt = new ObserverEvent(EventName.PlayerLaunch);
+        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, 0.5f);
+        evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, playerPos.transform.forward);
+        evt.payload.Add(PayloadConstants.START_STOP, true);
+        Subject.instance.Notify(playerPos.gameObject, evt);
+    }
+
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
-        if (evt.eventName == EventName.PlayerWon)
+        if (evt.eventName == EventName.PlayerGotKey)
         {
             StartOutro(entity);
         }

@@ -37,6 +37,10 @@ public class ParticleSpawner : MonoBehaviour, Observer {
                 break;
 
             case EventName.PlayerLaunch:
+                if(playerpos == null)
+                {
+                    playerpos = go.transform;
+                }
                 SpawnParticles(launch, go.transform.position, true);
                 break;
 
@@ -56,15 +60,13 @@ public class ParticleSpawner : MonoBehaviour, Observer {
                 }
                 break;
 
+            case EventName.PlayerExploded:
             case EventName.OnFire:
                 SpawnParticles(onFire, playerpos.position, true);
                 break;
 
             case EventName.Electrocuted:
                 SpawnParticles(electro, playerpos.position, true);
-                break;
-
-            case EventName.BarrelTriggered:
                 break;
 
             case EventName.BarrelExplosion:

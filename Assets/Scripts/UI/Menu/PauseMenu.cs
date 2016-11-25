@@ -22,9 +22,13 @@ public class PauseMenu : MonoBehaviour {
 
     private void UpdateButtonText(Language lan)
     {
+        if (resumeText != null)
         resumeText.text = Translator.instance.Get("resume");
+        if(mainMenuText != null)
         mainMenuText.text = Translator.instance.Get("main menu");
+        if(restartText != null)
         restartText.text = Translator.instance.Get("restart");
+        //if( != null)
     }
 
     /// <summary>
@@ -54,7 +58,10 @@ public class PauseMenu : MonoBehaviour {
     {
         pause = !pause;
         Time.timeScale = pause ? 0 : 1;
-        
+
+        var evt = new ObserverEvent(EventName.Pause);
+        Subject.instance.Notify(gameObject, evt);
+
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).gameObject.SetActive(pause);

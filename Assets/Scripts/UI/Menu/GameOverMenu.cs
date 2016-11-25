@@ -56,7 +56,8 @@ public class GameOverMenu : MonoBehaviour, Observer
                         break;
                 }
 
-                DeathCauseText.text = deathCause + "!";
+                if (DeathCauseText != null)
+                    DeathCauseText.text = deathCause + "!";
 
                 StartCoroutine(GameOver());
                 break;

@@ -13,6 +13,8 @@ public class MenuNavigator : MonoBehaviour {
 	public void SetView(GameObject newView)
     {
         view.SetActive(false);
+        if (view.GetComponent<MenuMain>() != null)
+            view.GetComponent<MenuMain>().UpdateButtonText(SettingsManager.instance.GetLanguage());
         newView.SetActive(true);
         view = newView;
     }

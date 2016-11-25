@@ -8,7 +8,7 @@ public class RoomMakerEditor : EditorWindow {
     public static RoomMakerEditor window;
     RoomMaker RM;
 
-    enum States { noRoom, Editing, Saving, Loading, CreateRoom, Props }
+    enum States { noRoom, Editing, Saving, Loading, CreateRoom, Props, Decor }
     States states;
 
     string roomName;
@@ -22,11 +22,24 @@ public class RoomMakerEditor : EditorWindow {
 
     Vector3 tempPos = Vector3.zero;
 
+    string[] decorItemsNames = null;
+    GameObject[] decorItems;
+
     [MenuItem("RoomEditor/RoomMakerWindow")]
     public static void ShowWindow()
     {
         window = (RoomMakerEditor)EditorWindow.GetWindow(typeof(RoomMakerEditor));
         window.titleContent = new GUIContent("Room Editor", "Used to create and edit rooms.");
+    }
+
+    void GetDecorNames()
+    {
+        decorItems = Resources.LoadAll<GameObject>("RoomDecorObjects");
+        decorItemsNames = new string[decorItems.Length];
+        for (int i = 0; i < decorItems.Length; i++)
+        {
+            decorItemsNames[i] = decorItems[i].name;
+        }
     }
 
     void OnGUI()
@@ -60,6 +73,9 @@ public class RoomMakerEditor : EditorWindow {
             case States.Props:
                 PropCreation();
                 break;
+            case States.Decor:
+                DecorCreation();
+                break;
             default:
                 break;
         }
@@ -69,6 +85,7 @@ public class RoomMakerEditor : EditorWindow {
     {
         if (!RM.EditingRoom())
         {
+            GetDecorNames();
             if (states == States.Loading)
             {
                 return;
@@ -86,6 +103,10 @@ public class RoomMakerEditor : EditorWindow {
                 return;
             }
             if(states == States.Props)
+            {
+                return;
+            }
+            if(states == States.Decor)
             {
                 return;
             }
@@ -134,6 +155,7 @@ public class RoomMakerEditor : EditorWindow {
 
     void Editing()
     {
+        EditorGUILayout.LabelField("MAKING ROOM SHAPE!");
         if (Selection.activeGameObject != null && Selection.activeGameObject.activeInHierarchy)
         {
             if(Selection.activeGameObject.GetComponent<ObjectSelector>() == null)
@@ -221,6 +243,28 @@ public class RoomMakerEditor : EditorWindow {
                     Selection.activeTransform.Rotate(new Vector3(0, -90, 0));
                 }
                 EditorGUILayout.EndHorizontal();
+                if(Selection.activeGameObject.GetComponent<WallSelector>() != null)
+                {
+                    EditorGUILayout.LabelField("Replaceble object selected.");
+                    if(GUILayout.Button("Replace with Door"))
+                    {
+                        GameObject temp = RM.NewDoor(Selection.activeTransform.position);
+                        temp.transform.rotation = Selection.activeTransform.rotation;
+                        DestroyImmediate(Selection.activeGameObject);
+                        Selection.activeGameObject = temp;
+                    }
+                }
+                if(Selection.activeGameObject.GetComponent<Door>() != null)
+                {
+                    EditorGUILayout.LabelField("Replaceble object selected.");
+                    if (GUILayout.Button("Replace with Wall"))
+                    {
+                        GameObject temp = RM.NewWall(Selection.activeTransform.position);
+                        temp.transform.rotation = Selection.activeTransform.rotation;
+                        DestroyImmediate(Selection.activeGameObject);
+                        Selection.activeGameObject = temp;
+                    }
+                }
             }
         }
         else
@@ -284,14 +328,21 @@ public class RoomMakerEditor : EditorWindow {
         }
         EditorGUILayout.EndHorizontal();
         GUILayout.FlexibleSpace();
-        if (GUILayout.Button("Set Props", GUILayout.Height(50)))
+        EditorGUILayout.BeginHorizontal();
+        if (GUILayout.Button("Create interior", GUILayout.Height(50)))
         {
             states = States.Props;
         }
+        if (GUILayout.Button("Create decor", GUILayout.Height(50)))
+        {
+            states = States.Decor;
+        }
+        EditorGUILayout.EndHorizontal();
     }
 
     void PropCreation()
     {
+        EditorGUILayout.LabelField("MAKING ROOM INTERIOR!");
         if (Selection.activeGameObject != null && Selection.activeGameObject.activeInHierarchy)
         {
             if (Selection.activeGameObject.GetComponent<ObjectSelector>() == null)
@@ -369,7 +420,7 @@ public class RoomMakerEditor : EditorWindow {
 
 
         GUILayout.FlexibleSpace();
-        objectToCreate = EditorGUILayout.Popup("Create new object: ", objectToCreate, new string[] { "Select", "Small Object", "Medium Object", "Large Object", "XLarge Object", "Props", "Fuel", "Comic", "Exploding barrel" });
+        objectToCreate = EditorGUILayout.Popup("Create new object: ", objectToCreate, new string[] { "Select", "Medium Object", "Large Object", "XLarge Object", "Props", "Fuel", "Comic", "Exploding barrel" });
         if (Selection.activeTransform != null)
         {
             tempPos = Selection.activeTransform.position;
@@ -378,7 +429,7 @@ public class RoomMakerEditor : EditorWindow {
         {
             tempPos = Vector3.zero;
         }
-        switch (objectToCreate+2)
+        switch (objectToCreate+3)
         {
             /*case 1:
                 Selection.activeGameObject = RM.NewHazard(tempPos);
@@ -388,10 +439,10 @@ public class RoomMakerEditor : EditorWindow {
                 Selection.activeGameObject = RM.NewSwitch(tempPos);
                 objectToCreate = 0;
                 break;*/
-            case 3:
+            /*case 3:
                 Selection.activeGameObject = RM.NewProp(tempPos, 0);
                 objectToCreate = 0;
-                break;
+                break;*/
             case 4:
                 Selection.activeGameObject = RM.NewProp(tempPos, 1);
                 objectToCreate = 0;
@@ -409,15 +460,15 @@ public class RoomMakerEditor : EditorWindow {
                 objectToCreate = 0;
                 break;
             case 8:
-                Selection.activeGameObject = RM.NewPickUp(tempPos,0);
+                Selection.activeGameObject = RM.NewPickUp(tempPos + new Vector3(0,2,0),0);
                 objectToCreate = 0;
                 break;
             case 9:
-                Selection.activeGameObject = RM.NewPickUp(tempPos,1);
+                Selection.activeGameObject = RM.NewPickUp(tempPos + new Vector3(0, 2, 0), 1);
                 objectToCreate = 0;
                 break;
             case 10:
-                Selection.activeGameObject = RM.NewBarrel(tempPos);
+                Selection.activeGameObject = RM.NewBarrel(tempPos + new Vector3(0,1,0));
                 objectToCreate = 0;
                 break;
             default:
@@ -425,10 +476,93 @@ public class RoomMakerEditor : EditorWindow {
         }
 
         GUILayout.FlexibleSpace();
+        GUILayout.BeginHorizontal();
         if (GUILayout.Button("Edit room", GUILayout.Height(50)))
         {
             states = States.Editing;
         }
+        if (GUILayout.Button("Create Decor", GUILayout.Height(50)))
+        {
+            states = States.Decor;
+        }
+        GUILayout.EndHorizontal();
+    }
+
+    void DecorCreation()
+    {
+        EditorGUILayout.LabelField("MAKING ROOM DECOR!");
+        if (Selection.activeGameObject != null && Selection.activeGameObject.activeInHierarchy)
+        {
+            if (Selection.activeGameObject.GetComponent<ObjectSelector>() == null)
+            {
+                if (Selection.activeTransform.parent != null)
+                {
+                    if (Selection.activeTransform.parent.GetComponent<ObjectSelector>() != null)
+                    {
+                        Selection.activeTransform = Selection.activeTransform.parent;
+                    }
+                }
+            }
+            EditorGUILayout.LabelField("Rotable Object Selected.");
+            EditorGUILayout.BeginHorizontal();
+            if (GUILayout.Button("+45"))
+            {
+                Selection.activeTransform.Rotate(new Vector3(0, 45, 0));
+            }
+            if (GUILayout.Button("+90"))
+            {
+                Selection.activeTransform.Rotate(new Vector3(0, 90, 0));
+            }
+            if (GUILayout.Button("180"))
+            {
+                Selection.activeTransform.Rotate(new Vector3(0, 180, 0));
+            }
+            if (GUILayout.Button("-90"))
+            {
+                Selection.activeTransform.Rotate(new Vector3(0, -90, 0));
+            }
+            if (GUILayout.Button("-45"))
+            {
+                Selection.activeTransform.Rotate(new Vector3(0, -45, 0));
+            }
+            EditorGUILayout.EndHorizontal();
+        }
+        GUILayout.FlexibleSpace();
+        List<string> toShow = new List<string>();
+        toShow.Add("Select");
+        toShow.AddRange(decorItemsNames);
+        objectToCreate = EditorGUILayout.Popup("Create new object: ", objectToCreate ,toShow.ToArray());
+
+        if (Selection.activeTransform != null)
+        {
+            tempPos = Selection.activeTransform.position;
+        }
+        else
+        {
+            tempPos = Vector3.zero;
+        }
+
+        if (objectToCreate != 0)
+        {
+            Selection.activeGameObject = RM.NewDecorObject(tempPos, decorItems[objectToCreate - 1]);
+            objectToCreate = 0;
+        }
+        if (GUILayout.Button("Reload Objects (only do this if the dropdown is empty! Or if an object throws an error when you try to create it)"))
+        {
+            GetDecorNames();
+        }
+
+        GUILayout.FlexibleSpace();
+        GUILayout.BeginHorizontal();
+        if (GUILayout.Button("Edit room", GUILayout.Height(50)))
+        {
+            states = States.Editing;
+        }
+        if (GUILayout.Button("Create interior", GUILayout.Height(50)))
+        {
+            states = States.Props;
+        }
+        GUILayout.EndHorizontal();
     }
 
     void SpawnHazardOrSwitch()

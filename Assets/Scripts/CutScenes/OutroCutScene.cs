@@ -37,12 +37,6 @@ public class OutroCutScene : MonoBehaviour, Observer {
         evt = new ObserverEvent(EventName.StartCutscene);
         Subject.instance.Notify(gameObject, evt);
 
-        evt = new ObserverEvent(EventName.PlayerLaunch);
-        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, 0.5f);
-        evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, player.transform.forward);
-        evt.payload.Add(PayloadConstants.START_STOP, true);
-        Subject.instance.Notify(player, evt);
-
         anim.SetTrigger("Open");
     }
 
@@ -50,6 +44,15 @@ public class OutroCutScene : MonoBehaviour, Observer {
     {
         var evt = new ObserverEvent(EventName.PlayerWon);
         Subject.instance.Notify(gameObject, evt);
+    }
+
+    public void StartFly()
+    {
+        var evt = new ObserverEvent(EventName.PlayerLaunch);
+        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, 0.5f);
+        evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, playerPos.transform.forward);
+        evt.payload.Add(PayloadConstants.START_STOP, true);
+        Subject.instance.Notify(playerPos.gameObject, evt);
     }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)

@@ -9,6 +9,8 @@ public class OxygenController : MonoBehaviour
     [HideInInspector]
     public bool godMode = false;
 
+    public bool fuelGodMode = false;
+
     public GameObject oxygenObject;
     private List<Renderer> oxygenRenderers;
 
@@ -28,7 +30,7 @@ public class OxygenController : MonoBehaviour
 
     public void UseOxygen()
     {
-        if (!godMode)
+        if (!godMode && !fuelGodMode)
         {
             oxygen--;
             ThrowOxygenChangedEvent();

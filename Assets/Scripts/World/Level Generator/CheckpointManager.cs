@@ -7,7 +7,7 @@ public class CheckpointManager : Singleton<CheckpointManager>, Observer {
     Vector3 rotation = Vector3.zero;
     int fuelCount = 0;
 
-    float spawnDistance;
+    float spawnDistance = 0;
 
     public GameObject playerPrefab;
     GameObject temp;

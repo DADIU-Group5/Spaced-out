@@ -49,7 +49,7 @@ public class EntryCutScene : MonoBehaviour {
         playerObj.parent = null;
 
         CheckpointManager.instance.SetNewCheckpoint(playerPos.position);
-        CheckpointManager.instance.SetNewCheckpointRotation(playerPos.right);
+        CheckpointManager.instance.SetNewCheckpointRotation(playerPos.forward);
 
         cam.gameObject.SetActive(false);
 
@@ -60,8 +60,6 @@ public class EntryCutScene : MonoBehaviour {
         evt = new ObserverEvent(EventName.PlayerSpawned);
         evt.payload.Add(PayloadConstants.PLAYER, playerObj.GetComponentInChildren<PlayerController>().gameObject);
         Subject.instance.Notify(gameObject, evt);
-
-       Camera.main.transform.parent.parent.GetComponent<InputController>().SetViewDirection(key.transform.position);
 
     }
 

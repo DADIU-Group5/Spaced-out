@@ -11,6 +11,7 @@ public class TutorialTrigger : MonoBehaviour {
         if (collider.CompareTag("Player"))
         {
             callback.Invoke();
+            Destroy(gameObject);
         }
     }
 }

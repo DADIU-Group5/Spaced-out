@@ -27,12 +27,16 @@ public class MenuLevelSelect : MonoBehaviour {
 
     private void UpdateButtonText(Language lan)
     {
+        if (tutorialText != null)
         tutorialText.text = Translator.instance.Get("tutorial");
-        backText.text = Translator.instance.Get("back");
-        generateText.text = Translator.instance.Get("generate levels (costs 15x medals)");
+        if (backText != null)
+            backText.text = Translator.instance.Get("back");
+        if (generateText != null)
+            generateText.text = Translator.instance.Get("generate levels (costs 15x medals)");
         for (int i = 0; i < levelButtons.Length; i++)
         {
-            levelButtons[i].GetComponentInChildren<Text>().text = Translator.instance.Get("level") + " " + (i+1);
+            if (levelButtons[i] != null)
+                levelButtons[i].GetComponentInChildren<Text>().text = Translator.instance.Get("level") + " " + (i+1);
         }
     }
 

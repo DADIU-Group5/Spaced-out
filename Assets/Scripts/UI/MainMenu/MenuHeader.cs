@@ -18,10 +18,13 @@ public class MenuHeader : MonoBehaviour {
 
     private void UpdateButtonText(Language lan)
     {
-        medaltext.text = Translator.instance.Get("medals") + ":";//medaltext.text.ToString());
+        if (medaltext != null)
+            medaltext.text = Translator.instance.Get("medals") + ":";//medaltext.text.ToString());
         //hardcode
-        resetMedalstext.text = Translator.instance.Get("reset medals");
-        resetAlltext.text = Translator.instance.Get("reset all");
+        if (resetMedalstext != null)
+            resetMedalstext.text = Translator.instance.Get("reset medals");
+        if (resetAlltext != null)
+            resetAlltext.text = Translator.instance.Get("reset all");
     }
 
     public void UpdateMedalLabel()

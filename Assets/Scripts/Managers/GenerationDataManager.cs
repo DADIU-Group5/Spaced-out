@@ -26,6 +26,7 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
     /// </summary>
     public void RandomizeSeeds()
     {
+        ProgressManager.instance.Reset();
         for (int i = 0; i < generationData.levels.Length; i++)
         {
             generationData.levels[i].exteriorSeed = RandomSeed();

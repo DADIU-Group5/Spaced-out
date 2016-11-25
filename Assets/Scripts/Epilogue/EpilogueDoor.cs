@@ -27,10 +27,10 @@ public class EpilogueDoor : MonoBehaviour, Observer {
 
     public void Ended()
     {
-        var evt = new ObserverEvent(EventName.ToggleUI);
-        Subject.instance.Notify(gameObject, evt);
+        //var evt = new ObserverEvent(EventName.ToggleUI);
+        //Subject.instance.Notify(gameObject, evt);
 
-        evt = new ObserverEvent(EventName.PlayerSpawned);
+        var evt = new ObserverEvent(EventName.PlayerSpawned);
         evt.payload.Add(PayloadConstants.PLAYER, player.GetComponentInChildren<PlayerController>().gameObject);
         Subject.instance.Notify(gameObject, evt);
         player.GetComponent<Rigidbody>().isKinematic = false;

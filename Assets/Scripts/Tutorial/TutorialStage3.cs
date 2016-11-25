@@ -10,6 +10,9 @@ public class TutorialStage3 : MonoBehaviour {
     [Header("Cameras")]
     public GameObject playerCameraPod;
     public SimpelAnimation oxygenCamera;
+    public SimpelAnimation hazardCamera;
+    [Header("Triggers")]
+    public TutorialTrigger secondRoom;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +27,7 @@ public class TutorialStage3 : MonoBehaviour {
 
         // play camera animation after small delay
         Invoke("PlayZoomOxygenAnimation", 1f);
+        secondRoom.callback = PlayZoomHazardAnimation;
     }
 
     private void PlayZoomOxygenAnimation()
@@ -37,12 +41,24 @@ public class TutorialStage3 : MonoBehaviour {
         oxygenCamera.PlayAnimations(EnablePlayerControl);
     }
 
+    public void PlayZoomHazardAnimation()
+    {
+        // disable input
+        var evt = new ObserverEvent(EventName.DisableInput);
+        Subject.instance.Notify(gameObject, evt);
+
+        playerCameraPod.SetActive(false);
+        hazardCamera.gameObject.SetActive(true);
+        hazardCamera.PlayAnimations(EnablePlayerControl);
+    }
+
+    // enable player controls again
     private void EnablePlayerControl()
     {
         var evt = new ObserverEvent(EventName.EnableInput);
         Subject.instance.Notify(gameObject, evt);
         playerCameraPod.SetActive(true);
         oxygenCamera.gameObject.SetActive(false);
-
+        hazardCamera.gameObject.SetActive(false);
     }
 }

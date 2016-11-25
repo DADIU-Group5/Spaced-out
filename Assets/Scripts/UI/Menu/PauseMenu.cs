@@ -54,7 +54,10 @@ public class PauseMenu : MonoBehaviour {
     {
         pause = !pause;
         Time.timeScale = pause ? 0 : 1;
-        
+
+        var evt = new ObserverEvent(EventName.Pause);
+        Subject.instance.Notify(gameObject, evt);
+
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).gameObject.SetActive(pause);

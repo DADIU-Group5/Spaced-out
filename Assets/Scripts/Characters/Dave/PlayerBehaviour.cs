@@ -30,7 +30,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     {
         dead = true;
         // slow player
-        GetComponent<Rigidbody>().velocity *= 0.5f;
+        GetComponent<Rigidbody>().velocity *= 0.4f;
         // start animations
         animator.SetTrigger("Burn");
         Invoke("StartDeathAnimation", burnDuration);
@@ -41,7 +41,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     {
         dead = true;
         // slow player
-        GetComponent<Rigidbody>().velocity *= 0.5f;
+        GetComponent<Rigidbody>().velocity *= 0f;
         // start animations
         animator.SetTrigger("Shock");
         Invoke("StartDeathAnimation", shockDuration);

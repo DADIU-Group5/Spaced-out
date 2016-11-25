@@ -48,6 +48,7 @@ public class OutroCutScene : MonoBehaviour, Observer {
 
     public void StartFly()
     {
+        playerPos.GetChild(0).GetComponent<PlayerController>().Aim(keyPos.transform.position);
         var evt = new ObserverEvent(EventName.PlayerLaunch);
         evt.payload.Add(PayloadConstants.LAUNCH_FORCE, 0.5f);
         evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, playerPos.transform.forward);

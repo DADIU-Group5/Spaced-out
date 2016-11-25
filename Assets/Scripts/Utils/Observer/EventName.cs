@@ -14,6 +14,7 @@
     RespawnPlayer,
     OnFire,
     Extinguish,
+    PlayerGotKey,
     PlayerWon,
     UpdateOxygen,
     LaunchPowerChanged,
@@ -49,6 +50,7 @@
     DisableInput,
     GALAnimate,
     EnableInput,
+    UIButton,
     DisableCameraInput,
     EnableCameraInput
 }

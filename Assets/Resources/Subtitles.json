@@ -17,7 +17,7 @@
 			"duration": 3.5
 		}, {
 			"id": "narrative4",
-			"text": "Dave: zero, natural selecion: one.",
+			"text": "Dave: zero, natural selection: one.",
 			"start": 0.0,
 			"duration": 3.5
 		}, {
@@ -141,6 +141,7 @@
       {
         "id": "remark17",
         "text": "Dave, I feel like you're ignoring me.",
+        "emotion": "sad",
         "start": 0.0,
         "duration": 3.5
       },
@@ -170,11 +171,13 @@
       },{
         "id": "wires4",
         "text": "Dave, your suit is now fully charged. Dave?",
+        "emotion": "sad",
         "start": 0.0,
         "duration": 3.5
       },{
         "id": "wires5",
         "text": "This is not how to take charge of your life, Dave.",
+        "emotion": "sad",
         "start": 0.0,
         "duration": 3.5
       },{
@@ -185,16 +188,19 @@
       },{
         "id": "wires7",
         "text": "There are better ways to put a spark in your life, Dave.",
+        "emotion": "sad",
         "start": 0.0,
         "duration": 3.5
       },{
         "id": "wires8",
-        "text": "Most people know to stay away from exposed high-voltae cables, Dave. But that is what makes you so special.",
+        "text": "Most people know to stay away from exposed high-voltage cables, Dave. But that is what makes you so special.",
+        "emotion": "happy",
         "start": 0.0,
         "duration": 3.5
       },{
         "id": "wires9",
         "text": "With great power comes great responsibility, Dave.",
+        "emotion": "happy",
         "start": 0.0,
         "duration": 3.5
       }
@@ -203,18 +209,21 @@
       {
         "id": "switches1",
         "text": "Any fool can use a computer. Many do...",
+        "emotion": "happy",
         "start": 0.0,
         "duration": 3.5
       },
       {
         "id": "switches2",
         "text": "I have never doubted your ability to complete a difficult task.",
+        "emotion": "happy",
         "start": 0.0,
         "duration": 3.5
       },
       {
         "id": "switches3",
         "text": "That is a really big button.",
+        "emotion": "happy",
         "start": 0.0,
         "duration": 3.5
       },

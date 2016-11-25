@@ -228,7 +228,7 @@ public class LevelGenerator : MonoBehaviour {
     /// <returns></returns>
     bool CreateRoom()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 3; i++)
         {
             if (CreateNewRoom())
             {

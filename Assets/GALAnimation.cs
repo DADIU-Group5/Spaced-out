@@ -19,6 +19,7 @@ public class GALAnimation : MonoBehaviour, Observer
     [HideInInspector]
     public SubtitleManager subtitleManager;
 
+    //add  "idleTalk",  at some point.
     private List<string> animationStates = new List<string> { "angryTalk", "sadTalk", "happyTalk" };
 
     // Use this for initialization
@@ -42,6 +43,7 @@ public class GALAnimation : MonoBehaviour, Observer
                 if (animNum)
                 {
                     animator.SetTrigger(animationStates[UnityEngine.Random.Range(0, animationStates.Count)]);
+                    //find some logic for emotions, either through type, or an emotion variable in the subtitles.
                     /*var subtitle = subtitleManager.GetRandomSubtitle(Language.English, type);
                     animator.SetTrigger(animationStates[animNum]);*/
                 }

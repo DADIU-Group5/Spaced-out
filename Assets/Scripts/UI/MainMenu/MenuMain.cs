@@ -27,6 +27,10 @@ public class MenuMain : Singleton<MenuMain> {
         settingsBtnTxt.text = Translator.instance.Get("settings");
         shopBtnTxt.text = Translator.instance.Get("shop");
         exitBtnTxt.text = Translator.instance.Get("exit");
+
+        var evt = new ObserverEvent(EventName.ChangeLanguage);
+        evt.payload.Add(PayloadConstants.LANGUAGE, lan);
+        Subject.instance.Notify(gameObject, evt);
     }
 
     public void Back()

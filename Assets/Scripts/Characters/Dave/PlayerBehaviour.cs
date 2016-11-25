@@ -18,6 +18,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     private bool dead;
     private EventName causeOfDeath;
 
+
     // Use this for initialization
     void Start()
     {
@@ -28,6 +29,8 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     private void Burn()
     {
         dead = true;
+        // slow player
+        GetComponent<Rigidbody>().velocity *= 0.5f;
         // start animations
         animator.SetTrigger("Burn");
         Invoke("StartDeathAnimation", burnDuration);
@@ -37,6 +40,8 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     private void Shock()
     {
         dead = true;
+        // slow player
+        GetComponent<Rigidbody>().velocity *= 0.5f;
         // start animations
         animator.SetTrigger("Shock");
         Invoke("StartDeathAnimation", shockDuration);
@@ -131,7 +136,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
             // in case we hit a key we throw win event and destroy key
             var evt = new ObserverEvent(EventName.PlayerGotKey);
             Subject.instance.Notify(gameObject, evt);
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
         }
     }
 

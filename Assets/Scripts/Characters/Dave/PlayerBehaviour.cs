@@ -136,7 +136,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
             // in case we hit a key we throw win event and destroy key
             var evt = new ObserverEvent(EventName.PlayerGotKey);
             Subject.instance.Notify(gameObject, evt);
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
         }
     }
 

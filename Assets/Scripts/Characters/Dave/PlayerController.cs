@@ -7,7 +7,6 @@ public interface IPlayerControl
 {
     void Aim(Vector3 point);
     void ReadyForLaunch();
-    void CancelLaunch();
     void SetPower(float power); // 0 = min power, 1 = max power
     void Launch();
 }
@@ -127,15 +126,6 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         Vector3 direction = (point - transform.position).normalized;
         aim = Quaternion.LookRotation(direction);
     }
-
-    /// <summary>
-    /// Cancel the launch and make player go back into ready for launch
-    /// </summary>
-    public void CancelLaunch()
-    {
-        animator.SetTrigger("Ready To Launch");
-    }
-
 
     /// <summary>
     /// set power for next launch

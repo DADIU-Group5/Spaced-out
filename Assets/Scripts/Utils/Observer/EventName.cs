@@ -52,5 +52,6 @@
     EnableInput,
     UIButton,
     DisableCameraInput,
-    EnableCameraInput
+    EnableCameraInput,
+    ChangeLanguage
 }

@@ -22,6 +22,7 @@ public class DrawTrajectory : MonoBehaviour, Observer {
         Subject.instance.AddObserver(this);
     }
     
+    // This can only be put into Update() if it is called after CameraController's Update, since this code depends on that code to be finished
     void LateUpdate () {
         // First, check if there is a target, and if not, don't do anything.
         if(target == null)

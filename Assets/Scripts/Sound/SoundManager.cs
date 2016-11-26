@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class SoundManager : Singleton<SoundManager>, Observer
 {
@@ -7,17 +8,10 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
     bool chargePlaying = false;
 
-    // TODO: hide from editor 
-    [Range(0, 100)]
-    public float masterVolume;
-
-    [Range(0, 100)]
-    public float musicVolume;
-
-    [Range(0, 100)]
-    public float effectsVolume;
-
-    public bool mute = false;
+    private float masterVolume;
+    private float musicVolume;
+    private float effectsVolume;
+    private bool mute = false;
 
     private DoorOpenCloseTrigger doorTrigger;
     public BarrelTrigger barrelTrigger;
@@ -41,6 +35,8 @@ public class SoundManager : Singleton<SoundManager>, Observer
         mute = settings.mute;
 
         MuteSound(mute);
+
+        SetLanguage(settings.language);
     }
 
     private class Waiter
@@ -50,10 +46,6 @@ public class SoundManager : Singleton<SoundManager>, Observer
             yield return new WaitForSeconds(10);
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    { }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
@@ -71,11 +63,11 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 bool playMusic = (bool)payload[PayloadConstants.START_STOP];
 
                 PlayEvent(SoundEventConstants.DAVE_LAUNCH);
-                if (playMusic)
-                {
-                    PlayEvent(SoundEventConstants.MUSIC_MAIN_STOP);
-                    PlayEvent(SoundEventConstants.MUSIC_MAIN_PLAY);
-                }
+                //if (playMusic)
+                //{
+                //    PlayEvent(SoundEventConstants.MUSIC_MAIN_STOP);
+                //    PlayEvent(SoundEventConstants.MUSIC_MAIN_PLAY);
+                //}
 
                 break;
 
@@ -126,8 +118,26 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 // TODO: Use payload for different clicks.
                 PlayEvent(SoundEventConstants.MENU_CLICK_FORWARDS);
                 break;
+            case EventName.SwitchPressed:
+                if ((bool)evt.payload[PayloadConstants.SWITCH_ON])
+                    PlayEvent(SoundEventConstants.SWITCH_ON);
+                else
+                {
+                    PlayEvent(SoundEventConstants.SWITCH_OFF);
+                }
+                break;
+            case EventName.ChangeLanguage:
+                SetLanguage((Language)evt.payload[PayloadConstants.LANGUAGE]);
+                break;
         }
+    }
 
+    private void SetLanguage(Language language)
+    {
+        if (language == Language.English)
+            AkSoundEngine.SetState("galLanguage", "Eng");
+        else
+            AkSoundEngine.SetState("galLanguage", "Dan");
     }
 
     private void PlayEvent(string eventName)

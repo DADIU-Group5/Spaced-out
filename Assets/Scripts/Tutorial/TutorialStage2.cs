@@ -16,15 +16,18 @@ public class TutorialStage2 : MonoBehaviour
     public TutorialTrigger secondRoom;
     public Brain galAI;
 
+    private OxygenController oxygenController;
+
     // Use this for initialization
     void Start()
     {
         GameObject go = Instantiate(playerPrefab, playerSpawnPoint.position, Quaternion.identity) as GameObject;
         go.transform.LookAt(transform.position, Vector3.up);
 
-        // oxygenController = GameObject.Find("Player(Clone)").GetComponent<OxygenController>();
-        // go.GetComponentInChildren<OxygenController>().SetOxygen(1);
-        // oxygenController = go.GetComponentInChildren<OxygenController>();
+        oxygenController = GameObject.Find("Player(Clone)").GetComponent<OxygenController>();
+        oxygenController.fuelGodMode = true;
+        oxygenController.godMode = true;
+        //oxygenController = go.GetComponentInChildren<OxygenController>();
 
         var evt = new ObserverEvent(EventName.StartCutscene);
         Subject.instance.Notify(gameObject, evt);

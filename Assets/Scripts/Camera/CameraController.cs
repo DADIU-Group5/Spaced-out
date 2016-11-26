@@ -38,6 +38,11 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
         camZoomStartPos = camZoomIn;
     }
 
+    void Start()
+    {
+        transform.rotation = target.transform.rotation;
+    }
+
     // First do zooming in Update(), then place camera in front of objects if the current zoom position is incorrect
     void Update()
     {

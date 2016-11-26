@@ -55,6 +55,13 @@ public class SimpelAnimation : MonoBehaviour {
             yield break; // stop
         }
 
+        // if no duration is set, we just go directly to target
+        if (anim.duration <= 0)
+        {
+            transform.position = anim.target.position;
+            transform.rotation = anim.target.rotation;
+        }
+
         // do the animation
         while (time < anim.duration)
         {

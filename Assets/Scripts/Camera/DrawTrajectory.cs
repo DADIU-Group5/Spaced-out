@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class DrawTrajectory : MonoBehaviour, Observer {
 
-    public LineRenderer LR;
+    
     public float length = 1;
     public int maxBounces = 4;
     public InputController inputCont;
@@ -16,10 +16,12 @@ public class DrawTrajectory : MonoBehaviour, Observer {
     private int currentBounces;
     private RaycastHit globalHit;
     private Vector3 currentRayPos, currentDirection;
+    private LineRenderer LR;
 
     private void Awake()
     {
         Subject.instance.AddObserver(this);
+        LR = GetComponent<LineRenderer>();
     }
     
     // This can only be put into Update() if it is called after CameraController's Update, since this code depends on that code to be finished

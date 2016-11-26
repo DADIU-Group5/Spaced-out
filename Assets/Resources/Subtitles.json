@@ -4,7 +4,7 @@
 			"id": "narrative1",
 			"text": "Dave my sensors are picking up something... It's coming closer.",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 4.5
 		}, {
 			"id": "narrative2",
 			"text": "Alert, Prepare for impact",
@@ -38,6 +38,11 @@
 		},{
 			"id": "narrative8",
 			"text": "You're lucky we have the technology to bring you back when you hurt yourself.",
+			"start": 0.0,
+			"duration": 4
+		},{
+			"id": "narrative9",
+			"text": "Your jetpack seems to be damaged!",
 			"start": 0.0,
 			"duration": 3.5
 		}],
@@ -267,12 +272,12 @@
 			"id": "fan2",
 			"text": "Just go with the flow, spaceman.",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 3.0
 		},{
 			"id": "fan3",
 			"text": "I always though you were an airhead.",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 2.8
 		},{
 			"id": "fan4",
 			"text": "The fan is not the only thing in this room that sucks.",
@@ -294,12 +299,12 @@
         "id": "gasLeak1",
         "text": "Did you smell something Dave?",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 2.5
       },{
 			"id": "gasLeak2",
 			"text": "Dave, I'm just informing you that you're on fire.",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 4.5
 		},{
 			"id": "gasLeak3",
 			"text": "Remember, Dave; Stop, drop, and roll!",
@@ -309,7 +314,7 @@
 			"id": "gasLeak4",
 			"text": "You managed to create fire... in space... only you, Dave.",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 3.8
 		},{
 			"id": "gasLeak5",
 			"text": "Put you out? I'm sorry, Dave, I'm afraid I can't do that.",
@@ -331,19 +336,19 @@
         "id": "lowOxygen1",
         "text": " My readings tell me that your oxygen levels are low.",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 2.5
       },
       {
         "id": "lowOxygen2",
         "text": "My scans show an oxygen tank somewhere in this area i recommend you collect one",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 7.4
       },
       {
         "id": "lowOxygen3",
         "text": "They really should separate the oxygen for breathing and the oxygen for fuel in these jetpacks. Or maybe not.",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 7.4
       },
       {
         "id": "lowOxygen4",
@@ -405,42 +410,47 @@
 		"narrative": [{
 			"id": "narrative1",
 			"text": "Dave, mine sensorere har opfanget noget... Det nærmer sig, hurtigt.",
-			"start": 0.5,
-			"duration": 3.5
+			"start": 0.0,
+			"duration": 4.5
 		}, {
 			"id": "narrative2",
 			"text": "Advarsel, Bered på sammenstød.",
-			"start": 0.5,
+			"start": 0.0,
 			"duration": 3.5
 		}, {
 			"id": "narrative3",
 			"text": "Dave, jeg har åbnet porten til redningskapslen, vær sød at evakuere station.",
-			"start": 0.5,
+			"start": 0.0,
 			"duration": 3.5
 		}, {
 			"id": "narrative4",
 			"text": "Dave: nul, Darwin: 1.",
-			"start": 0.5,
+			"start": 0.0,
 			"duration": 3.5
 		}, {
 			"id": "narrative5",
 			"text": "Jeg er sikker på at du stadig husker hvordan jetpacken virker, meeeen nu siger jeg det lige igen. Bare peg dig den vej du vil hen, start raketten og fyr løs",
-			"start": 0.5,
+			"start": 0.0,
 			"duration": 3.5
 		}, {
 			"id": "narrative6",
 			"text": "Der her sted virker ikke særligt sikkert... Men hey! Der er kun en måde at finde ud det på!",
-			"start": 0.5,
+			"start": 0.0,
 			"duration": 3.5
 		}, {
 			"id": "narrative7",
 			"text": "Hvad har du gang i, Dave? Du skal hen imod rednings kapslen.",
-			"start": 0.5,
+			"start": 0.0,
 			"duration": 3.5
 		}, {
 			"id": "narrative8",
 			"text": "Vi har teknologien til at bringe dig tilbage, når du kan galt af sted. Heldigt for dig.",
-			"start": 0.5,
+			"start": 0.0,
+			"duration": 3.5
+		}, {
+			"id": "narrative9",
+			"text": "Dit jetpack seems to be damaged!",
+			"start": 0.0,
 			"duration": 3.5
 		}],
     "generalRemarks": [

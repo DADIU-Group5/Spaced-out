@@ -6,13 +6,12 @@ public class Brain : Singleton<Brain>, Observer
 {
     public State state;
     private ObserverEvent currentEvent;
-//    private ObserverEvent queueEvent;
+    private string queuedNarrative;
     public int seconds = 12;
     public float chance = 0.4f;
-    //public float windowToPlaySound = 1.5f;
     public SubtitleManager subtitleManager;
 
-    public bool muteDaBitch = false;
+    public bool randomRemarks = true;
 
     private Language language;
 
@@ -32,7 +31,7 @@ public class Brain : Singleton<Brain>, Observer
         {
             yield return new WaitForSeconds(seconds);
 
-            if (!muteDaBitch && Random.value < chance)
+            if (randomRemarks && Random.value < chance)
             {
                 state = State.GeneralRemarks;
             }
@@ -45,12 +44,7 @@ public class Brain : Singleton<Brain>, Observer
     {
         Debug.Log("Narrative: Enter");
 
-        SubtitleType type = SubtitleType.Narrative;
-
-        if (Random.value < 0.5f)
-            type = SubtitleType.GeneralRemarks;
-        
-        var sub = subtitleManager.GetRandomSubtitle(language, type);
+        var sub = subtitleManager.GetSubtitle(queuedNarrative, language);
 
         var narEvt = new ObserverEvent(EventName.Narrate);
         narEvt.payload.Add(PayloadConstants.NARRATIVE_ID, sub.id);
@@ -145,6 +139,21 @@ public class Brain : Singleton<Brain>, Observer
         //StartCoroutine((IEnumerator)info.Invoke(this, null));
     }
 
+    public void Narrate(string remarkId)
+    {
+        queuedNarrative = remarkId;
+        StopCoroutine("SilentState");
+        state = State.Narrative;
+        NextState();
+    }
+
+    public void ToggleSilence(bool silenceGAL)
+    {
+        if (silenceGAL)
+            Subject.instance.RemoveObserver(this);
+        else
+            Subject.instance.AddObserver(this);
+    }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {

@@ -114,9 +114,8 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 PlayEvent(SoundEventConstants.DAVE_VENT);
                 break;
 
-            case EventName.ToggleUI:
-                // TODO: Use payload for different clicks.
-                PlayEvent(SoundEventConstants.MENU_CLICK_FORWARDS);
+            case EventName.UIButton:
+                PlayEvent((string)evt.payload[PayloadConstants.TYPE]);
                 break;
             case EventName.SwitchPressed:
                 if ((bool)evt.payload[PayloadConstants.SWITCH_ON])

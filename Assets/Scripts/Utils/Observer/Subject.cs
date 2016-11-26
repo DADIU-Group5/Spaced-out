@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Subject : Singleton<Subject>
 {
     //A list with observers that are waiting for something to happen
-    List<Observer> observers = new List<Observer>();
+    HashSet<Observer> observers = new HashSet<Observer>();
 
     //Send notifications if something has happened
     public void Notify(GameObject entity, ObserverEvent evt)
@@ -24,10 +24,10 @@ public class Subject : Singleton<Subject>
         observers.Add(observer);
     }
 
-    public void AddObserverToBegining(Observer observer)
-    {
-        observers.Insert(0, observer);
-    }
+    //public void AddObserverToBegining(Observer observer)
+    //{
+    //    observers.Insert(0, observer);
+    //}
 
     //Remove observer from the list
     public void RemoveObserver(Observer observer)

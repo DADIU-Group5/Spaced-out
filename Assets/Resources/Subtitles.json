@@ -40,6 +40,11 @@
 			"text": "You're lucky we have the technology to bring you back when you hurt yourself.",
 			"start": 0.0,
 			"duration": 3.5
+		},{
+			"id": "narrative9",
+			"text": "Your jetpack seems to be damaged!",
+			"start": 0.0,
+			"duration": 3.5
 		}],
     "generalRemarks": [
       {
@@ -441,6 +446,11 @@
 			"id": "narrative8",
 			"text": "Vi har teknologien til at bringe dig tilbage, når du kan galt af sted. Heldigt for dig.",
 			"start": 0.5,
+			"duration": 3.5
+		}, {
+			"id": "narrative9",
+			"text": "Dit jetpack seems to be damaged!",
+			"start": 0.0,
 			"duration": 3.5
 		}],
     "generalRemarks": [

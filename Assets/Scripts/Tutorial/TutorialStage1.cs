@@ -1,109 +1,87 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+using UnityEngine.SceneManagement;
 
-public class TutorialStage1 : MonoBehaviour
+public class TutorialStage1 : MonoBehaviour, Observer
 {
     public GameObject player;
-    [Header("Triggers")]
-    public GameObject aimTrigger;
-    public GameObject roomTrigger;
-    [Header("Cameras")]
-    public SimpelAnimation roomCamera;
-
-
-
-
-
-
     public GameObject playerCamera;
-    public GameObject staticCamera;
-    public GameObject doorCamera;
-    public GameObject keysCamera;
-    public GuidanceImageController guidanceObject;
-    public InputController input;
-    public Transform key;
-    public GameObject aimCollider;
-    public GameObject tutorialTrigger;
+    [Header("Triggers")]
+    public TutorialTrigger missingKeysTrigger;
+    public GameObject aimTrigger;
+    [Header("Cameras")]
+    public SimpelAnimation missingKeysCamera;
+    [Header("UI Tips")]
+    public GameObject rotationTip;
+    public GameObject powerTip;
+    public GameObject launchTip;
 
-    private bool aimSpotted = false;
+    private GameObject key;
+    private bool hasLaunched;
 
     // Use this for initialization
     void Start()
     {
-        guidanceObject.Activate();
+        Subject.instance.AddObserver(this);
+        // disable key
+        key = GameObject.FindGameObjectWithTag("Key");
+        key.SetActive(false);
+        // disable camera input
+        var statusEvent = new ObserverEvent(EventName.DisableCameraInput);
+        Subject.instance.Notify(gameObject, statusEvent);
+        // setup UI tips
+        rotationTip.SetActive(false);
+        powerTip.SetActive(true);
+        launchTip.SetActive(false);
+        // call once player hits trigger
+        missingKeysTrigger.callback = BeginMissingKeysCutscene;
+
+        //guidanceObject.Activate();
         AkSoundEngine.PostEvent("narrative3", gameObject);
-    }
 
-    void Update()
-    {
-        if(!aimSpotted)
-            CheckTutorialAim();
+        
     }
-
-    void OnTriggerEnter(Collider coll)
+    
+    private void BeginMissingKeysCutscene()
     {
-        if (coll.CompareTag("Tutorial Room"))
-        {
-            coll.gameObject.SetActive(false);
-            SetStaticCamera();
-            GetComponent<Rigidbody>().velocity = new Vector3(7.5f, 0, 0);
-        }
-        else if (coll.CompareTag("Tutorial Door"))
-        {
-            coll.gameObject.SetActive(false);
-            SetDoorCamera();
-            Invoke("ToggleKeyTrigger", 2.5f);
-        }
-        else if (coll.CompareTag("Tutorial Trigger"))
-        {
-            coll.gameObject.SetActive(false);
-            key.gameObject.SetActive(true);
-            Invoke("StartMovingCamera", 2.5f);
-            GetComponent<PlayerController>().ReadyForLaunch();
-            GetComponent<Rigidbody>().velocity = Vector3.zero;
-            //animator.SetTrigger("Missing Keys");
-            var statusEvent = new ObserverEvent(EventName.DisableInput);
-            Subject.instance.Notify(gameObject, statusEvent);
-        }
-    }
+        // spawn key
+        key.SetActive(true);
 
-    void SetStaticCamera()
-    {
+        // set fixed velocity
+        player.GetComponent<Rigidbody>().velocity = new Vector3(8.5f, 0, 0);
+        Invoke("PlayMissingKeysAnimation", 2f);
+
+        // begin camera animation
         playerCamera.SetActive(false);
-        staticCamera.SetActive(true);
+        missingKeysCamera.gameObject.SetActive(true);
+        missingKeysCamera.PlayAnimations(MissingKeysCutsceneDone);
     }
 
-    void StartMovingCamera()
+    private void PlayMissingKeysAnimation()
     {
-        doorCamera.SetActive(false);
-        staticCamera.SetActive(false);
-        keysCamera.SetActive(true);
-        //keysCamera.GetComponent<TutorialCamera>().Animate();
+        player.GetComponentInChildren<Animator>().SetTrigger("Missing Keys");
     }
 
-    void SetDoorCamera()
+    // will be called once missing keys cutscene is over
+    private void MissingKeysCutsceneDone()
     {
-        staticCamera.SetActive(false);
-        doorCamera.SetActive(true);
-    }
-
-    private void ToggleKeyTrigger()
-    {
-        tutorialTrigger.SetActive(true);
-    }
-
-    public void EnableControl()
-    {
-        keysCamera.SetActive(false);
+        player.GetComponentInChildren<Animator>().ResetTrigger("Ready To Launch");
+        missingKeysCamera.gameObject.SetActive(false);
         playerCamera.SetActive(true);
-        input.SetViewDirection(key.position);
         var statusEvent = new ObserverEvent(EventName.EnableInput);
         Subject.instance.Notify(gameObject, statusEvent);
         AkSoundEngine.PostEvent("narrative7", gameObject);
+
+        // begin aim phase
+        aimTrigger.SetActive(true);
+        rotationTip.SetActive(true);
+        // periodically check if player aims correctly
+        InvokeRepeating("CheckAim", 1f, 0.5f);
     }
 
-    // get point where the player is aiming
-    private void CheckTutorialAim()
+    // check if the player aims correctly
+    private void CheckAim()
     {
         Ray ray = Camera.main.ScreenPointToRay(ScreenCenter());
         RaycastHit hit;
@@ -115,17 +93,52 @@ public class TutorialStage1 : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, float.MaxValue, finalmask))
         {
-            if (hit.transform.CompareTag("Tutorial Aim"))
+            if (hit.collider.gameObject == aimTrigger)
             {
-                aimCollider.SetActive(false);
-                aimSpotted = true;
-                StopSoundEvent("narrative3", 0.5f);
-                AkSoundEngine.PostEvent("narrative5", gameObject);
-                guidanceObject.ChangeBackground();
-                guidanceObject.Activate();
+                // stop periodically check for aim
+                CancelInvoke();
+                aimTrigger.SetActive(false);
+                AimSuccess();
             }
         }
     }
+
+    // called when the player successfully aims
+    private void AimSuccess()
+    {
+        StopSoundEvent("narrative3", 0.5f);
+        AkSoundEngine.PostEvent("narrative5", gameObject);
+        rotationTip.SetActive(false);
+    }
+
+    void OnTriggerEnter(Collider coll)
+    {
+        //if (coll.CompareTag("Tutorial Room"))
+        //{
+        //    coll.gameObject.SetActive(false);
+        //    SetStaticCamera();
+        //    GetComponent<Rigidbody>().velocity = new Vector3(7.5f, 0, 0);
+        //}
+        //else if (coll.CompareTag("Tutorial Door"))
+        //{
+        //    coll.gameObject.SetActive(false);
+        //    SetDoorCamera();
+        //    Invoke("ToggleKeyTrigger", 2.5f);
+        //}
+        //else if (coll.CompareTag("Tutorial Trigger"))
+        //{
+        //    coll.gameObject.SetActive(false);
+        //    key.gameObject.SetActive(true);
+        //    Invoke("StartMovingCamera", 2.5f);
+        //    GetComponent<PlayerController>().ReadyForLaunch();
+        //    GetComponent<Rigidbody>().velocity = Vector3.zero;
+        //    //animator.SetTrigger("Missing Keys");
+        //    var statusEvent = new ObserverEvent(EventName.DisableInput);
+        //    Subject.instance.Notify(gameObject, statusEvent);
+        //}
+    }
+
+
 
     // Returns the pixel center of the camera.
     private Vector2 ScreenCenter()
@@ -144,5 +157,33 @@ public class TutorialStage1 : MonoBehaviour
             gameObject, fadeoutMs,
             AkCurveInterpolation.
             AkCurveInterpolation_Sine);
+    }
+
+    public void OnNotify(GameObject entity, ObserverEvent evt)
+    {
+        switch(evt.eventName)
+        {
+            case EventName.LaunchPowerChanged:
+                if (hasLaunched)
+                    return;
+                float force = ((Vector2)evt.payload[PayloadConstants.LAUNCH_FORCE]).x;
+                bool showLaunchTip = force > 0;
+                powerTip.SetActive(!showLaunchTip);
+                launchTip.SetActive(showLaunchTip);
+                break;
+            case EventName.PlayerLaunch:
+                hasLaunched = true;
+                powerTip.SetActive(false);
+                launchTip.SetActive(false);
+                break;
+            case EventName.PlayerWon:
+                SceneManager.LoadScene("TutStage02");
+                break;
+        }
+    }
+
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
     }
 }

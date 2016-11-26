@@ -1,8 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TutorialBehaviour : MonoBehaviour
+public class TutorialStage1 : MonoBehaviour
 {
+    public GameObject player;
+    [Header("Triggers")]
+    public GameObject aimTrigger;
+    public GameObject roomTrigger;
+    [Header("Cameras")]
+    public SimpelAnimation roomCamera;
+
+
+
+
+
 
     public GameObject playerCamera;
     public GameObject staticCamera;
@@ -12,19 +23,13 @@ public class TutorialBehaviour : MonoBehaviour
     public InputController input;
     public Transform key;
     public GameObject aimCollider;
-
     public GameObject tutorialTrigger;
-
-    private Animator animator;
-    private PlayerController playerController;
 
     private bool aimSpotted = false;
 
     // Use this for initialization
     void Start()
     {
-        animator = GetComponentInChildren<Animator>();
-        playerController = GetComponent<PlayerController>();
         guidanceObject.Activate();
         AkSoundEngine.PostEvent("narrative3", gameObject);
     }
@@ -56,7 +61,7 @@ public class TutorialBehaviour : MonoBehaviour
             Invoke("StartMovingCamera", 2.5f);
             GetComponent<PlayerController>().ReadyForLaunch();
             GetComponent<Rigidbody>().velocity = Vector3.zero;
-            animator.SetTrigger("Missing Keys");
+            //animator.SetTrigger("Missing Keys");
             var statusEvent = new ObserverEvent(EventName.DisableInput);
             Subject.instance.Notify(gameObject, statusEvent);
         }
@@ -73,7 +78,7 @@ public class TutorialBehaviour : MonoBehaviour
         doorCamera.SetActive(false);
         staticCamera.SetActive(false);
         keysCamera.SetActive(true);
-        keysCamera.GetComponent<TutorialCamera>().Animate();
+        //keysCamera.GetComponent<TutorialCamera>().Animate();
     }
 
     void SetDoorCamera()

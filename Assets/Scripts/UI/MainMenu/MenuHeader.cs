@@ -12,16 +12,14 @@ public class MenuHeader : MonoBehaviour {
     public void Start()
     {
         UpdateMedalLabel();
-        SettingsManager.instance.onLanguageChanged += UpdateButtonText;
-        UpdateButtonText(Language.Danish);
     }
 
     private void UpdateButtonText(Language lan)
     {
-        medaltext.text = Translator.instance.Get("medals") + ":";//medaltext.text.ToString());
-        //hardcode
-        resetMedalstext.text = Translator.instance.Get("reset medals");
-        resetAlltext.text = Translator.instance.Get("reset all");
+        //medaltext.text = Translator.instance.Get("medals") + ":";//medaltext.text.ToString());
+        ////hardcode
+        //resetMedalstext.text = Translator.instance.Get("reset medals");
+        //resetAlltext.text = Translator.instance.Get("reset all");
     }
 
     public void UpdateMedalLabel()

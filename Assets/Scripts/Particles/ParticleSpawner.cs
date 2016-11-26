@@ -37,6 +37,10 @@ public class ParticleSpawner : MonoBehaviour, Observer {
                 break;
 
             case EventName.PlayerLaunch:
+                if(playerpos == null)
+                {
+                    playerpos = go.transform;
+                }
                 SpawnParticles(launch, go.transform.position, true);
                 break;
 

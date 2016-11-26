@@ -25,12 +25,12 @@ public class OutroCutScene : MonoBehaviour, Observer {
 
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
-        player.GetComponent<PlayerController>().OverrideReadyForLaunch();
-        player.GetComponent<PlayerController>().Aim(keyPos.transform.position);
+        //player.GetComponent<PlayerController>().OverrideReadyForLaunch();
+        //player.GetComponent<PlayerController>().Aim(keyPos.transform.position);
 
         cam.gameObject.SetActive(true);
-        player.GetComponentInChildren<Animator>().ResetTrigger("Pick Up");
-        player.GetComponentInChildren<Animator>().SetTrigger("FakeFly");
+        //player.GetComponentInChildren<Animator>().ResetTrigger("Pick Up");
+        player.GetComponentInChildren<Animator>().SetTrigger("Force Fly");
 
 
         var evt = new ObserverEvent(EventName.StartCutscene);

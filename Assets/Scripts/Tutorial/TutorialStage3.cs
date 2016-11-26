@@ -28,7 +28,10 @@ public class TutorialStage3 : MonoBehaviour, Observer {
 
         //go.GetComponentInChildren<OxygenController>().SetOxygen(1); // doesn't seem to be working
         //oxygenController = go.GetComponentInChildren<OxygenController>();
-        
+
+        galAI.randomRemarks = false;
+
+        //ToggleUI();
 
         var evt = new ObserverEvent(EventName.StartCutscene);
         Subject.instance.Notify(gameObject, evt);

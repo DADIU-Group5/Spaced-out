@@ -1,88 +1,74 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class TutorialStage2 : MonoBehaviour
+public class TutorialStage2 : MonoBehaviour, Observer
 {
-
-    public EntryCutScene ECS;
-    public GameObject playerPrefab;
-    public Transform playerSpawnPoint;
+    public GameObject player;
+    public SimpelAnimation door;
 
     [Header("Cameras")]
     public GameObject playerCameraPod;
-    public SimpelAnimation oxygenCamera;
-    public SimpelAnimation hazardCamera;
-    [Header("Triggers")]
-    public TutorialTrigger secondRoom;
-    public Brain galAI;
+    public GameObject introCamera;
 
-    private OxygenController oxygenController;
+
 
     // Use this for initialization
     void Start()
     {
-        GameObject go = Instantiate(playerPrefab, playerSpawnPoint.position, Quaternion.identity) as GameObject;
-        go.transform.LookAt(transform.position, Vector3.up);
+        Subject.instance.AddObserver(this);
 
-        oxygenController = GameObject.Find("Player(Clone)").GetComponent<OxygenController>();
-        oxygenController.fuelGodMode = true;
-        oxygenController.godMode = true;
-        //oxygenController = go.GetComponentInChildren<OxygenController>();
-
-        var evt = new ObserverEvent(EventName.StartCutscene);
-        Subject.instance.Notify(gameObject, evt);
-        ECS.StartCutScene(go);
-
-        Invoke("PlayKillDaveOnHazard", 1f);
-    }
-
-    private void PlayZoomOxygenAnimation()
-    {
-        // disable input
+        // setup camera and disable inputs
         var evt = new ObserverEvent(EventName.DisableInput);
         Subject.instance.Notify(gameObject, evt);
-
+        evt = new ObserverEvent(EventName.ToggleUI);
+        Subject.instance.Notify(gameObject, evt);
         playerCameraPod.SetActive(false);
-        oxygenCamera.gameObject.SetActive(true);
-        oxygenCamera.PlayAnimations(EnablePlayerControl);
+        introCamera.gameObject.SetActive(true);
 
-        Invoke("NarrateOnDavesLuck", 3.5f);
+        StartCoroutine(BeginIntroCutscene());
+        
+        
+        //Invoke("PlayKillDaveOnHazard", 1f);
+    }
+
+    private IEnumerator BeginIntroCutscene()
+    {
+        yield return new WaitForSeconds(1f);
+        door.PlayAnimations(() => { });
+        // launch player
+        var controller = player.GetComponent<PlayerController>();
+        controller.Aim(player.transform.position + Vector3.forward);
+        controller.SetPower(0.45f);
+        yield return new WaitForSeconds(0.2f); // wait to let animator finish transistion
+        controller.Launch();
     }
 
     private void NarrateOnDavesLuck()
     {
-        galAI.Narrate("narrative8");
+        Brain.instance.Narrate("narrative8");
     }
 
-    public void PlayZoomHazardAnimation()
+    public void OnNotify(GameObject entity, ObserverEvent evt)
     {
-        // disable input
-        var evt = new ObserverEvent(EventName.DisableInput);
-        Subject.instance.Notify(gameObject, evt);
-
-        playerCameraPod.SetActive(false);
-        hazardCamera.gameObject.SetActive(true);
-        hazardCamera.PlayAnimations(EnablePlayerControl);
+        if (evt.eventName == EventName.RespawnPlayer)
+        {
+            var evt2 = new ObserverEvent(EventName.EnableInput);
+            Subject.instance.Notify(gameObject, evt2);
+            evt2 = new ObserverEvent(EventName.ToggleUI);
+            Subject.instance.Notify(gameObject, evt2);
+            playerCameraPod.SetActive(true);
+            introCamera.gameObject.SetActive(false);
+        }
+        else if (evt.eventName == EventName.PlayerWon)
+        {
+            SceneManager.LoadScene("TutStage03");
+        }
     }
 
-    // enable player controls again
-    private void EnablePlayerControl()
+    public void OnDestroy()
     {
-        var evt = new ObserverEvent(EventName.EnableInput);
-        Subject.instance.Notify(gameObject, evt);
-        playerCameraPod.SetActive(true);
-        oxygenCamera.gameObject.SetActive(false);
-        hazardCamera.gameObject.SetActive(false);
+        Subject.instance.RemoveObserver(this);
     }
-
-    //IEnumerator ReduceOxygenCoroutine()
-    //{
-    //    for (int i = 0; i < 9; i++)
-    //    {
-    //        oxygenController.UseOxygen();
-    //        yield return new WaitForSeconds(0.7f);
-    //    }
-
-    //    CheckpointManager.instance.SetFuelCount(oxygenController.GetOxygen());
-    //}
 }

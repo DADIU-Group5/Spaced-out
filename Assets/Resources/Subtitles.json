@@ -272,12 +272,12 @@
 			"id": "fan2",
 			"text": "Just go with the flow, spaceman.",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 3.0
 		},{
 			"id": "fan3",
 			"text": "I always though you were an airhead.",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 2.8
 		},{
 			"id": "fan4",
 			"text": "The fan is not the only thing in this room that sucks.",
@@ -299,12 +299,12 @@
         "id": "gasLeak1",
         "text": "Did you smell something Dave?",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 2.5
       },{
 			"id": "gasLeak2",
 			"text": "Dave, I'm just informing you that you're on fire.",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 4.5
 		},{
 			"id": "gasLeak3",
 			"text": "Remember, Dave; Stop, drop, and roll!",
@@ -314,7 +314,7 @@
 			"id": "gasLeak4",
 			"text": "You managed to create fire... in space... only you, Dave.",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 3.8
 		},{
 			"id": "gasLeak5",
 			"text": "Put you out? I'm sorry, Dave, I'm afraid I can't do that.",
@@ -336,19 +336,19 @@
         "id": "lowOxygen1",
         "text": " My readings tell me that your oxygen levels are low.",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 2.5
       },
       {
         "id": "lowOxygen2",
         "text": "My scans show an oxygen tank somewhere in this area i recommend you collect one",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 7.4
       },
       {
         "id": "lowOxygen3",
         "text": "They really should separate the oxygen for breathing and the oxygen for fuel in these jetpacks. Or maybe not.",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 7.4
       },
       {
         "id": "lowOxygen4",

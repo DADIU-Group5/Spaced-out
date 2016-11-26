@@ -38,7 +38,7 @@ public class TutorialStage1 : MonoBehaviour, Observer
         // call once player hits trigger
         missingKeysTrigger.callback = BeginMissingKeysCutscene;
 
-        oxygenController = GameObject.Find("Player(Clone)").GetComponent<OxygenController>();
+        oxygenController = GameObject.Find("Player").GetComponent<OxygenController>();
         oxygenController.fuelGodMode = true;
         oxygenController.godMode = true;
 
@@ -59,6 +59,8 @@ public class TutorialStage1 : MonoBehaviour, Observer
         playerCamera.SetActive(false);
         missingKeysCamera.gameObject.SetActive(true);
         missingKeysCamera.PlayAnimations(MissingKeysCutsceneDone);
+
+        ToggleUI();
     }
 
     private void PlayMissingKeysAnimation()
@@ -69,9 +71,12 @@ public class TutorialStage1 : MonoBehaviour, Observer
     // will be called once missing keys cutscene is over
     private void MissingKeysCutsceneDone()
     {
+        ToggleUI();
+
         player.GetComponentInChildren<Animator>().ResetTrigger("Ready To Launch");
         missingKeysCamera.gameObject.SetActive(false);
         playerCamera.SetActive(true);
+
         var statusEvent = new ObserverEvent(EventName.EnableInput);
         Subject.instance.Notify(gameObject, statusEvent);
 
@@ -111,9 +116,14 @@ public class TutorialStage1 : MonoBehaviour, Observer
     private void AimSuccess()
     {
         //StopSoundEvent("narrative3", 0.5f);
-        //AkSoundEngine.PostEvent("narrative5", gameObject);
         gal.Narrate("narrative5");
         rotationTip.SetActive(false);
+    }
+
+    private void ToggleUI()
+    {
+        var statusEvent = new ObserverEvent(EventName.ToggleUI);
+        Subject.instance.Notify(gameObject, statusEvent);
     }
 
     void OnTriggerEnter(Collider coll)

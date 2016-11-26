@@ -151,7 +151,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
             return;
 
         // perform the launch
-        Vector3 dir = inputCont.GetLaunchDirection();
+        Vector3 dir = aim * Vector3.forward; //inputCont.GetLaunchDirection();
         body.AddForce(power * maxLaunchVelocity * dir, ForceMode.VelocityChange);
         oxygen.UseOxygen();
         animator.SetTrigger("Launch");

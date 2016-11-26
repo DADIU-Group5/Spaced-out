@@ -24,6 +24,9 @@ public class Checkpoint : MonoBehaviour {
 
     void Triggered()
     {
-        door.EnteredNextRoom();
+        if (door != null)
+        {
+            door.EnteredNextRoom();
+        }
     }
 }

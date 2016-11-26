@@ -6,8 +6,9 @@ using System;
 public interface IPlayerControl
 {
     void Aim(Vector3 point);
-    // 0 = min power, 1 = max power
-    void SetPower(float power);
+    void ReadyForLaunch();
+    void CancelLaunch();
+    void SetPower(float power); // 0 = min power, 1 = max power
     void Launch();
 }
 
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     private OxygenController oxygen;
     private Animator animator;
     private InputController inputCont;
+    private bool playMusic = true;
 
     void Awake ()
     {
@@ -51,6 +53,9 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         if (Camera.main.transform.parent) {
             inputCont = Camera.main.transform.parent.parent.GetComponent<InputController>();
         }
+
+        // update the random factor in animator periodically
+        InvokeRepeating("RandomizeAnimator", 0, 1.5f);
     }
 
     void Update()
@@ -77,9 +82,25 @@ public class PlayerController : MonoBehaviour, IPlayerControl
                 }
             }
         }
+
+        // update velocity in animator to make the fly animation adjust to it
+        if (!readyForLaunch)
+        {
+            float velocity = Mathf.Lerp(0.35f, 1f, body.velocity.magnitude / maxLaunchVelocity);
+            animator.SetFloat("Velocity", velocity);
+        }
+            
     }
 
-    // set the controller to ready for launch
+    // randomizes idle and fly animations to make them look less repeatable
+    private void RandomizeAnimator()
+    {
+        animator.SetInteger("Random", UnityEngine.Random.Range(0, 9));
+    }
+
+    /// <summary>
+    ///  set the player to ready for launch
+    /// </summary>
     public void ReadyForLaunch()
     {
         if (oxygen.HasOxygen())
@@ -97,17 +118,6 @@ public class PlayerController : MonoBehaviour, IPlayerControl
 
     }
 
-    public void BurningToDeath()
-    {
-        animator.SetTrigger("Death Fire");
-        Debug.Log("setting trigger for fire death");
-    }
-
-    public void ElectrocutedToDeath()
-    {
-        animator.SetTrigger("Death Electricity");
-    }
-
     // aim the player at a certain point in world space
     public void Aim(Vector3 point)
     {
@@ -118,20 +128,33 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         aim = Quaternion.LookRotation(direction);
     }
 
-    // set power for next launch
+    /// <summary>
+    /// Cancel the launch and make player go back into ready for launch
+    /// </summary>
+    public void CancelLaunch()
+    {
+        animator.SetTrigger("Ready To Launch");
+    }
+
+
+    /// <summary>
+    /// set power for next launch
+    /// </summary>
+    /// <param name="power">0 = min velocity, 1 = max velocity</param>
     public void SetPower(float power)
     {
         if (!readyForLaunch)
             return;
 
         this.power = Mathf.Clamp01(power);
-        animator.SetBool("Launch Mode", true);
         animator.SetFloat("Power", power);
         ThrowLaunchPowerChangedEvent();
         ThrowChargingPowerEvent(true, this.power);
     }
 
-    // launch the player
+    /// <summary>
+    /// launch the player
+    /// </summary>
     public void Launch()
     {
         if (!readyForLaunch || power < minLaunchPower)
@@ -141,8 +164,8 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         Vector3 dir = inputCont.GetLaunchDirection();
         body.AddForce(power * maxLaunchVelocity * dir, ForceMode.VelocityChange);
         oxygen.UseOxygen();
-        animator.SetBool("Launch Mode", false);
-
+        animator.SetTrigger("Launch");
+        animator.SetFloat("Power", 0f);
         ThrowLaunchEvent();
 
         // reset power
@@ -159,9 +182,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         Subject.instance.Notify(gameObject, evt);
         // TODO sound
     }
-
-    private bool playMusic = true;
-
+    
     private void ThrowLaunchEvent()
     {
         var evt = new ObserverEvent(EventName.PlayerLaunch);
@@ -180,4 +201,6 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         evt.payload.Add(PayloadConstants.LAUNCH_FORCE, force * 100);
         Subject.instance.Notify(gameObject, evt);
     }
+
+    
 }

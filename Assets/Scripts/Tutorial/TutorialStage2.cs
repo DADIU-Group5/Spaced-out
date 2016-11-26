@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,25 +11,25 @@ public class TutorialStage2 : MonoBehaviour, Observer
     public GameObject playerCameraPod;
     public GameObject introCamera;
 
-
-
     // Use this for initialization
     void Start()
     {
         Subject.instance.AddObserver(this);
 
+        Brain.instance.randomRemarks = false;
+
         // setup camera and disable inputs
         var evt = new ObserverEvent(EventName.DisableInput);
         Subject.instance.Notify(gameObject, evt);
-        evt = new ObserverEvent(EventName.ToggleUI);
-        Subject.instance.Notify(gameObject, evt);
+        
+        ToggleUI();
+
         playerCameraPod.SetActive(false);
         introCamera.gameObject.SetActive(true);
 
         StartCoroutine(BeginIntroCutscene());
-        
-        
-        //Invoke("PlayKillDaveOnHazard", 1f);
+
+        Invoke("NarrateOnDavesLuck", 12.0f);
     }
 
     private IEnumerator BeginIntroCutscene()
@@ -48,6 +47,12 @@ public class TutorialStage2 : MonoBehaviour, Observer
     private void NarrateOnDavesLuck()
     {
         Brain.instance.Narrate("narrative8");
+    }
+
+    private void ToggleUI()
+    {
+        var statusEvent = new ObserverEvent(EventName.ToggleUI);
+        Subject.instance.Notify(gameObject, statusEvent);
     }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)

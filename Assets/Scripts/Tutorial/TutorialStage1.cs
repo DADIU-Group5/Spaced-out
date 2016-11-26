@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System;
 using UnityEngine.SceneManagement;
 
 public class TutorialStage1 : MonoBehaviour, Observer
@@ -17,8 +15,11 @@ public class TutorialStage1 : MonoBehaviour, Observer
     public GameObject powerTip;
     public GameObject launchTip;
 
+    public Brain gal;
+
     private GameObject key;
     private bool hasLaunched;
+    private OxygenController oxygenController;
 
     // Use this for initialization
     void Start()
@@ -37,10 +38,12 @@ public class TutorialStage1 : MonoBehaviour, Observer
         // call once player hits trigger
         missingKeysTrigger.callback = BeginMissingKeysCutscene;
 
-        //guidanceObject.Activate();
-        AkSoundEngine.PostEvent("narrative3", gameObject);
+        oxygenController = GameObject.Find("Player(Clone)").GetComponent<OxygenController>();
+        oxygenController.fuelGodMode = true;
+        oxygenController.godMode = true;
 
-        
+        //guidanceObject.Activate();
+        gal.Narrate("narrative3");
     }
     
     private void BeginMissingKeysCutscene()
@@ -71,7 +74,8 @@ public class TutorialStage1 : MonoBehaviour, Observer
         playerCamera.SetActive(true);
         var statusEvent = new ObserverEvent(EventName.EnableInput);
         Subject.instance.Notify(gameObject, statusEvent);
-        AkSoundEngine.PostEvent("narrative7", gameObject);
+
+        gal.Narrate("narrative7");
 
         // begin aim phase
         aimTrigger.SetActive(true);
@@ -106,8 +110,9 @@ public class TutorialStage1 : MonoBehaviour, Observer
     // called when the player successfully aims
     private void AimSuccess()
     {
-        StopSoundEvent("narrative3", 0.5f);
-        AkSoundEngine.PostEvent("narrative5", gameObject);
+        //StopSoundEvent("narrative3", 0.5f);
+        //AkSoundEngine.PostEvent("narrative5", gameObject);
+        gal.Narrate("narrative5");
         rotationTip.SetActive(false);
     }
 
@@ -145,7 +150,7 @@ public class TutorialStage1 : MonoBehaviour, Observer
     {
         return new Vector2(Camera.main.pixelWidth / 2f, Camera.main.pixelHeight / 2f);
     }
-
+    /*
     private void StopSoundEvent(string eventName, float fadeout)
     {
         uint eventID;
@@ -158,7 +163,7 @@ public class TutorialStage1 : MonoBehaviour, Observer
             AkCurveInterpolation.
             AkCurveInterpolation_Sine);
     }
-
+    */
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
         switch(evt.eventName)

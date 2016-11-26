@@ -9,10 +9,9 @@ public class Brain : Singleton<Brain>, Observer
     private string queuedNarrative;
     public int seconds = 12;
     public float chance = 0.4f;
-    //public float windowToPlaySound = 1.5f;
     public SubtitleManager subtitleManager;
 
-    public bool muteDaBitch = false;
+    public bool randomRemarks = true;
 
     private Language language;
 
@@ -32,7 +31,7 @@ public class Brain : Singleton<Brain>, Observer
         {
             yield return new WaitForSeconds(seconds);
 
-            if (!muteDaBitch && Random.value < chance)
+            if (randomRemarks && Random.value < chance)
             {
                 state = State.GeneralRemarks;
             }
@@ -146,6 +145,14 @@ public class Brain : Singleton<Brain>, Observer
         StopCoroutine("SilentState");
         state = State.Narrative;
         NextState();
+    }
+
+    public void ToggleSilence(bool silenceGAL)
+    {
+        if (silenceGAL)
+            Subject.instance.RemoveObserver(this);
+        else
+            Subject.instance.AddObserver(this);
     }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)

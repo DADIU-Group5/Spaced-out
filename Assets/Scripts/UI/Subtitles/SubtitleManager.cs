@@ -26,20 +26,6 @@ public class SubtitleManager : Singleton<SubtitleManager>
             return subtitles[UnityEngine.Random.Range(0, subtitles.Count)];
     }
 
-    //private ObserverEvent MakeEventFromSubtitle(Language language, SubtitleType subType)
-    //{
-    //    var subtitleByCategory = subtitles.GetSubtitles(language, subType);
-    //    var subtitle = GetRandomSubtitle(subtitleByCategory);
-
-    //    var subtitleEvent = new ObserverEvent(EventName.ShowSubtile);
-
-    //    subtitleEvent.payload.Add(PayloadConstants.SUBTITLE_TEXT, subtitle.text);
-    //    subtitleEvent.payload.Add(PayloadConstants.SUBTITLE_START, subtitle.start);
-    //    subtitleEvent.payload.Add(PayloadConstants.SUBTITLE_DURATION, subtitle.duration);
-
-    //    return subtitleEvent;
-    //}
-
     public Subtitle GetRandomSubtitle(Language language, SubtitleType subType)
     {
         var subtitleByCategory = subtitles.GetSubtitles(language, subType);

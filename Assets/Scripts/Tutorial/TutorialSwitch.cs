@@ -12,6 +12,10 @@ public class TutorialSwitch : MonoBehaviour {
             foreach (HazardState state in hazards)
             {
                 state.EnabledOrDisableTrap();
+
+                var evt = new ObserverEvent(EventName.SwitchPressed);
+                evt.payload.Add(PayloadConstants.SWITCH_ON, false);
+                Subject.instance.Notify(gameObject, evt);
             }
         }
     }

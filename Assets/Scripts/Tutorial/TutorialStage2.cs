@@ -1,8 +1,8 @@
-﻿using UnityEngine;
-using System.Collections;
-using System;
+﻿using System.Collections;
+using UnityEngine;
 
-public class TutorialStage3 : MonoBehaviour, Observer {
+public class TutorialStage2 : MonoBehaviour
+{
 
     public EntryCutScene ECS;
     public GameObject playerPrefab;
@@ -14,29 +14,23 @@ public class TutorialStage3 : MonoBehaviour, Observer {
     public SimpelAnimation hazardCamera;
     [Header("Triggers")]
     public TutorialTrigger secondRoom;
-
     public Brain galAI;
 
-    private OxygenController oxygenController;
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         GameObject go = Instantiate(playerPrefab, playerSpawnPoint.position, Quaternion.identity) as GameObject;
         go.transform.LookAt(transform.position, Vector3.up);
 
-        oxygenController = GameObject.Find("Player(Clone)").GetComponent<OxygenController>();
-
-        //go.GetComponentInChildren<OxygenController>().SetOxygen(1); // doesn't seem to be working
-        //oxygenController = go.GetComponentInChildren<OxygenController>();
-        
+        // oxygenController = GameObject.Find("Player(Clone)").GetComponent<OxygenController>();
+        // go.GetComponentInChildren<OxygenController>().SetOxygen(1);
+        // oxygenController = go.GetComponentInChildren<OxygenController>();
 
         var evt = new ObserverEvent(EventName.StartCutscene);
         Subject.instance.Notify(gameObject, evt);
         ECS.StartCutScene(go);
 
-        // play camera animation after small delay
-        Invoke("PlayZoomOxygenAnimation", 1f);
-        secondRoom.callback = PlayZoomHazardAnimation;
+        Invoke("PlayKillDaveOnHazard", 1f);
     }
 
     private void PlayZoomOxygenAnimation()
@@ -49,13 +43,12 @@ public class TutorialStage3 : MonoBehaviour, Observer {
         oxygenCamera.gameObject.SetActive(true);
         oxygenCamera.PlayAnimations(EnablePlayerControl);
 
-        Invoke("NarrateJetPackFailure", 3.5f);
-        StartCoroutine(ReduceOxygenCoroutine());
+        Invoke("NarrateOnDavesLuck", 3.5f);
     }
 
-    private void NarrateJetPackFailure()
+    private void NarrateOnDavesLuck()
     {
-        galAI.Narrate("narrative9");
+        galAI.Narrate("narrative8");
     }
 
     public void PlayZoomHazardAnimation()
@@ -79,27 +72,14 @@ public class TutorialStage3 : MonoBehaviour, Observer {
         hazardCamera.gameObject.SetActive(false);
     }
 
-    IEnumerator ReduceOxygenCoroutine()
-    {
-        for (int i = 0; i < 9; i++)
-        {
-            oxygenController.UseOxygen();
-            yield return new WaitForSeconds(0.7f);
-        }
+    //IEnumerator ReduceOxygenCoroutine()
+    //{
+    //    for (int i = 0; i < 9; i++)
+    //    {
+    //        oxygenController.UseOxygen();
+    //        yield return new WaitForSeconds(0.7f);
+    //    }
 
-        CheckpointManager.instance.SetFuelCount(oxygenController.GetOxygen());
-    }
-
-    public void OnNotify(GameObject entity, ObserverEvent evt)
-    {
-        if (evt.eventName == EventName.PlayerSpawned)
-        {
-            oxygenController.SetOxygen(2);
-        }
-    }
-
-    public void OnDestroy()
-    {
-        Subject.instance.RemoveObserver(this);
-    }
+    //    CheckpointManager.instance.SetFuelCount(oxygenController.GetOxygen());
+    //}
 }

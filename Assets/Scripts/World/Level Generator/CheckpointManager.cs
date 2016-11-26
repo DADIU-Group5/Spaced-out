@@ -74,8 +74,10 @@ public class CheckpointManager : Singleton<CheckpointManager>, Observer {
     void ActualRespawn()
     {
         GameObject go = Instantiate(playerPrefab, position + (rotation * spawnDistance), Quaternion.identity) as GameObject;
+        go.GetComponent<PlayerController>().Aim(position + (rotation * (spawnDistance + 1)));
         go.transform.LookAt(position + (rotation * (spawnDistance+1)), Vector3.up);
         go.GetComponentInChildren<OxygenController>().SetOxygen(++fuelCount);
+
         var evt = new ObserverEvent(EventName.PlayerSpawned);
         evt.payload.Add(PayloadConstants.PLAYER, go.GetComponentInChildren<PlayerController>().gameObject);
         Subject.instance.Notify(gameObject, evt);

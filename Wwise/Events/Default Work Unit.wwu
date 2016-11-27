@@ -676,6 +676,13 @@
 										</Element>
 									</ElementList>
 								</Action>
+								<Action Name="Play" ID="{3ED66BBA-E6A3-49E2-8E5F-2FF16966253C}" ShortID="943046188" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{994F01D9-C8BC-41A8-908D-7ACF2AB7556E}" Global="false">
+											<ObjectRef Name="launchsynth" ID="{E6C34B2D-6D03-48B4-8A0E-79B74543A0A3}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="daveCatchFire" ID="{DC2F1D92-7AD7-4678-A36B-379A498B5948}">
@@ -745,6 +752,20 @@
 									<ElementList>
 										<Element ID="{03364062-484E-4F44-8502-127D0C552623}" Global="false">
 											<ObjectRef Name="wall impacts" ID="{76D41AAB-6280-4BF7-B2B3-978573092B07}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{198786A3-15A0-452F-83F2-B14F76D6ED3C}" ShortID="397825228" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{187BDD1F-E9AA-45C7-99E0-D932E53B020E}" Global="false">
+											<ObjectRef Name="metal" ID="{A69B11B4-E56F-4E27-ADFE-759A3BF9E85A}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{8E43BF45-C2AA-491E-B42D-45AF0E4FEEA5}" ShortID="857578974" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{C80E719B-33B2-4D4E-BE47-31D37673CB15}" Global="false">
+											<ObjectRef Name="metalnotes" ID="{87ECAF49-0C2D-4BA8-AC1B-664C9AC497D2}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -1048,7 +1069,7 @@
 								<Action Name="Play" ID="{1CBD0B57-249D-4549-9E46-DAB54422125F}" ShortID="998077567" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{4D1F581C-8F81-4398-B7EF-116E23E0769C}" Global="false">
-											<ObjectRef Name="music1" ID="{39E16313-562B-43A4-86B3-28E14EA66D46}" WorkUnitID="{F5948B08-8EA0-455A-9A43-E3F403D87912}"/>
+											<ObjectRef Name="musicmain" ID="{A4BE85F5-7236-4E80-B2CE-91E61AC28E1E}" WorkUnitID="{F5948B08-8EA0-455A-9A43-E3F403D87912}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -1061,7 +1082,7 @@
 								<Action Name="Stop" ID="{7C7201E7-925A-47E2-ADE0-9500CA585F86}" ShortID="974395213" Type="Stop" Scope="One" Global="true">
 									<ElementList>
 										<Element ID="{FADB4212-48FB-44A3-897F-C439103B4F93}" Global="true">
-											<ObjectRef Name="music1" ID="{39E16313-562B-43A4-86B3-28E14EA66D46}" WorkUnitID="{F5948B08-8EA0-455A-9A43-E3F403D87912}"/>
+											<ObjectRef Name="musicmain" ID="{A4BE85F5-7236-4E80-B2CE-91E61AC28E1E}" WorkUnitID="{F5948B08-8EA0-455A-9A43-E3F403D87912}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -1092,6 +1113,70 @@
 						<Event Name="unpause" ID="{3DD58B3D-BF86-4837-9B62-DF44EEBD1AC3}"/>
 						<Event Name="death" ID="{238E0945-9343-459E-BADB-B45103941810}"/>
 						<Event Name="restart" ID="{CCF55E45-4F67-4F45-9784-42062887843A}"/>
+						<Event Name="atmosStart" ID="{89D83D7C-F2BD-46C6-BC86-21E6D8C98D5D}">
+							<ChildrenList>
+								<Action Name="Play" ID="{B8DB55B3-5A3D-46C1-BEAC-18429344303C}" ShortID="895829723" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{599E11DA-6000-49E2-82B9-AA26DB16A1E7}" Global="false">
+											<ObjectRef Name="knirken" ID="{02D86B12-679D-4D02-87B0-984E7F28FAE9}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{339B01A5-755B-4792-9684-E94EA75186E3}" ShortID="172016810" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{07D904EE-C312-4DD7-9D50-07BF28605454}" Global="false">
+											<ObjectRef Name="loop1" ID="{0D1AE580-993D-469A-A2B3-6A50FC25B299}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{3E80B603-1EEA-4549-901E-F08DE6DDBB44}" ShortID="613805147" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{4B148CD1-0343-4C5E-80B0-79DB3171EE87}" Global="false">
+											<ObjectRef Name="main atmos" ID="{1D2E4926-39CC-487E-B02C-23F3E7439A0D}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{7B7B4B93-5461-43C9-A15D-EF597EDB9FAF}" ShortID="784971208" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{2F2E7886-3813-4686-904E-31DEA5999E35}" Global="false">
+											<ObjectRef Name="hydralics" ID="{955C4C8A-5CDA-4CEF-BE4C-9F17F3149579}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="atmosStop" ID="{05E9F216-EF0D-4360-8547-666CC68CD8EA}">
+							<ChildrenList>
+								<Action Name="Stop" ID="{47EE02A2-DB8A-4FC4-BD2D-E12A3F084C00}" ShortID="474413054" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{E529679C-0A6B-4637-AAA0-A15D874B3B41}" Global="false">
+											<ObjectRef Name="main atmos" ID="{1D2E4926-39CC-487E-B02C-23F3E7439A0D}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{6B18EDD5-C85E-4AE3-9C8D-A1A8421BAE1E}" ShortID="944007985" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{C4B0C9AF-8B5E-48AB-828F-5FC5514D4D34}" Global="false">
+											<ObjectRef Name="loop1" ID="{0D1AE580-993D-469A-A2B3-6A50FC25B299}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{3032D9EF-60C6-4144-8221-A3A521AC9466}" ShortID="636936763" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{6038E42D-6233-4A9D-BEFE-BB3AAF1052AA}" Global="false">
+											<ObjectRef Name="knirken" ID="{02D86B12-679D-4D02-87B0-984E7F28FAE9}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{C8E06206-5201-41C0-9A89-DE73C4452384}" ShortID="48488397" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{CA1F6FF1-BAAC-4DE4-9909-86F612D1C827}" Global="false">
+											<ObjectRef Name="hydralics" ID="{955C4C8A-5CDA-4CEF-BE4C-9F17F3149579}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

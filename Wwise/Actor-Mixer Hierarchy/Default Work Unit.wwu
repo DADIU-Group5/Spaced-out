@@ -2092,7 +2092,7 @@
 													<ChildrenList>
 														<AudioFileSource Name="Hvad har du gang i, Dave Du skal hen imod rednings kapslen" ID="{A10E129D-4323-4CCD-B85D-468BD6E2F20C}" ShortID="698227094">
 															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="4.30342815463166E-02"/>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0430342815463166"/>
 																<Property Name="TrimBegin" Type="Real64" Value="1.14040846097739"/>
 															</PropertyList>
 															<Language>SFX</Language>
@@ -2389,7 +2389,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="electrocute1" ID="{D672FCDE-982B-4059-B4B3-B9805BFD8877}" ShortID="877963907">
 													<PropertyList>
-														<Property Name="TrimBegin" Type="Real64" Value="2.72307318259178E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0272307318259178"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>electrocute1.wav</AudioFile>
@@ -2430,7 +2430,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="electrocute3" ID="{08B6A36F-3D0A-412B-9700-2714713C10AB}" ShortID="560816914">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.96989423778264E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0196989423778264"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.024623677972283"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -2454,7 +2454,7 @@
 												<AudioFileSource Name="electrocute4" ID="{E4A3D0CE-9A88-497E-AA87-C9D87E4C98FE}" ShortID="68587342">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.015977935813275"/>
-														<Property Name="TrimBegin" Type="Real64" Value="4.79338074398249E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0479338074398249"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>electrocute4.wav</AudioFile>
@@ -2476,8 +2476,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="electrocute5" ID="{D1735FC7-2CAD-4978-8136-4F0402DA3F94}" ShortID="261205730">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="9.9214989059081E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="5.20878692560175E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0099214989059081"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0520878692560175"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>electrocute5.wav</AudioFile>
@@ -2499,8 +2499,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="electrocute6" ID="{63C8151F-A72E-4AFE-8D13-F11662053CEE}" ShortID="456998750">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="8.47921225382932E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="3.60366520787746E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00847921225382932"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0360366520787746"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>electrocute6.wav</AudioFile>
@@ -3257,8 +3257,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut3_1" ID="{BCB595AC-447E-4721-9AC4-1411D86C2F57}" ShortID="585615623">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="4.49307075127645E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="6.73960612691467E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00449307075127645"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00673960612691467"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut3_1.wav</AudioFile>
@@ -3293,8 +3293,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut4_1" ID="{CCD6EFA5-2C6A-413F-BD1B-1D75893FCE8D}" ShortID="598173962">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.49963530269876E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="7.4981765134938E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00149963530269876"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0074981765134938"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut4_1.wav</AudioFile>
@@ -3326,8 +3326,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut5_1" ID="{6EF1D5FA-0402-465D-A57A-90D02A6771A1}" ShortID="846681906">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="2.99927060539752E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="7.49817651349381E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00299927060539752"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00749817651349381"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut5_1.wav</AudioFile>
@@ -3362,8 +3362,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut6_1" ID="{C787A521-A4A9-4D34-9E52-970CCEBA4BA7}" ShortID="670195520">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.49963530269876E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="2.24945295404814E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00149963530269876"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0224945295404814"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut6_1.wav</AudioFile>
@@ -3395,8 +3395,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut7_1" ID="{F48C9AF1-F3BF-4C08-AE00-BB17D50ED171}" ShortID="942376865">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="2.99927060539752E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="5.69861415025529E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00299927060539752"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0569861415025529"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut7_1.wav</AudioFile>
@@ -3428,8 +3428,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut8_1" ID="{BE0F375F-6E18-48F4-BACC-D4A09DFB85B8}" ShortID="401680823">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="2.99927060539752E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="4.94879649890591E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00299927060539752"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0494879649890591"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut8_1.wav</AudioFile>
@@ -3461,8 +3461,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut9_1" ID="{A8FCF68A-4DEE-4CDB-B475-CB041E8C1326}" ShortID="507642210">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="5.99854121079504E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="4.19897884755653E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00599854121079504"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0419897884755653"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut9_1.wav</AudioFile>
@@ -3494,7 +3494,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut10_1" ID="{0759559B-6639-45BF-9EAB-DF6F12BCBFC6}" ShortID="621924902">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="2.99343544857768E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00299343544857768"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.117409190371991"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -3776,40 +3776,15 @@
 							<ChildrenList>
 								<Sound Name="main atmos" ID="{1D2E4926-39CC-487E-B02C-23F3E7439A0D}" ShortID="492186463" Type="SoundFX">
 									<PropertyList>
-										<Property Name="Highpass" Type="int16">
-											<ValueList>
-												<Value>30</Value>
-											</ValueList>
-										</Property>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Lowpass" Type="int16">
-											<RTPCList>
-												<RTPC Name="" ID="{5AC5C617-B60A-4CE4-B845-5692E545EA1B}" ShortID="799700748">
-													<ReferenceList>
-														<Reference Name="ControlInput">
-															<ObjectRef Name="amience1" ID="{6EA74454-6DB8-44F9-9B8C-47278809CA4F}" WorkUnitID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}"/>
-														</Reference>
-													</ReferenceList>
-													<Curve Name="" ID="{91535EF5-3767-4734-ACFC-D02F2B04875E}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="65537"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>0</XPos>
-																<YPos>0</YPos>
-																<Flags>21</Flags>
-															</Point>
-															<Point>
-																<XPos>1</XPos>
-																<YPos>59</YPos>
-																<Flags>53</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</RTPC>
-											</RTPCList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{44841878-E9FC-4081-9FC6-03E5524BD40E}"/>
+												</ModifierInfo>
+											</ModifierList>
 										</Property>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-15</Value>
@@ -3823,6 +3798,12 @@
 										<Reference Name="OutputBus">
 											<ObjectRef Name="atmos" ID="{FA0DE26E-0B1A-402B-A0E0-578BA0A760BF}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
 										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend1">
+											<ObjectRef Name="rvbatmos" ID="{562DE2B7-4E68-4373-A5C3-BCA520A72E06}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="main atmos" ID="{744272BC-B608-4B5E-8D47-0A154063AC90}" ShortID="949012013">
@@ -3834,6 +3815,907 @@
 										<ActiveSource Name="main atmos" ID="{744272BC-B608-4B5E-8D47-0A154063AC90}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<RandomSequenceContainer Name="skibsatmos" ID="{1148CF00-B7A6-415F-B0E5-9E3ECA0FDBE7}" ShortID="1022794994">
+									<PropertyList>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UserAuxSendVolume1" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend1">
+											<ObjectRef Name="rvbatmos" ID="{562DE2B7-4E68-4373-A5C3-BCA520A72E06}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="skibs rumlem proper loop 1" ID="{17359BA6-8A25-48C6-897E-8FC88B4D6437}" ShortID="1006148205" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="skibs rumlem proper loop 1" ID="{8ED42BBA-9EEA-4938-A0DA-8704BEED25B9}" ShortID="353469564">
+													<Language>SFX</Language>
+													<AudioFile>skibsatmos\skibs rumlem proper loop 1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="skibs rumlem proper loop 1" ID="{8ED42BBA-9EEA-4938-A0DA-8704BEED25B9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="skibs rumlen dyb 1 LOOP 2 fucking fixed" ID="{AF344F53-B3B9-4BAC-81DE-E31A5AE9F25A}" ShortID="515591448" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="skibs rumlen dyb 1 LOOP 2 fucking fixed" ID="{A172A002-DF7A-49E9-AB58-F175E73750A9}" ShortID="604626767">
+													<Language>SFX</Language>
+													<AudioFile>skibsatmos\skibs rumlen dyb 1 LOOP 2 fucking fixed.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="skibs rumlen dyb 1 LOOP 2 fucking fixed" ID="{A172A002-DF7A-49E9-AB58-F175E73750A9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="hydralics" ID="{955C4C8A-5CDA-4CEF-BE4C-9F17F3149579}" ShortID="615805950">
+									<PropertyList>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-20</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend1">
+											<ObjectRef Name="rvbatmos" ID="{562DE2B7-4E68-4373-A5C3-BCA520A72E06}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="hydralics1" ID="{CCD2E671-68B5-42FD-B18E-09DCF9108DA1}" ShortID="437209109" Type="SoundFX">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{46CFEF39-D067-401D-A6FA-38BB2A8DEB1F}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="5"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hydralics1" ID="{7D21BD1D-1723-4F46-B836-6880FC3E2014}" ShortID="971397170">
+													<Language>SFX</Language>
+													<AudioFile>atmos\hydralics1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="hydralics1" ID="{7D21BD1D-1723-4F46-B836-6880FC3E2014}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="hydralics2" ID="{EC43F821-724B-49A0-A1FC-7DA13C4CBAA3}" ShortID="836114233" Type="SoundFX">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>7</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{C2F448CD-F8D9-461D-A981-DAFAB4304549}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="7"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hydralics2" ID="{8EB63CCC-8FA3-4FD4-BF79-ECA7E815EACE}" ShortID="229414056">
+													<Language>SFX</Language>
+													<AudioFile>atmos\hydralics2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="hydralics2" ID="{8EB63CCC-8FA3-4FD4-BF79-ECA7E815EACE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="hydralics3" ID="{B4A577EF-D409-49A7-A788-B3163323379A}" ShortID="973593251" Type="SoundFX">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>7</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{B6F6173D-3323-4590-B136-E9857429F4B0}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="7"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hydralics3" ID="{52820009-FF94-4FEB-9081-C5EF223DC0DC}" ShortID="645013745">
+													<Language>SFX</Language>
+													<AudioFile>atmos\hydralics3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="hydralics3" ID="{52820009-FF94-4FEB-9081-C5EF223DC0DC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="hydralics4" ID="{FE72EEF3-F197-4B7C-AE8D-0658E78334A0}" ShortID="472469204" Type="SoundFX">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>7</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{7BB075C4-2A0E-4E77-B6B9-4C966CF60A42}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="7"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hydralics4" ID="{4A24758D-3E9C-40A6-8573-FC65A5119931}" ShortID="572934450">
+													<Language>SFX</Language>
+													<AudioFile>atmos\hydralics4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="hydralics4" ID="{4A24758D-3E9C-40A6-8573-FC65A5119931}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="hydralics5" ID="{8DC7EEBE-8F32-4798-9CF2-7E050499653F}" ShortID="10161508" Type="SoundFX">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>7</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{6E68D9FF-1C5B-46AA-ADF0-A82EE311BE50}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="7"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hydralics5" ID="{87853921-0868-45CE-BD31-95F6039B84C4}" ShortID="354507471">
+													<Language>SFX</Language>
+													<AudioFile>atmos\hydralics5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="hydralics5" ID="{87853921-0868-45CE-BD31-95F6039B84C4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="hydralics6" ID="{0D2077D1-FD5F-410E-9011-E80F6E4AFFA1}" ShortID="567046518" Type="SoundFX">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>7</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{A1D46B4F-E264-46F2-8294-587C392812F3}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="7"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hydralics6" ID="{0AACDA91-EA6D-4712-B220-576549580C68}" ShortID="666155042">
+													<Language>SFX</Language>
+													<AudioFile>atmos\hydralics6.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="hydralics6" ID="{0AACDA91-EA6D-4712-B220-576549580C68}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="hydralics7" ID="{5AB20D47-DA14-4D87-B08B-DBA8396D2080}" ShortID="286774045" Type="SoundFX">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>7</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{8140C3DC-EB79-4FBC-BC47-A203C8E245E0}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="7"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hydralics7" ID="{3327F8A6-E43B-4907-B0F0-860C70E069CE}" ShortID="377881980">
+													<Language>SFX</Language>
+													<AudioFile>atmos\hydralics7.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="hydralics7" ID="{3327F8A6-E43B-4907-B0F0-860C70E069CE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="hydralics8" ID="{C14A6A76-37A7-481A-968B-101D74FD9292}" ShortID="279184439" Type="SoundFX">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>7</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{32A706E0-FC85-4982-A5DB-830AED1560D7}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="7"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hydralics8" ID="{5F09BB18-D0B2-4AF0-8463-623231C55B2B}" ShortID="650509731">
+													<Language>SFX</Language>
+													<AudioFile>atmos\hydralics8.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="hydralics8" ID="{5F09BB18-D0B2-4AF0-8463-623231C55B2B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="hydralics9" ID="{45D3BF1D-AFC1-43C8-9EB4-1EF1BC744603}" ShortID="453293351" Type="SoundFX">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>7</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{A7BF4FC5-0E3E-44BF-A4F5-8054D325F97A}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="7"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hydralics9" ID="{88127C6A-DC13-40A4-93FB-E798A384098E}" ShortID="341741593">
+													<Language>SFX</Language>
+													<AudioFile>atmos\hydralics9.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="hydralics9" ID="{88127C6A-DC13-40A4-93FB-E798A384098E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="knirken" ID="{02D86B12-679D-4D02-87B0-984E7F28FAE9}" ShortID="1015790659">
+									<PropertyList>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UserAuxSendVolume1" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-20</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="atmos" ID="{FA0DE26E-0B1A-402B-A0E0-578BA0A760BF}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend1">
+											<ObjectRef Name="rvbatmos" ID="{562DE2B7-4E68-4373-A5C3-BCA520A72E06}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="skibs rumlen knirk 2" ID="{E49CA7D4-00E9-4C93-BD61-CC2E2571969B}" ShortID="812454367" Type="SoundFX">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{FD33BCA4-8C9F-4D14-AFB0-02A9714DE9A6}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="5"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{C2406E66-3032-4A55-8FC2-FA3113925534}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-300"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="atmos" ID="{FA0DE26E-0B1A-402B-A0E0-578BA0A760BF}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="skibs rumlen knirk 2" ID="{5925772E-418C-4429-AF69-BA4735AA61C3}" ShortID="972817918">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.14671004509018"/>
+														<Property Name="FadeInShape" Type="int16" Value="6"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>skibsatmos\skibs rumlen knirk 2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="skibs rumlen knirk 2" ID="{5925772E-418C-4429-AF69-BA4735AA61C3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="skibs rumlen knirk 6" ID="{91091B80-9638-47CA-BFE4-C8AE06719CBC}" ShortID="96081317" Type="SoundFX">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{5978C698-A704-428B-A8FA-FC932030AAF0}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="5"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{CEF0FEDB-719C-4194-B397-451F4BEF7671}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-300"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="atmos" ID="{FA0DE26E-0B1A-402B-A0E0-578BA0A760BF}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="skibs rumlen knirk 6" ID="{B9FDAADD-EE9D-48BD-A373-F7F0E0D4E550}" ShortID="348662842">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.525134310287241"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.322828469438878"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.75049855961924"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>skibsatmos\skibs rumlen knirk 6.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="skibs rumlen knirk 6" ID="{B9FDAADD-EE9D-48BD-A373-F7F0E0D4E550}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="skibsrumlen knirk3" ID="{D3EFA508-5535-41BB-A769-483CC3048B32}" ShortID="805482807" Type="SoundFX">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{94DB82BD-E49C-4D6D-ADED-8C04C2FF1DE7}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="5"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{3935A4CF-CE67-4617-A148-986B52FEE45D}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-300"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="atmos" ID="{FA0DE26E-0B1A-402B-A0E0-578BA0A760BF}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="skibsrumlen knirk3" ID="{2E2FF9D0-F759-40B7-AEE9-AA7396E2D991}" ShortID="1065919626">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="2.06852104208417"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.667959919839679"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>skibsatmos\skibsrumlen knirk3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="skibsrumlen knirk3" ID="{2E2FF9D0-F759-40B7-AEE9-AA7396E2D991}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="skibsrumlen knirk4" ID="{AD424A8A-4A3C-4B64-85E8-FB3C5EF0DD7B}" ShortID="952906072" Type="SoundFX">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{04006F9F-D213-4F8B-830C-5C66293772E1}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="5"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{AC6CF300-0F86-45F1-A6D1-DE91CC55156A}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-300"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="atmos" ID="{FA0DE26E-0B1A-402B-A0E0-578BA0A760BF}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="skibsrumlen knirk4" ID="{8208A8B7-CA15-434E-B38A-C9E9FD2AD577}" ShortID="1044380383">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="1.48162324649299"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>skibsatmos\skibsrumlen knirk4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="skibsrumlen knirk4" ID="{8208A8B7-CA15-434E-B38A-C9E9FD2AD577}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="skibsrumlen knirk5" ID="{F8FAB1F7-8DCB-428B-8476-7D3DA321F3DD}" ShortID="305593428" Type="SoundFX">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{FBE3AF5F-168A-4372-8C81-21463B5066D1}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="5"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{2A96D007-BAA7-4864-8B4D-251D02A758E0}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-300"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="atmos" ID="{FA0DE26E-0B1A-402B-A0E0-578BA0A760BF}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="skibsrumlen knirk5" ID="{A371E838-308B-46A9-9C74-283EADC0B2BF}" ShortID="250187452">
+													<Language>SFX</Language>
+													<AudioFile>skibsatmos\skibsrumlen knirk5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="skibsrumlen knirk5" ID="{A371E838-308B-46A9-9C74-283EADC0B2BF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="loop1" ID="{0D1AE580-993D-469A-A2B3-6A50FC25B299}" ShortID="515624127">
+									<PropertyList>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-1200</Value>
+											</ValueList>
+										</Property>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UserAuxSendVolume1" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-20</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="atmos" ID="{FA0DE26E-0B1A-402B-A0E0-578BA0A760BF}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend1">
+											<ObjectRef Name="rvbatmos" ID="{562DE2B7-4E68-4373-A5C3-BCA520A72E06}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="skibsrumlen proper loop 1" ID="{37C68E4A-BD2A-4E2A-A312-886BDEBD0B4F}" ShortID="166682076" Type="SoundFX">
+											<PropertyList>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="atmos" ID="{FA0DE26E-0B1A-402B-A0E0-578BA0A760BF}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="skibsrumlen proper loop 1" ID="{422B9470-41B0-471D-860D-5FFED0DC996D}" ShortID="821671456">
+													<Language>SFX</Language>
+													<AudioFile>skibsatmos\skibsrumlen proper loop 1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="skibsrumlen proper loop 1" ID="{422B9470-41B0-471D-860D-5FFED0DC996D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="skibsrumlen proper loop 2" ID="{7DF2812F-E6A8-4798-A590-1B453FFDF522}" ShortID="1053823138" Type="SoundFX">
+											<PropertyList>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="atmos" ID="{FA0DE26E-0B1A-402B-A0E0-578BA0A760BF}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="skibsrumlen proper loop 2" ID="{E7784F13-866F-4CD0-B055-90174677EC06}" ShortID="495970770">
+													<Language>SFX</Language>
+													<AudioFile>skibsatmos\skibsrumlen proper loop 2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="skibsrumlen proper loop 2" ID="{E7784F13-866F-4CD0-B055-90174677EC06}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="skibsrumlen proper loop 3" ID="{7D235CF8-7E7E-4FC6-A15E-AC0E66827F7A}" ShortID="310674573" Type="SoundFX">
+											<PropertyList>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="atmos" ID="{FA0DE26E-0B1A-402B-A0E0-578BA0A760BF}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="skibsrumlen proper loop 3" ID="{F385B1E0-54C3-4721-88CA-C80822C446C6}" ShortID="242871080">
+													<Language>SFX</Language>
+													<AudioFile>skibsatmos\skibsrumlen proper loop 3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="skibsrumlen proper loop 3" ID="{F385B1E0-54C3-4721-88CA-C80822C446C6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>
@@ -3966,6 +4848,162 @@
 										</BlendTrack>
 									</BlendTrackList>
 								</BlendContainer>
+								<RandomSequenceContainer Name="launchsynth" ID="{E6C34B2D-6D03-48B4-8A0E-79B74543A0A3}" ShortID="456118260">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>20</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="launch synth1" ID="{63346077-26DB-4696-A2DE-8B587D85C526}" ShortID="1011435197" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="launch synth1" ID="{010202BD-FA84-48F9-ACD1-F6478D046BD1}" ShortID="693313243">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.13980868285504"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="4.05811623246493"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.93743631486667"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>launch synth1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="launch synth1" ID="{010202BD-FA84-48F9-ACD1-F6478D046BD1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="launch synth2" ID="{CB9A6CA9-2353-4955-B68D-09A45ED5AE13}" ShortID="998076067" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="launch synth2" ID="{F7C481CF-A906-4D4F-9C6E-C79802BA31A5}" ShortID="105906957">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.114667647780231"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.23496993987976"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.04316899681138"/>
+														<Property Name="TrimEnd" Type="Real64" Value="10.1636606546426"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>launch synth2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="launch synth2" ID="{F7C481CF-A906-4D4F-9C6E-C79802BA31A5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="launch synth3" ID="{CB328AB9-0DD8-42AD-84F6-079A64B06222}" ShortID="363223566" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="launch synth3" ID="{23F4610A-C8F1-4DEE-A7A1-002A7DB2F406}" ShortID="860279208">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.409151636606546"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="2.19772879091516"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.88209752839011"/>
+														<Property Name="TrimEnd" Type="Real64" Value="10.1586506346025"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>launch synth3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="launch synth3" ID="{23F4610A-C8F1-4DEE-A7A1-002A7DB2F406}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="launch synth4" ID="{3372E571-BCD2-402E-865D-4B40D566B0E8}" ShortID="987005875" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="launch synth4" ID="{E0B61259-3F69-4FCA-A9F5-58540C5AE6FB}" ShortID="871754042">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.100200400801603"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="2.80561122244489"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.89545758183033"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>launch synth4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="launch synth4" ID="{E0B61259-3F69-4FCA-A9F5-58540C5AE6FB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="launch synth5" ID="{A6C7CA2E-5321-4373-A247-AB5E39BCE5A8}" ShortID="968407758" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="launch synth5" ID="{A4297E7B-1BAE-4A60-BE8F-D5F0079D6496}" ShortID="427171029">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.133600534402138"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="2.88076152304609"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.92050768203073"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>launch synth5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="launch synth5" ID="{A4297E7B-1BAE-4A60-BE8F-D5F0079D6496}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="impacts" ID="{C6B49A03-E97D-4C31-B640-AE4A9EF9AAEC}" ShortID="377000735">
@@ -4007,6 +5045,12 @@
 																<XPos>0</XPos>
 																<YPos>49</YPos>
 																<Flags>5</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>77.89614</XPos>
+																<YPos>-100</YPos>
+																<Flags>0</Flags>
 																<SegmentShape>Exp1</SegmentShape>
 															</Point>
 															<Point>
@@ -4031,6 +5075,32 @@
 													</Modifier>
 												</ModifierInfo>
 											</ModifierList>
+											<RTPCList>
+												<RTPC Name="" ID="{19C97CF8-BEDF-4B9F-922F-2BE14724955C}" ShortID="535514024">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="impact" ID="{57493656-58D7-4C45-9DBE-F2B100BDC8BF}" WorkUnitID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{39F38EFC-CEE4-450B-B32B-C2A3CC145487}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-1869</YPos>
+																<Flags>21</Flags>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>585</YPos>
+																<Flags>53</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
 										</Property>
 										<Property Name="UserAuxSendVolume0" Type="Real64">
 											<ValueList>
@@ -4608,7 +5678,7 @@
 													<ChildrenList>
 														<AudioFileSource Name="object impact light1" ID="{F86D2183-F604-4BF2-8E67-41AA138770EA}" ShortID="635644102">
 															<PropertyList>
-																<Property Name="FadeOutDuration" Type="Real64" Value="5.97647702407002E-02"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0597647702407002"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>impacts\object impact light1.wav</AudioFile>
@@ -4785,7 +5855,7 @@
 													<ChildrenList>
 														<AudioFileSource Name="object impact1" ID="{5B60DB1E-647C-4D8F-8A81-FAFADFBE22B9}" ShortID="836593034">
 															<PropertyList>
-																<Property Name="FadeOutDuration" Type="Real64" Value="9.84169857768053E-02"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0984169857768053"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>impacts\object impact1.wav</AudioFile>
@@ -4979,6 +6049,905 @@
 								</BlendContainer>
 							</ChildrenList>
 						</ActorMixer>
+						<ActorMixer Name="metalimpacts" ID="{A0B2DC25-CC17-4186-8265-635C612C0546}" ShortID="1037807875">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="metal" ID="{A69B11B4-E56F-4E27-ADFE-759A3BF9E85A}" ShortID="409192511">
+									<PropertyList>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{1E9780D6-98A5-4083-9DE2-61119BCF4EBF}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+											<RTPCList>
+												<RTPC Name="" ID="{44C89092-98B2-4ECD-8B60-DCD847CBF638}" ShortID="197561818">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="impact" ID="{57493656-58D7-4C45-9DBE-F2B100BDC8BF}" WorkUnitID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{214AA1C6-0D48-4E45-9E91-B7C0307D3464}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-71</YPos>
+																<Flags>21</Flags>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>0</YPos>
+																<Flags>53</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="metal impact no tone1" ID="{2A6DB7C5-2426-47D8-9BC1-DD2467317F8D}" ShortID="1052532033" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="metal impact no tone1" ID="{961336D0-1A85-41B5-BFF1-8C73015533FB}" ShortID="280545090">
+													<Language>SFX</Language>
+													<AudioFile>metal\metal impact no tone1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="metal impact no tone1" ID="{961336D0-1A85-41B5-BFF1-8C73015533FB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="metal impact no tone2" ID="{D3B56756-6603-4F58-AB0D-FC428BA6B4D3}" ShortID="686547070" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="metal impact no tone2" ID="{DDF61537-F329-42B0-970C-CBD544C18B55}" ShortID="739005694">
+													<Language>SFX</Language>
+													<AudioFile>metal\metal impact no tone2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="metal impact no tone2" ID="{DDF61537-F329-42B0-970C-CBD544C18B55}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="metal impact no tone3" ID="{C338348B-53A0-4664-83FF-A673C821134B}" ShortID="302861329" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="metal impact no tone3" ID="{955C5166-434E-45EC-BE04-016767CF7026}" ShortID="182772970">
+													<Language>SFX</Language>
+													<AudioFile>metal\metal impact no tone3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="metal impact no tone3" ID="{955C5166-434E-45EC-BE04-016767CF7026}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="metal impact no tone4" ID="{319A9CA0-B1D6-46E0-9DBF-8B54C213238F}" ShortID="768133611" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="metal impact no tone4" ID="{F34089F4-2D97-4249-B7E4-B0F29D583372}" ShortID="33179142">
+													<Language>SFX</Language>
+													<AudioFile>metal\metal impact no tone4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="metal impact no tone4" ID="{F34089F4-2D97-4249-B7E4-B0F29D583372}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="metal impact no tone5" ID="{90F94F79-196C-474C-9013-4386E892B7F7}" ShortID="450141009" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="metal impact no tone5" ID="{D3FFEAA3-7418-4C0B-915A-3887B8D1867D}" ShortID="546810305">
+													<Language>SFX</Language>
+													<AudioFile>metal\metal impact no tone5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="metal impact no tone5" ID="{D3FFEAA3-7418-4C0B-915A-3887B8D1867D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="metal impact no tone6" ID="{6EC3E9B5-A260-4F59-938C-8660C28DBDB3}" ShortID="390624885" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="metal impact no tone6" ID="{6BC9FA78-FB5A-49FF-9EF2-DE62C6F566D3}" ShortID="714977692">
+													<Language>SFX</Language>
+													<AudioFile>metal\metal impact no tone6.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="metal impact no tone6" ID="{6BC9FA78-FB5A-49FF-9EF2-DE62C6F566D3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="metalnotes" ID="{87ECAF49-0C2D-4BA8-AC1B-664C9AC497D2}" ShortID="660884991">
+									<PropertyList>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{5496B732-CA2D-4502-93E9-83219869A7A9}">
+														<PropertyList>
+															<Property Name="Min" Type="Real64" Value="-300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+											<RTPCList>
+												<RTPC Name="" ID="{E985CAD1-C3E8-4D73-94BE-CD03CE7E66CC}" ShortID="975728670">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="metalnotes" ID="{4239196D-DCDB-4414-B5A0-5B508AA8907B}" WorkUnitID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{2D6F9133-8A04-41B9-9913-FE9D3218C513}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-3600</YPos>
+																<Flags>21</Flags>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>0</YPos>
+																<Flags>53</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-20</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="music" ID="{CA906606-09FB-4986-B724-CAA394C96D8F}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Bb" ID="{4D3DEC8F-5114-4DAF-B2D1-2177DC21A204}" ShortID="754872202">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="metal impact Bb1" ID="{EA01894D-85B0-40E9-8B1D-EE017D1DC665}" ShortID="1065666814" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact Bb1" ID="{CED0087A-4154-4A48-9D9F-E65A576A3D99}" ShortID="800798867">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.023046183069086"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.011523091534543"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>metal\Bb\metal impact Bb1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact Bb1" ID="{CED0087A-4154-4A48-9D9F-E65A576A3D99}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact Bb2" ID="{D7A16196-613E-4230-88C2-DC449B424A9C}" ShortID="699348211" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact Bb2" ID="{3B33BF0C-7C71-4F18-936B-E79B9DF0B9D6}" ShortID="919206210">
+															<Language>SFX</Language>
+															<AudioFile>metal\Bb\metal impact Bb2.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact Bb2" ID="{3B33BF0C-7C71-4F18-936B-E79B9DF0B9D6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact Bb3" ID="{2E2F250B-C799-4724-8CDB-4DF6D4D2FAA5}" ShortID="29710729" Type="SoundFX">
+													<ExcludedPlatformList>
+														<Platform>Android</Platform>
+													</ExcludedPlatformList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact Bb3" ID="{A2A5002E-3679-488A-9C48-E6DF1339C4A3}" ShortID="531256382">
+															<Language>SFX</Language>
+															<AudioFile>metal\Bb\metal impact Bb3.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact Bb3" ID="{A2A5002E-3679-488A-9C48-E6DF1339C4A3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact Bb4" ID="{92C748A6-3133-4D62-96A7-ADB2B8EA60F6}" ShortID="44671047" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact Bb4" ID="{4AE23E33-A9AF-4C08-9A33-C37FAED9A5CE}" ShortID="804870020">
+															<Language>SFX</Language>
+															<AudioFile>metal\Bb\metal impact Bb4.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact Bb4" ID="{4AE23E33-A9AF-4C08-9A33-C37FAED9A5CE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact Bb5" ID="{EDECA9F0-19AA-4E95-A5A2-F7F1B0B4B2B4}" ShortID="335203120" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact Bb5" ID="{32C81D47-6B2C-4BF6-A125-026E51604130}" ShortID="641636094">
+															<Language>SFX</Language>
+															<AudioFile>metal\Bb\metal impact Bb5.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact Bb5" ID="{32C81D47-6B2C-4BF6-A125-026E51604130}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact Bb6" ID="{198ED79F-F71E-4D25-9D86-974B735C1FA6}" ShortID="165834950" Type="SoundFX">
+													<ExcludedPlatformList>
+														<Platform>Android</Platform>
+													</ExcludedPlatformList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact Bb6" ID="{E943BC23-3603-43B0-9F5A-0701F0AAD78D}" ShortID="788867424">
+															<Language>SFX</Language>
+															<AudioFile>metal\Bb\metal impact Bb6.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact Bb6" ID="{E943BC23-3603-43B0-9F5A-0701F0AAD78D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="C" ID="{09921BF5-8D46-473C-9B94-C545C8604A0A}" ShortID="978740817">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="metal impact C1" ID="{546A24B1-6AC0-427C-A4EB-39B71EB076CB}" ShortID="195228704" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact C1" ID="{5CA1612D-A073-474B-A070-EAF50144FE2F}" ShortID="271445821">
+															<Language>SFX</Language>
+															<AudioFile>metal\C\metal impact C1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact C1" ID="{5CA1612D-A073-474B-A070-EAF50144FE2F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact C2" ID="{BF6F483C-73AD-41C3-AAE7-985930AF7610}" ShortID="197799658" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact C2" ID="{EBDAE524-8A50-4A25-81C4-6ABD983423D8}" ShortID="80316185">
+															<Language>SFX</Language>
+															<AudioFile>metal\C\metal impact C2.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact C2" ID="{EBDAE524-8A50-4A25-81C4-6ABD983423D8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact C3" ID="{E2BCE908-9094-4AA7-898E-5699F82DAB8D}" ShortID="258218819" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact C3" ID="{A2A9907C-9BB4-4461-84CC-850E56254AAD}" ShortID="1000329366">
+															<Language>SFX</Language>
+															<AudioFile>metal\C\metal impact C3.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact C3" ID="{A2A9907C-9BB4-4461-84CC-850E56254AAD}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact C4" ID="{CDBD3B82-7C94-49F1-90C0-58FDC577F550}" ShortID="275147456" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact C4" ID="{C5CF880A-4DA5-40F2-BEB2-541AD150CBFA}" ShortID="681768169">
+															<Language>SFX</Language>
+															<AudioFile>metal\C\metal impact C4.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact C4" ID="{C5CF880A-4DA5-40F2-BEB2-541AD150CBFA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact C5" ID="{5A00B2A6-A779-4140-B76B-A29831767CC3}" ShortID="1004847502" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact C5" ID="{A84B1C63-3D69-45E3-B045-3337D7DA4303}" ShortID="449393799">
+															<Language>SFX</Language>
+															<AudioFile>metal\C\metal impact C5.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact C5" ID="{A84B1C63-3D69-45E3-B045-3337D7DA4303}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact C6" ID="{CE1E3F9D-8770-46A1-AF2C-D613F4C145CC}" ShortID="115881704" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact C6" ID="{67899188-39A5-44FD-B464-FA2E91AFFAB0}" ShortID="362285532">
+															<Language>SFX</Language>
+															<AudioFile>metal\C\metal impact C6.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact C6" ID="{67899188-39A5-44FD-B464-FA2E91AFFAB0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="D" ID="{14FAAC31-3EF8-4FDE-BFFE-7AA4A932CB6F}" ShortID="241718077">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="metal impact D1" ID="{9962A375-C8A2-4DDB-BFA4-9CA1BEAE89F0}" ShortID="853764940" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact D1" ID="{8F70F513-2A88-4ACD-91A4-FE264AAEB7FF}" ShortID="756219729">
+															<Language>SFX</Language>
+															<AudioFile>metal\D\metal impact D1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact D1" ID="{8F70F513-2A88-4ACD-91A4-FE264AAEB7FF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact D2" ID="{FBD0FCA2-212C-410B-8FF2-B50C3935F6C0}" ShortID="252324632" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact D2" ID="{83F38229-7D76-4E6E-B59E-B1AF9BF9F0A4}" ShortID="489574698">
+															<Language>SFX</Language>
+															<AudioFile>metal\D\metal impact D2.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact D2" ID="{83F38229-7D76-4E6E-B59E-B1AF9BF9F0A4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact D3" ID="{497B0E7C-2AC8-4370-B2BF-B25723529E8F}" ShortID="792278632" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact D3" ID="{7E5BED22-D027-47BD-B3E0-2B04A5DFB6B4}" ShortID="956419964">
+															<Language>SFX</Language>
+															<AudioFile>metal\D\metal impact D3.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact D3" ID="{7E5BED22-D027-47BD-B3E0-2B04A5DFB6B4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact D4" ID="{1E2C732C-B73B-41F8-A936-2CDE283CA936}" ShortID="441004154" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact D4" ID="{4FAFB6C9-4A86-47E7-B796-BBE6682B1A21}" ShortID="670906658">
+															<Language>SFX</Language>
+															<AudioFile>metal\D\metal impact D4.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact D4" ID="{4FAFB6C9-4A86-47E7-B796-BBE6682B1A21}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact D5" ID="{FB8A01B0-4BE7-4295-85E6-DF58048BCF72}" ShortID="509165765" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact D5" ID="{7BD363BD-9496-4A39-8018-DE4B9BD6A9D2}" ShortID="914452362">
+															<Language>SFX</Language>
+															<AudioFile>metal\D\metal impact D5.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact D5" ID="{7BD363BD-9496-4A39-8018-DE4B9BD6A9D2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact D6" ID="{9A71663F-3718-4F46-AC72-B28CADD11F65}" ShortID="446205725" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact D6" ID="{734C7DC0-B99B-4F53-B8C5-86791D9145C4}" ShortID="584384380">
+															<Language>SFX</Language>
+															<AudioFile>metal\D\metal impact D6.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact D6" ID="{734C7DC0-B99B-4F53-B8C5-86791D9145C4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="F" ID="{C160700D-C355-430F-97E0-636758010532}" ShortID="664883261">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="metal impact F1" ID="{5FE86707-B17B-4127-ACC3-F0D3D97D07C6}" ShortID="1014681568" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact F1" ID="{C5C09E0B-1D19-4F69-9581-EB22142213DC}" ShortID="53431297">
+															<Language>SFX</Language>
+															<AudioFile>metal\F\metal impact F1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact F1" ID="{C5C09E0B-1D19-4F69-9581-EB22142213DC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact F2" ID="{6930B060-14C8-41D6-BADD-B9D4E221CD34}" ShortID="800550569" Type="SoundFX">
+													<ExcludedPlatformList>
+														<Platform>Android</Platform>
+													</ExcludedPlatformList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact F2" ID="{356E94CD-30F2-45AD-89B0-7CB6735FCD30}" ShortID="120419077">
+															<Language>SFX</Language>
+															<AudioFile>metal\F\metal impact F2.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact F2" ID="{356E94CD-30F2-45AD-89B0-7CB6735FCD30}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact F3" ID="{7C7D22BF-2896-4E03-8C03-FB50E22C603A}" ShortID="81416986" Type="SoundFX">
+													<ExcludedPlatformList>
+														<Platform>Android</Platform>
+													</ExcludedPlatformList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact F3" ID="{E7782AE1-56B0-4B80-B339-2812A3B84895}" ShortID="462357784">
+															<Language>SFX</Language>
+															<AudioFile>metal\F\metal impact F3.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact F3" ID="{E7782AE1-56B0-4B80-B339-2812A3B84895}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact F4" ID="{8196FA05-4B3D-45A9-9D5D-EDD44CF2737B}" ShortID="425661970" Type="SoundFX">
+													<ExcludedPlatformList>
+														<Platform>Android</Platform>
+													</ExcludedPlatformList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact F4" ID="{6E9A6503-FAE2-4B26-BBF1-919EF58174C3}" ShortID="504936043">
+															<Language>SFX</Language>
+															<AudioFile>metal\F\metal impact F4.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact F4" ID="{6E9A6503-FAE2-4B26-BBF1-919EF58174C3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact F5" ID="{4632B049-3D9E-4A20-9356-317F68223C82}" ShortID="686679476" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact F5" ID="{38F13987-4B58-4E60-8A53-E4F8CC22AAAC}" ShortID="399018016">
+															<Language>SFX</Language>
+															<AudioFile>metal\F\metal impact F5.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact F5" ID="{38F13987-4B58-4E60-8A53-E4F8CC22AAAC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact F6" ID="{931F1631-6D53-47C5-BED1-2C178D7EE030}" ShortID="840960825" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact F6" ID="{3A9F1B5B-87E4-4929-ABA6-417F36A7E2B4}" ShortID="763202499">
+															<Language>SFX</Language>
+															<AudioFile>metal\F\metal impact F6.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact F6" ID="{3A9F1B5B-87E4-4929-ABA6-417F36A7E2B4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="G" ID="{B6784D3C-BC05-4F54-9F66-79AE18FA56A0}" ShortID="217531344">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="metal impact g1" ID="{168AE897-692E-4F72-805E-4062EA504B9B}" ShortID="388218823" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact g1" ID="{413E5A84-F922-405C-8A99-647BB00D1581}" ShortID="712774231">
+															<Language>SFX</Language>
+															<AudioFile>metal\G\metal impact g1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact g1" ID="{413E5A84-F922-405C-8A99-647BB00D1581}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact g2" ID="{14E3FA81-1990-4CC2-87E9-169F6C418A37}" ShortID="334869900" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact g2" ID="{854E85D6-7C5E-449C-BABE-C8F017E4A7B3}" ShortID="573092875">
+															<Language>SFX</Language>
+															<AudioFile>metal\G\metal impact g2.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact g2" ID="{854E85D6-7C5E-449C-BABE-C8F017E4A7B3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact g3" ID="{9E093549-1F64-4E4B-BE4D-CA6B0C92DECF}" ShortID="168605681" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact g3" ID="{563AA0D8-CCA5-4312-BFC5-D1B2BECCC04A}" ShortID="11557003">
+															<Language>SFX</Language>
+															<AudioFile>metal\G\metal impact g3.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact g3" ID="{563AA0D8-CCA5-4312-BFC5-D1B2BECCC04A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact g4" ID="{1D0D3D4E-A106-4517-8668-CEF0A8F3B63D}" ShortID="761855056" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact g4" ID="{15B4BDF9-DDCD-4C55-9687-DFDFDC105E24}" ShortID="261596142">
+															<Language>SFX</Language>
+															<AudioFile>metal\G\metal impact g4.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact g4" ID="{15B4BDF9-DDCD-4C55-9687-DFDFDC105E24}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact g5" ID="{1DB607E3-3A39-40BE-B72F-08742B80A47E}" ShortID="43545349" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact g5" ID="{46949716-CDDB-42C9-99E0-F050D4681DD4}" ShortID="35238501">
+															<Language>SFX</Language>
+															<AudioFile>metal\G\metal impact g5.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact g5" ID="{46949716-CDDB-42C9-99E0-F050D4681DD4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="metal impact g6" ID="{9D03F4D3-8B5A-4502-8D39-3C8252C5EB1D}" ShortID="246219989" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="metal impact g6" ID="{4B634856-39CF-4BF3-8E4A-E906884D4ED3}" ShortID="886669593">
+															<Language>SFX</Language>
+															<AudioFile>metal\G\metal impact g6.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="metal impact g6" ID="{4B634856-39CF-4BF3-8E4A-E906884D4ED3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="music" ID="{3ECF0B41-8A18-4E43-B2A4-6695EE6B52C9}" ShortID="201991576">
@@ -5005,7 +6974,7 @@
 							<ChildrenList>
 								<AudioFileSource Name="kick" ID="{C1DB3D8A-EB9D-45AB-BF81-676EE8BC31CF}" ShortID="625149348">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="1.96936542669584E-02"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0196936542669584"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>kick.wav</AudioFile>
@@ -5019,6 +6988,9 @@
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>100</Value>
+									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{96211733-9FA9-4F25-9C20-B4FAAA7FCCEE}" ShortID="28455768">
 											<ReferenceList>
@@ -5035,6 +7007,7 @@
 														<XPos>0</XPos>
 														<YPos>0</YPos>
 														<Flags>5</Flags>
+														<SegmentShape>Exp3</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>50.13298</XPos>
@@ -5050,6 +7023,11 @@
 											</Curve>
 										</RTPC>
 									</RTPCList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -5462,6 +7440,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="oxygen" ID="{C53E9EA0-3E35-44F3-83A1-ACD808D25983}" ShortID="314778614" Type="SoundFX">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>

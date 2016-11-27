@@ -13,6 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID ATMOSSTART = 2218299087U;
+        static const AkUniqueID ATMOSSTOP = 3273397333U;
         static const AkUniqueID CINEMATIC1 = 877642273U;
         static const AkUniqueID CINEMATIC2 = 877642274U;
         static const AkUniqueID CINEMATIC3 = 877642275U;
@@ -23,11 +25,6 @@ namespace AK
         static const AkUniqueID DAVEELECTROCUTE = 3669325296U;
         static const AkUniqueID DAVEFIREWOOSH = 4153348305U;
         static const AkUniqueID DAVEFIRSTLAUNCH = 1537918958U;
-        static const AkUniqueID DAVEFIRSTLAUNCH_01 = 2606874748U;
-        static const AkUniqueID DAVEFIRSTLAUNCH_02 = 2606874751U;
-        static const AkUniqueID DAVEFIRSTLAUNCH_03 = 2606874750U;
-        static const AkUniqueID DAVEFIRSTLAUNCH_04 = 2606874745U;
-        static const AkUniqueID DAVEFIRSTLAUNCH_05 = 2606874744U;
         static const AkUniqueID DAVEJETPACKRANDOMEXHAUST = 512507780U;
         static const AkUniqueID DAVELAUNCH = 3193570530U;
         static const AkUniqueID DAVEOBJECTCOLLISION = 607463598U;
@@ -234,6 +231,7 @@ namespace AK
         static const AkUniqueID NEW_AUXILIARY_BUS = 373392551U;
         static const AkUniqueID RVB1 = 2425890738U;
         static const AkUniqueID RVB2 = 2425890737U;
+        static const AkUniqueID RVBATMOS = 135845145U;
     } // namespace AUX_BUSSES
 
 }// namespace AK

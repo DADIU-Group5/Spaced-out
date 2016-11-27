@@ -62,6 +62,12 @@
 						<Property Name="LfoFrequency" Type="Real64" Value="0.02"/>
 					</PropertyList>
 				</ModulatorLfo>
+				<ModulatorEnvelope Name="impact" ID="{57493656-58D7-4C45-9DBE-F2B100BDC8BF}" ShortID="492979860"/>
+				<ModulatorEnvelope Name="metalnotes" ID="{4239196D-DCDB-4414-B5A0-5B508AA8907B}" ShortID="355617880">
+					<PropertyList>
+						<Property Name="EnvelopeAttackTime" Type="Real64" Value="0.1"/>
+					</PropertyList>
+				</ModulatorEnvelope>
 			</ChildrenList>
 		</WorkUnit>
 	</Modulators>

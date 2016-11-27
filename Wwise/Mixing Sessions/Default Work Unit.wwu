@@ -4,6 +4,7 @@
 		<WorkUnit Name="Default Work Unit" ID="{0220BA13-2976-4E6F-99E6-FE5D4CF9ED5D}" PersistMode="Standalone">
 			<ChildrenList>
 				<MixingSession Name="mix 1" ID="{ABB4B492-1E47-41DC-A367-2D0E90F06A30}"/>
+				<MixingSession Name="musicSession" ID="{A3944342-C226-4D39-B4D4-3B4FB56FFA18}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</MixingSessions>

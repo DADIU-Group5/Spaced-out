@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System;
 
 public class SoundManager : Singleton<SoundManager>, Observer
 {
@@ -73,10 +72,12 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
             case EventName.OnFire:
                 PlayEvent(SoundEventConstants.DAVE_CATCH_FIRE);
+                Invoke("PutOutDave", 5.0f);
                 break;
 
             case EventName.Electrocuted:
                 PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
+                Invoke("StopElectrocution", 5.0f);
                 break;
 
             case EventName.PlayerCharge:
@@ -137,6 +138,16 @@ public class SoundManager : Singleton<SoundManager>, Observer
             AkSoundEngine.SetState("galLanguage", "Eng");
         else
             AkSoundEngine.SetState("galLanguage", "Dan");
+    }
+
+    private void PutOutDave()
+    {
+        StopEvent(SoundEventConstants.DAVE_CATCH_FIRE, 0.5f);
+    }
+
+    private void StopElectrocution()
+    {
+        StopEvent(SoundEventConstants.DAVE_ELECTROCUTE, 0.5f);
     }
 
     private void PlayEvent(string eventName)

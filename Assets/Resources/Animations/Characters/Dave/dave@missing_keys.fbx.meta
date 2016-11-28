@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: e69e3785fb4e32743a97886ece1baaec
-timeCreated: 1480087510
+guid: e87cece61189fc947a67fe5b858eecec
+timeCreated: 1480354909
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -472,7 +472,9 @@ ModelImporter:
       : position error = 45626.570313 mm\n\t'jDrv_l_toe_01' : position error = 14345.015625
       mm\n\nClip 'outro' has import animation warnings that might lower retargeting
       quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'bind_spine_02'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'bind_r_palm_01'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'bind_l_palm_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'jDrv_r_toe_01'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0

@@ -180,7 +180,8 @@ public class InputController : MonoBehaviour, Observer
     {
         float xScale = cameraController.pitch.transform.up.y;
         xScale = Mathf.Sign(xScale);
-        cameraController.transform.Rotate(Vector3.up, Time.deltaTime * xScale * cameraRotateSpeed * (offset.x / ScreenCenter().magnitude));
+
+        transform.Rotate(Vector3.up, Time.deltaTime * xScale * cameraRotateSpeed * (offset.x / ScreenCenter().magnitude),Space.World);
         cameraController.pitch.transform.Rotate(Vector3.right, Time.deltaTime * cameraRotateSpeed * (-offset.y / ScreenCenter().magnitude));
     }
 

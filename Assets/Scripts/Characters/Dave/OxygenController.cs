@@ -9,7 +9,7 @@ public class OxygenController : MonoBehaviour
 
     public bool fuelGodMode = false;
 
-    public void Start()
+    public void Awake()
     {
         oxygen = maxOxygen;
         ThrowOxygenChangedEvent();

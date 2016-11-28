@@ -186,12 +186,12 @@ public class Room : MonoBehaviour
             Debug.LogError("No pickups");
             return false;
         }
-        if(pickupObjects.Count < 2)
+        if(pickupObjects.Count < 1)
         {
-            Debug.LogError("Needs to have atleast 1 fuel pickup and 1 collectible");
+            Debug.LogError("Needs to have atleast 1 comic.");
             return false;
         }
-        else
+        /*else
         {
             string pickupName = pickupObjects[0].name.Substring(0,3);
             bool doesNotHaveBoth = true;
@@ -204,10 +204,10 @@ public class Room : MonoBehaviour
             }
             if (doesNotHaveBoth)
             {
-                Debug.LogError("Needs to have atleast 1 fuel pickup and 1 collectible");
+                Debug.LogError("Needs to have atleast 1 comic");
                 return false;
             }
-        }
+        }*/
         return true;
     }
 

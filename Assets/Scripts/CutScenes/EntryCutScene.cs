@@ -30,7 +30,7 @@ public class EntryCutScene : MonoBehaviour {
         playerObj.position = playerPos.position;
         playerObj.rotation = playerPos.rotation;
         playerObj.parent = playerPos;
-        player.GetComponentInChildren<Animator>().SetTrigger("FakeFly");
+        player.GetComponentInChildren<Animator>().SetBool("Force Fly", true);
         particles = player.GetComponent<PlayerController>().chargeParticle;
         player.GetComponent<PlayerController>().chargeParticle = null;
         particles.SetActive(true);
@@ -60,17 +60,17 @@ public class EntryCutScene : MonoBehaviour {
     {
         particles.SetActive(false);
         playerObj.gameObject.GetComponent<PlayerController>().chargeParticle = particles;
-        playerObj.gameObject.GetComponentInChildren<Animator>().SetTrigger("Ready To Launch");
+        playerObj.gameObject.GetComponentInChildren<Animator>().SetBool("Force Fly", false);
     }
 
-    public void StartPlayerFly()
-    {
-        var evt = new ObserverEvent(EventName.PlayerLaunch);
-        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, 0.5f);
-        evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, playerObj.transform.forward);
-        evt.payload.Add(PayloadConstants.START_STOP, true);
-        Subject.instance.Notify(playerObj.gameObject, evt);
-    }
+    //public void StartPlayerFly()
+    //{
+    //    var evt = new ObserverEvent(EventName.PlayerLaunch);
+    //    evt.payload.Add(PayloadConstants.LAUNCH_FORCE, 0.5f);
+    //    evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, playerObj.transform.forward);
+    //    evt.payload.Add(PayloadConstants.START_STOP, true);
+    //    Subject.instance.Notify(playerObj.gameObject, evt);
+    //}
 
     public Transform GetPlayerSpawnPos()
     {

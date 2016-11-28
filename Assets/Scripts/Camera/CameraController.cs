@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System;
 
 public interface ICameraController
@@ -36,6 +35,11 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
         camZoomIn = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, camZoomInPosition);
         camZoomCurrent = camZoomIn;
         camZoomStartPos = camZoomIn;
+    }
+
+    void Start()
+    {
+        transform.rotation = target.transform.rotation;
     }
 
     // First do zooming in Update(), then place camera in front of objects if the current zoom position is incorrect

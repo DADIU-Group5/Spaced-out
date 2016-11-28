@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class OxygenController : MonoBehaviour
 {
@@ -11,21 +9,10 @@ public class OxygenController : MonoBehaviour
 
     public bool fuelGodMode = false;
 
-    public GameObject oxygenObject;
-    private List<Renderer> oxygenRenderers;
-
-    public void Awake()
+    public void Start()
     {
         oxygen = maxOxygen;
-        
-
-
-        oxygenRenderers = new List<Renderer>(oxygenObject.transform.childCount);
-        for (int i = 0; i < oxygenObject.transform.childCount; i++)
-        {
-            oxygenRenderers.Add(oxygenObject.transform.GetChild(i).GetComponent<Renderer>());
-        }
-        UpdateOxygenMeter();
+        ThrowOxygenChangedEvent();
     }
 
     public void UseOxygen()
@@ -66,33 +53,9 @@ public class OxygenController : MonoBehaviour
         ThrowOxygenChangedEvent();
     }
 
-    private void UpdateOxygenMeter()
-    {
-        int currentBar = 0;
-        for (int i = 0; i < oxygenRenderers.Count; i++, currentBar += 2)
-        {
-            if (currentBar + 2 <= oxygen)
-            {
-                oxygenRenderers[i].material.color = Color.blue;
-                oxygenRenderers[i].gameObject.SetActive(true);
-            }
-            else if (currentBar + 1 == oxygen)
-            {
-                oxygenRenderers[i].material.color = Color.red;
-                oxygenRenderers[i].gameObject.SetActive(true);
-            }
-            else {
-                oxygenRenderers[i].gameObject.SetActive(false);
-            }
-        }
-        
-    }
-
     // throw oxygen event
     private void ThrowOxygenChangedEvent()
     {
-        UpdateOxygenMeter();
-
         var evt = new ObserverEvent(EventName.UpdateOxygen);
         evt.payload.Add(PayloadConstants.OXYGEN, oxygen);
         Subject.instance.Notify(gameObject, evt);

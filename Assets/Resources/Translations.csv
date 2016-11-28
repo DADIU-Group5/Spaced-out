@@ -2,7 +2,7 @@ key,english,danish,Description
 danish,Danish,Dansk,
 english,English,Engelsk,
 start,Start,Start,
-levelSelect,Play,Spil,
+play,Play,Spil,
 settings,Settings,Indstillinger,
 exit,Exit Game,Luk Spil,
 resetProg,Reset Progress,Nulstil forløb,
@@ -11,7 +11,7 @@ credits,Credits,Rulletekster,
 back,Back,Tilbage,
 shop,Shop,Butik,
 tutorial,Tutorial,Begynder
-generate levels (costs 15x medals),Generate levels (costs 15x medals), Generér niveauer (Koster 15x medaljer)
+generateLevels,Generate levels (costs 15x medals), Generér niveauer (Koster 15x medaljer)
 level,Level,Niveau
 medal,Medal,Medalje
 medals,Medals,Medaljer
@@ -46,3 +46,5 @@ you win,You Win,Du Vandt
 comics,Comics,Tegneserier
 next level,Next Level,Næste Niveau
 replay,Replay,Spil Igen
+exitGame,Exit Game,Slut Spil
+unlockLevels,Unlock Levels,Åben alle Niveauer

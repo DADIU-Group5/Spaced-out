@@ -133,6 +133,8 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         if (!readyForLaunch)
             return;
 
+        power = Mathf.Ceil(power * 8f) / 8f;
+
         this.power = Mathf.Clamp01(power);
         animator.SetFloat("Power", power);
         ThrowLaunchPowerChangedEvent();

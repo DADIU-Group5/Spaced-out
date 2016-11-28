@@ -7,6 +7,7 @@ public class FireHazard : MonoBehaviour
     [HideInInspector]
     public GameObject player;
     public bool extinquishFlames = false;
+    public float timeBeforeResetting = 2f;
 
     [HideInInspector]
     public GameplayElement itemState;
@@ -23,8 +24,14 @@ public class FireHazard : MonoBehaviour
         itemState = this.gameObject.GetComponent<GameplayElement>();
     }
 
+    public IEnumerator ShockToDeath()
+    {
+        yield return new WaitForSeconds(timeBeforeResetting);
+        burningPlayer = false;
+    }
 
-    void OnTriggerStay(Collider other)
+
+        void OnTriggerStay(Collider other)
     {
         if (other.transform.tag == "Player" && itemState.On && !burningPlayer)
         {

@@ -16,6 +16,8 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
     [Header("In the pushing radius:")]
     public float pushRadius = 50f;
 
+    public BarrelTrigger barrelTrigger;
+
     //direction of the push, based on collision
     [HideInInspector]
     public Vector3 pushDirection;
@@ -161,6 +163,8 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
                 pushForce = other.rigidbody.velocity.magnitude;
                 pushDirection = other.contacts[0].point - transform.position;
                 pushDirection = -pushDirection.normalized;
+
+                barrelTrigger.TriggerBarrel();
 
                 //if the velocity is enough to explode...
                 if (pushForce >= explodeForce)

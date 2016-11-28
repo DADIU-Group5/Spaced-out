@@ -14,4 +14,12 @@ public class Subtitles
         else
             return danishSubtitles.GetSubtitles(type);
     }
+
+    public Subtitle GetSubtitle(string id, Language language)
+    {
+        if (language == Language.English)
+            return englishSubtitles.narrative.Find(s => s.id == id);
+        else
+            return danishSubtitles.narrative.Find(s => s.id == id);
+    }
 }

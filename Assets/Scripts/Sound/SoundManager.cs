@@ -18,7 +18,6 @@ public class SoundManager : Singleton<SoundManager>, Observer
         Subject.instance.AddObserver(this);
 
         AkSoundEngine.LoadBank("soundbank_alpha", AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
-        AkSoundEngine.SetSwitch("galVersion", "v1", gameObject);
 
         var settings = SettingsManager.instance.settings;
 

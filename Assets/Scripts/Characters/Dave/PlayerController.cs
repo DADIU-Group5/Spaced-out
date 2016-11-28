@@ -12,7 +12,6 @@ public interface IPlayerControl
 /// This class is responsible for controlling the player launches.
 /// Input controller should only comunicate through the above interface
 /// </summary>
-[RequireComponent(typeof(OxygenController))]
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour, IPlayerControl
 {
@@ -33,7 +32,6 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     private Quaternion aim;
     private bool readyForLaunch;
     private Rigidbody body;
-    private OxygenController oxygen;
     private Animator animator;
     private InputController inputCont;
     private bool playMusic = true;
@@ -43,7 +41,6 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         readyForLaunch = true;
         aim = transform.rotation;
         body = GetComponent<Rigidbody>();
-        oxygen = GetComponent<OxygenController>();
         animator = GetComponentInChildren<Animator>();
         
         if (Camera.main.transform.parent) {
@@ -91,7 +88,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     // randomizes idle and fly animations to make them look less repeatable
     private void RandomizeAnimator()
     {
-        animator.SetInteger("Random", UnityEngine.Random.Range(0, 9));
+        animator.SetInteger("Random", UnityEngine.Random.Range(0, 7));
     }
 
     /// <summary>
@@ -99,19 +96,8 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     /// </summary>
     public void ReadyForLaunch()
     {
-        if (oxygen.HasOxygen())
-        {
-            readyForLaunch = true;
-            animator.SetTrigger("Ready To Launch");
-        }
-        else
-        {
-            // throw oxygen death event
-            animator.SetTrigger("Death Oxygen");
-            var evt = new ObserverEvent(EventName.OxygenEmpty);
-            Subject.instance.Notify(gameObject, evt);
-        }
-
+        readyForLaunch = true;
+        animator.SetTrigger("Ready To Launch");
     }
 
     // aim the player at a certain point in world space
@@ -150,9 +136,8 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         // perform the launch
         Vector3 dir = aim * Vector3.forward; //inputCont.GetLaunchDirection();
         body.AddForce(power * maxLaunchVelocity * dir, ForceMode.VelocityChange);
-        oxygen.UseOxygen();
         animator.SetTrigger("Launch");
-        animator.SetFloat("Power", 0f);
+        //animator.SetFloat("Power", 0f);
         ThrowLaunchEvent();
 
         // reset power

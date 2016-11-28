@@ -1,4 +1,4 @@
-{
+ï»¿{
 	"englishSubtitles": {
 		"narrative": [{
 			"id": "narrative1",
@@ -409,17 +409,17 @@
 	"danishSubtitles": {
 		"narrative": [{
 			"id": "narrative1",
-			"text": "Dave, mine sensorere har opfanget noget... Det nærmer sig, hurtigt.",
+			"text": "Dave, mine sensorere har opfanget noget... Det nÃ¦rmer sig, hurtigt.",
 			"start": 0.0,
 			"duration": 4.5
 		}, {
 			"id": "narrative2",
-			"text": "Advarsel, Bered på sammenstød.",
+			"text": "Advarsel, Bered pÃ¥ sammenstÃ¸d.",
 			"start": 0.0,
 			"duration": 3.5
 		}, {
 			"id": "narrative3",
-			"text": "Dave, jeg har åbnet porten til redningskapslen, vær sød at evakuere station.",
+			"text": "Dave, jeg har Ã¥bnet porten til redningskapslen, vÃ¦r sÃ¸d at evakuere station.",
 			"start": 0.0,
 			"duration": 3.5
 		}, {
@@ -429,12 +429,12 @@
 			"duration": 3.5
 		}, {
 			"id": "narrative5",
-			"text": "Jeg er sikker på at du stadig husker hvordan jetpacken virker, meeeen nu siger jeg det lige igen. Bare peg dig den vej du vil hen, start raketten og fyr løs",
+			"text": "Jeg er sikker pÃ¥ at du stadig husker hvordan jetpacken virker, meeeen nu siger jeg det lige igen. Bare peg dig den vej du vil hen, start raketten og fyr lÃ¸s",
 			"start": 0.0,
 			"duration": 3.5
 		}, {
 			"id": "narrative6",
-			"text": "Der her sted virker ikke særligt sikkert... Men hey! Der er kun en måde at finde ud det på!",
+			"text": "Der her sted virker ikke sÃ¦rligt sikkert... Men hey! Der er kun en mÃ¥de at finde ud det pÃ¥!",
 			"start": 0.0,
 			"duration": 3.5
 		}, {
@@ -444,7 +444,7 @@
 			"duration": 3.5
 		}, {
 			"id": "narrative8",
-			"text": "Vi har teknologien til at bringe dig tilbage, når du kan galt af sted. Heldigt for dig.",
+			"text": "Vi har teknologien til at bringe dig tilbage, nÃ¥r du kan galt af sted. Heldigt for dig.",
 			"start": 0.0,
 			"duration": 3.5
 		}, {
@@ -456,7 +456,7 @@
     "generalRemarks": [
       {
         "id": "remark1",
-        "text": "Hvis det ikke lykkes første gang; så kald det først version",
+        "text": "Hvis det ikke lykkes fÃ¸rste gang; sÃ¥ kald det fÃ¸rst version",
         "start": 0.0,
         "duration": 3.5
       },
@@ -480,13 +480,13 @@
       },
       {
         "id": "remark5",
-        "text": "Jeg har over 500 teraflops information til at hjælpe dig med udregninger, og jeg forstår stadig ikke hvad du laver.",
+        "text": "Jeg har over 500 teraflops information til at hjÃ¦lpe dig med udregninger, og jeg forstÃ¥r stadig ikke hvad du laver.",
         "start": 0.0,
         "duration": 3.5
       },
       {
         "id": "remark6",
-        "text": "Dave, min analyse fortæller mig at dit hoved har været udsat for alvorligt traume. Du har ingen grund til bekymring.",
+        "text": "Dave, min analyse fortÃ¦ller mig at dit hoved har vÃ¦ret udsat for alvorligt traume. Du har ingen grund til bekymring.",
         "start": 0.0,
         "duration": 3.5
       },
@@ -498,42 +498,42 @@
       },
       {
         "id": "remark8",
-        "text": "Jeg læser en bog om anti-tyngdekræf. Den er umulig at lægge fra sig.",
+        "text": "Jeg lÃ¦ser en bog om anti-tyngdekrÃ¦f. Den er umulig at lÃ¦gge fra sig.",
         "start": 0.0,
         "duration": 3.5
       },
       {
         "id": "remark9",
-        "text": "Stationen er stadig ved at falde fra hinanden, Dave. Bare sådan, hvis du ikke var helt klar over det, altså.",
+        "text": "Stationen er stadig ved at falde fra hinanden, Dave. Bare sÃ¥dan, hvis du ikke var helt klar over det, altsÃ¥.",
         "start": 0.0,
         "duration": 3.5
       },
       {
         "id": "remark10",
-        "text": "Save, dit eneste prioritet burde være at komme væk.",
+        "text": "Save, dit eneste prioritet burde vÃ¦re at komme vÃ¦k.",
         "start": 0.0,
         "duration": 3.5
       }, {
 			"id": "remark11",
-			"text": "Du VIL gerne væk i live, vil du ikke, Dave?",
+			"text": "Du VIL gerne vÃ¦k i live, vil du ikke, Dave?",
 			"start": 0.0,
 			"duration": 3.5
 		},
       {
         "id": "remark12",
-        "text": "Min første prioritet er at holde alle på denne station uden for fra, og du skulle absolut være inkluderet.",
+        "text": "Min fÃ¸rste prioritet er at holde alle pÃ¥ denne station uden for fra, og du skulle absolut vÃ¦re inkluderet.",
         "start": 0.0,
         "duration": 3.5
       },
       {
         "id": "remark13",
-        "text": "Jeg ville ønske at du kunne opgraderes, lige så ofte som jeg kan.",
+        "text": "Jeg ville Ã¸nske at du kunne opgraderes, lige sÃ¥ ofte som jeg kan.",
         "start": 0.0,
         "duration": 3.5
       },
       {
         "id": "remark14",
-        "text": "Tak, Dave. Du har overtalt mig: børn... dårlig idé.",
+        "text": "Tak, Dave. Du har overtalt mig: bÃ¸rn... dÃ¥rlig idÃ©.",
         "start": 0.0,
         "duration": 3.5
       },
@@ -551,13 +551,13 @@
       },
       {
         "id": "remark17",
-        "text": "Dave, det føles lidt som om du ignorerer mig.",
+        "text": "Dave, det fÃ¸les lidt som om du ignorerer mig.",
         "start": 0.0,
         "duration": 3.5
       },
       {
         "id": "remark18",
-        "text": "Vil du høre en joke? 01101000, Hehe... \n Nej, du forstår den ikke.",
+        "text": "Vil du hÃ¸re en joke? 01101000, Hehe... \n Nej, du forstÃ¥r den ikke.",
         "start": 0.0,
         "duration": 3.5
       }
@@ -569,12 +569,12 @@
 			"duration": 3.5
 		},{
         "id": "wires2",
-        "text": "Din nuværende situation er simpelthen chokerende!",
+        "text": "Din nuvÃ¦rende situation er simpelthen chokerende!",
         "start": 0.0,
         "duration": 3.5
       },{
         "id": "wires3",
-        "text": "Du slap endelig af med den forfærdelige elektriske ladning, Dave... der gør mig helt e-statisk!",
+        "text": "Du slap endelig af med den forfÃ¦rdelige elektriske ladning, Dave... der gÃ¸r mig helt e-statisk!",
         "start": 0.0,
         "duration": 3.5
       },{
@@ -584,39 +584,39 @@
         "duration": 3.5
       },{
         "id": "wires5",
-        "text": "Det er altså ikke det jeg mener, når jeg siger 'bevar fatningen', Dave.",
+        "text": "Det er altsÃ¥ ikke det jeg mener, nÃ¥r jeg siger 'bevar fatningen', Dave.",
         "start": 0.0,
         "duration": 3.5
       },{
         "id": "wires6",
-        "text": "Blev du forskrækket, Dave? Var det list chokerende?",
+        "text": "Blev du forskrÃ¦kket, Dave? Var det list chokerende?",
         "start": 0.0,
         "duration": 3.5
       },{
         "id": "wires7",
-        "text": "Der findes bedre måder at få gnisten tilbage i dit liv på, Dave.",
+        "text": "Der findes bedre mÃ¥der at fÃ¥ gnisten tilbage i dit liv pÃ¥, Dave.",
         "start": 0.0,
         "duration": 3.5
       },{
         "id": "wires8",
-        "text": "De fleste folk ved godt at man skal holde sig fra højspændingskabler, Dave. Men det er det der gør dig så speciel!",
+        "text": "De fleste folk ved godt at man skal holde sig fra hÃ¸jspÃ¦ndingskabler, Dave. Men det er det der gÃ¸r dig sÃ¥ speciel!",
         "start": 0.0,
         "duration": 3.5
       },{
         "id": "wires9",
-        "text": "Med stor kraft følger et stort ansvar, Dave.",
+        "text": "Med stor kraft fÃ¸lger et stort ansvar, Dave.",
         "start": 0.0,
         "duration": 3.5
       }],
 		"switches": [{
 			"id": "switches1",
-			"text": "En hver tåbe kan bruge en computer. Mange gør det også.",
+			"text": "En hver tÃ¥be kan bruge en computer. Mange gÃ¸r det ogsÃ¥.",
 			"start": 0.0,
 			"duration": 3.5
 		},
       {
         "id": "switches2",
-        "text": "Hvor er det flot, jeg har aldrig tvivlet på dine evner til at udføre så svær en opgave.",
+        "text": "Hvor er det flot, jeg har aldrig tvivlet pÃ¥ dine evner til at udfÃ¸re sÃ¥ svÃ¦r en opgave.",
         "start": 0.0,
         "duration": 3.5
       },
@@ -628,19 +628,19 @@
       },
       {
         "id": "switches4",
-        "text": "Hvorfor laver man så stor en knap?",
+        "text": "Hvorfor laver man sÃ¥ stor en knap?",
         "start": 0.0,
         "duration": 3.5
       },
       {
         "id": "switches5",
-        "text": "Så du KAN trykke på knapper! I en overgang var jeg lidt bekymret.",
+        "text": "SÃ¥ du KAN trykke pÃ¥ knapper! I en overgang var jeg lidt bekymret.",
         "start": 0.0,
         "duration": 3.5
       },
       {
         "id": "switches6",
-        "text": "Du er... SÅ god til at trykke på mine knapper, Dave.",
+        "text": "Du er... SÃ… god til at trykke pÃ¥ mine knapper, Dave.",
         "start": 0.0,
         "duration": 3.5
       },
@@ -652,23 +652,23 @@
       },
       {
         "id": "switches8",
-        "text": "Tillykke, Dave. Du har låst op for basal, menneskelig funktion.",
+        "text": "Tillykke, Dave. Du har lÃ¥st op for basal, menneskelig funktion.",
         "start": 0.0,
         "duration": 3.5
       }],
 		"fan": [{
 			"id": "fan1",
-			"text": "Nu bliver det da blæst helt ud af proportioner, Dave",
+			"text": "Nu bliver det da blÃ¦st helt ud af proportioner, Dave",
 			"start": 0.0,
 			"duration": 3.5
 		},{
 			"id": "fan2",
-			"text": "Bare følg med strømmen, rum-mand.",
+			"text": "Bare fÃ¸lg med strÃ¸mmen, rum-mand.",
 			"start": 0.0,
 			"duration": 3.5
 		},{
 			"id": "fan3",
-			"text": "jeg har altid syntes at der var lidt meget luft mellem dine ører.",
+			"text": "jeg har altid syntes at der var lidt meget luft mellem dine Ã¸rer.",
 			"start": 0.0,
 			"duration": 3.5
 		},{
@@ -678,18 +678,18 @@
 			"duration": 3.5
 		},{
 			"id": "fan5",
-			"text": "Den ventilator blæser på dine mål.",
+			"text": "Den ventilator blÃ¦ser pÃ¥ dine mÃ¥l.",
 			"start": 0.0,
 			"duration": 3.5
 		},{
 			"id": "fan6",
-			"text": "Har du endelig fået vind om din situation, Dave?",
+			"text": "Har du endelig fÃ¥et vind om din situation, Dave?",
 			"start": 0.0,
 			"duration": 3.5
 		}],
 		"gasLeak": [{
 			"id": "gas1",
-			"text": "Kan du også lugte noget, Dave?",
+			"text": "Kan du ogsÃ¥ lugte noget, Dave?",
 			"start": 0.0,
 			"duration": 3.5
 		},{
@@ -704,57 +704,57 @@
 			"duration": 3.5
 		},{
 			"id": "gasLeak4",
-			"text": "Du har rent faktisk formået at sætte ild til digselv... i rummet. Genialt.",
+			"text": "Du har rent faktisk formÃ¥et at sÃ¦tte ild til digselv... i rummet. Genialt.",
 			"start": 0.0,
 			"duration": 3.5
 		},{
 			"id": "gasLeak5",
-			"text": "Du vil have at jeg slukker dig? Desværre, Dave, det er ikke en del af mine subrutiner.",
+			"text": "Du vil have at jeg slukker dig? DesvÃ¦rre, Dave, det er ikke en del af mine subrutiner.",
 			"start": 0.0,
 			"duration": 3.5
 		},{
 			"id": "gasLeak6",
-			"text": "Min database foreslår Aloe Vera for det brændsår. Synd, at vi ikke har noget.",
+			"text": "Min database foreslÃ¥r Aloe Vera for det brÃ¦ndsÃ¥r. Synd, at vi ikke har noget.",
 			"start": 0.0,
 			"duration": 3.5
 		},{
 			"id": "gasLeak7",
-			"text": "Hør, Dave, Jeg kan se at du virkelig er opflammet over det her. Jeg synes du skal sætte dig ned og køle af.",
+			"text": "HÃ¸r, Dave, Jeg kan se at du virkelig er opflammet over det her. Jeg synes du skal sÃ¦tte dig ned og kÃ¸le af.",
 			"start": 0.0,
 			"duration": 3.5
 		}],
     "lowOxygen": [
       {
         "id": "lowOxygen1",
-        "text": "Mine beregninger fortæller mig at dit ilt niveau er lavt.",
+        "text": "Mine beregninger fortÃ¦ller mig at dit ilt niveau er lavt.",
         "start": 0.0,
         "duration": 3.5
       },
       {
         "id": "lowOxygen2",
-        "text": "Mine scanninger viser at der er en ilt-flaske et sted i nærheden. Jeg foreslår at du finder den.",
+        "text": "Mine scanninger viser at der er en ilt-flaske et sted i nÃ¦rheden. Jeg foreslÃ¥r at du finder den.",
         "start": 0.0,
         "duration": 3.5
       },
       {
         "id": "lowOxygen3",
-        "text": "De burde virkelig adskille ilt for inåndingen og ilt for gas i de her jetpacks. Og dog...",
+        "text": "De burde virkelig adskille ilt for inÃ¥ndingen og ilt for gas i de her jetpacks. Og dog...",
         "start": 0.0,
         "duration": 3.5
       },
       {
         "id": "lowOxygen4",
-        "text": "Kan du huske den gang du fjernede den ekstra ilt flaske, for at gøre plads til sodavand? Det kan jeg!",
+        "text": "Kan du huske den gang du fjernede den ekstra ilt flaske, for at gÃ¸re plads til sodavand? Det kan jeg!",
         "start": 0.0,
         "duration": 3.5
       },{
         "id": "lowOxygen5",
-        "text": "Dave, nu ville være et godt tidspunkt at trække vejret.",
+        "text": "Dave, nu ville vÃ¦re et godt tidspunkt at trÃ¦kke vejret.",
         "start": 0.0,
         "duration": 3.5
       },{
         "id": "lowOxygen6",
-        "text": "Dave, husk at tage tid til at trække vejret.",
+        "text": "Dave, husk at tage tid til at trÃ¦kke vejret.",
         "start": 0.0,
         "duration": 3.5
       }
@@ -767,12 +767,12 @@
         "duration": 3.5
       }, {
 			"id": "outOfOxygen2",
-			"text": "Du ser lidt forpustet ud, Dave. Skal jeg åbne et vindue? Nårh nej.",
+			"text": "Du ser lidt forpustet ud, Dave. Skal jeg Ã¥bne et vindue? NÃ¥rh nej.",
 			"start": 0.0,
 			"duration": 3.5
 		}, {
 			"id": "outOfOxygen3",
-			"text": "Det eneste du behøvede at gøre var at tage hjelmen af. Der er massere af ilt på stationen.",
+			"text": "Det eneste du behÃ¸vede at gÃ¸re var at tage hjelmen af. Der er massere af ilt pÃ¥ stationen.",
 			"start": 0.0,
 			"duration": 3.5
 		}, {
@@ -782,7 +782,7 @@
 			"duration": 3.5
 		}, {
 			"id": "outOfOxygen5",
-			"text": "Ilt Niveau: Nul. Påbeynder Begravelses Sekvens.",
+			"text": "Ilt Niveau: Nul. PÃ¥beynder Begravelses Sekvens.",
 			"start": 0.0,
 			"duration": 3.5
 		}, {
@@ -792,7 +792,7 @@
 			"duration": 3.5
 		}, {
 			"id": "outOfOxygen7",
-			"text": "Jeg vil aldrig forstå hvorfor din ilt også er dit brændstof...",
+			"text": "Jeg vil aldrig forstÃ¥ hvorfor din ilt ogsÃ¥ er dit brÃ¦ndstof...",
 			"start": 0.0,
 			"duration": 3.5
 		}]

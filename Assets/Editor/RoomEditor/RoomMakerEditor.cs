@@ -180,13 +180,13 @@ public class RoomMakerEditor : EditorWindow {
                 {
                     Duplicate(Selection.activeGameObject, new Vector2(0, -4));
                 }
-                if (GUILayout.Button("Duplicate RIGHT"))
-                {
-                    Duplicate(Selection.activeGameObject, new Vector2(4, 0));
-                }
                 if (GUILayout.Button("Duplicate LEFT"))
                 {
-                    Duplicate(Selection.activeGameObject, new Vector2(-4, 0)); ;
+                    Duplicate(Selection.activeGameObject, new Vector2(-4, 0));
+                }
+                if (GUILayout.Button("Duplicate RIGHT"))
+                {
+                    Duplicate(Selection.activeGameObject, new Vector2(4, 0)); ;
                 }
                 EditorGUILayout.EndHorizontal();
                 if (GUILayout.Button("Delete"))
@@ -345,11 +345,11 @@ public class RoomMakerEditor : EditorWindow {
         EditorGUILayout.LabelField("MAKING ROOM INTERIOR!");
         if (Selection.activeGameObject != null && Selection.activeGameObject.activeInHierarchy)
         {
-            if (Selection.activeGameObject.GetComponent<ObjectSelector>() == null)
+            if (Selection.activeGameObject.GetComponent<ObjectSelector>() == null || Selection.activeGameObject.GetComponent<Door>() == null)
             {
                 if (Selection.activeTransform.parent != null)
                 {
-                    if (Selection.activeTransform.parent.GetComponent<ObjectSelector>() != null)
+                    if (Selection.activeTransform.parent.GetComponent<ObjectSelector>() != null || Selection.activeTransform.parent.GetComponent<Door>() != null)
                     {
                         Selection.activeTransform = Selection.activeTransform.parent;
                     }
@@ -420,7 +420,7 @@ public class RoomMakerEditor : EditorWindow {
 
 
         GUILayout.FlexibleSpace();
-        objectToCreate = EditorGUILayout.Popup("Create new object: ", objectToCreate, new string[] { "Select", "Medium Object", "Large Object", "XLarge Object", "Props", "Fuel", "Comic", "Exploding barrel" });
+        objectToCreate = EditorGUILayout.Popup("Create new object: ", objectToCreate, new string[] { "Select", "Medium Object", "Large Object", "XLarge Object", "Props", /*"Fuel",*/ "Comic", "Exploding barrel" });
         if (Selection.activeTransform != null)
         {
             tempPos = Selection.activeTransform.position;
@@ -459,15 +459,15 @@ public class RoomMakerEditor : EditorWindow {
                 Selection.activeGameObject = RM.NewFloatingProp(tempPos);
                 objectToCreate = 0;
                 break;
-            case 8:
+            /*case 8:
                 Selection.activeGameObject = RM.NewPickUp(tempPos + new Vector3(0,2,0),0);
                 objectToCreate = 0;
-                break;
-            case 9:
+                break;*/
+            case 8:
                 Selection.activeGameObject = RM.NewPickUp(tempPos + new Vector3(0, 2, 0), 1);
                 objectToCreate = 0;
                 break;
-            case 10:
+            case 9:
                 Selection.activeGameObject = RM.NewBarrel(tempPos + new Vector3(0,1,0));
                 objectToCreate = 0;
                 break;
@@ -477,7 +477,7 @@ public class RoomMakerEditor : EditorWindow {
 
         GUILayout.FlexibleSpace();
         GUILayout.BeginHorizontal();
-        if (GUILayout.Button("Edit room", GUILayout.Height(50)))
+        if (GUILayout.Button("Edit room layout", GUILayout.Height(50)))
         {
             states = States.Editing;
         }
@@ -501,6 +501,12 @@ public class RoomMakerEditor : EditorWindow {
                     {
                         Selection.activeTransform = Selection.activeTransform.parent;
                     }
+                }
+            }
+            if (Selection.activeTransform.parent != null && Selection.activeTransform.parent != RM.GetRoom().decorParent)
+            {
+                if(Selection.activeTransform.parent.parent != null && Selection.activeTransform.parent.parent == RM.GetRoom().decorParent){
+                    Selection.activeTransform = Selection.activeTransform.parent;
                 }
             }
             EditorGUILayout.LabelField("Rotable Object Selected.");
@@ -554,7 +560,7 @@ public class RoomMakerEditor : EditorWindow {
 
         GUILayout.FlexibleSpace();
         GUILayout.BeginHorizontal();
-        if (GUILayout.Button("Edit room", GUILayout.Height(50)))
+        if (GUILayout.Button("Edit room layout", GUILayout.Height(50)))
         {
             states = States.Editing;
         }

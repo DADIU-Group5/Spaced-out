@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     // randomizes idle and fly animations to make them look less repeatable
     private void RandomizeAnimator()
     {
-        animator.SetInteger("Random", UnityEngine.Random.Range(0, 9));
+        animator.SetInteger("Random", UnityEngine.Random.Range(0, 7));
     }
 
     /// <summary>

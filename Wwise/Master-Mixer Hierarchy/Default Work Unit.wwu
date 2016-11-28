@@ -160,15 +160,14 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
-							<ReferenceList/>
 							<DuckingList>
 								<DuckItem>
 									<BusRef Name="music" ID="{CA906606-09FB-4986-B724-CAA394C96D8F}"/>
 									<DuckingParam>
 										<Volume>-10</Volume>
-										<FadeInTime>2</FadeInTime>
-										<FadeOutTime>0</FadeOutTime>
-										<FadeCurve>FadeLog3</FadeCurve>
+										<FadeInTime>0.100000001490116</FadeInTime>
+										<FadeOutTime>0.100000001490116</FadeOutTime>
+										<FadeCurve>FadeLinear</FadeCurve>
 									</DuckingParam>
 								</DuckItem>
 							</DuckingList>
@@ -214,11 +213,6 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
-									<ObjectRef Name="musicSidechain" ID="{1FE8BDF0-7E5F-48EE-85BD-10356DE94F9E}" WorkUnitID="{16BB581D-BAEC-49FA-A974-D915FC1D5EA1}"/>
-								</Reference>
-							</ReferenceList>
 						</Bus>
 						<Bus Name="atmos" ID="{FA0DE26E-0B1A-402B-A0E0-578BA0A760BF}">
 							<PropertyList>
@@ -295,46 +289,9 @@
 												</PointList>
 											</Curve>
 										</RTPC>
-										<RTPC Name="" ID="{E41F6C79-394E-4E12-A9FC-C19C0E56088A}" ShortID="465460064">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="musicSidechain" ID="{181A310C-6E70-4F86-B312-63125AE5BB3A}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{15D57848-E094-4496-87D6-54AA1A184BA4}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>0.04866</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>49.84894</XPos>
-														<YPos>-0.0779</YPos>
-														<Flags>0</Flags>
-														<SegmentShape>Exp2</SegmentShape>
-													</Point>
-													<Point>
-														<XPos>77.6435</XPos>
-														<YPos>-10.9254</YPos>
-														<Flags>0</Flags>
-														<SegmentShape>Log2</SegmentShape>
-													</Point>
-													<Point>
-														<XPos>100</XPos>
-														<YPos>-200</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
 									</RTPCList>
 								</Property>
 							</PropertyList>
-							<ReferenceList/>
 						</Bus>
 						<AuxBus Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}">
 							<ReferenceList>
@@ -357,14 +314,18 @@
 								</Reference>
 							</ReferenceList>
 						</AuxBus>
+						<AuxBus Name="dly" ID="{C9714835-2726-49D1-9907-A5292C51E966}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+									<ObjectRef Name="Blue_Distant_Echoes" ID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
 					</ChildrenList>
 					<StateInfo>
 						<StateGroupList>
 							<StateGroupInfo>
 								<StateGroupRef Name="slowMotion" ID="{AD3BB683-1050-4B91-ADF9-E3970BDC3C31}"/>
-							</StateGroupInfo>
-							<StateGroupInfo>
-								<StateGroupRef Name="pause" ID="{2DA0F13A-FBF7-4730-A9D5-D63FC4EF998E}"/>
 							</StateGroupInfo>
 						</StateGroupList>
 						<CustomStateList>
@@ -373,15 +334,6 @@
 								<State Name="Custom State" ID="{0FE45214-B38A-4203-A5FD-5123EFD701E3}" ShortID="775978487">
 									<PropertyList>
 										<Property Name="Pitch" Type="int32" Value="-2400"/>
-									</PropertyList>
-								</State>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="paused" ID="{5C00FE7B-B639-4CA8-8842-0C1BFA2E0DD4}"/>
-								<State Name="Custom State" ID="{31E4E0BF-55E8-4E2D-A9CD-5F45ACAE3F87}" ShortID="83469782">
-									<PropertyList>
-										<Property Name="Lowpass" Type="int16" Value="75"/>
-										<Property Name="Volume" Type="Real64" Value="-10"/>
 									</PropertyList>
 								</State>
 							</CustomState>

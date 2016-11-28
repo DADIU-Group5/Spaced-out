@@ -273,16 +273,8 @@
 							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="narrative1" ID="{3BA188DD-43D7-4005-91B0-5B0DC53CC350}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
-							<Position X="3" Y="0"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="charge" ID="{0301B950-95C3-4298-BBDA-BEC82750E4CD}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 							<Position X="3" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="narrative8" ID="{09593157-6B4A-430D-8B31-0FFE82F414D1}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
-							<Position X="4" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -328,7 +320,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}"/>
-							<Value>82.6484459123318</Value>
+							<Value>91.6111850865513</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}"/>
@@ -344,22 +336,14 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="musicVolume" ID="{94967744-CEA3-4D37-893D-F4A043DFEB29}"/>
-							<Value>100</Value>
+							<Value>83</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Freefall" ID="{2F2DFE37-4F9E-4D94-83D8-53CCA39781AD}"/>
 							<Value>75</Value>
 						</RTPCValue>
 						<RTPCValue>
-							<GameParameterRef Name="galSidechain" ID="{60BF31E9-478B-4DE4-954F-45BFC64AB433}"/>
-							<Value>51.3091641490433</Value>
-						</RTPCValue>
-						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Fear" ID="{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"/>
-							<Value>50</Value>
-						</RTPCValue>
-						<RTPCValue>
-							<GameParameterRef Name="musicSidechain" ID="{181A310C-6E70-4F86-B312-63125AE5BB3A}"/>
 							<Value>50</Value>
 						</RTPCValue>
 						<RTPCValue>
@@ -369,7 +353,6 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
-						<CurrentStateRef Name="unpaused" ID="{9E5A9166-EB7D-4BB1-8C1F-ACB6F66D5CBC}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="dan" ID="{067E8178-15B4-4628-AEDE-BD89FB2A8F68}"/>

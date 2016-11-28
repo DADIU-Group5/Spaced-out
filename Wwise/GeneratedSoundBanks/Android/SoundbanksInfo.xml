@@ -49,6 +49,7 @@
 				<Event Id="661603698" Name="daveOutofOxygen" ObjectPath="\Events\Default Work Unit\dave\daveOutofOxygen"/>
 				<Event Id="3465444258" Name="davePutOutFire" ObjectPath="\Events\Default Work Unit\dave\davePutOutFire"/>
 				<Event Id="522694124" Name="daveRandomGrunt" ObjectPath="\Events\Default Work Unit\dave\daveRandomGrunt"/>
+				<Event Id="918879319" Name="daveScratch" ObjectPath="\Events\Default Work Unit\dave\daveScratch"/>
 				<Event Id="1016866911" Name="daveSquishBetweenDoors" ObjectPath="\Events\Default Work Unit\dave\daveSquishBetweenDoors"/>
 				<Event Id="2519729295" Name="daveStaticCollision" ObjectPath="\Events\Default Work Unit\dave\daveStaticCollision"/>
 				<Event Id="2108630538" Name="daveVent" ObjectPath="\Events\Default Work Unit\dave\daveVent"/>
@@ -186,6 +187,14 @@
 				<File Id="24715317" Language="SFX">
 					<ShortName>Danish\electrocute\wiresDan4.wav</ShortName>
 					<Path>SFX/Danish/electrocute/wiresDan4_645155D0.wem</Path>
+				</File>
+				<File Id="26065425" Language="SFX">
+					<ShortName>grunts\dave grunts 15.wav</ShortName>
+					<Path>SFX/grunts/dave grunts 15_2E415D62.wem</Path>
+				</File>
+				<File Id="30115822" Language="SFX">
+					<ShortName>grunts\dave grunts 16.wav</ShortName>
+					<Path>SFX/grunts/dave grunts 16_67F555A2.wem</Path>
 				</File>
 				<File Id="33179142" Language="SFX">
 					<ShortName>metal\metal impact no tone4.wav</ShortName>
@@ -351,6 +360,10 @@
 					<ShortName>GAL\Danish\general remarks\final\remarkDan15.wav</ShortName>
 					<Path>SFX/GAL/Danish/general remarks/final/remarkDan15_645155D0.wem</Path>
 				</File>
+				<File Id="218282206" Language="SFX">
+					<ShortName>dave\buttscratch3.wav</ShortName>
+					<Path>SFX/dave/buttscratch3_645155D0.wem</Path>
+				</File>
 				<File Id="220396511" Language="SFX">
 					<ShortName>GAL\English\fan\final\fan6.wav</ShortName>
 					<Path>SFX/GAL/English/fan/final/fan6_645155D0.wem</Path>
@@ -374,6 +387,10 @@
 				<File Id="229414056" Language="SFX">
 					<ShortName>atmos\hydralics2.wav</ShortName>
 					<Path>SFX/atmos/hydralics2_645155D0.wem</Path>
+				</File>
+				<File Id="233307603" Language="SFX">
+					<ShortName>dave\buttscratch1.wav</ShortName>
+					<Path>SFX/dave/buttscratch1_645155D0.wem</Path>
 				</File>
 				<File Id="242871080" Language="SFX">
 					<ShortName>skibsatmos\skibsrumlen proper loop 3.wav</ShortName>
@@ -483,6 +500,10 @@
 					<ShortName>skibsatmos\skibs rumlem proper loop 1.wav</ShortName>
 					<Path>SFX/skibsatmos/skibs rumlem proper loop 1_645155D0.wem</Path>
 				</File>
+				<File Id="354171151" Language="SFX">
+					<ShortName>grunts\dave grunts 17.wav</ShortName>
+					<Path>SFX/grunts/dave grunts 17_54D20E51.wem</Path>
+				</File>
 				<File Id="354507471" Language="SFX">
 					<ShortName>atmos\hydralics5.wav</ShortName>
 					<Path>SFX/atmos/hydralics5_645155D0.wem</Path>
@@ -547,6 +568,10 @@
 					<ShortName>GAL\English\out of oxygen\final\outofocygen1.wav</ShortName>
 					<Path>SFX/GAL/English/out of oxygen/final/outofocygen1_645155D0.wem</Path>
 				</File>
+				<File Id="404632530" Language="SFX">
+					<ShortName>dave\buttscratch4.wav</ShortName>
+					<Path>SFX/dave/buttscratch4_645155D0.wem</Path>
+				</File>
 				<File Id="408124425" Language="SFX">
 					<ShortName>impacts\object impact light5.wav</ShortName>
 					<Path>SFX/impacts/object impact light5_08C0D86A.wem</Path>
@@ -566,6 +591,14 @@
 				<File Id="427171029" Language="SFX">
 					<ShortName>launch synth5.wav</ShortName>
 					<Path>SFX/launch synth5_ED6F100E.wem</Path>
+				</File>
+				<File Id="430918783" Language="SFX">
+					<ShortName>grunts\dave grunts 9.wav</ShortName>
+					<Path>SFX/grunts/dave grunts 9_20F6168E.wem</Path>
+				</File>
+				<File Id="444280125" Language="SFX">
+					<ShortName>grunts\dave grunts 4.wav</ShortName>
+					<Path>SFX/grunts/dave grunts 4_F2B89B87.wem</Path>
 				</File>
 				<File Id="445026076" Language="SFX">
 					<ShortName>GAL\English\narrative\final\narrative1.wav</ShortName>
@@ -639,6 +672,10 @@
 					<ShortName>skibsatmos\skibsrumlen proper loop 2.wav</ShortName>
 					<Path>SFX/skibsatmos/skibsrumlen proper loop 2_645155D0.wem</Path>
 				</File>
+				<File Id="497404101" Language="SFX">
+					<ShortName>grunts\dave grunts 6.wav</ShortName>
+					<Path>SFX/grunts/dave grunts 6_24A037CC.wem</Path>
+				</File>
 				<File Id="500649464" Language="SFX">
 					<ShortName>aloevera.wav</ShortName>
 					<Path>SFX/aloevera_645155D0.wem</Path>
@@ -650,6 +687,10 @@
 				<File Id="510201090" Language="SFX">
 					<ShortName>GAL\Danish\general remarks\final\remarkDan13.wav</ShortName>
 					<Path>SFX/GAL/Danish/general remarks/final/remarkDan13_645155D0.wem</Path>
+				</File>
+				<File Id="510992843" Language="SFX">
+					<ShortName>grunts\dave grunts 1.wav</ShortName>
+					<Path>SFX/grunts/dave grunts 1_BA9D4542.wem</Path>
 				</File>
 				<File Id="511513502" Language="SFX">
 					<ShortName>GAL\English\low oxygen\final\lowoxygen1.wav</ShortName>
@@ -666,6 +707,10 @@
 				<File Id="541106291" Language="SFX">
 					<ShortName>Danish\electrocute\wiresDan8.wav</ShortName>
 					<Path>SFX/Danish/electrocute/wiresDan8_645155D0.wem</Path>
+				</File>
+				<File Id="543943558" Language="SFX">
+					<ShortName>grunts\dave grunts 7.wav</ShortName>
+					<Path>SFX/grunts/dave grunts 7_D2F49AAF.wem</Path>
 				</File>
 				<File Id="544555031" Language="SFX">
 					<ShortName>GAL\English\general remarks\final\remarks3.wav</ShortName>
@@ -690,6 +735,10 @@
 				<File Id="560816914" Language="SFX">
 					<ShortName>electrocute3.wav</ShortName>
 					<Path>SFX/electrocute3_E2B95D9C.wem</Path>
+				</File>
+				<File Id="563855461" Language="SFX">
+					<ShortName>grunts\dave grunts 8.wav</ShortName>
+					<Path>SFX/grunts/dave grunts 8_6F0E1F63.wem</Path>
 				</File>
 				<File Id="572934450" Language="SFX">
 					<ShortName>atmos\hydralics4.wav</ShortName>
@@ -727,6 +776,10 @@
 					<ShortName>GAL\English\general remarks\final\remarks2.wav</ShortName>
 					<Path>SFX/GAL/English/general remarks/final/remarks2_645155D0.wem</Path>
 				</File>
+				<File Id="597181408" Language="SFX">
+					<ShortName>grunts\dave grunts 13.wav</ShortName>
+					<Path>SFX/grunts/dave grunts 13_C0E81F81.wem</Path>
+				</File>
 				<File Id="598488493" Language="SFX">
 					<ShortName>GAL\Danish\general remarks\final\remarkDan6.wav</ShortName>
 					<Path>SFX/GAL/Danish/general remarks/final/remarkDan6_645155D0.wem</Path>
@@ -759,6 +812,14 @@
 					<ShortName>door shut10_1.wav</ShortName>
 					<Path>SFX/door shut10_1_C23FFF8B.wem</Path>
 				</File>
+				<File Id="634867864" Language="SFX">
+					<ShortName>grunts\dave grunts 2.wav</ShortName>
+					<Path>SFX/grunts/dave grunts 2_6DC33144.wem</Path>
+				</File>
+				<File Id="635598483" Language="SFX">
+					<ShortName>grunts\dave grunts 11.wav</ShortName>
+					<Path>SFX/grunts/dave grunts 11_C37DF61A.wem</Path>
+				</File>
 				<File Id="635644102" Language="SFX">
 					<ShortName>impacts\object impact light1.wav</ShortName>
 					<Path>SFX/impacts/object impact light1_34C50239.wem</Path>
@@ -782,6 +843,10 @@
 				<File Id="645013745" Language="SFX">
 					<ShortName>atmos\hydralics3.wav</ShortName>
 					<Path>SFX/atmos/hydralics3_645155D0.wem</Path>
+				</File>
+				<File Id="645679551" Language="SFX">
+					<ShortName>grunts\dave grunts 10.wav</ShortName>
+					<Path>SFX/grunts/dave grunts 10_5691DBCC.wem</Path>
 				</File>
 				<File Id="647898339" Language="SFX">
 					<ShortName>door squeeze.wav</ShortName>
@@ -846,6 +911,10 @@
 				<File Id="699581131" Language="SFX">
 					<ShortName>Danish\switch\switchDAn7.wav</ShortName>
 					<Path>SFX/Danish/switch/switchDAn7_645155D0.wem</Path>
+				</File>
+				<File Id="706371641" Language="SFX">
+					<ShortName>grunts\dave grunts 12.wav</ShortName>
+					<Path>SFX/grunts/dave grunts 12_F64CCF2D.wem</Path>
 				</File>
 				<File Id="712774231" Language="SFX">
 					<ShortName>metal\G\metal impact g1.wav</ShortName>
@@ -915,6 +984,10 @@
 					<ShortName>GAL\English\switch\final\switch3.wav</ShortName>
 					<Path>SFX/GAL/English/switch/final/switch3_645155D0.wem</Path>
 				</File>
+				<File Id="794015766" Language="SFX">
+					<ShortName>grunts\dave grunts 14.wav</ShortName>
+					<Path>SFX/grunts/dave grunts 14_D15FD0FB.wem</Path>
+				</File>
 				<File Id="800798867" Language="SFX">
 					<ShortName>metal\Bb\metal impact Bb1.wav</ShortName>
 					<Path>SFX/metal/Bb/metal impact Bb1_E9DA64FB.wem</Path>
@@ -930,6 +1003,10 @@
 				<File Id="821671456" Language="SFX">
 					<ShortName>skibsatmos\skibsrumlen proper loop 1.wav</ShortName>
 					<Path>SFX/skibsatmos/skibsrumlen proper loop 1_645155D0.wem</Path>
+				</File>
+				<File Id="824313990" Language="SFX">
+					<ShortName>dave\buttscratch2.wav</ShortName>
+					<Path>SFX/dave/buttscratch2_645155D0.wem</Path>
 				</File>
 				<File Id="824586379" Language="SFX">
 					<ShortName>putoutfire2.wav</ShortName>
@@ -950,6 +1027,10 @@
 				<File Id="836593034" Language="SFX">
 					<ShortName>impacts\object impact1.wav</ShortName>
 					<Path>SFX/impacts/object impact1_31D66748.wem</Path>
+				</File>
+				<File Id="837032869" Language="SFX">
+					<ShortName>grunts\dave grunts 5.wav</ShortName>
+					<Path>SFX/grunts/dave grunts 5_E5507798.wem</Path>
 				</File>
 				<File Id="837404966" Language="SFX">
 					<ShortName>impacts\heavy impact6.wav</ShortName>
@@ -1006,6 +1087,10 @@
 				<File Id="878892781" Language="SFX">
 					<ShortName>explosion4.wav</ShortName>
 					<Path>SFX/explosion4_645155D0.wem</Path>
+				</File>
+				<File Id="881265781" Language="SFX">
+					<ShortName>grunts\dave grunts 3.wav</ShortName>
+					<Path>SFX/grunts/dave grunts 3_57673302.wem</Path>
 				</File>
 				<File Id="886669593" Language="SFX">
 					<ShortName>metal\G\metal impact g6.wav</ShortName>

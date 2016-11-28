@@ -31,6 +31,7 @@ namespace AK
         static const AkUniqueID DAVEOUTOFOXYGEN = 661603698U;
         static const AkUniqueID DAVEPUTOUTFIRE = 3465444258U;
         static const AkUniqueID DAVERANDOMGRUNT = 522694124U;
+        static const AkUniqueID DAVESCRATCH = 918879319U;
         static const AkUniqueID DAVESQUISHBETWEENDOORS = 1016866911U;
         static const AkUniqueID DAVESTATICCOLLISION = 2519729295U;
         static const AkUniqueID DAVEVENT = 2108630538U;

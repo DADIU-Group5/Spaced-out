@@ -1014,6 +1014,13 @@
 										</Element>
 									</ElementList>
 								</Action>
+								<Action Name="Play" ID="{0FD65C21-EC3E-4B12-9BAC-06C1F404DFF0}" ShortID="207657480" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{62E63725-CF21-45B0-8145-140BC30A42D6}" Global="false">
+											<ObjectRef Name="grunts" ID="{1A28A773-1970-4B8C-A2B1-640CCB269910}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="daveobjectCollision" ID="{A261AB7A-38C8-4BC5-85FB-C7EF60109A8B}">
@@ -1055,6 +1062,17 @@
 									<ElementList>
 										<Element ID="{E10CDA6A-D4AA-4D98-9EA7-4FA03ED14BF6}" Global="false">
 											<ObjectRef Name="airdrag" ID="{F531F20F-7E93-44CF-9E05-98BE0E6F2967}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="daveScratch" ID="{27E2C4F0-F349-4F33-8A96-68A0FA840C7D}">
+							<ChildrenList>
+								<Action Name="Play" ID="{9742EC6C-6AE7-4D33-A609-DC70D8586F19}" ShortID="806010274" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{59E462F7-CDBC-4071-B576-C19E78DFF23E}" Global="false">
+											<ObjectRef Name="buttscratch" ID="{D44DEA8E-B999-4A22-AD2C-AF98A72E961B}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>

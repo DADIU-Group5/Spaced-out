@@ -8980,6 +8980,554 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="buttscratch" ID="{D44DEA8E-B999-4A22-AD2C-AF98A72E961B}" ShortID="1017436479">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3BDF6C63-A139-4CE6-B710-E4CE4A40C075}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="30"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{37B7240F-D2CF-4C37-B4E4-95C6C70AA010}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-15</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="buttscratch1" ID="{D4921EB4-F297-4A89-AC70-46AB2D8830D8}" ShortID="1061564395" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="buttscratch1" ID="{AECED268-4EB6-4020-B612-FF18864319D1}" ShortID="233307603">
+													<Language>SFX</Language>
+													<AudioFile>dave\buttscratch1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="buttscratch1" ID="{AECED268-4EB6-4020-B612-FF18864319D1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="buttscratch2" ID="{6EBB38E5-E778-41E3-9AC2-F398E8F1FA15}" ShortID="151440557" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="buttscratch2" ID="{FF134816-9EEB-4DC0-8C30-65EEA587B923}" ShortID="824313990">
+													<Language>SFX</Language>
+													<AudioFile>dave\buttscratch2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="buttscratch2" ID="{FF134816-9EEB-4DC0-8C30-65EEA587B923}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="buttscratch3" ID="{E9BD6E43-5B80-4233-B696-D25D2053672A}" ShortID="614700806" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="buttscratch3" ID="{7E5051E2-D3AE-4EC9-B9D9-A0609D67E4DC}" ShortID="218282206">
+													<Language>SFX</Language>
+													<AudioFile>dave\buttscratch3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="buttscratch3" ID="{7E5051E2-D3AE-4EC9-B9D9-A0609D67E4DC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="buttscratch4" ID="{711EF373-EAB3-4247-99EA-1B448F1AA4C0}" ShortID="507612757" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="buttscratch4" ID="{1D771746-BE8C-4D5E-B9AE-F4AC679513F9}" ShortID="404632530">
+													<Language>SFX</Language>
+													<AudioFile>dave\buttscratch4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="buttscratch4" ID="{1D771746-BE8C-4D5E-B9AE-F4AC679513F9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="grunts" ID="{1A28A773-1970-4B8C-A2B1-640CCB269910}" ShortID="524834466">
+									<PropertyList>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="dave grunts 1" ID="{3506533D-A3B9-4106-B08C-4D4F469AA53D}" ShortID="368830256" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dave grunts 1" ID="{7701D464-5DA7-4683-9E35-2DE2EB83C864}" ShortID="510992843">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0120240480961924"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00701402805611223"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>grunts\dave grunts 1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dave grunts 1" ID="{7701D464-5DA7-4683-9E35-2DE2EB83C864}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="dave grunts 10" ID="{71235EB7-16F3-410C-8665-ADB4B183CF21}" ShortID="101458798" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dave grunts 10" ID="{45BC4865-DA12-4921-86EA-61F58923E6D1}" ShortID="645679551">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00901803607214424"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.456913827655311"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>grunts\dave grunts 10.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dave grunts 10" ID="{45BC4865-DA12-4921-86EA-61F58923E6D1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="dave grunts 11" ID="{2F9991A5-B797-4195-9FAF-F55E9EE2A1A7}" ShortID="1052831608" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dave grunts 11" ID="{B58B7133-B39B-47C6-9976-8DD4D246329E}" ShortID="635598483">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0120240480961924"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.30811623246493"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>grunts\dave grunts 11.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dave grunts 11" ID="{B58B7133-B39B-47C6-9976-8DD4D246329E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="dave grunts 12" ID="{3B788E8F-808A-4DA2-922D-523F47D32299}" ShortID="632188754" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dave grunts 12" ID="{792D68C9-F803-489D-9360-28A176A33318}" ShortID="706371641">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0135270541082164"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.179233466933868"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>grunts\dave grunts 12.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dave grunts 12" ID="{792D68C9-F803-489D-9360-28A176A33318}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="dave grunts 13" ID="{0A21BF84-3344-4A69-88FB-AFDCB95268FB}" ShortID="435253145" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dave grunts 13" ID="{331F6B3F-BF05-44A5-B27C-4C895538F026}" ShortID="597181408">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00751503006012023"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.101452905811623"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>grunts\dave grunts 13.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dave grunts 13" ID="{331F6B3F-BF05-44A5-B27C-4C895538F026}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="dave grunts 14" ID="{510FE210-55F4-4ABE-AE57-2CC74C76482A}" ShortID="715604929" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dave grunts 14" ID="{1F8B3153-55BD-4AB0-9400-A209AF1A3F56}" ShortID="794015766">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00901803607214427"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.182364729458918"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>grunts\dave grunts 14.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dave grunts 14" ID="{1F8B3153-55BD-4AB0-9400-A209AF1A3F56}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="dave grunts 15" ID="{836C2237-93CA-434C-9AD7-039F62EB0D83}" ShortID="396776498" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dave grunts 15" ID="{6CE65910-C82F-4AFB-9534-7D342F159558}" ShortID="26065425">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00563627254509018"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.157815631262525"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>grunts\dave grunts 15.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dave grunts 15" ID="{6CE65910-C82F-4AFB-9534-7D342F159558}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="dave grunts 16" ID="{9630A55C-0B33-4221-9191-FB95B8A88E29}" ShortID="230983446" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dave grunts 16" ID="{28866224-81F3-4311-86BD-FD6AD3355EA0}" ShortID="30115822">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0030060120240481"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.185370741482966"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>grunts\dave grunts 16.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dave grunts 16" ID="{28866224-81F3-4311-86BD-FD6AD3355EA0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="dave grunts 17" ID="{B3AED429-6A4A-4992-884A-C48B65E67120}" ShortID="466705364" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dave grunts 17" ID="{47412853-3520-4B61-A9D3-DE3005690CCE}" ShortID="354171151">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00751503006012022"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.399799599198397"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>grunts\dave grunts 17.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dave grunts 17" ID="{47412853-3520-4B61-A9D3-DE3005690CCE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="dave grunts 2" ID="{99A4A93C-8BD9-4D46-9C5E-708A323341E7}" ShortID="934905747" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dave grunts 2" ID="{4968FD4A-5B17-49C5-9F0E-17474056D0CA}" ShortID="634867864">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00826653306613226"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.199148296593186"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>grunts\dave grunts 2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dave grunts 2" ID="{4968FD4A-5B17-49C5-9F0E-17474056D0CA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="dave grunts 3" ID="{96F9F2EE-930A-4785-92FD-C495B1AA4FCF}" ShortID="603359544" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dave grunts 3" ID="{019DEDEE-5781-4D4F-B67C-A8C3D7684E3D}" ShortID="881265781">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00450901803607215"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.142034068136273"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>grunts\dave grunts 3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dave grunts 3" ID="{019DEDEE-5781-4D4F-B67C-A8C3D7684E3D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="dave grunts 4" ID="{A3F4F457-B8AC-4574-ACA7-B7E45487E37A}" ShortID="500963281" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dave grunts 4" ID="{80F24AA3-8667-4423-A641-3E2BA9EE24A0}" ShortID="444280125">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00826653306613227"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00601202404809619"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>grunts\dave grunts 4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dave grunts 4" ID="{80F24AA3-8667-4423-A641-3E2BA9EE24A0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="dave grunts 5" ID="{7FE9C24C-03E2-4AB8-8060-7DE6EF03A448}" ShortID="940031901" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dave grunts 5" ID="{0F572050-1D26-4916-8884-1E96E218CC8B}" ShortID="837032869">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00526052104208417"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.148046092184369"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>grunts\dave grunts 5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dave grunts 5" ID="{0F572050-1D26-4916-8884-1E96E218CC8B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="dave grunts 6" ID="{4B571103-5064-4ACA-8A24-2294C8173D7B}" ShortID="448874759" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dave grunts 6" ID="{AC31F44B-8EFB-4040-9C19-C6153706756A}" ShortID="497404101">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00801603206412825"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00601202404809619"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>grunts\dave grunts 6.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dave grunts 6" ID="{AC31F44B-8EFB-4040-9C19-C6153706756A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="dave grunts 7" ID="{ED73015C-BAED-49F2-8B46-903F454E29B0}" ShortID="593864898" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dave grunts 7" ID="{572247B4-6BBB-4BBF-AD47-48DCB7A47000}" ShortID="543943558">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0140280561122244"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>grunts\dave grunts 7.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dave grunts 7" ID="{572247B4-6BBB-4BBF-AD47-48DCB7A47000}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="dave grunts 8" ID="{5E0D6094-C619-4A97-A325-2834BF242CB5}" ShortID="438785751" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dave grunts 8" ID="{72934FB7-035C-4E11-94F4-C60D839D01F2}" ShortID="563855461">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0140280561122244"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.301603206412826"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>grunts\dave grunts 8.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dave grunts 8" ID="{72934FB7-035C-4E11-94F4-C60D839D01F2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="dave grunts 9" ID="{023C90BA-3020-4D7E-95C9-774AD6BF492A}" ShortID="979449378" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dave grunts 9" ID="{0AB73B41-E19A-4CA9-B343-21DBD68D36E9}" ShortID="430918783">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00751503006012025"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.18937875751503"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>grunts\dave grunts 9.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dave grunts 9" ID="{0AB73B41-E19A-4CA9-B343-21DBD68D36E9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="impacts" ID="{C6B49A03-E97D-4C31-B640-AE4A9EF9AAEC}" ShortID="377000735">
@@ -10084,7 +10632,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>5</Value>
+												<Value>-10</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>

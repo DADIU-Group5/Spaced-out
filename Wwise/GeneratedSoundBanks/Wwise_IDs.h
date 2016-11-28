@@ -79,6 +79,7 @@ namespace AK
         static const AkUniqueID NARRATIVE6 = 2341326221U;
         static const AkUniqueID NARRATIVE7 = 2341326220U;
         static const AkUniqueID NARRATIVE8 = 2341326211U;
+        static const AkUniqueID NARRATIVE9 = 2341326210U;
         static const AkUniqueID NEWLEVEL = 668664389U;
         static const AkUniqueID OUTOFOXYGEN1 = 1861472437U;
         static const AkUniqueID OUTOFOXYGEN2 = 1861472438U;
@@ -109,7 +110,6 @@ namespace AK
         static const AkUniqueID REMARK15 = 2792775543U;
         static const AkUniqueID REMARK16 = 2792775540U;
         static const AkUniqueID REMARK17 = 2792775541U;
-        static const AkUniqueID REMARK18 = 2792775546U;
         static const AkUniqueID RESTART = 1203400786U;
         static const AkUniqueID SLOWMOTIONSTART = 1406654456U;
         static const AkUniqueID SLOWMOTIONSTOP = 2017509636U;
@@ -134,6 +134,7 @@ namespace AK
         static const AkUniqueID WIRE6 = 189158596U;
         static const AkUniqueID WIRE7 = 189158597U;
         static const AkUniqueID WIRE8 = 189158602U;
+        static const AkUniqueID WIRE9 = 189158603U;
     } // namespace EVENTS
 
     namespace STATES

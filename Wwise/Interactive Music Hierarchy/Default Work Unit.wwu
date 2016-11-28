@@ -13,7 +13,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicSegment Name="hello dave" ID="{B1D59861-93D0-4164-91F2-A6477ACA820C}" ShortID="670554975">
+						<MusicSegment Name="hello dave mix 2" ID="{9A11C032-3CB1-46B7-9E96-64BCB9F709C0}" ShortID="733773431">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="253333.333333333"/>
 							</PropertyList>
@@ -26,20 +26,20 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="hello dave" ID="{5BBB0E92-E482-471D-BBDB-DD79EDDCD0FC}" ShortID="638354940">
+								<MusicTrack Name="hello dave mix 2" ID="{EA926352-DF79-40C5-9345-CC44F43DB2AE}" ShortID="525269585">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="hello dave" ID="{79D9CAF8-8B9E-4549-8DD6-0B4381D7E47E}" ShortID="45957407">
+										<AudioFileSource Name="hello dave mix 2" ID="{C5713120-E3FF-4305-845A-A7B0F332285B}" ShortID="971379015">
 											<Language>SFX</Language>
-											<AudioFile>hello dave.wav</AudioFile>
+											<AudioFile>hello dave mix 2.wav</AudioFile>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{C58587C7-3A89-4543-AB5A-DDFB6A2D5F12}">
+										<MusicTransition Name="Root" ID="{EAB7AC8B-9D16-439F-81EA-1BE6FB0C903F}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -47,15 +47,15 @@
 										</MusicTransition>
 									</TransitionList>
 									<SequenceList>
-										<MusicTrackSequence Name="" ID="{CF90ACEA-8041-4D13-B62B-3D57F99AFE49}">
+										<MusicTrackSequence Name="" ID="{FB1C2AB1-E974-4BFA-820A-1F4362C77B76}">
 											<ClipList>
-												<MusicClip Name="hello dave" ID="{A57A5455-B674-41D2-A61B-FA52EA1D4C72}">
+												<MusicClip Name="hello dave mix 2" ID="{CD052516-5E49-4230-AAEC-52F35B3A0FE1}">
 													<PropertyList>
 														<Property Name="EndTrimOffset" Type="Real64" Value="253333.333333333"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
 													</PropertyList>
-													<AudioSourceRef Name="hello dave" ID="{79D9CAF8-8B9E-4549-8DD6-0B4381D7E47E}"/>
+													<AudioSourceRef Name="hello dave mix 2" ID="{C5713120-E3FF-4305-845A-A7B0F332285B}"/>
 												</MusicClip>
 											</ClipList>
 										</MusicTrackSequence>
@@ -63,8 +63,8 @@
 								</MusicTrack>
 							</ChildrenList>
 							<CueList>
-								<MusicCue Name="Entry Cue" ID="{7D86C1A5-7A5F-44F4-9192-D59EB477495E}"/>
-								<MusicCue Name="Exit Cue" ID="{5CEC8681-702A-465A-9399-4E9F6BFD6C83}">
+								<MusicCue Name="Entry Cue" ID="{DCFD38D6-DC82-4D92-BF9B-4194F9527922}"/>
+								<MusicCue Name="Exit Cue" ID="{F50D70B8-2FBD-48F3-A30B-F76A3EE76AEE}">
 									<PropertyList>
 										<Property Name="CueType" Type="int16" Value="1"/>
 										<Property Name="TimeMs" Type="Real64" Value="253333.333333333"/>
@@ -89,12 +89,12 @@
 					<Playlist>
 						<MusicPlaylistItem Name="" ID="{C6817F8A-CC68-4C57-AE01-4260FD69D6A8}" ShortID="339654517">
 							<ChildrenList>
-								<MusicPlaylistItem Name="" ID="{5B690AFD-A004-48A5-AFF5-5EC5975D1EC3}" ShortID="634842296">
+								<MusicPlaylistItem Name="" ID="{163854E2-9378-441B-8E40-4129EDE3E976}" ShortID="1054021692">
 									<PropertyList>
 										<Property Name="LoopCount" Type="int16" Value="0"/>
 										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 									</PropertyList>
-									<SegmentRef Name="hello dave" ID="{B1D59861-93D0-4164-91F2-A6477ACA820C}"/>
+									<SegmentRef Name="hello dave mix 2" ID="{9A11C032-3CB1-46B7-9E96-64BCB9F709C0}"/>
 								</MusicPlaylistItem>
 							</ChildrenList>
 						</MusicPlaylistItem>

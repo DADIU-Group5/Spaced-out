@@ -13,6 +13,7 @@ public class GameOverMenu : MonoBehaviour, Observer
     public Text ResetCountdown;
     public Text DeathCauseText;
     public Text LostText;
+    public string resetText;
 
     private bool playerIsDead = false;
     private bool playerWon = false;
@@ -58,6 +59,7 @@ public class GameOverMenu : MonoBehaviour, Observer
 
                 if (DeathCauseText != null)
                     DeathCauseText.text = deathCause + "!";
+                resetText = Translator.instance.Get("resetting in") + " ";
 
                 StartCoroutine(GameOver());
                 break;
@@ -122,7 +124,7 @@ public class GameOverMenu : MonoBehaviour, Observer
 	    if (playerIsDead)
         {
             countingDown -= Time.deltaTime;
-            ResetCountdown.text = Translator.instance.Get("resetting in") + " " + Mathf.Round( countingDown ) + "...";
+            ResetCountdown.text =  Mathf.Round( countingDown ) + "...";
 
             //if the countdown has reached zero, reset the level
             if (countingDown <= 0)

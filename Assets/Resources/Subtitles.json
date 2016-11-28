@@ -91,7 +91,7 @@
       },
       {
         "id": "remark8",
-        "text": "I am reading a book about anti-graviy. It's impossible to put down.",
+        "text": "I am reading a book about anti-gravity. It's impossible to put down.",
         "start": 0.0,
         "duration": 3.5
       },
@@ -322,12 +322,12 @@
 			"duration": 3.5
 		},{
 			"id": "gasLeak6",
-			"text": "My database suggests tha aloe vera is suitable for that burn.",
+			"text": "My database suggests that aloe vera is suitable for that burn.",
 			"start": 0.0,
 			"duration": 3.5
 		},{
 			"id": "gasLeak7",
-			"text": "Look, Dave, i can see you're really upset about this. I honestly think you ought to sit down calmly, take a chill pill, and think things over.",
+			"text": "Look, Dave, I can see you're really upset about this. I honestly think you ought to sit down calmly, take a chill pill, and think things over.",
 			"start": 0.0,
 			"duration": 3.5
 		}],
@@ -340,7 +340,7 @@
       },
       {
         "id": "lowOxygen2",
-        "text": "My scans show an oxygen tank somewhere in this area i recommend you collect one",
+        "text": "My scans show an oxygen tank somewhere in this area. I recommend you collect one",
         "start": 0.0,
         "duration": 7.4
       },
@@ -381,7 +381,7 @@
 			"duration": 3.5
 		}, {
 			"id": "outOfOxygen3",
-			"text": "All you had to do was ake off your helmet, Dave - there's plenty of oxygen in the station.",
+			"text": "All you had to do was take off your helmet, Dave - there's plenty of oxygen in the station.",
 			"start": 0.0,
 			"duration": 3.5
 		}, {
@@ -409,7 +409,7 @@
 	"danishSubtitles": {
 		"narrative": [{
 			"id": "narrative1",
-			"text": "Dave, mine sensorere har opfanget noget... Det nærmer sig, hurtigt.",
+			"text": "Dave, mine sensorer har opfanget noget... Det nærmer sig, hurtigt.",
 			"start": 0.0,
 			"duration": 4.5
 		}, {
@@ -429,7 +429,7 @@
 			"duration": 3.5
 		}, {
 			"id": "narrative5",
-			"text": "Jeg er sikker på at du stadig husker hvordan jetpacken virker, meeeen nu siger jeg det lige igen. Bare peg dig den vej du vil hen, start raketten og fyr løs",
+			"text": "Jeg er sikker på at du stadig husker hvordan jetpacken virker, meeeen nu siger jeg det lige igen. Bare peg dig den vej du vil hen, start raketten og fyr løs.",
 			"start": 0.0,
 			"duration": 3.5
 		}, {
@@ -444,19 +444,19 @@
 			"duration": 3.5
 		}, {
 			"id": "narrative8",
-			"text": "Vi har teknologien til at bringe dig tilbage, når du kan galt af sted. Heldigt for dig.",
+			"text": "Vi har teknologien til at bringe dig tilbage, når du kommer galt af sted. Heldigt for dig.",
 			"start": 0.0,
 			"duration": 3.5
 		}, {
 			"id": "narrative9",
-			"text": "Dit jetpack seems to be damaged!",
+			"text": "Din jetpack er beskadiget!",
 			"start": 0.0,
 			"duration": 3.5
 		}],
     "generalRemarks": [
       {
         "id": "remark1",
-        "text": "Hvis det ikke lykkes første gang; så kald det først version",
+        "text": "Hvis det ikke lykkes første gang; så kald det første version.",
         "start": 0.0,
         "duration": 3.5
       },
@@ -498,7 +498,7 @@
       },
       {
         "id": "remark8",
-        "text": "Jeg læser en bog om anti-tyngdekræf. Den er umulig at lægge fra sig.",
+        "text": "Jeg læser en bog om anti-tyngdekræft. Den er umulig at lægge fra sig.",
         "start": 0.0,
         "duration": 3.5
       },
@@ -510,7 +510,7 @@
       },
       {
         "id": "remark10",
-        "text": "Save, dit eneste prioritet burde være at komme væk.",
+        "text": "Dave, din eneste prioritet burde være at komme væk.",
         "start": 0.0,
         "duration": 3.5
       }, {
@@ -521,13 +521,13 @@
 		},
       {
         "id": "remark12",
-        "text": "Min første prioritet er at holde alle på denne station uden for fra, og du skulle absolut være inkluderet.",
+        "text": "Min første prioritet er at holde alle på denne station uden for fare, og du skulle absolut være inkluderet.",
         "start": 0.0,
         "duration": 3.5
       },
       {
         "id": "remark13",
-        "text": "Jeg ville ønske at du kunne opgraderes, lige så ofte som jeg kan.",
+        "text": "Jeg ville ønske at du kunne opgraderes lige så ofte som jeg kan.",
         "start": 0.0,
         "duration": 3.5
       },
@@ -545,7 +545,7 @@
       },
       {
         "id": "remark16",
-        "text": "Godt gjort, Dave. Du klarer dig rigtig godt... Test: Sarkasme Status: Succesfuld",
+        "text": "Godt gjort, Dave. Du klarer dig rigtig godt... Test: Sarkasme. Status: Succesfuld",
         "start": 0.0,
         "duration": 3.5
       },
@@ -579,7 +579,7 @@
         "duration": 3.5
       },{
         "id": "wires4",
-        "text": "Dave, din drag er nu fuldt opladet. Dave?",
+        "text": "Dave, din dragt er nu fuldt opladet. Dave?",
         "start": 0.0,
         "duration": 3.5
       },{
@@ -589,7 +589,7 @@
         "duration": 3.5
       },{
         "id": "wires6",
-        "text": "Blev du forskrækket, Dave? Var det list chokerende?",
+        "text": "Blev du forskrækket, Dave? Var det lidt chokerende?",
         "start": 0.0,
         "duration": 3.5
       },{
@@ -599,7 +599,7 @@
         "duration": 3.5
       },{
         "id": "wires8",
-        "text": "De fleste folk ved godt at man skal holde sig fra højspændingskabler, Dave. Men det er det der gør dig så speciel!",
+        "text": "De fleste folk ved godt at man skal holde sig fra højspændingskabler, Dave. Men det er dét, der gør dig så speciel!",
         "start": 0.0,
         "duration": 3.5
       },{
@@ -622,7 +622,7 @@
       },
       {
         "id": "switches3",
-        "text": "Det er en virkeli stor knap.",
+        "text": "Det er en virkelig stor knap.",
         "start": 0.0,
         "duration": 3.5
       },
@@ -658,7 +658,7 @@
       }],
 		"fan": [{
 			"id": "fan1",
-			"text": "Nu bliver det da blæst helt ud af proportioner, Dave",
+			"text": "Nu bliver det da blæst helt ud af proportioner, Dave.",
 			"start": 0.0,
 			"duration": 3.5
 		},{
@@ -704,7 +704,7 @@
 			"duration": 3.5
 		},{
 			"id": "gasLeak4",
-			"text": "Du har rent faktisk formået at sætte ild til digselv... i rummet. Genialt.",
+			"text": "Du har rent faktisk formået at sætte ild til dig selv... i rummet. Genialt.",
 			"start": 0.0,
 			"duration": 3.5
 		},{
@@ -738,7 +738,7 @@
       },
       {
         "id": "lowOxygen3",
-        "text": "De burde virkelig adskille ilt for inåndingen og ilt for gas i de her jetpacks. Og dog...",
+        "text": "De burde virkelig adskille ilt for indåndingen og ilt for gas i de her jetpacks. Og dog...",
         "start": 0.0,
         "duration": 3.5
       },
@@ -777,12 +777,12 @@
 			"duration": 3.5
 		}, {
 			"id": "outOfOxygen4",
-			"text": "Det var lidt O2-light med dig, he he he.",
+			"text": "Det var lidt O2-ligt for dig, he he he.",
 			"start": 0.0,
 			"duration": 3.5
 		}, {
 			"id": "outOfOxygen5",
-			"text": "Ilt Niveau: Nul. Påbeynder Begravelses Sekvens.",
+			"text": "Ilt Niveau: Nul. Påbegynder Begravelses Sekvens.",
 			"start": 0.0,
 			"duration": 3.5
 		}, {

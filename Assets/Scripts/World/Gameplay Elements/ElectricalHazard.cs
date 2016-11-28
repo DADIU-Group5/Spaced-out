@@ -4,6 +4,8 @@ using System.Collections;
 public class ElectricalHazard : MonoBehaviour {
 
     public float TimeUntilShockToDeath = 0f;
+    [Tooltip("Time before the script assumes the player has left")]
+    public float timeBeforeResetting = 1f;
 
     [HideInInspector]
     public GameObject player;
@@ -46,5 +48,8 @@ public class ElectricalHazard : MonoBehaviour {
         //player.GetComponent<PlayerController>().Kill();
         var evt = new ObserverEvent(EventName.Electrocuted);
         Subject.instance.Notify(gameObject, evt);
+
+        yield return new WaitForSeconds(timeBeforeResetting);
+        shockingPlayer = false;
     }
 }

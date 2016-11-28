@@ -188,6 +188,19 @@
 						<Property Name="GainBand3" Type="Real32" Value="12"/>
 					</PropertyList>
 				</Effect>
+				<Effect Name="sidechainmusic" ID="{D6FBEEB4-DF49-41CD-8C44-6CF54EAC6AA0}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3"/>
+				<Effect Name="musicSidechain" ID="{1FE8BDF0-7E5F-48EE-85BD-10356DE94F9E}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">					<PluginData>
+	<GameParameter Name="musicSidechain" ID="{181A310C-6E70-4F86-B312-63125AE5BB3A}"/>
+</PluginData>
+				</Effect>
+				<Effect Name="galsidechain" ID="{2FE2804D-80F3-4BF7-A811-551E7EEF585D}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+					<PropertyList>
+						<Property Name="Min" Type="Real32" Value="-24.3"/>
+					</PropertyList>
+					<PluginData>
+	<GameParameter Name="galSidechain" ID="{60BF31E9-478B-4DE4-954F-45BFC64AB433}"/>
+</PluginData>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

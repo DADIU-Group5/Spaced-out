@@ -1360,10 +1360,10 @@
 						<Event Name="slowmotionStart" ID="{1946C08A-B774-4BC4-AA06-09968DAF4502}"/>
 						<Event Name="gameStart" ID="{E2FC7F24-0D18-4BF5-953E-A20502CCB476}">
 							<ChildrenList>
-								<Action Name="Play" ID="{C6272177-D4D0-4809-83D6-BCF4FC14500E}" ShortID="578577955" Type="Play" Scope="One" Global="false">
+								<Action Name="Post Event" ID="{C7180713-6659-4E05-ACEB-E1DCD292298B}" ShortID="1030586083" Type="PlayEvent" Scope="One" Global="false">
 									<ElementList>
-										<Element ID="{F5013A39-CED3-4648-85F4-FDA054881AB2}" Global="false">
-											<ObjectRef Name="main atmos" ID="{1D2E4926-39CC-487E-B02C-23F3E7439A0D}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										<Element ID="{D86B258D-2F12-4B4C-BD6D-5D6B198A8549}" Global="false">
+											<ObjectRef Name="atmosStart" ID="{89D83D7C-F2BD-46C6-BC86-21E6D8C98D5D}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
 										</Element>
 									</ElementList>
 								</Action>

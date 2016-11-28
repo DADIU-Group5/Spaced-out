@@ -8,5 +8,6 @@
 		<Plugin Name="SoundSeed Air/SoundSeed Wind" ID="7798786" DLL="AkSoundSeedAir"/>
 		<Plugin Name="SoundSeed Air/SoundSeed Woosh" ID="7864322" DLL="AkSoundSeedAir"/>
 		<Plugin Name="Wwise Convolution Reverb" ID="8323075" DLL="AkConvolutionReverb"/>
+		<Plugin Name="Wwise Meter" ID="8454147" DLL="AkSoundEngineDLL"/>
 	</Plugins>
 </PluginInfo>

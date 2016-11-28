@@ -18,7 +18,7 @@ public class Checkpoint : MonoBehaviour {
             wasActivated = true;
             CheckpointManager.instance.SetNewCheckpoint(transform.position);
             CheckpointManager.instance.SetNewCheckpointRotation(transform.right);
-            CheckpointManager.instance.SetFuelCount(other.GetComponent<OxygenController>().GetOxygen());
+            //CheckpointManager.instance.SetFuelCount(other.GetComponent<OxygenController>().GetOxygen());
         }
     }
 

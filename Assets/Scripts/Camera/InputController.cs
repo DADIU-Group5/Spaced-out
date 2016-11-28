@@ -180,7 +180,8 @@ public class InputController : MonoBehaviour, Observer
     {
         float xScale = cameraController.pitch.transform.up.y;
         xScale = Mathf.Sign(xScale);
-        cameraController.transform.Rotate(Vector3.up, Time.deltaTime * xScale * cameraRotateSpeed * (offset.x / ScreenCenter().magnitude));
+
+        transform.Rotate(Vector3.up, Time.deltaTime * xScale * cameraRotateSpeed * (offset.x / ScreenCenter().magnitude),Space.World);
         cameraController.pitch.transform.Rotate(Vector3.right, Time.deltaTime * cameraRotateSpeed * (-offset.y / ScreenCenter().magnitude));
     }
 
@@ -194,6 +195,7 @@ public class InputController : MonoBehaviour, Observer
                 GameObject go = evt.payload[PayloadConstants.PLAYER] as GameObject;
                 player = go.GetComponent<PlayerController>();
 
+                transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
                 transform.Rotate(new Vector3(0, player.transform.eulerAngles.y - transform.eulerAngles.y, 0));
                 cameraController.pitch.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
 

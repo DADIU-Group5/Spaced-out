@@ -2,7 +2,6 @@
 
 [RequireComponent(typeof(PlayerController))]
 [RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(OxygenController))]
 public class MovementBehaviour : MonoBehaviour
 {
     // For ensuring that the player at some point starts slowing
@@ -22,7 +21,6 @@ public class MovementBehaviour : MonoBehaviour
 
     private bool canSlowDown;
     private Rigidbody body;
-    private OxygenController oxygen;
     private PlayerController playerController;
     private RagdollAnimationBlender animationBlender;
     private bool ragdolling;
@@ -48,7 +46,6 @@ public class MovementBehaviour : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody>();
-        oxygen = GetComponent<OxygenController>();
         playerController = GetComponent<PlayerController>();
         animationBlender = GetComponentInChildren<RagdollAnimationBlender>();
     }

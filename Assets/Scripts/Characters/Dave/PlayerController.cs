@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     // randomizes idle and fly animations to make them look less repeatable
     private void RandomizeAnimator()
     {
-        animator.SetInteger("Random", UnityEngine.Random.Range(0, 9));
+        animator.SetInteger("Random", UnityEngine.Random.Range(0, 7));
     }
 
     /// <summary>
@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         Vector3 dir = aim * Vector3.forward; //inputCont.GetLaunchDirection();
         body.AddForce(power * maxLaunchVelocity * dir, ForceMode.VelocityChange);
         animator.SetTrigger("Launch");
-        animator.SetFloat("Power", 0f);
+        //animator.SetFloat("Power", 0f);
         ThrowLaunchEvent();
 
         // reset power

@@ -4,7 +4,6 @@ using System.Collections;
 
 public class HUDController : MonoBehaviour, Observer {
 
-    public Text fuelText;
     public Text chargeText;
     public Text launchText;
     public Text statusText;
@@ -55,12 +54,12 @@ public class HUDController : MonoBehaviour, Observer {
     {
         switch (evt.eventName)
         {
-            case EventName.UpdateOxygen:
-                var fuelPayload = evt.payload;
-                int fuel = (int)fuelPayload[PayloadConstants.OXYGEN];
-                fuelText.text = Translator.instance.Get("current") + " " + Translator.instance.Get("fuel") + ": " + fuel.ToString();
+            //case EventName.UpdateOxygen:
+            //    var fuelPayload = evt.payload;
+            //    int fuel = (int)fuelPayload[PayloadConstants.OXYGEN];
+            //    fuelText.text = Translator.instance.Get("current") + " " + Translator.instance.Get("fuel") + ": " + fuel.ToString();
 
-                break;
+            //    break;
 
             case EventName.LaunchPowerChanged:
                 var launchPayload = evt.payload;
@@ -110,8 +109,9 @@ public class HUDController : MonoBehaviour, Observer {
                 break;
             case EventName.ComicsUpdate:
                 var comicsPayload = evt.payload;
-                comicsLeftText.text = (string)comicsPayload[PayloadConstants.COMICS] + " "+Translator.instance.Get("comics");
+                comicsLeftText.text = (string)comicsPayload[PayloadConstants.COMICS] + " "+ Translator.instance.Get("comics");
                 break;
+
             case EventName.ToggleUI:
                 gameObject.SetActive(!gameObject.activeSelf);
                 break;

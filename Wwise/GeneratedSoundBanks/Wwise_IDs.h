@@ -15,6 +15,8 @@ namespace AK
     {
         static const AkUniqueID ATMOSSTART = 2218299087U;
         static const AkUniqueID ATMOSSTOP = 3273397333U;
+        static const AkUniqueID BLIPBLOPHIGH = 1935175563U;
+        static const AkUniqueID BLIPBLOPLOW = 1671587919U;
         static const AkUniqueID CINEMATIC1 = 877642273U;
         static const AkUniqueID CINEMATIC2 = 877642274U;
         static const AkUniqueID CINEMATIC3 = 877642275U;
@@ -230,6 +232,7 @@ namespace AK
 
     namespace AUX_BUSSES
     {
+        static const AkUniqueID DLY = 529873614U;
         static const AkUniqueID NEW_AUXILIARY_BUS = 373392551U;
         static const AkUniqueID RVB1 = 2425890738U;
         static const AkUniqueID RVB2 = 2425890737U;

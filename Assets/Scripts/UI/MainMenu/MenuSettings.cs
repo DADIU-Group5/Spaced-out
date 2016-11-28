@@ -8,6 +8,7 @@ public class MenuSettings : MonoBehaviour {
     public Slider effectsSlider;
     public GameObject muteBtn;
     public GameObject unmuteBtn;
+    public Toggle cameraControls;
 
     void Start()
     {
@@ -19,6 +20,8 @@ public class MenuSettings : MonoBehaviour {
         var isMuted = SettingsManager.instance.settings.mute;
         muteBtn.SetActive(!isMuted);
         unmuteBtn.SetActive(isMuted);
+
+        cameraControls.isOn = SettingsManager.instance.settings.invertedCamera;
 
         SetUpSound();
     }
@@ -69,5 +72,13 @@ public class MenuSettings : MonoBehaviour {
     public void OnDanishClick()
     {
         SettingsManager.instance.SetLanguage(Language.Danish);
+    }
+
+    public void OnCameraInvertedToggle()
+    {
+        SettingsManager.instance.settings.invertedCamera = !SettingsManager.instance.settings.invertedCamera;
+
+        var evt = new ObserverEvent(EventName.ToggleCameraControls);
+        Subject.instance.Notify(gameObject, evt);
     }
 }

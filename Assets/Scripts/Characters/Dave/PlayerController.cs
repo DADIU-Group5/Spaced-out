@@ -103,6 +103,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         {
             readyForLaunch = true;
             animator.SetTrigger("Ready To Launch");
+            animator.SetFloat("Power", 0f);
         }
         else
         {
@@ -152,7 +153,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         body.AddForce(power * maxLaunchVelocity * dir, ForceMode.VelocityChange);
         oxygen.UseOxygen();
         animator.SetTrigger("Launch");
-        animator.SetFloat("Power", 0f);
+        //animator.SetFloat("Power", 0f);
         ThrowLaunchEvent();
 
         // reset power

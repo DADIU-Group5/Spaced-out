@@ -171,6 +171,7 @@ Modulator LFO	ID	Name			Wwise Object Path	Notes
 	30900722	lfoblaze			\Default Work Unit\lfoblaze	
 	150950941	fanair			\Default Work Unit\fanair	
 	210420181	lfovent			\Default Work Unit\lfovent	
+	489220005	lfo fire			\Default Work Unit\lfo fire	
 	571762777	blipblop atmos			\Default Work Unit\blipblop atmos	
 	1023130340	lfoblaze2			\Default Work Unit\lfoblaze2	
 

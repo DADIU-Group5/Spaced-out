@@ -12,7 +12,7 @@ public class AnimationEvents : MonoBehaviour {
     // called once Dave scratches his butt in idle animation
     public void ButtScratch()
     {
-
+        AkSoundEngine.PostEvent("daveScratch", gameObject);  
     }
 
     // called once Dave touches his helmet in idle animation

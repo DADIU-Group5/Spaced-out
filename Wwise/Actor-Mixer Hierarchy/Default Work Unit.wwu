@@ -7028,7 +7028,7 @@
 										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-20</Value>
+												<Value>-25</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -7488,6 +7488,34 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<RTPCList>
+												<RTPC Name="" ID="{095DC52F-325C-4A5D-9EAC-07DE3776D904}" ShortID="409929507">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="lfo fire" ID="{C3597A20-F0AD-47D0-A14D-67EE09E40AEF}" WorkUnitID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{96DA563E-821F-4285-8654-315BEE5C618B}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-160</YPos>
+																<Flags>21</Flags>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>-1</YPos>
+																<Flags>53</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="UserAuxSendVolume0" Type="Real64">
 											<ValueList>
@@ -7496,7 +7524,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-10</Value>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -8263,7 +8291,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-35</Value>
+												<Value>-30</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -10031,7 +10059,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-35</Value>
+												<Value>-30</Value>
 											</ValueList>
 											<RTPCList>
 												<RTPC Name="" ID="{A9EE90C7-84DE-4B9B-A588-E08CDC899AD7}" ShortID="36847883">
@@ -13018,8 +13046,87 @@
 														<SegmentShape>Exp3</SegmentShape>
 													</Point>
 													<Point>
+														<XPos>9.86908</XPos>
+														<YPos>0</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>10.2719</XPos>
+														<YPos>200</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Exp3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>19.93958</XPos>
+														<YPos>200</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Exp3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>20.4431017119839</XPos>
+														<YPos>200</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>20.74522</XPos>
+														<YPos>400</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Exp3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>29.90937</XPos>
+														<YPos>400</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Exp3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>30.41289</XPos>
+														<YPos>500</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>39.87915</XPos>
+														<YPos>500</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Exp3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>40.38268</XPos>
+														<YPos>700</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log3</SegmentShape>
+													</Point>
+													<Point>
 														<XPos>50.13298</XPos>
 														<YPos>700</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>50.65458</XPos>
+														<YPos>900</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>59.81873</XPos>
+														<YPos>900</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>60.42296</XPos>
+														<YPos>1000</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>70.19134</XPos>
+														<YPos>1000</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>89.62739</XPos>
+														<YPos>1200</YPos>
 														<Flags>0</Flags>
 													</Point>
 													<Point>

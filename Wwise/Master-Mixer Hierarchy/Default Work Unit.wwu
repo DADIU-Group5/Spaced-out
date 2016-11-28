@@ -255,7 +255,7 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>-11</Value>
+										<Value>-20</Value>
 									</ValueList>
 								</Property>
 								<Property Name="HdrThreshold" Type="Real64">

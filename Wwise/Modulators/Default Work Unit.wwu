@@ -109,6 +109,38 @@
 						</Property>
 					</PropertyList>
 				</ModulatorLfo>
+				<ModulatorLfo Name="lfo fire" ID="{C3597A20-F0AD-47D0-A14D-67EE09E40AEF}" ShortID="489220005">
+					<PropertyList>
+						<Property Name="LfoFrequency" Type="Real64" Value="0.141">
+							<RTPCList>
+								<RTPC Name="" ID="{F326B4F9-1D24-48A0-AAE9-B7E6EEA1EE8B}" ShortID="237421924">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="lfomodulator" ID="{DEC50063-FCCF-44A8-AAB1-6F93BC502327}" WorkUnitID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{65DF0665-018B-44AD-8569-064CFEF64815}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="5"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0.001</YPos>
+												<Flags>21</Flags>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>0.13447</YPos>
+												<Flags>53</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+				</ModulatorLfo>
 			</ChildrenList>
 		</WorkUnit>
 	</Modulators>

@@ -1294,6 +1294,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="blipBlopHigh" ID="{FDE64E94-C591-4E29-AA0E-7A33F7ECA3AD}">
+							<ChildrenList>
+								<Action Name="Play" ID="{18E8EA5B-987F-4AAB-8D80-05285F852632}" ShortID="304990650" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{01069875-8390-46C6-BA34-1EB8EBFEB516}" Global="false">
+											<ObjectRef Name="blip blop high" ID="{051A0537-8D66-4B55-B8E4-9244D1313A32}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="blipBlopLow" ID="{5F2DF0C1-838A-425C-843C-2ED62E2631BE}">
+							<ChildrenList>
+								<Action Name="Play" ID="{99199A63-771A-4E00-962B-71BA275D2277}" ShortID="965352109" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{172B712B-8062-4DD1-BCBF-FDD7070F0103}" Global="false">
+											<ObjectRef Name="blip blop low" ID="{26057701-EBAE-471B-A848-0AE7780EEA2E}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Cinematics" ID="{9886BF1A-9A93-45A4-91D9-204AE6F18DCD}" ShortID="792126149">
@@ -1330,6 +1352,9 @@
 						<Event Name="musicMainPlay" ID="{F30947D7-9777-485C-A4D1-A33BE2BFE1AE}">
 							<ChildrenList>
 								<Action Name="Play" ID="{1CBD0B57-249D-4549-9E46-DAB54422125F}" ShortID="998077567" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="10"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{4D1F581C-8F81-4398-B7EF-116E23E0769C}" Global="false">
 											<ObjectRef Name="musicmain" ID="{A4BE85F5-7236-4E80-B2CE-91E61AC28E1E}" WorkUnitID="{F5948B08-8EA0-455A-9A43-E3F403D87912}"/>
@@ -1360,10 +1385,10 @@
 						<Event Name="slowmotionStart" ID="{1946C08A-B774-4BC4-AA06-09968DAF4502}"/>
 						<Event Name="gameStart" ID="{E2FC7F24-0D18-4BF5-953E-A20502CCB476}">
 							<ChildrenList>
-								<Action Name="Post Event" ID="{C7180713-6659-4E05-ACEB-E1DCD292298B}" ShortID="1030586083" Type="PlayEvent" Scope="One" Global="false">
+								<Action Name="Play" ID="{C6272177-D4D0-4809-83D6-BCF4FC14500E}" ShortID="578577955" Type="Play" Scope="One" Global="false">
 									<ElementList>
-										<Element ID="{D86B258D-2F12-4B4C-BD6D-5D6B198A8549}" Global="false">
-											<ObjectRef Name="atmosStart" ID="{89D83D7C-F2BD-46C6-BC86-21E6D8C98D5D}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+										<Element ID="{F5013A39-CED3-4648-85F4-FDA054881AB2}" Global="false">
+											<ObjectRef Name="main atmos" ID="{1D2E4926-39CC-487E-B02C-23F3E7439A0D}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -1403,6 +1428,13 @@
 									<ElementList>
 										<Element ID="{2F2E7886-3813-4686-904E-31DEA5999E35}" Global="false">
 											<ObjectRef Name="hydralics" ID="{955C4C8A-5CDA-4CEF-BE4C-9F17F3149579}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{C84DCCCA-51E4-4445-94E3-6EE5AADA4B5F}" ShortID="823766676" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{09A8132A-336B-4AF2-9D4F-152F2D4D31E8}" Global="false">
+											<ObjectRef Name="blip blop sci fi forest long1" ID="{54951246-80EB-4D37-ACE3-D430F90EECCF}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>

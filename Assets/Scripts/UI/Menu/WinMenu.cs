@@ -12,6 +12,9 @@ public class WinMenu : MonoBehaviour, Observer
     public Button nextLevelBtn;
 
     public Text winText;
+    public Text mainMenuText;
+    public Text NextLevelText;
+    public Text ReplayLevelText;
 
     [HideInInspector]
     public int level = 1;
@@ -131,6 +134,12 @@ public class WinMenu : MonoBehaviour, Observer
 
             if (winText != null)
                 winText.text = Translator.instance.Get("you win") + "!";
+            if (mainMenuText != null)
+                mainMenuText.text = Translator.instance.Get("main menu");
+            if (NextLevelText!= null)
+                NextLevelText.text = Translator.instance.Get("next level");
+            if (ReplayLevelText != null)
+                ReplayLevelText.text = Translator.instance.Get("replay");
 
             SetBadges();
         }

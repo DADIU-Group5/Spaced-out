@@ -5,7 +5,7 @@ using System.Collections;
 public class MenuMain : Singleton<MenuMain> {
 
     private LevelSelectManager levelSelect;
-    public Text startBtnTxt;
+    //public Text startBtnTxt;
     public Text levelSelectBtnTxt;
     public Text settingsBtnTxt;
     public Text shopBtnTxt;
@@ -21,12 +21,17 @@ public class MenuMain : Singleton<MenuMain> {
 
     public void UpdateButtonText(Language lan)
     {
-        print("Translated his");
-        //startBtnTxt.text = Translator.instance.Get("start");
-        levelSelectBtnTxt.text = Translator.instance.Get("levelSelect");
-        settingsBtnTxt.text = Translator.instance.Get("settings");
-        shopBtnTxt.text = Translator.instance.Get("shop");
-        exitBtnTxt.text = Translator.instance.Get("exit");
+        if (levelSelectBtnTxt != null && levelSelectBtnTxt.text != null && Translator.instance != null)
+        {
+            Debug.Log("level select btn text: " + levelSelectBtnTxt.text);
+            levelSelectBtnTxt.text = Translator.instance.Get("levelSelect");
+        }
+        if (settingsBtnTxt != null && settingsBtnTxt.text != null)
+            settingsBtnTxt.text = Translator.instance.Get("settings");
+        if (shopBtnTxt != null && shopBtnTxt.text != null)
+            shopBtnTxt.text = Translator.instance.Get("shop");
+        if (exitBtnTxt != null && exitBtnTxt.text != null)
+            exitBtnTxt.text = Translator.instance.Get("exit");
     }
 
     public void Back()

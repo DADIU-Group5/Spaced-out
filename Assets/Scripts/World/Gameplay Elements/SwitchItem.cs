@@ -7,7 +7,7 @@ public class SwitchItem : MonoBehaviour {
     //Should contain logic on on/off,
     // as well as which object it manipulates.
     //[HideInInspector]
-    public List<GameObject> assignedHazards;
+    //public List<GameObject> assignedHazards;
 
     [Header("How long is the switch untouchable after collision?")]
     public float triggerDelay = 1f;
@@ -19,13 +19,13 @@ public class SwitchItem : MonoBehaviour {
 
     Room inRoom;
 
-    void Start()
+    /*void Start()
     {
         foreach (GameObject hazard in assignedHazards)
         {
             hazard.GetComponent<HazardState>().hazardSwitch = this.gameObject;
         }
-    }
+    }*/
 
     public void AssignRoom(Room r)
     {
@@ -35,10 +35,10 @@ public class SwitchItem : MonoBehaviour {
     /// <summary>
     /// Assign an object to this switch
     /// </summary>
-    public void AssignHazardToSwitch(GameObject hazard)
+   /* public void AssignHazardToSwitch(GameObject hazard)
     {
         assignedHazards.Add(hazard);
-    }
+    }*/
 
     public IEnumerator CountDown()
     {
@@ -66,6 +66,7 @@ public class SwitchItem : MonoBehaviour {
                 hasBeenTriggered = true;
 
                 var evt = new ObserverEvent(EventName.SwitchPressed);
+                evt.payload.Add(PayloadConstants.SWITCH_ON, false);
                 Subject.instance.Notify(gameObject, evt);
 
                 /*foreach (GameObject hazard in assignedHazards)

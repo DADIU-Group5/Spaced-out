@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         // update velocity in animator to make the fly animation adjust to it
         if (!readyForLaunch)
         {
-            float velocity = Mathf.Lerp(0.35f, 1f, body.velocity.magnitude / maxLaunchVelocity);
+            float velocity = Mathf.Lerp(0.6f, 1f, body.velocity.magnitude / maxLaunchVelocity);
             animator.SetFloat("Velocity", velocity);
         }
             
@@ -119,6 +119,8 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         if (!readyForLaunch)
             return;
 
+        power = Mathf.Ceil(power * 8f) / 8f;
+
         this.power = Mathf.Clamp01(power);
         animator.SetFloat("Power", power);
         ThrowLaunchPowerChangedEvent();
@@ -137,13 +139,8 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         Vector3 dir = aim * Vector3.forward; //inputCont.GetLaunchDirection();
         body.AddForce(power * maxLaunchVelocity * dir, ForceMode.VelocityChange);
         animator.SetTrigger("Launch");
-        //animator.SetFloat("Power", 0f);
         ThrowLaunchEvent();
-
-        // reset power
-        power = 0;
-        ThrowLaunchPowerChangedEvent();
-        ThrowChargingPowerEvent(false);
+        SetPower(0);
         readyForLaunch = false;
     }
 

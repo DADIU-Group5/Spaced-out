@@ -255,7 +255,7 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>-10</Value>
+										<Value>-20</Value>
 									</ValueList>
 								</Property>
 								<Property Name="HdrThreshold" Type="Real64">
@@ -304,6 +304,20 @@
 							<ReferenceList>
 								<Reference Name="Effect1" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">
 									<ObjectRef Name="custom_rvb_1" ID="{2785A37B-B83C-48EF-9FCD-5281CED132E0}" WorkUnitID="{16BB581D-BAEC-49FA-A974-D915FC1D5EA1}"/>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
+						<AuxBus Name="rvbatmos" ID="{562DE2B7-4E68-4373-A5C3-BCA520A72E06}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+									<ObjectRef Name="Space_Dreaming" ID="{4FF7C4B2-37B0-4DFF-8E8A-1420102AE2DD}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
+						<AuxBus Name="dly" ID="{C9714835-2726-49D1-9907-A5292C51E966}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+									<ObjectRef Name="Blue_Distant_Echoes" ID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 							</ReferenceList>
 						</AuxBus>

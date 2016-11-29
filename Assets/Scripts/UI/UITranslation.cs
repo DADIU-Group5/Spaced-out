@@ -26,7 +26,8 @@ public class UITranslation : MonoBehaviour {
     // called whenever the language is changed
     private void LanguageChanged(Language language)
     {
-        label.text = prefix + Translator.instance.Get(key) + suffix;
+        if (label != null)
+            label.text = prefix + Translator.instance.Get(key) + suffix;
     }
 
     void OnDestroy()

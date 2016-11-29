@@ -11,40 +11,45 @@ public class SwitchItem : MonoBehaviour {
 
     [Header("How long is the switch untouchable after collision?")]
     public float triggerDelay = 1f;
-    private bool countingDown = false;
-
+    
     [Header("Can the switch only be triggered once?")]
     public bool oneTimeTrigger = false;
+    
+    [Header("Choose on/off colours:")]
+    public Color offColour = Color.red;
+    public Color onColour = Color.green;
+
+    private bool countingDown = false;
     private bool hasBeenTriggered = false;
+    private Renderer switchRenderer;
+    private bool on = false;
 
     Room inRoom;
 
-    /*void Start()
+    void Start()
     {
-        foreach (GameObject hazard in assignedHazards)
-        {
-            hazard.GetComponent<HazardState>().hazardSwitch = this.gameObject;
-        }
-    }*/
+        switchRenderer = this.GetComponent<Renderer>();
+        SwitchColor();
+    }
 
     public void AssignRoom(Room r)
     {
         inRoom = r;
+        r.AddRoomSwitch(this);
     }
-
-    /// <summary>
-    /// Assign an object to this switch
-    /// </summary>
-   /* public void AssignHazardToSwitch(GameObject hazard)
-    {
-        assignedHazards.Add(hazard);
-    }*/
 
     public IEnumerator CountDown()
     {
         //wait the set time, then set bool to false
         yield return new WaitForSeconds(triggerDelay);
         countingDown = false;
+    }
+
+    //switch the color
+    public void SwitchColor()
+    {
+        on = !on;
+        switchRenderer.material.color = on ? onColour : offColour;
     }
 
     /// <summary>
@@ -69,11 +74,6 @@ public class SwitchItem : MonoBehaviour {
                 evt.payload.Add(PayloadConstants.SWITCH_ON, false);
                 Subject.instance.Notify(gameObject, evt);
 
-                /*foreach (GameObject hazard in assignedHazards)
-                {
-                    Debug.Log("hazards being turned off! item: " + hazard.name);
-                    hazard.GetComponent<HazardState>().EnabledOrDisableTrap();
-                }*/
                 inRoom.SwitchWasTouched();
             }
         }

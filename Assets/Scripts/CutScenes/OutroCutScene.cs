@@ -30,7 +30,7 @@ public class OutroCutScene : MonoBehaviour, Observer {
 
         cam.gameObject.SetActive(true);
         //player.GetComponentInChildren<Animator>().ResetTrigger("Pick Up");
-        player.GetComponentInChildren<Animator>().SetTrigger("Force Fly");
+        player.GetComponentInChildren<Animator>().SetBool("Force Fly", true);
 
 
         var evt = new ObserverEvent(EventName.StartCutscene);

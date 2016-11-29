@@ -56,11 +56,11 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 bool playMusic = (bool)payload[PayloadConstants.START_STOP];
 
                 PlayEvent(SoundEventConstants.DAVE_LAUNCH);
-                //if (playMusic)
-                //{
-                //    PlayEvent(SoundEventConstants.MUSIC_MAIN_STOP);
-                //    PlayEvent(SoundEventConstants.MUSIC_MAIN_PLAY);
-                //}
+                if (playMusic)
+                {
+                    PlayEvent(SoundEventConstants.MUSIC_MAIN_STOP);
+                    PlayEvent(SoundEventConstants.MUSIC_MAIN_PLAY);
+                }
 
                 break;
 

@@ -60,6 +60,10 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
             case EventName.PlayerWon:
                 //added 1 because the system is weird
                 int level = GenerationDataManager.instance.GetCurrentLevel();
+                if(level == 0)
+                {
+                    break;
+                }
                 ProgressManager.instance.SetMedal(level, ProgressManager.medalCompleted);
                /* if (!hasDied)
                     ProgressManager.instance.SetMedal(level, ProgressManager.medalNoDeaths);*/
@@ -77,6 +81,9 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
                 break;
             case EventName.PlayerLaunch:
                 shotsFired++;
+                break;
+            case EventName.ComicPickup:
+                ComicCollected();
                 break;
             default:
                 break;

@@ -66,4 +66,14 @@ public class SettingsManager : Singleton<SettingsManager> {
     {
         return settings.language;
     }
+
+    public void SetPremium(bool premium)
+    {
+        settings.premium = premium;
+    }
+
+    public bool GetPremium()
+    {
+        return settings.premium;
+    }
 }

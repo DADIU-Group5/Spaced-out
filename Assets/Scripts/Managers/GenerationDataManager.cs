@@ -60,6 +60,12 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
         return level;
     }
 
+
+    public int GetShotCount()
+    {
+        return generationData.shotCountPerLevel;
+    }
+
     /// <summary>
     /// Return the level data used by the level generator
     /// </summary>

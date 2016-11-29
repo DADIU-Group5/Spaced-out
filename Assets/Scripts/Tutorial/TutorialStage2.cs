@@ -11,6 +11,8 @@ public class TutorialStage2 : MonoBehaviour, Observer
     public GameObject playerCameraPod;
     public GameObject introCamera;
 
+    bool initialCutscene = true;
+
     // Use this for initialization
     void Start()
     {
@@ -61,8 +63,12 @@ public class TutorialStage2 : MonoBehaviour, Observer
         {
             var evt2 = new ObserverEvent(EventName.EnableInput);
             Subject.instance.Notify(gameObject, evt2);
-            evt2 = new ObserverEvent(EventName.ToggleUI);
-            Subject.instance.Notify(gameObject, evt2);
+            if (initialCutscene)
+            {
+                initialCutscene = false;
+                evt2 = new ObserverEvent(EventName.ToggleUI);
+                Subject.instance.Notify(gameObject, evt2);
+            }
             playerCameraPod.SetActive(true);
             introCamera.gameObject.SetActive(false);
         }

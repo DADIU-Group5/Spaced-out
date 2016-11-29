@@ -62,6 +62,53 @@
 						<Property Name="LfoFrequency" Type="Real64" Value="0.02"/>
 					</PropertyList>
 				</ModulatorLfo>
+				<ModulatorEnvelope Name="impact" ID="{57493656-58D7-4C45-9DBE-F2B100BDC8BF}" ShortID="492979860"/>
+				<ModulatorEnvelope Name="metalnotes" ID="{4239196D-DCDB-4414-B5A0-5B508AA8907B}" ShortID="355617880">
+					<PropertyList>
+						<Property Name="EnvelopeAttackTime" Type="Real64" Value="0.1"/>
+					</PropertyList>
+				</ModulatorEnvelope>
+				<ModulatorLfo Name="blipblop atmos" ID="{8D63D2FB-C2E2-4708-AF92-23D4D9E48C39}" ShortID="571762777">
+					<PropertyList>
+						<Property Name="LfoFrequency" Type="Real64" Value="0.061">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{63782318-B793-4770-ACF2-D49883D09127}">
+										<PropertyList>
+											<Property Name="Max" Type="Real64" Value="0.1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+							<RTPCList>
+								<RTPC Name="" ID="{B5789A94-98B3-48CE-AB61-C852B6FBAA1B}" ShortID="998949822">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="lfomodulator" ID="{DEC50063-FCCF-44A8-AAB1-6F93BC502327}" WorkUnitID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{BC96B27F-50A1-435C-9116-22C96EE1AA64}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="5"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0.02523</YPos>
+												<Flags>21</Flags>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>0.09476</YPos>
+												<Flags>53</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+				</ModulatorLfo>
 			</ChildrenList>
 		</WorkUnit>
 	</Modulators>

@@ -81,15 +81,21 @@ public class MovementBehaviour : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        bool isStatic = !other.gameObject.CompareTag("Floating Object");
+
         // enable ragdoll
-        if (body.velocity.magnitude > ragdollThreshold)
+        if (isStatic)
         {
-            animationBlender.EnableRagdoll();
-            ragdolling = true;
+            if (body.velocity.magnitude > ragdollThreshold)
+            {
+                animationBlender.EnableRagdoll();
+                ragdolling = true;
+            }
         }
+        
 
         var evt = new ObserverEvent(EventName.Collision);
-        evt.payload.Add(PayloadConstants.COLLISION_STATIC, other.gameObject.layer != LayerMask.NameToLayer("Ignore Raycast"));
+        evt.payload.Add(PayloadConstants.COLLISION_STATIC, isStatic);
         evt.payload.Add(PayloadConstants.VELOCITY, body.velocity.magnitude);
         evt.payload.Add(PayloadConstants.POSITION, other.contacts[0].point);
         Subject.instance.Notify(gameObject, evt);

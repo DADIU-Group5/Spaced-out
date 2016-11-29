@@ -31,6 +31,10 @@
 			<ShortName>soundbank_alpha</ShortName>
 			<Path>soundbank_alpha.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2218299087" Name="atmosStart" ObjectPath="\Events\Default Work Unit\gameState\atmosStart"/>
+				<Event Id="3273397333" Name="atmosStop" ObjectPath="\Events\Default Work Unit\gameState\atmosStop"/>
+				<Event Id="1935175563" Name="blipBlopHigh" ObjectPath="\Events\Default Work Unit\enviroment\blipBlopHigh"/>
+				<Event Id="1671587919" Name="blipBlopLow" ObjectPath="\Events\Default Work Unit\enviroment\blipBlopLow"/>
 				<Event Id="877642273" Name="cinematic1" ObjectPath="\Events\Default Work Unit\Cinematics\cinematic1"/>
 				<Event Id="877642274" Name="cinematic2" ObjectPath="\Events\Default Work Unit\Cinematics\cinematic2"/>
 				<Event Id="877642275" Name="cinematic3" ObjectPath="\Events\Default Work Unit\Cinematics\cinematic3"/>
@@ -47,6 +51,7 @@
 				<Event Id="661603698" Name="daveOutofOxygen" ObjectPath="\Events\Default Work Unit\dave\daveOutofOxygen"/>
 				<Event Id="3465444258" Name="davePutOutFire" ObjectPath="\Events\Default Work Unit\dave\davePutOutFire"/>
 				<Event Id="522694124" Name="daveRandomGrunt" ObjectPath="\Events\Default Work Unit\dave\daveRandomGrunt"/>
+				<Event Id="918879319" Name="daveScratch" ObjectPath="\Events\Default Work Unit\dave\daveScratch"/>
 				<Event Id="1016866911" Name="daveSquishBetweenDoors" ObjectPath="\Events\Default Work Unit\dave\daveSquishBetweenDoors"/>
 				<Event Id="2519729295" Name="daveStaticCollision" ObjectPath="\Events\Default Work Unit\dave\daveStaticCollision"/>
 				<Event Id="2108630538" Name="daveVent" ObjectPath="\Events\Default Work Unit\dave\daveVent"/>
@@ -95,6 +100,7 @@
 				<Event Id="2341326221" Name="narrative6" ObjectPath="\Events\Default Work Unit\gal\Narrative\narrative6"/>
 				<Event Id="2341326220" Name="narrative7" ObjectPath="\Events\Default Work Unit\gal\Narrative\narrative7"/>
 				<Event Id="2341326211" Name="narrative8" ObjectPath="\Events\Default Work Unit\gal\Narrative\narrative8"/>
+				<Event Id="2341326210" Name="narrative9" ObjectPath="\Events\Default Work Unit\gal\Narrative\narrative9"/>
 				<Event Id="668664389" Name="newLevel" ObjectPath="\Events\Default Work Unit\gameState\newLevel"/>
 				<Event Id="1861472437" Name="outOfOxygen1" ObjectPath="\Events\Default Work Unit\gal\outofOxygen\outOfOxygen1"/>
 				<Event Id="1861472438" Name="outOfOxygen2" ObjectPath="\Events\Default Work Unit\gal\outofOxygen\outOfOxygen2"/>
@@ -117,7 +123,6 @@
 				<Event Id="2792775543" Name="remark15" ObjectPath="\Events\Default Work Unit\gal\remarks\remark15"/>
 				<Event Id="2792775540" Name="remark16" ObjectPath="\Events\Default Work Unit\gal\remarks\remark16"/>
 				<Event Id="2792775541" Name="remark17" ObjectPath="\Events\Default Work Unit\gal\remarks\remark17"/>
-				<Event Id="2792775546" Name="remark18" ObjectPath="\Events\Default Work Unit\gal\remarks\remark18"/>
 				<Event Id="4046533877" Name="remark2" ObjectPath="\Events\Default Work Unit\gal\remarks\remark2"/>
 				<Event Id="4046533876" Name="remark3" ObjectPath="\Events\Default Work Unit\gal\remarks\remark3"/>
 				<Event Id="4046533875" Name="remark4" ObjectPath="\Events\Default Work Unit\gal\remarks\remark4"/>
@@ -150,8 +155,33 @@
 				<Event Id="189158596" Name="wire6" ObjectPath="\Events\Default Work Unit\gal\wire\wire6"/>
 				<Event Id="189158597" Name="wire7" ObjectPath="\Events\Default Work Unit\gal\wire\wire7"/>
 				<Event Id="189158602" Name="wire8" ObjectPath="\Events\Default Work Unit\gal\wire\wire8"/>
+				<Event Id="189158603" Name="wire9" ObjectPath="\Events\Default Work Unit\gal\wire\wire9"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="510991" Language="SFX">
+					<ShortName>Danish\out of oxygen\outOfOxygenDan1.wav</ShortName>
+					<Path>SFX\Danish\out of oxygen\outOfOxygenDan1_645155D0.wem</Path>
+				</File>
+				<File Id="7287327" Language="SFX">
+					<ShortName>GAL\English\general remarks\final\remarks7.wav</ShortName>
+					<Path>SFX\GAL\English\general remarks\final\remarks7_645155D0.wem</Path>
+				</File>
+				<File Id="10743316" Language="SFX">
+					<ShortName>blip blop\blip blop sci fi forest short2.wav</ShortName>
+					<Path>SFX\blip blop\blip blop sci fi forest short2_7BADABE3.wem</Path>
+				</File>
+				<File Id="11557003" Language="SFX">
+					<ShortName>metal\G\metal impact g3.wav</ShortName>
+					<Path>SFX\metal\G\metal impact g3_645155D0.wem</Path>
+				</File>
+				<File Id="17473018" Language="SFX">
+					<ShortName>GAL\English\general remarks\final\remarks15.wav</ShortName>
+					<Path>SFX\GAL\English\general remarks\final\remarks15_645155D0.wem</Path>
+				</File>
+				<File Id="18933449" Language="SFX">
+					<ShortName>GAL\English\out of oxygen\final\outofocygen3.wav</ShortName>
+					<Path>SFX\GAL\English\out of oxygen\final\outofocygen3_645155D0.wem</Path>
+				</File>
 				<File Id="19945158" Language="SFX">
 					<ShortName>blæser.wav</ShortName>
 					<Path>SFX\blæser_824B34CA.wem</Path>
@@ -160,25 +190,105 @@
 					<ShortName>explosion1.wav</ShortName>
 					<Path>SFX\explosion1_645155D0.wem</Path>
 				</File>
-				<File Id="40737861" Language="SFX">
-					<ShortName>My scans show an oxygen tank somwhere in this area i recomend you collect one.wav</ShortName>
-					<Path>SFX\My scans show an oxygen tank somwhere in this area i recomend you collect one_645155D0.wem</Path>
+				<File Id="22107775" Language="SFX">
+					<ShortName>blip blop\blip blop random6.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random6_7BADABE3.wem</Path>
+				</File>
+				<File Id="24715317" Language="SFX">
+					<ShortName>Danish\electrocute\wiresDan4.wav</ShortName>
+					<Path>SFX\Danish\electrocute\wiresDan4_645155D0.wem</Path>
+				</File>
+				<File Id="26065425" Language="SFX">
+					<ShortName>grunts\dave grunts 15.wav</ShortName>
+					<Path>SFX\grunts\dave grunts 15_5995783D.wem</Path>
+				</File>
+				<File Id="30115822" Language="SFX">
+					<ShortName>grunts\dave grunts 16.wav</ShortName>
+					<Path>SFX\grunts\dave grunts 16_C708767C.wem</Path>
+				</File>
+				<File Id="33179142" Language="SFX">
+					<ShortName>metal\metal impact no tone4.wav</ShortName>
+					<Path>SFX\metal\metal impact no tone4_645155D0.wem</Path>
+				</File>
+				<File Id="35238501" Language="SFX">
+					<ShortName>metal\G\metal impact g5.wav</ShortName>
+					<Path>SFX\metal\G\metal impact g5_645155D0.wem</Path>
+				</File>
+				<File Id="38413473" Language="SFX">
+					<ShortName>Danish\fire\fireDan2.wav</ShortName>
+					<Path>SFX\Danish\fire\fireDan2_645155D0.wem</Path>
+				</File>
+				<File Id="53206835" Language="SFX">
+					<ShortName>blip blop\blip blop sci fi forest short12.wav</ShortName>
+					<Path>SFX\blip blop\blip blop sci fi forest short12_7BADABE3.wem</Path>
+				</File>
+				<File Id="53431297" Language="SFX">
+					<ShortName>metal\F\metal impact F1.wav</ShortName>
+					<Path>SFX\metal\F\metal impact F1_645155D0.wem</Path>
+				</File>
+				<File Id="58689411" Language="SFX">
+					<ShortName>GAL\English\narrative\final\narrative8.wav</ShortName>
+					<Path>SFX\GAL\English\narrative\final\narrative8_645155D0.wem</Path>
+				</File>
+				<File Id="66826332" Language="SFX">
+					<ShortName>GAL\English\general remarks\final\remarks8.wav</ShortName>
+					<Path>SFX\GAL\English\general remarks\final\remarks8_645155D0.wem</Path>
 				</File>
 				<File Id="68587342" Language="SFX">
 					<ShortName>electrocute4.wav</ShortName>
 					<Path>SFX\electrocute4_C5470726.wem</Path>
 				</File>
+				<File Id="68659619" Language="SFX">
+					<ShortName>GAL\English\low oxygen\final\lowoxygen2.wav</ShortName>
+					<Path>SFX\GAL\English\low oxygen\final\lowoxygen2_645155D0.wem</Path>
+				</File>
+				<File Id="69730662" Language="SFX">
+					<ShortName>narrative\narrativeDan10.wav</ShortName>
+					<Path>SFX\narrative\narrativeDan10_645155D0.wem</Path>
+				</File>
 				<File Id="69768843" Language="SFX">
 					<ShortName>explosive countdown.wav</ShortName>
-					<Path>SFX\explosive countdown_9176E6FF.wem</Path>
+					<Path>SFX\explosive countdown_7E42618B.wem</Path>
+				</File>
+				<File Id="80316185" Language="SFX">
+					<ShortName>metal\C\metal impact C2.wav</ShortName>
+					<Path>SFX\metal\C\metal impact C2_645155D0.wem</Path>
+				</File>
+				<File Id="80479230" Language="SFX">
+					<ShortName>blip blop\blip blop random17.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random17_7BADABE3.wem</Path>
+				</File>
+				<File Id="82713544" Language="SFX">
+					<ShortName>blip blop\blip blop sci fi forest short6.wav</ShortName>
+					<Path>SFX\blip blop\blip blop sci fi forest short6_7BADABE3.wem</Path>
+				</File>
+				<File Id="92370258" Language="SFX">
+					<ShortName>Danish\electrocute\wiresDan5.wav</ShortName>
+					<Path>SFX\Danish\electrocute\wiresDan5_645155D0.wem</Path>
+				</File>
+				<File Id="93716665" Language="SFX">
+					<ShortName>GAL\Danish\general remarks\final\remarkDan8.wav</ShortName>
+					<Path>SFX\GAL\Danish\general remarks\final\remarkDan8_645155D0.wem</Path>
+				</File>
+				<File Id="98760664" Language="SFX">
+					<ShortName>GAL\Danish\general remarks\final\remarkDan11.wav</ShortName>
+					<Path>SFX\GAL\Danish\general remarks\final\remarkDan11_645155D0.wem</Path>
+				</File>
+				<File Id="101226196" Language="SFX">
+					<ShortName>Danish\electrocute\wiresDan3.wav</ShortName>
+					<Path>SFX\Danish\electrocute\wiresDan3_645155D0.wem</Path>
 				</File>
 				<File Id="104585137" Language="SFX">
 					<ShortName>impacts\object impact light3.wav</ShortName>
 					<Path>SFX\impacts\object impact light3_A286EB18.wem</Path>
 				</File>
-				<File Id="111064016" Language="SFX">
-					<ShortName>unprocessed\What are you doing dave you need to get to the escape pod (sweet).wav</ShortName>
-					<Path>SFX\unprocessed\What are you doing dave you need to get to the escape pod (sweet)_90308B3C.wem</Path>
+				<File Id="105906957" Language="SFX">
+					<ShortName>launch synth2.wav</ShortName>
+					<Path>SFX\launch synth2_4BB16E13.wem</Path>
+				</File>
+				<File Id="107064225" Language="SFX">
+					<ShortName>narrative\narrativeDan9.wav</ShortName>
+					<Path>SFX\narrative\narrativeDan9_645155D0.wem</Path>
 				</File>
 				<File Id="112371414" Language="SFX">
 					<ShortName>impacts\object impact light6.wav</ShortName>
@@ -192,85 +302,305 @@
 					<ShortName>preexplosion.wav</ShortName>
 					<Path>SFX\preexplosion_645155D0.wem</Path>
 				</File>
-				<File Id="119389034" Language="SFX">
-					<ShortName>unprocessed\Dave I have openend the door to the escape pod Please evacuate the station.wav</ShortName>
-					<Path>SFX\unprocessed\Dave I have openend the door to the escape pod Please evacuate the station_645155D0.wem</Path>
+				<File Id="129103809" Language="SFX">
+					<ShortName>GAL\Danish\fan\hvor er du bare Fan-tastisk.2.7.wav</ShortName>
+					<Path>SFX\GAL\Danish\fan\hvor er du bare Fan-tastisk.2.7_645155D0.wem</Path>
+				</File>
+				<File Id="131464271" Language="SFX">
+					<ShortName>GAL\Danish\general remarks\final\remarkDan9.wav</ShortName>
+					<Path>SFX\GAL\Danish\general remarks\final\remarkDan9_645155D0.wem</Path>
 				</File>
 				<File Id="134280575" Language="SFX">
 					<ShortName> factory rvb impulse.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\ factory rvb impulse_9FFC2351.wem</Path>
 				</File>
-				<File Id="161486405" Language="SFX">
-					<ShortName>Husk nu Dave; Ned og rul!.wav</ShortName>
-					<Path>SFX\Husk nu Dave; Ned og rul!_645155D0.wem</Path>
+				<File Id="140590783" Language="SFX">
+					<ShortName>GAL\Danish\general remarks\final\remarkDan3.wav</ShortName>
+					<Path>SFX\GAL\Danish\general remarks\final\remarkDan3_645155D0.wem</Path>
+				</File>
+				<File Id="143105393" Language="SFX">
+					<ShortName>GAL\English\electrocute\final\wires6.wav</ShortName>
+					<Path>SFX\GAL\English\electrocute\final\wires6_645155D0.wem</Path>
+				</File>
+				<File Id="145958102" Language="SFX">
+					<ShortName>GAL\English\fire\final\fire3.wav</ShortName>
+					<Path>SFX\GAL\English\fire\final\fire3_645155D0.wem</Path>
+				</File>
+				<File Id="146173779" Language="SFX">
+					<ShortName>Danish\low oxygen\lowOxygen4.wav</ShortName>
+					<Path>SFX\Danish\low oxygen\lowOxygen4_645155D0.wem</Path>
+				</File>
+				<File Id="163750867" Language="SFX">
+					<ShortName>GAL\English\out of oxygen\final\outofocygen2.wav</ShortName>
+					<Path>SFX\GAL\English\out of oxygen\final\outofocygen2_645155D0.wem</Path>
+				</File>
+				<File Id="182772970" Language="SFX">
+					<ShortName>metal\metal impact no tone3.wav</ShortName>
+					<Path>SFX\metal\metal impact no tone3_645155D0.wem</Path>
+				</File>
+				<File Id="186452641" Language="SFX">
+					<ShortName>GAL\English\fire\final\fire4.wav</ShortName>
+					<Path>SFX\GAL\English\fire\final\fire4_645155D0.wem</Path>
+				</File>
+				<File Id="189888312" Language="SFX">
+					<ShortName>blip blop\blip blop random13.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random13_7BADABE3.wem</Path>
+				</File>
+				<File Id="191894431" Language="SFX">
+					<ShortName>GAL\English\fire\final\fire1.wav</ShortName>
+					<Path>SFX\GAL\English\fire\final\fire1_645155D0.wem</Path>
+				</File>
+				<File Id="192421913" Language="SFX">
+					<ShortName>blip blop\blip blop sci fi forest short13.wav</ShortName>
+					<Path>SFX\blip blop\blip blop sci fi forest short13_7BADABE3.wem</Path>
+				</File>
+				<File Id="193127449" Language="SFX">
+					<ShortName>GAL\English\electrocute\final\wires5.wav</ShortName>
+					<Path>SFX\GAL\English\electrocute\final\wires5_645155D0.wem</Path>
 				</File>
 				<File Id="202362747" Language="SFX">
 					<ShortName>switches\switch on.wav</ShortName>
 					<Path>SFX\switches\switch on_645155D0.wem</Path>
 				</File>
+				<File Id="202606872" Language="SFX">
+					<ShortName>blip blop\blip blop random7.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random7_7BADABE3.wem</Path>
+				</File>
+				<File Id="207786701" Language="SFX">
+					<ShortName>Danish\fire\fireDan3.wav</ShortName>
+					<Path>SFX\Danish\fire\fireDan3_645155D0.wem</Path>
+				</File>
+				<File Id="208881451" Language="SFX">
+					<ShortName>GAL\English\switch\final\switch6.wav</ShortName>
+					<Path>SFX\GAL\English\switch\final\switch6_645155D0.wem</Path>
+				</File>
+				<File Id="209214066" Language="SFX">
+					<ShortName>blip blop\blip blop random10.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random10_7BADABE3.wem</Path>
+				</File>
+				<File Id="211269648" Language="SFX">
+					<ShortName>Danish\low oxygen\lowOxygen1.wav</ShortName>
+					<Path>SFX\Danish\low oxygen\lowOxygen1_645155D0.wem</Path>
+				</File>
 				<File Id="213148062" Language="SFX">
 					<ShortName>menuScrollclick4.wav</ShortName>
 					<Path>SFX\menuScrollclick4_645155D0.wem</Path>
+				</File>
+				<File Id="214047775" Language="SFX">
+					<ShortName>Danish\switch\switchDAn2.wav</ShortName>
+					<Path>SFX\Danish\switch\switchDAn2_645155D0.wem</Path>
+				</File>
+				<File Id="216929679" Language="SFX">
+					<ShortName>Danish\electrocute\wiresDan2.wav</ShortName>
+					<Path>SFX\Danish\electrocute\wiresDan2_645155D0.wem</Path>
+				</File>
+				<File Id="217562638" Language="SFX">
+					<ShortName>GAL\Danish\general remarks\final\remarkDan15.wav</ShortName>
+					<Path>SFX\GAL\Danish\general remarks\final\remarkDan15_645155D0.wem</Path>
+				</File>
+				<File Id="218282206" Language="SFX">
+					<ShortName>dave\buttscratch3.wav</ShortName>
+					<Path>SFX\dave\buttscratch3_645155D0.wem</Path>
+				</File>
+				<File Id="220396511" Language="SFX">
+					<ShortName>GAL\English\fan\final\fan6.wav</ShortName>
+					<Path>SFX\GAL\English\fan\final\fan6_645155D0.wem</Path>
 				</File>
 				<File Id="221557103" Language="SFX">
 					<ShortName>impacts\object impact light2.wav</ShortName>
 					<Path>SFX\impacts\object impact light2_3C2CF5BE.wem</Path>
 				</File>
-				<File Id="230076930" Language="SFX">
-					<ShortName>Mit software har ikke nogen fejl.wav</ShortName>
-					<Path>SFX\Mit software har ikke nogen fejl_645155D0.wem</Path>
+				<File Id="221848891" Language="SFX">
+					<ShortName>GAL\Danish\general remarks\final\remarkDan16.wav</ShortName>
+					<Path>SFX\GAL\Danish\general remarks\final\remarkDan16_645155D0.wem</Path>
 				</File>
-				<File Id="232429598" Language="SFX">
-					<ShortName>music main first draft.wav</ShortName>
-					<Path>SFX\music main first draft_824B34CA.wem</Path>
+				<File Id="223822837" Language="SFX">
+					<ShortName>narrative\narrativeDan2.wav</ShortName>
+					<Path>SFX\narrative\narrativeDan2_645155D0.wem</Path>
+				</File>
+				<File Id="228760907" Language="SFX">
+					<ShortName>GAL\English\switch\final\switch2.wav</ShortName>
+					<Path>SFX\GAL\English\switch\final\switch2_645155D0.wem</Path>
+				</File>
+				<File Id="229414056" Language="SFX">
+					<ShortName>atmos\hydralics2.wav</ShortName>
+					<Path>SFX\atmos\hydralics2_645155D0.wem</Path>
+				</File>
+				<File Id="233307603" Language="SFX">
+					<ShortName>dave\buttscratch1.wav</ShortName>
+					<Path>SFX\dave\buttscratch1_645155D0.wem</Path>
+				</File>
+				<File Id="242871080" Language="SFX">
+					<ShortName>skibsatmos\skibsrumlen proper loop 3.wav</ShortName>
+					<Path>SFX\skibsatmos\skibsrumlen proper loop 3_645155D0.wem</Path>
+				</File>
+				<File Id="249461941" Language="SFX">
+					<ShortName>Danish\low oxygen\lowOxygen2.wav</ShortName>
+					<Path>SFX\Danish\low oxygen\lowOxygen2_645155D0.wem</Path>
+				</File>
+				<File Id="250187452" Language="SFX">
+					<ShortName>skibsatmos\skibsrumlen knirk5.wav</ShortName>
+					<Path>SFX\skibsatmos\skibsrumlen knirk5_645155D0.wem</Path>
+				</File>
+				<File Id="253900823" Language="SFX">
+					<ShortName>GAL\English\low oxygen\final\lowoxygen6.wav</ShortName>
+					<Path>SFX\GAL\English\low oxygen\final\lowoxygen6_645155D0.wem</Path>
+				</File>
+				<File Id="255854901" Language="SFX">
+					<ShortName>Danish\out of oxygen\outOfOxygenDan6.wav</ShortName>
+					<Path>SFX\Danish\out of oxygen\outOfOxygenDan6_645155D0.wem</Path>
 				</File>
 				<File Id="257012564" Language="SFX">
 					<ShortName>switches\switch off.wav</ShortName>
 					<Path>SFX\switches\switch off_645155D0.wem</Path>
 				</File>
+				<File Id="259925040" Language="SFX">
+					<ShortName>blip blop\blip blop random12.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random12_7BADABE3.wem</Path>
+				</File>
 				<File Id="261205730" Language="SFX">
 					<ShortName>electrocute5.wav</ShortName>
 					<Path>SFX\electrocute5_039EE8B4.wem</Path>
+				</File>
+				<File Id="261596142" Language="SFX">
+					<ShortName>metal\G\metal impact g4.wav</ShortName>
+					<Path>SFX\metal\G\metal impact g4_645155D0.wem</Path>
+				</File>
+				<File Id="262597100" Language="SFX">
+					<ShortName>GAL\English\general remarks\final\remarks1.wav</ShortName>
+					<Path>SFX\GAL\English\general remarks\final\remarks1_645155D0.wem</Path>
 				</File>
 				<File Id="263781592" Language="SFX">
 					<ShortName>gasloop.wav</ShortName>
 					<Path>SFX\gasloop_824B34CA.wem</Path>
 				</File>
+				<File Id="271092841" Language="SFX">
+					<ShortName>GAL\English\narrative\final\narrative7.wav</ShortName>
+					<Path>SFX\GAL\English\narrative\final\narrative7_645155D0.wem</Path>
+				</File>
+				<File Id="271445821" Language="SFX">
+					<ShortName>metal\C\metal impact C1.wav</ShortName>
+					<Path>SFX\metal\C\metal impact C1_645155D0.wem</Path>
+				</File>
 				<File Id="271878563" Language="SFX">
 					<ShortName>putoutfire3.wav</ShortName>
 					<Path>SFX\putoutfire3_645155D0.wem</Path>
 				</File>
-				<File Id="305130721" Language="SFX">
-					<ShortName>Nu bliver det da blæst helt ud af proportioner, Dave.wav</ShortName>
-					<Path>SFX\Nu bliver det da blæst helt ud af proportioner, Dave_645155D0.wem</Path>
+				<File Id="280545090" Language="SFX">
+					<ShortName>metal\metal impact no tone1.wav</ShortName>
+					<Path>SFX\metal\metal impact no tone1_645155D0.wem</Path>
 				</File>
-				<File Id="309700752" Language="SFX">
-					<ShortName>jetpack dan.wav</ShortName>
-					<Path>SFX\jetpack dan_645155D0.wem</Path>
+				<File Id="283467246" Language="SFX">
+					<ShortName>GAL\Danish\general remarks\final\remarkDan10.wav</ShortName>
+					<Path>SFX\GAL\Danish\general remarks\final\remarkDan10_645155D0.wem</Path>
 				</File>
-				<File Id="338097124" Language="SFX">
-					<ShortName>Kan du også lugte noget, Dave.wav</ShortName>
-					<Path>SFX\Kan du også lugte noget, Dave_645155D0.wem</Path>
+				<File Id="286410796" Language="SFX">
+					<ShortName>GAL\Danish\fan\Det er ikke kun ventilatoren der blæser på dig. .3.5.wav</ShortName>
+					<Path>SFX\GAL\Danish\fan\Det er ikke kun ventilatoren der blæser på dig. .3.5_645155D0.wem</Path>
 				</File>
-				<File Id="341595437" Language="SFX">
-					<ShortName>Jeg har altid synes der var lidt meget luft mellem dine ører,.wav</ShortName>
-					<Path>SFX\Jeg har altid synes der var lidt meget luft mellem dine ører,_645155D0.wem</Path>
+				<File Id="289304815" Language="SFX">
+					<ShortName>blip blop\blip blop random1.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random1_7BADABE3.wem</Path>
+				</File>
+				<File Id="295334028" Language="SFX">
+					<ShortName>GAL\English\electrocute\final\wires7.wav</ShortName>
+					<Path>SFX\GAL\English\electrocute\final\wires7_645155D0.wem</Path>
+				</File>
+				<File Id="297086226" Language="SFX">
+					<ShortName>blip blop\blip blop sci fi forest short1.wav</ShortName>
+					<Path>SFX\blip blop\blip blop sci fi forest short1_7BADABE3.wem</Path>
+				</File>
+				<File Id="298840236" Language="SFX">
+					<ShortName>Danish\out of oxygen\outOfOxygenDan5.wav</ShortName>
+					<Path>SFX\Danish\out of oxygen\outOfOxygenDan5_645155D0.wem</Path>
+				</File>
+				<File Id="318956019" Language="SFX">
+					<ShortName>Danish\electrocute\wiresDan6.wav</ShortName>
+					<Path>SFX\Danish\electrocute\wiresDan6_645155D0.wem</Path>
+				</File>
+				<File Id="322083311" Language="SFX">
+					<ShortName>narrative\narrativeDan3.wav</ShortName>
+					<Path>SFX\narrative\narrativeDan3_645155D0.wem</Path>
+				</File>
+				<File Id="328305665" Language="SFX">
+					<ShortName>GAL\English\fan\final\fan2.wav</ShortName>
+					<Path>SFX\GAL\English\fan\final\fan2_645155D0.wem</Path>
+				</File>
+				<File Id="331187366" Language="SFX">
+					<ShortName>GAL\Danish\general remarks\final\remarkDan7.wav</ShortName>
+					<Path>SFX\GAL\Danish\general remarks\final\remarkDan7_645155D0.wem</Path>
+				</File>
+				<File Id="341741593" Language="SFX">
+					<ShortName>atmos\hydralics9.wav</ShortName>
+					<Path>SFX\atmos\hydralics9_645155D0.wem</Path>
 				</File>
 				<File Id="343732216" Language="SFX">
 					<ShortName>explosion2.wav</ShortName>
 					<Path>SFX\explosion2_645155D0.wem</Path>
 				</File>
-				<File Id="345686519" Language="SFX">
-					<ShortName>unprocessed\vi har teknologien til bringe dig tilbage, når kommer galt afsted. Heldigt for dig... .wav</ShortName>
-					<Path>SFX\unprocessed\vi har teknologien til bringe dig tilbage, når kommer galt afsted. Heldigt for dig... _0F3342F4.wem</Path>
+				<File Id="348662842" Language="SFX">
+					<ShortName>skibsatmos\skibs rumlen knirk 6.wav</ShortName>
+					<Path>SFX\skibsatmos\skibs rumlen knirk 6_938D36C6.wem</Path>
+				</File>
+				<File Id="350922483" Language="SFX">
+					<ShortName>GAL\English\general remarks\final\remarks13.wav</ShortName>
+					<Path>SFX\GAL\English\general remarks\final\remarks13_645155D0.wem</Path>
+				</File>
+				<File Id="353469564" Language="SFX">
+					<ShortName>skibsatmos\skibs rumlem proper loop 1.wav</ShortName>
+					<Path>SFX\skibsatmos\skibs rumlem proper loop 1_645155D0.wem</Path>
+				</File>
+				<File Id="354171151" Language="SFX">
+					<ShortName>grunts\dave grunts 17.wav</ShortName>
+					<Path>SFX\grunts\dave grunts 17_AACDF174.wem</Path>
+				</File>
+				<File Id="354507471" Language="SFX">
+					<ShortName>atmos\hydralics5.wav</ShortName>
+					<Path>SFX\atmos\hydralics5_645155D0.wem</Path>
+				</File>
+				<File Id="355268674" Language="SFX">
+					<ShortName>GAL\English\out of oxygen\final\outofocygen7.wav</ShortName>
+					<Path>SFX\GAL\English\out of oxygen\final\outofocygen7_645155D0.wem</Path>
+				</File>
+				<File Id="362285532" Language="SFX">
+					<ShortName>metal\C\metal impact C6.wav</ShortName>
+					<Path>SFX\metal\C\metal impact C6_645155D0.wem</Path>
+				</File>
+				<File Id="363675299" Language="SFX">
+					<ShortName>GAL\English\low oxygen\final\lowoxygen3.wav</ShortName>
+					<Path>SFX\GAL\English\low oxygen\final\lowoxygen3_645155D0.wem</Path>
+				</File>
+				<File Id="366758689" Language="SFX">
+					<ShortName>GAL\English\switch\final\switch1.wav</ShortName>
+					<Path>SFX\GAL\English\switch\final\switch1_645155D0.wem</Path>
+				</File>
+				<File Id="368979356" Language="SFX">
+					<ShortName>GAL\English\fire\final\fire2.wav</ShortName>
+					<Path>SFX\GAL\English\fire\final\fire2_645155D0.wem</Path>
 				</File>
 				<File Id="369241998" Language="SFX">
 					<ShortName>electricity loop.wav</ShortName>
 					<Path>SFX\electricity loop_824B34CA.wem</Path>
 				</File>
+				<File Id="377881980" Language="SFX">
+					<ShortName>atmos\hydralics7.wav</ShortName>
+					<Path>SFX\atmos\hydralics7_645155D0.wem</Path>
+				</File>
+				<File Id="383218319" Language="SFX">
+					<ShortName>GAL\Danish\general remarks\final\remarkDan5.wav</ShortName>
+					<Path>SFX\GAL\Danish\general remarks\final\remarkDan5_645155D0.wem</Path>
+				</File>
+				<File Id="390605717" Language="SFX">
+					<ShortName>Danish\switch\switchDAn6.wav</ShortName>
+					<Path>SFX\Danish\switch\switchDAn6_645155D0.wem</Path>
+				</File>
 				<File Id="391699126" Language="SFX">
 					<ShortName>oxygen.wav</ShortName>
 					<Path>SFX\oxygen_645155D0.wem</Path>
+				</File>
+				<File Id="399018016" Language="SFX">
+					<ShortName>metal\F\metal impact F5.wav</ShortName>
+					<Path>SFX\metal\F\metal impact F5_645155D0.wem</Path>
 				</File>
 				<File Id="399449157" Language="SFX">
 					<ShortName>power down.wav</ShortName>
@@ -284,13 +614,21 @@
 					<ShortName>door shut8_1.wav</ShortName>
 					<Path>SFX\door shut8_1_1C3ABE54.wem</Path>
 				</File>
-				<File Id="406379750" Language="SFX">
-					<ShortName>Dave my sensors are picking up something.. It's coming closer.wav</ShortName>
-					<Path>SFX\Dave my sensors are picking up something.. It's coming closer_645155D0.wem</Path>
+				<File Id="402805320" Language="SFX">
+					<ShortName>GAL\English\out of oxygen\final\outofocygen1.wav</ShortName>
+					<Path>SFX\GAL\English\out of oxygen\final\outofocygen1_645155D0.wem</Path>
+				</File>
+				<File Id="404632530" Language="SFX">
+					<ShortName>dave\buttscratch4.wav</ShortName>
+					<Path>SFX\dave\buttscratch4_645155D0.wem</Path>
 				</File>
 				<File Id="408124425" Language="SFX">
 					<ShortName>impacts\object impact light5.wav</ShortName>
 					<Path>SFX\impacts\object impact light5_710506E5.wem</Path>
+				</File>
+				<File Id="418672149" Language="SFX">
+					<ShortName>GAL\English\general remarks\final\remarks14.wav</ShortName>
+					<Path>SFX\GAL\English\general remarks\final\remarks14_645155D0.wem</Path>
 				</File>
 				<File Id="421879619" Language="SFX">
 					<ShortName>impacts\heavy impact2.wav</ShortName>
@@ -300,17 +638,33 @@
 					<ShortName>impacts\heavy impact8.wav</ShortName>
 					<Path>SFX\impacts\heavy impact8_645155D0.wem</Path>
 				</File>
-				<File Id="422434534" Language="SFX">
-					<ShortName>Mine scaninger viser at der er en ilt flaske et sted i nærheden, jeg foreslår du finder den.wav</ShortName>
-					<Path>SFX\Mine scaninger viser at der er en ilt flaske et sted i nærheden, jeg foreslår du finder den_645155D0.wem</Path>
+				<File Id="427171029" Language="SFX">
+					<ShortName>launch synth5.wav</ShortName>
+					<Path>SFX\launch synth5_CDB8D79A.wem</Path>
+				</File>
+				<File Id="430918783" Language="SFX">
+					<ShortName>grunts\dave grunts 9.wav</ShortName>
+					<Path>SFX\grunts\dave grunts 9_15E473EF.wem</Path>
+				</File>
+				<File Id="432234945" Language="SFX">
+					<ShortName>blip blop\blip blop sci fi forest short9.wav</ShortName>
+					<Path>SFX\blip blop\blip blop sci fi forest short9_7BADABE3.wem</Path>
+				</File>
+				<File Id="444280125" Language="SFX">
+					<ShortName>grunts\dave grunts 4.wav</ShortName>
+					<Path>SFX\grunts\dave grunts 4_39010D8B.wem</Path>
+				</File>
+				<File Id="445026076" Language="SFX">
+					<ShortName>GAL\English\narrative\final\narrative1.wav</ShortName>
+					<Path>SFX\GAL\English\narrative\final\narrative1_645155D0.wem</Path>
 				</File>
 				<File Id="448290045" Language="SFX">
 					<ShortName>impacts\heavy impact7.wav</ShortName>
 					<Path>SFX\impacts\heavy impact7_645155D0.wem</Path>
 				</File>
-				<File Id="449696872" Language="SFX">
-					<ShortName>Dave, jeg ville bare informere dig om at der er ild i dig.wav</ShortName>
-					<Path>SFX\Dave, jeg ville bare informere dig om at der er ild i dig_645155D0.wem</Path>
+				<File Id="449393799" Language="SFX">
+					<ShortName>metal\C\metal impact C5.wav</ShortName>
+					<Path>SFX\metal\C\metal impact C5_645155D0.wem</Path>
 				</File>
 				<File Id="453653314" Language="SFX">
 					<ShortName>explosion3.wav</ShortName>
@@ -328,37 +682,113 @@
 					<ShortName>menuScrollclick2.wav</ShortName>
 					<Path>SFX\menuScrollclick2_645155D0.wem</Path>
 				</File>
+				<File Id="471019115" Language="SFX">
+					<ShortName>GAL\English\electrocute\final\wires8.wav</ShortName>
+					<Path>SFX\GAL\English\electrocute\final\wires8_645155D0.wem</Path>
+				</File>
+				<File Id="471640620" Language="SFX">
+					<ShortName>Danish\electrocute\wiresDan7.wav</ShortName>
+					<Path>SFX\Danish\electrocute\wiresDan7_645155D0.wem</Path>
+				</File>
+				<File Id="472641029" Language="SFX">
+					<ShortName>GAL\English\general remarks\final\remarks17.wav</ShortName>
+					<Path>SFX\GAL\English\general remarks\final\remarks17_645155D0.wem</Path>
+				</File>
 				<File Id="473138648" Language="SFX">
 					<ShortName>fireloop.wav</ShortName>
 					<Path>SFX\fireloop_824B34CA.wem</Path>
 				</File>
-				<File Id="477009085" Language="SFX">
-					<ShortName>De burde virkelig adskille ilt til luft og ilt til brændstof bedre i de her jetpacks... Måske..wav</ShortName>
-					<Path>SFX\De burde virkelig adskille ilt til luft og ilt til brændstof bedre i de her jetpacks... Måske._645155D0.wem</Path>
+				<File Id="483393435" Language="SFX">
+					<ShortName>Danish\out of oxygen\outOfOxygenDan4.wav</ShortName>
+					<Path>SFX\Danish\out of oxygen\outOfOxygenDan4_645155D0.wem</Path>
 				</File>
-				<File Id="478495480" Language="SFX">
-					<ShortName>I always thought you were an airhead,.wav</ShortName>
-					<Path>SFX\I always thought you were an airhead,_645155D0.wem</Path>
+				<File Id="483913680" Language="SFX">
+					<ShortName>blip blop\blip blop random118.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random118_7BADABE3.wem</Path>
 				</File>
 				<File Id="485270404" Language="SFX">
 					<ShortName>impacts\light impact2.wav</ShortName>
 					<Path>SFX\impacts\light impact2_A7962A5C.wem</Path>
 				</File>
-				<File Id="489425779" Language="SFX">
-					<ShortName>I'm not anti-social; I'm just not user friendly Dave.wav</ShortName>
-					<Path>SFX\I'm not anti-social; I'm just not user friendly Dave_645155D0.wem</Path>
+				<File Id="486336854" Language="SFX">
+					<ShortName>blip blop\blip blop random16.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random16_7BADABE3.wem</Path>
+				</File>
+				<File Id="489066010" Language="SFX">
+					<ShortName>Danish\fire\fireDan4.wav</ShortName>
+					<Path>SFX\Danish\fire\fireDan4_645155D0.wem</Path>
+				</File>
+				<File Id="489574698" Language="SFX">
+					<ShortName>metal\D\metal impact D2.wav</ShortName>
+					<Path>SFX\metal\D\metal impact D2_645155D0.wem</Path>
+				</File>
+				<File Id="490533361" Language="SFX">
+					<ShortName>Danish\fire\fireDan6.wav</ShortName>
+					<Path>SFX\Danish\fire\fireDan6_645155D0.wem</Path>
+				</File>
+				<File Id="492080913" Language="SFX">
+					<ShortName>GAL\English\general remarks\final\remarks9.wav</ShortName>
+					<Path>SFX\GAL\English\general remarks\final\remarks9_645155D0.wem</Path>
+				</File>
+				<File Id="495970770" Language="SFX">
+					<ShortName>skibsatmos\skibsrumlen proper loop 2.wav</ShortName>
+					<Path>SFX\skibsatmos\skibsrumlen proper loop 2_645155D0.wem</Path>
+				</File>
+				<File Id="497404101" Language="SFX">
+					<ShortName>grunts\dave grunts 6.wav</ShortName>
+					<Path>SFX\grunts\dave grunts 6_FB61AABC.wem</Path>
+				</File>
+				<File Id="500649464" Language="SFX">
+					<ShortName>aloevera.wav</ShortName>
+					<Path>SFX\aloevera_645155D0.wem</Path>
+				</File>
+				<File Id="506737199" Language="SFX">
+					<ShortName>blip blop\blip blop random11.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random11_7BADABE3.wem</Path>
 				</File>
 				<File Id="507642210" Language="SFX">
 					<ShortName>door shut9_1.wav</ShortName>
 					<Path>SFX\door shut9_1_442763BD.wem</Path>
 				</File>
-				<File Id="526762414" Language="SFX">
-					<ShortName>The hazards here dont seem too friendly... you should go say hi!.wav</ShortName>
-					<Path>SFX\The hazards here dont seem too friendly... you should go say hi!_82F06CF0.wem</Path>
+				<File Id="510201090" Language="SFX">
+					<ShortName>GAL\Danish\general remarks\final\remarkDan13.wav</ShortName>
+					<Path>SFX\GAL\Danish\general remarks\final\remarkDan13_645155D0.wem</Path>
+				</File>
+				<File Id="510992843" Language="SFX">
+					<ShortName>grunts\dave grunts 1.wav</ShortName>
+					<Path>SFX\grunts\dave grunts 1_2BEF25C6.wem</Path>
+				</File>
+				<File Id="511513502" Language="SFX">
+					<ShortName>GAL\English\low oxygen\final\lowoxygen1.wav</ShortName>
+					<Path>SFX\GAL\English\low oxygen\final\lowoxygen1_645155D0.wem</Path>
 				</File>
 				<File Id="538281099" Language="SFX">
 					<ShortName>AK_Factory_IR\Rooms\AK Hamburg Echo Chamber.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AK_Factory_IR\Rooms\AK Hamburg Echo Chamber_BB274964.wem</Path>
+				</File>
+				<File Id="541031205" Language="SFX">
+					<ShortName>GAL\English\fan\final\fan4.wav</ShortName>
+					<Path>SFX\GAL\English\fan\final\fan4_645155D0.wem</Path>
+				</File>
+				<File Id="541106291" Language="SFX">
+					<ShortName>Danish\electrocute\wiresDan8.wav</ShortName>
+					<Path>SFX\Danish\electrocute\wiresDan8_645155D0.wem</Path>
+				</File>
+				<File Id="543943558" Language="SFX">
+					<ShortName>grunts\dave grunts 7.wav</ShortName>
+					<Path>SFX\grunts\dave grunts 7_8128F5F3.wem</Path>
+				</File>
+				<File Id="544555031" Language="SFX">
+					<ShortName>GAL\English\general remarks\final\remarks3.wav</ShortName>
+					<Path>SFX\GAL\English\general remarks\final\remarks3_645155D0.wem</Path>
+				</File>
+				<File Id="545959078" Language="SFX">
+					<ShortName>blip blop\blip blop random3.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random3_7BADABE3.wem</Path>
+				</File>
+				<File Id="546810305" Language="SFX">
+					<ShortName>metal\metal impact no tone5.wav</ShortName>
+					<Path>SFX\metal\metal impact no tone5_645155D0.wem</Path>
 				</File>
 				<File Id="555734377" Language="SFX">
 					<ShortName>impacts\heavy impact4.wav</ShortName>
@@ -376,65 +806,225 @@
 					<ShortName>electrocute3.wav</ShortName>
 					<Path>SFX\electrocute3_68BFC529.wem</Path>
 				</File>
+				<File Id="563855461" Language="SFX">
+					<ShortName>grunts\dave grunts 8.wav</ShortName>
+					<Path>SFX\grunts\dave grunts 8_2037D6F7.wem</Path>
+				</File>
+				<File Id="572934450" Language="SFX">
+					<ShortName>atmos\hydralics4.wav</ShortName>
+					<Path>SFX\atmos\hydralics4_645155D0.wem</Path>
+				</File>
+				<File Id="573092875" Language="SFX">
+					<ShortName>metal\G\metal impact g2.wav</ShortName>
+					<Path>SFX\metal\G\metal impact g2_645155D0.wem</Path>
+				</File>
+				<File Id="578189822" Language="SFX">
+					<ShortName>blip blop\blip blop sci fi forest long1.wav</ShortName>
+					<Path>SFX\blip blop\blip blop sci fi forest long1_CD13EAB3.wem</Path>
+				</File>
+				<File Id="578658333" Language="SFX">
+					<ShortName>blip blop\blip blop random21.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random21_7BADABE3.wem</Path>
+				</File>
 				<File Id="581417438" Language="SFX">
 					<ShortName>impacts\object impact2.wav</ShortName>
 					<Path>SFX\impacts\object impact2_40E4CF81.wem</Path>
+				</File>
+				<File Id="584384380" Language="SFX">
+					<ShortName>metal\D\metal impact D6.wav</ShortName>
+					<Path>SFX\metal\D\metal impact D6_645155D0.wem</Path>
 				</File>
 				<File Id="585615623" Language="SFX">
 					<ShortName>door shut3_1.wav</ShortName>
 					<Path>SFX\door shut3_1_D3F8257B.wem</Path>
 				</File>
+				<File Id="588734109" Language="SFX">
+					<ShortName>Danish\fire\fireDan5.wav</ShortName>
+					<Path>SFX\Danish\fire\fireDan5_645155D0.wem</Path>
+				</File>
 				<File Id="588751820" Language="SFX">
 					<ShortName>launch mockup1 light.wav</ShortName>
 					<Path>SFX\launch mockup1 light_645155D0.wem</Path>
+				</File>
+				<File Id="592368350" Language="SFX">
+					<ShortName>Danish\electrocute\wiresDan1.wav</ShortName>
+					<Path>SFX\Danish\electrocute\wiresDan1_645155D0.wem</Path>
+				</File>
+				<File Id="596817145" Language="SFX">
+					<ShortName>GAL\English\general remarks\final\remarks2.wav</ShortName>
+					<Path>SFX\GAL\English\general remarks\final\remarks2_645155D0.wem</Path>
+				</File>
+				<File Id="597181408" Language="SFX">
+					<ShortName>grunts\dave grunts 13.wav</ShortName>
+					<Path>SFX\grunts\dave grunts 13_0A68901E.wem</Path>
+				</File>
+				<File Id="598488493" Language="SFX">
+					<ShortName>GAL\Danish\general remarks\final\remarkDan6.wav</ShortName>
+					<Path>SFX\GAL\Danish\general remarks\final\remarkDan6_645155D0.wem</Path>
+				</File>
+				<File Id="599979874" Language="SFX">
+					<ShortName>Danish\switch\switchDAn5.wav</ShortName>
+					<Path>SFX\Danish\switch\switchDAn5_645155D0.wem</Path>
+				</File>
+				<File Id="600763084" Language="SFX">
+					<ShortName>GAL\Danish\fan\Nu bliver det da blæst helt ud af proportioner, Dave.3.5.wav</ShortName>
+					<Path>SFX\GAL\Danish\fan\Nu bliver det da blæst helt ud af proportioner, Dave.3.5_645155D0.wem</Path>
+				</File>
+				<File Id="604626767" Language="SFX">
+					<ShortName>skibsatmos\skibs rumlen dyb 1 LOOP 2 fucking fixed.wav</ShortName>
+					<Path>SFX\skibsatmos\skibs rumlen dyb 1 LOOP 2 fucking fixed_645155D0.wem</Path>
+				</File>
+				<File Id="605860953" Language="SFX">
+					<ShortName>GAL\English\electrocute\final\wires2.wav</ShortName>
+					<Path>SFX\GAL\English\electrocute\final\wires2_645155D0.wem</Path>
+				</File>
+				<File Id="609274304" Language="SFX">
+					<ShortName>narrative\narrativeDan7.wav</ShortName>
+					<Path>SFX\narrative\narrativeDan7_645155D0.wem</Path>
+				</File>
+				<File Id="612390968" Language="SFX">
+					<ShortName>GAL\English\low oxygen\final\lowoxygen5.wav</ShortName>
+					<Path>SFX\GAL\English\low oxygen\final\lowoxygen5_645155D0.wem</Path>
+				</File>
+				<File Id="615578784" Language="SFX">
+					<ShortName>blip blop\blip blop sci fi forest short4.wav</ShortName>
+					<Path>SFX\blip blop\blip blop sci fi forest short4_7BADABE3.wem</Path>
 				</File>
 				<File Id="621924902" Language="SFX">
 					<ShortName>door shut10_1.wav</ShortName>
 					<Path>SFX\door shut10_1_C23FFF8B.wem</Path>
 				</File>
+				<File Id="627803589" Language="SFX">
+					<ShortName>blip blop\blip blop random4.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random4_7BADABE3.wem</Path>
+				</File>
+				<File Id="634867864" Language="SFX">
+					<ShortName>grunts\dave grunts 2.wav</ShortName>
+					<Path>SFX\grunts\dave grunts 2_A33838A0.wem</Path>
+				</File>
+				<File Id="635598483" Language="SFX">
+					<ShortName>grunts\dave grunts 11.wav</ShortName>
+					<Path>SFX\grunts\dave grunts 11_E009E8DD.wem</Path>
+				</File>
 				<File Id="635644102" Language="SFX">
 					<ShortName>impacts\object impact light1.wav</ShortName>
 					<Path>SFX\impacts\object impact light1_34C50239.wem</Path>
 				</File>
-				<File Id="643284108" Language="SFX">
-					<ShortName>unprocessed\Dave, mine sensorere har opfanget noget.. det nærmer sig, hurtigt.wav</ShortName>
-					<Path>SFX\unprocessed\Dave, mine sensorere har opfanget noget.. det nærmer sig, hurtigt_645155D0.wem</Path>
+				<File Id="638340624" Language="SFX">
+					<ShortName>blip blop\blip blop random9.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random9_7BADABE3.wem</Path>
+				</File>
+				<File Id="639618804" Language="SFX">
+					<ShortName>GAL\Danish\fan\bare følg med strømmen.2.01.wav</ShortName>
+					<Path>SFX\GAL\Danish\fan\bare følg med strømmen.2.01_645155D0.wem</Path>
+				</File>
+				<File Id="640485537" Language="SFX">
+					<ShortName>GAL\English\low oxygen\final\lowoxygen4.wav</ShortName>
+					<Path>SFX\GAL\English\low oxygen\final\lowoxygen4_645155D0.wem</Path>
+				</File>
+				<File Id="640897836" Language="SFX">
+					<ShortName>GAL\English\fire\final\fire6.wav</ShortName>
+					<Path>SFX\GAL\English\fire\final\fire6_645155D0.wem</Path>
+				</File>
+				<File Id="641636094" Language="SFX">
+					<ShortName>metal\Bb\metal impact Bb5.wav</ShortName>
+					<Path>SFX\metal\Bb\metal impact Bb5_645155D0.wem</Path>
+				</File>
+				<File Id="645013745" Language="SFX">
+					<ShortName>atmos\hydralics3.wav</ShortName>
+					<Path>SFX\atmos\hydralics3_645155D0.wem</Path>
+				</File>
+				<File Id="645679551" Language="SFX">
+					<ShortName>grunts\dave grunts 10.wav</ShortName>
+					<Path>SFX\grunts\dave grunts 10_5605CD7E.wem</Path>
 				</File>
 				<File Id="647898339" Language="SFX">
 					<ShortName>door squeeze.wav</ShortName>
 					<Path>SFX\door squeeze_645155D0.wem</Path>
 				</File>
-				<File Id="658598555" Language="SFX">
-					<ShortName>Mine beregninger fortæller mig at dit ilt niveau er lavt.wav</ShortName>
-					<Path>SFX\Mine beregninger fortæller mig at dit ilt niveau er lavt_645155D0.wem</Path>
+				<File Id="650509731" Language="SFX">
+					<ShortName>atmos\hydralics8.wav</ShortName>
+					<Path>SFX\atmos\hydralics8_645155D0.wem</Path>
 				</File>
-				<File Id="669704237" Language="SFX">
-					<ShortName>unprocessed\Dave, jeg har åbnet porten til redningskapslen, vær sød at evakuere station.wav</ShortName>
-					<Path>SFX\unprocessed\Dave, jeg har åbnet porten til redningskapslen, vær sød at evakuere station_645155D0.wem</Path>
+				<File Id="653065705" Language="SFX">
+					<ShortName>blip blop\blip blop random14.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random14_7BADABE3.wem</Path>
 				</File>
-				<File Id="691120774" Language="SFX">
-					<ShortName>this is being blown out of proportions Dave.wav</ShortName>
-					<Path>SFX\this is being blown out of proportions Dave_645155D0.wem</Path>
+				<File Id="655295371" Language="SFX">
+					<ShortName>blip blop\blip blop random20.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random20_7BADABE3.wem</Path>
+				</File>
+				<File Id="666155042" Language="SFX">
+					<ShortName>atmos\hydralics6.wav</ShortName>
+					<Path>SFX\atmos\hydralics6_645155D0.wem</Path>
+				</File>
+				<File Id="666269133" Language="SFX">
+					<ShortName>GAL\English\narrative\final\narrative4.wav</ShortName>
+					<Path>SFX\GAL\English\narrative\final\narrative4_645155D0.wem</Path>
+				</File>
+				<File Id="669313546" Language="SFX">
+					<ShortName>narrative\dave din dragts ilt niveau er nul.wav</ShortName>
+					<Path>SFX\narrative\dave din dragts ilt niveau er nul_645155D0.wem</Path>
+				</File>
+				<File Id="670906658" Language="SFX">
+					<ShortName>metal\D\metal impact D4.wav</ShortName>
+					<Path>SFX\metal\D\metal impact D4_645155D0.wem</Path>
+				</File>
+				<File Id="671712218" Language="SFX">
+					<ShortName>GAL\English\general remarks\final\remarks16.wav</ShortName>
+					<Path>SFX\GAL\English\general remarks\final\remarks16_645155D0.wem</Path>
+				</File>
+				<File Id="671860227" Language="SFX">
+					<ShortName>GAL\English\general remarks\final\remarks5.wav</ShortName>
+					<Path>SFX\GAL\English\general remarks\final\remarks5_645155D0.wem</Path>
+				</File>
+				<File Id="672209193" Language="SFX">
+					<ShortName>blip blop\blip blop random23.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random23_7BADABE3.wem</Path>
+				</File>
+				<File Id="681768169" Language="SFX">
+					<ShortName>metal\C\metal impact C4.wav</ShortName>
+					<Path>SFX\metal\C\metal impact C4_645155D0.wem</Path>
+				</File>
+				<File Id="684420584" Language="SFX">
+					<ShortName>GAL\English\electrocute\final\9.wav</ShortName>
+					<Path>SFX\GAL\English\electrocute\final\9_645155D0.wem</Path>
+				</File>
+				<File Id="690851100" Language="SFX">
+					<ShortName>GAL\English\narrative\final\narrative6.wav</ShortName>
+					<Path>SFX\GAL\English\narrative\final\narrative6_645155D0.wem</Path>
 				</File>
 				<File Id="691152910" Language="SFX">
 					<ShortName>impacts\light impact8.wav</ShortName>
 					<Path>SFX\impacts\light impact8_868A42BB.wem</Path>
 				</File>
-				<File Id="694615552" Language="SFX">
-					<ShortName>Did you smell something Dave.wav</ShortName>
-					<Path>SFX\Did you smell something Dave_645155D0.wem</Path>
+				<File Id="692903098" Language="SFX">
+					<ShortName>GAL\English\electrocute\final\wires4.wav</ShortName>
+					<Path>SFX\GAL\English\electrocute\final\wires4_645155D0.wem</Path>
 				</File>
-				<File Id="694702258" Language="SFX">
-					<ShortName>jetpack eng.wav</ShortName>
-					<Path>SFX\jetpack eng_645155D0.wem</Path>
+				<File Id="693313243" Language="SFX">
+					<ShortName>launch synth1.wav</ShortName>
+					<Path>SFX\launch synth1_7AA7C9CB.wem</Path>
 				</File>
-				<File Id="698227094" Language="SFX">
-					<ShortName>unprocessed\Hvad har du gang i, Dave Du skal hen imod rednings kapslen.wav</ShortName>
-					<Path>SFX\unprocessed\Hvad har du gang i, Dave Du skal hen imod rednings kapslen_02DCB529.wem</Path>
+				<File Id="694793896" Language="SFX">
+					<ShortName>GAL\Danish\general remarks\final\remarkDan12.wav</ShortName>
+					<Path>SFX\GAL\Danish\general remarks\final\remarkDan12_645155D0.wem</Path>
 				</File>
-				<File Id="719297784" Language="SFX">
-					<ShortName>advarsel, bered på sammenstød.wav</ShortName>
-					<Path>SFX\advarsel, bered på sammenstød_645155D0.wem</Path>
+				<File Id="699581131" Language="SFX">
+					<ShortName>Danish\switch\switchDAn7.wav</ShortName>
+					<Path>SFX\Danish\switch\switchDAn7_645155D0.wem</Path>
+				</File>
+				<File Id="706371641" Language="SFX">
+					<ShortName>grunts\dave grunts 12.wav</ShortName>
+					<Path>SFX\grunts\dave grunts 12_E4894FC5.wem</Path>
+				</File>
+				<File Id="712774231" Language="SFX">
+					<ShortName>metal\G\metal impact g1.wav</ShortName>
+					<Path>SFX\metal\G\metal impact g1_645155D0.wem</Path>
+				</File>
+				<File Id="714977692" Language="SFX">
+					<ShortName>metal\metal impact no tone6.wav</ShortName>
+					<Path>SFX\metal\metal impact no tone6_645155D0.wem</Path>
 				</File>
 				<File Id="723073472" Language="SFX">
 					<ShortName>electrocute2.wav</ShortName>
@@ -444,57 +1034,133 @@
 					<ShortName>charge.wav</ShortName>
 					<Path>SFX\charge_824B34CA.wem</Path>
 				</File>
-				<File Id="732964349" Language="SFX">
-					<ShortName>unprocessed\Dave zero, natural selection one. .wav</ShortName>
-					<Path>SFX\unprocessed\Dave zero, natural selection one. _645155D0.wem</Path>
+				<File Id="731203348" Language="SFX">
+					<ShortName>GAL\English\out of oxygen\final\outofocygen5.wav</ShortName>
+					<Path>SFX\GAL\English\out of oxygen\final\outofocygen5_645155D0.wem</Path>
 				</File>
-				<File Id="747686196" Language="SFX">
-					<ShortName>remember Dave; stop drop and roll.wav</ShortName>
-					<Path>SFX\remember Dave; stop drop and roll_645155D0.wem</Path>
+				<File Id="734779861" Language="SFX">
+					<ShortName>blip blop\blip blop sci fi forest short8.wav</ShortName>
+					<Path>SFX\blip blop\blip blop sci fi forest short8_7BADABE3.wem</Path>
+				</File>
+				<File Id="739005694" Language="SFX">
+					<ShortName>metal\metal impact no tone2.wav</ShortName>
+					<Path>SFX\metal\metal impact no tone2_645155D0.wem</Path>
+				</File>
+				<File Id="746671419" Language="SFX">
+					<ShortName>GAL\English\general remarks\final\remarks4.wav</ShortName>
+					<Path>SFX\GAL\English\general remarks\final\remarks4_645155D0.wem</Path>
 				</File>
 				<File Id="751321384" Language="SFX">
 					<ShortName>impacts\light impact7.wav</ShortName>
 					<Path>SFX\impacts\light impact7_645155D0.wem</Path>
 				</File>
+				<File Id="753447221" Language="SFX">
+					<ShortName>blip blop\blip blop random2.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random2_7BADABE3.wem</Path>
+				</File>
 				<File Id="755883233" Language="SFX">
 					<ShortName>impacts\object impact7.wav</ShortName>
 					<Path>SFX\impacts\object impact7_6042C426.wem</Path>
 				</File>
-				<File Id="781703881" Language="SFX">
-					<ShortName>if at first you dont succeed call it version 1.wav</ShortName>
-					<Path>SFX\if at first you dont succeed call it version 1_645155D0.wem</Path>
+				<File Id="756074339" Language="SFX">
+					<ShortName>blip blop\blip blop sci fi forest short7.wav</ShortName>
+					<Path>SFX\blip blop\blip blop sci fi forest short7_7BADABE3.wem</Path>
 				</File>
-				<File Id="782658039" Language="SFX">
-					<ShortName>unprocessed\Your lucky we have the tecnology to bring you back when you hurt your self.wav</ShortName>
-					<Path>SFX\unprocessed\Your lucky we have the tecnology to bring you back when you hurt your self_6DA5C508.wem</Path>
+				<File Id="756219729" Language="SFX">
+					<ShortName>metal\D\metal impact D1.wav</ShortName>
+					<Path>SFX\metal\D\metal impact D1_645155D0.wem</Path>
+				</File>
+				<File Id="762822008" Language="SFX">
+					<ShortName>GAL\Danish\general remarks\final\remarkDan2.wav</ShortName>
+					<Path>SFX\GAL\Danish\general remarks\final\remarkDan2_645155D0.wem</Path>
+				</File>
+				<File Id="763044600" Language="SFX">
+					<ShortName>blip blop\blip blop random5.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random5_7BADABE3.wem</Path>
+				</File>
+				<File Id="763202499" Language="SFX">
+					<ShortName>metal\F\metal impact F6.wav</ShortName>
+					<Path>SFX\metal\F\metal impact F6_645155D0.wem</Path>
+				</File>
+				<File Id="768671281" Language="SFX">
+					<ShortName>GAL\English\narrative\final\narrative5.wav</ShortName>
+					<Path>SFX\GAL\English\narrative\final\narrative5_645155D0.wem</Path>
+				</File>
+				<File Id="772753394" Language="SFX">
+					<ShortName>blip blop\blip blop random22.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random22_7BADABE3.wem</Path>
+				</File>
+				<File Id="781418421" Language="SFX">
+					<ShortName>GAL\English\switch\final\switch7.wav</ShortName>
+					<Path>SFX\GAL\English\switch\final\switch7_645155D0.wem</Path>
+				</File>
+				<File Id="782710278" Language="SFX">
+					<ShortName>u know what they say.wav</ShortName>
+					<Path>SFX\u know what they say_645155D0.wem</Path>
 				</File>
 				<File Id="786633454" Language="SFX">
 					<ShortName>menuclickbackwards.wav</ShortName>
 					<Path>SFX\menuclickbackwards_645155D0.wem</Path>
 				</File>
-				<File Id="786840149" Language="SFX">
-					<ShortName>they really should seperate the oxygen for fuel and the oxygen for breathing in theese jetpacks. or maybe not. low oxygen.wav</ShortName>
-					<Path>SFX\they really should seperate the oxygen for fuel and the oxygen for breathing in theese jetpacks. or maybe not. low oxygen_645155D0.wem</Path>
+				<File Id="791519769" Language="SFX">
+					<ShortName>GAL\English\switch\final\switch3.wav</ShortName>
+					<Path>SFX\GAL\English\switch\final\switch3_645155D0.wem</Path>
 				</File>
-				<File Id="803846981" Language="SFX">
-					<ShortName>Just go with the flow, spaceman.wav</ShortName>
-					<Path>SFX\Just go with the flow, spaceman_645155D0.wem</Path>
+				<File Id="794015766" Language="SFX">
+					<ShortName>grunts\dave grunts 14.wav</ShortName>
+					<Path>SFX\grunts\dave grunts 14_E6D453BC.wem</Path>
 				</File>
-				<File Id="810091116" Language="SFX">
-					<ShortName>bare følg med strømmen.wav</ShortName>
-					<Path>SFX\bare følg med strømmen_645155D0.wem</Path>
+				<File Id="800798867" Language="SFX">
+					<ShortName>metal\Bb\metal impact Bb1.wav</ShortName>
+					<Path>SFX\metal\Bb\metal impact Bb1_7BCE4DFF.wem</Path>
+				</File>
+				<File Id="803463307" Language="SFX">
+					<ShortName>GAL\Danish\general remarks\final\remarkDan4.wav</ShortName>
+					<Path>SFX\GAL\Danish\general remarks\final\remarkDan4_645155D0.wem</Path>
+				</File>
+				<File Id="804870020" Language="SFX">
+					<ShortName>metal\Bb\metal impact Bb4.wav</ShortName>
+					<Path>SFX\metal\Bb\metal impact Bb4_645155D0.wem</Path>
+				</File>
+				<File Id="821671456" Language="SFX">
+					<ShortName>skibsatmos\skibsrumlen proper loop 1.wav</ShortName>
+					<Path>SFX\skibsatmos\skibsrumlen proper loop 1_645155D0.wem</Path>
+				</File>
+				<File Id="824313990" Language="SFX">
+					<ShortName>dave\buttscratch2.wav</ShortName>
+					<Path>SFX\dave\buttscratch2_645155D0.wem</Path>
 				</File>
 				<File Id="824586379" Language="SFX">
 					<ShortName>putoutfire2.wav</ShortName>
 					<Path>SFX\putoutfire2_645155D0.wem</Path>
 				</File>
+				<File Id="826297103" Language="SFX">
+					<ShortName>GAL\English\narrative\final\dave your suit has sustained major blows.wav</ShortName>
+					<Path>SFX\GAL\English\narrative\final\dave your suit has sustained major blows_645155D0.wem</Path>
+				</File>
+				<File Id="827842905" Language="SFX">
+					<ShortName>GAL\English\electrocute\final\wires1.wav</ShortName>
+					<Path>SFX\GAL\English\electrocute\final\wires1_645155D0.wem</Path>
+				</File>
+				<File Id="831342294" Language="SFX">
+					<ShortName>GAL\Danish\fan\Jeg har altid synes der var lidt meget luft mellem dine ører,.2.01.wav</ShortName>
+					<Path>SFX\GAL\Danish\fan\Jeg har altid synes der var lidt meget luft mellem dine ører,.2.01_645155D0.wem</Path>
+				</File>
 				<File Id="836593034" Language="SFX">
 					<ShortName>impacts\object impact1.wav</ShortName>
 					<Path>SFX\impacts\object impact1_31D66748.wem</Path>
 				</File>
+				<File Id="837032869" Language="SFX">
+					<ShortName>grunts\dave grunts 5.wav</ShortName>
+					<Path>SFX\grunts\dave grunts 5_EEA242E5.wem</Path>
+				</File>
 				<File Id="837404966" Language="SFX">
 					<ShortName>impacts\heavy impact6.wav</ShortName>
 					<Path>SFX\impacts\heavy impact6_645155D0.wem</Path>
+				</File>
+				<File Id="837454280" Language="SFX">
+					<ShortName>GAL\Danish\general remarks\final\remarkDan1.wav</ShortName>
+					<Path>SFX\GAL\Danish\general remarks\final\remarkDan1_645155D0.wem</Path>
 				</File>
 				<File Id="846681906" Language="SFX">
 					<ShortName>door shut5_1.wav</ShortName>
@@ -508,13 +1174,37 @@
 					<ShortName>impacts\object impact5.wav</ShortName>
 					<Path>SFX\impacts\object impact5_955C5A60.wem</Path>
 				</File>
-				<File Id="854761104" Language="SFX">
-					<ShortName>unprocessed\Dave nul, (Charles) Darwin 1.wav</ShortName>
-					<Path>SFX\unprocessed\Dave nul, (Charles) Darwin 1_645155D0.wem</Path>
+				<File Id="854233652" Language="SFX">
+					<ShortName>GAL\Danish\general remarks\final\remarkDan14.wav</ShortName>
+					<Path>SFX\GAL\Danish\general remarks\final\remarkDan14_645155D0.wem</Path>
+				</File>
+				<File Id="857782782" Language="SFX">
+					<ShortName>GAL\English\general remarks\final\remarks11.wav</ShortName>
+					<Path>SFX\GAL\English\general remarks\final\remarks11_645155D0.wem</Path>
+				</File>
+				<File Id="860279208" Language="SFX">
+					<ShortName>launch synth3.wav</ShortName>
+					<Path>SFX\launch synth3_F7E7C823.wem</Path>
 				</File>
 				<File Id="867057375" Language="SFX">
 					<ShortName>power up.wav</ShortName>
 					<Path>SFX\power up_645155D0.wem</Path>
+				</File>
+				<File Id="868425316" Language="SFX">
+					<ShortName>GAL\English\out of oxygen\final\outofocygen4.wav</ShortName>
+					<Path>SFX\GAL\English\out of oxygen\final\outofocygen4_645155D0.wem</Path>
+				</File>
+				<File Id="868996355" Language="SFX">
+					<ShortName>blip blop\blip blop random15.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random15_7BADABE3.wem</Path>
+				</File>
+				<File Id="871754042" Language="SFX">
+					<ShortName>launch synth4.wav</ShortName>
+					<Path>SFX\launch synth4_F2A281BB.wem</Path>
+				</File>
+				<File Id="873587437" Language="SFX">
+					<ShortName>Danish\switch\switchDAn3.wav</ShortName>
+					<Path>SFX\Danish\switch\switchDAn3_645155D0.wem</Path>
 				</File>
 				<File Id="877963907" Language="SFX">
 					<ShortName>electrocute1.wav</ShortName>
@@ -524,13 +1214,49 @@
 					<ShortName>explosion4.wav</ShortName>
 					<Path>SFX\explosion4_645155D0.wem</Path>
 				</File>
+				<File Id="881265781" Language="SFX">
+					<ShortName>grunts\dave grunts 3.wav</ShortName>
+					<Path>SFX\grunts\dave grunts 3_1BAB0CC3.wem</Path>
+				</File>
+				<File Id="886669593" Language="SFX">
+					<ShortName>metal\G\metal impact g6.wav</ShortName>
+					<Path>SFX\metal\G\metal impact g6_645155D0.wem</Path>
+				</File>
+				<File Id="887277475" Language="SFX">
+					<ShortName>narrative\narrativeDan8.wav</ShortName>
+					<Path>SFX\narrative\narrativeDan8_645155D0.wem</Path>
+				</File>
+				<File Id="887983915" Language="SFX">
+					<ShortName>narrative\narrativeDan1.wav</ShortName>
+					<Path>SFX\narrative\narrativeDan1_645155D0.wem</Path>
+				</File>
 				<File Id="888007184" Language="SFX">
 					<ShortName>impacts\light impact4.wav</ShortName>
 					<Path>SFX\impacts\light impact4_645155D0.wem</Path>
 				</File>
+				<File Id="896546075" Language="SFX">
+					<ShortName>GAL\English\fire\final\fire5.wav</ShortName>
+					<Path>SFX\GAL\English\fire\final\fire5_645155D0.wem</Path>
+				</File>
+				<File Id="910819656" Language="SFX">
+					<ShortName>GAL\English\fan\final\fan1.wav</ShortName>
+					<Path>SFX\GAL\English\fan\final\fan1_645155D0.wem</Path>
+				</File>
 				<File Id="914127829" Language="SFX">
 					<ShortName>impacts\heavy impact1.wav</ShortName>
 					<Path>SFX\impacts\heavy impact1_645155D0.wem</Path>
+				</File>
+				<File Id="914452362" Language="SFX">
+					<ShortName>metal\D\metal impact D5.wav</ShortName>
+					<Path>SFX\metal\D\metal impact D5_645155D0.wem</Path>
+				</File>
+				<File Id="916303569" Language="SFX">
+					<ShortName>GAL\English\general remarks\final\remarks10.wav</ShortName>
+					<Path>SFX\GAL\English\general remarks\final\remarks10_645155D0.wem</Path>
+				</File>
+				<File Id="919206210" Language="SFX">
+					<ShortName>metal\Bb\metal impact Bb2.wav</ShortName>
+					<Path>SFX\metal\Bb\metal impact Bb2_645155D0.wem</Path>
 				</File>
 				<File Id="920506848" Language="SFX">
 					<ShortName>impacts\object impact light7.wav</ShortName>
@@ -540,9 +1266,9 @@
 					<ShortName>menuclickforward.wav</ShortName>
 					<Path>SFX\menuclickforward_645155D0.wem</Path>
 				</File>
-				<File Id="926836453" Language="SFX">
-					<ShortName>unprocessed\det her sted virker ikke særligt sikkert... men Hey! der er kun en måde at finde ud af det på.wav</ShortName>
-					<Path>SFX\unprocessed\det her sted virker ikke særligt sikkert... men Hey! der er kun en måde at finde ud af det på_1D3EDAB3.wem</Path>
+				<File Id="929920904" Language="SFX">
+					<ShortName>GAL\English\general remarks\final\remarks6.wav</ShortName>
+					<Path>SFX\GAL\English\general remarks\final\remarks6_88CCFD8E.wem</Path>
 				</File>
 				<File Id="938445351" Language="SFX">
 					<ShortName>impacts\object impact6.wav</ShortName>
@@ -552,21 +1278,49 @@
 					<ShortName>door shut7_1.wav</ShortName>
 					<Path>SFX\door shut7_1_8AF2D816.wem</Path>
 				</File>
+				<File Id="942578140" Language="SFX">
+					<ShortName>GAL\English\fan\final\fan5.wav</ShortName>
+					<Path>SFX\GAL\English\fan\final\fan5_645155D0.wem</Path>
+				</File>
 				<File Id="949012013" Language="SFX">
 					<ShortName>main atmos.wav</ShortName>
 					<Path>SFX\main atmos_824B34CA.wem</Path>
 				</File>
-				<File Id="962457986" Language="SFX">
-					<ShortName>Hvis det ikke lykkes første gang; så kald det først version.wav</ShortName>
-					<Path>SFX\Hvis det ikke lykkes første gang; så kald det først version_645155D0.wem</Path>
+				<File Id="954327847" Language="SFX">
+					<ShortName>blip blop\blip blop random8.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random8_7BADABE3.wem</Path>
 				</File>
-				<File Id="978568623" Language="SFX">
-					<ShortName>Jeg er ikke asocial, Dave. jeg er bare ikke brugervenlig.wav</ShortName>
-					<Path>SFX\Jeg er ikke asocial, Dave. jeg er bare ikke brugervenlig_645155D0.wem</Path>
+				<File Id="956419964" Language="SFX">
+					<ShortName>metal\D\metal impact D3.wav</ShortName>
+					<Path>SFX\metal\D\metal impact D3_645155D0.wem</Path>
 				</File>
-				<File Id="980546618" Language="SFX">
-					<ShortName>Dave im just imforming you that your on fire.wav</ShortName>
-					<Path>SFX\Dave im just imforming you that your on fire_645155D0.wem</Path>
+				<File Id="964917836" Language="SFX">
+					<ShortName>Danish\switch\switchDAn4.wav</ShortName>
+					<Path>SFX\Danish\switch\switchDAn4_645155D0.wem</Path>
+				</File>
+				<File Id="969317301" Language="SFX">
+					<ShortName>blip blop\blip blop sci fi forest short10.wav</ShortName>
+					<Path>SFX\blip blop\blip blop sci fi forest short10_7BADABE3.wem</Path>
+				</File>
+				<File Id="971379015" Language="SFX">
+					<ShortName>hello dave mix 2.wav</ShortName>
+					<Path>SFX\hello dave mix 2_824B34CA.wem</Path>
+				</File>
+				<File Id="971397170" Language="SFX">
+					<ShortName>atmos\hydralics1.wav</ShortName>
+					<Path>SFX\atmos\hydralics1_645155D0.wem</Path>
+				</File>
+				<File Id="972817918" Language="SFX">
+					<ShortName>skibsatmos\skibs rumlen knirk 2.wav</ShortName>
+					<Path>SFX\skibsatmos\skibs rumlen knirk 2_76119463.wem</Path>
+				</File>
+				<File Id="975186946" Language="SFX">
+					<ShortName>Danish\switch\switchDAn1.wav</ShortName>
+					<Path>SFX\Danish\switch\switchDAn1_645155D0.wem</Path>
+				</File>
+				<File Id="977744412" Language="SFX">
+					<ShortName>GAL\English\narrative\final\narrative3.wav</ShortName>
+					<Path>SFX\GAL\English\narrative\final\narrative3_645155D0.wem</Path>
 				</File>
 				<File Id="981090303" Language="SFX">
 					<ShortName>impacts\light impact6.wav</ShortName>
@@ -576,37 +1330,101 @@
 					<ShortName>impacts\light impact5.wav</ShortName>
 					<Path>SFX\impacts\light impact5_645155D0.wem</Path>
 				</File>
+				<File Id="982755718" Language="SFX">
+					<ShortName>narrative\narrativeDan6.wav</ShortName>
+					<Path>SFX\narrative\narrativeDan6_645155D0.wem</Path>
+				</File>
 				<File Id="984498401" Language="SFX">
 					<ShortName>impacts\heavy impact3.wav</ShortName>
 					<Path>SFX\impacts\heavy impact3_645155D0.wem</Path>
+				</File>
+				<File Id="988269575" Language="SFX">
+					<ShortName>GAL\English\out of oxygen\final\outofocygen6.wav</ShortName>
+					<Path>SFX\GAL\English\out of oxygen\final\outofocygen6_645155D0.wem</Path>
 				</File>
 				<File Id="990388538" Language="SFX">
 					<ShortName>impacts\light impact3.wav</ShortName>
 					<Path>SFX\impacts\light impact3_645155D0.wem</Path>
 				</File>
+				<File Id="995787277" Language="SFX">
+					<ShortName>blip blop\blip blop sci fi forest short3.wav</ShortName>
+					<Path>SFX\blip blop\blip blop sci fi forest short3_7BADABE3.wem</Path>
+				</File>
 				<File Id="997255121" Language="SFX">
 					<ShortName>menuScrollclick3.wav</ShortName>
 					<Path>SFX\menuScrollclick3_645155D0.wem</Path>
+				</File>
+				<File Id="1000329366" Language="SFX">
+					<ShortName>metal\C\metal impact C3.wav</ShortName>
+					<Path>SFX\metal\C\metal impact C3_645155D0.wem</Path>
+				</File>
+				<File Id="1001129958" Language="SFX">
+					<ShortName>GAL\English\narrative\final\narrative2.wav</ShortName>
+					<Path>SFX\GAL\English\narrative\final\narrative2_645155D0.wem</Path>
+				</File>
+				<File Id="1003759726" Language="SFX">
+					<ShortName>GAL\English\switch\final\switch5.wav</ShortName>
+					<Path>SFX\GAL\English\switch\final\switch5_645155D0.wem</Path>
 				</File>
 				<File Id="1008444769" Language="SFX">
 					<ShortName>catchfire.wav</ShortName>
 					<Path>SFX\catchfire_645155D0.wem</Path>
 				</File>
-				<File Id="1019037759" Language="SFX">
-					<ShortName>My readings tell me that your oxygen levels are low.wav</ShortName>
-					<Path>SFX\My readings tell me that your oxygen levels are low_645155D0.wem</Path>
+				<File Id="1008447857" Language="SFX">
+					<ShortName>blip blop\blip blop random19.wav</ShortName>
+					<Path>SFX\blip blop\blip blop random19_7BADABE3.wem</Path>
+				</File>
+				<File Id="1024588397" Language="SFX">
+					<ShortName>Danish\low oxygen\lowOxygen3.wav</ShortName>
+					<Path>SFX\Danish\low oxygen\lowOxygen3_645155D0.wem</Path>
+				</File>
+				<File Id="1025581677" Language="SFX">
+					<ShortName>GAL\Danish\general remarks\final\remarkDan17.wav</ShortName>
+					<Path>SFX\GAL\Danish\general remarks\final\remarkDan17_645155D0.wem</Path>
+				</File>
+				<File Id="1028486927" Language="SFX">
+					<ShortName>GAL\English\fan\final\fan3.wav</ShortName>
+					<Path>SFX\GAL\English\fan\final\fan3_645155D0.wem</Path>
+				</File>
+				<File Id="1030162421" Language="SFX">
+					<ShortName>blip blop\blip blop sci fi forest short11.wav</ShortName>
+					<Path>SFX\blip blop\blip blop sci fi forest short11_7BADABE3.wem</Path>
 				</File>
 				<File Id="1031646511" Language="SFX">
 					<ShortName>launch mockup1 long.wav</ShortName>
 					<Path>SFX\launch mockup1 long_645155D0.wem</Path>
 				</File>
+				<File Id="1035730658" Language="SFX">
+					<ShortName>Danish\fire\fireDan1.wav</ShortName>
+					<Path>SFX\Danish\fire\fireDan1_645155D0.wem</Path>
+				</File>
+				<File Id="1036120416" Language="SFX">
+					<ShortName>blip blop\blip blop sci fi forest short5.wav</ShortName>
+					<Path>SFX\blip blop\blip blop sci fi forest short5_7BADABE3.wem</Path>
+				</File>
+				<File Id="1039321002" Language="SFX">
+					<ShortName>Danish\out of oxygen\outOfOxygenDan3.wav</ShortName>
+					<Path>SFX\Danish\out of oxygen\outOfOxygenDan3_645155D0.wem</Path>
+				</File>
 				<File Id="1041668143" Language="SFX">
 					<ShortName>menuScrollclick.wav</ShortName>
 					<Path>SFX\menuScrollclick_645155D0.wem</Path>
 				</File>
-				<File Id="1054853600" Language="SFX">
-					<ShortName>my software does not have any bugs... 2.wav</ShortName>
-					<Path>SFX\my software does not have any bugs... 2_645155D0.wem</Path>
+				<File Id="1044380383" Language="SFX">
+					<ShortName>skibsatmos\skibsrumlen knirk4.wav</ShortName>
+					<Path>SFX\skibsatmos\skibsrumlen knirk4_FE729CEF.wem</Path>
+				</File>
+				<File Id="1044968386" Language="SFX">
+					<ShortName>GAL\English\electrocute\final\wires3.wav</ShortName>
+					<Path>SFX\GAL\English\electrocute\final\wires3_645155D0.wem</Path>
+				</File>
+				<File Id="1047728440" Language="SFX">
+					<ShortName>GAL\English\switch\final\switch4.wav</ShortName>
+					<Path>SFX\GAL\English\switch\final\switch4_645155D0.wem</Path>
+				</File>
+				<File Id="1058957984" Language="SFX">
+					<ShortName>GAL\English\general remarks\final\remarks12.wav</ShortName>
+					<Path>SFX\GAL\English\general remarks\final\remarks12_645155D0.wem</Path>
 				</File>
 				<File Id="1059243837" Language="SFX">
 					<ShortName>comic. shitty.wav</ShortName>
@@ -624,13 +1442,17 @@
 					<ShortName>impacts\heavy impact5.wav</ShortName>
 					<Path>SFX\impacts\heavy impact5_645155D0.wem</Path>
 				</File>
+				<File Id="1065919626" Language="SFX">
+					<ShortName>skibsatmos\skibsrumlen knirk3.wav</ShortName>
+					<Path>SFX\skibsatmos\skibsrumlen knirk3_71A1D22F.wem</Path>
+				</File>
 				<File Id="1066027588" Language="SFX">
 					<ShortName>door shut1_1.wav</ShortName>
 					<Path>SFX\door shut1_1_7BADABE3.wem</Path>
 				</File>
-				<File Id="1068945317" Language="SFX">
-					<ShortName>alert, Prepare for impact.wav</ShortName>
-					<Path>SFX\alert, Prepare for impact_645155D0.wem</Path>
+				<File Id="1068792125" Language="SFX">
+					<ShortName>Danish\out of oxygen\outOfOxygenDan2.wav</ShortName>
+					<Path>SFX\Danish\out of oxygen\outOfOxygenDan2_645155D0.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

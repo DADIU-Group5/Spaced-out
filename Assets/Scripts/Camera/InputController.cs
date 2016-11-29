@@ -142,7 +142,7 @@ public class InputController : MonoBehaviour, Observer
     }
 
     // get point where the player is aiming
-    private Vector3 GetAimPoint()
+    public Vector3 GetAimPoint()
     {
         Ray ray = cam.ScreenPointToRay(ScreenCenter()); 
         RaycastHit hit;

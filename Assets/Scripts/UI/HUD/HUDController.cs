@@ -34,7 +34,7 @@ public class HUDController : MonoBehaviour, Observer {
     void Start()
     {
         SettingsManager.instance.onLanguageChanged += UpdateButtonText;
-        UpdateButtonText(Language.Danish);
+        UpdateButtonText(SettingsManager.instance.GetLanguage());
     }
 
     private void UpdateButtonText(Language lan)
@@ -109,7 +109,10 @@ public class HUDController : MonoBehaviour, Observer {
                 break;
             case EventName.ComicsUpdate:
                 var comicsPayload = evt.payload;
-                comicsLeftText.text = (string)comicsPayload[PayloadConstants.COMICS] + " "+ Translator.instance.Get("comics");
+                if (comicsLeftText != null)
+                {
+                    comicsLeftText.text = (string)comicsPayload[PayloadConstants.COMICS] + " " + Translator.instance.Get("comics");
+                }
                 break;
 
             case EventName.ToggleUI:

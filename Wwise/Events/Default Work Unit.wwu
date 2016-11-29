@@ -1352,9 +1352,6 @@
 						<Event Name="musicMainPlay" ID="{F30947D7-9777-485C-A4D1-A33BE2BFE1AE}">
 							<ChildrenList>
 								<Action Name="Play" ID="{1CBD0B57-249D-4549-9E46-DAB54422125F}" ShortID="998077567" Type="Play" Scope="One" Global="false">
-									<PropertyList>
-										<Property Name="FadeTime" Type="Real64" Value="10"/>
-									</PropertyList>
 									<ElementList>
 										<Element ID="{4D1F581C-8F81-4398-B7EF-116E23E0769C}" Global="false">
 											<ObjectRef Name="musicmain" ID="{A4BE85F5-7236-4E80-B2CE-91E61AC28E1E}" WorkUnitID="{F5948B08-8EA0-455A-9A43-E3F403D87912}"/>

@@ -5,7 +5,7 @@ using System;
 public class ProgressManager : Singleton<ProgressManager> {
     public const int medalCompleted = 0;
     public const int medalAllComics = 1;
-    public const int medalNoDeaths = 2;
+    public const int medalShots = 2;
 
     public Progress progress;
 
@@ -27,7 +27,6 @@ public class ProgressManager : Singleton<ProgressManager> {
     // set medal as completed for level
     public void SetMedal(int level, int medal)
     {
-        Debug.Log("Setting medals! level: "+ level + " medal: " + medal);
         if (level < 0 || level > progress.levels.Length)
         {
             throw new UnityException("No medals exists for level: " + level);
@@ -53,15 +52,32 @@ public class ProgressManager : Singleton<ProgressManager> {
                     progress.currency++;
                 }
                 break;
-            case medalNoDeaths:
-                if (!progress.levels[level].noDeaths) // check if completed already
+            case medalShots:
+                if (!progress.levels[level].shotCount) // check if completed already
                 {
-                    progress.levels[level].noDeaths = true;
+                    progress.levels[level].shotCount = true;
                     progress.currency++;
                 }
                 break;
             default:
                 throw new UnityException("Medal value not in range [0..2]: " + medal);
+        }
+    }
+
+    public void SetShotCount(int level, int count)
+    {
+        level--;
+        if (count <= GenerationDataManager.instance.GetShotCount()) {
+            if(progress.levels[level].shotCount == false)
+            {
+                progress.levels[level].shotCount = true;
+                progress.levels[level].bestShotCount = count;
+                progress.currency++;
+            }
+            else if(count < progress.levels[level].bestShotCount)
+            {
+                progress.levels[level].bestShotCount = count;
+            }
         }
     }
 
@@ -74,7 +90,7 @@ public class ProgressManager : Singleton<ProgressManager> {
         }
 
         var levelProgress = progress.levels[level]; //- 1];
-        return new bool[] { levelProgress.completed, levelProgress.noDeaths, levelProgress.allComics}; 
+        return new bool[] { levelProgress.completed, levelProgress.shotCount, levelProgress.allComics}; 
     }
 
     // change the currency
@@ -99,7 +115,7 @@ public class ProgressManager : Singleton<ProgressManager> {
         var level = progress.levels[levelNumber];
         level.completed = false;
         level.allComics = false;
-        level.noDeaths = false;
+        level.shotCount = false;
     }
 
     // resets progress in levels to default
@@ -112,7 +128,7 @@ public class ProgressManager : Singleton<ProgressManager> {
             level.unlocked = false;
             level.completed = false;
             level.allComics = false;
-            level.noDeaths = false;
+            level.shotCount = false;
         }
         progress.levels[0].unlocked = true;
     }

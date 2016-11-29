@@ -1795,7 +1795,7 @@
 										<Property Name="Ceiling" Type="Real32" Value="-0.1"/>
 										<Property Name="Knee" Type="Real32" Value="30"/>
 										<Property Name="Mode" Type="int32" Value="3"/>
-										<Property Name="Threshold" Type="Real32" Value="-15"/>
+										<Property Name="Threshold" Type="Real32" Value="-8"/>
 									</PropertyList>
 								</Effect>
 								<Effect Name="Master_Smart" ID="{F9CBB33C-9E1A-423E-A397-681946F328E5}" PluginName="McDSP ML1" CompanyID="256" PluginID="103" PluginType="3">

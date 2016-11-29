@@ -17,6 +17,7 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
     public float zoomDuration = 1f;
     public float camZoomOutPosition = -2f;
     public float camZoomInPosition = -0.9f;
+    public float bufferRadius = 0.2f;
     
     private enum Zoom { NONE, IN, OUT };
     private Zoom zooming = Zoom.NONE;
@@ -78,13 +79,17 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
         int layermask3 = 1 << LayerMask.NameToLayer("Ignore Raycast");
         int finalmask = ~(layermask1 | layermask2 | layermask3);
         
-        // TODO: Use SphereCast instead
-        //Physics.SphereCast(target.transform.position, 1f, direction, out hit, direction.magnitude, finalmask);
+        if (Physics.SphereCast(target.transform.position, bufferRadius, direction.normalized, out hit, direction.magnitude, finalmask))
+        {
+            cam.transform.position = target.transform.position + hit.distance * direction.normalized;
+        }
 
+        /*
         if (Physics.Raycast(target.transform.position, direction.normalized, out hit, maxDistance: direction.magnitude, layerMask: finalmask))
         {
             cam.transform.position = hit.point;
         }
+        */
     }
 
     private void PerformCameraZoom(Vector3 start, Vector3 end)

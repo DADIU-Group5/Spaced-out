@@ -24,6 +24,7 @@ public class Room : MonoBehaviour
     public List<GameObject> doorObjects;
 
     public List<HazardState> hazards;
+    public List<SwitchItem> switchItems;
 
     public InRoomDoor exitDoor;
 
@@ -147,6 +148,7 @@ public class Room : MonoBehaviour
         CleanList(shapingObjects, shapingParent);
         CleanList(pickupObjects, pickupParent);
         CleanList(doorObjects, doorParent);
+        CleanList(switchObjects, switchParent);
     }
 
     /// <summary>
@@ -216,11 +218,21 @@ public class Room : MonoBehaviour
         hazards.Add(HS);
     }
 
+    public void AddRoomSwitch(SwitchItem SI)
+    {
+        switchItems.Add(SI);
+        Debug.LogError(switchItems.Count + " _ " + gameObject.name);
+    }
+
     public void SwitchWasTouched()
     {
         foreach (HazardState item in hazards)
         {
             item.EnabledOrDisableTrap();
+        }
+        foreach (SwitchItem item in switchItems)
+        {
+            item.SwitchColor();
         }
         if(exitDoor != null)
         {

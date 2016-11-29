@@ -14,8 +14,10 @@ public class EntryCutScene : MonoBehaviour {
     [Header("Cameras")]
     public GameObject mainCameraPod;
     public GameObject zoomCamera;
+
     public float zoomSpeed = 2.0f;
     public GameObject finalKey;
+   
     private Vector3 keyPosition;
     private Vector3 orgPosition;
     private bool zoomingIn = false;

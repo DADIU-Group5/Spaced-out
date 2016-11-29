@@ -62,10 +62,12 @@ public class MenuLevelSelect : MonoBehaviour {
         if (level == 0)
         {
             SceneManager.LoadScene("Intro Tutorial");
+            GenerationDataManager.instance.SetTutortialLevel();
         }
         else if (level == 1)
         {
             SceneManager.LoadScene("Intro Level 1");
+            GenerationDataManager.instance.SetCurrentLevel(level);
         }
         else
         {

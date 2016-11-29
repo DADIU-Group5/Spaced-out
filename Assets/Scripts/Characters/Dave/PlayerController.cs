@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
 
     void Update()
     {
+
         // rotate player towards aim
         if (transform.rotation != aim)
         {
@@ -98,6 +99,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     {
         readyForLaunch = true;
         animator.SetTrigger("Ready To Launch");
+        Aim(inputCont.GetAimPoint());
     }
 
     // aim the player at a certain point in world space
@@ -105,7 +107,6 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     {
         if (!readyForLaunch)
             return;
-
         Vector3 direction = (point - transform.position).normalized;
         aim = Quaternion.LookRotation(direction);
     }

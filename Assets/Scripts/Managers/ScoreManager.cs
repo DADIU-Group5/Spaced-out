@@ -13,12 +13,15 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
     public static int comicsCollected;
     public static bool hasDied;
 
+    public static int shotsFired = 0;
+
     protected override void Awake()
     {   
         // will be increased on start
         base.Awake();
         totalComics = 0;
         comicsCollected = 0;
+        shotsFired = 0;
         hasDied = false;
         if (Subject.instance != null)
         {
@@ -58,14 +61,22 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
                 //added 1 because the system is weird
                 int level = GenerationDataManager.instance.GetCurrentLevel();
                 ProgressManager.instance.SetMedal(level, ProgressManager.medalCompleted);
-                if (!hasDied)
-                    ProgressManager.instance.SetMedal(level, ProgressManager.medalNoDeaths);
+               /* if (!hasDied)
+                    ProgressManager.instance.SetMedal(level, ProgressManager.medalNoDeaths);*/
+
                 if (comicsCollected == totalComics && totalComics != 0)
+                {
                     ProgressManager.instance.SetMedal(level, ProgressManager.medalAllComics);
+                }
+
+                ProgressManager.instance.SetShotCount(level, shotsFired);
                 
                 break;
             case EventName.PlayerDead:
                 hasDied = true;
+                break;
+            case EventName.PlayerLaunch:
+                shotsFired++;
                 break;
             default:
                 break;

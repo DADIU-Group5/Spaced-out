@@ -12,18 +12,12 @@ public class SoundManager : Singleton<SoundManager>, Observer
     private float effectsVolume;
     private bool mute = false;
 
-    private DoorOpenCloseTrigger doorTrigger;
-    public BarrelTrigger barrelTrigger;
-
     // Use this for initialization
     void Start()
     {
         Subject.instance.AddObserver(this);
 
-        doorTrigger = GetComponent<DoorOpenCloseTrigger>();
-
         AkSoundEngine.LoadBank("soundbank_alpha", AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
-        AkSoundEngine.SetSwitch("galVersion", "v1", gameObject);
 
         var settings = SettingsManager.instance.settings;
 
@@ -62,11 +56,11 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 bool playMusic = (bool)payload[PayloadConstants.START_STOP];
 
                 PlayEvent(SoundEventConstants.DAVE_LAUNCH);
-                //if (playMusic)
-                //{
-                //    PlayEvent(SoundEventConstants.MUSIC_MAIN_STOP);
-                //    PlayEvent(SoundEventConstants.MUSIC_MAIN_PLAY);
-                //}
+                if (playMusic)
+                {
+                    PlayEvent(SoundEventConstants.MUSIC_MAIN_STOP);
+                    PlayEvent(SoundEventConstants.MUSIC_MAIN_PLAY);
+                }
 
                 break;
 

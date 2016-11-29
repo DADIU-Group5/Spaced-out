@@ -31,7 +31,8 @@ public class Progress : ScriptableObject
     {
         public bool unlocked;
         public bool completed;
-        public bool noDeaths;
+        public bool shotCount;
+        public int bestShotCount;
         public bool allComics;
     }
 }

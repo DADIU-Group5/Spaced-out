@@ -1,50 +1,39 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ElectricalHazard : MonoBehaviour {
+public class ElectricalHazard : MonoBehaviour, Observer
+{
+    private bool triggered = false;
 
-    public float TimeUntilShockToDeath = 0f;
-
-    [HideInInspector]
-    public GameObject player;
-    private bool shockingPlayer = false;
     [HideInInspector]
     public GameplayElement itemState;
 
-    // Use this for initialization
-    void Start()
+    private void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        itemState = this.gameObject.GetComponent<GameplayElement>();
+        itemState = GetComponent<GameplayElement>();
+        Subject.instance.AddObserver(this);
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Player" && itemState.On && !shockingPlayer)
+        if (!triggered && other.transform.tag == "Player" && itemState.On)
         {
-            //set shockingplayer to true, to avoid multiple notifies (mostly for subtitles/voices, etc.)
-            shockingPlayer = true;
-            StartCoroutine(ShockToDeath());
+            triggered = true;
+            var evt = new ObserverEvent(EventName.Electrocuted);
+            Subject.instance.Notify(gameObject, evt);
         }
     }
 
-    //if player exits trigger, reset player detection
-    void OnTriggerExit(Collider other)
+    public void OnNotify(GameObject entity, ObserverEvent evt)
     {
-        if (other.transform.tag == "Player" && itemState.On)
+        if (evt.eventName == EventName.PlayerSpawned)
         {
-            shockingPlayer = false;
+                triggered = false;
         }
     }
 
-    /// <summary>
-    /// Shocks the player to death.
-    /// </summary>
-    public IEnumerator ShockToDeath()
+    public void OnDestroy()
     {
-        yield return new WaitForSeconds(TimeUntilShockToDeath);
-        //player.GetComponent<PlayerController>().Kill();
-        var evt = new ObserverEvent(EventName.Electrocuted);
-        Subject.instance.Notify(gameObject, evt);
+        Subject.instance.RemoveObserver(this);
     }
 }

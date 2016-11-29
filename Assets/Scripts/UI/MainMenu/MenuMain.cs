@@ -1,22 +1,23 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class MenuMain : Singleton<MenuMain> {
 
     private LevelSelectManager levelSelect;
-    //public Text startBtnTxt;
+
     public Text levelSelectBtnTxt;
     public Text settingsBtnTxt;
     public Text shopBtnTxt;
     public Text exitBtnTxt;
+
     // The active view
     private GameObject view;
 
     void Start()
     {
         SettingsManager.instance.onLanguageChanged += UpdateButtonText;
-        UpdateButtonText(Language.Danish);
+        
+        UpdateButtonText(SettingsManager.instance.GetLanguage());
     }
 
     public void UpdateButtonText(Language lan)

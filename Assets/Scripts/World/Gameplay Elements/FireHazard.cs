@@ -2,43 +2,30 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class FireHazard : MonoBehaviour
+public class FireHazard : MonoBehaviour, Observer
 {
-    [HideInInspector]
-    public GameObject player;
-    public bool extinquishFlames = false;
+    private bool triggered = false;
 
-    [HideInInspector]
-    public GameplayElement itemState;
-
-    //keep track of whether the player is burning...
-    //so that we don't send multiple burn notifications
-    //to scripts that can't handle it (GAL lines, ex.)
-    private bool burningPlayer = false;
-
-    // Use this for initialization
-    void Start()
+    void OnTriggerEnter(Collider other)
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        itemState = this.gameObject.GetComponent<GameplayElement>();
-    }
-
-
-    void OnTriggerStay(Collider other)
-    {
-        if (other.transform.tag == "Player" && itemState.On && !burningPlayer)
+        if (other.transform.tag == "Player")
         {
-            burningPlayer = true;
+            triggered = true;
             var evt = new ObserverEvent(EventName.OnFire);
             Subject.instance.Notify(gameObject, evt);
         }
     }
 
-    void OnTriggerExit(Collider other)
+    public void OnNotify(GameObject entity, ObserverEvent evt)
     {
-        if (other.transform.tag == "Player")
+        if (evt.eventName == EventName.PlayerSpawned)
         {
-            burningPlayer = false;
+            triggered = false;
         }
+    }
+
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
     }
 }

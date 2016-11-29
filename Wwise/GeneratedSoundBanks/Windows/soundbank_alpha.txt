@@ -24,6 +24,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	877642275	cinematic3			\Default Work Unit\Cinematics\cinematic3	
 	877642276	cinematic4			\Default Work Unit\Cinematics\cinematic4	
 	877642277	cinematic5			\Default Work Unit\Cinematics\cinematic5	
+	918879319	daveScratch			\Default Work Unit\dave\daveScratch	
 	1016866911	daveSquishBetweenDoors			\Default Work Unit\dave\daveSquishBetweenDoors	
 	1075305830	menuClickForwards			\Default Work Unit\UI\menuClickForwards	
 	1124785720	gasLeak7			\Default Work Unit\gal\gasLeak\gasLeak7	
@@ -47,6 +48,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1590382668	switch3			\Default Work Unit\gal\switch\switch3	
 	1590382669	switch2			\Default Work Unit\gal\switch\switch2	
 	1590382670	switch1			\Default Work Unit\gal\switch\switch1	
+	1671587919	blipBlopLow			\Default Work Unit\enviroment\blipBlopLow	
 	1861472432	outOfOxygen4			\Default Work Unit\gal\outofOxygen\outOfOxygen4	
 	1861472433	outOfOxygen5			\Default Work Unit\gal\outofOxygen\outOfOxygen5	
 	1861472434	outOfOxygen6			\Default Work Unit\gal\outofOxygen\outOfOxygen6	
@@ -54,6 +56,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1861472437	outOfOxygen1			\Default Work Unit\gal\outofOxygen\outOfOxygen1	
 	1861472438	outOfOxygen2			\Default Work Unit\gal\outofOxygen\outOfOxygen2	
 	1861472439	outOfOxygen3			\Default Work Unit\gal\outofOxygen\outOfOxygen3	
+	1935175563	blipBlopHigh			\Default Work Unit\enviroment\blipBlopHigh	
 	1988531540	musicWinStop			\Default Work Unit\music\musicWinStop	
 	2017509636	slowmotionStop			\Default Work Unit\gameState\slowmotionStop	
 	2059739492	pickupComic			\Default Work Unit\enviroment\pickupComic	
@@ -168,6 +171,8 @@ Modulator LFO	ID	Name			Wwise Object Path	Notes
 	30900722	lfoblaze			\Default Work Unit\lfoblaze	
 	150950941	fanair			\Default Work Unit\fanair	
 	210420181	lfovent			\Default Work Unit\lfovent	
+	489220005	lfo fire			\Default Work Unit\lfo fire	
+	571762777	blipblop atmos			\Default Work Unit\blipblop atmos	
 	1023130340	lfoblaze2			\Default Work Unit\lfoblaze2	
 
 Modulator Envelope	ID	Name			Wwise Object Path	Notes
@@ -185,16 +190,20 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	135845145	rvbatmos			\Default Work Unit\Master Audio Bus\rvbatmos	
 	373392551	New_Auxiliary_Bus			\Default Work Unit\Master Secondary Bus\New_Auxiliary_Bus	
+	529873614	dly			\Default Work Unit\Master Audio Bus\dly	
 	2425890737	rvb2			\Default Work Unit\Master Audio Bus\rvb2	
 	2425890738	rvb1			\Default Work Unit\Master Audio Bus\rvb1	
 
 Effect plug-ins	ID	Name	Type				Notes
 	216046035	firewoosh	Wwise Parametric EQ			
 	259313001	Master_Dynamic	McDSP ML1			
+	1125262053	Blue_Distant_Echoes	Wwise Stereo Delay			
 	1718002255	custom_rvb_1	Wwise Convolution Reverb			
 	1796269791	Damped_Chamber	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 4ms 
+	2547645744	Boost_3dB_100Hz	Wwise Parametric EQ			
 	2678880713	fire	Wwise Parametric EQ			
 	3013737255	Bass_Remover_9	Wwise Parametric EQ			
+	3043085106	High_Impact	Wwise Compressor			
 	3216246379	Space_Dreaming	Wwise RoomVerb			
 	4143868621	Bass_Remover_10	Wwise Parametric EQ			
 
@@ -263,282 +272,342 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	1055663783	SoundSeed Air Woosh	SoundSeed Air/SoundSeed Woosh		\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects\Game Driven Presets\Wings\SoundSeed Air Woosh	Each wing beating, made for looping.
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	510991	o2ligt	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\out of oxygen\outOfOxygenDan1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 5\o2ligt		48409
-	7287327	remarks7	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark7\remarks7		17957
-	11557003	metal impact g3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\G\metal impact g3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g3		32006
-	17473018	remarks15	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks15_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark15\remarks15		80802
-	18933449	outofocygen3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\out of oxygen\final\outofocygen3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 3\outofocygen3		62914
-	19945158	blæser	Y:\Spaced-out\Wwise\.cache\Windows\SFX\blæser_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\blæser		100752
-	21575732	explosion1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\explosion1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion1		11315
-	24715317	bevar fatiningen	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires5\bevar fatiningen		50500
-	33179142	metal impact no tone4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\metal impact no tone4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone4		39384
-	35238501	metal impact g5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\G\metal impact g5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g5		26006
-	38413473	fireDan2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\fire\fireDan2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire1\fireDan2		22632
-	53431297	metal impact F1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\F\metal impact F1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\F\metal impact F1		25823
-	58689411	narrative8	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative8_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrativejetpack\narrative8		164668
-	66826332	remarks8	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks8_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark8\remarks8		73636
-	68587342	electrocute4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\electrocute4_C5470726.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute4		76719
-	68659619	lowoxygen2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\low oxygen\final\lowoxygen2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 2\lowoxygen2		93083
-	69730662	narrativeDan10	Y:\Spaced-out\Wwise\.cache\Windows\SFX\narrative\narrativeDan10_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\u are lucky\narrativeDan10		73182
-	69768843	explosive countdown	Y:\Spaced-out\Wwise\.cache\Windows\SFX\explosive countdown_2E44423E.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosive countdown		33818
-	80316185	metal impact C2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\C\metal impact C2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\C\metal impact C2		30414
-	92370258	wiresDan5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires4\wiresDan5		47462
-	93716665	remarkDan8	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan8_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark1\remarkDan8		74534
-	98760664	remarkDan11	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan11_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark5\remarkDan11		103945
-	101226196	blev du forskrækket	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires6\blev du forskrækket		48091
-	104585137	object impact light3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact light3_283D1131.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light3		3623
-	105906957	launch synth2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\launch synth2_AEB6C87C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth2		80739
-	107064225	narrativeDan9	Y:\Spaced-out\Wwise\.cache\Windows\SFX\narrative\narrativeDan9_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\what are you doing\narrativeDan9		46077
-	112371414	object impact light6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact light6_56299CF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light6		3575
-	116050032	explosion6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\explosion6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion6		10965
-	117874704	preexplosion	Y:\Spaced-out\Wwise\.cache\Windows\SFX\preexplosion_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\preexplosion		4029
-	120419077	metal impact F2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\F\metal impact F2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\F\metal impact F2		31582
-	129103809	hvor er du bare Fan-tastisk_2_7	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\fan\hvor er du bare Fan-tastisk.2.7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan4\hvor er du bare Fan-tastisk_2_7		40490
-	131464271	remarkDan9	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan9_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark7\remarkDan9		16339
-	140590783	min analyse	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark6\min analyse		96177
-	143105393	wires6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\wires6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires6\wires6		39432
-	145958102	fire3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fire\final\fire3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire2\fire3		56194
-	146173779	lowOxygenDan4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\low oxygen\lowOxygen4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 2\lowOxygenDan4		51729
-	163750867	outofocygen2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\out of oxygen\final\outofocygen2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 8\outofocygen2		73090
-	182772970	metal impact no tone3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\metal impact no tone3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone3		42153
-	186452641	fire4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fire\final\fire4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire3\fire4		49257
-	191894431	fire1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fire\final\fire1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire1\fire1		31414
-	193127449	wires5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\wires5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires5\wires5		56018
-	202362747	switch on	Y:\Spaced-out\Wwise\.cache\Windows\SFX\switches\switch on_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\switch on		9221
-	207786701	fireDan3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\fire\fireDan3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire3\fireDan3		28599
-	208881451	switch6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\switch\final\switch6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch5\switch6		75595
-	211269648	adskille	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\low oxygen\lowOxygen1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 3\adskille		99653
-	213148062	menuScrollclick4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\menuScrollclick4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\scroll\menuScrollclick4		12703
-	214047775	switchDAn2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\switch\switchDAn2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch6\switchDAn2		42442
-	216929679	gnist i livet	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires7\gnist i livet		55612
-	217562638	remarkDan15	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan15_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark2\remarkDan15		26678
-	220396511	fan6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fan\final\fan6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan5\fan6		17586
-	221557103	object impact light2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact light2_3C2CF5BE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light2		2977
-	221848891	remarkDan16	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan16_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark13\remarkDan16		69104
-	223822837	narrativeDan2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\narrative\narrativeDan2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative2\narrativeDan2		30275
-	228760907	basic human	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\switch\final\switch2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch8\basic human		100400
-	229414056	hydralics2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics2		37899
-	242871080	skibsrumlen proper loop 3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibsrumlen proper loop 3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\loop1\skibsrumlen proper loop 3		36032
-	249461941	kan du huske	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\low oxygen\lowOxygen2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 4\kan du huske		108189
-	250187452	skibsrumlen knirk5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibsrumlen knirk5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\knirken\skibsrumlen knirk5		37847
-	253900823	lowoxygen6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\low oxygen\final\lowoxygen6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 6\lowoxygen6		99259
-	255854901	outOfOxygenDan6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\out of oxygen\outOfOxygenDan6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 6\outOfOxygenDan6		51363
-	257012564	switch off	Y:\Spaced-out\Wwise\.cache\Windows\SFX\switches\switch off_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\switch off		21388
-	261205730	electrocute5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\electrocute5_57EF8D2F.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute5		41020
-	261596142	metal impact g4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\G\metal impact g4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g4		29786
-	262597100	remarks1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark1\remarks1		49868
-	263781592	gasloop	Y:\Spaced-out\Wwise\.cache\Windows\SFX\gasloop_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\gasloop		169445
-	271092841	narrative7	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\u are lucky\narrative7		70088
-	271445821	metal impact C1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\C\metal impact C1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\C\metal impact C1		25868
-	271878563	putoutfire3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\putoutfire3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\putoutfire\putoutfire3		35666
-	280545090	metal impact no tone1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\metal impact no tone1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone1		43879
-	283467246	associal	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan10_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark3\associal		40815
-	286410796	Det er ikke kun ventilatoren der blæser på dig_ _3_5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\fan\Det er ikke kun ventilatoren der blæser på dig. .3.5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan5\Det er ikke kun ventilatoren der blæser på dig_ _3_5		41565
-	295334028	wires7	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\wires7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires7\wires7		59051
-	298840236	outOfOxygenDan5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\out of oxygen\outOfOxygenDan5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 7\outOfOxygenDan5		28804
-	318956019	wiresDan6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires3\wiresDan6		50755
-	322083311	narrativeDan3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\narrative\narrativeDan3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative3\narrativeDan3		66264
-	328305665	wind of circumstance	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fan\final\fan2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan6\wind of circumstance		60290
-	330617176	object impact light4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact light4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light4		4043
-	331187366	godt gjort	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark15\godt gjort		90525
-	341741593	hydralics9	Y:\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics9_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics9		31978
-	343732216	explosion2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\explosion2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion2		13013
-	348662842	skibs rumlen knirk 6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibs rumlen knirk 6_938D36C6.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\knirken\skibs rumlen knirk 6		16154
-	350922483	remarks13	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks13_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark13\remarks13		79958
-	353469564	skibs rumlem proper loop 1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibs rumlem proper loop 1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\skibsatmos\skibs rumlem proper loop 1		25254
-	354507471	hydralics5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics5		7029
-	355268674	outofocygen7	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\out of oxygen\final\outofocygen7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 7\outofocygen7		44794
-	362285532	metal impact C6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\C\metal impact C6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\C\metal impact C6		25912
-	363675299	lowoxygen3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\low oxygen\final\lowoxygen3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 3\lowoxygen3		44454
-	366758689	switch1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\switch\final\switch1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch1\switch1		37752
-	368979356	look dave	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fire\final\fire2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire7\look dave		135185
-	369241998	electricity loop	Y:\Spaced-out\Wwise\.cache\Windows\SFX\electricity loop_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electricity loop		320087
-	377881980	hydralics7	Y:\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics7		25454
-	383218319	remarkDan5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark4\remarkDan5		37135
-	390605717	switchDAn6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\switch\switchDAn6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch5\switchDAn6		62743
-	391699126	oxygen	Y:\Spaced-out\Wwise\.cache\Windows\SFX\oxygen_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\oxygen		36567
-	399018016	metal impact F5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\F\metal impact F5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\F\metal impact F5		26393
-	399449157	power up	Y:\Spaced-out\Wwise\.cache\Windows\SFX\power down_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\power up		41416
-	399586230	launch mockup1 medium	Y:\Spaced-out\Wwise\.cache\Windows\SFX\launch mockup1 medium_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launch\launch mockup1 medium		19842
-	401680823	door shut8_1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\door shut8_1_1C3ABE54.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut8_1		8558
-	402805320	outofocygen1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\out of oxygen\final\outofocygen1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 1\outofocygen1		39578
-	408124425	object impact light5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact light5_08C0D86A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light5		2174
-	418672149	remarks14	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks14_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark14\remarks14		43195
-	421879619	heavy impact2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact2		5555
-	422239685	heavy impact8	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact8_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact8		6672
-	427171029	launch synth5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\launch synth5_ED6F100E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth5		76118
-	445026076	narrative1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative1\narrative1		59900
-	448290045	heavy impact7	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact7		5013
-	449393799	metal impact C5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\C\metal impact C5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\C\metal impact C5		26401
-	453653314	explosion3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\explosion3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion3		12899
-	456412154	light impact1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\light impact1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact1		5038
-	456998750	electrocute6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\electrocute6_54D27A1C.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute6		41408
-	462357784	metal impact F3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\F\metal impact F3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\F\metal impact F3		26075
-	468680021	menuScrollclick2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\menuScrollclick2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\scroll\menuScrollclick2		12056
-	471019115	wires8	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\wires8_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires9\wires8		56608
-	471640620	nuværende sitatuin	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires2\nuværende sitatuin		39217
-	472641029	remarks17	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks17_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark17\remarks17		115364
-	473138648	fireloop	Y:\Spaced-out\Wwise\.cache\Windows\SFX\fireloop_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\fire\fireloop		75050
-	483393435	outOfOxygenDan4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\out of oxygen\outOfOxygenDan4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 4\outOfOxygenDan4		57242
-	485270404	light impact2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\light impact2_421F51E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact2		5558
-	489066010	slukkefordig	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\fire\fireDan4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire5\slukkefordig		55060
-	489574698	metal impact D2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\D\metal impact D2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\D\metal impact D2		30893
-	490533361	fireDan6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\fire\fireDan6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire2\fireDan6		54293
-	492080913	remarks9	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks9_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark9\remarks9		44059
-	495970770	skibsrumlen proper loop 2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibsrumlen proper loop 2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\loop1\skibsrumlen proper loop 2		34246
-	500649464	aloevera	Y:\Spaced-out\Wwise\.cache\Windows\SFX\aloevera_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire6\aloevera		61343
-	504936043	metal impact F4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\F\metal impact F4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\F\metal impact F4		26591
-	507642210	door shut9_1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\door shut9_1_442763BD.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut9_1		8998
-	510201090	remarkDan13	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan13_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark12\remarkDan13		40830
-	511513502	lowoxygen1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\low oxygen\final\lowoxygen1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 1\lowoxygen1		41813
-	531256382	metal impact Bb3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\Bb\metal impact Bb3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\Bb\metal impact Bb3		31726
-	541031205	fan4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fan\final\fan4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan3\fan4		34397
-	541106291	shockolade	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan8_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires1\shockolade		69182
-	544555031	remarks3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark3\remarks3		62963
-	546810305	metal impact no tone5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\metal impact no tone5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone5		38863
-	555734377	heavy impact4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact4		5298
-	556032845	gasonfire	Y:\Spaced-out\Wwise\.cache\Windows\SFX\gasonfire_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\gasonfire		87567
-	559213883	door shut2_1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\door shut2_1_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut2_1		10639
-	560816914	electrocute3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\electrocute3_E2B95D9C.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute3		93284
-	572934450	hydralics4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics4		4996
-	573092875	metal impact g2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\G\metal impact g2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g2		32198
-	581417438	object impact2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact2_40E4CF81.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact2		4227
-	584384380	metal impact D6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\D\metal impact D6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\D\metal impact D6		30363
-	585615623	door shut3_1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\door shut3_1_480D3426.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut3_1		8602
-	588734109	fireDan5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\fire\fireDan5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire4\fireDan5		80505
-	588751820	launch mockup1 light	Y:\Spaced-out\Wwise\.cache\Windows\SFX\launch mockup1 light_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launch\launch mockup1 light		17043
-	592368350	de fleste ved	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires8\de fleste ved		51246
-	596817145	remarks2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark2\remarks2		59197
-	598173962	door shut4_1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\door shut4_1_F18FE6A0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut4_1		8963
-	598488493	du vil gerne væk	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark10\du vil gerne væk		39482
-	599979874	switchDAn5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\switch\switchDAn5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch4\switchDAn5		38572
-	600763084	Nu bliver det da blæst helt ud af proportioner, Dave_3_5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\fan\Nu bliver det da blæst helt ud af proportioner, Dave.3.5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan1\Nu bliver det da blæst helt ud af proportioner, Dave_3_5		47725
-	604626767	skibs rumlen dyb 1 LOOP 2 fucking fixed	Y:\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibs rumlen dyb 1 LOOP 2 fucking fixed_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\skibsatmos\skibs rumlen dyb 1 LOOP 2 fucking fixed		11380
-	605860953	wires2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\wires2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires2\wires2		40848
-	609274304	narrativeDan7	Y:\Spaced-out\Wwise\.cache\Windows\SFX\narrative\narrativeDan7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrativejetpack\narrativeDan7		131819
-	612390968	lowoxygen5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\low oxygen\final\lowoxygen5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 5\lowoxygen5		103705
-	621924902	door shut10_1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\door shut10_1_C23FFF8B.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut10_1		7908
-	625149348	kick	Y:\Spaced-out\Wwise\.cache\Windows\SFX\kick_5DC25BB8.wem		\Actor-Mixer Hierarchy\Default Work Unit\music\kick		32294
-	635644102	object impact light1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact light1_34C50239.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light1		2949
-	639618804	bare følg med strømmen_2_01	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\fan\bare følg med strømmen.2.01_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan2\bare følg med strømmen_2_01		20066
-	640485537	lowoxygen4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\low oxygen\final\lowoxygen4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 4\lowoxygen4		52269
-	640897836	fire6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fire\final\fire6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire5\fire6		69748
-	641636094	metal impact Bb5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\Bb\metal impact Bb5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\Bb\metal impact Bb5		22900
-	645013745	hydralics3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics3		45226
-	647898339	door squeeze	Y:\Spaced-out\Wwise\.cache\Windows\SFX\door squeeze_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\door squeeze		5962
-	650509731	hydralics8	Y:\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics8_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics8		32856
-	666155042	hydralics6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics6		6094
-	666269133	narrative4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative4\narrative4		50689
-	669313546	dave din dragts ilt niveau er nul	Y:\Spaced-out\Wwise\.cache\Windows\SFX\narrative\dave din dragts ilt niveau er nul_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative ekstra\dave din dragts ilt niveau er nul		29147
-	670195520	door shut6_1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\door shut6_1_3DB3946E.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut6_1		9574
-	670906658	metal impact D4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\D\metal impact D4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\D\metal impact D4		32607
-	671712218	remarks16	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks16_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark16\remarks16		53515
-	671860227	remarks5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark5\remarks5		106811
-	681768169	metal impact C4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\C\metal impact C4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\C\metal impact C4		32064
-	684420584	9	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\9_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires8\9		106798
-	690851100	narrative6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\what are you doing\narrative6		51022
-	691152910	light impact8	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\light impact8_868A42BB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact8		6746
-	692903098	wires4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\wires4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires4\wires4		112921
-	693313243	launch synth1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\launch synth1_7AA7C9CB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth1		81459
-	694793896	remarkDan12	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan12_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark8\remarkDan12		57305
-	699581131	switchDAn7	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\switch\switchDAn7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch7\switchDAn7		37775
-	701977863	object impact4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact4_089A5CA6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact4		5457
-	712774231	metal impact g1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\G\metal impact g1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g1		31684
-	714977692	metal impact no tone6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\metal impact no tone6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone6		38800
-	723073472	electrocute2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\electrocute2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute2		48481
-	725214750	charge	Y:\Spaced-out\Wwise\.cache\Windows\SFX\charge_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\music\charge		189741
-	731203348	outofocygen5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\out of oxygen\final\outofocygen5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 5\outofocygen5		78410
-	739005694	metal impact no tone2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\metal impact no tone2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone2		45127
-	746671419	remarks4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark4\remarks4		34914
-	751321384	light impact7	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\light impact7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact7		4001
-	755883233	object impact7	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact7_6042C426.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact7		4621
-	756219729	metal impact D1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\D\metal impact D1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\D\metal impact D1		32230
-	762822008	din eneste prioritet	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark9\din eneste prioritet		51207
-	763202499	metal impact F6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\F\metal impact F6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\F\metal impact F6		32538
-	768671281	narrative5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative the hazards\narrative5		59346
-	781418421	switch7	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\switch\final\switch7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch6\switch7		62463
-	782710278	u know what they say	Y:\Spaced-out\Wwise\.cache\Windows\SFX\u know what they say_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch7\u know what they say		39382
-	786633454	menuclickbackwards	Y:\Spaced-out\Wwise\.cache\Windows\SFX\menuclickbackwards_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\menuclickbackwards		12558
-	788867424	metal impact Bb6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\Bb\metal impact Bb6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\Bb\metal impact Bb6		22592
-	791519769	switch3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\switch\final\switch3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch2\switch3		67649
-	800798867	metal impact Bb1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\Bb\metal impact Bb1_E9DA64FB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\Bb\metal impact Bb1		29378
-	803463307	redningkapslen er den anden vej	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark14\redningkapslen er den anden vej		35417
-	804870020	metal impact Bb4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\Bb\metal impact Bb4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\Bb\metal impact Bb4		31215
-	821671456	skibsrumlen proper loop 1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibsrumlen proper loop 1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\loop1\skibsrumlen proper loop 1		24728
-	824586379	putoutfire2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\putoutfire2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\putoutfire\putoutfire2		34493
-	826297103	dave your suit has sustained major blows	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\dave your suit has sustained major blows_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative ekstra\dave your suit has sustained major blows		44351
-	827842905	wires1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\wires1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires1\wires1		103151
-	831342294	Jeg har altid synes der var lidt meget luft mellem dine ører,_2_01	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\fan\Jeg har altid synes der var lidt meget luft mellem dine ører,.2.01_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan3\Jeg har altid synes der var lidt meget luft mellem dine ører,_2_01		34181
-	836593034	object impact1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact1_31D66748.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact1		3181
-	837404966	heavy impact6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact6		7638
-	837454280	ignorere	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark16\ignorere		39087
-	846681906	door shut5_1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\door shut5_1_3F3DDB45.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut5_1		8522
-	852010570	putoutfire1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\putoutfire1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\putoutfire\putoutfire1		32583
-	853230804	object impact5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact5_D5A59283.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact5		2933
-	854233652	remarkDan14	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan14_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark11\remarkDan14		100312
-	857782782	remarks11	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks11_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark11\remarks11		68061
-	860279208	launch synth3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\launch synth3_9F86FDC2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth3		81893
-	867057375	power down	Y:\Spaced-out\Wwise\.cache\Windows\SFX\power up_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\power down		23453
-	868425316	outofocygen4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\out of oxygen\final\outofocygen4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 4\outofocygen4		71041
-	871754042	launch synth4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\launch synth4_BCDBA20C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth4		76590
-	873587437	switchDAn3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\switch\switchDAn3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch1\switchDAn3		47959
-	877963907	electrocute1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\electrocute1_E0C30CD6.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute1		88990
-	878892781	explosion4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\explosion4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion4		37864
-	886669593	metal impact g6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\G\metal impact g6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g6		28950
-	887277475	narrativeDan8	Y:\Spaced-out\Wwise\.cache\Windows\SFX\narrative\narrativeDan8_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative the hazards\narrativeDan8		81412
-	887983915	narrativeDan1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\narrative\narrativeDan1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative1\narrativeDan1		67603
-	888007184	light impact4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\light impact4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact4		3478
-	896546075	fire5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fire\final\fire5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire4\fire5		78157
-	910819656	fan1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fan\final\fan1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan1\fan1		48754
-	914127829	heavy impact1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact1		6860
-	914452362	metal impact D5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\D\metal impact D5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\D\metal impact D5		26371
-	916303569	remarks10	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks10_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark10\remarks10		49595
-	919206210	metal impact Bb2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\Bb\metal impact Bb2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\Bb\metal impact Bb2		30907
-	920506848	object impact light7	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact light7_1D39E7FE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light7		3078
-	920814763	menuclickforward	Y:\Spaced-out\Wwise\.cache\Windows\SFX\menuclickforward_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\menuclickforward		16992
-	929920904	remarks6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks6_88CCFD8E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark6\remarks6		83991
-	938445351	object impact6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact6_0BBA36C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact6		5001
-	942376865	door shut7_1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\door shut7_1_8AF2D816.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut7_1		9868
-	942578140	fan5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fan\final\fan5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan4\fan5		41882
-	949012013	main atmos	Y:\Spaced-out\Wwise\.cache\Windows\SFX\main atmos_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\main atmos		364397
-	956419964	metal impact D3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\D\metal impact D3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\D\metal impact D3		26258
-	964917836	switchDAn4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\switch\switchDAn4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch2\switchDAn4		79497
-	971379015	hello dave mix 2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\hello dave mix 2_824B34CA.wem		\Interactive Music Hierarchy\Default Work Unit\musicmain\hello dave mix 2\hello dave mix 2		3999681
-	971397170	hydralics1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics1		21570
-	972817918	skibs rumlen knirk 2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibs rumlen knirk 2_76119463.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\knirken\skibs rumlen knirk 2		16733
-	975186946	virkelig stor knap	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\switch\switchDAn1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch3\virkelig stor knap		38114
-	977744412	narrative3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative3\narrative3		66151
-	981090303	light impact6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\light impact6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact6		6425
-	981487521	light impact5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\light impact5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact5		4208
-	982755718	narrativeDan6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\narrative\narrativeDan6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative4\narrativeDan6		29131
-	984498401	heavy impact3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact3		6445
-	988269575	outofocygen6	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\out of oxygen\final\outofocygen6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 6\outofocygen6		74896
-	990388538	light impact3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\light impact3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact3		5632
-	997255121	menuScrollclick3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\menuScrollclick3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\scroll\menuScrollclick3		11915
-	1000329366	metal impact C3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\metal\C\metal impact C3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\C\metal impact C3		25923
-	1001129958	narrative2	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative2\narrative2		27087
-	1003759726	switch5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\switch\final\switch5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch4\switch5		49546
-	1008444769	catchfire	Y:\Spaced-out\Wwise\.cache\Windows\SFX\catchfire_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\fire\catchfire		75081
-	1024588397	lowOxygenDan3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\low oxygen\lowOxygen3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 1\lowOxygenDan3		42145
-	1025581677	remarkDan17	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan17_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark17\remarkDan17		102223
-	1028486927	fan3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fan\final\fan3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan2\fan3		45252
-	1031646511	launch mockup1 long	Y:\Spaced-out\Wwise\.cache\Windows\SFX\launch mockup1 long_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launch\launch mockup1 long		17408
-	1035730658	aloeveradan	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\fire\fireDan1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire6\aloeveradan		77488
-	1039321002	outOfOxygenDan3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\out of oxygen\outOfOxygenDan3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 3\outOfOxygenDan3		71293
-	1041668143	menuScrollclick	Y:\Spaced-out\Wwise\.cache\Windows\SFX\menuScrollclick_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\scroll\menuScrollclick		12602
-	1044380383	skibsrumlen knirk4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibsrumlen knirk4_63980BD4.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\knirken\skibsrumlen knirk4		43009
-	1044968386	wires3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\wires3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires3\wires3		89441
-	1047728440	switch4	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\switch\final\switch4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch3\switch4		31249
-	1058957984	remarks12	Y:\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks12_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark12\remarks12		44415
-	1059243837	comic_ shitty	Y:\Spaced-out\Wwise\.cache\Windows\SFX\comic. shitty_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\comic_ shitty		30099
-	1061219038	object impact3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact3_79DC4FE0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact3		4297
-	1064419361	explosion5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\explosion5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion5		10758
-	1064649682	heavy impact5	Y:\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact5		6882
-	1065919626	skibsrumlen knirk3	Y:\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibsrumlen knirk3_7E59DD92.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\knirken\skibsrumlen knirk3		38444
-	1066027588	door shut1_1	Y:\Spaced-out\Wwise\.cache\Windows\SFX\door shut1_1_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut1_1		8628
-	1068792125	ikke mere ilt	Y:\Spaced-out\Wwise\.cache\Windows\SFX\Danish\out of oxygen\outOfOxygenDan2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 1\ikke mere ilt		29410
+	510991	o2ligt	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\out of oxygen\outOfOxygenDan1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 5\o2ligt		48401
+	7287327	remarks7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark7\remarks7		17961
+	10743316	blip blop sci fi forest short2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest short2_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short2		55561
+	11557003	metal impact g3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\G\metal impact g3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g3		32009
+	17473018	remarks15	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks15_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark15\remarks15		80796
+	18933449	outofocygen3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\out of oxygen\final\outofocygen3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 3\outofocygen3		62899
+	19945158	blæser	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blæser_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\blæser		100776
+	21575732	explosion1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\explosion1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion1		11311
+	22107775	blip blop random6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random6_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random6		43199
+	24715317	bevar fatiningen	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires5\bevar fatiningen		50506
+	26065425	dave grunts 15	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 15_5995783D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 15		13311
+	30115822	dave grunts 16	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 16_C708767C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 16		11028
+	33179142	metal impact no tone4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\metal impact no tone4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone4		39376
+	35238501	metal impact g5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\G\metal impact g5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g5		26018
+	38413473	fireDan2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\fire\fireDan2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire1\fireDan2		22633
+	53206835	blip blop sci fi forest short12	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest short12_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short12		38506
+	53431297	metal impact F1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\F\metal impact F1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\F\metal impact F1		25825
+	58689411	narrative8	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative8_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrativejetpack\narrative8		164653
+	66826332	remarks8	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks8_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark8\remarks8		73630
+	68587342	electrocute4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\electrocute4_C5470726.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute4		76718
+	68659619	lowoxygen2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\low oxygen\final\lowoxygen2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 2\lowoxygen2		93080
+	69730662	narrativeDan10	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\narrative\narrativeDan10_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\u are lucky\narrativeDan10		73170
+	69768843	explosive countdown	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\explosive countdown_7E42618B.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosive countdown		39521
+	80316185	metal impact C2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\C\metal impact C2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\C\metal impact C2		30405
+	80479230	blip blop random17	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random17_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random17		74846
+	82713544	blip blop sci fi forest short6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest short6_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short6		33267
+	92370258	wiresDan5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires4\wiresDan5		47476
+	93716665	remarkDan8	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan8_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark1\remarkDan8		74533
+	98760664	remarkDan11	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan11_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark5\remarkDan11		103942
+	101226196	blev du forskrækket	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires6\blev du forskrækket		48096
+	104585137	object impact light3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact light3_A286EB18.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light3		3623
+	105906957	launch synth2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch synth2_4BB16E13.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth2		80734
+	107064225	narrativeDan9	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\narrative\narrativeDan9_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\what are you doing\narrativeDan9		46087
+	112371414	object impact light6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact light6_9378D42F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light6		3575
+	116050032	explosion6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\explosion6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion6		10962
+	117874704	preexplosion	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\preexplosion_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\preexplosion		4029
+	120419077	metal impact F2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\F\metal impact F2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\F\metal impact F2		31594
+	129103809	hvor er du bare Fan-tastisk_2_7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\fan\hvor er du bare Fan-tastisk.2.7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan4\hvor er du bare Fan-tastisk_2_7		40486
+	131464271	remarkDan9	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan9_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark7\remarkDan9		16330
+	140590783	min analyse	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark6\min analyse		96164
+	143105393	wires6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\wires6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires6\wires6		39444
+	145958102	fire3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fire\final\fire3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire2\fire3		56194
+	146173779	lowOxygenDan4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\low oxygen\lowOxygen4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 2\lowOxygenDan4		51719
+	163750867	outofocygen2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\out of oxygen\final\outofocygen2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 8\outofocygen2		73093
+	182772970	metal impact no tone3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\metal impact no tone3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone3		42153
+	186452641	fire4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fire\final\fire4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire3\fire4		49260
+	189888312	blip blop random13	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random13_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random13		107158
+	191894431	fire1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fire\final\fire1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire1\fire1		31412
+	192421913	blip blop sci fi forest short13	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest short13_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short13		40884
+	193127449	wires5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\wires5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires5\wires5		56022
+	202362747	switch on	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\switches\switch on_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\switch on		9221
+	202606872	blip blop random7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random7_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random7		36216
+	207786701	fireDan3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\fire\fireDan3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire3\fireDan3		28602
+	208881451	switch6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\switch\final\switch6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch5\switch6		75582
+	209214066	blip blop random10	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random10_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random10		24607
+	211269648	adskille	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\low oxygen\lowOxygen1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 3\adskille		99635
+	213148062	menuScrollclick4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\menuScrollclick4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\scroll\menuScrollclick4		12707
+	214047775	switchDAn2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\switch\switchDAn2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch6\switchDAn2		42441
+	216929679	gnist i livet	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires7\gnist i livet		55620
+	217562638	remarkDan15	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan15_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark2\remarkDan15		26686
+	218282206	buttscratch3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\dave\buttscratch3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\buttscratch\buttscratch3		5891
+	220396511	fan6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fan\final\fan6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan5\fan6		17588
+	221557103	object impact light2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact light2_3C2CF5BE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light2		2977
+	221848891	remarkDan16	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan16_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark13\remarkDan16		69102
+	223822837	narrativeDan2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\narrative\narrativeDan2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative2\narrativeDan2		30275
+	228760907	basic human	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\switch\final\switch2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch8\basic human		100403
+	229414056	hydralics2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics2		37903
+	233307603	buttscratch1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\dave\buttscratch1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\buttscratch\buttscratch1		4838
+	242871080	skibsrumlen proper loop 3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibsrumlen proper loop 3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\loop1\skibsrumlen proper loop 3		36014
+	249461941	kan du huske	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\low oxygen\lowOxygen2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 4\kan du huske		108176
+	250187452	skibsrumlen knirk5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibsrumlen knirk5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\knirken\skibsrumlen knirk5		37861
+	253900823	lowoxygen6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\low oxygen\final\lowoxygen6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 6\lowoxygen6		99267
+	255854901	outOfOxygenDan6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\out of oxygen\outOfOxygenDan6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 6\outOfOxygenDan6		51355
+	257012564	switch off	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\switches\switch off_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\switch off		21387
+	259925040	blip blop random12	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random12_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random12		42982
+	261205730	electrocute5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\electrocute5_039EE8B4.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute5		41009
+	261596142	metal impact g4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\G\metal impact g4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g4		29789
+	262597100	remarks1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark1\remarks1		49861
+	263781592	gasloop	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\gasloop_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\gasloop		169436
+	271092841	narrative7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\u are lucky\narrative7		70081
+	271445821	metal impact C1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\C\metal impact C1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\C\metal impact C1		25868
+	271878563	putoutfire3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\putoutfire3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\putoutfire\putoutfire3		35673
+	280545090	metal impact no tone1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\metal impact no tone1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone1		43881
+	283467246	associal	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan10_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark3\associal		40818
+	286410796	Det er ikke kun ventilatoren der blæser på dig_ _3_5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\fan\Det er ikke kun ventilatoren der blæser på dig. .3.5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan5\Det er ikke kun ventilatoren der blæser på dig_ _3_5		41564
+	289304815	blip blop random1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random1_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random1		42025
+	295334028	wires7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\wires7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires7\wires7		59042
+	297086226	blip blop sci fi forest short1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest short1_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short1		36269
+	298840236	outOfOxygenDan5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\out of oxygen\outOfOxygenDan5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 7\outOfOxygenDan5		28808
+	318956019	wiresDan6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires3\wiresDan6		50759
+	322083311	narrativeDan3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\narrative\narrativeDan3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative3\narrativeDan3		66261
+	328305665	wind of circumstance	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fan\final\fan2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan6\wind of circumstance		60298
+	330617176	object impact light4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact light4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light4		4043
+	331187366	godt gjort	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark15\godt gjort		90528
+	341741593	hydralics9	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics9_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics9		31972
+	343732216	explosion2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\explosion2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion2		13014
+	348662842	skibs rumlen knirk 6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibs rumlen knirk 6_938D36C6.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\knirken\skibs rumlen knirk 6		16170
+	350922483	remarks13	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks13_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark13\remarks13		79973
+	353469564	skibs rumlem proper loop 1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibs rumlem proper loop 1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\skibsatmos\skibs rumlem proper loop 1		25270
+	354171151	dave grunts 17	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 17_AACDF174.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 17		14811
+	354507471	hydralics5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics5		7029
+	355268674	outofocygen7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\out of oxygen\final\outofocygen7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 7\outofocygen7		44785
+	362285532	metal impact C6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\C\metal impact C6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\C\metal impact C6		25913
+	363675299	lowoxygen3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\low oxygen\final\lowoxygen3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 3\lowoxygen3		44452
+	366758689	switch1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\switch\final\switch1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch1\switch1		37757
+	368979356	look dave	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fire\final\fire2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire7\look dave		135197
+	369241998	electricity loop	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\electricity loop_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electricity loop		320082
+	377881980	hydralics7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics7		25455
+	383218319	remarkDan5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark4\remarkDan5		37120
+	390605717	switchDAn6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\switch\switchDAn6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch5\switchDAn6		62745
+	391699126	oxygen	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\oxygen_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\oxygen		36583
+	399018016	metal impact F5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\F\metal impact F5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\F\metal impact F5		26396
+	399449157	power up	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\power down_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\power up		41509
+	399586230	launch mockup1 medium	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch mockup1 medium_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launch\launch mockup1 medium		19847
+	401680823	door shut8_1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\door shut8_1_1C3ABE54.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut8_1		8555
+	402805320	outofocygen1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\out of oxygen\final\outofocygen1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 1\outofocygen1		39580
+	404632530	buttscratch4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\dave\buttscratch4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\buttscratch\buttscratch4		6009
+	408124425	object impact light5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact light5_710506E5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light5		2174
+	418672149	remarks14	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks14_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark14\remarks14		43191
+	421879619	heavy impact2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact2		5556
+	422239685	heavy impact8	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact8_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact8		6674
+	427171029	launch synth5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch synth5_CDB8D79A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth5		76118
+	430918783	dave grunts 9	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 9_15E473EF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 9		17746
+	432234945	blip blop sci fi forest short9	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest short9_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short9		20963
+	444280125	dave grunts 4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 4_39010D8B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 4		10144
+	445026076	narrative1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative1\narrative1		59900
+	448290045	heavy impact7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact7		5011
+	449393799	metal impact C5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\C\metal impact C5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\C\metal impact C5		26405
+	453653314	explosion3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\explosion3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion3		12900
+	456412154	light impact1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\light impact1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact1		5038
+	456998750	electrocute6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\electrocute6_54D27A1C.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute6		41404
+	462357784	metal impact F3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\F\metal impact F3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\F\metal impact F3		26062
+	468680021	menuScrollclick2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\menuScrollclick2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\scroll\menuScrollclick2		12062
+	471019115	wires8	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\wires8_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires9\wires8		56598
+	471640620	nuværende sitatuin	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires2\nuværende sitatuin		39209
+	472641029	remarks17	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks17_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark17\remarks17		115375
+	473138648	fireloop	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\fireloop_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\fire\fireloop		75046
+	483393435	outOfOxygenDan4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\out of oxygen\outOfOxygenDan4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 4\outOfOxygenDan4		57237
+	483913680	blip blop random118	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random118_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random118		49664
+	485270404	light impact2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\light impact2_A7962A5C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact2		5558
+	486336854	blip blop random16	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random16_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random16		32337
+	489066010	slukkefordig	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\fire\fireDan4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire5\slukkefordig		55080
+	489574698	metal impact D2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\D\metal impact D2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\D\metal impact D2		30889
+	490533361	fireDan6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\fire\fireDan6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire2\fireDan6		54294
+	492080913	remarks9	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks9_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark9\remarks9		44058
+	495970770	skibsrumlen proper loop 2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibsrumlen proper loop 2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\loop1\skibsrumlen proper loop 2		34288
+	497404101	dave grunts 6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 6_FB61AABC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 6		13809
+	500649464	aloevera	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\aloevera_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire6\aloevera		61341
+	504936043	metal impact F4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\F\metal impact F4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\F\metal impact F4		26590
+	506737199	blip blop random11	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random11_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random11		35620
+	507642210	door shut9_1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\door shut9_1_442763BD.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut9_1		9002
+	510201090	remarkDan13	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan13_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark12\remarkDan13		40832
+	510992843	dave grunts 1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 1_2BEF25C6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 1		13159
+	511513502	lowoxygen1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\low oxygen\final\lowoxygen1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 1\lowoxygen1		41802
+	531256382	metal impact Bb3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\Bb\metal impact Bb3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\Bb\metal impact Bb3		31731
+	541031205	fan4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fan\final\fan4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan3\fan4		34395
+	541106291	shockolade	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan8_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires1\shockolade		69178
+	543943558	dave grunts 7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 7_8128F5F3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 7		13666
+	544555031	remarks3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark3\remarks3		62963
+	545959078	blip blop random3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random3_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random3		35731
+	546810305	metal impact no tone5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\metal impact no tone5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone5		38867
+	555734377	heavy impact4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact4		5298
+	556032845	gasonfire	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\gasonfire_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\gasonfire		87588
+	559213883	door shut2_1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\door shut2_1_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut2_1		10643
+	560816914	electrocute3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\electrocute3_68BFC529.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute3		93284
+	563855461	dave grunts 8	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 8_2037D6F7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 8		19051
+	572934450	hydralics4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics4		4996
+	573092875	metal impact g2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\G\metal impact g2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g2		32194
+	578189822	blip blop sci fi forest long1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest long1_CD13EAB3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop sci fi forest long1		500794
+	578658333	blip blop random21	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random21_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random21		64690
+	581417438	object impact2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact2_40E4CF81.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact2		4227
+	584384380	metal impact D6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\D\metal impact D6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\D\metal impact D6		30368
+	585615623	door shut3_1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\door shut3_1_D3F8257B.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut3_1		8602
+	588734109	fireDan5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\fire\fireDan5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire4\fireDan5		80505
+	588751820	launch mockup1 light	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch mockup1 light_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launch\launch mockup1 light		17043
+	592368350	de fleste ved	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires8\de fleste ved		51246
+	596817145	remarks2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark2\remarks2		59193
+	597181408	dave grunts 13	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 13_0A68901E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 13		8635
+	598173962	door shut4_1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\door shut4_1_84BAEA31.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut4_1		8963
+	598488493	du vil gerne væk	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark10\du vil gerne væk		39477
+	599979874	switchDAn5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\switch\switchDAn5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch4\switchDAn5		38579
+	600763084	Nu bliver det da blæst helt ud af proportioner, Dave_3_5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\fan\Nu bliver det da blæst helt ud af proportioner, Dave.3.5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan1\Nu bliver det da blæst helt ud af proportioner, Dave_3_5		47727
+	604626767	skibs rumlen dyb 1 LOOP 2 fucking fixed	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibs rumlen dyb 1 LOOP 2 fucking fixed_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\skibsatmos\skibs rumlen dyb 1 LOOP 2 fucking fixed		11379
+	605860953	wires2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\wires2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires2\wires2		40848
+	609274304	narrativeDan7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\narrative\narrativeDan7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrativejetpack\narrativeDan7		131831
+	612390968	lowoxygen5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\low oxygen\final\lowoxygen5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 5\lowoxygen5		103702
+	615578784	blip blop sci fi forest short4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest short4_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short4		91143
+	621924902	door shut10_1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\door shut10_1_C23FFF8B.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut10_1		7908
+	625149348	kick	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\kick_5DC25BB8.wem		\Actor-Mixer Hierarchy\Default Work Unit\music\kick		32294
+	627803589	blip blop random4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random4_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random4		32361
+	634867864	dave grunts 2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 2_A33838A0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 2		7700
+	635598483	dave grunts 11	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 11_E009E8DD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 11		15381
+	635644102	object impact light1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact light1_34C50239.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light1		2949
+	638340624	blip blop random9	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random9_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random9		40199
+	639618804	bare følg med strømmen_2_01	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\fan\bare følg med strømmen.2.01_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan2\bare følg med strømmen_2_01		20068
+	640485537	lowoxygen4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\low oxygen\final\lowoxygen4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 4\lowoxygen4		52263
+	640897836	fire6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fire\final\fire6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire5\fire6		69740
+	641636094	metal impact Bb5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\Bb\metal impact Bb5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\Bb\metal impact Bb5		22901
+	644181627	blip blop sci fi forest long2 not as jolly	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest long2 not as jolly_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\sci fi forest\blip blop sci fi forest long2 not as jolly		252944
+	645013745	hydralics3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics3		45219
+	645679551	dave grunts 10	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 10_5605CD7E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 10		14076
+	647898339	door squeeze	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\door squeeze_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\door squeeze		5962
+	650509731	hydralics8	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics8_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics8		32862
+	653065705	blip blop random14	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random14_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random14		49407
+	655295371	blip blop random20	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random20_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random20		89089
+	666155042	hydralics6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics6		6096
+	666269133	narrative4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative4\narrative4		50687
+	669313546	dave din dragts ilt niveau er nul	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\narrative\dave din dragts ilt niveau er nul_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative ekstra\dave din dragts ilt niveau er nul		29152
+	670195520	door shut6_1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\door shut6_1_3DB3946E.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut6_1		9574
+	670906658	metal impact D4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\D\metal impact D4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\D\metal impact D4		32609
+	671712218	remarks16	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks16_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark16\remarks16		53513
+	671860227	remarks5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark5\remarks5		106822
+	672209193	blip blop random23	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random23_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random23		68510
+	681768169	metal impact C4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\C\metal impact C4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\C\metal impact C4		32071
+	684420584	9	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\9_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires8\9		106791
+	690851100	narrative6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\what are you doing\narrative6		51009
+	691152910	light impact8	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\light impact8_868A42BB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact8		6746
+	692903098	wires4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\wires4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires4\wires4		112906
+	693313243	launch synth1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch synth1_7AA7C9CB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth1		81460
+	694793896	remarkDan12	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan12_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark8\remarkDan12		57292
+	699581131	switchDAn7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\switch\switchDAn7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch7\switchDAn7		37771
+	701977863	object impact4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact4_7F835C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact4		5457
+	706371641	dave grunts 12	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 12_E4894FC5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 12		13068
+	712774231	metal impact g1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\G\metal impact g1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g1		31671
+	714977692	metal impact no tone6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\metal impact no tone6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone6		38799
+	723073472	electrocute2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\electrocute2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute2		48487
+	725214750	charge	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\charge_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\music\charge		189751
+	731203348	outofocygen5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\out of oxygen\final\outofocygen5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 5\outofocygen5		78406
+	734779861	blip blop sci fi forest short8	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest short8_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short8		31355
+	739005694	metal impact no tone2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\metal impact no tone2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone2		45127
+	746671419	remarks4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark4\remarks4		34906
+	751321384	light impact7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\light impact7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact7		4003
+	753447221	blip blop random2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random2_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random2		36984
+	755883233	object impact7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact7_6042C426.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact7		4621
+	756074339	blip blop sci fi forest short7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest short7_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short7		35287
+	756219729	metal impact D1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\D\metal impact D1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\D\metal impact D1		32232
+	762822008	din eneste prioritet	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark9\din eneste prioritet		51208
+	763044600	blip blop random5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random5_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random5		29201
+	763202499	metal impact F6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\F\metal impact F6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\F\metal impact F6		32544
+	768671281	narrative5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative the hazards\narrative5		59345
+	772753394	blip blop random22	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random22_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random22		41461
+	781418421	switch7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\switch\final\switch7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch6\switch7		62463
+	782710278	u know what they say	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\u know what they say_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch7\u know what they say		39380
+	786633454	menuclickbackwards	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\menuclickbackwards_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\menuclickbackwards		12560
+	788867424	metal impact Bb6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\Bb\metal impact Bb6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\Bb\metal impact Bb6		22595
+	791519769	switch3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\switch\final\switch3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch2\switch3		67651
+	794015766	dave grunts 14	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 14_E6D453BC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 14		11401
+	800798867	metal impact Bb1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\Bb\metal impact Bb1_7BCE4DFF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\Bb\metal impact Bb1		29379
+	803463307	redningkapslen er den anden vej	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark14\redningkapslen er den anden vej		35418
+	804870020	metal impact Bb4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\Bb\metal impact Bb4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\Bb\metal impact Bb4		31219
+	821671456	skibsrumlen proper loop 1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibsrumlen proper loop 1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\loop1\skibsrumlen proper loop 1		24766
+	824313990	buttscratch2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\dave\buttscratch2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\buttscratch\buttscratch2		5151
+	824586379	putoutfire2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\putoutfire2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\putoutfire\putoutfire2		34490
+	826297103	dave your suit has sustained major blows	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\dave your suit has sustained major blows_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative ekstra\dave your suit has sustained major blows		44357
+	827842905	wires1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\wires1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires1\wires1		103144
+	831342294	Jeg har altid synes der var lidt meget luft mellem dine ører,_2_01	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\fan\Jeg har altid synes der var lidt meget luft mellem dine ører,.2.01_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan3\Jeg har altid synes der var lidt meget luft mellem dine ører,_2_01		34191
+	836593034	object impact1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact1_31D66748.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact1		3181
+	837032869	dave grunts 5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 5_EEA242E5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 5		8156
+	837404966	heavy impact6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact6		7638
+	837454280	ignorere	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark16\ignorere		39089
+	846681906	door shut5_1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\door shut5_1_4F2FEE74.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut5_1		8526
+	852010570	putoutfire1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\putoutfire1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\putoutfire\putoutfire1		32589
+	853230804	object impact5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact5_955C5A60.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact5		2933
+	854233652	remarkDan14	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan14_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark11\remarkDan14		100307
+	857782782	remarks11	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks11_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark11\remarks11		68083
+	860279208	launch synth3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch synth3_F7E7C823.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth3		81889
+	867057375	power down	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\power up_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\power down		23407
+	868425316	outofocygen4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\out of oxygen\final\outofocygen4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 4\outofocygen4		71058
+	868996355	blip blop random15	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random15_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random15		34762
+	871754042	launch synth4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch synth4_F2A281BB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth4		76586
+	873587437	switchDAn3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\switch\switchDAn3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch1\switchDAn3		47955
+	877963907	electrocute1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\electrocute1_E0C30CD6.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute1		88987
+	878892781	explosion4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\explosion4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion4		37865
+	881265781	dave grunts 3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 3_1BAB0CC3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 3		8165
+	886669593	metal impact g6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\G\metal impact g6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g6		28946
+	887277475	narrativeDan8	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\narrative\narrativeDan8_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative the hazards\narrativeDan8		81419
+	887983915	narrativeDan1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\narrative\narrativeDan1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative1\narrativeDan1		67608
+	888007184	light impact4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\light impact4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact4		3478
+	889245619	blip blop sci fi forest long3 weird	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest long3 weird_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\sci fi forest\blip blop sci fi forest long3 weird		330293
+	896546075	fire5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fire\final\fire5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire4\fire5		78162
+	910819656	fan1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fan\final\fan1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan1\fan1		48746
+	914127829	heavy impact1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact1		6862
+	914452362	metal impact D5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\D\metal impact D5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\D\metal impact D5		26371
+	916303569	remarks10	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks10_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark10\remarks10		49590
+	919206210	metal impact Bb2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\Bb\metal impact Bb2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\Bb\metal impact Bb2		30906
+	920506848	object impact light7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact light7_97180DAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light7		3078
+	920814763	menuclickforward	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\menuclickforward_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\menuclickforward		16991
+	929920904	remarks6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks6_88CCFD8E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark6\remarks6		83986
+	938445351	object impact6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact6_29371645.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact6		5001
+	942376865	door shut7_1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\door shut7_1_8AF2D816.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut7_1		9868
+	942578140	fan5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fan\final\fan5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan4\fan5		41881
+	949012013	main atmos	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\main atmos_824B34CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\main atmos		364392
+	954327847	blip blop random8	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random8_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random8		39741
+	956419964	metal impact D3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\D\metal impact D3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\D\metal impact D3		26255
+	964917836	switchDAn4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\switch\switchDAn4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch2\switchDAn4		79506
+	969317301	blip blop sci fi forest short10	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest short10_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short10		44913
+	971379015	hello dave mix 2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\hello dave mix 2_824B34CA.wem		\Interactive Music Hierarchy\Default Work Unit\musicmain\hello dave mix 2\hello dave mix 2		3999548
+	971397170	hydralics1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics1		21570
+	972817918	skibs rumlen knirk 2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibs rumlen knirk 2_76119463.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\knirken\skibs rumlen knirk 2		16752
+	975186946	virkelig stor knap	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\switch\switchDAn1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch3\virkelig stor knap		38111
+	977744412	narrative3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative3\narrative3		66132
+	981090303	light impact6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\light impact6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact6		6425
+	981487521	light impact5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\light impact5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact5		4207
+	982755718	narrativeDan6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\narrative\narrativeDan6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative4\narrativeDan6		29128
+	984498401	heavy impact3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact3		6445
+	988269575	outofocygen6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\out of oxygen\final\outofocygen6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 6\outofocygen6		74882
+	990388538	light impact3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\light impact3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact3		5631
+	995787277	blip blop sci fi forest short3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest short3_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short3		33136
+	997255121	menuScrollclick3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\menuScrollclick3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\scroll\menuScrollclick3		11913
+	1000329366	metal impact C3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\C\metal impact C3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\C\metal impact C3		25919
+	1001129958	narrative2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative2\narrative2		27085
+	1003759726	switch5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\switch\final\switch5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch4\switch5		49550
+	1008444769	catchfire	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\catchfire_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\fire\catchfire		75060
+	1008447857	blip blop random19	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random19_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random19		54565
+	1024588397	lowOxygenDan3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\low oxygen\lowOxygen3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 1\lowOxygenDan3		42137
+	1025581677	remarkDan17	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan17_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark17\remarkDan17		102221
+	1028486927	fan3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fan\final\fan3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan2\fan3		45258
+	1030162421	blip blop sci fi forest short11	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest short11_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short11		78683
+	1031646511	launch mockup1 long	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch mockup1 long_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launch\launch mockup1 long		17405
+	1035730658	aloeveradan	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\fire\fireDan1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire6\aloeveradan		77487
+	1036120416	blip blop sci fi forest short5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest short5_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short5		35029
+	1039321002	outOfOxygenDan3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\out of oxygen\outOfOxygenDan3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 3\outOfOxygenDan3		71300
+	1041668143	menuScrollclick	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\menuScrollclick_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\scroll\menuScrollclick		12582
+	1044380383	skibsrumlen knirk4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibsrumlen knirk4_FE729CEF.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\knirken\skibsrumlen knirk4		43066
+	1044968386	wires3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\wires3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires3\wires3		89431
+	1047728440	switch4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\switch\final\switch4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch3\switch4		31251
+	1058957984	remarks12	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks12_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark12\remarks12		44419
+	1059243837	comic_ shitty	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\comic. shitty_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\comic_ shitty		30099
+	1061219038	object impact3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact3_5C8712C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact3		4297
+	1064419361	explosion5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\explosion5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion5		10760
+	1064649682	heavy impact5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact5		6882
+	1065919626	skibsrumlen knirk3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\skibsatmos\skibsrumlen knirk3_71A1D22F.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\knirken\skibsrumlen knirk3		38408
+	1066027588	door shut1_1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\door shut1_1_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\doors\door shut1_1		8628
+	1068792125	ikke mere ilt	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\out of oxygen\outOfOxygenDan2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 1\ikke mere ilt		29415
 
 Plug-in Media	ID	Name	Source file	Type	Wwise Object Path	Notes	Data Size
-	134280575	custom_rvb_1	Y:\Spaced-out\Wwise\.cache\Windows\Plugins\Wwise Convolution Reverb\ factory rvb impulse_9FFC2351.wem	Wwise Convolution Reverb (Shared)	\Effects\Default Work Unit\custom_rvb_1		1474800
-	538281099	Damped_Chamber	Y:\Spaced-out\Wwise\.cache\Windows\Plugins\Wwise Convolution Reverb\AK_Factory_IR\Rooms\AK Hamburg Echo Chamber_BB274964.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Convolution Reverb Effects\Audiokinetic\Rooms\Damped_Chamber	Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 4ms 	285360
+	134280575	custom_rvb_1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\Plugins\Wwise Convolution Reverb\ factory rvb impulse_9FFC2351.wem	Wwise Convolution Reverb (Shared)	\Effects\Default Work Unit\custom_rvb_1		1474800
+	538281099	Damped_Chamber	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\Plugins\Wwise Convolution Reverb\AK_Factory_IR\Rooms\AK Hamburg Echo Chamber_BB274964.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Convolution Reverb Effects\Audiokinetic\Rooms\Damped_Chamber	Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 4ms 	285360
 

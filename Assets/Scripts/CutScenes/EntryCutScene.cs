@@ -43,6 +43,7 @@ public class EntryCutScene : MonoBehaviour {
         playerObj.rotation = playerPos.rotation;
         playerObj.parent = playerPos;
         player.GetComponentInChildren<Animator>().SetBool("Force Fly", true);
+        //player.GetComponentInChildren<Animator>().SetTrigger("Pick Up");
         particles = player.GetComponent<PlayerController>().chargeParticle;
         player.GetComponent<PlayerController>().chargeParticle = null;
 
@@ -120,14 +121,14 @@ public class EntryCutScene : MonoBehaviour {
         ZoomInOnKey();
     }
 
-    //public void StartPlayerFly()
-    //{
-    //    var evt = new ObserverEvent(EventName.PlayerLaunch);
-    //    evt.payload.Add(PayloadConstants.LAUNCH_FORCE, 0.5f);
-    //    evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, playerObj.transform.forward);
-    //    evt.payload.Add(PayloadConstants.START_STOP, true);
-    //    Subject.instance.Notify(playerObj.gameObject, evt);
-    //}
+    public void StartPlayerFly()
+    {
+        var evt = new ObserverEvent(EventName.PlayerLaunch);
+        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, 0.5f);
+        evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, playerObj.transform.forward);
+        evt.payload.Add(PayloadConstants.START_STOP, true);
+        Subject.instance.Notify(playerObj.gameObject, evt);
+    }
 
     public Transform GetPlayerSpawnPos()
     {

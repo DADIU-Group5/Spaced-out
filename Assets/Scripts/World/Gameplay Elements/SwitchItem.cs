@@ -28,10 +28,6 @@ public class SwitchItem : MonoBehaviour {
 
     void Start()
     {
-        /*foreach (GameObject hazard in assignedHazards)
-        {
-            hazard.GetComponent<HazardState>().hazardSwitch = this.gameObject;
-        }*/
         switchRenderer = this.GetComponent<Renderer>();
         SwitchColor();
     }
@@ -39,15 +35,8 @@ public class SwitchItem : MonoBehaviour {
     public void AssignRoom(Room r)
     {
         inRoom = r;
+        r.AddRoomSwitch(this);
     }
-
-    /// <summary>
-    /// Assign an object to this switch
-    /// </summary>
-   /* public void AssignHazardToSwitch(GameObject hazard)
-    {
-        assignedHazards.Add(hazard);
-    }*/
 
     public IEnumerator CountDown()
     {
@@ -57,8 +46,9 @@ public class SwitchItem : MonoBehaviour {
     }
 
     //switch the color
-    void SwitchColor()
+    public void SwitchColor()
     {
+        on = !on;
         switchRenderer.material.color = on ? onColour : offColour;
     }
 
@@ -74,9 +64,6 @@ public class SwitchItem : MonoBehaviour {
             //if we are allowed to trigger more than once || it hasn't been triggered yet:
             if (!oneTimeTrigger && !countingDown|| !hasBeenTriggered)
             {
-                on = !on;
-                SwitchColor();
-
                 countingDown = true;
                 //start counting down to next available switch:
                 StartCoroutine(CountDown());
@@ -87,11 +74,6 @@ public class SwitchItem : MonoBehaviour {
                 evt.payload.Add(PayloadConstants.SWITCH_ON, false);
                 Subject.instance.Notify(gameObject, evt);
 
-                /*foreach (GameObject hazard in assignedHazards)
-                {
-                    Debug.Log("hazards being turned off! item: " + hazard.name);
-                    hazard.GetComponent<HazardState>().EnabledOrDisableTrap();
-                }*/
                 inRoom.SwitchWasTouched();
             }
         }

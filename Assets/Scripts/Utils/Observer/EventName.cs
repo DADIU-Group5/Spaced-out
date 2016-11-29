@@ -35,6 +35,7 @@
     LowOnOxygen,
     PlayerLaunchModeToggle,
     PlayerLaunchCancel,
+    PlayerReadyForLaunch,
     ComicsUpdate,
     ComicPickup,
     GodMode,

@@ -13,4 +13,5 @@ public class GameSettings : ScriptableObject {
     public Language language;
     public bool GodMode = false;
     public bool invertedCamera;
+    public bool premium = false;
 }

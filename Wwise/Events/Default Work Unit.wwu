@@ -1014,6 +1014,13 @@
 										</Element>
 									</ElementList>
 								</Action>
+								<Action Name="Play" ID="{0FD65C21-EC3E-4B12-9BAC-06C1F404DFF0}" ShortID="207657480" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{62E63725-CF21-45B0-8145-140BC30A42D6}" Global="false">
+											<ObjectRef Name="grunts" ID="{1A28A773-1970-4B8C-A2B1-640CCB269910}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="daveobjectCollision" ID="{A261AB7A-38C8-4BC5-85FB-C7EF60109A8B}">
@@ -1055,6 +1062,17 @@
 									<ElementList>
 										<Element ID="{E10CDA6A-D4AA-4D98-9EA7-4FA03ED14BF6}" Global="false">
 											<ObjectRef Name="airdrag" ID="{F531F20F-7E93-44CF-9E05-98BE0E6F2967}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="daveScratch" ID="{27E2C4F0-F349-4F33-8A96-68A0FA840C7D}">
+							<ChildrenList>
+								<Action Name="Play" ID="{9742EC6C-6AE7-4D33-A609-DC70D8586F19}" ShortID="806010274" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{59E462F7-CDBC-4071-B576-C19E78DFF23E}" Global="false">
+											<ObjectRef Name="buttscratch" ID="{D44DEA8E-B999-4A22-AD2C-AF98A72E961B}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -1276,6 +1294,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="blipBlopHigh" ID="{FDE64E94-C591-4E29-AA0E-7A33F7ECA3AD}">
+							<ChildrenList>
+								<Action Name="Play" ID="{18E8EA5B-987F-4AAB-8D80-05285F852632}" ShortID="304990650" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{01069875-8390-46C6-BA34-1EB8EBFEB516}" Global="false">
+											<ObjectRef Name="blip blop high" ID="{051A0537-8D66-4B55-B8E4-9244D1313A32}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="blipBlopLow" ID="{5F2DF0C1-838A-425C-843C-2ED62E2631BE}">
+							<ChildrenList>
+								<Action Name="Play" ID="{99199A63-771A-4E00-962B-71BA275D2277}" ShortID="965352109" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{172B712B-8062-4DD1-BCBF-FDD7070F0103}" Global="false">
+											<ObjectRef Name="blip blop low" ID="{26057701-EBAE-471B-A848-0AE7780EEA2E}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Cinematics" ID="{9886BF1A-9A93-45A4-91D9-204AE6F18DCD}" ShortID="792126149">
@@ -1385,6 +1425,13 @@
 									<ElementList>
 										<Element ID="{2F2E7886-3813-4686-904E-31DEA5999E35}" Global="false">
 											<ObjectRef Name="hydralics" ID="{955C4C8A-5CDA-4CEF-BE4C-9F17F3149579}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{C84DCCCA-51E4-4445-94E3-6EE5AADA4B5F}" ShortID="823766676" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{09A8132A-336B-4AF2-9D4F-152F2D4D31E8}" Global="false">
+											<ObjectRef Name="blip blop sci fi forest long1" ID="{54951246-80EB-4D37-ACE3-D430F90EECCF}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>

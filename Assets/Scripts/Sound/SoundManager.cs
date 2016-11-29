@@ -18,7 +18,6 @@ public class SoundManager : Singleton<SoundManager>, Observer
         Subject.instance.AddObserver(this);
 
         AkSoundEngine.LoadBank("soundbank_alpha", AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
-        AkSoundEngine.SetSwitch("galVersion", "v1", gameObject);
 
         var settings = SettingsManager.instance.settings;
 
@@ -57,11 +56,11 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 bool playMusic = (bool)payload[PayloadConstants.START_STOP];
 
                 PlayEvent(SoundEventConstants.DAVE_LAUNCH);
-                //if (playMusic)
-                //{
-                //    PlayEvent(SoundEventConstants.MUSIC_MAIN_STOP);
-                //    PlayEvent(SoundEventConstants.MUSIC_MAIN_PLAY);
-                //}
+                if (playMusic)
+                {
+                    PlayEvent(SoundEventConstants.MUSIC_MAIN_STOP);
+                    PlayEvent(SoundEventConstants.MUSIC_MAIN_PLAY);
+                }
 
                 break;
 

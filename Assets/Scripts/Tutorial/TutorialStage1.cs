@@ -38,10 +38,6 @@ public class TutorialStage1 : MonoBehaviour, Observer
         // call once player hits trigger
         missingKeysTrigger.callback = BeginMissingKeysCutscene;
 
-        oxygenController = GameObject.Find("Player").GetComponent<OxygenController>();
-        oxygenController.fuelGodMode = true;
-        oxygenController.godMode = true;
-
         //guidanceObject.Activate();
         gal.Narrate("narrative3");
     }

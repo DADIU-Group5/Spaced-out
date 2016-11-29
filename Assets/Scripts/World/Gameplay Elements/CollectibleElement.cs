@@ -18,7 +18,6 @@ public class CollectibleElement : MonoBehaviour {
     {
         if (other.transform.tag == "Player")
         {
-            ScoreManager.instance.ComicCollected();
             var evt = new ObserverEvent(EventName.ComicPickup);
             Subject.instance.Notify(gameObject, evt);
             Destroy(gameObject);

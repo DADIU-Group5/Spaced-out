@@ -78,6 +78,9 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
             case EventName.PlayerLaunch:
                 shotsFired++;
                 break;
+            case EventName.ComicPickup:
+                ComicCollected();
+                break;
             default:
                 break;
         }

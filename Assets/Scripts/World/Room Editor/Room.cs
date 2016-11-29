@@ -221,7 +221,6 @@ public class Room : MonoBehaviour
     public void AddRoomSwitch(SwitchItem SI)
     {
         switchItems.Add(SI);
-        Debug.LogError(switchItems.Count + " _ " + gameObject.name);
     }
 
     public void SwitchWasTouched()

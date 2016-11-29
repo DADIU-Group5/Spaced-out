@@ -51,6 +51,11 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
             generationData.levels[level-1].interiorSeed = RandomSeed();
     }
 
+    public void SetTutortialLevel()
+    {
+        level = 0;
+    }
+
     /// <summary>
     /// Returns the current level
     /// </summary>

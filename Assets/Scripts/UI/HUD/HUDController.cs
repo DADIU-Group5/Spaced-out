@@ -35,7 +35,7 @@ public class HUDController : MonoBehaviour, Observer {
     void Start()
     {
         SettingsManager.instance.onLanguageChanged += UpdateButtonText;
-        UpdateButtonText(Language.Danish);
+        UpdateButtonText(SettingsManager.instance.GetLanguage());
     }
 
     private void UpdateButtonText(Language lan)

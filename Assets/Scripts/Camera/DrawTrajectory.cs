@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class DrawTrajectory : MonoBehaviour, Observer
 {
-
-
     public float length = 1;
     public int maxBounces = 4;
     public InputController inputCont;
@@ -19,6 +17,7 @@ public class DrawTrajectory : MonoBehaviour, Observer
     private LineRenderer LR;
 
     private bool drawingEnabled;
+    private bool uiDisabled = false;
 
     private void Awake()
     {
@@ -110,7 +109,21 @@ public class DrawTrajectory : MonoBehaviour, Observer
                 target = player.transform;
                 break;
             case EventName.ToggleUI:
-                drawingEnabled = !drawingEnabled;
+                points.Clear();
+                Draw();
+                uiDisabled = !uiDisabled;
+                drawingEnabled = !uiDisabled;
+                break;
+            case EventName.PlayerLaunch:
+                points.Clear();
+                Draw();
+                drawingEnabled = false;
+                break;
+            case EventName.PlayerReadyForLaunch:
+                if (!uiDisabled)
+                {
+                    drawingEnabled = true;
+                }
                 break;
         }
     }

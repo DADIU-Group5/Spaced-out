@@ -11,21 +11,30 @@ public class SwitchItem : MonoBehaviour {
 
     [Header("How long is the switch untouchable after collision?")]
     public float triggerDelay = 1f;
-    private bool countingDown = false;
-
+    
     [Header("Can the switch only be triggered once?")]
     public bool oneTimeTrigger = false;
+    
+    [Header("Choose on/off colours:")]
+    public Color offColour = Color.red;
+    public Color onColour = Color.green;
+
+    private bool countingDown = false;
     private bool hasBeenTriggered = false;
+    private Renderer switchRenderer;
+    private bool on = false;
 
     Room inRoom;
 
-    /*void Start()
+    void Start()
     {
-        foreach (GameObject hazard in assignedHazards)
+        /*foreach (GameObject hazard in assignedHazards)
         {
             hazard.GetComponent<HazardState>().hazardSwitch = this.gameObject;
-        }
-    }*/
+        }*/
+        switchRenderer = this.GetComponent<Renderer>();
+        SwitchColor();
+    }
 
     public void AssignRoom(Room r)
     {
@@ -47,6 +56,12 @@ public class SwitchItem : MonoBehaviour {
         countingDown = false;
     }
 
+    //switch the color
+    void SwitchColor()
+    {
+        switchRenderer.material.color = on ? onColour : offColour;
+    }
+
     /// <summary>
     ///if and object or the player taps the switch, turn off/on
     ///should I only consider objects thrown by player? How would I consider that? 
@@ -59,6 +74,9 @@ public class SwitchItem : MonoBehaviour {
             //if we are allowed to trigger more than once || it hasn't been triggered yet:
             if (!oneTimeTrigger && !countingDown|| !hasBeenTriggered)
             {
+                on = !on;
+                SwitchColor();
+
                 countingDown = true;
                 //start counting down to next available switch:
                 StartCoroutine(CountDown());

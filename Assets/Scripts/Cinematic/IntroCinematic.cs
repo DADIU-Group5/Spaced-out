@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 public class IntroCinematic : MonoBehaviour {
     public Animator animator;
     public Animator galAnimator;
-    public InitialForce[] floatingObjects;
+    public GameObject floatingObjectsParent;
+    private InitialForce[] floatingObjects;
     public CameraShake shakeAstroid;
     public CameraShake shakeImpact;
     public SimpelAnimation sandwichAnim;
+    public Transform comic;
 
     // Use this for initialization
     void Start () {
+        floatingObjects = floatingObjectsParent.GetComponentsInChildren<InitialForce>();
         GetComponent<SimpelAnimation>().PlayAnimations(() =>
         {
             SceneManager.LoadScene("TutStage01");
@@ -35,6 +38,21 @@ public class IntroCinematic : MonoBehaviour {
         {
             floatingObj.ApplyForce();
         }
+
+        StartCoroutine(HideComic());
+    }
+
+    private IEnumerator HideComic()
+    {
+        yield return new WaitForSeconds(0.15f);
+
+        while (comic.localScale.y > 0)
+        {
+            comic.localScale -= new Vector3(0, 0.4f, 0);
+            yield return null;
+        }
+        comic.gameObject.SetActive(false);
+        
     }
 
     private void PlayRest()

@@ -7,6 +7,9 @@ public class Fan : MonoBehaviour {
     [Tooltip("Force of the wind.")]
     public float fanForce = 20f;
 
+    [Header("Is this a pulling fan?")]
+    public bool reverseFan = false;
+
     [HideInInspector]
     public float distance = 20f;
 
@@ -19,6 +22,7 @@ public class Fan : MonoBehaviour {
     [Header("The Fan blades object:")]
     public GameObject fanBlades;
     private bool fanBladesFound = false;
+    private Vector3 rotationDirection = Vector3.right;
 
     [HideInInspector]
     public Vector3 windDirection;
@@ -33,7 +37,7 @@ public class Fan : MonoBehaviour {
     {
         
         if (fanBladesFound && itemState.On)
-            fanBlades.transform.RotateAround(fanBlades.transform.position, Vector3.forward, 20 * Time.deltaTime * fanForce);
+            fanBlades.transform.RotateAround(fanBlades.transform.position, rotationDirection , 20 * Time.deltaTime * 20);
     }
 
     // Use this for initialization
@@ -46,8 +50,12 @@ public class Fan : MonoBehaviour {
         coll.center = new Vector3(coll.height/2, 0, 0);
         windDirection = Vector3.Normalize(endPos.position - startPos.position);
 
-        if (gameObject.name == "ReverseFan")
+        rotationDirection = transform.right;
+        if (gameObject.name == "ReverseFan" || reverseFan)
+        {
             windDirection = -windDirection;
+            rotationDirection = -rotationDirection;
+        }
         itemState = this.gameObject.GetComponent<GameplayElement>();
     }
 

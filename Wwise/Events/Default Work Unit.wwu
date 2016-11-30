@@ -1078,6 +1078,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="daveStopCharge" ID="{B7103F76-F064-423B-8EC3-37787C2A577E}">
+							<ChildrenList>
+								<Action Name="Stop" ID="{9D9C00B2-F585-4A8A-94E1-81C8E573C861}" ShortID="45357245" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{DD50BBF8-8DC7-4DB8-8080-513E63DFFA0A}" Global="false">
+											<ObjectRef Name="charge" ID="{0301B950-95C3-4298-BBDA-BEC82750E4CD}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{7CC22D88-6C23-4DC3-A203-59A12B65F02A}" ShortID="773461650">

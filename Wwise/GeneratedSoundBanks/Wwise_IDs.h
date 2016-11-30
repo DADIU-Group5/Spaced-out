@@ -36,6 +36,7 @@ namespace AK
         static const AkUniqueID DAVESCRATCH = 918879319U;
         static const AkUniqueID DAVESQUISHBETWEENDOORS = 1016866911U;
         static const AkUniqueID DAVESTATICCOLLISION = 2519729295U;
+        static const AkUniqueID DAVESTOPCHARGE = 379256811U;
         static const AkUniqueID DAVEVENT = 2108630538U;
         static const AkUniqueID DEATH = 779278001U;
         static const AkUniqueID DOOROPEN = 1404805401U;

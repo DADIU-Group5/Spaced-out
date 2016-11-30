@@ -50,7 +50,7 @@ public class EntryCutScene : MonoBehaviour {
         playerObj.position = playerPos.position;
         playerObj.rotation = playerPos.rotation;
         playerObj.parent = playerPos;
-        player.GetComponentInChildren<Animator>().SetBool("Force Fly", true);
+        //player.GetComponentInChildren<Animator>().SetBool("Force Fly", true);
         //player.GetComponentInChildren<Animator>().SetTrigger("Pick Up");
         particles = player.GetComponent<PlayerController>().chargeParticle;
         player.GetComponent<PlayerController>().chargeParticle = null;
@@ -125,6 +125,7 @@ public class EntryCutScene : MonoBehaviour {
 
     public void Ended()
     {
+
         ToggleUI();
         Destroy(cam.gameObject);
         key.SetActive(false);
@@ -144,6 +145,7 @@ public class EntryCutScene : MonoBehaviour {
     {
         particles.SetActive(false);
         playerObj.gameObject.GetComponent<PlayerController>().chargeParticle = particles;
+        playerObj.GetComponentInChildren<Animator>().SetBool("CinematicFly", false);
         //playerObj.gameObject.GetComponentInChildren<Animator>().SetBool("Force Fly", false);
         ZoomInOnKey();
     }

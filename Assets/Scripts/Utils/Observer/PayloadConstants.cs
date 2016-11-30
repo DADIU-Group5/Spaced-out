@@ -25,4 +25,5 @@ public class PayloadConstants
     public const string LANGUAGE = "language";
     public const string PERCENT = "percent";
     public const string TIME = "time";
+    public const string START_LEVEL = "startLevel";
 }

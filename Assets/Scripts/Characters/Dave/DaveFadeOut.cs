@@ -4,13 +4,13 @@ using System;
 
 public class DaveFadeOut : MonoBehaviour, Observer {
 
-    public float trans = 1;
+    float trans = 1;
     public Material daveMat;
     public float fadeTime = 0.5f;
     float baseTime;
     bool fading = false;
-    public float targetTrans = 1;
-    public float fadeCoeef;
+    float targetTrans = 1;
+    float fadeCoeef;
     bool playerSpawned = false;
 
     void Start()

@@ -1211,34 +1211,7 @@
 						</Event>
 						<Event Name="doorOpen" ID="{867C81DB-4DF1-4764-9A46-8F96B2DC1059}">
 							<ChildrenList>
-								<Action Name="Play" ID="{03A9208E-7273-435D-A3DE-D90189BECA2B}" ShortID="92545803" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{73076ACB-B72E-42D3-B312-0BED9B8F2101}" Global="false">
-											<ObjectRef Name="doors" ID="{BF4E15A6-DBD6-4FBB-8221-C7E51BEAF67F}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Play" ID="{BC90486D-F2E2-4C40-AEC0-B2A79B45DCAA}" ShortID="736036992" Type="Play" Scope="One" Global="false">
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.3">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{07EAFC38-DA2C-4FD9-9FC8-889547E9CABE}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="0.5"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-									</PropertyList>
-									<ElementList>
-										<Element ID="{25E50F37-AA81-4FBD-8FBC-413105DB6D08}" Global="false">
-											<ObjectRef Name="hydralics" ID="{AD2A0D48-CB45-4975-80C0-F03B8DD3C11A}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
-										</Element>
-									</ElementList>
-								</Action>
+								<Action Name="Play" ID="{03A9208E-7273-435D-A3DE-D90189BECA2B}" ShortID="92545803" Type="Play" Scope="One" Global="false"/>
 							</ChildrenList>
 						</Event>
 						<Event Name="switchOn" ID="{606B4472-D0D4-4B6C-97D5-1E1E7245DF83}">
@@ -1338,28 +1311,6 @@
 									<ElementList>
 										<Element ID="{172B712B-8062-4DD1-BCBF-FDD7070F0103}" Global="false">
 											<ObjectRef Name="blip blop low" ID="{26057701-EBAE-471B-A848-0AE7780EEA2E}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
-										</Element>
-									</ElementList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="doorSlideOpen" ID="{4661836F-587D-4A9C-A440-557726AA9A75}">
-							<ChildrenList>
-								<Action Name="Play" ID="{5001F120-E376-427E-8EC3-42262B983B3C}" ShortID="1044152505" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{06A96244-37AD-42B6-B5FA-5FC57035737F}" Global="false">
-											<ObjectRef Name="door slide open" ID="{69257C8F-0E4D-44C2-9070-F957932E5693}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
-										</Element>
-									</ElementList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="doorSlideClose" ID="{E1C46994-6603-43C2-AFEC-0E1A464AD14C}">
-							<ChildrenList>
-								<Action Name="Play" ID="{66EBBD53-FC07-4D71-A0E7-1AB9999C7D35}" ShortID="692441730" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{F89D4EF6-7F2A-4190-8716-E8681CBB0F39}" Global="false">
-											<ObjectRef Name="door slide close" ID="{749CB513-7A92-4994-B8B4-8A3FAB329A2C}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>

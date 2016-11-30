@@ -41,13 +41,13 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
     /// <param name="randomizeSeeds">Should the interior seeds be randomized</param>
     public void SetCurrentLevel(int level, bool randomizeSeeds = true)
     {
-        if (level < 1 || level > generationData.levels.Length)
+        if (level < 0 || level > generationData.levels.Length)
         {
             throw new UnityException("Invalid level: " + level);
         }
 
         this.level = level;
-        if (randomizeSeeds)
+        if (randomizeSeeds && level > 0)
             generationData.levels[level-1].interiorSeed = RandomSeed();
     }
 

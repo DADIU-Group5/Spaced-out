@@ -24,12 +24,12 @@ public class MenuHeader : MonoBehaviour {
 
     public void UpdateMedalLabel()
     {
-        medalLabel.text = ProgressManager.instance.GetStars().ToString();
+        medalLabel.text = ProgressManager.instance.GetCurrency().ToString();
     }
 
     public void ResetMedals()
     {
-        ProgressManager.instance.ResetStars();
+        ProgressManager.instance.ResetCurrency();
         medalLabel.text = "0";
     }
 

@@ -16,6 +16,10 @@ public class Fan : MonoBehaviour {
     [Tooltip("Add/place a transform object at the END of the fan's influence")]
     public Transform endPos;
 
+    [Header("The Fan blades object:")]
+    public GameObject fanBlades;
+    private bool fanBladesFound = false;
+
     [HideInInspector]
     public Vector3 windDirection;
 
@@ -25,8 +29,17 @@ public class Fan : MonoBehaviour {
     // Internal list that tracks objects that enter this object's "zone"
     private List<Collider> objects = new List<Collider>();
 
+    void Update()
+    {
+        
+        if (fanBladesFound && itemState.On)
+            fanBlades.transform.RotateAround(fanBlades.transform.position, Vector3.forward, 20 * Time.deltaTime * fanForce);
+    }
+
     // Use this for initialization
     void Start () {
+        if (fanBlades != null)
+            fanBladesFound = true;
         distance =  Vector3.Distance(startPos.position, endPos.position);
         CapsuleCollider coll = GetComponent<CapsuleCollider>();
         coll.height = endPos.transform.localPosition.x;

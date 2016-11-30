@@ -31,6 +31,7 @@ public class SuckIntoSpace : MonoBehaviour
             if (Vector3.Distance(player.transform.position, suckInDirection) < 5f)
             {
                 movingPlayer = false;
+                player.GetComponentInChildren<Animator>().SetBool("CinematicFly", false);
             }
         }
 

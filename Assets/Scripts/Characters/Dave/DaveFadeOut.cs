@@ -7,36 +7,69 @@ public class DaveFadeOut : MonoBehaviour, Observer {
     float trans = 1;
     Color col;
     public Material mat;
+    public float fadeTime = 0.5f;
+    bool fading = false;
+    float targetTrans = 1;
+    float fadeCoeef;
+    bool playerSpawned = false;
 
-    // Use this for initialization
     void Start()
     {
-        if(mat == null)
-        {
-            Destroy(this);
-        }
         Subject.instance.AddObserver(this);
-    }
-
-    public void OnDestroy()
-    {
-        Subject.instance.RemoveObserver(this);
     }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
         if(evt.eventName == EventName.CameraZoomValue)
         {
-            trans = (float)evt.payload[PayloadConstants.PERCENT];
-            UpdateTrans();
+            if (playerSpawned)
+            {
+                targetTrans = (float)evt.payload[PayloadConstants.PERCENT];
+                fadeCoeef = (targetTrans - trans) / fadeTime;
+                fading = true;
+                StartCoroutine(Fade());
+            }
         }
+        if(evt.eventName == EventName.PlayerSpawned)
+        {
+            playerSpawned = true;
+        }
+    }
+
+    IEnumerator Fade()
+    {
+        while (fading)
+        {
+            trans += fadeCoeef * Time.deltaTime;
+            if(fadeCoeef > 0)
+            {
+                if(trans > targetTrans)
+                {
+                    fading = false;
+                    trans = targetTrans;
+                }
+            }
+            else
+            {
+                if (trans < targetTrans)
+                {
+                    fading = false;
+                    trans = targetTrans;
+                }
+            }
+            UpdateTrans();
+            yield return new WaitForEndOfFrame();
+        }
+        
     }
 
     void UpdateTrans()
     {
-        col = mat.color;
-        col.a = trans;
-        mat.SetFloat("_MainTexOpacity", trans);
-        mat.SetColor("_Color", col);
+        mat.SetFloat("_Transparency", trans);
+    }
+
+    public void OnDestroy()
+    {
+        Subject.instance.RemoveObserver(this);
     }
 }

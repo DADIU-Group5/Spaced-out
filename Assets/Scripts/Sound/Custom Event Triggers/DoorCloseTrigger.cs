@@ -1,6 +1,6 @@
-﻿public class DoorOpenCloseTrigger : AkTriggerBase
+﻿public class DoorCloseTrigger : AkTriggerBase
 {
-    public void Open()
+    public void Close()
     {
         if (triggerDelegate != null)
         {

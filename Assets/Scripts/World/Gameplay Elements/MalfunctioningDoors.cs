@@ -17,8 +17,8 @@ public class MalfunctioningDoors : MonoBehaviour {
 
     bool started = false;
 
-    public DoorOpenCloseTrigger doorCloseTrigger;
-    public DoorOpenCloseTrigger doorOpenTrigger;
+    public DoorCloseTrigger doorCloseTrigger;
+    public DoorOpenTrigger doorOpenTrigger;
 
     [HideInInspector]
     private Animator animator;
@@ -30,11 +30,14 @@ public class MalfunctioningDoors : MonoBehaviour {
         if (closed)
         {
             animator.SetTrigger("Open");
+            SoundOpen();
             //evt.payload.Add(PayloadConstants.DOOR_OPEN, true);
         }
         else
         {
             animator.SetTrigger("Close");
+            //Invoke("SoundClose", 0.2f);
+            SoundClose();
             //evt.payload.Add(PayloadConstants.DOOR_OPEN, false);
         }
         
@@ -158,11 +161,11 @@ public class MalfunctioningDoors : MonoBehaviour {
 
     void SoundOpen()
     {
-
+        doorOpenTrigger.Open();
     }
 
     void SoundClose()
     {
-        doorCloseTrigger.Open();
+        doorCloseTrigger.Close();
     }
 }

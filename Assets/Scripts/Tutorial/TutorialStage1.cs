@@ -15,20 +15,15 @@ public class TutorialStage1 : MonoBehaviour, Observer
     public GameObject powerTip;
     public GameObject launchTip;
 
-    public SoundManager soundManager;
     public Brain gal;
 
     private GameObject key;
     private bool hasLaunched;
-    private OxygenController oxygenController;
 
     // Use this for initialization
     void Start()
     {
         Subject.instance.AddObserver(this);
-
-        // bring back the sounds that were muted for the cinematic
-        //soundManager.EnableSounds();
 
         var evt = new ObserverEvent(EventName.PlayerSpawned);
         evt.payload.Add(PayloadConstants.PLAYER, player);

@@ -17,6 +17,7 @@ public class SpaceZoom : MonoBehaviour {
     [Header("Key and camera startposition:")]
     public GameObject key;
     public GameObject startPos;
+    private GameObject player;
 
     void Update()
     {
@@ -50,6 +51,7 @@ public class SpaceZoom : MonoBehaviour {
                 zoomingOut = false;
             }
         }
+       // player.transform.position = Vector3.RotateTowards(other.transform.position, keyPosition, 1f, 1f);
     }
 
     void OnTriggerEnter(Collider other)
@@ -64,6 +66,8 @@ public class SpaceZoom : MonoBehaviour {
                 keyPosition = key.transform.position;
                 zoomingIn = true;
                 zoomedInAlready = true;
+                player = other.gameObject;
+                
             }
         }
     }

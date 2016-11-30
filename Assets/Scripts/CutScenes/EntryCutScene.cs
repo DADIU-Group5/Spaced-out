@@ -62,6 +62,7 @@ public class EntryCutScene : MonoBehaviour {
 
     void ZoomInOnKey()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         key.SetActive(false);
         zoomCamera.SetActive(true);
         keyPosition = finalKey.transform.position;
@@ -83,6 +84,9 @@ public class EntryCutScene : MonoBehaviour {
             {
                 zoomingIn = false;
                 StartCoroutine(waitAfterZooming());
+                player = GameObject.FindGameObjectWithTag("Player");
+                keyPosition = moveDirection.transform.position;
+                movingPlayer = true;
             }
         }
 
@@ -95,11 +99,6 @@ public class EntryCutScene : MonoBehaviour {
             if (Vector3.Distance(zoomCamera.transform.position, orgPosition) < 1f)
             {
                 backToDave = false;
-                //zoomCamera.SetActive(false);
-                player = GameObject.FindGameObjectWithTag("Player");
-                keyPosition = moveDirection.transform.position;
-                movingPlayer = true;
-                //ToggleUI();
             }
         }
 

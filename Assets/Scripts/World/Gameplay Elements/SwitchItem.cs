@@ -73,13 +73,13 @@ public class SwitchItem : MonoBehaviour {
             //if we are allowed to trigger more than once || it hasn't been triggered yet:
             if (!oneTimeTrigger && !countingDown|| !hasBeenTriggered)
             {
-                SwitchColor();
-
                 countingDown = true;
                 //start counting down to next available switch:
                 StartCoroutine(CountDown());
 
                 hasBeenTriggered = true;
+
+                SwitchColor();
 
                 var evt = new ObserverEvent(EventName.SwitchPressed);
                 evt.payload.Add(PayloadConstants.SWITCH_ON, false);

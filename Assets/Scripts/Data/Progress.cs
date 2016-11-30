@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Progress", menuName = "Progress", order = 1)]
 public class Progress : ScriptableObject
 {
-    public int currency;
+    public int stars;
     public bool completedTutorial;
     public LevelProgress[] levels;
 
@@ -13,7 +13,7 @@ public class Progress : ScriptableObject
     void Reset()
     {
         Debug.Log("Reseting medals...");
-        currency = 0;
+        stars = 0;
         completedTutorial = true;
 
         // create levels

@@ -12,6 +12,8 @@ public class WinMenu : MonoBehaviour, Observer
     public GameObject levelCompletedMenu;
     public GameObject adsMenu;
     public GameObject winMenu;
+    public GameObject hud;
+    public GameObject recordText;
 
     public Button nextLevelBtn;
 
@@ -22,8 +24,8 @@ public class WinMenu : MonoBehaviour, Observer
     [Header("If Zero, zero times passes.", order =2)]
     public float timeTilWinScreen = 0;
 
-    public List<GameObject> goodImages;
-    public List<GameObject> badImages;
+    public List<GameObject> winBadges1;
+    public List<GameObject> winBadges2;
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
@@ -103,14 +105,14 @@ public class WinMenu : MonoBehaviour, Observer
         bool didntDie = medals[1];
         bool collectedComics = medals[2];
         
-        goodImages[0].SetActive(finished);
-        badImages[0].SetActive(!finished);
+        winBadges1[0].SetActive(finished);
+        winBadges1[1].SetActive(didntDie);
+        winBadges1[2].SetActive(collectedComics);
 
-        goodImages[1].SetActive(didntDie);
-        badImages[1].SetActive(!didntDie);
+        winBadges2[0].SetActive(finished);
+        winBadges2[1].SetActive(didntDie);
+        winBadges2[2].SetActive(collectedComics);
 
-        goodImages[2].SetActive(collectedComics);
-        badImages[2].SetActive(!collectedComics);
     }
 
     public void ShowNextWinMenu()
@@ -125,6 +127,11 @@ public class WinMenu : MonoBehaviour, Observer
         {
             ShowLastWinMenu();
         }
+    }
+
+    public void ShowRecord(bool record)
+    {
+        recordText.SetActive(record);
     }
 
     public void ShowLastWinMenu()
@@ -150,12 +157,8 @@ public class WinMenu : MonoBehaviour, Observer
         {
             //wait set amount of time...
             yield return new WaitForSeconds(timeTilWinScreen);
-
-            //turn on all the UI elements in the objectholder...
-            for (int i = 0; i < levelCompletedMenu.transform.childCount; i++)
-            {
-                levelCompletedMenu.transform.GetChild(i).gameObject.SetActive(true);
-            }
+            hud.SetActive(false);
+            levelCompletedMenu.SetActive(true);
             playerWon = true;
 
             SetBadges();

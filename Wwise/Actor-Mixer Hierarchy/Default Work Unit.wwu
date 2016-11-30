@@ -6365,7 +6365,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="electrocute1" ID="{D672FCDE-982B-4059-B4B3-B9805BFD8877}" ShortID="877963907">
 													<PropertyList>
-														<Property Name="TrimBegin" Type="Real64" Value="2.72307318259178E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0272307318259178"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>electrocute1.wav</AudioFile>
@@ -6406,7 +6406,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="electrocute3" ID="{08B6A36F-3D0A-412B-9700-2714713C10AB}" ShortID="560816914">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.96989423778264E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0196989423778264"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.024623677972283"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -6430,7 +6430,7 @@
 												<AudioFileSource Name="electrocute4" ID="{E4A3D0CE-9A88-497E-AA87-C9D87E4C98FE}" ShortID="68587342">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.015977935813275"/>
-														<Property Name="TrimBegin" Type="Real64" Value="4.79338074398249E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0479338074398249"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>electrocute4.wav</AudioFile>
@@ -6452,8 +6452,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="electrocute5" ID="{D1735FC7-2CAD-4978-8136-4F0402DA3F94}" ShortID="261205730">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="9.9214989059081E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="5.20878692560175E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0099214989059081"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0520878692560175"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>electrocute5.wav</AudioFile>
@@ -6475,8 +6475,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="electrocute6" ID="{63C8151F-A72E-4AFE-8D13-F11662053CEE}" ShortID="456998750">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="8.47921225382932E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="3.60366520787746E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00847921225382932"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0360366520787746"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>electrocute6.wav</AudioFile>
@@ -7110,7 +7110,7 @@
 										<ActiveSource Name="gasloop" ID="{B90D70AE-13F3-4573-B8B6-9F9604C23C0A}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<RandomSequenceContainer Name="doors" ID="{BF4E15A6-DBD6-4FBB-8221-C7E51BEAF67F}" ShortID="967453117">
+								<RandomSequenceContainer Name="door close" ID="{BF4E15A6-DBD6-4FBB-8221-C7E51BEAF67F}" ShortID="967453117">
 									<PropertyList>
 										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
 										<Property Name="OverrideAnalysis" Type="bool" Value="True"/>
@@ -7233,8 +7233,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut3_1" ID="{BCB595AC-447E-4721-9AC4-1411D86C2F57}" ShortID="585615623">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="4.49307075127645E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="6.73960612691467E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00449307075127645"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00673960612691467"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut3_1.wav</AudioFile>
@@ -7269,8 +7269,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut4_1" ID="{CCD6EFA5-2C6A-413F-BD1B-1D75893FCE8D}" ShortID="598173962">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.49963530269876E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="7.4981765134938E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00149963530269876"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0074981765134938"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut4_1.wav</AudioFile>
@@ -7302,8 +7302,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut5_1" ID="{6EF1D5FA-0402-465D-A57A-90D02A6771A1}" ShortID="846681906">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="2.99927060539752E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="7.49817651349381E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00299927060539752"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00749817651349381"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut5_1.wav</AudioFile>
@@ -7338,8 +7338,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut6_1" ID="{C787A521-A4A9-4D34-9E52-970CCEBA4BA7}" ShortID="670195520">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.49963530269876E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="2.24945295404814E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00149963530269876"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0224945295404814"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut6_1.wav</AudioFile>
@@ -7371,8 +7371,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut7_1" ID="{F48C9AF1-F3BF-4C08-AE00-BB17D50ED171}" ShortID="942376865">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="2.99927060539752E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="5.69861415025529E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00299927060539752"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0569861415025529"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut7_1.wav</AudioFile>
@@ -7404,8 +7404,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut8_1" ID="{BE0F375F-6E18-48F4-BACC-D4A09DFB85B8}" ShortID="401680823">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="2.99927060539752E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="4.94879649890591E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00299927060539752"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0494879649890591"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut8_1.wav</AudioFile>
@@ -7437,8 +7437,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut9_1" ID="{A8FCF68A-4DEE-4CDB-B475-CB041E8C1326}" ShortID="507642210">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="5.99854121079504E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="4.19897884755653E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00599854121079504"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0419897884755653"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut9_1.wav</AudioFile>
@@ -7470,7 +7470,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut10_1" ID="{0759559B-6639-45BF-9EAB-DF6F12BCBFC6}" ShortID="621924902">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="2.99343544857768E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00299343544857768"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.117409190371991"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -7772,6 +7772,764 @@
 										<ActiveSource Name="blæser" ID="{DBA8AD60-AF78-4C01-8FC3-7A9792C91610}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<RandomSequenceContainer Name="door slide" ID="{11AADC56-911E-4515-86D1-D7BDFF07C6DA}" ShortID="771329840">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="close" ID="{0D44963E-C73A-4BD6-A14F-256A4A32BD83}" ShortID="803581296">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-20</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="door close slide1" ID="{4B9D56AD-82C0-4E82-96AE-E791533E6F05}" ShortID="75199795" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door close slide1" ID="{6CE7FF30-C6B3-4C21-A8F9-D996CE793ECF}" ShortID="671594274">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door close slide1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door close slide1" ID="{6CE7FF30-C6B3-4C21-A8F9-D996CE793ECF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door close slide2" ID="{7D569B27-2558-45D3-9CDB-63716B961C6C}" ShortID="333730153" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door close slide2" ID="{77A8DA8F-F6AC-4CFC-84BA-4DB90884F935}" ShortID="66193395">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door close slide2.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door close slide2" ID="{77A8DA8F-F6AC-4CFC-84BA-4DB90884F935}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door close slide3" ID="{E0A5DEF5-1BFC-438B-A4DE-6E8BD560847D}" ShortID="75043882" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door close slide3" ID="{142AD054-B972-49BB-BB92-A3D897762CA1}" ShortID="257647355">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door close slide3.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door close slide3" ID="{142AD054-B972-49BB-BB92-A3D897762CA1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door close slide4" ID="{CA065810-9455-4E16-BEF2-56E51C8DA827}" ShortID="547656001" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door close slide4" ID="{360D1FF5-7DCD-4991-844A-F9043DC588AD}" ShortID="389819741">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door close slide4.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door close slide4" ID="{360D1FF5-7DCD-4991-844A-F9043DC588AD}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door close slide5" ID="{E8FC7EBA-63CE-42FF-9305-CC2449AD2DF2}" ShortID="813523282" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door close slide5" ID="{A6D8A202-2095-461A-9D9C-C51DDFB2A4EF}" ShortID="572527449">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door close slide5.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door close slide5" ID="{A6D8A202-2095-461A-9D9C-C51DDFB2A4EF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door close slide6" ID="{B050E70C-DA91-4085-9A7E-9C187A395E41}" ShortID="67038969" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door close slide6" ID="{E1C19787-48DC-4FBE-9051-4272A6975782}" ShortID="666396647">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door close slide6.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door close slide6" ID="{E1C19787-48DC-4FBE-9051-4272A6975782}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door close slide7" ID="{6ADCE1F2-6384-4DD3-B138-82D3BA086D5E}" ShortID="579527560" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door close slide7" ID="{D846FD00-CEF6-48B3-A506-01ADB8656AD3}" ShortID="919400887">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door close slide7.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door close slide7" ID="{D846FD00-CEF6-48B3-A506-01ADB8656AD3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="open" ID="{E83D6B16-2D02-4721-804E-3E9330D982FB}" ShortID="650324868">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-20</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="door open slide 1" ID="{4771FFE9-A37A-48DD-AA9E-3193657685F8}" ShortID="665351654" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door open slide 1" ID="{0DC8DEE6-7F76-4E70-9DDB-AB960D227551}" ShortID="672799992">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door open slide 1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door open slide 1" ID="{0DC8DEE6-7F76-4E70-9DDB-AB960D227551}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door open slide 2" ID="{048444D4-654E-46E1-82B8-33D44186837D}" ShortID="395759848" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door open slide 2" ID="{34E3C335-1D0C-4B2E-A069-9210FE4C1A62}" ShortID="738519879">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door open slide 2.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door open slide 2" ID="{34E3C335-1D0C-4B2E-A069-9210FE4C1A62}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door open slide 3" ID="{C9799DD3-F7B7-4808-A2BF-856BF9CE0AB4}" ShortID="141857809" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door open slide 3" ID="{4D516BC1-C7A5-4E1F-AB45-5D1B53DBEDC7}" ShortID="66381521">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door open slide 3.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door open slide 3" ID="{4D516BC1-C7A5-4E1F-AB45-5D1B53DBEDC7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door open slide 4" ID="{371778D8-742E-4565-863B-A92C526F6863}" ShortID="169282322" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door open slide 4" ID="{5EEB4E68-961F-404A-8155-813A1121CD69}" ShortID="232222218">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door open slide 4.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door open slide 4" ID="{5EEB4E68-961F-404A-8155-813A1121CD69}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door open slide 5" ID="{F5A63183-3735-419A-938E-F8635BB7B4C1}" ShortID="110403616" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door open slide 5" ID="{6B3620E0-2BDF-40E2-B5D3-F55B26FB1A26}" ShortID="438058724">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door open slide 5.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door open slide 5" ID="{6B3620E0-2BDF-40E2-B5D3-F55B26FB1A26}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door open slide 6" ID="{243FF5F2-083E-40A5-AAF8-751ABBB23948}" ShortID="459997927" Type="SoundFX">
+													<ExcludedPlatformList>
+														<Platform>Android</Platform>
+													</ExcludedPlatformList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door open slide 6" ID="{7219B809-680A-41E0-BAA2-A6833384F23D}" ShortID="930023727">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door open slide 6.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door open slide 6" ID="{7219B809-680A-41E0-BAA2-A6833384F23D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door open slide 7" ID="{CEA2AEBF-5E20-4C29-8C62-72CA44AE01C7}" ShortID="770037212" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door open slide 7" ID="{743710A6-2E5F-4D9E-BA2D-89D961D128EE}" ShortID="820358792">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door open slide 7.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door open slide 7" ID="{743710A6-2E5F-4D9E-BA2D-89D961D128EE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="door open click" ID="{40A9826D-D429-4C5D-A57A-8375E48AA33C}" ShortID="220432357">
+									<PropertyList>
+										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+										<Property Name="OverrideAnalysis" Type="bool" Value="True"/>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>1000</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{0C88ACCF-884D-4A1A-B799-4225F97FED75}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-200"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UserAuxSendVolume1" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="electricity" ID="{3AB70FE9-DBA1-46D2-9FA1-A024962E697E}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend1">
+											<ObjectRef Name="rvb2" ID="{6ED94C33-AE4C-4CBC-AD75-760C4272D1B7}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="door shut1_1" ID="{567E1676-FF6D-4F66-9663-A50EC3B06799}" ShortID="680226865" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="door shut1_1" ID="{51936832-A8EB-4680-877E-8CA53CA74465}" ShortID="454449915">
+													<Language>SFX</Language>
+													<AudioFile>door shut1_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="1066027588"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="door shut1_1" ID="{51936832-A8EB-4680-877E-8CA53CA74465}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="door shut2_1" ID="{6E1296AD-10BD-4D86-AAD2-179E99546984}" ShortID="881455880" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="door shut2_1" ID="{3E4152F1-99FF-46D0-BE2D-6A00F6EB742B}" ShortID="458589676">
+													<Language>SFX</Language>
+													<AudioFile>door shut2_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="559213883"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="door shut2_1" ID="{3E4152F1-99FF-46D0-BE2D-6A00F6EB742B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="door shut3_1" ID="{1E338B67-4FCC-4622-B574-96C3D202B650}" ShortID="802188792" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="door shut3_1" ID="{05617DCE-F038-46F0-93DC-9A5762279ACB}" ShortID="78198148">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00449307075127645"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00673960612691467"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>door shut3_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="585615623"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="door shut3_1" ID="{05617DCE-F038-46F0-93DC-9A5762279ACB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="door shut4_1" ID="{4AC05400-C972-4433-9259-9FD27BFB31AA}" ShortID="937991702" Type="SoundFX">
+											<ExcludedPlatformList>
+												<Platform>Android</Platform>
+											</ExcludedPlatformList>
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-200</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="door shut4_1" ID="{A509CC3A-BF8F-48AE-948E-D96293EFA338}" ShortID="625073912">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00149963530269876"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0074981765134938"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>door shut4_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="598173962"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="door shut4_1" ID="{A509CC3A-BF8F-48AE-948E-D96293EFA338}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="door shut5_1" ID="{A43B60C2-4210-4D61-8552-37E9199152CB}" ShortID="674879299" Type="SoundFX">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-200</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="door shut5_1" ID="{AC5FAAAF-98AB-4BA1-A746-BF7E68B6203F}" ShortID="970972274">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00299927060539752"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00749817651349381"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>door shut5_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="846681906"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="door shut5_1" ID="{AC5FAAAF-98AB-4BA1-A746-BF7E68B6203F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="door shut6_1" ID="{4485E1ED-8953-4D29-8732-10F7713EB2DD}" ShortID="49686865" Type="SoundFX">
+											<ExcludedPlatformList>
+												<Platform>Android</Platform>
+											</ExcludedPlatformList>
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>200</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="door shut6_1" ID="{F87F3588-51AB-4966-82E1-F121501127C2}" ShortID="704262867">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00149963530269876"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0224945295404814"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>door shut6_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="670195520"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="door shut6_1" ID="{F87F3588-51AB-4966-82E1-F121501127C2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="door shut7_1" ID="{D166779A-4DF5-470C-B319-64C1A01DB651}" ShortID="599959127" Type="SoundFX">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-300</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="door shut7_1" ID="{28AED390-55FF-440D-A134-B74170736DDB}" ShortID="422398595">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00299927060539752"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0569861415025529"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>door shut7_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="942376865"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="door shut7_1" ID="{28AED390-55FF-440D-A134-B74170736DDB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="door shut8_1" ID="{0DC954A0-D7D8-4BAA-A5AC-D48029C8CCAF}" ShortID="856457839" Type="SoundFX">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-300</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="door shut8_1" ID="{DC185CC5-BAE3-45A2-A201-2D1B0062BC5E}" ShortID="216144738">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00299927060539752"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0494879649890591"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>door shut8_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="401680823"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="door shut8_1" ID="{DC185CC5-BAE3-45A2-A201-2D1B0062BC5E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="door shut9_1" ID="{D508EF14-A8E5-4B17-9A05-9EF62C924864}" ShortID="1011482680" Type="SoundFX">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-300</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="door shut9_1" ID="{D0AAC152-C656-4100-8403-B0E2BF0C15BE}" ShortID="751371429">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00599854121079504"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0419897884755653"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>door shut9_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="507642210"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="door shut9_1" ID="{D0AAC152-C656-4100-8403-B0E2BF0C15BE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="door shut10_1" ID="{97C6BB57-3AF5-4AEC-836A-28216BDA01CE}" ShortID="145461828" Type="SoundFX">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-300</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="door shut10_1" ID="{BFF12D30-F40F-477F-B072-8CCA61862864}" ShortID="376739912">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00299343544857768"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.117409190371991"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>door shut10_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="621924902"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="door shut10_1" ID="{BFF12D30-F40F-477F-B072-8CCA61862864}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>
@@ -10494,6 +11252,10 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="buttscratch1" ID="{AECED268-4EB6-4020-B612-FF18864319D1}" ShortID="233307603">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.00789078156312625"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.143912825651303"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>dave\buttscratch1.wav</AudioFile>
 												</AudioFileSource>
@@ -10516,6 +11278,10 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="buttscratch2" ID="{FF134816-9EEB-4DC0-8C30-65EEA587B923}" ShortID="824313990">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.00864228456913828"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.133016032064128"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>dave\buttscratch2.wav</AudioFile>
 												</AudioFileSource>
@@ -10538,6 +11304,12 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="buttscratch3" ID="{7E5051E2-D3AE-4EC9-B9D9-A0609D67E4DC}" ShortID="218282206">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00422720440881763"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0122119238476954"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.240480961923848"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.370115230460922"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>dave\buttscratch3.wav</AudioFile>
 												</AudioFileSource>
@@ -10560,6 +11332,12 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="buttscratch4" ID="{1D771746-BE8C-4D5E-B9AE-F4AC679513F9}" ShortID="404632530">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0115230460921844"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.00851703406813628"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.122244488977956"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.253006012024048"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>dave\buttscratch4.wav</AudioFile>
 												</AudioFileSource>
@@ -10635,8 +11413,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 1" ID="{7701D464-5DA7-4683-9E35-2DE2EB83C864}" ShortID="510992843">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.20240480961924E-02"/>
-														<Property Name="TrimBegin" Type="Real64" Value="7.01402805611223E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0120240480961924"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00701402805611223"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>grunts\dave grunts 1.wav</AudioFile>
@@ -10658,7 +11436,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 10" ID="{45BC4865-DA12-4921-86EA-61F58923E6D1}" ShortID="645679551">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="9.01803607214424E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00901803607214424"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.456913827655311"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10681,7 +11459,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 11" ID="{B58B7133-B39B-47C6-9976-8DD4D246329E}" ShortID="635598483">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.20240480961924E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0120240480961924"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.30811623246493"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10704,7 +11482,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 12" ID="{792D68C9-F803-489D-9360-28A176A33318}" ShortID="706371641">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.35270541082164E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0135270541082164"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.179233466933868"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10727,7 +11505,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 13" ID="{331F6B3F-BF05-44A5-B27C-4C895538F026}" ShortID="597181408">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="7.51503006012023E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00751503006012023"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.101452905811623"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10750,7 +11528,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 14" ID="{1F8B3153-55BD-4AB0-9400-A209AF1A3F56}" ShortID="794015766">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="9.01803607214427E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00901803607214427"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.182364729458918"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10773,7 +11551,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 15" ID="{6CE65910-C82F-4AFB-9534-7D342F159558}" ShortID="26065425">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="5.63627254509018E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00563627254509018"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.157815631262525"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10796,7 +11574,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 16" ID="{28866224-81F3-4311-86BD-FD6AD3355EA0}" ShortID="30115822">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="3.0060120240481E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0030060120240481"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.185370741482966"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10819,7 +11597,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 17" ID="{47412853-3520-4B61-A9D3-DE3005690CCE}" ShortID="354171151">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="7.51503006012022E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00751503006012022"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.399799599198397"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10842,7 +11620,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 2" ID="{4968FD4A-5B17-49C5-9F0E-17474056D0CA}" ShortID="634867864">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="8.26653306613226E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00826653306613226"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.199148296593186"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10865,7 +11643,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 3" ID="{019DEDEE-5781-4D4F-B67C-A8C3D7684E3D}" ShortID="881265781">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="4.50901803607215E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00450901803607215"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.142034068136273"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10888,8 +11666,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 4" ID="{80F24AA3-8667-4423-A641-3E2BA9EE24A0}" ShortID="444280125">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="8.26653306613227E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="6.01202404809619E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00826653306613227"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00601202404809619"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>grunts\dave grunts 4.wav</AudioFile>
@@ -10911,7 +11689,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 5" ID="{0F572050-1D26-4916-8884-1E96E218CC8B}" ShortID="837032869">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="5.26052104208417E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00526052104208417"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.148046092184369"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10934,8 +11712,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 6" ID="{AC31F44B-8EFB-4040-9C19-C6153706756A}" ShortID="497404101">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="8.01603206412825E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="6.01202404809619E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00801603206412825"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00601202404809619"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>grunts\dave grunts 6.wav</AudioFile>
@@ -10957,7 +11735,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 7" ID="{572247B4-6BBB-4BBF-AD47-48DCB7A47000}" ShortID="543943558">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.40280561122244E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0140280561122244"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>grunts\dave grunts 7.wav</AudioFile>
@@ -10979,7 +11757,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 8" ID="{72934FB7-035C-4E11-94F4-C60D839D01F2}" ShortID="563855461">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.40280561122244E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0140280561122244"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.301603206412826"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -11002,7 +11780,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 9" ID="{0AB73B41-E19A-4CA9-B343-21DBD68D36E9}" ShortID="430918783">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="7.51503006012025E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00751503006012025"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.18937875751503"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -11714,7 +12492,7 @@
 													<ChildrenList>
 														<AudioFileSource Name="object impact light1" ID="{F86D2183-F604-4BF2-8E67-41AA138770EA}" ShortID="635644102">
 															<PropertyList>
-																<Property Name="FadeOutDuration" Type="Real64" Value="5.97647702407002E-02"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0597647702407002"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>impacts\object impact light1.wav</AudioFile>
@@ -11891,7 +12669,7 @@
 													<ChildrenList>
 														<AudioFileSource Name="object impact1" ID="{5B60DB1E-647C-4D8F-8A81-FAFADFBE22B9}" ShortID="836593034">
 															<PropertyList>
-																<Property Name="FadeOutDuration" Type="Real64" Value="9.84169857768053E-02"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0984169857768053"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>impacts\object impact1.wav</AudioFile>
@@ -13010,7 +13788,7 @@
 							<ChildrenList>
 								<AudioFileSource Name="kick" ID="{C1DB3D8A-EB9D-45AB-BF81-676EE8BC31CF}" ShortID="625149348">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="1.96936542669584E-02"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0196936542669584"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>kick.wav</AudioFile>
@@ -13586,6 +14364,37 @@
 						</ActorMixer>
 					</ChildrenList>
 				</Folder>
+				<ActorMixer Name="cinematics" ID="{0184CEC3-A5C6-46EA-80ED-B23DC49A3D38}" ShortID="371573878">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="CINEMATIC INTRO" ID="{E2BAA12D-E87E-43E0-8FDC-C54B98E63BE7}" ShortID="834334889" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CINEMATIC INTRO" ID="{B57B2C08-FA12-4453-B800-4C36CABB5E6B}" ShortID="203599200">
+									<Language>SFX</Language>
+									<AudioFile>CINEMATIC INTRO.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="CINEMATIC INTRO" ID="{B57B2C08-FA12-4453-B800-4C36CABB5E6B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

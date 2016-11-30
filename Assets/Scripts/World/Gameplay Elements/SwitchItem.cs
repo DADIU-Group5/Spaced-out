@@ -79,8 +79,6 @@ public class SwitchItem : MonoBehaviour {
 
                 hasBeenTriggered = true;
 
-                SwitchColor();
-
                 var evt = new ObserverEvent(EventName.SwitchPressed);
                 evt.payload.Add(PayloadConstants.SWITCH_ON, false);
                 Subject.instance.Notify(gameObject, evt);

@@ -40,7 +40,9 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
         camZoomStartPos = camZoomIn;
     }
 
-    // First do zooming in Update(), then place camera in front of objects if the current zoom position is incorrect
+    /// <summary>
+    /// First do zooming in Update(), then place camera in front of objects if the current zoom position is incorrect
+    /// </summary>
     void Update()
     {
         // First, check if there is a target. If not, don't do anything.
@@ -51,31 +53,25 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
 
         // Set position of pod to player position.
         pod.transform.position = target.transform.position;
-        
+
         // Perform the zooming of the camera if needed.
-        switch (zooming)
-        {
-            case Zoom.OUT:
-                PerformCameraZoom(camZoomStartPos, camZoomOut);
-                break;
-            case Zoom.IN:
-                PerformCameraZoom(camZoomStartPos, camZoomIn);
-                break;
-            case Zoom.NONE:
-                //camZoomCurrent = camZoomIn;
-                break;
-            default:
-                break;
-        }
-        cam.transform.localPosition = camZoomCurrent;
+        HandleZoom();
 
         // Check if camera is inside an object, and if so, put it in front of the object.
+        HandleCameraInsideObject();
+    }
+
+    /// <summary>
+    /// Checks if camera is inside an object, and if so, put it in front of it instead
+    /// </summary>
+    private void HandleCameraInsideObject()
+    {
         direction = cam.transform.position - target.transform.position;
         int layermask1 = 1 << LayerMask.NameToLayer("Golfball");
         int layermask2 = 1 << LayerMask.NameToLayer("Ragdoll");
         int layermask3 = 1 << LayerMask.NameToLayer("Ignore Raycast");
         int finalmask = ~(layermask1 | layermask2 | layermask3);
-        
+
         if (Physics.SphereCast(target.transform.position, bufferRadius, direction.normalized, out hit, direction.magnitude, finalmask))
         {
             cam.transform.position = target.transform.position + hit.distance * direction.normalized;
@@ -99,6 +95,7 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
         }
 
         /*
+         * Old version that only raycasts.
         if (Physics.Raycast(target.transform.position, direction.normalized, out hit, maxDistance: direction.magnitude, layerMask: finalmask))
         {
             cam.transform.position = hit.point;
@@ -106,6 +103,31 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
         */
     }
 
+    /// <summary>
+    /// Handles delegation of zooming functionality
+    /// </summary>
+    private void HandleZoom()
+    {
+        switch (zooming)
+        {
+            case Zoom.OUT:
+                PerformCameraZoom(camZoomStartPos, camZoomOut);
+                break;
+            case Zoom.IN:
+                PerformCameraZoom(camZoomStartPos, camZoomIn);
+                break;
+            case Zoom.NONE:
+                //camZoomCurrent = camZoomIn;
+                break;
+            default:
+                break;
+        }
+        cam.transform.localPosition = camZoomCurrent;
+    }
+    
+    /// <summary>
+    /// Performs zooming functionality
+    /// </summary>
     private void PerformCameraZoom(Vector3 start, Vector3 end)
     {
         float t = zoomCurrent / zoomDuration;

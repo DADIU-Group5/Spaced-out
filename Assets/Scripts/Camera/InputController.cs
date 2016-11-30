@@ -203,6 +203,10 @@ public class InputController : MonoBehaviour, Observer
         switch (evt.eventName)
         {
             case EventName.PlayerSpawned:
+                if (!gameObject.activeSelf)
+                {
+                    gameObject.SetActive(true);
+                }
                 inputDisabled = false;
                 cameraInputDisabled = false;
                 GameObject go = evt.payload[PayloadConstants.PLAYER] as GameObject;
@@ -211,7 +215,7 @@ public class InputController : MonoBehaviour, Observer
                 transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
                 transform.Rotate(new Vector3(0, player.transform.eulerAngles.y - transform.eulerAngles.y, 0));
                 cameraController.pitch.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
-
+                gameObject.SetActive(true);
                 break;
             case EventName.DisableInput:
             case EventName.StartCutscene:

@@ -64,6 +64,12 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     // called by animation blender when the death animation is finished (wierd workaround by bjørn)
     public void DeathAnimationOver()
     {
+        var evt = new ObserverEvent(EventName.PlayerFadeValue);
+        evt.payload.Add(PayloadConstants.PERCENT, 0f);
+        evt.payload.Add(PayloadConstants.TIME, ragdollDuration);
+        Subject.instance.Notify(gameObject, evt);
+        evt = new ObserverEvent(EventName.PlayerDeadEffect);
+        Subject.instance.Notify(gameObject, evt);
         // enable ragdoll
         GetComponentInChildren<RagdollAnimationBlender>().EnableRagdoll();
         // throw respawn event after small delay

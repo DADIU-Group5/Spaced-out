@@ -25,6 +25,10 @@ public class TutorialStage1 : MonoBehaviour, Observer
     void Start()
     {
         Subject.instance.AddObserver(this);
+
+        var evt = new ObserverEvent(EventName.PlayerSpawned);
+        evt.payload.Add(PayloadConstants.PLAYER, player);
+        Subject.instance.Notify(gameObject, evt);
         // disable key
         key = GameObject.FindGameObjectWithTag("Key");
         key.SetActive(false);

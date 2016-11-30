@@ -10,6 +10,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	189158602	wire8			\Default Work Unit\gal\wire\wire8	
 	189158603	wire9			\Default Work Unit\gal\wire\wire9	
 	274288443	menuScroll			\Default Work Unit\UI\menuScroll	
+	379256811	daveStopCharge			\Default Work Unit\dave\daveStopCharge	
 	433216386	explosive			\Default Work Unit\enviroment\explosive	
 	512507780	daveJetpackRandomExhaust			\Default Work Unit\dave\daveJetpackRandomExhaust	
 	522694124	daveRandomGrunt			\Default Work Unit\dave\daveRandomGrunt	
@@ -319,7 +320,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	143105393	wires6	Y:\Spaced-out\Wwise\.cache\Android\SFX\GAL\English\electrocute\final\wires6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires6\wires6		39432
 	145958102	fire3	Y:\Spaced-out\Wwise\.cache\Android\SFX\GAL\English\fire\final\fire3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire2\fire3		56194
 	146173779	lowOxygenDan4	Y:\Spaced-out\Wwise\.cache\Android\SFX\Danish\low oxygen\lowOxygen4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 2\lowOxygenDan4		51729
-	153856534	hydralics3	Y:\Spaced-out\Wwise\.cache\Android\SFX\atmos\hydralics3_2E8ADA39.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hydralics\hydralics3		43626
+	153856534	hydralics3	Y:\Spaced-out\Wwise\.cache\Android\SFX\atmos\hydralics3_9BAEF92B.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hydralics\hydralics3		43626
 	163750867	outofocygen2	Y:\Spaced-out\Wwise\.cache\Android\SFX\GAL\English\out of oxygen\final\outofocygen2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 8\outofocygen2		73090
 	182772970	metal impact no tone3	Y:\Spaced-out\Wwise\.cache\Android\SFX\metal\metal impact no tone3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone3		42153
 	186452641	fire4	Y:\Spaced-out\Wwise\.cache\Android\SFX\GAL\English\fire\final\fire4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire3\fire4		49257
@@ -362,13 +363,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	271878563	putoutfire3	Y:\Spaced-out\Wwise\.cache\Android\SFX\putoutfire3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\putoutfire\putoutfire3		35666
 	273961102	door open slide 1	Y:\Spaced-out\Wwise\.cache\Android\SFX\door slide\door open slide 1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\door slide\door slide open\door open slide 1		11319
 	280545090	metal impact no tone1	Y:\Spaced-out\Wwise\.cache\Android\SFX\metal\metal impact no tone1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone1		43879
-	282295557	hydralics6	Y:\Spaced-out\Wwise\.cache\Android\SFX\atmos\hydralics6_D841906E.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hydralics\hydralics6		5850
+	282295557	hydralics6	Y:\Spaced-out\Wwise\.cache\Android\SFX\atmos\hydralics6_37A7C3D3.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hydralics\hydralics6		5850
 	283467246	associal	Y:\Spaced-out\Wwise\.cache\Android\SFX\GAL\Danish\general remarks\final\remarkDan10_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark3\associal		40815
 	286410796	Det er ikke kun ventilatoren der blæser på dig_ _3_5	Y:\Spaced-out\Wwise\.cache\Android\SFX\GAL\Danish\fan\Det er ikke kun ventilatoren der blæser på dig. .3.5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan5\Det er ikke kun ventilatoren der blæser på dig_ _3_5		41565
 	289304815	blip blop random1	Y:\Spaced-out\Wwise\.cache\Android\SFX\blip blop\blip blop random1_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random1		42026
 	295334028	wires7	Y:\Spaced-out\Wwise\.cache\Android\SFX\GAL\English\electrocute\final\wires7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires7\wires7		59051
 	297086226	blip blop sci fi forest short1	Y:\Spaced-out\Wwise\.cache\Android\SFX\blip blop\blip blop sci fi forest short1_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short1		36280
-	298504356	hydralics8	Y:\Spaced-out\Wwise\.cache\Android\SFX\atmos\hydralics8_FA9BEB1D.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hydralics\hydralics8		32678
+	298504356	hydralics8	Y:\Spaced-out\Wwise\.cache\Android\SFX\atmos\hydralics8_ED23590B.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hydralics\hydralics8		32678
 	298840236	outOfOxygenDan5	Y:\Spaced-out\Wwise\.cache\Android\SFX\Danish\out of oxygen\outOfOxygenDan5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 7\outOfOxygenDan5		28804
 	318956019	wiresDan6	Y:\Spaced-out\Wwise\.cache\Android\SFX\Danish\electrocute\wiresDan6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires3\wiresDan6		50755
 	322083311	narrativeDan3	Y:\Spaced-out\Wwise\.cache\Android\SFX\narrative\narrativeDan3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative3\narrativeDan3		66264
@@ -402,7 +403,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	418672149	remarks14	Y:\Spaced-out\Wwise\.cache\Android\SFX\GAL\English\general remarks\final\remarks14_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark14\remarks14		43195
 	421879619	heavy impact2	Y:\Spaced-out\Wwise\.cache\Android\SFX\impacts\heavy impact2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact2		5555
 	422239685	heavy impact8	Y:\Spaced-out\Wwise\.cache\Android\SFX\impacts\heavy impact8_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact8		6672
-	424356546	hydralics7	Y:\Spaced-out\Wwise\.cache\Android\SFX\atmos\hydralics7_439EC72A.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hydralics\hydralics7		25271
+	424356546	hydralics7	Y:\Spaced-out\Wwise\.cache\Android\SFX\atmos\hydralics7_8EDB87BA.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hydralics\hydralics7		25271
 	427171029	launch synth5	Y:\Spaced-out\Wwise\.cache\Android\SFX\launch synth5_ED6F100E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth5		76118
 	430918783	dave grunts 9	Y:\Spaced-out\Wwise\.cache\Android\SFX\grunts\dave grunts 9_15E473EF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 9		17750
 	432234945	blip blop sci fi forest short9	Y:\Spaced-out\Wwise\.cache\Android\SFX\blip blop\blip blop sci fi forest short9_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short9		20942
@@ -492,7 +493,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	671712218	remarks16	Y:\Spaced-out\Wwise\.cache\Android\SFX\GAL\English\general remarks\final\remarks16_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark16\remarks16		53515
 	671860227	remarks5	Y:\Spaced-out\Wwise\.cache\Android\SFX\GAL\English\general remarks\final\remarks5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark5\remarks5		106811
 	672209193	blip blop random23	Y:\Spaced-out\Wwise\.cache\Android\SFX\blip blop\blip blop random23_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random23		68518
-	674017986	hydralics4	Y:\Spaced-out\Wwise\.cache\Android\SFX\atmos\hydralics4_A3BF6D62.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hydralics\hydralics4		4875
+	674017986	hydralics4	Y:\Spaced-out\Wwise\.cache\Android\SFX\atmos\hydralics4_D737BEE4.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hydralics\hydralics4		4875
 	681768169	metal impact C4	Y:\Spaced-out\Wwise\.cache\Android\SFX\metal\C\metal impact C4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\C\metal impact C4		32064
 	684420584	9	Y:\Spaced-out\Wwise\.cache\Android\SFX\GAL\English\electrocute\final\9_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires8\9		106798
 	690851100	narrative6	Y:\Spaced-out\Wwise\.cache\Android\SFX\GAL\English\narrative\final\narrative6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\what are you doing\narrative6		51022
@@ -510,7 +511,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	734779861	blip blop sci fi forest short8	Y:\Spaced-out\Wwise\.cache\Android\SFX\blip blop\blip blop sci fi forest short8_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short8		31341
 	739005694	metal impact no tone2	Y:\Spaced-out\Wwise\.cache\Android\SFX\metal\metal impact no tone2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone2		45127
 	746671419	remarks4	Y:\Spaced-out\Wwise\.cache\Android\SFX\GAL\English\general remarks\final\remarks4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark4\remarks4		34914
-	749622965	hydralics9	Y:\Spaced-out\Wwise\.cache\Android\SFX\atmos\hydralics9_8EF2167C.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hydralics\hydralics9		31851
+	749622965	hydralics9	Y:\Spaced-out\Wwise\.cache\Android\SFX\atmos\hydralics9_3E9018C6.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hydralics\hydralics9		31851
 	751321384	light impact7	Y:\Spaced-out\Wwise\.cache\Android\SFX\impacts\light impact7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact7		4001
 	753447221	blip blop random2	Y:\Spaced-out\Wwise\.cache\Android\SFX\blip blop\blip blop random2_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random2		36960
 	755883233	object impact7	Y:\Spaced-out\Wwise\.cache\Android\SFX\impacts\object impact7_6042C426.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact7		4621
@@ -576,7 +577,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	964917836	switchDAn4	Y:\Spaced-out\Wwise\.cache\Android\SFX\Danish\switch\switchDAn4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch2\switchDAn4		79497
 	969317301	blip blop sci fi forest short10	Y:\Spaced-out\Wwise\.cache\Android\SFX\blip blop\blip blop sci fi forest short10_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short10		44897
 	971379015	hello dave mix 2	Y:\Spaced-out\Wwise\.cache\Android\SFX\hello dave mix 2_824B34CA.wem		\Interactive Music Hierarchy\Default Work Unit\musicmain\hello dave mix 2\hello dave mix 2		3999681
-	971397170	hydralics1	Y:\Spaced-out\Wwise\.cache\Android\SFX\atmos\hydralics1_8163BE76.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics1		20801
+	971397170	hydralics1	Y:\Spaced-out\Wwise\.cache\Android\SFX\atmos\hydralics1_D8C64C02.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics1		20801
 	972817918	skibs rumlen knirk 2	Y:\Spaced-out\Wwise\.cache\Android\SFX\skibsatmos\skibs rumlen knirk 2_76119463.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\knirken\skibs rumlen knirk 2		16733
 	975186946	virkelig stor knap	Y:\Spaced-out\Wwise\.cache\Android\SFX\Danish\switch\switchDAn1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch3\virkelig stor knap		38114
 	977744412	narrative3	Y:\Spaced-out\Wwise\.cache\Android\SFX\GAL\English\narrative\final\narrative3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\narrative3\narrative3		66151

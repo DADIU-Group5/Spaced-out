@@ -36,12 +36,11 @@ namespace AK
         static const AkUniqueID DAVESCRATCH = 918879319U;
         static const AkUniqueID DAVESQUISHBETWEENDOORS = 1016866911U;
         static const AkUniqueID DAVESTATICCOLLISION = 2519729295U;
+        static const AkUniqueID DAVESTOPCHARGE = 379256811U;
         static const AkUniqueID DAVEVENT = 2108630538U;
         static const AkUniqueID DEATH = 779278001U;
         static const AkUniqueID DOOROPEN = 1404805401U;
         static const AkUniqueID DOORSHUT = 3782881839U;
-        static const AkUniqueID DOORSLIDECLOSE = 1155812980U;
-        static const AkUniqueID DOORSLIDEOPEN = 3388975760U;
         static const AkUniqueID ELECTRICITY = 2917121896U;
         static const AkUniqueID EXIT = 26822469U;
         static const AkUniqueID EXPLOSIVE = 433216386U;
@@ -155,17 +154,6 @@ namespace AK
             } // namespace STATE
         } // namespace GALLANGUAGE
 
-        namespace PAUSE
-        {
-            static const AkUniqueID GROUP = 3092587493U;
-
-            namespace STATE
-            {
-                static const AkUniqueID PAUSED = 319258907U;
-                static const AkUniqueID UNPAUSED = 1365518790U;
-            } // namespace STATE
-        } // namespace PAUSE
-
         namespace POWER
         {
             static const AkUniqueID GROUP = 2391494160U;
@@ -209,12 +197,10 @@ namespace AK
     {
         static const AkUniqueID EFFECTSVOLUME = 640585335U;
         static const AkUniqueID FANFORCE = 911290369U;
-        static const AkUniqueID GALSIDECHAIN = 126297577U;
         static const AkUniqueID JETPACKCHARGELEVEL = 2371628509U;
         static const AkUniqueID MASTERHIPASS = 3129080009U;
         static const AkUniqueID MASTERLOPASS = 3097485287U;
         static const AkUniqueID MASTERVOLUME = 2918011349U;
-        static const AkUniqueID MUSICSIDECHAIN = 2680026934U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;

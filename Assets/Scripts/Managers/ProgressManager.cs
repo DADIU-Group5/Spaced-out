@@ -64,7 +64,7 @@ public class ProgressManager : Singleton<ProgressManager> {
         }
     }
 
-    public void SetShotCount(int level, int count)
+    public bool SetShotCount(int level, int count)
     {
         level--;
         if (count <= GenerationDataManager.instance.GetShotCount()) {
@@ -73,12 +73,15 @@ public class ProgressManager : Singleton<ProgressManager> {
                 progress.levels[level].shotCount = true;
                 progress.levels[level].bestShotCount = count;
                 progress.stars++;
+                return true;
             }
             else if(count < progress.levels[level].bestShotCount)
             {
                 progress.levels[level].bestShotCount = count;
+                return true;
             }
         }
+        return false;
     }
 
     // returns an array of 3 bools indicating if medals are completed

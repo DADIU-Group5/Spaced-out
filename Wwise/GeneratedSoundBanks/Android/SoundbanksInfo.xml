@@ -54,6 +54,7 @@
 				<Event Id="918879319" Name="daveScratch" ObjectPath="\Events\Default Work Unit\dave\daveScratch"/>
 				<Event Id="1016866911" Name="daveSquishBetweenDoors" ObjectPath="\Events\Default Work Unit\dave\daveSquishBetweenDoors"/>
 				<Event Id="2519729295" Name="daveStaticCollision" ObjectPath="\Events\Default Work Unit\dave\daveStaticCollision"/>
+				<Event Id="379256811" Name="daveStopCharge" ObjectPath="\Events\Default Work Unit\dave\daveStopCharge"/>
 				<Event Id="2108630538" Name="daveVent" ObjectPath="\Events\Default Work Unit\dave\daveVent"/>
 				<Event Id="779278001" Name="death" ObjectPath="\Events\Default Work Unit\gameState\death"/>
 				<Event Id="1404805401" Name="doorOpen" ObjectPath="\Events\Default Work Unit\enviroment\doorOpen"/>
@@ -346,7 +347,7 @@
 				</File>
 				<File Id="153856534" Language="SFX">
 					<ShortName>atmos\hydralics3.wav</ShortName>
-					<Path>SFX/atmos/hydralics3_2E8ADA39.wem</Path>
+					<Path>SFX/atmos/hydralics3_9BAEF92B.wem</Path>
 				</File>
 				<File Id="163750867" Language="SFX">
 					<ShortName>GAL\English\out of oxygen\final\outofocygen2.wav</ShortName>
@@ -518,7 +519,7 @@
 				</File>
 				<File Id="282295557" Language="SFX">
 					<ShortName>atmos\hydralics6.wav</ShortName>
-					<Path>SFX/atmos/hydralics6_D841906E.wem</Path>
+					<Path>SFX/atmos/hydralics6_37A7C3D3.wem</Path>
 				</File>
 				<File Id="283467246" Language="SFX">
 					<ShortName>GAL\Danish\general remarks\final\remarkDan10.wav</ShortName>
@@ -542,7 +543,7 @@
 				</File>
 				<File Id="298504356" Language="SFX">
 					<ShortName>atmos\hydralics8.wav</ShortName>
-					<Path>SFX/atmos/hydralics8_FA9BEB1D.wem</Path>
+					<Path>SFX/atmos/hydralics8_ED23590B.wem</Path>
 				</File>
 				<File Id="298840236" Language="SFX">
 					<ShortName>Danish\out of oxygen\outOfOxygenDan5.wav</ShortName>
@@ -678,7 +679,7 @@
 				</File>
 				<File Id="424356546" Language="SFX">
 					<ShortName>atmos\hydralics7.wav</ShortName>
-					<Path>SFX/atmos/hydralics7_439EC72A.wem</Path>
+					<Path>SFX/atmos/hydralics7_8EDB87BA.wem</Path>
 				</File>
 				<File Id="427171029" Language="SFX">
 					<ShortName>launch synth5.wav</ShortName>
@@ -1042,7 +1043,7 @@
 				</File>
 				<File Id="674017986" Language="SFX">
 					<ShortName>atmos\hydralics4.wav</ShortName>
-					<Path>SFX/atmos/hydralics4_A3BF6D62.wem</Path>
+					<Path>SFX/atmos/hydralics4_D737BEE4.wem</Path>
 				</File>
 				<File Id="681768169" Language="SFX">
 					<ShortName>metal\C\metal impact C4.wav</ShortName>
@@ -1114,7 +1115,7 @@
 				</File>
 				<File Id="749622965" Language="SFX">
 					<ShortName>atmos\hydralics9.wav</ShortName>
-					<Path>SFX/atmos/hydralics9_8EF2167C.wem</Path>
+					<Path>SFX/atmos/hydralics9_3E9018C6.wem</Path>
 				</File>
 				<File Id="751321384" Language="SFX">
 					<ShortName>impacts\light impact7.wav</ShortName>
@@ -1378,7 +1379,7 @@
 				</File>
 				<File Id="971397170" Language="SFX">
 					<ShortName>atmos\hydralics1.wav</ShortName>
-					<Path>SFX/atmos/hydralics1_8163BE76.wem</Path>
+					<Path>SFX/atmos/hydralics1_D8C64C02.wem</Path>
 				</File>
 				<File Id="972817918" Language="SFX">
 					<ShortName>skibsatmos\skibs rumlen knirk 2.wav</ShortName>

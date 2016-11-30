@@ -35,6 +35,8 @@
 						<Property Name="SlewRateUp" Type="Real64" Value="500"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="musicSidechain" ID="{181A310C-6E70-4F86-B312-63125AE5BB3A}"/>
+				<GameParameter Name="galSidechain" ID="{60BF31E9-478B-4DE4-954F-45BFC64AB433}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

@@ -35,6 +35,7 @@
     LowOnOxygen,
     PlayerLaunchModeToggle,
     PlayerLaunchCancel,
+    PlayerReadyForLaunch,
     ComicsUpdate,
     ComicPickup,
     GodMode,
@@ -52,5 +53,6 @@
     EnableInput,
     UIButton,
     DisableCameraInput,
-    EnableCameraInput
+    EnableCameraInput,
+    ChangeLanguage
 }

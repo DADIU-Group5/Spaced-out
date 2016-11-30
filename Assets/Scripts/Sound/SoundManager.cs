@@ -7,30 +7,17 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
     bool chargePlaying = false;
 
-    // TODO: hide from editor 
-    [Range(0, 100)]
-    public float masterVolume;
-
-    [Range(0, 100)]
-    public float musicVolume;
-
-    [Range(0, 100)]
-    public float effectsVolume;
-
-    public bool mute = false;
-
-    private DoorOpenCloseTrigger doorTrigger;
-    public BarrelTrigger barrelTrigger;
+    private float masterVolume;
+    private float musicVolume;
+    private float effectsVolume;
+    private bool mute = false;
 
     // Use this for initialization
     void Start()
     {
         Subject.instance.AddObserver(this);
 
-        doorTrigger = GetComponent<DoorOpenCloseTrigger>();
-
         AkSoundEngine.LoadBank("soundbank_alpha", AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
-        AkSoundEngine.SetSwitch("galVersion", "v1", gameObject);
 
         var settings = SettingsManager.instance.settings;
 
@@ -41,6 +28,8 @@ public class SoundManager : Singleton<SoundManager>, Observer
         mute = settings.mute;
 
         MuteSound(mute);
+
+        SetLanguage(settings.language);
     }
 
     private class Waiter
@@ -50,10 +39,6 @@ public class SoundManager : Singleton<SoundManager>, Observer
             yield return new WaitForSeconds(10);
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    { }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
@@ -81,10 +66,12 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
             case EventName.OnFire:
                 PlayEvent(SoundEventConstants.DAVE_CATCH_FIRE);
+                Invoke("PutOutDave", 5.0f);
                 break;
 
             case EventName.Electrocuted:
                 PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
+                Invoke("StopElectrocution", 5.0f);
                 break;
 
             case EventName.PlayerCharge:
@@ -122,12 +109,39 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 PlayEvent(SoundEventConstants.DAVE_VENT);
                 break;
 
-            case EventName.ToggleUI:
-                // TODO: Use payload for different clicks.
-                PlayEvent(SoundEventConstants.MENU_CLICK_FORWARDS);
+            case EventName.UIButton:
+                PlayEvent((string)evt.payload[PayloadConstants.TYPE]);
+                break;
+            case EventName.SwitchPressed:
+                if ((bool)evt.payload[PayloadConstants.SWITCH_ON])
+                    PlayEvent(SoundEventConstants.SWITCH_ON);
+                else
+                {
+                    PlayEvent(SoundEventConstants.SWITCH_OFF);
+                }
+                break;
+            case EventName.ChangeLanguage:
+                SetLanguage((Language)evt.payload[PayloadConstants.LANGUAGE]);
                 break;
         }
+    }
 
+    private void SetLanguage(Language language)
+    {
+        if (language == Language.English)
+            AkSoundEngine.SetState("galLanguage", "Eng");
+        else
+            AkSoundEngine.SetState("galLanguage", "Dan");
+    }
+
+    private void PutOutDave()
+    {
+        StopEvent(SoundEventConstants.DAVE_CATCH_FIRE, 0.5f);
+    }
+
+    private void StopElectrocution()
+    {
+        StopEvent(SoundEventConstants.DAVE_ELECTROCUTE, 0.5f);
     }
 
     private void PlayEvent(string eventName)

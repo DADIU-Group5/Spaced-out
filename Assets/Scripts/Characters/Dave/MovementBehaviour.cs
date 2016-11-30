@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 [RequireComponent(typeof(PlayerController))]
 [RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(OxygenController))]
 public class MovementBehaviour : MonoBehaviour
 {
     // For ensuring that the player at some point starts slowing
@@ -23,7 +21,6 @@ public class MovementBehaviour : MonoBehaviour
 
     private bool canSlowDown;
     private Rigidbody body;
-    private OxygenController oxygen;
     private PlayerController playerController;
     private RagdollAnimationBlender animationBlender;
     private bool ragdolling;
@@ -49,7 +46,6 @@ public class MovementBehaviour : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody>();
-        oxygen = GetComponent<OxygenController>();
         playerController = GetComponent<PlayerController>();
         animationBlender = GetComponentInChildren<RagdollAnimationBlender>();
     }
@@ -85,15 +81,21 @@ public class MovementBehaviour : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        bool isStatic = !other.gameObject.CompareTag("Floating Object");
+
         // enable ragdoll
-        if (body.velocity.magnitude > ragdollThreshold)
+        if (isStatic)
         {
-            animationBlender.EnableRagdoll();
-            ragdolling = true;
+            if (body.velocity.magnitude > ragdollThreshold)
+            {
+                animationBlender.EnableRagdoll();
+                ragdolling = true;
+            }
         }
+        
 
         var evt = new ObserverEvent(EventName.Collision);
-        evt.payload.Add(PayloadConstants.COLLISION_STATIC, other.gameObject.layer != LayerMask.NameToLayer("Ignore Raycast"));
+        evt.payload.Add(PayloadConstants.COLLISION_STATIC, isStatic);
         evt.payload.Add(PayloadConstants.VELOCITY, body.velocity.magnitude);
         evt.payload.Add(PayloadConstants.POSITION, other.contacts[0].point);
         Subject.instance.Notify(gameObject, evt);

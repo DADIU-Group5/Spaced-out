@@ -9,18 +9,17 @@ public class WinMenu : MonoBehaviour, Observer
     private bool playerIsDead = false;
     private bool playerWon = false;
 
-    public Button nextLevelBtn;
+    public GameObject levelCompletedMenu;
+    public GameObject adsMenu;
+    public GameObject winMenu;
 
-    public Text winText;
-    public Text mainMenuText;
-    public Text NextLevelText;
-    public Text ReplayLevelText;
+    public Button nextLevelBtn;
 
     [HideInInspector]
     public int level = 1;
 
-    [Header("After how long does the win screen appear:")]
-    [Header("If Zero, zero times passes.")]
+    [Header("After how long does the win screen appear:", order=1)]
+    [Header("If Zero, zero times passes.", order =2)]
     public float timeTilWinScreen = 0;
 
     public List<GameObject> goodImages;
@@ -104,7 +103,6 @@ public class WinMenu : MonoBehaviour, Observer
         bool didntDie = medals[1];
         bool collectedComics = medals[2];
         
-        Debug.Log("Testing medals! Completion: " + finished + " comics: " + collectedComics + " and didn't die: " + didntDie);
         goodImages[0].SetActive(finished);
         badImages[0].SetActive(!finished);
 
@@ -113,6 +111,34 @@ public class WinMenu : MonoBehaviour, Observer
 
         goodImages[2].SetActive(collectedComics);
         badImages[2].SetActive(!collectedComics);
+    }
+
+    public void ShowNextWinMenu()
+    {
+        if (SettingsManager.instance.GetPremium() == false)
+        {
+            levelCompletedMenu.SetActive(false);
+            adsMenu.SetActive(true);
+
+        }
+        else
+        {
+            ShowLastWinMenu();
+        }
+    }
+
+    public void ShowLastWinMenu()
+    {
+        if (SettingsManager.instance.GetPremium() == false)
+        {
+            adsMenu.SetActive(false);
+        }
+        else
+        {
+            levelCompletedMenu.SetActive(false);
+        }
+
+        winMenu.SetActive(true);
     }
 
     /// <summary>
@@ -126,20 +152,12 @@ public class WinMenu : MonoBehaviour, Observer
             yield return new WaitForSeconds(timeTilWinScreen);
 
             //turn on all the UI elements in the objectholder...
-            for (int i = 0; i < transform.childCount; i++)
+            for (int i = 0; i < levelCompletedMenu.transform.childCount; i++)
             {
-                transform.GetChild(i).gameObject.SetActive(true);
+                levelCompletedMenu.transform.GetChild(i).gameObject.SetActive(true);
             }
+            levelCompletedMenu.SetActive(true);
             playerWon = true;
-
-            if (winText != null)
-                winText.text = Translator.instance.Get("you win") + "!";
-            if (mainMenuText != null)
-                mainMenuText.text = Translator.instance.Get("main menu");
-            if (NextLevelText!= null)
-                NextLevelText.text = Translator.instance.Get("next level");
-            if (ReplayLevelText != null)
-                ReplayLevelText.text = Translator.instance.Get("replay");
 
             SetBadges();
         }

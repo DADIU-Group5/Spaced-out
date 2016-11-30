@@ -18,7 +18,7 @@ public class RoomFixer : MonoBehaviour {
         Setup();
         //FixSwitch();
         //FixPickups();
-        MakeStatic(room.shapingParent);
+        /*MakeStatic(room.shapingParent);
         MakeStatic(room.switchParent);
         MakeStatic(room.enviromentalObjectsParent);
         MakeStatic(room.doorParent);
@@ -27,7 +27,8 @@ public class RoomFixer : MonoBehaviour {
         if(room.decorParent == null)
         {
             room.decorParent = GameObject.Find("Decor").transform;
-        }
+        }*/
+        FixSize(room.shapingParent);
     }
 
     void MakeStatic(Transform parent)
@@ -118,6 +119,71 @@ public class RoomFixer : MonoBehaviour {
                 Debug.Log("Already had: " + typeof(T).ToString());
             }
         }
-        return listToFix; ;
+        return listToFix;
+    }
+
+    void FixSize(Transform parent)
+    {
+        foreach (Transform item in parent)
+        {
+            if(item == parent)
+            {
+                continue;
+            }
+            if(item.GetComponent<MeshRenderer>() != null)
+            {
+                item.localScale = fixScale(item.localScale);
+            }
+
+            FixSize(item);
+        }
+    }
+
+    Vector3 fixScale(Vector3 oldScale)
+    {
+        float x = oldScale.x;
+        float y = oldScale.y;
+        float z = oldScale.z;
+
+        if (x == 1)
+        {
+            x = 1;
+        }
+        else if(x < 1)
+        {
+            x = 1.01277f / 2f;
+        }
+        else
+        {
+            x = 1.01277f;
+        }
+
+        if (y == 1)
+        {
+            y = 1;
+        }
+        else if (y < 1)
+        {
+            y = 1.01277f / 2f;
+        }
+        else
+        {
+            y = 1.01277f;
+        }
+
+        if (z == 1)
+        {
+            z = 1;
+        }
+        else if (z < 1)
+        {
+            z = 1.01277f / 2f;
+        }
+        else
+        {
+            z = 1.01277f;
+        }
+
+        return new Vector3(x, y, z);
     }
 }

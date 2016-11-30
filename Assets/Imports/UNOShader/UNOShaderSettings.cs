@@ -22,7 +22,7 @@ public static class UNOShaderSettings
 
 
 
-	public static string UNOShaderDirPath ="UNOShader/";//<<--- Change this path if UNOshader is in a different Directory ( path starts from the Assets directory)
+	public static string UNOShaderDirPath ="Imports/UNOShader/";//<<--- Change this path if UNOshader is in a different Directory ( path starts from the Assets directory)
 	public static bool UNOShaderDirCorrectPath = true;
 	public static string helpLink = "http://www.unoverse.com/unoshader";
 		

@@ -11,6 +11,18 @@ public class EntryCutScene : MonoBehaviour {
     Transform playerObj;
     GameObject particles;
 
+    [Header("Cameras")]
+    public GameObject mainCameraPod;
+    public GameObject zoomCamera;
+
+    public float zoomSpeed = 2.0f;
+    public GameObject finalKey;
+   
+    private Vector3 keyPosition;
+    private Vector3 orgPosition;
+    private bool zoomingIn = false;
+    private bool backToDave = false;
+
     void Awake()
     {
         GameObject keyModel = Instantiate(keyPrefab, key.transform.position, Quaternion.identity, key.transform) as GameObject;
@@ -30,12 +42,57 @@ public class EntryCutScene : MonoBehaviour {
         playerObj.position = playerPos.position;
         playerObj.rotation = playerPos.rotation;
         playerObj.parent = playerPos;
-        player.GetComponentInChildren<Animator>().SetTrigger("FakeFly");
+        player.GetComponentInChildren<Animator>().SetBool("Force Fly", true);
+        //player.GetComponentInChildren<Animator>().SetTrigger("Pick Up");
         particles = player.GetComponent<PlayerController>().chargeParticle;
         player.GetComponent<PlayerController>().chargeParticle = null;
+
         particles.SetActive(true);
         cam.gameObject.SetActive(true);
         anim.SetTrigger("Start");
+    }
+
+    void ZoomInOnKey()
+    {
+        zoomCamera.SetActive(true);
+        keyPosition = finalKey.transform.position;
+        orgPosition = zoomCamera.transform.position;
+        zoomingIn = true;
+    }
+
+    void Update()
+    {
+        if (zoomingIn)
+        {
+            float step = zoomSpeed * Time.deltaTime;
+            zoomCamera.transform.position = Vector3.MoveTowards(zoomCamera.transform.position, keyPosition, step);
+
+            //if we're in range, stop zooming.
+            if (Vector3.Distance(zoomCamera.transform.position, keyPosition) < 2f)
+            {
+                zoomingIn = false;
+                StartCoroutine(waitAfterZooming());
+            }
+        }
+
+        if (backToDave)
+        {
+            float step = zoomSpeed*2 * Time.deltaTime;
+            zoomCamera.transform.position = Vector3.MoveTowards(zoomCamera.transform.position, orgPosition, step);
+
+            //if we're in range, stop zooming.
+            if (Vector3.Distance(zoomCamera.transform.position, orgPosition) < 1f)
+            {
+                backToDave = false;
+                zoomCamera.SetActive(false);
+            }
+        }
+    }
+
+    IEnumerator waitAfterZooming()
+    {
+        yield return new WaitForSeconds(0.5f);
+        backToDave = true;
     }
 
     public void Ended()
@@ -60,7 +117,8 @@ public class EntryCutScene : MonoBehaviour {
     {
         particles.SetActive(false);
         playerObj.gameObject.GetComponent<PlayerController>().chargeParticle = particles;
-        playerObj.gameObject.GetComponentInChildren<Animator>().SetTrigger("Ready To Launch");
+        playerObj.gameObject.GetComponentInChildren<Animator>().SetBool("Force Fly", false);
+        ZoomInOnKey();
     }
 
     public void StartPlayerFly()

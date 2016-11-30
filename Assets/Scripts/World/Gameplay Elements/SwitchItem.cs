@@ -7,42 +7,41 @@ public class SwitchItem : MonoBehaviour {
     //Should contain logic on on/off,
     // as well as which object it manipulates.
     //[HideInInspector]
-    public List<GameObject> assignedHazards;
+    //public List<GameObject> assignedHazards;
 
     [Header("How long is the switch untouchable after collision?")]
     public float triggerDelay = 1f;
-    private bool countingDown = false;
-
+    
     [Header("Can the switch only be triggered once?")]
     public bool oneTimeTrigger = false;
-    private bool hasBeenTriggered = false;
+    
+    [Header("Choose on/off colours:")]
+    public Color offColour = Color.red;
+    public Color onColour = Color.green;
 
-    private Color greenColor = new Color(0,1f,0,1f);
-    private Color redColor = new Color(1f, 0, 0, 1f);
+    [Header("Add the actual button part of the switch!")]
+    public GameObject actualButtonPart;
+
+    private bool countingDown = false;
+    private bool hasBeenTriggered = false;
+    private Renderer switchRenderer;
+    private bool on = false;
 
     Room inRoom;
 
     void Start()
     {
-        //orgColor = this.GetComponent<Renderer>().material;
-        foreach (GameObject hazard in assignedHazards)
-        {
-            hazard.GetComponent<HazardState>().hazardSwitch = this.gameObject;
-        }
-        GetComponent<Renderer>().material.color = hasBeenTriggered ? redColor : greenColor;
+        if (actualButtonPart != null)
+            switchRenderer = actualButtonPart.GetComponent<Renderer>();
+        else
+            Debug.Log("Couldn't find button in switch prefab. Did you remember to drag & drop it?");
+        SwitchColor();
     }
 
     public void AssignRoom(Room r)
     {
         inRoom = r;
-    }
-
-    /// <summary>
-    /// Assign an object to this switch
-    /// </summary>
-    public void AssignHazardToSwitch(GameObject hazard)
-    {
-        assignedHazards.Add(hazard);
+        r.AddRoomSwitch(this);
     }
 
     public IEnumerator CountDown()
@@ -50,6 +49,16 @@ public class SwitchItem : MonoBehaviour {
         //wait the set time, then set bool to false
         yield return new WaitForSeconds(triggerDelay);
         countingDown = false;
+    }
+
+    //switch the color
+    public void SwitchColor()
+    {
+        on = !on;
+        if (actualButtonPart != null)
+            switchRenderer.material.color = on ? onColour : offColour;
+        else
+            Debug.Log("Couldn't find button in switch prefab");
     }
 
     /// <summary>
@@ -61,11 +70,11 @@ public class SwitchItem : MonoBehaviour {
     {
         if (other.transform.tag == "Player" || other.transform.tag == "object")
         {
-            hasBeenTriggered = !hasBeenTriggered;
-            GetComponent<Renderer>().material.color = hasBeenTriggered ? redColor : greenColor;
             //if we are allowed to trigger more than once || it hasn't been triggered yet:
             if (!oneTimeTrigger && !countingDown|| !hasBeenTriggered)
             {
+                SwitchColor();
+
                 countingDown = true;
                 //start counting down to next available switch:
                 StartCoroutine(CountDown());
@@ -73,13 +82,9 @@ public class SwitchItem : MonoBehaviour {
                 hasBeenTriggered = true;
 
                 var evt = new ObserverEvent(EventName.SwitchPressed);
+                evt.payload.Add(PayloadConstants.SWITCH_ON, false);
                 Subject.instance.Notify(gameObject, evt);
 
-                /*foreach (GameObject hazard in assignedHazards)
-                {
-                    Debug.Log("hazards being turned off! item: " + hazard.name);
-                    hazard.GetComponent<HazardState>().EnabledOrDisableTrap();
-                }*/
                 inRoom.SwitchWasTouched();
             }
         }

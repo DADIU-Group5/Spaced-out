@@ -23,7 +23,7 @@ public class MenuLevelSelect : MonoBehaviour {
 
     void OnEnable()
     {
-        generateLevelButton.interactable = ProgressManager.instance.GetStars() >= 15;
+        generateLevelButton.interactable = ProgressManager.instance.GetCurrency() >= 15;
         // enable / disable level buttons
         for (int i = 0; i < levelButtons.Length; i++)
         {
@@ -49,10 +49,10 @@ public class MenuLevelSelect : MonoBehaviour {
     public void GenerateNewSeeds()
     {
         // can we afford it?
-        if (ProgressManager.instance.GetStars() > 15)
+        if (ProgressManager.instance.GetCurrency() > 15)
         {
             GenerationDataManager.instance.RandomizeSeeds();
-            ProgressManager.instance.ChangeStars(-15);
+            ProgressManager.instance.ChangeCurrency(-15);
         }
     }
 

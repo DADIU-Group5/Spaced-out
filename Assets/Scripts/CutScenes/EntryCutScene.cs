@@ -17,11 +17,14 @@ public class EntryCutScene : MonoBehaviour {
 
     public float zoomSpeed = 2.0f;
     public GameObject finalKey;
+    public GameObject moveDirection;
    
     private Vector3 keyPosition;
     private Vector3 orgPosition;
     private bool zoomingIn = false;
     private bool backToDave = false;
+    private bool movingPlayer = false;
+    private GameObject player;
 
     void Awake()
     {
@@ -64,6 +67,8 @@ public class EntryCutScene : MonoBehaviour {
         keyPosition = finalKey.transform.position;
         orgPosition = zoomCamera.transform.position;
         zoomingIn = true;
+        player.GetComponentInChildren<Animator>().SetTrigger("StartCinematicFly");
+        player.GetComponentInChildren<Animator>().SetBool("CinematicFly", true);
     }
 
     void Update()
@@ -90,8 +95,21 @@ public class EntryCutScene : MonoBehaviour {
             if (Vector3.Distance(zoomCamera.transform.position, orgPosition) < 1f)
             {
                 backToDave = false;
-                zoomCamera.SetActive(false);
-                ToggleUI();
+                //zoomCamera.SetActive(false);
+                player = GameObject.FindGameObjectWithTag("Player");
+                keyPosition = moveDirection.transform.position;
+                movingPlayer = true;
+                //ToggleUI();
+            }
+        }
+
+        if (movingPlayer)
+        {
+            float step = zoomSpeed * Time.deltaTime;
+            player.transform.position = Vector3.MoveTowards(player.transform.position, keyPosition, step);
+            if (Vector3.Distance(player.transform.position, keyPosition) < 5)
+            {
+                movingPlayer = false;
             }
         }
     }
@@ -124,7 +142,7 @@ public class EntryCutScene : MonoBehaviour {
     {
         particles.SetActive(false);
         playerObj.gameObject.GetComponent<PlayerController>().chargeParticle = particles;
-        playerObj.gameObject.GetComponentInChildren<Animator>().SetBool("Force Fly", false);
+        //playerObj.gameObject.GetComponentInChildren<Animator>().SetBool("Force Fly", false);
         ZoomInOnKey();
     }
 

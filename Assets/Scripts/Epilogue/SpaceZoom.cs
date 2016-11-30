@@ -48,8 +48,6 @@ public class SpaceZoom : MonoBehaviour {
             if (Vector3.Distance(zoomCamera.transform.position, orgPosition) < 1f)
             {
                 zoomingOut = false;
-                zoomCamera.SetActive(false);
-                ToggleUI();
             }
         }
     }
@@ -65,16 +63,9 @@ public class SpaceZoom : MonoBehaviour {
                 orgPosition = zoomCamera.transform.position;
                 keyPosition = key.transform.position;
                 zoomingIn = true;
-                ToggleUI();
                 zoomedInAlready = true;
             }
         }
-    }
-
-    private void ToggleUI()
-    {
-        var statusEvent = new ObserverEvent(EventName.ToggleUI);
-        Subject.instance.Notify(gameObject, statusEvent);
     }
 
     IEnumerator waitAfterZooming()

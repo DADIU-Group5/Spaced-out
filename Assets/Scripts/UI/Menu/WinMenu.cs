@@ -15,6 +15,9 @@ public class WinMenu : MonoBehaviour, Observer
     public GameObject hud;
     public GameObject recordText;
 
+    public Text scoreLabel1;
+    public Text scoreLabel2;
+
     public Button nextLevelBtn;
 
     [HideInInspector]
@@ -132,6 +135,13 @@ public class WinMenu : MonoBehaviour, Observer
     public void ShowRecord(bool record)
     {
         recordText.SetActive(record);
+    }
+
+    public void SetScore()
+    {
+        scoreLabel1.text = ScoreManager.shotsFired.ToString();
+        scoreLabel2.text = ScoreManager.shotsFired.ToString();
+
     }
 
     public void ShowLastWinMenu()

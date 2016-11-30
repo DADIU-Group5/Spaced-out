@@ -100,6 +100,8 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         readyForLaunch = true;
         animator.SetTrigger("Ready To Launch");
         Aim(inputCont.GetAimPoint());
+        var evt = new ObserverEvent(EventName.PlayerReadyForLaunch);
+        Subject.instance.Notify(gameObject, evt);
     }
 
     // aim the player at a certain point in world space

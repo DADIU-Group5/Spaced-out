@@ -156,6 +156,7 @@ public class WinMenu : MonoBehaviour, Observer
             {
                 levelCompletedMenu.transform.GetChild(i).gameObject.SetActive(true);
             }
+            levelCompletedMenu.SetActive(true);
             playerWon = true;
 
             SetBadges();

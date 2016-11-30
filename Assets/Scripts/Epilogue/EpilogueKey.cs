@@ -3,7 +3,9 @@ using System.Collections;
 
 public class EpilogueKey : MonoBehaviour {
 
-	void OnTriggerEnter(Collider other)
+
+
+    void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
@@ -11,6 +13,7 @@ public class EpilogueKey : MonoBehaviour {
 
             var evt = new ObserverEvent(EventName.EPILOGUE_EVENTONE);
             Subject.instance.Notify(other.gameObject, evt);
+
 
             //evt = new ObserverEvent(EventName.ToggleUI);
             //Subject.instance.Notify(gameObject, evt);

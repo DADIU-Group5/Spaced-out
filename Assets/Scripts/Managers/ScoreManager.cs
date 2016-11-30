@@ -77,7 +77,6 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
 
                 if (ProgressManager.instance.SetShotCount(level, shotsFired))
                 {
-                    //You did good!
                     winMenu.GetComponent<WinMenu>().ShowRecord(true);
                 }
                 else

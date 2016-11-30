@@ -107,6 +107,13 @@ public class DrawTrajectory : MonoBehaviour, Observer
                 var payload = evt.payload;
                 GameObject player = (GameObject)payload[PayloadConstants.PLAYER];
                 target = player.transform;
+                drawingEnabled = true;
+                break;
+            case EventName.PlayerDead:
+                target = null;
+                drawingEnabled = false;
+                points.Clear();
+                Draw();
                 break;
             case EventName.ToggleUI:
                 points.Clear();
@@ -122,7 +129,10 @@ public class DrawTrajectory : MonoBehaviour, Observer
             case EventName.PlayerReadyForLaunch:
                 if (!uiDisabled)
                 {
-                    drawingEnabled = true;
+                    if (target != null)
+                    {
+                        drawingEnabled = true;
+                    }
                 }
                 break;
         }

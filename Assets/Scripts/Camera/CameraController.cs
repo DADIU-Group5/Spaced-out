@@ -27,6 +27,8 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
     
     private Vector3 direction;
     private RaycastHit hit;
+
+    private bool extraZoom = false;
     
     private void Awake()
     {
@@ -36,11 +38,6 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
         camZoomIn = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, camZoomInPosition);
         camZoomCurrent = camZoomIn;
         camZoomStartPos = camZoomIn;
-    }
-
-    void Start()
-    {
-        transform.rotation = target.transform.rotation;
     }
 
     // First do zooming in Update(), then place camera in front of objects if the current zoom position is incorrect
@@ -82,6 +79,23 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
         if (Physics.SphereCast(target.transform.position, bufferRadius, direction.normalized, out hit, direction.magnitude, finalmask))
         {
             cam.transform.position = target.transform.position + hit.distance * direction.normalized;
+            if (!extraZoom)
+            {
+                extraZoom = true;
+                var evt = new ObserverEvent(EventName.PlayerFadeValue);
+                evt.payload.Add(PayloadConstants.PERCENT, 0.25f);
+                Subject.instance.Notify(gameObject, evt);
+            }
+        }
+        else
+        {
+            if (extraZoom)
+            {
+                extraZoom = false;
+                var evt = new ObserverEvent(EventName.PlayerFadeValue);
+                evt.payload.Add(PayloadConstants.PERCENT, 1f);
+                Subject.instance.Notify(gameObject, evt);
+            }
         }
 
         /*
@@ -121,6 +135,7 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
                 var payload = evt.payload;
                 GameObject player = (GameObject)payload[PayloadConstants.PLAYER];
                 target = player;
+                extraZoom = false;
                 break;
             case EventName.CameraZoomOut:
                 zooming = Zoom.OUT;
@@ -134,6 +149,7 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
                 break;
             case EventName.ToggleUI:
                 gameObject.SetActive(!gameObject.activeSelf);
+                extraZoom = false;
                 break;
             default:
                 break;

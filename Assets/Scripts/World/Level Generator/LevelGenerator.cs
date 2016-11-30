@@ -104,6 +104,7 @@ public class LevelGenerator : MonoBehaviour {
         go.transform.LookAt(transform.position, Vector3.up);
 
         var evt = new ObserverEvent(EventName.StartCutscene);
+        evt.payload.Add(PayloadConstants.START_LEVEL, true);
         Subject.instance.Notify(gameObject, evt);
         ECS.StartCutScene(go);
     }

@@ -15,7 +15,7 @@ public class IntroCinematic : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        soundManager.DisableSounds();
+        //soundManager.DisableSounds();
         Invoke("CinematicSound", 0.0f);
         Invoke("PlayMusic", 25.0f);
         floatingObjects = floatingObjectsParent.GetComponentsInChildren<InitialForce>();

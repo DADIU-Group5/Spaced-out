@@ -62,17 +62,8 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 AkSoundEngine.SetRTPCValue("jetpackChargeLevel", 0);
                 PlayEvent(SoundEventConstants.DAVE_CHARGE_STOP, entity);
 
-                var payload = evt.payload;
-                float launchForce = (float)payload[PayloadConstants.LAUNCH_FORCE];
-                bool playMusic = (bool)payload[PayloadConstants.START_STOP];
-
-                //StopEvent(SoundEventConstants.DAVE_LAUNCH, 0.0f);
-
-                //if (playMusic)
-                //{
-                //    PlayEvent(SoundEventConstants.MUSIC_MAIN_STOP);
-                //    PlayEvent(SoundEventConstants.MUSIC_MAIN_PLAY);
-                //}
+                //var payload = evt.payload;
+                //float launchForce = (float)payload[PayloadConstants.LAUNCH_FORCE];
 
                 break;
 
@@ -153,6 +144,12 @@ public class SoundManager : Singleton<SoundManager>, Observer
                     AkSoundEngine.PostEvent(SoundEventConstants.DOOR_SHUT, entity);
                     //PlayEvent(SoundEventConstants.DAVE_STATIC_COLLISION);
                 }
+                break;
+
+            case EventName.StartCutscene:
+                if (evt.payload.ContainsKey(PayloadConstants.START_LEVEL))
+                    if ((bool)evt.payload[PayloadConstants.START_LEVEL])
+                        StartMusic();
                 break;
         }
     }

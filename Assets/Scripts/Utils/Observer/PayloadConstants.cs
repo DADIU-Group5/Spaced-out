@@ -24,4 +24,5 @@ public class PayloadConstants
     public const string SWITCH_ON = "switchOn";
     public const string LANGUAGE = "language";
     public const string PERCENT = "percent";
+    public const string TIME = "time";
 }

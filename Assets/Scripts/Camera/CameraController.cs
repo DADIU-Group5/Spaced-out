@@ -82,7 +82,7 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
             if (!extraZoom)
             {
                 extraZoom = true;
-                var evt = new ObserverEvent(EventName.CameraZoomValue);
+                var evt = new ObserverEvent(EventName.PlayerFadeValue);
                 evt.payload.Add(PayloadConstants.PERCENT, 0.25f);
                 Subject.instance.Notify(gameObject, evt);
             }
@@ -92,7 +92,7 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
             if (extraZoom)
             {
                 extraZoom = false;
-                var evt = new ObserverEvent(EventName.CameraZoomValue);
+                var evt = new ObserverEvent(EventName.PlayerFadeValue);
                 evt.payload.Add(PayloadConstants.PERCENT, 1f);
                 Subject.instance.Notify(gameObject, evt);
             }

@@ -23,8 +23,8 @@ public class CheckpointManager : Singleton<CheckpointManager>, Observer {
     {
         if (spawnPlayer)
         {
-            ActualRespawn();
             spawnPlayer = false;
+            ActualRespawn();
         }
     }
 
@@ -80,5 +80,8 @@ public class CheckpointManager : Singleton<CheckpointManager>, Observer {
         var evt = new ObserverEvent(EventName.PlayerSpawned);
         evt.payload.Add(PayloadConstants.PLAYER, go.GetComponentInChildren<PlayerController>().gameObject);
         Subject.instance.Notify(gameObject, evt);
+        //evt = new ObserverEvent(EventName.PlayerWasRespawned);
+        //Subject.instance.Notify(gameObject, evt);
+        go.GetComponent<DaveFadeOut>().RespawnThing();
     }
 }

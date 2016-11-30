@@ -6365,7 +6365,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="electrocute1" ID="{D672FCDE-982B-4059-B4B3-B9805BFD8877}" ShortID="877963907">
 													<PropertyList>
-														<Property Name="TrimBegin" Type="Real64" Value="2.72307318259178E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0272307318259178"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>electrocute1.wav</AudioFile>
@@ -6406,7 +6406,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="electrocute3" ID="{08B6A36F-3D0A-412B-9700-2714713C10AB}" ShortID="560816914">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.96989423778264E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0196989423778264"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.024623677972283"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -6430,7 +6430,7 @@
 												<AudioFileSource Name="electrocute4" ID="{E4A3D0CE-9A88-497E-AA87-C9D87E4C98FE}" ShortID="68587342">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.015977935813275"/>
-														<Property Name="TrimBegin" Type="Real64" Value="4.79338074398249E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0479338074398249"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>electrocute4.wav</AudioFile>
@@ -6452,8 +6452,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="electrocute5" ID="{D1735FC7-2CAD-4978-8136-4F0402DA3F94}" ShortID="261205730">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="9.9214989059081E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="5.20878692560175E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0099214989059081"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0520878692560175"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>electrocute5.wav</AudioFile>
@@ -6475,8 +6475,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="electrocute6" ID="{63C8151F-A72E-4AFE-8D13-F11662053CEE}" ShortID="456998750">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="8.47921225382932E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="3.60366520787746E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00847921225382932"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0360366520787746"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>electrocute6.wav</AudioFile>
@@ -7233,8 +7233,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut3_1" ID="{BCB595AC-447E-4721-9AC4-1411D86C2F57}" ShortID="585615623">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="4.49307075127645E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="6.73960612691467E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00449307075127645"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00673960612691467"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut3_1.wav</AudioFile>
@@ -7269,8 +7269,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut4_1" ID="{CCD6EFA5-2C6A-413F-BD1B-1D75893FCE8D}" ShortID="598173962">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.49963530269876E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="7.4981765134938E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00149963530269876"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0074981765134938"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut4_1.wav</AudioFile>
@@ -7302,8 +7302,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut5_1" ID="{6EF1D5FA-0402-465D-A57A-90D02A6771A1}" ShortID="846681906">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="2.99927060539752E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="7.49817651349381E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00299927060539752"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00749817651349381"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut5_1.wav</AudioFile>
@@ -7338,8 +7338,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut6_1" ID="{C787A521-A4A9-4D34-9E52-970CCEBA4BA7}" ShortID="670195520">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.49963530269876E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="2.24945295404814E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00149963530269876"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0224945295404814"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut6_1.wav</AudioFile>
@@ -7371,8 +7371,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut7_1" ID="{F48C9AF1-F3BF-4C08-AE00-BB17D50ED171}" ShortID="942376865">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="2.99927060539752E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="5.69861415025529E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00299927060539752"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0569861415025529"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut7_1.wav</AudioFile>
@@ -7404,8 +7404,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut8_1" ID="{BE0F375F-6E18-48F4-BACC-D4A09DFB85B8}" ShortID="401680823">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="2.99927060539752E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="4.94879649890591E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00299927060539752"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0494879649890591"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut8_1.wav</AudioFile>
@@ -7437,8 +7437,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut9_1" ID="{A8FCF68A-4DEE-4CDB-B475-CB041E8C1326}" ShortID="507642210">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="5.99854121079504E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="4.19897884755653E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00599854121079504"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0419897884755653"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut9_1.wav</AudioFile>
@@ -7470,7 +7470,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="door shut10_1" ID="{0759559B-6639-45BF-9EAB-DF6F12BCBFC6}" ShortID="621924902">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="2.99343544857768E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00299343544857768"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.117409190371991"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -7485,7 +7485,6 @@
 								</RandomSequenceContainer>
 								<Sound Name="gasonfire" ID="{E906ED12-D905-459F-99C3-58BC1C76FDEC}" ShortID="433371983" Type="SoundFX">
 									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
@@ -7772,8 +7771,792 @@
 										<ActiveSource Name="blæser" ID="{DBA8AD60-AF78-4C01-8FC3-7A9792C91610}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<RandomSequenceContainer Name="door slide" ID="{F2BBE008-05BD-40D0-ADA7-14A7ED6D65DA}" ShortID="922325152">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="door slide close" ID="{749CB513-7A92-4994-B8B4-8A3FAB329A2C}" ShortID="879289856">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{59EA504A-65F8-47C4-8F90-D1A4BD37CC4C}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="20"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Lowpass" Type="int16">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{7D04B5E3-1A80-44D2-B4D5-4AEB7A1ECC3C}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="20"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-20</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="door close slide1" ID="{FF5E014F-DA02-4D56-BB0E-C2C051B83572}" ShortID="977066203" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door close slide1" ID="{C94C2E56-B4CD-4116-9955-15E7A423EBCB}" ShortID="590916747">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door close slide1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door close slide1" ID="{C94C2E56-B4CD-4116-9955-15E7A423EBCB}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door close slide2" ID="{0953D149-4D0E-48AD-968F-81E7C384E6D0}" ShortID="322137716" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door close slide2" ID="{AA434118-BD4E-48AC-A292-C1D17FF2D6AB}" ShortID="655973810">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door close slide2.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door close slide2" ID="{AA434118-BD4E-48AC-A292-C1D17FF2D6AB}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door close slide3" ID="{1B6A3D61-14B2-4271-B7DC-DD9754B9A67A}" ShortID="918920260" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door close slide3" ID="{EE1FE6B8-A870-4E62-864F-D6D3AB28675C}" ShortID="254262868">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door close slide3.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door close slide3" ID="{EE1FE6B8-A870-4E62-864F-D6D3AB28675C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door close slide4" ID="{E87DBBD5-10E6-4DC5-891B-F702A353CE39}" ShortID="196189750" Type="SoundFX">
+													<ExcludedPlatformList>
+														<Platform>Android</Platform>
+													</ExcludedPlatformList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door close slide4" ID="{2F0B3DA2-9194-499B-B1E6-20EF1F45F6D2}" ShortID="837821859">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door close slide4.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door close slide4" ID="{2F0B3DA2-9194-499B-B1E6-20EF1F45F6D2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door close slide5" ID="{EF34C544-D891-4FBE-90C4-1E96B7ED2029}" ShortID="89107845" Type="SoundFX">
+													<ExcludedPlatformList>
+														<Platform>Android</Platform>
+													</ExcludedPlatformList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door close slide5" ID="{419D5097-3D31-45FA-8F72-8E1FD880D8CD}" ShortID="190249957">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door close slide5.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door close slide5" ID="{419D5097-3D31-45FA-8F72-8E1FD880D8CD}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door close slide6" ID="{59A2DFC3-3BAF-4117-8078-45F504DF7011}" ShortID="703207145" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door close slide6" ID="{CB82B38F-020F-41EF-AB06-620AE49FFB35}" ShortID="324685243">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door close slide6.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door close slide6" ID="{CB82B38F-020F-41EF-AB06-620AE49FFB35}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door close slide7" ID="{E56D6BE4-16B5-4AC7-98AB-7C660B7E0836}" ShortID="400256655" Type="SoundFX">
+													<ExcludedPlatformList>
+														<Platform>Android</Platform>
+													</ExcludedPlatformList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door close slide7" ID="{C41265EF-4FF0-40DD-8510-BAFF9056E33A}" ShortID="589546869">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door close slide7.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door close slide7" ID="{C41265EF-4FF0-40DD-8510-BAFF9056E33A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="door slide open" ID="{69257C8F-0E4D-44C2-9070-F957932E5693}" ShortID="1053289461">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{1F3B4552-AA8A-4035-B9F3-EDC26D1477E0}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="20"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Lowpass" Type="int16">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{96434B55-E1CE-4FCB-8B16-C889D6776A29}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="20"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-20</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="door open slide 1" ID="{A2F5F78A-C02A-4516-A2DC-5C56A8D71312}" ShortID="329803983" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door open slide 1" ID="{2E76A519-B594-41C6-AFE8-25003E095E44}" ShortID="273961102">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door open slide 1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door open slide 1" ID="{2E76A519-B594-41C6-AFE8-25003E095E44}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door open slide 2" ID="{491C7F76-FF5B-4786-B96A-5B9CD9B9C105}" ShortID="723560627" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door open slide 2" ID="{ACEE7269-7FB0-4B22-86F6-D4BC7D769EDA}" ShortID="866577450">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door open slide 2.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door open slide 2" ID="{ACEE7269-7FB0-4B22-86F6-D4BC7D769EDA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door open slide 3" ID="{569FDF71-8725-4108-A470-23CD4A6D57F7}" ShortID="58314816" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door open slide 3" ID="{E8509FF5-F65D-47E8-8E29-A12A5DAD4851}" ShortID="124154696">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door open slide 3.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door open slide 3" ID="{E8509FF5-F65D-47E8-8E29-A12A5DAD4851}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door open slide 4" ID="{35677E2D-013D-4640-AD22-C7D27EDD7AB5}" ShortID="941473354" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door open slide 4" ID="{D7AA48E4-0933-4D11-9962-22D213E1A5DA}" ShortID="553115806">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door open slide 4.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door open slide 4" ID="{D7AA48E4-0933-4D11-9962-22D213E1A5DA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door open slide 5" ID="{B42EFC1B-5778-4630-BBF9-9417BF12E8A9}" ShortID="30456732" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door open slide 5" ID="{A20309E1-6548-4DE4-94F4-E3AA82F37637}" ShortID="41538293">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door open slide 5.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door open slide 5" ID="{A20309E1-6548-4DE4-94F4-E3AA82F37637}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door open slide 6" ID="{9324B430-E4C5-43E5-BFB0-A7CA1B30283B}" ShortID="434134087" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door open slide 6" ID="{9D8484E5-8EB9-48D4-8908-530D2DE89A9C}" ShortID="930928">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door open slide 6.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door open slide 6" ID="{9D8484E5-8EB9-48D4-8908-530D2DE89A9C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="door open slide 7" ID="{51F4C104-F23F-4B54-A8BF-C9DBF7C16A03}" ShortID="566247291" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="door open slide 7" ID="{C0C503B0-D1CC-45E0-8F49-2A4B028EB9C7}" ShortID="630211085">
+															<Language>SFX</Language>
+															<AudioFile>door slide\door open slide 7.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="door open slide 7" ID="{C0C503B0-D1CC-45E0-8F49-2A4B028EB9C7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</ActorMixer>
+						<RandomSequenceContainer Name="hydralics" ID="{AD2A0D48-CB45-4975-80C0-F03B8DD3C11A}" ShortID="865694093">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1D47FC94-211B-4D73-8DE7-4CED2A440E28}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="PositioningType" Type="int16" Value="1"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-25</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="electricity" ID="{3AB70FE9-DBA1-46D2-9FA1-A024962E697E}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+								<Reference Name="UserAuxSend1">
+									<ObjectRef Name="rvbatmos" ID="{562DE2B7-4E68-4373-A5C3-BCA520A72E06}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="hydralics1" ID="{29B713B1-CCE2-4A7F-AB67-AC323FDF5BF9}" ShortID="79857086" Type="SoundFX">
+									<ExcludedPlatformList>
+										<Platform>Android</Platform>
+									</ExcludedPlatformList>
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{A891F7AC-FE32-434B-9480-4502BDB1262D}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="hydralics1" ID="{9F40344F-7BB1-4A9D-905C-EC9DB3EA81A9}" ShortID="434155423">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.962598666721198"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>atmos\hydralics1.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="971397170"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="hydralics1" ID="{9F40344F-7BB1-4A9D-905C-EC9DB3EA81A9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="hydralics2" ID="{F2A107C0-10DD-4B96-82E5-21662B32727D}" ShortID="805862050" Type="SoundFX">
+									<ExcludedPlatformList>
+										<Platform>Android</Platform>
+									</ExcludedPlatformList>
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{09305B58-CF50-4E61-90FF-8473D4480C44}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="7"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="hydralics2" ID="{67ED7460-34F7-4D48-BD9A-8F61F5A8CE91}" ShortID="302165141">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.450441949658955"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>atmos\hydralics2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="hydralics2" ID="{67ED7460-34F7-4D48-BD9A-8F61F5A8CE91}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="hydralics3" ID="{C7A23FCE-6622-43C1-A7E4-BFF0A0060568}" ShortID="749241248" Type="SoundFX">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{8F4E3602-AD7F-4BFA-8483-645D017DFADD}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="7"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="hydralics3" ID="{38860DA4-6160-49F4-9BEF-0CA7E0C08D38}" ShortID="153856534">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.6041170776928"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>atmos\hydralics3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="hydralics3" ID="{38860DA4-6160-49F4-9BEF-0CA7E0C08D38}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="hydralics4" ID="{F8A047BD-81E1-40C6-BCC6-EBDB9C0051D3}" ShortID="799316740" Type="SoundFX">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{1729AD9F-B3D1-437C-B4D5-99C226F91B80}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="7"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="hydralics4" ID="{0FE57FF5-5396-407B-A1C9-D9CA602C1E82}" ShortID="674017986">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.541082164328657"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>atmos\hydralics4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="hydralics4" ID="{0FE57FF5-5396-407B-A1C9-D9CA602C1E82}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="hydralics5" ID="{B6152CAE-E54C-4659-AEE7-8828FDA07752}" ShortID="630540223" Type="SoundFX">
+									<ExcludedPlatformList>
+										<Platform>Android</Platform>
+									</ExcludedPlatformList>
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{B2566253-84EE-4EE3-AC18-3FCCF07549F4}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="7"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="hydralics5" ID="{BFB63C2E-013B-4F1D-8FE4-A6128B5C01E3}" ShortID="538587322">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.343180260748254"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>atmos\hydralics5.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="hydralics5" ID="{BFB63C2E-013B-4F1D-8FE4-A6128B5C01E3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="hydralics6" ID="{DDDB5933-6492-4551-8D2B-62BA0D125626}" ShortID="1065184981" Type="SoundFX">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{498E0268-5022-40AE-8A6B-65BF3AAE9838}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="7"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="hydralics6" ID="{26F8B4F9-4F23-46DD-9273-8FC51546689F}" ShortID="282295557">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.806480443880959"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>atmos\hydralics6.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="hydralics6" ID="{26F8B4F9-4F23-46DD-9273-8FC51546689F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="hydralics7" ID="{641B34E9-C715-4069-8EEB-BCD7925B1E39}" ShortID="623518157" Type="SoundFX">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{5A578EAE-5357-469F-B4FC-51E22AD32820}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="7"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="hydralics7" ID="{9C7808D5-5F94-48E3-AC58-8F1EED7D793A}" ShortID="424356546">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="1.6262780208944"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>atmos\hydralics7.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="hydralics7" ID="{9C7808D5-5F94-48E3-AC58-8F1EED7D793A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="hydralics8" ID="{7C506A05-8543-4B6D-99EA-74E9EC1CF2E6}" ShortID="546745239" Type="SoundFX">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{C0131DDB-42DB-4A16-AE27-57331647852A}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="7"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="hydralics8" ID="{9799B16D-A910-422F-A9E6-2A4FBBA2374F}" ShortID="298504356">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.238110779381893"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>atmos\hydralics8.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="hydralics8" ID="{9799B16D-A910-422F-A9E6-2A4FBBA2374F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="hydralics9" ID="{B5200063-05DE-4B76-AF59-214B84770A5F}" ShortID="897153904" Type="SoundFX">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{2C088D6A-8534-4033-9746-3D06F77B9C45}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="7"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="hydralics9" ID="{E3724124-0D9E-4B6C-984B-2D3C1B6195DA}" ShortID="749622965">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.521413620892579"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>atmos\hydralics9.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="hydralics9" ID="{E3724124-0D9E-4B6C-984B-2D3C1B6195DA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="atmos" ID="{D914E73D-408D-443A-8DD9-7AD7E510D3C9}" ShortID="3256818">
@@ -7915,11 +8698,13 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="hydralics" ID="{955C4C8A-5CDA-4CEF-BE4C-9F17F3149579}" ShortID="615805950">
 									<PropertyList>
+										<Property Name="EnablePanner" Type="bool" Value="True"/>
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="UserAuxSendVolume0" Type="Real64">
 											<ValueList>
 												<Value>10</Value>
@@ -7932,6 +8717,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="electricity" ID="{3AB70FE9-DBA1-46D2-9FA1-A024962E697E}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
@@ -7974,6 +8762,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="hydralics1" ID="{7D21BD1D-1723-4F46-B836-6880FC3E2014}" ShortID="971397170">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.962598666721198"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>atmos\hydralics1.wav</AudioFile>
 												</AudioFileSource>
@@ -8271,6 +9062,9 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<PositioningInfo>
+										<Panner Name="" ID="{69D50E5C-2BF0-45EF-8B56-325398EDA662}"/>
+									</PositioningInfo>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="knirken" ID="{02D86B12-679D-4D02-87B0-984E7F28FAE9}" ShortID="1015790659">
 									<PropertyList>
@@ -10635,8 +11429,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 1" ID="{7701D464-5DA7-4683-9E35-2DE2EB83C864}" ShortID="510992843">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.20240480961924E-02"/>
-														<Property Name="TrimBegin" Type="Real64" Value="7.01402805611223E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0120240480961924"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00701402805611223"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>grunts\dave grunts 1.wav</AudioFile>
@@ -10658,7 +11452,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 10" ID="{45BC4865-DA12-4921-86EA-61F58923E6D1}" ShortID="645679551">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="9.01803607214424E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00901803607214424"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.456913827655311"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10681,7 +11475,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 11" ID="{B58B7133-B39B-47C6-9976-8DD4D246329E}" ShortID="635598483">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.20240480961924E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0120240480961924"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.30811623246493"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10704,7 +11498,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 12" ID="{792D68C9-F803-489D-9360-28A176A33318}" ShortID="706371641">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.35270541082164E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0135270541082164"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.179233466933868"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10727,7 +11521,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 13" ID="{331F6B3F-BF05-44A5-B27C-4C895538F026}" ShortID="597181408">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="7.51503006012023E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00751503006012023"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.101452905811623"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10750,7 +11544,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 14" ID="{1F8B3153-55BD-4AB0-9400-A209AF1A3F56}" ShortID="794015766">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="9.01803607214427E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00901803607214427"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.182364729458918"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10773,7 +11567,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 15" ID="{6CE65910-C82F-4AFB-9534-7D342F159558}" ShortID="26065425">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="5.63627254509018E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00563627254509018"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.157815631262525"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10796,7 +11590,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 16" ID="{28866224-81F3-4311-86BD-FD6AD3355EA0}" ShortID="30115822">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="3.0060120240481E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0030060120240481"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.185370741482966"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10819,7 +11613,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 17" ID="{47412853-3520-4B61-A9D3-DE3005690CCE}" ShortID="354171151">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="7.51503006012022E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00751503006012022"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.399799599198397"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10842,7 +11636,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 2" ID="{4968FD4A-5B17-49C5-9F0E-17474056D0CA}" ShortID="634867864">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="8.26653306613226E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00826653306613226"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.199148296593186"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10865,7 +11659,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 3" ID="{019DEDEE-5781-4D4F-B67C-A8C3D7684E3D}" ShortID="881265781">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="4.50901803607215E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00450901803607215"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.142034068136273"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10888,8 +11682,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 4" ID="{80F24AA3-8667-4423-A641-3E2BA9EE24A0}" ShortID="444280125">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="8.26653306613227E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="6.01202404809619E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00826653306613227"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00601202404809619"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>grunts\dave grunts 4.wav</AudioFile>
@@ -10911,7 +11705,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 5" ID="{0F572050-1D26-4916-8884-1E96E218CC8B}" ShortID="837032869">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="5.26052104208417E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00526052104208417"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.148046092184369"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -10934,8 +11728,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 6" ID="{AC31F44B-8EFB-4040-9C19-C6153706756A}" ShortID="497404101">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="8.01603206412825E-03"/>
-														<Property Name="TrimBegin" Type="Real64" Value="6.01202404809619E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00801603206412825"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00601202404809619"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>grunts\dave grunts 6.wav</AudioFile>
@@ -10957,7 +11751,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 7" ID="{572247B4-6BBB-4BBF-AD47-48DCB7A47000}" ShortID="543943558">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.40280561122244E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0140280561122244"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>grunts\dave grunts 7.wav</AudioFile>
@@ -10979,7 +11773,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 8" ID="{72934FB7-035C-4E11-94F4-C60D839D01F2}" ShortID="563855461">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.40280561122244E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0140280561122244"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.301603206412826"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -11002,7 +11796,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="dave grunts 9" ID="{0AB73B41-E19A-4CA9-B343-21DBD68D36E9}" ShortID="430918783">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="7.51503006012025E-03"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00751503006012025"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.18937875751503"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -11714,7 +12508,7 @@
 													<ChildrenList>
 														<AudioFileSource Name="object impact light1" ID="{F86D2183-F604-4BF2-8E67-41AA138770EA}" ShortID="635644102">
 															<PropertyList>
-																<Property Name="FadeOutDuration" Type="Real64" Value="5.97647702407002E-02"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0597647702407002"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>impacts\object impact light1.wav</AudioFile>
@@ -11891,7 +12685,7 @@
 													<ChildrenList>
 														<AudioFileSource Name="object impact1" ID="{5B60DB1E-647C-4D8F-8A81-FAFADFBE22B9}" ShortID="836593034">
 															<PropertyList>
-																<Property Name="FadeOutDuration" Type="Real64" Value="9.84169857768053E-02"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0984169857768053"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>impacts\object impact1.wav</AudioFile>
@@ -13010,7 +13804,7 @@
 							<ChildrenList>
 								<AudioFileSource Name="kick" ID="{C1DB3D8A-EB9D-45AB-BF81-676EE8BC31CF}" ShortID="625149348">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="1.96936542669584E-02"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0196936542669584"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>kick.wav</AudioFile>

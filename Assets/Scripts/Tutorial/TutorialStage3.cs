@@ -17,14 +17,14 @@ public class TutorialStage3 : MonoBehaviour, Observer {
 
     public Brain galAI;
 
-    private OxygenController oxygenController;
+    //private OxygenController oxygenController;
 
 	// Use this for initialization
 	void Start () {
         GameObject go = Instantiate(playerPrefab, playerSpawnPoint.position, Quaternion.identity) as GameObject;
         go.transform.LookAt(transform.position, Vector3.up);
 
-        oxygenController = GameObject.Find("Player(Clone)").GetComponent<OxygenController>();
+        //oxygenController = GameObject.Find("Player(Clone)").GetComponent<OxygenController>();
 
         //go.GetComponentInChildren<OxygenController>().SetOxygen(1); // doesn't seem to be working
         //oxygenController = go.GetComponentInChildren<OxygenController>();
@@ -53,7 +53,7 @@ public class TutorialStage3 : MonoBehaviour, Observer {
         oxygenCamera.PlayAnimations(EnablePlayerControl);
 
         Invoke("NarrateJetPackFailure", 3.5f);
-        StartCoroutine(ReduceOxygenCoroutine());
+        //StartCoroutine(ReduceOxygenCoroutine());
     }
 
     private void NarrateJetPackFailure()
@@ -82,7 +82,7 @@ public class TutorialStage3 : MonoBehaviour, Observer {
         hazardCamera.gameObject.SetActive(false);
     }
 
-    IEnumerator ReduceOxygenCoroutine()
+    /*IEnumerator ReduceOxygenCoroutine()
     {
         for (int i = 0; i < 9; i++)
         {
@@ -91,13 +91,13 @@ public class TutorialStage3 : MonoBehaviour, Observer {
         }
 
         CheckpointManager.instance.SetFuelCount(oxygenController.GetOxygen());
-    }
+    }*/
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
         if (evt.eventName == EventName.PlayerSpawned)
         {
-            oxygenController.SetOxygen(2);
+            //oxygenController.SetOxygen(2);
         }
     }
 

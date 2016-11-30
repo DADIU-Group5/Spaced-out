@@ -82,6 +82,15 @@ public class CameraController : MonoBehaviour, ICameraController, Observer
         if (Physics.SphereCast(target.transform.position, bufferRadius, direction.normalized, out hit, direction.magnitude, finalmask))
         {
             cam.transform.position = target.transform.position + hit.distance * direction.normalized;
+            var evt = new ObserverEvent(EventName.CameraZoomValue);
+            evt.payload.Add(PayloadConstants.PERCENT, 0.25f);
+            Subject.instance.Notify(gameObject, evt);
+        }
+        else
+        {
+            var evt = new ObserverEvent(EventName.CameraZoomValue);
+            evt.payload.Add(PayloadConstants.PERCENT, 1f);
+            Subject.instance.Notify(gameObject, evt);
         }
 
         /*

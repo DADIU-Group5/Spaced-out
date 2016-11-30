@@ -61,7 +61,7 @@ public class MenuLevelSelect : MonoBehaviour {
     {
         if (level == 0)
         {
-            SceneManager.LoadScene("Intro Tutorial");
+            SceneManager.LoadScene("Intro Cinematic");
             GenerationDataManager.instance.SetTutortialLevel();
         }
         else if (level == 1)

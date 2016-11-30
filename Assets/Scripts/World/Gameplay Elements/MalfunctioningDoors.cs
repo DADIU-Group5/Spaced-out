@@ -25,19 +25,21 @@ public class MalfunctioningDoors : MonoBehaviour {
 
     public void CloseOpenDoor()
     {
-        var evt = new ObserverEvent(EventName.Door);
-
+        //var evt = new ObserverEvent(EventName.Door);
+        //evt.payload.Add(PayloadConstants.DOOR_OPEN, gameObject);
+        //doorOpenTrigger.Open();
         if (closed)
         {
             animator.SetTrigger("Open");
-            SoundOpen();
+            AkSoundEngine.PostEvent(SoundEventConstants.DOOR_OPEN, gameObject);
+            //doorOpenTrigger.Open();
             //evt.payload.Add(PayloadConstants.DOOR_OPEN, true);
         }
         else
         {
             animator.SetTrigger("Close");
-            //Invoke("SoundClose", 0.2f);
-            SoundClose();
+            AkSoundEngine.PostEvent(SoundEventConstants.DOOR_SHUT, gameObject);
+            //doorCloseTrigger.Close();
             //evt.payload.Add(PayloadConstants.DOOR_OPEN, false);
         }
         

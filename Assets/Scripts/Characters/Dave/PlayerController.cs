@@ -127,7 +127,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         this.power = Mathf.Clamp01(power);
         animator.SetFloat("Power", power);
         ThrowLaunchPowerChangedEvent();
-        ThrowChargingPowerEvent(true, this.power);
+        ThrowChargingPowerEvent(power != 0, this.power);
     }
 
     /// <summary>
@@ -136,13 +136,17 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     public void Launch()
     {
         if (!readyForLaunch || power < minLaunchPower)
+        {
+            ThrowChargingPowerEvent(false, 0);
             return;
+        }
 
         // perform the launch
         Vector3 dir = aim * Vector3.forward; //inputCont.GetLaunchDirection();
         body.AddForce(power * maxLaunchVelocity * dir, ForceMode.VelocityChange);
         animator.SetTrigger("Launch");
         ThrowLaunchEvent();
+        //ThrowChargingPowerEvent(false, 0);
         SetPower(0);
         readyForLaunch = false;
     }
@@ -173,6 +177,4 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         evt.payload.Add(PayloadConstants.LAUNCH_FORCE, force * 100);
         Subject.instance.Notify(gameObject, evt);
     }
-
-    
 }

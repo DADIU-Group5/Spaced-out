@@ -17,11 +17,14 @@ public class EntryCutScene : MonoBehaviour {
 
     public float zoomSpeed = 2.0f;
     public GameObject finalKey;
+    public GameObject moveDirection;
    
     private Vector3 keyPosition;
     private Vector3 orgPosition;
     private bool zoomingIn = false;
     private bool backToDave = false;
+    private bool movingPlayer = false;
+    private GameObject player;
 
     void Awake()
     {
@@ -30,11 +33,16 @@ public class EntryCutScene : MonoBehaviour {
         //Camera.main.transform.parent.parent.GetComponent<InputController>().SetViewDirection(key.transform.position);
     }
 
-	public void StartCutScene(GameObject player)
+   void ToggleUI()
     {
         var evt = new ObserverEvent(EventName.ToggleUI);
         Subject.instance.Notify(gameObject, evt);
+    }
 
+	public void StartCutScene(GameObject player)
+    {
+        ToggleUI();
+        
         player.GetComponent<PlayerController>().Aim(key.transform.position);
         
         playerObj = player.transform;
@@ -54,10 +62,14 @@ public class EntryCutScene : MonoBehaviour {
 
     void ZoomInOnKey()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        key.SetActive(false);
         zoomCamera.SetActive(true);
         keyPosition = finalKey.transform.position;
         orgPosition = zoomCamera.transform.position;
         zoomingIn = true;
+        player.GetComponentInChildren<Animator>().SetTrigger("StartCinematicFly");
+        player.GetComponentInChildren<Animator>().SetBool("CinematicFly", true);
     }
 
     void Update()
@@ -72,6 +84,9 @@ public class EntryCutScene : MonoBehaviour {
             {
                 zoomingIn = false;
                 StartCoroutine(waitAfterZooming());
+                player = GameObject.FindGameObjectWithTag("Player");
+                keyPosition = moveDirection.transform.position;
+                movingPlayer = true;
             }
         }
 
@@ -84,7 +99,16 @@ public class EntryCutScene : MonoBehaviour {
             if (Vector3.Distance(zoomCamera.transform.position, orgPosition) < 1f)
             {
                 backToDave = false;
-                zoomCamera.SetActive(false);
+            }
+        }
+
+        if (movingPlayer)
+        {
+            float step = zoomSpeed * Time.deltaTime;
+            player.transform.position = Vector3.MoveTowards(player.transform.position, keyPosition, step);
+            if (Vector3.Distance(player.transform.position, keyPosition) < 5)
+            {
+                movingPlayer = false;
             }
         }
     }
@@ -97,8 +121,8 @@ public class EntryCutScene : MonoBehaviour {
 
     public void Ended()
     {
-        var evt = new ObserverEvent(EventName.ToggleUI);
-        Subject.instance.Notify(gameObject, evt);
+        //ToggleUI();
+
         Destroy(cam.gameObject);
         key.SetActive(false);
         playerObj.parent = null;
@@ -108,7 +132,7 @@ public class EntryCutScene : MonoBehaviour {
 
         cam.gameObject.SetActive(false);
 
-        evt = new ObserverEvent(EventName.PlayerSpawned);
+        var evt = new ObserverEvent(EventName.PlayerSpawned);
         evt.payload.Add(PayloadConstants.PLAYER, playerObj.GetComponentInChildren<PlayerController>().gameObject);
         Subject.instance.Notify(gameObject, evt);
     }
@@ -117,7 +141,7 @@ public class EntryCutScene : MonoBehaviour {
     {
         particles.SetActive(false);
         playerObj.gameObject.GetComponent<PlayerController>().chargeParticle = particles;
-        playerObj.gameObject.GetComponentInChildren<Animator>().SetBool("Force Fly", false);
+        //playerObj.gameObject.GetComponentInChildren<Animator>().SetBool("Force Fly", false);
         ZoomInOnKey();
     }
 

@@ -6,26 +6,19 @@ public class TutorialSwitch : MonoBehaviour {
     public HazardState[] hazards;
     public Color offColour = Color.red;
     public Color onColour = Color.green;
-    public GameObject actualButtonPart;
     private Renderer switchRenderer;
     private bool on = false;
 
     void Start()
     {
-        if (actualButtonPart != null)
-            switchRenderer = actualButtonPart.GetComponent<Renderer>();
-        else
-            Debug.Log("Couldn't find button in switch prefab");
+        switchRenderer = this.GetComponent<Renderer>();
         SwitchColor();
     }
 
     //switch the color
     void SwitchColor()
     {
-        if (actualButtonPart != null)
-            switchRenderer.material.color = on ? onColour : offColour;
-        else
-            Debug.Log("Couldn't find button in switch prefab");
+        switchRenderer.material.color = on ? onColour : offColour;
     }
 
     void OnCollisionEnter(Collision other)

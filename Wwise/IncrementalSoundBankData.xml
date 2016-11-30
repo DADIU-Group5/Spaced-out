@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<IncrementalBankBuild Version="6" Flags="240381544">
+<IncrementalBankBuild Version="6" Flags="601859981">
 	<Platform GUID="{2000E5B0-7655-4732-A442-4FEFA9DCCB30}">
 		<Banks>
 			<Language ID="0">
-				<File Name="Init" Hash="1553338210" Timestamp="131249747170000000"/>
-				<File Name="soundbank_alpha" Hash="2282178592" Timestamp="131249747170000000"/>
+				<File Name="Init" Hash="1553338210" Timestamp="131248327890566832"/>
+				<File Name="soundbank_alpha" Hash="2848005452" Timestamp="131248328761613499"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1862216706" Timestamp="131249747170000000"/>
+				<File Name="" Hash="617435159" Timestamp="131248328762083822"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{42DB363A-CEA2-4B1F-8044-0B5E754A2D53}">
 		<Banks>
 			<Language ID="0">
-				<File Name="Init" Hash="4012944700" Timestamp="131249746840000000"/>
-				<File Name="soundbank_alpha" Hash="2282178592" Timestamp="131249746840000000"/>
+				<File Name="Init" Hash="4012944700" Timestamp="131248327879020794"/>
+				<File Name="soundbank_alpha" Hash="2848005452" Timestamp="131248328748071003"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1004288084" Timestamp="131249746840000000"/>
+				<File Name="" Hash="2135832825" Timestamp="131248328748366204"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{C717B118-BC74-4BCF-9DE8-E56AEEC6EDEB}">
 		<Banks>
 			<Language ID="0">
-				<File Name="Init" Hash="1202164306" Timestamp="131249746510000000"/>
-				<File Name="soundbank_alpha" Hash="763647692" Timestamp="131249746510000000"/>
+				<File Name="Init" Hash="1202164306" Timestamp="131248327868344111"/>
+				<File Name="soundbank_alpha" Hash="3927888119" Timestamp="131248328733559931"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2420109666" Timestamp="131249746510000000"/>
+				<File Name="" Hash="552128931" Timestamp="131248328733845116"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

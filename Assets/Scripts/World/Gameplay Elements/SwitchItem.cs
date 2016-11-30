@@ -9,10 +9,6 @@ public class SwitchItem : MonoBehaviour {
     //[HideInInspector]
     //public List<GameObject> assignedHazards;
 
-    /*[Header("Hazard Objects:")]
-    [Header("lock inspector window, select all, and drag & drop.")]
-    public HazardState[] hazards;*/
-
     [Header("How long is the switch untouchable after collision?")]
     public float triggerDelay = 1f;
     
@@ -88,15 +84,6 @@ public class SwitchItem : MonoBehaviour {
                 Subject.instance.Notify(gameObject, evt);
 
                 inRoom.SwitchWasTouched();
-
-               /* foreach (HazardState state in hazards)
-                {
-                    state.EnabledOrDisableTrap();
-
-                    evt = new ObserverEvent(EventName.SwitchPressed);
-                    evt.payload.Add(PayloadConstants.SWITCH_ON, false);
-                    Subject.instance.Notify(gameObject, evt);
-                }*/
             }
         }
     }

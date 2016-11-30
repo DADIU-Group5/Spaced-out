@@ -9,11 +9,6 @@ public class SuckIntoSpace : MonoBehaviour
     private GameObject player;
     private bool movingPlayer = false;
     public float speed = 2.0f;
-    [Header("Cameras")]
-    public GameObject playerCameraPod;
-    public GameObject introCamera;
-
-    private bool pastLastDoor = false;
 
     // Use this for initialization
     void Start()
@@ -27,8 +22,10 @@ public class SuckIntoSpace : MonoBehaviour
         if (movingPlayer)
         {
             float step = speed * Time.deltaTime;
-           player.transform.position = Vector3.MoveTowards(player.transform.position, suckInDirection, step);
+            //player.transform.position = Vector3.MoveTowards(player.transform.position, suckInDirection, step);
             //player.transform.Translate(suckInDirection * speed * Time.deltaTime);
+
+            //player.transform.rotation = Quaternion.RotateTowards(player.transform.rotation, suckTowardsPoint.transform.rotation, 1f);
 
             //if we're in range, stop the movement.
             if (Vector3.Distance(player.transform.position, suckInDirection) < 5f)
@@ -37,11 +34,10 @@ public class SuckIntoSpace : MonoBehaviour
             }
         }
 
-
     }
 
     //suck the player into space
-    IEnumerator suckPlayer()
+   IEnumerator suckPlayer()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         var controller = player.GetComponent<PlayerController>();
@@ -58,7 +54,7 @@ public class SuckIntoSpace : MonoBehaviour
             //If player hits checkpoint, do stuff.
             player = other.gameObject;
             movingPlayer = true;
-            //StartCoroutine(suckPlayer());
+            StartCoroutine(suckPlayer());
         }
     }
 }

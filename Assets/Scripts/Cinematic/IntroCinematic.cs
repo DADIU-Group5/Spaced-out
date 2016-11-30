@@ -11,7 +11,6 @@ public class IntroCinematic : MonoBehaviour {
     public CameraShake shakeImpact;
     public SimpelAnimation sandwichAnim;
     public Transform comic;
-    public SoundManager soundManager;
 
     // Use this for initialization
     void Start () {
@@ -77,7 +76,7 @@ public class IntroCinematic : MonoBehaviour {
 
     void PlayMusic()
     {
-        soundManager.StartCinematicMusic();
+        SoundManager.instance.StartCinematicMusic();
     }
 
     void CinematicSound()

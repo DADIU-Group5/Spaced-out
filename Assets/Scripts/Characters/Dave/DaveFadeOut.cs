@@ -5,8 +5,7 @@ using System;
 public class DaveFadeOut : MonoBehaviour, Observer {
 
     float trans = 1;
-    Color col;
-    public Material mat;
+    public Material daveMat;
     public float fadeTime = 0.5f;
     bool fading = false;
     float targetTrans = 1;
@@ -65,11 +64,12 @@ public class DaveFadeOut : MonoBehaviour, Observer {
 
     void UpdateTrans()
     {
-        mat.SetFloat("_Transparency", trans);
+        daveMat.SetFloat("_Transparency", trans);
     }
 
     public void OnDestroy()
     {
+        daveMat.SetFloat("_Transparency", 1f);
         Subject.instance.RemoveObserver(this);
     }
 }

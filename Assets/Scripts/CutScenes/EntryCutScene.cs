@@ -30,11 +30,16 @@ public class EntryCutScene : MonoBehaviour {
         //Camera.main.transform.parent.parent.GetComponent<InputController>().SetViewDirection(key.transform.position);
     }
 
-	public void StartCutScene(GameObject player)
+   void ToggleUI()
     {
         var evt = new ObserverEvent(EventName.ToggleUI);
         Subject.instance.Notify(gameObject, evt);
+    }
 
+	public void StartCutScene(GameObject player)
+    {
+        ToggleUI();
+        
         player.GetComponent<PlayerController>().Aim(key.transform.position);
         
         playerObj = player.transform;
@@ -54,6 +59,7 @@ public class EntryCutScene : MonoBehaviour {
 
     void ZoomInOnKey()
     {
+        key.SetActive(false);
         zoomCamera.SetActive(true);
         keyPosition = finalKey.transform.position;
         orgPosition = zoomCamera.transform.position;
@@ -85,6 +91,7 @@ public class EntryCutScene : MonoBehaviour {
             {
                 backToDave = false;
                 zoomCamera.SetActive(false);
+                ToggleUI();
             }
         }
     }
@@ -97,8 +104,8 @@ public class EntryCutScene : MonoBehaviour {
 
     public void Ended()
     {
-        var evt = new ObserverEvent(EventName.ToggleUI);
-        Subject.instance.Notify(gameObject, evt);
+        //ToggleUI();
+
         Destroy(cam.gameObject);
         key.SetActive(false);
         playerObj.parent = null;
@@ -108,7 +115,7 @@ public class EntryCutScene : MonoBehaviour {
 
         cam.gameObject.SetActive(false);
 
-        evt = new ObserverEvent(EventName.PlayerSpawned);
+        var evt = new ObserverEvent(EventName.PlayerSpawned);
         evt.payload.Add(PayloadConstants.PLAYER, playerObj.GetComponentInChildren<PlayerController>().gameObject);
         Subject.instance.Notify(gameObject, evt);
     }

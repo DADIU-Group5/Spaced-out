@@ -27,9 +27,15 @@ public class TutorialStage1 : MonoBehaviour, Observer
     {
         Subject.instance.AddObserver(this);
 
+<<<<<<< HEAD
         // bring back the sounds that were muted for the cinematic
         soundManager.EnableSounds();
 
+=======
+        var evt = new ObserverEvent(EventName.PlayerSpawned);
+        evt.payload.Add(PayloadConstants.PLAYER, player);
+        Subject.instance.Notify(gameObject, evt);
+>>>>>>> final
         // disable key
         key = GameObject.FindGameObjectWithTag("Key");
         key.SetActive(false);

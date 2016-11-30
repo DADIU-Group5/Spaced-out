@@ -203,6 +203,10 @@ public class InputController : MonoBehaviour, Observer
         switch (evt.eventName)
         {
             case EventName.PlayerSpawned:
+                if (!gameObject.activeSelf)
+                {
+                    gameObject.SetActive(true);
+                }
                 inputDisabled = false;
                 cameraInputDisabled = false;
                 GameObject go = evt.payload[PayloadConstants.PLAYER] as GameObject;

@@ -10,6 +10,7 @@ public class ParticleSpawner : MonoBehaviour, Observer {
     public GameObject wallHit;
     public GameObject launch;
     public GameObject respawn;
+    public GameObject dead;
 
     //Objects
     public GameObject explodingBarrel;
@@ -75,6 +76,10 @@ public class ParticleSpawner : MonoBehaviour, Observer {
 
             case EventName.ComicPickup:
                 SpawnParticles(pickup, go.transform.position);
+                break;
+
+            case EventName.PlayerDeadEffect:
+                SpawnParticles(dead, playerpos.position, true);
                 break;
 
             default:

@@ -41,6 +41,9 @@ public class SpaceZoom : MonoBehaviour {
             float step = zoomSpeed * 5 * Time.deltaTime;
             zoomCamera.transform.position = Vector3.MoveTowards(zoomCamera.transform.position, orgPosition, step);
 
+            if (zoomCamera.transform.rotation.y < orgRotation.y + 10)
+                zoomCamera.transform.RotateAround(zoomCamera.transform.position, Vector3.back + Vector3.left, 20 * Time.deltaTime * 5);
+
             //if we're in range, stop zooming.
             if (Vector3.Distance(zoomCamera.transform.position, orgPosition) < 1f)
             {

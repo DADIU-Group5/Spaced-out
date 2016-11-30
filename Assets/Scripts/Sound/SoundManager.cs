@@ -12,6 +12,9 @@ public class SoundManager : Singleton<SoundManager>, Observer
     private float effectsVolume;
     private bool mute = false;
 
+    private bool musicPlaying;
+    private bool atmoshericSoundPlaying;
+
     // Use this for initialization
     void Start()
     {
@@ -30,6 +33,9 @@ public class SoundManager : Singleton<SoundManager>, Observer
         MuteSound(mute);
 
         SetLanguage(settings.language);
+
+        musicPlaying = false;
+        atmoshericSoundPlaying = false;
     }
 
     private class Waiter
@@ -61,22 +67,22 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 bool playMusic = (bool)payload[PayloadConstants.START_STOP];
 
                 //StopEvent(SoundEventConstants.DAVE_LAUNCH, 0.0f);
-                
-                if (playMusic)
-                {
-                    PlayEvent(SoundEventConstants.MUSIC_MAIN_STOP);
-                    PlayEvent(SoundEventConstants.MUSIC_MAIN_PLAY);
-                }
+
+                //if (playMusic)
+                //{
+                //    PlayEvent(SoundEventConstants.MUSIC_MAIN_STOP);
+                //    PlayEvent(SoundEventConstants.MUSIC_MAIN_PLAY);
+                //}
 
                 break;
 
             case EventName.OnFire:
-                PlayEvent(SoundEventConstants.DAVE_CATCH_FIRE, entity);
-                Invoke("PutOutDave", 5.0f);
+                PlayEvent(SoundEventConstants.DAVE_CATCH_FIRE);
+                Invoke("PutOutDave", 6.0f);
                 break;
 
             case EventName.Electrocuted:
-                PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE, entity);
+                PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
                 Invoke("StopElectrocution", 5.0f);
                 break;
 
@@ -261,5 +267,40 @@ public class SoundManager : Singleton<SoundManager>, Observer
     public void OnDestroy()
     {
         Subject.instance.RemoveObserver(this);
+    }
+
+    public void EnableSounds()
+    {
+        Subject.instance.AddObserver(this);
+    }
+
+    public void DisableSounds()
+    {
+        Subject.instance.RemoveObserver(this);
+    }
+
+    public void StartCinematicMusic()
+    {
+        musicPlaying = true;
+        atmoshericSoundPlaying = true;
+
+        AkSoundEngine.PostEvent("musicFirstPlay", gameObject);
+        AkSoundEngine.PostEvent("atmosStart", gameObject);
+    }
+
+    public void StartMusic()
+    {
+        if (!musicPlaying)
+        {
+            AkSoundEngine.PostEvent(SoundEventConstants.MUSIC_MAIN_PLAY, gameObject);
+            AkSoundEngine.PostEvent("atmosStart", gameObject);
+
+            musicPlaying = true;
+        }
+    }
+
+    public void StopMusic()
+    {
+        AkSoundEngine.PostEvent(SoundEventConstants.MUSIC_MAIN_STOP, gameObject);
     }
 }

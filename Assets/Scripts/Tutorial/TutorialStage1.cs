@@ -15,6 +15,7 @@ public class TutorialStage1 : MonoBehaviour, Observer
     public GameObject powerTip;
     public GameObject launchTip;
 
+    public SoundManager soundManager;
     public Brain gal;
 
     private GameObject key;
@@ -25,6 +26,10 @@ public class TutorialStage1 : MonoBehaviour, Observer
     void Start()
     {
         Subject.instance.AddObserver(this);
+
+        // bring back the sounds that were muted for the cinematic
+        soundManager.EnableSounds();
+
         // disable key
         key = GameObject.FindGameObjectWithTag("Key");
         key.SetActive(false);

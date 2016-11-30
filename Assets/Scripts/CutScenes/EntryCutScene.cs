@@ -62,12 +62,13 @@ public class EntryCutScene : MonoBehaviour {
 
     void ZoomInOnKey()
     {
+        if (zoomCamera == null)
+        {
+            return;
+        }
         player = GameObject.FindGameObjectWithTag("Player");
         key.SetActive(false);
-        if (zoomCamera != null)
-        {
-            zoomCamera.SetActive(true);
-        }
+        zoomCamera.SetActive(true);
         keyPosition = finalKey.transform.position;
         orgPosition = zoomCamera.transform.position;
         zoomingIn = true;
@@ -124,7 +125,7 @@ public class EntryCutScene : MonoBehaviour {
 
     public void Ended()
     {
-        //ToggleUI();
+        ToggleUI();
         Destroy(cam.gameObject);
         key.SetActive(false);
         playerObj.parent = null;

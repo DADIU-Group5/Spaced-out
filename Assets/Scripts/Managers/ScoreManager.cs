@@ -15,6 +15,8 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
 
     public static int shotsFired = 0;
 
+    public GameObject winMenu;
+
     protected override void Awake()
     {   
         // will be increased on start
@@ -73,9 +75,14 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
                     ProgressManager.instance.SetMedal(level, ProgressManager.medalAllComics);
                 }
 
-                if(ProgressManager.instance.SetShotCount(level, shotsFired))
+                if (ProgressManager.instance.SetShotCount(level, shotsFired))
                 {
-                    //YOu did good!
+                    //You did good!
+                    winMenu.GetComponent<WinMenu>().ShowRecord(true);
+                }
+                else
+                {
+                    winMenu.GetComponent<WinMenu>().ShowRecord(false);
                 }
                 
                 break;

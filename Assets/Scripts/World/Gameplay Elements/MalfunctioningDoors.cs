@@ -17,7 +17,8 @@ public class MalfunctioningDoors : MonoBehaviour {
 
     bool started = false;
 
-    public DoorOpenCloseTrigger doorTrigger;
+    public DoorOpenCloseTrigger doorCloseTrigger;
+    public DoorOpenCloseTrigger doorOpenTrigger;
 
     [HideInInspector]
     private Animator animator;
@@ -36,7 +37,7 @@ public class MalfunctioningDoors : MonoBehaviour {
             animator.SetTrigger("Close");
             //evt.payload.Add(PayloadConstants.DOOR_OPEN, false);
         }
-        doorTrigger.Open();
+        
         //Subject.instance.Notify(gameObject, evt);
     }
 
@@ -153,5 +154,15 @@ public class MalfunctioningDoors : MonoBehaviour {
         {
             item.SetActive(false);
         }
+    }
+
+    void SoundOpen()
+    {
+
+    }
+
+    void SoundClose()
+    {
+        doorCloseTrigger.Open();
     }
 }

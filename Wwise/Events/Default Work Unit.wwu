@@ -1078,17 +1078,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="daveStopCharge" ID="{B7103F76-F064-423B-8EC3-37787C2A577E}">
-							<ChildrenList>
-								<Action Name="Stop" ID="{9D9C00B2-F585-4A8A-94E1-81C8E573C861}" ShortID="45357245" Type="Stop" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{DD50BBF8-8DC7-4DB8-8080-513E63DFFA0A}" Global="false">
-											<ObjectRef Name="charge" ID="{0301B950-95C3-4298-BBDA-BEC82750E4CD}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
-										</Element>
-									</ElementList>
-								</Action>
-							</ChildrenList>
-						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{7CC22D88-6C23-4DC3-A203-59A12B65F02A}" ShortID="773461650">
@@ -1156,9 +1145,19 @@
 						<Event Name="doorShut" ID="{9F393916-5E3D-4361-A042-6CBF80404CC9}">
 							<ChildrenList>
 								<Action Name="Play" ID="{0B2CD72E-79B5-4E11-A447-675B2F1D61F2}" ShortID="3840145" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{4ACA9471-5696-4B32-8C0C-46A0F0D67A07}" Global="false">
-											<ObjectRef Name="doors" ID="{BF4E15A6-DBD6-4FBB-8221-C7E51BEAF67F}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+											<ObjectRef Name="door close" ID="{BF4E15A6-DBD6-4FBB-8221-C7E51BEAF67F}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{2C70E2DB-8D0F-4D2D-AF78-7C25A4466F52}" ShortID="138100998" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{A5D46115-1757-48CC-A456-1A266131D691}" Global="false">
+											<ObjectRef Name="close" ID="{0D44963E-C73A-4BD6-A14F-256A4A32BD83}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -1222,7 +1221,23 @@
 						</Event>
 						<Event Name="doorOpen" ID="{867C81DB-4DF1-4764-9A46-8F96B2DC1059}">
 							<ChildrenList>
-								<Action Name="Play" ID="{03A9208E-7273-435D-A3DE-D90189BECA2B}" ShortID="92545803" Type="Play" Scope="One" Global="false"/>
+								<Action Name="Play" ID="{03A9208E-7273-435D-A3DE-D90189BECA2B}" ShortID="92545803" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{14E6EEDB-F1C6-462C-B3DA-FCCA810CC4BE}" Global="false">
+											<ObjectRef Name="door open click" ID="{40A9826D-D429-4C5D-A57A-8375E48AA33C}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{E48FEB5F-5B4F-4691-A1D8-6E1496D81C11}" ShortID="47271629" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{26D6DB6B-3830-4543-A0FC-98E623A5D74D}" Global="false">
+											<ObjectRef Name="open" ID="{E83D6B16-2D02-4721-804E-3E9330D982FB}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="switchOn" ID="{606B4472-D0D4-4B6C-97D5-1E1E7245DF83}">
@@ -1333,7 +1348,13 @@
 					<ChildrenList>
 						<Event Name="cinematic1" ID="{AA5AB3FD-2E24-46A8-B27F-9BC1E3818143}">
 							<ChildrenList>
-								<Action Name="Play" ID="{258806D3-4CF5-4F79-93E3-6ABB0E8D5249}" ShortID="615178539" Type="Play" Scope="One" Global="false"/>
+								<Action Name="Play" ID="{258806D3-4CF5-4F79-93E3-6ABB0E8D5249}" ShortID="615178539" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{9842A949-6078-41C9-9537-21BFEC88C731}" Global="false">
+											<ObjectRef Name="CINEMATIC INTRO" ID="{E2BAA12D-E87E-43E0-8FDC-C54B98E63BE7}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="cinematic2" ID="{80F35067-DA78-46DF-BD3F-6046A9ED0C3C}">
@@ -1382,10 +1403,50 @@
 										</Element>
 									</ElementList>
 								</Action>
+								<Action Name="Stop" ID="{A58D4359-66FB-436A-93F2-835E31CCE20A}" ShortID="32444845" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{0156B48C-1E2F-473D-BAC8-3243E6D45E27}" Global="false">
+											<ObjectRef Name="musicFirst" ID="{129A023D-119A-496B-B302-614F15E66252}" WorkUnitID="{F5948B08-8EA0-455A-9A43-E3F403D87912}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{6C46B502-1091-4A6F-8EA6-56639D78BEF2}" ShortID="240691427" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{F5B86DD5-771E-4A1F-B9E0-0DF120A48690}" Global="false">
+											<ObjectRef Name="musicCredits" ID="{D246BA3F-4D0B-4908-AFA8-91FFB3D93FC9}" WorkUnitID="{F5948B08-8EA0-455A-9A43-E3F403D87912}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="musicMenuStop" ID="{653A2808-86B3-46BE-9EE1-2331E89EE71A}"/>
 						<Event Name="musicWinStop" ID="{DA915DC8-5822-4A10-92E0-20A2736C9236}"/>
+						<Event Name="musicFirstPlay" ID="{2DBDE27F-2D39-4B13-AE12-C6B05D2865EE}">
+							<ChildrenList>
+								<Action Name="Play" ID="{12725E4D-337A-46C1-8475-DA3D6430519F}" ShortID="184913595" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="FadeCurve" Type="int16" Value="7"/>
+										<Property Name="FadeTime" Type="Real64" Value="7"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{C10A702A-33D7-457A-802D-2AD105BFA57B}" Global="false">
+											<ObjectRef Name="musicFirst" ID="{129A023D-119A-496B-B302-614F15E66252}" WorkUnitID="{F5948B08-8EA0-455A-9A43-E3F403D87912}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="musicCredits" ID="{D6E25FDD-18C0-4A46-A534-FE38148A4F1C}">
+							<ChildrenList>
+								<Action Name="Play" ID="{0641C0D6-BE01-4B10-9354-15ED0F56EB66}" ShortID="129328013" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{E480C134-65BD-482E-9F46-A2537738FFD4}" Global="false">
+											<ObjectRef Name="musicCredits" ID="{D246BA3F-4D0B-4908-AFA8-91FFB3D93FC9}" WorkUnitID="{F5948B08-8EA0-455A-9A43-E3F403D87912}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="gameState" ID="{9ECBB5B8-712E-4CE3-8D9E-DE8A817913EC}" ShortID="77749081">
@@ -1412,6 +1473,9 @@
 						<Event Name="atmosStart" ID="{89D83D7C-F2BD-46C6-BC86-21E6D8C98D5D}">
 							<ChildrenList>
 								<Action Name="Play" ID="{B8DB55B3-5A3D-46C1-BEAC-18429344303C}" ShortID="895829723" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="7"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{599E11DA-6000-49E2-82B9-AA26DB16A1E7}" Global="false">
 											<ObjectRef Name="knirken" ID="{02D86B12-679D-4D02-87B0-984E7F28FAE9}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
@@ -1419,6 +1483,9 @@
 									</ElementList>
 								</Action>
 								<Action Name="Play" ID="{339B01A5-755B-4792-9684-E94EA75186E3}" ShortID="172016810" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="7"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{07D904EE-C312-4DD7-9D50-07BF28605454}" Global="false">
 											<ObjectRef Name="loop1" ID="{0D1AE580-993D-469A-A2B3-6A50FC25B299}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
@@ -1426,6 +1493,9 @@
 									</ElementList>
 								</Action>
 								<Action Name="Play" ID="{3E80B603-1EEA-4549-901E-F08DE6DDBB44}" ShortID="613805147" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="7"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{4B148CD1-0343-4C5E-80B0-79DB3171EE87}" Global="false">
 											<ObjectRef Name="main atmos" ID="{1D2E4926-39CC-487E-B02C-23F3E7439A0D}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
@@ -1433,6 +1503,9 @@
 									</ElementList>
 								</Action>
 								<Action Name="Play" ID="{7B7B4B93-5461-43C9-A15D-EF597EDB9FAF}" ShortID="784971208" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="7"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{2F2E7886-3813-4686-904E-31DEA5999E35}" Global="false">
 											<ObjectRef Name="hydralics" ID="{955C4C8A-5CDA-4CEF-BE4C-9F17F3149579}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
@@ -1440,6 +1513,9 @@
 									</ElementList>
 								</Action>
 								<Action Name="Play" ID="{C84DCCCA-51E4-4445-94E3-6EE5AADA4B5F}" ShortID="823766676" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="7"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{09A8132A-336B-4AF2-9D4F-152F2D4D31E8}" Global="false">
 											<ObjectRef Name="blip blop sci fi forest long1" ID="{54951246-80EB-4D37-ACE3-D430F90EECCF}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>

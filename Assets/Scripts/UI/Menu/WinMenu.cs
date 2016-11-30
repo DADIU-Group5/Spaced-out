@@ -15,8 +15,9 @@ public class WinMenu : MonoBehaviour, Observer
     public GameObject hud;
     public GameObject recordText;
 
-    public Text scoreLabel1;
-    public Text scoreLabel2;
+    public Text boostsLabel1;
+    public Text boostsLabel2;
+    public Text comicsLabel1;
 
     public Button nextLevelBtn;
 
@@ -139,9 +140,13 @@ public class WinMenu : MonoBehaviour, Observer
 
     public void SetScore()
     {
-        scoreLabel1.text = ScoreManager.shotsFired.ToString();
-        scoreLabel2.text = ScoreManager.shotsFired.ToString();
+        boostsLabel1.text = ScoreManager.shotsFired.ToString();
+        boostsLabel2.text = ScoreManager.shotsFired.ToString();
+    }
 
+    public void SetComics(string comicText)
+    {
+        comicsLabel1.text = comicText;
     }
 
     public void ShowLastWinMenu()

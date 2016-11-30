@@ -9,6 +9,10 @@ public class SwitchItem : MonoBehaviour {
     //[HideInInspector]
     //public List<GameObject> assignedHazards;
 
+    /*[Header("Hazard Objects:")]
+    [Header("lock inspector window, select all, and drag & drop.")]
+    public HazardState[] hazards;*/
+
     [Header("How long is the switch untouchable after collision?")]
     public float triggerDelay = 1f;
     
@@ -19,6 +23,9 @@ public class SwitchItem : MonoBehaviour {
     public Color offColour = Color.red;
     public Color onColour = Color.green;
 
+    [Header("Add the actual button part of the switch!")]
+    public GameObject actualButtonPart;
+
     private bool countingDown = false;
     private bool hasBeenTriggered = false;
     private Renderer switchRenderer;
@@ -28,7 +35,10 @@ public class SwitchItem : MonoBehaviour {
 
     void Start()
     {
-        switchRenderer = this.GetComponent<Renderer>();
+        if (actualButtonPart != null)
+            switchRenderer = actualButtonPart.GetComponent<Renderer>();
+        else
+            Debug.Log("Couldn't find button in switch prefab. Did you remember to drag & drop it?");
         SwitchColor();
     }
 
@@ -49,7 +59,10 @@ public class SwitchItem : MonoBehaviour {
     public void SwitchColor()
     {
         on = !on;
-        switchRenderer.material.color = on ? onColour : offColour;
+        if (actualButtonPart != null)
+            switchRenderer.material.color = on ? onColour : offColour;
+        else
+            Debug.Log("Couldn't find button in switch prefab");
     }
 
     /// <summary>
@@ -64,6 +77,8 @@ public class SwitchItem : MonoBehaviour {
             //if we are allowed to trigger more than once || it hasn't been triggered yet:
             if (!oneTimeTrigger && !countingDown|| !hasBeenTriggered)
             {
+                SwitchColor();
+
                 countingDown = true;
                 //start counting down to next available switch:
                 StartCoroutine(CountDown());
@@ -75,6 +90,15 @@ public class SwitchItem : MonoBehaviour {
                 Subject.instance.Notify(gameObject, evt);
 
                 inRoom.SwitchWasTouched();
+
+               /* foreach (HazardState state in hazards)
+                {
+                    state.EnabledOrDisableTrap();
+
+                    evt = new ObserverEvent(EventName.SwitchPressed);
+                    evt.payload.Add(PayloadConstants.SWITCH_ON, false);
+                    Subject.instance.Notify(gameObject, evt);
+                }*/
             }
         }
     }

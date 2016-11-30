@@ -7,6 +7,9 @@ public class Fan : MonoBehaviour {
     [Tooltip("Force of the wind.")]
     public float fanForce = 20f;
 
+    [Header("Is this a pulling fan?")]
+    public bool reverseFan = false;
+
     [HideInInspector]
     public float distance = 20f;
 
@@ -15,6 +18,11 @@ public class Fan : MonoBehaviour {
     public Transform startPos;
     [Tooltip("Add/place a transform object at the END of the fan's influence")]
     public Transform endPos;
+
+    [Header("The Fan blades object:")]
+    public GameObject fanBlades;
+    private bool fanBladesFound = false;
+    private Vector3 rotationDirection = Vector3.right;
 
     [HideInInspector]
     public Vector3 windDirection;
@@ -25,16 +33,29 @@ public class Fan : MonoBehaviour {
     // Internal list that tracks objects that enter this object's "zone"
     private List<Collider> objects = new List<Collider>();
 
+    void Update()
+    {
+        
+        if (fanBladesFound && itemState.On)
+            fanBlades.transform.RotateAround(fanBlades.transform.position, rotationDirection , 20 * Time.deltaTime * 20);
+    }
+
     // Use this for initialization
     void Start () {
+        if (fanBlades != null)
+            fanBladesFound = true;
         distance =  Vector3.Distance(startPos.position, endPos.position);
         CapsuleCollider coll = GetComponent<CapsuleCollider>();
         coll.height = endPos.transform.localPosition.x;
         coll.center = new Vector3(coll.height/2, 0, 0);
         windDirection = Vector3.Normalize(endPos.position - startPos.position);
 
-        if (gameObject.name == "ReverseFan")
+        rotationDirection = transform.right;
+        if (gameObject.name == "ReverseFan" || reverseFan)
+        {
             windDirection = -windDirection;
+            rotationDirection = -rotationDirection;
+        }
         itemState = this.gameObject.GetComponent<GameplayElement>();
     }
 

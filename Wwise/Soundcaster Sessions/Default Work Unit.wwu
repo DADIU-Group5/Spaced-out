@@ -284,7 +284,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="masterVolume" ID="{16D6A1BF-90EA-4458-897A-819BFBA4868A}"/>
-							<Value>50</Value>
+							<Value>63</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Month" ID="{09E2B445-C4A3-447F-B3CA-818A1D925EF7}"/>
@@ -300,7 +300,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="effectsVolume" ID="{ED513413-85B0-45A9-B98F-EE61A42D635F}"/>
-							<Value>50</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Fury" ID="{A2AE79DC-CA3A-46BA-9652-9986C322A87B}"/>
@@ -320,11 +320,11 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}"/>
-							<Value>0</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}"/>
-							<Value>50</Value>
+							<Value>76</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_TimeOfDay" ID="{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}"/>
@@ -336,7 +336,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="musicVolume" ID="{94967744-CEA3-4D37-893D-F4A043DFEB29}"/>
-							<Value>50</Value>
+							<Value>83</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Freefall" ID="{2F2DFE37-4F9E-4D94-83D8-53CCA39781AD}"/>

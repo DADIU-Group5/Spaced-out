@@ -29,7 +29,6 @@
     UpdateStatus,
     CameraZoomOut,
     CameraZoomIn,
-    CameraZoomValue,
     ShowSubtile,
     PlaySound,
     Narrate,

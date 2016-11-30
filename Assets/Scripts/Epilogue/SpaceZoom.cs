@@ -3,17 +3,21 @@ using System.Collections;
 
 public class SpaceZoom : MonoBehaviour {
 
-
+    [Tooltip("Zoomspeed - it's doubled on the way 'back'.")]
     public float zoomSpeed = 5.0f;
     private bool zoomingIn = false;
     private bool zoomingOut = false;
     private Vector3 orgPosition;
-    private Vector3 keyPosition;
+    public Vector3 keyPosition;
+    private Quaternion orgRotation;
+    private bool zoomedInAlready = false;
 
-    [Header("Cameras")]
+    [Header("Camera:")]
     public GameObject zoomCamera;
+    [Header("Key and camera startposition:")]
     public GameObject key;
     public GameObject startPos;
+    private GameObject player;
 
     void Update()
     {
@@ -21,6 +25,9 @@ public class SpaceZoom : MonoBehaviour {
         {
             float step = zoomSpeed * Time.deltaTime;
             zoomCamera.transform.position = Vector3.MoveTowards(zoomCamera.transform.position, keyPosition, step);
+
+            if (zoomCamera.transform.rotation.y < orgRotation.y + 10)
+                zoomCamera.transform.RotateAround(zoomCamera.transform.position, Vector3.forward + Vector3.right, 20 * Time.deltaTime);
 
             //if we're in range, stop zooming.
             if (Vector3.Distance(zoomCamera.transform.position, keyPosition) < 2f)
@@ -32,36 +39,37 @@ public class SpaceZoom : MonoBehaviour {
 
         if (zoomingOut)
         {
-            float step = zoomSpeed * 2 * Time.deltaTime;
+            float step = zoomSpeed * 5 * Time.deltaTime;
             zoomCamera.transform.position = Vector3.MoveTowards(zoomCamera.transform.position, orgPosition, step);
+
+            if (zoomCamera.transform.rotation.y < orgRotation.y + 10)
+                zoomCamera.transform.RotateAround(zoomCamera.transform.position, Vector3.back + Vector3.left, 20 * Time.deltaTime * 5);
 
             //if we're in range, stop zooming.
             if (Vector3.Distance(zoomCamera.transform.position, orgPosition) < 1f)
             {
                 zoomingOut = false;
-                zoomCamera.SetActive(false);
-                ToggleUI();
             }
         }
+       // player.transform.position = Vector3.RotateTowards(other.transform.position, keyPosition, 1f, 1f);
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            zoomCamera.SetActive(true);
-            zoomCamera.transform.position = startPos.transform.position;
-            orgPosition = zoomCamera.transform.position;
-            keyPosition = key.transform.position;
-            zoomingIn = true;
-            ToggleUI();
+            if (!zoomedInAlready)
+            {
+                zoomCamera.SetActive(true);
+                zoomCamera.transform.position = startPos.transform.position;
+                orgPosition = zoomCamera.transform.position;
+                keyPosition = key.transform.position;
+                zoomingIn = true;
+                zoomedInAlready = true;
+                player = other.gameObject;
+                
+            }
         }
-    }
-
-    private void ToggleUI()
-    {
-        var statusEvent = new ObserverEvent(EventName.ToggleUI);
-        Subject.instance.Notify(gameObject, statusEvent);
     }
 
     IEnumerator waitAfterZooming()
@@ -69,10 +77,5 @@ public class SpaceZoom : MonoBehaviour {
         yield return new WaitForSeconds(0.5f);
         zoomingOut = true;
     }
-
-    // Use this for initialization
-    void Start () {
-	
-	}
 	
 }

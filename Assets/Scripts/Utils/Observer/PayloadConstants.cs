@@ -23,5 +23,4 @@ public class PayloadConstants
     public const string TYPE = "type";
     public const string SWITCH_ON = "switchOn";
     public const string LANGUAGE = "language";
-    public const string PERCENT = "percent";
 }

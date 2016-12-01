@@ -19,12 +19,16 @@ public class TutorialStage1 : MonoBehaviour, Observer
 
     private GameObject key;
     private bool hasLaunched;
-    private OxygenController oxygenController;
 
     // Use this for initialization
     void Start()
     {
         Subject.instance.AddObserver(this);
+
+        var evt = new ObserverEvent(EventName.PlayerSpawned);
+        evt.payload.Add(PayloadConstants.PLAYER, player);
+        Subject.instance.Notify(gameObject, evt);
+
         // disable key
         key = GameObject.FindGameObjectWithTag("Key");
         key.SetActive(false);

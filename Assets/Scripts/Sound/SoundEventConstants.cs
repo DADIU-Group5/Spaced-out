@@ -14,6 +14,7 @@ public class SoundEventConstants
 
     // Dave sounds
     public const string DAVE_CHARGE = "daveCharge";
+    public const string DAVE_CHARGE_STOP = "daveChargeStop";
     public const string DAVE_LAUNCH = "daveLaunch";
     public const string DAVE_FIRST_LAUNCH = "daveFirstLaunch";
     public const string DAVE_FIRST_LAUNCH_1 = "daveFirstLaunch_01";

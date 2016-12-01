@@ -162,6 +162,7 @@ public class WinMenu : MonoBehaviour, Observer
     /// </summary>
     public IEnumerator Win()
     {
+        SetScore();
         if (!playerIsDead && !playerWon)
         {
             //wait set amount of time...

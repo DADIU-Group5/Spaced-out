@@ -15,6 +15,7 @@ public class WinMenu : MonoBehaviour, Observer
     public GameObject hud;
     public GameObject record;
 
+    public Text currentLevelLabel;
     public Text boostsLabel1;
     public Text boostsLabel2;
     public Text comicsLabel1;
@@ -178,6 +179,8 @@ public class WinMenu : MonoBehaviour, Observer
             yield return new WaitForSeconds(timeTilWinScreen);
             hud.SetActive(false);
             levelCompletedMenu.SetActive(true);
+            int currentlevel = GenerationDataManager.instance.GetCurrentLevel();
+            currentLevelLabel.text = currentlevel.ToString().Replace("0", "O");
             playerWon = true;
 
             SetBadges();

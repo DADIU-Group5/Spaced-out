@@ -3,10 +3,63 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI.Extensions;
 
 public class MenuLevelSelect : MonoBehaviour {
 
-    public LevelButton[] levelButtons;
+    public HorizontalScrollSnap snap;
+    public LevelButtonAnimation[] buttonAnimations;
+    public LevelButton[] buttons;
+    private int index = 1;
+
+    void Start()
+    {
+        buttonAnimations[1].SetFocus(true);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            SwipeRight();
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            SwipeLeft();
+        }
+    }
+
+    public void SwipeRight()
+    {
+        if (index < buttons.Length)
+        {
+            buttonAnimations[index].SetFocus(false);
+            index++;
+            buttonAnimations[index].SetFocus(true);
+        }
+    }
+
+    public void SwipeLeft()
+    {
+        if (index > 0)
+        {
+            buttonAnimations[index].SetFocus(false);
+            index--;
+            buttonAnimations[index].SetFocus(true);
+        }
+    }
+
+    public void LevelButtonsScrolled(Vector2 offset)
+    {
+        int focusedIndex = Mathf.RoundToInt(offset.x * 6);
+        if (focusedIndex != index)
+        {
+            buttonAnimations[index].SetFocus(false);
+            buttonAnimations[focusedIndex].SetFocus(true);
+        }
+    }
+
 
     public void UnlockAll()
     {

@@ -13,7 +13,6 @@ public class WinMenu : MonoBehaviour, Observer
     public GameObject adsMenu;
     public GameObject winMenu;
     public GameObject hud;
-    public GameObject recordText;
 
     public Text boostsLabel1;
     public Text boostsLabel2;
@@ -131,11 +130,6 @@ public class WinMenu : MonoBehaviour, Observer
         {
             ShowLastWinMenu();
         }
-    }
-
-    public void ShowRecord(bool record)
-    {
-        recordText.SetActive(record);
     }
 
     public void SetScore()

@@ -75,15 +75,7 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
                     ProgressManager.instance.SetMedal(level, ProgressManager.medalAllComics);
                 }
 
-                if (ProgressManager.instance.SetShotCount(level, shotsFired))
-                {
-                    //You did good!
-                    winMenu.GetComponent<WinMenu>().ShowRecord(true);
-                }
-                else
-                {
-                    winMenu.GetComponent<WinMenu>().ShowRecord(false);
-                }
+                ProgressManager.instance.SetShotCount(level, shotsFired);
                 
                 break;
             case EventName.PlayerDead:

@@ -26,7 +26,6 @@ public class Brain : Singleton<Brain>, Observer
 
     IEnumerator SilentState()
     {
-        Debug.Log("Silent: Enter");
         while (state == State.Silent)
         {
             yield return new WaitForSeconds(seconds);
@@ -36,14 +35,12 @@ public class Brain : Singleton<Brain>, Observer
                 state = State.GeneralRemarks;
             }
         }
-        Debug.Log("Silent: Exit");
+        
         NextState();
     }
 
     IEnumerator NarrativeState()
     {
-        Debug.Log("Narrative: Enter");
-
         var sub = subtitleManager.GetSubtitle(queuedNarrative, language);
 
         var narEvt = new ObserverEvent(EventName.Narrate);
@@ -57,14 +54,12 @@ public class Brain : Singleton<Brain>, Observer
         yield return new WaitForSeconds(sub.duration);
 
         state = State.Silent;
-        Debug.Log("Narrative: Exit");
+        
         NextState();
     }
 
     IEnumerator GeneralRemarksState()
     {
-        Debug.Log("GeneralRemark: Enter");
-
         var sub = subtitleManager.GetRandomSubtitle(language, SubtitleType.GeneralRemarks);
 
         var narEvt = new ObserverEvent(EventName.Narrate);
@@ -78,14 +73,12 @@ public class Brain : Singleton<Brain>, Observer
         yield return new WaitForSeconds(sub.duration);
 
         state = State.Silent;
-        Debug.Log("GeneralRemark: Exit");
+        
         NextState();
     }
 
     IEnumerator MockState()
     {
-        Debug.Log("Mock: Enter");
-
         SubtitleType type = SubtitleType.Narrative;
 
         if (currentEvent.eventName == EventName.PlayerDead)
@@ -122,9 +115,8 @@ public class Brain : Singleton<Brain>, Observer
 
         yield return new WaitForSeconds(subtitle.duration);
 
-
         state = State.Silent;
-        Debug.Log("Mock: Exit");
+        
         NextState();
     }
 
@@ -178,15 +170,15 @@ public class Brain : Singleton<Brain>, Observer
                 break;
 
             // TODO: handle all those
-            case EventName.Pause:
-            case EventName.PlayerGotKey:
-            case EventName.PlayerSpawned:
-            case EventName.PlayerWon:
-            case EventName.RespawnPlayer:
-            case EventName.RestartLevel:
-            case EventName.StartCutscene:
-            case EventName.Unpause:
-                break;
+            //case EventName.Pause:
+            //case EventName.PlayerGotKey:
+            //case EventName.PlayerSpawned:
+            //case EventName.PlayerWon:
+            //case EventName.RespawnPlayer:
+            //case EventName.RestartLevel:
+            //case EventName.StartCutscene:
+            //case EventName.Unpause:
+            //    break;
 
             case EventName.ChangeLanguage:
                 language = (Language)evt.payload[PayloadConstants.LANGUAGE];

@@ -13,8 +13,9 @@ public class WinMenu : MonoBehaviour, Observer
     public GameObject adsMenu;
     public GameObject winMenu;
     public GameObject hud;
-    public GameObject recordText;
+    public GameObject record;
 
+    public Text currentLevelLabel;
     public Text boostsLabel1;
     public Text boostsLabel2;
     public Text comicsLabel1;
@@ -44,6 +45,9 @@ public class WinMenu : MonoBehaviour, Observer
             case EventName.PlayerSpawned:
                 playerIsDead = false;
                 break;
+            case EventName.PlayerRecord:
+                GotRecord();
+                break;
             default:
                 break;
         }
@@ -59,6 +63,11 @@ public class WinMenu : MonoBehaviour, Observer
     {
         Subject.instance.AddObserver(this);
         level = GenerationDataManager.instance.GetCurrentLevel();
+    }
+
+    public void GotRecord()
+    {
+        record.SetActive(true);
     }
 
     /// <summary>
@@ -133,11 +142,6 @@ public class WinMenu : MonoBehaviour, Observer
         }
     }
 
-    public void ShowRecord(bool record)
-    {
-        recordText.SetActive(record);
-    }
-
     public void SetScore()
     {
         boostsLabel1.text = ScoreManager.shotsFired.ToString().Replace("0", "O");
@@ -168,12 +172,15 @@ public class WinMenu : MonoBehaviour, Observer
     /// </summary>
     public IEnumerator Win()
     {
+        SetScore();
         if (!playerIsDead && !playerWon)
         {
             //wait set amount of time...
             yield return new WaitForSeconds(timeTilWinScreen);
             hud.SetActive(false);
             levelCompletedMenu.SetActive(true);
+            int currentlevel = GenerationDataManager.instance.GetCurrentLevel();
+            currentLevelLabel.text = currentlevel.ToString().Replace("0", "O");
             playerWon = true;
 
             SetBadges();

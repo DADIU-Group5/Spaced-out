@@ -122,7 +122,10 @@ public class HUDController : MonoBehaviour, Observer {
                 {
                     comicsLeftText.text = ((string)comicsPayload[PayloadConstants.COMICS]).Replace("0", "O");
                     string tempText = ((string)comicsPayload[PayloadConstants.COMICS]).Replace("0", "O");
-                    winMenu.GetComponent<WinMenu>().SetComics(tempText);
+                    if (winMenu != null)
+                    {
+                        winMenu.GetComponent<WinMenu>().SetComics(tempText);
+                    }
                 }
                 break;
 

@@ -14,13 +14,16 @@ public class IntroCinematic : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        //soundManager.DisableSounds();
+        Invoke("CinematicSound", 0.0f);
+        Invoke("PlayMusic", 25.0f);
         floatingObjects = floatingObjectsParent.GetComponentsInChildren<InitialForce>();
         GetComponent<SimpelAnimation>().PlayAnimations(LoadScene);
         Invoke("PlayRest", 10f);
         Invoke("HappyTalk", 5f);
         Invoke("SadTalk", 35f);
         Invoke("Astroid", 8.05f);
-        Invoke("AstroidImpact", 14.3f);
+        Invoke("AstroidImpact", 14.0f);
     }
 
     private void LoadScene()
@@ -71,5 +74,15 @@ public class IntroCinematic : MonoBehaviour {
     {
         galAnimator.SetTrigger("sadTalk");
         Invoke("HappyTalk", 0.5f);
+    }
+
+    void PlayMusic()
+    {
+        SoundManager.instance.StartCinematicMusic();
+    }
+
+    void CinematicSound()
+    {
+        AkSoundEngine.PostEvent("cinematic1", gameObject);
     }
 }

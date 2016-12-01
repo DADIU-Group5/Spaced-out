@@ -77,12 +77,12 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
 
                 if (ProgressManager.instance.SetShotCount(level, shotsFired))
                 {
-                    //You did good!
-                    winMenu.GetComponent<WinMenu>().ShowRecord(true);
+                    var recordEvent = new ObserverEvent(EventName.PlayerRecord);
+                    Subject.instance.Notify(gameObject, recordEvent);
                 }
                 else
                 {
-                    winMenu.GetComponent<WinMenu>().ShowRecord(false);
+
                 }
                 
                 break;

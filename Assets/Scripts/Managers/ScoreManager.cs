@@ -75,7 +75,15 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
                     ProgressManager.instance.SetMedal(level, ProgressManager.medalAllComics);
                 }
 
-                ProgressManager.instance.SetShotCount(level, shotsFired);
+                if (ProgressManager.instance.SetShotCount(level, shotsFired))
+                {
+                    var recordEvent = new ObserverEvent(EventName.PlayerRecord);
+                    Subject.instance.Notify(gameObject, recordEvent);
+                }
+                else
+                {
+
+                }
                 
                 break;
             case EventName.PlayerDead:

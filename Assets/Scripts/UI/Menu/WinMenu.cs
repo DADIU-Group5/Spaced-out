@@ -13,6 +13,7 @@ public class WinMenu : MonoBehaviour, Observer
     public GameObject adsMenu;
     public GameObject winMenu;
     public GameObject hud;
+    public GameObject record;
 
     public Text boostsLabel1;
     public Text boostsLabel2;
@@ -43,6 +44,9 @@ public class WinMenu : MonoBehaviour, Observer
             case EventName.PlayerSpawned:
                 playerIsDead = false;
                 break;
+            case EventName.PlayerRecord:
+                GotRecord();
+                break;
             default:
                 break;
         }
@@ -58,6 +62,11 @@ public class WinMenu : MonoBehaviour, Observer
     {
         Subject.instance.AddObserver(this);
         level = GenerationDataManager.instance.GetCurrentLevel();
+    }
+
+    public void GotRecord()
+    {
+        record.SetActive(true);
     }
 
     /// <summary>

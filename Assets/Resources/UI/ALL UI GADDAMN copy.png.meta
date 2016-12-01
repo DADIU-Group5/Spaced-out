@@ -1,10 +1,10 @@
 fileFormatVersion: 2
 guid: c7053665d238efa48a34bda289392935
-timeCreated: 1480595085
+timeCreated: 1480599233
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: ALL UI GADDAMN copy_0
+    21300000: UI_header_background_small
     21300002: ALL UI GADDAMN copy_1
     21300004: ALL UI GADDAMN copy_2
     21300006: ALL UI GADDAMN copy_3
@@ -20,19 +20,19 @@ TextureImporter:
     21300026: ALL UI GADDAMN copy_13
     21300028: ALL UI GADDAMN copy_14
     21300030: ALL UI GADDAMN copy_15
-    21300032: ALL UI GADDAMN copy_16
+    21300032: UI_speech
     21300034: ALL UI GADDAMN copy_17
     21300036: ALL UI GADDAMN copy_18
     21300038: ALL UI GADDAMN copy_19
     21300040: ALL UI GADDAMN copy_20
     21300042: ALL UI GADDAMN copy_21
-    21300044: ALL UI GADDAMN copy_22
-    21300046: ALL UI GADDAMN copy_23
+    21300044: UI_levelselect_chosen
+    21300046: UI_levelselect
     21300048: ALL UI GADDAMN copy_24
     21300050: UI_level_star1
     21300052: UI_level_star2
-    21300054: ALL UI GADDAMN copy_27
-    21300056: ALL UI GADDAMN copy_28
+    21300054: UI_paused
+    21300056: UI_corner_button_blue
     21300058: ALL UI GADDAMN copy_29
     21300060: UI_level_star3
     21300062: ALL UI GADDAMN copy_31
@@ -41,9 +41,9 @@ TextureImporter:
     21300068: ALL UI GADDAMN copy_34
     21300070: UI_menu_background
     21300072: ALL UI GADDAMN copy_36
-    21300074: ALL UI GADDAMN copy_37
-    21300076: ALL UI GADDAMN copy_38
-    21300078: ALL UI GADDAMN copy_39
+    21300074: UI_star1_collected
+    21300076: UI_star2_collected
+    21300078: UI_star3_collected
     21300080: ALL UI GADDAMN copy_40
     21300082: ALL UI GADDAMN copy_41
     21300084: ALL UI GADDAMN copy_42
@@ -71,8 +71,8 @@ TextureImporter:
     21300128: UI_english_orange
     21300130: UI_star_counter
     21300132: UI_slider_knob
-    21300134: ALL UI GADDAMN copy_67
-    21300136: ALL UI GADDAMN copy_68
+    21300134: UI_shop_banner_english
+    21300136: UI_shop_banner_danish
     21300138: UI_slider_empty
     21300140: UI_slider_full
     21300142: ALL UI GADDAMN copy_72
@@ -99,9 +99,9 @@ TextureImporter:
     21300184: ALL UI GADDAMN copy_93
     21300186: ALL UI GADDAMN copy_94
     21300188: ALL UI GADDAMN copy_95
-    21300190: ALL UI GADDAMN copy_96
-    21300192: ALL UI GADDAMN copy_97
-    21300194: ALL UI GADDAMN copy_98
+    21300190: UI_star1_uncollected
+    21300192: UI_star2_uncollected
+    21300194: UI_star3_uncollected
     21300196: ALL UI GADDAMN copy_99
     21300198: ALL UI GADDAMN copy_100
     21300200: ALL UI GADDAMN copy_101
@@ -120,11 +120,12 @@ TextureImporter:
     21300226: ALL UI GADDAMN copy_114
     21300228: ALL UI GADDAMN copy_115
     21300230: ALL UI GADDAMN copy_71
-    21300232: ALL UI GADDAMN copy_116
+    21300232: UI_corner_button_blue_pressed
     21300234: ALL UI GADDAMN copy_117
     21300236: UI_boosts_counter
     21300238: UI_comics_counter
-    21300240: ALL UI GADDAMN copy_120
+    21300240: UI_header_background
+    21300242: UI_gal_frame
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -150,7 +151,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 1
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -183,7 +184,7 @@ TextureImporter:
         height: 55
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 14, y: 10, z: 26, w: 26}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
@@ -196,11 +197,11 @@ TextureImporter:
         height: 55
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 14, y: 10, z: 26, w: 26}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_16
+      name: UI_speech
       rect:
         serializedVersion: 2
         x: 17
@@ -209,11 +210,11 @@ TextureImporter:
         height: 83
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 30, y: 25, z: 30, w: 35}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_22
+      name: UI_levelselect_chosen
       rect:
         serializedVersion: 2
         x: 891
@@ -226,7 +227,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_23
+      name: UI_levelselect
       rect:
         serializedVersion: 2
         x: 580
@@ -243,7 +244,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 557
-        y: 849
+        y: 851
         width: 85
         height: 80
       alignment: 0
@@ -265,7 +266,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_27
+      name: UI_paused
       rect:
         serializedVersion: 2
         x: 26
@@ -278,7 +279,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_28
+      name: UI_corner_button_blue
       rect:
         serializedVersion: 2
         x: 770
@@ -287,20 +288,7 @@ TextureImporter:
         height: 55
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_29
-      rect:
-        serializedVersion: 2
-        x: 770
-        y: 1174
-        width: 60
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 12, y: 12, z: 12, w: 12}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
@@ -326,11 +314,11 @@ TextureImporter:
         height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 45, y: 45, z: 45, w: 45}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_37
+      name: UI_star1_collected
       rect:
         serializedVersion: 2
         x: 607
@@ -343,7 +331,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_38
+      name: UI_star2_collected
       rect:
         serializedVersion: 2
         x: 719
@@ -356,7 +344,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_39
+      name: UI_star3_collected
       rect:
         serializedVersion: 2
         x: 834
@@ -391,7 +379,7 @@ TextureImporter:
         height: 340
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 45, y: 55, z: 45, w: 45}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
@@ -473,7 +461,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_67
+      name: UI_shop_banner_english
       rect:
         serializedVersion: 2
         x: 1552
@@ -486,7 +474,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_68
+      name: UI_shop_banner_danish
       rect:
         serializedVersion: 2
         x: 1564
@@ -508,7 +496,7 @@ TextureImporter:
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 30, y: 13, z: 34, w: 13}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
@@ -521,7 +509,7 @@ TextureImporter:
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 30, y: 13, z: 34, w: 13}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
@@ -560,7 +548,7 @@ TextureImporter:
         height: 75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 23, y: 17, z: 32, w: 34}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
@@ -573,11 +561,11 @@ TextureImporter:
         height: 75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 23, y: 17, z: 32, w: 34}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_96
+      name: UI_star1_uncollected
       rect:
         serializedVersion: 2
         x: 2378
@@ -590,7 +578,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_97
+      name: UI_star2_uncollected
       rect:
         serializedVersion: 2
         x: 2378
@@ -603,7 +591,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_98
+      name: UI_star3_uncollected
       rect:
         serializedVersion: 2
         x: 2373
@@ -616,7 +604,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_116
+      name: UI_corner_button_blue_pressed
       rect:
         serializedVersion: 2
         x: 770
@@ -625,20 +613,7 @@ TextureImporter:
         height: 55
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_117
-      rect:
-        serializedVersion: 2
-        x: 770
-        y: 1052
-        width: 60
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 12, y: 12, z: 12, w: 12}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
@@ -668,7 +643,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_120
+      name: UI_header_background
       rect:
         serializedVersion: 2
         x: 577
@@ -677,7 +652,33 @@ TextureImporter:
         height: 115
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 50, y: 55, z: 45, w: 35}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_header_background_small
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1220
+        width: 204
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 37, y: 35, z: 37, w: 22}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_gal_frame
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 952
+        width: 137
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 13, y: 13, z: 13, w: 13}
       outline: []
       tessellationDetail: 0
     outline: []

@@ -71,7 +71,7 @@ public class SwitchItem : MonoBehaviour {
         if (other.transform.tag == "Player" || other.transform.tag == "object")
         {
             //if we are allowed to trigger more than once || it hasn't been triggered yet:
-            if (!oneTimeTrigger && !countingDown|| !hasBeenTriggered)
+            if (!oneTimeTrigger && !countingDown || !hasBeenTriggered)
             {
                 countingDown = true;
                 //start counting down to next available switch:
@@ -80,7 +80,7 @@ public class SwitchItem : MonoBehaviour {
                 hasBeenTriggered = true;
 
                 var evt = new ObserverEvent(EventName.SwitchPressed);
-                evt.payload.Add(PayloadConstants.SWITCH_ON, false);
+                evt.payload.Add(PayloadConstants.SWITCH_ON, !hasBeenTriggered);
                 Subject.instance.Notify(gameObject, evt);
 
                 inRoom.SwitchWasTouched();

@@ -91,6 +91,7 @@ public class EntryCutScene : MonoBehaviour {
                 player = GameObject.FindGameObjectWithTag("Player");
                 keyPosition = moveDirection.transform.position;
                 movingPlayer = true;
+                GameObject.Find("Behind Camera Pod").GetComponent<LineRenderer>().enabled = false;
             }
         }
 
@@ -125,7 +126,7 @@ public class EntryCutScene : MonoBehaviour {
 
     public void Ended()
     {
-        ToggleUI();
+       // ToggleUI();
         Destroy(cam.gameObject);
         key.SetActive(false);
         playerObj.parent = null;

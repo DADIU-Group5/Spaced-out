@@ -27,7 +27,7 @@ public class ZoomInCamera : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            ToggleUI();
+            //ToggleUI();
             mainCameraPod.SetActive(false);
             zoomCamera.gameObject.SetActive(true);
         }

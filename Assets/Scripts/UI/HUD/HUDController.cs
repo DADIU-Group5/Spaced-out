@@ -55,7 +55,7 @@ public class HUDController : MonoBehaviour, Observer {
 
     public void ShotsFired()
     {
-        shotText.text = ""+ScoreManager.shotsFired;
+        shotText.text = (""+ScoreManager.shotsFired).Replace("0", "O");
     }
 
 
@@ -120,8 +120,8 @@ public class HUDController : MonoBehaviour, Observer {
                 var comicsPayload = evt.payload;
                 if (comicsLeftText != null)
                 {
-                    comicsLeftText.text = (string)comicsPayload[PayloadConstants.COMICS];
-                    string tempText = (string)comicsPayload[PayloadConstants.COMICS];
+                    comicsLeftText.text = ((string)comicsPayload[PayloadConstants.COMICS]).Replace("0", "O");
+                    string tempText = ((string)comicsPayload[PayloadConstants.COMICS]).Replace("0", "O");
                     winMenu.GetComponent<WinMenu>().SetComics(tempText);
                 }
                 break;

@@ -140,13 +140,13 @@ public class WinMenu : MonoBehaviour, Observer
 
     public void SetScore()
     {
-        boostsLabel1.text = ScoreManager.shotsFired.ToString();
-        boostsLabel2.text = ScoreManager.shotsFired.ToString();
+        boostsLabel1.text = ScoreManager.shotsFired.ToString().Replace("0", "O");
+        boostsLabel2.text = ScoreManager.shotsFired.ToString().Replace("0", "O");
     }
 
     public void SetComics(string comicText)
     {
-        comicsLabel1.text = comicText;
+        comicsLabel1.text = comicText.Replace("0", "O");
     }
 
     public void ShowLastWinMenu()

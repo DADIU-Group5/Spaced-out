@@ -60,92 +60,13 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
     }
 
     /// <summary>
-    /// Start exploding and initiate flashing
+    /// EXPLOSION!
     /// </summary>
-    public IEnumerator Exploderer()
-    {
-        //start flashing
-        //StartCoroutine(Flasher());
-
-        //wait...
-        yield return new WaitForSeconds(timeToExplode);
-
-        var evtExp = new ObserverEvent(EventName.BarrelExplosion);
-        Subject.instance.Notify(gameObject, evtExp);
-
-
-        //Explode, and destroy object/start animation:
-
-        //find all objects in radius of child's spherecollider...
-        Collider[] explosionObjects = Physics.OverlapSphere(transform.position, explosionRadius);
-        List<Collider> filterList = new List<Collider>();//(explosionObjects);
-
-        RaycastHit hitInfo;
-        foreach (Collider collider in explosionObjects)
-        {
-           bool hit =  Physics.Raycast(transform.position, (collider.transform.position - transform.position), out hitInfo, explosionRadius);
-
-            if (hit && hitInfo.transform.tag != "Respawn")
-            {
-                filterList.Add(collider);
-            }
-            else if (!hit)
-            {
-                filterList.Add(collider);
-            }
-            
-        }
-
-        Collider[] filtered = filterList.ToArray();
-
-        for (int i = 0; i < filtered.Length; i++)
-        {
-            Rigidbody rgb = filtered[i].GetComponent<Rigidbody>();
-            if (rgb == null)
-                continue;
-            if (filtered[i].tag == "Player")
-            {
-                Debug.Log("player collider tag found: " + filtered[i].name);
-                var evt = new ObserverEvent(EventName.PlayerExploded);
-                Subject.instance.Notify(gameObject, evt);
-            }
-        }
-        filterList.Clear();
-
-        Collider[] pushObjects = Physics.OverlapSphere(transform.position, pushRadius);
-        Debug.Log("pushobjects: " + pushObjects.Length);
-        foreach (Collider collider in pushObjects)
-        {
-            bool hit = Physics.Raycast(transform.position, (collider.transform.position - transform.position), out hitInfo, explosionRadius);
-
-            if (hit && hitInfo.transform.tag != "Respawn")
-            {
-                filterList.Add(collider);
-            }
-            else if (!hit)
-            {
-                filterList.Add(collider);
-            }
-        }
-
-        pushObjects = filterList.ToArray();
-
-        for (int i = 0; i < pushObjects.Length; i++)
-        {
-            Rigidbody rgb = pushObjects[i].GetComponent<Rigidbody>();
-            if (rgb == null)
-                continue;
-            //and Boom!
-
-            // transform.position should be pushDirection - check results.
-            rgb.AddExplosionForce(explosionPower, transform.position, pushRadius);
-        }
-
-        Destroy(gameObject);
-    }
-
+    /// <returns></returns>
     IEnumerator Exploder()
     {
+        //TODO visual effect?
+
         yield return new WaitForSeconds(timeToExplode);
 
         var evtExp = new ObserverEvent(EventName.BarrelExplosion);
@@ -189,6 +110,10 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
         Destroy(gameObject);
     }
 
+    /// <summary>
+    /// Function for pushing objects.
+    /// </summary>
+    /// <param name="obj"></param>
     void PushObject(Transform obj)
     {
         if(obj.GetComponent<Rigidbody>() != null)

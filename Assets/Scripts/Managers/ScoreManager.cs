@@ -77,13 +77,15 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
 
                 if (ProgressManager.instance.SetShotCount(level, shotsFired))
                 {
-                    winMenu.GetComponent<WinMenu>().ShowRecord(true);
+                    //YOU CANNOT KEEP A REFERENCE FROM SCOREMANAGER, OR ANY OTHER SINGLETON, TO AN OBJECT IN THE SCENE! THIS INSTANCE OF THE SINGLETON WILL BE DESTROYED!
+                    //winMenu.GetComponent<WinMenu>().ShowRecord(true);
                 }
                 else
                 {
-                    winMenu.GetComponent<WinMenu>().ShowRecord(false);
+                    //YOU CANNOT KEEP A REFERENCE FROM SCOREMANAGER, OR ANY OTHER SINGLETON, TO AN OBJECT IN THE SCENE! THIS INSTANCE OF THE SINGLETON WILL BE DESTROYED!
+                    //winMenu.GetComponent<WinMenu>().ShowRecord(false);
                 }
-                
+
                 break;
             case EventName.PlayerDead:
                 hasDied = true;

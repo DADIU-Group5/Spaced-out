@@ -120,7 +120,7 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
         {
             if (obj.tag == "Player")
             {
-                obj.GetComponent<Rigidbody>().AddExplosionForce(explosionPower*10, transform.position, pushRadius);
+                obj.GetComponent<Rigidbody>().AddExplosionForce(explosionPower * 30, transform.position, pushRadius);
             }
             else
             {
@@ -140,8 +140,7 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
     {
         if (itemState.On)
         {
-            if (other.transform.tag == "Player" ||
-            other.transform.tag == "object" && other.gameObject.GetComponent<Rigidbody>() != null)
+            if (other.transform.tag == "Player")
             {
                 var evt = new ObserverEvent(EventName.BarrelTriggered);
                 Subject.instance.Notify(gameObject, evt);

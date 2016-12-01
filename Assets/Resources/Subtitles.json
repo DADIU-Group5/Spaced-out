@@ -7,44 +7,44 @@
 			"duration": 4.5
 		}, {
 			"id": "narrative2",
-			"text": "Alert, Prepare for impact",
+			"text": "Alert! Prepare for impact!",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 2.3
 		}, {
 			"id": "narrative3",
 			"text": "Dave I have openend the door to the escape pod. Please evacuate the station.",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 6.0
 		}, {
 			"id": "narrative4",
 			"text": "Dave: zero, natural selection: one.",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 3.6
 		}, {
 			"id": "narrative5",
-			"text": "I am sure you paid attention the first time i told you about the jetpack, buuut i insist. It's simple. Point, power up and release!",
+			"text": "I am sure you paid attention the first time I told you about the jetpack, but I insist. It's simple. Point, power up and release!",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 14.5
 		},  {
 			"id": "narrative6",
 			"text": "The hazards here don't seem too friendly... You should go say hi!",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 4.0
 		},{
 			"id": "narrative7",
 			"text": "What are you doing, Dave, you need to get to the escape pod.",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 3.9
 		},{
 			"id": "narrative8",
 			"text": "You're lucky we have the technology to bring you back when you hurt yourself.",
 			"start": 0.0,
-			"duration": 4
+			"duration": 4.7
 		},{
 			"id": "narrative9",
-			"text": "Your jetpack seems to be damaged!",
+			"text": "Dave, your suit has sustained major blows.",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 3.0
 		}],
     "generalRemarks": [
       {
@@ -160,25 +160,25 @@
     "wires": [
       {
         "id": "wires1",
-        "text": "Q: What is an electrician's favorite ice cream flavor? A: Shock-o-lot! Hehehehe... Dave?...",
+        "text": "- What is an electrician's favorite ice cream flavor? \n - Shock-o-lot! Hehehehe... Dave?",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 7.5
       }, {
         "id": "wires2",
         "text": "I find the current situation shocking.",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 4.0
       },{
         "id": "wires3",
         "text": "You finally managed to get rid of that nasty electical charge. I'm ex-static!",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 5.6
       },{
         "id": "wires4",
         "text": "Dave, your suit is now fully charged. Dave?",
         "emotion": "sad",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 11.2
       },{
         "id": "wires5",
         "text": "This is not how to take charge of your life, Dave.",
@@ -195,19 +195,19 @@
         "text": "There are better ways to put a spark in your life, Dave.",
         "emotion": "sad",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 3.6
       },{
         "id": "wires8",
         "text": "Most people know to stay away from exposed high-voltage cables, Dave. But that is what makes you so special.",
         "emotion": "happy",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 6.4
       },{
         "id": "wires9",
         "text": "With great power comes great responsibility, Dave.",
         "emotion": "happy",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 4.7
       }
     ],
     "switches": [
@@ -409,34 +409,34 @@
 	"danishSubtitles": {
 		"narrative": [{
 			"id": "narrative1",
-			"text": "Dave, mine sensorer har opfanget noget... Det nærmer sig, hurtigt.",
+			"text": "Dave, mine sensorere har opfanget noget... Det nærmer sig, hurtigt!",
 			"start": 0.0,
-			"duration": 4.5
+			"duration": 6.5
 		}, {
 			"id": "narrative2",
-			"text": "Advarsel, Bered på sammenstød.",
+			"text": "Advarsel! Bered på sammenstød!",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 3.0
 		}, {
 			"id": "narrative3",
 			"text": "Dave, jeg har åbnet porten til redningskapslen, vær sød at evakuere station.",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 6.0
 		}, {
 			"id": "narrative4",
-			"text": "Dave: nul, Darwin: 1.",
+			"text": "Dave: 0, Darwin: 1.",
 			"start": 0.0,
 			"duration": 3.5
 		}, {
 			"id": "narrative5",
-			"text": "Jeg er sikker på at du stadig husker hvordan jetpacken virker, meeeen nu siger jeg det lige igen. Bare peg dig den vej du vil hen, start raketten og fyr løs.",
+			"text": "Jeg er sikker på at du stadig husker hvordan jetpacken virker, men nu siger jeg det lige igen. Bare peg dig den vej du vil hen, start raketten og fyr løs.",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 10.6
 		}, {
 			"id": "narrative6",
 			"text": "Der her sted virker ikke særligt sikkert... Men hey! Der er kun en måde at finde ud det på!",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 6.0
 		}, {
 			"id": "narrative7",
 			"text": "Hvad har du gang i, Dave? Du skal hen imod rednings kapslen.",
@@ -444,14 +444,14 @@
 			"duration": 3.5
 		}, {
 			"id": "narrative8",
-			"text": "Vi har teknologien til at bringe dig tilbage, når du kommer galt af sted. Heldigt for dig.",
+			"text": "Vi har teknologien til at bringe dig tilbage, når du kommer galt afsted. Heldigt for dig.",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 6.0
 		}, {
 			"id": "narrative9",
-			"text": "Din jetpack er beskadiget!",
+			"text": "Dave, din dragts iltniveau er nul.",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 3.1
 		}],
     "generalRemarks": [
       {
@@ -566,47 +566,42 @@
 			"id": "wires1",
 			"text": "- Hvad er elektrikerens yndligs smag? \n- Chock-olade. Hahaha... Dave?",
 			"start": 0.0,
-			"duration": 3.5
+			"duration": 8.0
 		},{
         "id": "wires2",
         "text": "Din nuværende situation er simpelthen chokerende!",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 3.3
       },{
         "id": "wires3",
-        "text": "Du slap endelig af med den forfærdelige elektriske ladning, Dave... der gør mig helt e-statisk!",
+        "text": "At se dig sådan her, Dave... Det gør mig helt ekstatisk!",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 4.5
       },{
         "id": "wires4",
-        "text": "Dave, din dragt er nu fuldt opladet. Dave?",
+        "text": "Dave, din dragt er nu fuldt opladt. Dave?",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 4.5
       },{
         "id": "wires5",
-        "text": "Det er altså ikke det jeg mener, når jeg siger 'bevar fatningen', Dave.",
+        "text": "Det er altså ikke det jeg mener, når jeg siger bevar fatningen, Dave.",
         "start": 0.0,
         "duration": 3.5
       },{
         "id": "wires6",
-        "text": "Blev du forskrækket, Dave? Var det lidt chokerende?",
+        "text": "Blev du forskrækket Dave? Var det lidt chokerende?",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 4.5
       },{
         "id": "wires7",
         "text": "Der findes bedre måder at få gnisten tilbage i dit liv på, Dave.",
         "start": 0.0,
-        "duration": 3.5
+        "duration": 4.0
       },{
         "id": "wires8",
-        "text": "De fleste folk ved godt at man skal holde sig fra højspændingskabler, Dave. Men det er dét, der gør dig så speciel!",
+        "text": "De fleste folk ved godt man holde sig fra højspændingskabler, Dave.",
         "start": 0.0,
-        "duration": 3.5
-      },{
-        "id": "wires9",
-        "text": "Med stor kraft følger et stort ansvar, Dave.",
-        "start": 0.0,
-        "duration": 3.5
+        "duration": 4.0
       }],
 		"switches": [{
 			"id": "switches1",

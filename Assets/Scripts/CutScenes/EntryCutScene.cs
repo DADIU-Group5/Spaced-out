@@ -105,12 +105,13 @@ public class EntryCutScene : MonoBehaviour {
             zoomCamera.transform.position = Vector3.MoveTowards(zoomCamera.transform.position, orgPosition, step);
 
             //if we're in range, stop zooming.
-            if (Vector3.Distance(zoomCamera.transform.position, mainCameraPod.transform.position) < 1f)//(Vector3.Distance(zoomCamera.transform.position, orgPosition) < 1f)
+            if (Vector3.Distance(zoomCamera.transform.position, mainCameraPod.transform.position) < 10f)//(Vector3.Distance(zoomCamera.transform.position, orgPosition) < 1f)
             {
                 backToDave = false;
                 zoomCamera.SetActive(false);
                 mainCameraPod.SetActive(true);
-                ToggleUI();
+                GameObject.Find("Behind Camera Pod").GetComponent<LineRenderer>().enabled = true;
+                //ToggleUI();
             }
         }
 

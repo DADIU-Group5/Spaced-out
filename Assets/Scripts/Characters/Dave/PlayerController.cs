@@ -8,6 +8,13 @@ public interface IPlayerControl
     void Launch();
 }
 
+public enum JetPackState
+{
+    StartCharging,
+    KeepCharging,
+    StopCharging
+}
+
 /// <summary>
 /// This class is responsible for controlling the player launches.
 /// Input controller should only comunicate through the above interface
@@ -127,7 +134,7 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         this.power = Mathf.Clamp01(power);
         animator.SetFloat("Power", power);
         ThrowLaunchPowerChangedEvent();
-        ThrowChargingPowerEvent(power != 0, this.power);
+        ThrowChargingPowerEvent(power >= minLaunchPower, this.power);
     }
 
     /// <summary>
@@ -135,10 +142,14 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     /// </summary>
     public void Launch()
     {
-        if (!readyForLaunch || power < minLaunchPower)
+        if (!readyForLaunch)
         {
-            ThrowChargingPowerEvent(false, 0);
             return;
+        }
+        else if (power < minLaunchPower)
+        {
+            Debug.Log("2222222222222222222222222");
+            ThrowCancelChargingEvent();
         }
 
         // perform the launch
@@ -164,17 +175,26 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         var evt = new ObserverEvent(EventName.PlayerLaunch);
         evt.payload.Add(PayloadConstants.LAUNCH_FORCE, power * maxLaunchVelocity);
         evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, transform.forward);
-        evt.payload.Add(PayloadConstants.START_STOP, playMusic);
-        playMusic = false;
+        //evt.payload.Add(PayloadConstants.START_STOP, playMusic);
+        //playMusic = false;
         Subject.instance.Notify(gameObject, evt);
         // TODO sound
     }
 
     private void ThrowChargingPowerEvent(bool start, float force = 0)
     {
+        var jetpackState = start ? JetPackState.StartCharging : JetPackState.KeepCharging;
         var evt = new ObserverEvent(EventName.PlayerCharge);
-        evt.payload.Add(PayloadConstants.START_STOP, start);
-        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, force * 100);
+        evt.payload.Add(PayloadConstants.START_STOP, jetpackState);
+        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, force * 100.0f);
+        Subject.instance.Notify(gameObject, evt);
+    }
+
+    private void ThrowCancelChargingEvent()
+    {
+        var evt = new ObserverEvent(EventName.PlayerCharge);
+        evt.payload.Add(PayloadConstants.START_STOP, JetPackState.StopCharging);
+        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, 0.0f);
         Subject.instance.Notify(gameObject, evt);
     }
 }

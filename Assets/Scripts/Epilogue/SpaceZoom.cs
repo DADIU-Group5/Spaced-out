@@ -9,6 +9,7 @@ public class SpaceZoom : MonoBehaviour {
     public Vector3 keyPosition;  
     public GameObject suckTowardsPoint;
     public GameObject sucktionParticles;
+    public GameObject Logo;
     
     [Header("Camera:")]
     public GameObject zoomCamera;
@@ -93,6 +94,8 @@ public class SpaceZoom : MonoBehaviour {
         //movingPlayer = true;
         sucktionParticles.SetActive(true);
         StartCoroutine(suckPlayer());
+
+        Logo.SetActive(false);
 
         //sucktionCamera.SetActive(true);
     }

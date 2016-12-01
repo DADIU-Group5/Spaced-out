@@ -25,8 +25,9 @@ public class EpilogueWinMenu : MonoBehaviour {
     /// <summary>
     /// Load Main Menu
     /// </summary>
-    public void LoadMainMenu(int levelIndex)
+    public void LoadNext(int levelIndex)
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Animator>().SetBool("CinematicFly", false);
         SceneManager.LoadScene(levelIndex);
     }
 

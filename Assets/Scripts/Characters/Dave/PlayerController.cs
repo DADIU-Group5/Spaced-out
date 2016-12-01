@@ -41,7 +41,6 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     private Rigidbody body;
     private Animator animator;
     private InputController inputCont;
-    private bool playMusic = true;
 
     void Awake ()
     {
@@ -129,12 +128,12 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         if (!readyForLaunch)
             return;
 
+        this.power = Mathf.Clamp01(power);
         power = Mathf.Ceil(power * 8f) / 8f;
 
-        this.power = Mathf.Clamp01(power);
         animator.SetFloat("Power", power);
-        ThrowLaunchPowerChangedEvent();
         ThrowChargingPowerEvent(power >= minLaunchPower, this.power);
+        ThrowLaunchPowerChangedEvent();
     }
 
     /// <summary>
@@ -148,17 +147,16 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         }
         else if (power < minLaunchPower)
         {
-            Debug.Log("2222222222222222222222222");
             ThrowCancelChargingEvent();
+            return;
         }
 
         // perform the launch
-        Vector3 dir = aim * Vector3.forward; //inputCont.GetLaunchDirection();
+        Vector3 dir = aim * Vector3.forward;
         body.AddForce(power * maxLaunchVelocity * dir, ForceMode.VelocityChange);
         animator.SetTrigger("Launch");
-        ThrowLaunchEvent();
-        //ThrowChargingPowerEvent(false, 0);
         SetPower(0);
+        ThrowLaunchEvent();
         readyForLaunch = false;
     }
 
@@ -167,7 +165,6 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         var evt = new ObserverEvent(EventName.LaunchPowerChanged);
         evt.payload.Add(PayloadConstants.LAUNCH_FORCE, new Vector2(power * maxLaunchVelocity, maxLaunchVelocity));
         Subject.instance.Notify(gameObject, evt);
-        // TODO sound
     }
     
     private void ThrowLaunchEvent()
@@ -175,17 +172,13 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         var evt = new ObserverEvent(EventName.PlayerLaunch);
         evt.payload.Add(PayloadConstants.LAUNCH_FORCE, power * maxLaunchVelocity);
         evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, transform.forward);
-        //evt.payload.Add(PayloadConstants.START_STOP, playMusic);
-        //playMusic = false;
         Subject.instance.Notify(gameObject, evt);
-        // TODO sound
     }
 
     private void ThrowChargingPowerEvent(bool start, float force = 0)
     {
-        var jetpackState = start ? JetPackState.StartCharging : JetPackState.KeepCharging;
         var evt = new ObserverEvent(EventName.PlayerCharge);
-        evt.payload.Add(PayloadConstants.START_STOP, jetpackState);
+        evt.payload.Add(PayloadConstants.START_STOP, JetPackState.StartCharging);
         evt.payload.Add(PayloadConstants.LAUNCH_FORCE, force * 100.0f);
         Subject.instance.Notify(gameObject, evt);
     }

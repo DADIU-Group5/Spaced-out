@@ -58,9 +58,7 @@ public class SoundManager : Singleton<SoundManager>, Observer
             case EventName.PlayerLaunch:
                 PlayEvent(SoundEventConstants.DAVE_LAUNCH, gameObject);
 
-                //chargePlaying = false;
-                //AkSoundEngine.SetRTPCValue("jetpackChargeLevel", 0);
-                //PlayEvent(SoundEventConstants.DAVE_CHARGE_STOP, gameObject);
+                chargePlaying = false;
 
                 break;
 
@@ -81,27 +79,27 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 switch (jetpackState)
                 {
                     case JetPackState.StartCharging:
-                        //if(!chargePlaying)
-                        PlayEvent(SoundEventConstants.DAVE_CHARGE, gameObject);
-                        
-                        AkSoundEngine.SetRTPCValue("jetpackChargeLevel", force1);
-                        chargePlaying = true;
+                        if (!chargePlaying)
+                        {
+                            PlayEvent(SoundEventConstants.DAVE_CHARGE);
 
+                            //AkSoundEngine.SetRTPCValue("jetpackChargeLevel", force1);
+                            chargePlaying = true;
+                        }
                         break;
 
-                    case JetPackState.KeepCharging:
-                        AkSoundEngine.SetRTPCValue("jetpackChargeLevel", force1);
-                        chargePlaying = true;
-
-                        break;
                     case JetPackState.StopCharging:
                         AkSoundEngine.SetRTPCValue("jetpackChargeLevel", 0);
-                        PlayEvent(SoundEventConstants.DAVE_CHARGE_STOP, gameObject);
-                        //StopEvent(SoundEventConstants.DAVE_CHARGE, 0);
+                        StopEvent(SoundEventConstants.DAVE_CHARGE, 0.0f);
                         chargePlaying = false;
 
                         break;
                 }
+                break;
+
+            case EventName.LaunchPowerChanged:
+                var forceVec = (Vector2)evt.payload[PayloadConstants.LAUNCH_FORCE];
+                AkSoundEngine.SetRTPCValue("jetpackChargeLevel", forceVec.x * 10.0f);
                 break;
 
             case EventName.Collision:

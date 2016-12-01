@@ -20,8 +20,6 @@ reset all,Reset All,Nulstil Alt
 buy,Buy,Køb
 music,Music,Musik
 effects,Effects,Effekter
-resume,RESUME,FORTSÆT
-restart,RESTART,GENSTART
 invert camera controls,INVERT CAMERA CONTROLS,SPEJLVEND KAMERA KONTROL
 velocity,VELOCITY,HASTIGHED
 current,Current,Nuværende
@@ -54,3 +52,5 @@ boostsUsed,BOOSTS USED,BOOSTS BRUGT
 main menu,MAIN MENU,HOVED MENU
 replay,REPLAY,SPIL IGEN
 next level,NEXT LEVEL,NÆSTE NIVEAU
+resume,RESUME,FORTSÆT
+restart,RESTART,GENSTART

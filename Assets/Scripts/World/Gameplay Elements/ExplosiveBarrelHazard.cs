@@ -62,7 +62,7 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
     /// <summary>
     /// Start exploding and initiate flashing
     /// </summary>
-    public IEnumerator Exploder()
+    public IEnumerator Exploderer()
     {
         //start flashing
         //StartCoroutine(Flasher());
@@ -142,6 +142,67 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
         }
 
         Destroy(gameObject);
+    }
+
+    IEnumerator Exploder()
+    {
+        yield return new WaitForSeconds(timeToExplode);
+
+        var evtExp = new ObserverEvent(EventName.BarrelExplosion);
+        Subject.instance.Notify(gameObject, evtExp);
+
+        Collider[] colls = Physics.OverlapSphere(transform.position,pushRadius);
+
+        RaycastHit hitinfo;
+
+        List<Collider> pushColls = new List<Collider>();
+
+        foreach (Collider item in colls)
+        {
+            if(!(item.transform.tag == "Player" || item.transform.tag == "Floating Object"))
+            {
+                continue;
+            }
+            if(Physics.Raycast(transform.position, item.transform.position - transform.position, out hitinfo))
+            {
+                if (hitinfo.transform.tag == "Player" )
+                {
+                    pushColls.Add(item);
+                    if (hitinfo.distance < explosionRadius)
+                    {
+                        var evt = new ObserverEvent(EventName.PlayerExploded);
+                        Subject.instance.Notify(gameObject, evt);
+                    }
+                }
+                else if(hitinfo.transform.tag == "Floating Object")
+                {
+                    pushColls.Add(item);
+                }
+            }
+        }
+
+        foreach (Collider item in pushColls)
+        {
+            PushObject(item.transform);
+        }
+
+        Destroy(gameObject);
+    }
+
+    void PushObject(Transform obj)
+    {
+        if(obj.GetComponent<Rigidbody>() != null)
+        {
+            if (obj.tag == "Player")
+            {
+                obj.GetComponent<Rigidbody>().AddExplosionForce(explosionPower*10, transform.position, pushRadius);
+            }
+            else
+            {
+                obj.GetComponent<Rigidbody>().AddExplosionForce(explosionPower, transform.position, pushRadius);
+            }
+
+        }
     }
 
     /// <summary>

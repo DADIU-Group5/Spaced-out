@@ -8,6 +8,13 @@ public interface IPlayerControl
     void Launch();
 }
 
+public enum JetPackState
+{
+    StartCharging,
+    KeepCharging,
+    StopCharging
+}
+
 /// <summary>
 /// This class is responsible for controlling the player launches.
 /// Input controller should only comunicate through the above interface
@@ -34,7 +41,6 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     private Rigidbody body;
     private Animator animator;
     private InputController inputCont;
-    private bool playMusic = true;
 
     void Awake ()
     {
@@ -122,12 +128,12 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         if (!readyForLaunch)
             return;
 
+        this.power = Mathf.Clamp01(power);
         power = Mathf.Ceil(power * 8f) / 8f;
 
-        this.power = Mathf.Clamp01(power);
         animator.SetFloat("Power", power);
+        ThrowChargingPowerEvent(power >= minLaunchPower, this.power);
         ThrowLaunchPowerChangedEvent();
-        ThrowChargingPowerEvent(power != 0, this.power);
     }
 
     /// <summary>
@@ -135,19 +141,22 @@ public class PlayerController : MonoBehaviour, IPlayerControl
     /// </summary>
     public void Launch()
     {
-        if (!readyForLaunch || power < minLaunchPower)
+        if (!readyForLaunch)
         {
-            ThrowChargingPowerEvent(false, 0);
+            return;
+        }
+        else if (power < minLaunchPower)
+        {
+            ThrowCancelChargingEvent();
             return;
         }
 
         // perform the launch
-        Vector3 dir = aim * Vector3.forward; //inputCont.GetLaunchDirection();
+        Vector3 dir = aim * Vector3.forward;
         body.AddForce(power * maxLaunchVelocity * dir, ForceMode.VelocityChange);
         animator.SetTrigger("Launch");
-        ThrowLaunchEvent();
-        //ThrowChargingPowerEvent(false, 0);
         SetPower(0);
+        ThrowLaunchEvent();
         readyForLaunch = false;
     }
 
@@ -156,7 +165,6 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         var evt = new ObserverEvent(EventName.LaunchPowerChanged);
         evt.payload.Add(PayloadConstants.LAUNCH_FORCE, new Vector2(power * maxLaunchVelocity, maxLaunchVelocity));
         Subject.instance.Notify(gameObject, evt);
-        // TODO sound
     }
     
     private void ThrowLaunchEvent()
@@ -164,17 +172,22 @@ public class PlayerController : MonoBehaviour, IPlayerControl
         var evt = new ObserverEvent(EventName.PlayerLaunch);
         evt.payload.Add(PayloadConstants.LAUNCH_FORCE, power * maxLaunchVelocity);
         evt.payload.Add(PayloadConstants.LAUNCH_DIRECTION, transform.forward);
-        evt.payload.Add(PayloadConstants.START_STOP, playMusic);
-        playMusic = false;
         Subject.instance.Notify(gameObject, evt);
-        // TODO sound
     }
 
     private void ThrowChargingPowerEvent(bool start, float force = 0)
     {
         var evt = new ObserverEvent(EventName.PlayerCharge);
-        evt.payload.Add(PayloadConstants.START_STOP, start);
-        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, force * 100);
+        evt.payload.Add(PayloadConstants.START_STOP, JetPackState.StartCharging);
+        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, force * 100.0f);
+        Subject.instance.Notify(gameObject, evt);
+    }
+
+    private void ThrowCancelChargingEvent()
+    {
+        var evt = new ObserverEvent(EventName.PlayerCharge);
+        evt.payload.Add(PayloadConstants.START_STOP, JetPackState.StopCharging);
+        evt.payload.Add(PayloadConstants.LAUNCH_FORCE, 0.0f);
         Subject.instance.Notify(gameObject, evt);
     }
 }

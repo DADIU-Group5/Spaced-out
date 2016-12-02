@@ -67,11 +67,20 @@ public class MenuSettings : MonoBehaviour {
     public void OnEnglishClick()
     {
         SettingsManager.instance.SetLanguage(Language.English);
+        SendLanguageChangeEvent(Language.English);
     }
 
     public void OnDanishClick()
     {
         SettingsManager.instance.SetLanguage(Language.Danish);
+        SendLanguageChangeEvent(Language.Danish);
+    }
+
+    private void SendLanguageChangeEvent(Language lang)
+    {
+        var evt = new ObserverEvent(EventName.ChangeLanguage);
+        evt.payload.Add(PayloadConstants.LANGUAGE, lang);
+        Subject.instance.Notify(gameObject, evt);
     }
 
     public void OnCameraInvertedToggle()

@@ -125,9 +125,13 @@ public class SoundManager : Singleton<SoundManager>, Observer
             case EventName.SwitchPressed:
 
                 if ((bool)evt.payload[PayloadConstants.SWITCH_ON])
+                {
                     PlayEvent(SoundEventConstants.SWITCH_ON, entity);
+                }
                 else
+                {
                     PlayEvent(SoundEventConstants.SWITCH_OFF, entity);
+                }
 
                 break;
             case EventName.ChangeLanguage:

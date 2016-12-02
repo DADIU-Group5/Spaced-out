@@ -3,6 +3,7 @@
     Collision,
     CameraMoved,
     PlayerLaunch,
+    PlayerFakeLaunched,
     PlayerCollision,
     Pause,
     Unpause,

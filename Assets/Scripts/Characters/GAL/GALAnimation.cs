@@ -10,6 +10,7 @@ public class GALAnimation : MonoBehaviour, Observer
     // the fake SpriteRenderer
     SpriteRenderer fakeRenderer;
     Image imageCanvas;
+    Image GALObject;
 
     public enum Emotion
     {
@@ -25,20 +26,24 @@ public class GALAnimation : MonoBehaviour, Observer
     // Use this for initialization
     void Awake ()
     {
+        GALObject = transform.parent.GetComponent<Image>();
         imageCanvas = GetComponent<Image>();
         fakeRenderer = this.GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         GetComponent<Animation>().Play();
-        Debug.Log("animation playing: " + GetComponent<Animation>().isPlaying);
         Subject.instance.AddObserver(this);
+    }
+
+    void Start ()
+    {
+        SetGAL(false);
     }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
-        switch(evt.eventName)
+        switch (evt.eventName)
         {
             case EventName.GALAnimate:
-                Debug.Log("animation playing: " + GetComponent<Animation>().isPlaying);
                 bool animNum = (bool)evt.payload[PayloadConstants.START_STOP];
                 if (animNum)
                 {
@@ -48,7 +53,31 @@ public class GALAnimation : MonoBehaviour, Observer
                     animator.SetTrigger(animationStates[animNum]);*/
                 }
                 break;
+            case EventName.Narrate:
+                float subStart = (float)evt.payload[PayloadConstants.SUBTITLE_START];
+                float subDuration = (float)evt.payload[PayloadConstants.SUBTITLE_DURATION];
+
+                StartCoroutine(ShowGAL(subStart, subDuration));
+                break;
         }
+    }
+
+    private void SetGAL(bool b)
+    {
+        // Set both to b 
+        imageCanvas.enabled = GALObject.enabled = b;
+    }
+
+    /// <summary>
+    /// Handle displaying the subtitle to the screen
+    /// </summary>
+    public IEnumerator ShowGAL(float subStart, float subDuration)//, int emotion)
+    {
+        yield return new WaitForSeconds(subStart);
+        SetGAL(true);
+
+        yield return new WaitForSeconds(subDuration);
+        SetGAL(false);
     }
 
     public void OnDestroy()

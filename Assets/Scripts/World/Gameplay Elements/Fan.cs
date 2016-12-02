@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 public class Fan : MonoBehaviour
 {
-
     float appliedForce;
 
     [Tooltip("Force of the wind.")]
     public float fanForce = 20f;
-
-    [Header("Is this a pulling fan?")]
-    public bool reverseFan = false;
 
     [HideInInspector]
     public float distance = 20f;
@@ -22,7 +18,6 @@ public class Fan : MonoBehaviour
 
     [Header("The Fan blades object:")]
     public GameObject fanBlades;
-    private bool fanBladesFound = false;
     private Vector3 rotationDirection = Vector3.right;
 
     [HideInInspector]
@@ -36,29 +31,29 @@ public class Fan : MonoBehaviour
 
     void Update()
     {
-
-        if (fanBladesFound && itemState.On)
+        if (itemState.On)
             fanBlades.transform.RotateAround(fanBlades.transform.position, rotationDirection, 20 * Time.deltaTime * 20);
     }
 
     // Use this for initialization
     void Start()
     {
-        if (fanBlades != null)
-            fanBladesFound = true;
         distance = Vector3.Distance(startPos.position, endPos.position);
         CapsuleCollider coll = GetComponent<CapsuleCollider>();
         coll.height = endPos.transform.localPosition.x;
         coll.center = new Vector3(coll.height / 2, 0, 0);
         windDirection = Vector3.Normalize(endPos.position - startPos.position);
-
-        rotationDirection = transform.right;
-        if (gameObject.name == "ReverseFan" || reverseFan)
+        if(fanForce < 0)
         {
-            windDirection = -windDirection;
-            rotationDirection = -rotationDirection;
+            rotationDirection = -transform.right;
         }
-        itemState = this.gameObject.GetComponent<GameplayElement>();
+        else
+        {
+            rotationDirection = transform.right;
+        }
+
+
+        itemState = gameObject.GetComponent<GameplayElement>();
     }
 
     //for every frame, for every collider touching trigger.
@@ -70,12 +65,19 @@ public class Fan : MonoBehaviour
         }
         if (itemState.On)
         {
-            if (other.transform.tag == "Player" || other.transform.tag == "object" &&
-                other.transform.GetComponent<GameplayElement>().movement == Movement.floatingItem)
+            if (other.transform.tag == "Player" || other.transform.tag == "Floating Object" /*&&
+                other.transform.GetComponent<GameplayElement>().movement == Movement.floatingItem*/)
             {
 
                 Rigidbody rgb = other.GetComponent<Rigidbody>();
-                appliedForce = fanForce / (1f + distance * distance) * 1;
+                if (other.tag == "Player")
+                {
+                    appliedForce = fanForce * 60 / (1f + distance * distance) * 1;
+                }
+                else
+                {
+                    appliedForce = fanForce / (1f + distance * distance) * 1;
+                }
                 rgb.AddForce(windDirection * appliedForce);
 
             }

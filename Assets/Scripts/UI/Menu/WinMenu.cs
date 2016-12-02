@@ -10,11 +10,11 @@ public class WinMenu : MonoBehaviour, Observer
     private bool playerWon = false;
 
     public GameObject levelCompletedMenu;
-    public GameObject adsMenu;
     public GameObject winMenu;
     public GameObject hud;
-    public GameObject recordText;
+    public GameObject record;
 
+    public Text currentLevelLabel;
     public Text boostsLabel1;
     public Text boostsLabel2;
     public Text comicsLabel1;
@@ -44,6 +44,9 @@ public class WinMenu : MonoBehaviour, Observer
             case EventName.PlayerSpawned:
                 playerIsDead = false;
                 break;
+            case EventName.PlayerRecord:
+                GotRecord();
+                break;
             default:
                 break;
         }
@@ -59,6 +62,11 @@ public class WinMenu : MonoBehaviour, Observer
     {
         Subject.instance.AddObserver(this);
         level = GenerationDataManager.instance.GetCurrentLevel();
+    }
+
+    public void GotRecord()
+    {
+        record.SetActive(true);
     }
 
     /// <summary>
@@ -104,7 +112,7 @@ public class WinMenu : MonoBehaviour, Observer
 
     void SetBadges()
     {
-        bool[] medals = ProgressManager.instance.GetMedals(level-1);
+        bool[] medals = ProgressManager.instance.GetStars(level-1);
         bool finished = medals[0];
         bool didntDie = medals[1];
         bool collectedComics = medals[2];
@@ -121,46 +129,19 @@ public class WinMenu : MonoBehaviour, Observer
 
     public void ShowNextWinMenu()
     {
-        if (SettingsManager.instance.GetPremium() == false)
-        {
             levelCompletedMenu.SetActive(false);
-            adsMenu.SetActive(true);
-
-        }
-        else
-        {
-            ShowLastWinMenu();
-        }
-    }
-
-    public void ShowRecord(bool record)
-    {
-        recordText.SetActive(record);
+            winMenu.SetActive(true);
     }
 
     public void SetScore()
     {
-        boostsLabel1.text = ScoreManager.shotsFired.ToString();
-        boostsLabel2.text = ScoreManager.shotsFired.ToString();
+        boostsLabel1.text = ScoreManager.shotsFired.ToString().Replace("0", "O");
+        boostsLabel2.text = ScoreManager.shotsFired.ToString().Replace("0", "O");
     }
 
     public void SetComics(string comicText)
     {
-        comicsLabel1.text = comicText;
-    }
-
-    public void ShowLastWinMenu()
-    {
-        if (SettingsManager.instance.GetPremium() == false)
-        {
-            adsMenu.SetActive(false);
-        }
-        else
-        {
-            levelCompletedMenu.SetActive(false);
-        }
-
-        winMenu.SetActive(true);
+        comicsLabel1.text = comicText.Replace("0", "O");
     }
 
     /// <summary>
@@ -175,6 +156,8 @@ public class WinMenu : MonoBehaviour, Observer
             yield return new WaitForSeconds(timeTilWinScreen);
             hud.SetActive(false);
             levelCompletedMenu.SetActive(true);
+            int currentlevel = GenerationDataManager.instance.GetCurrentLevel();
+            currentLevelLabel.text = currentlevel.ToString().Replace("0", "O");
             playerWon = true;
 
             SetBadges();

@@ -20,7 +20,7 @@ public class UITranslation : MonoBehaviour {
     {
         SettingsManager.instance.onLanguageChanged += LanguageChanged;
         label = GetComponent<Text>();
-        label.text = prefix + Translator.instance.Get(key) + suffix;
+        label.text = (prefix + Translator.instance.Get(key) + suffix).ToUpper();
     }
 
     // called whenever the language is changed

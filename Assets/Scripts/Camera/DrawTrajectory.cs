@@ -18,12 +18,19 @@ public class DrawTrajectory : MonoBehaviour, Observer
 
     private bool drawingEnabled;
     private bool uiDisabled = false;
+    int finalmask;
 
     private void Awake()
     {
         Subject.instance.AddObserver(this);
         LR = GetComponent<LineRenderer>();
         drawingEnabled = true;
+        // Create layermask that ignores all Golfball and Ragdoll layers
+        int layermask1 = 1 << LayerMask.NameToLayer("Golfball");
+        int layermask2 = 1 << LayerMask.NameToLayer("Ragdoll");
+        int layermask3 = 1 << LayerMask.NameToLayer("Ignore Raycast");
+        int layermask4 = 1 << LayerMask.NameToLayer("Floating Object");
+        finalmask = ~(layermask1 | layermask2 | layermask3 | layermask4);
     }
 
     // This can only be put into Update() if it is called after CameraController's Update, since this code depends on that code to be finished
@@ -68,11 +75,7 @@ public class DrawTrajectory : MonoBehaviour, Observer
         Ray ray = new Ray(raypos, dir);
         RaycastHit hit;
 
-        // Create layermask that ignores all Golfball and Ragdoll layers
-        int layermask1 = 1 << LayerMask.NameToLayer("Golfball");
-        int layermask2 = 1 << LayerMask.NameToLayer("Ragdoll");
-        int layermask3 = 1 << LayerMask.NameToLayer("Ignore Raycast");
-        int finalmask = ~(layermask1 | layermask2 | layermask3);
+
 
         if (Physics.Raycast(ray, out hit, len, finalmask))
         {

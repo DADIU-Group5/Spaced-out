@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class EpilogueEnd : MonoBehaviour {
 
-	void OnTriggerEnter(Collider other)
+	/*void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
@@ -12,5 +12,5 @@ public class EpilogueEnd : MonoBehaviour {
             //UnityEngine.SceneManagement.SceneManager.LoadScene(0);
             SceneManager.LoadScene("Outro Cinematic");
         }
-    }
+    }*/
 }

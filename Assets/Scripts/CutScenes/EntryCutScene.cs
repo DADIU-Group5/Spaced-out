@@ -18,6 +18,7 @@ public class EntryCutScene : MonoBehaviour {
     public float zoomSpeed = 2.0f;
     public GameObject finalKey;
     public GameObject moveDirection;
+    public GameObject playerStartPosition;
    
     private Vector3 keyPosition;
     private Vector3 orgPosition;
@@ -25,6 +26,7 @@ public class EntryCutScene : MonoBehaviour {
     private bool backToDave = false;
     private bool movingPlayer = false;
     private GameObject player;
+    private float speed = 0.5f;
 
     void Awake()
     {
@@ -90,7 +92,10 @@ public class EntryCutScene : MonoBehaviour {
                 StartCoroutine(waitAfterZooming());
                 player = GameObject.FindGameObjectWithTag("Player");
                 keyPosition = moveDirection.transform.position;
-                movingPlayer = true;
+                //movingPlayer = true;
+                player.transform.position = playerStartPosition.transform.position;
+                player.GetComponentInChildren<Animator>().SetBool("CinematicFly", false);
+                GameObject.Find("Behind Camera Pod").GetComponent<LineRenderer>().enabled = false;
             }
         }
 
@@ -100,14 +105,19 @@ public class EntryCutScene : MonoBehaviour {
             zoomCamera.transform.position = Vector3.MoveTowards(zoomCamera.transform.position, orgPosition, step);
 
             //if we're in range, stop zooming.
-            if (Vector3.Distance(zoomCamera.transform.position, orgPosition) < 1f)
+            if (Vector3.Distance(zoomCamera.transform.position, mainCameraPod.transform.position) < 10f)//(Vector3.Distance(zoomCamera.transform.position, orgPosition) < 1f)
             {
                 backToDave = false;
+                zoomCamera.SetActive(false);
+                mainCameraPod.SetActive(true);
+                GameObject.Find("Behind Camera Pod").GetComponent<LineRenderer>().enabled = true;
+                //ToggleUI();
             }
         }
 
         if (movingPlayer)
         {
+            
             float step = zoomSpeed * Time.deltaTime;
             player.transform.position = Vector3.MoveTowards(player.transform.position, keyPosition, step);
             if (Vector3.Distance(player.transform.position, keyPosition) < 5)
@@ -130,7 +140,7 @@ public class EntryCutScene : MonoBehaviour {
         key.SetActive(false);
         playerObj.parent = null;
 
-        CheckpointManager.instance.SetNewCheckpoint(playerPos.position);
+        CheckpointManager.instance.SetNewCheckpoint(playerPos.position - new Vector3(-2, 0, 0));
         CheckpointManager.instance.SetNewCheckpointRotation(playerPos.forward);
 
         //cam.gameObject.SetActive(false);

@@ -8,7 +8,7 @@ public class FloatBy : MonoBehaviour {
     public GameObject floatCamera;
     public GameObject WinMenu;
     public GameObject[] patrolPoints;
-    public float speed = 5.0f;
+    public float speed = 3.0f;
     public float step;
     public GameObject KeyPrefab;
     private GameObject key;

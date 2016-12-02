@@ -796,6 +796,65 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="explosion1explosion1" ID="{0DB059EB-EC1B-4BB2-994B-CA8527AF5760}" ShortID="715874279">
+							<ChildrenList>
+								<Event Name="explosion1" ID="{13ABFBBC-E5DA-4E98-B50B-5D9ACAE9489D}">
+									<ChildrenList>
+										<Action Name="Play" ID="{48D1B745-5EE5-4EBE-873B-FE136DD3B459}" ShortID="276146693" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{B1542C29-5F7E-4AEA-B5E6-42768C1ACE2A}" Global="false">
+													<ObjectRef Name="outofO2 5" ID="{069749D7-4877-4391-903B-A41B7D2C07E2}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="explosion2" ID="{3B84DC88-4161-4FD4-90EE-8E0B46C0AEDA}">
+									<ChildrenList>
+										<Action Name="Play" ID="{C2CA6936-5FE7-4981-8760-A0764A0B3238}" ShortID="299156386" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{05487B98-6E8E-4A97-9117-58FC08B75284}" Global="false">
+													<ObjectRef Name="outofO2 7" ID="{8AB3E329-7767-4CE9-858D-EE09CD49A6B6}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="explosion3" ID="{35F0F127-34D1-41B6-80EE-0E524C4BEF17}">
+									<ChildrenList>
+										<Action Name="Play" ID="{CB94DDB2-10F2-4301-921E-FCB6649976F4}" ShortID="1785930" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{156EDEBB-C73D-4F1A-8A8A-06CE5DAD4396}" Global="false">
+													<ObjectRef Name="fan1" ID="{354C8D61-5FCF-4839-BEBE-37317B9A670B}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="explosion4" ID="{DB9CAD5C-4DC5-418E-9FAD-8CBCCC8D367B}">
+									<ChildrenList>
+										<Action Name="Play" ID="{713E3DFB-F886-4DF8-AED1-6990611471AD}" ShortID="513095001" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{C2D15870-E33A-47FC-AEBD-DC9B88553116}" Global="false">
+													<ObjectRef Name="fire2" ID="{7C7267D4-BE8C-4188-BC41-C08AA15F3D54}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="explosion5" ID="{5ABF1FCB-3959-4588-9160-5F4894B6B501}">
+									<ChildrenList>
+										<Action Name="Play" ID="{EB4537A6-4A48-412A-B1FC-E353B0361290}" ShortID="860287672" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{8A6DF65B-D1E4-4FDC-9244-578F9363DD31}" Global="false">
+													<ObjectRef Name="fire5" ID="{0DB30982-4F68-4EFF-9362-9BF3534E5299}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="dave" ID="{4DB9F846-B2AF-4C52-8EE8-13B86062BD32}" ShortID="667328870">
@@ -1161,6 +1220,39 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="menuPressStart" ID="{7E478658-3A4A-4B2E-8286-B4BDC533093F}"/>
+						<Event Name="star1" ID="{B3C5DD0F-0F27-4364-B189-98921B836521}">
+							<ChildrenList>
+								<Action Name="Play" ID="{6FFB225D-EBAD-4598-9E3A-6754F86D15DB}" ShortID="285290343" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{F22FF2D3-B9D1-4388-9FA8-95E4804E13C6}" Global="false">
+											<ObjectRef Name="keys chime reward2" ID="{0C3FBE23-7945-47ED-B56B-6BB052646C27}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="star2" ID="{F3BB8D12-088B-4885-B08D-88301312330C}">
+							<ChildrenList>
+								<Action Name="Play" ID="{2A06E02D-D26B-4D61-BA7B-A7B5A3649E25}" ShortID="240715989" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{148A8421-403B-43E5-8991-9F8DD3FD8E63}" Global="false">
+											<ObjectRef Name="keys chime reward1" ID="{77486F5C-D0C5-4255-83CA-104B97E7FFAA}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="star3" ID="{F9473E87-5C38-4A44-9E9B-8063236ACB44}">
+							<ChildrenList>
+								<Action Name="Play" ID="{4859290A-D2E5-4D17-8D5B-8C39C31D82D4}" ShortID="836473352" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{3722AEBD-9D44-424B-AEF9-3023A8285007}" Global="false">
+											<ObjectRef Name="keys chime reward1" ID="{77486F5C-D0C5-4255-83CA-104B97E7FFAA}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="enviroment" ID="{793B8EA8-A9B6-4072-9898-92A0A933C5A9}" ShortID="1026176255">
@@ -1387,6 +1479,27 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="keysChime" ID="{695DBAC7-6280-481B-A3B6-2C442A55F5F3}">
+							<ChildrenList>
+								<Action Name="Play" ID="{D4F290FC-433A-4AE0-A72A-2E4E1B446515}" ShortID="271386004" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{66C184DA-E0A4-45EE-BE0D-EB61329AA1D4}" Global="false">
+											<ObjectRef Name="keys chime" ID="{518F3D2D-F675-4A4E-867D-38D58449EAA9}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{03029EBB-1D73-425B-BFF6-BFCAD577FD02}" ShortID="369986708" Type="Play" Scope="One" Global="false">
+									<ExcludedPlatformList>
+										<Platform>Android</Platform>
+									</ExcludedPlatformList>
+									<ElementList>
+										<Element ID="{45354457-6770-403F-B76B-074AA79DF6AB}" Global="false">
+											<ObjectRef Name="keys chime2" ID="{1EAA1995-B1F3-459C-A4F8-7916347FF9CB}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Cinematics" ID="{9886BF1A-9A93-45A4-91D9-204AE6F18DCD}" ShortID="792126149">
@@ -1426,6 +1539,38 @@
 						<Event Name="cinematic5" ID="{43AF32F8-7C39-45B6-9994-0470EBB59763}">
 							<ChildrenList>
 								<Action Name="Play" ID="{B2D00100-F2F7-43EB-84DA-65931B24654F}" ShortID="500774686" Type="Play" Scope="One" Global="false"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="suckedIntoSpace" ID="{FCAB4B24-6C13-437B-A881-344E053C4937}">
+							<ChildrenList>
+								<Action Name="Play" ID="{09538683-9067-4076-9442-501B6D2EA7B4}" ShortID="372126805" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{AC5682A5-738A-4BDB-8549-D10464517063}" Global="false">
+											<ObjectRef Name="SuctionWet_BW_61371" ID="{96AC6A64-4B63-4559-A6CF-B7F9FFEB8FB1}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{C17DF160-2C3E-4343-89C2-6284392F1028}" ShortID="176932861" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{1C0C896E-8559-4093-AEFC-2FC0A456B470}" Global="false">
+											<ObjectRef Name="SuctionCup_SFXB_1040" ID="{D32A7ACC-48DB-45AA-A2F8-ABFCBCF8F8B4}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="spaceWind" ID="{FCFC9D82-6916-4E5E-923C-2FC3C098690C}">
+							<ChildrenList>
+								<Action Name="Play" ID="{76FA340B-52EB-4610-BB01-C7443C3F5198}" ShortID="573261606" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{6A4CAEBE-8150-45C2-B66A-ABBC60754C52}" Global="false">
+											<ObjectRef Name="space wind" ID="{F2306465-894B-4E3B-AA4B-4A00A44671C0}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>

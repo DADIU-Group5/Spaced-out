@@ -13,6 +13,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	433216386	explosive			\Default Work Unit\enviroment\explosive	
 	435872092	musicCredits			\Default Work Unit\music\musicCredits	
 	436091470	musicFirstPlay			\Default Work Unit\music\musicFirstPlay	
+	510278571	keysChime			\Default Work Unit\enviroment\keysChime	
 	512507780	daveJetpackRandomExhaust			\Default Work Unit\dave\daveJetpackRandomExhaust	
 	522694124	daveRandomGrunt			\Default Work Unit\dave\daveRandomGrunt	
 	579662040	gas			\Default Work Unit\enviroment\gas	
@@ -20,6 +21,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	607463598	daveobjectCollision			\Default Work Unit\dave\daveobjectCollision	
 	661603698	daveOutofOxygen			\Default Work Unit\dave\daveOutofOxygen	
 	668664389	newLevel			\Default Work Unit\gameState\newLevel	
+	753483762	explosion4			\Default Work Unit\gal\explosion1explosion1\explosion4	
+	753483763	explosion5			\Default Work Unit\gal\explosion1explosion1\explosion5	
+	753483764	explosion2			\Default Work Unit\gal\explosion1explosion1\explosion2	
+	753483765	explosion3			\Default Work Unit\gal\explosion1explosion1\explosion3	
+	753483767	explosion1			\Default Work Unit\gal\explosion1explosion1\explosion1	
 	779278001	death			\Default Work Unit\gameState\death	
 	877642273	cinematic1			\Default Work Unit\Cinematics\cinematic1	
 	877642274	cinematic2			\Default Work Unit\Cinematics\cinematic2	
@@ -28,6 +34,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	877642277	cinematic5			\Default Work Unit\Cinematics\cinematic5	
 	918879319	daveScratch			\Default Work Unit\dave\daveScratch	
 	1016866911	daveSquishBetweenDoors			\Default Work Unit\dave\daveSquishBetweenDoors	
+	1026534452	suckedIntoSpace			\Default Work Unit\Cinematics\suckedIntoSpace	
 	1075305830	menuClickForwards			\Default Work Unit\UI\menuClickForwards	
 	1124785720	gasLeak7			\Default Work Unit\gal\gasLeak\gasLeak7	
 	1124785721	gasLeak6			\Default Work Unit\gal\gasLeak\gasLeak6	
@@ -38,6 +45,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	1124785726	gasLeak1			\Default Work Unit\gal\gasLeak\gasLeak1	
 	1203400786	restart			\Default Work Unit\gameState\restart	
 	1242499422	switchOn			\Default Work Unit\enviroment\switchOn	
+	1281810864	star3			\Default Work Unit\UI\star3	
+	1281810865	star2			\Default Work Unit\UI\star2	
+	1281810866	star1			\Default Work Unit\UI\star1	
 	1356393137	musicMainStop			\Default Work Unit\music\musicMainStop	
 	1404805401	doorOpen			\Default Work Unit\enviroment\doorOpen	
 	1406654456	slowmotionStart			\Default Work Unit\gameState\slowmotionStart	
@@ -111,6 +121,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3700176348	lowOxygen3			\Default Work Unit\gal\lowOxygen\lowOxygen3	
 	3700176349	lowOxygen2			\Default Work Unit\gal\lowOxygen\lowOxygen2	
 	3700176350	lowOxygen1			\Default Work Unit\gal\lowOxygen\lowOxygen1	
+	3708930415	spaceWind			\Default Work Unit\Cinematics\spaceWind	
 	3782881839	doorShut			\Default Work Unit\enviroment\doorShut	
 	3900225255	musicMenuStop			\Default Work Unit\music\musicMenuStop	
 	3953897988	switchOff			\Default Work Unit\enviroment\switchOff	
@@ -150,6 +161,7 @@ Custom State	ID	Name	State Group	Owner		Notes
 	1070632189	off	power	\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\blæser		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	126297577	galSidechain			\Default Work Unit\galSidechain	
 	640585335	effectsVolume			\Default Work Unit\effectsVolume	
 	822163944	SS_Air_RPM			\Factory SoundSeed Air Game Syncs\SS_Air_RPM	
 	911290369	fanForce			\Default Work Unit\fanForce	
@@ -166,6 +178,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	3519441192	velocity			\Default Work Unit\velocity	
 	3715662592	SS_Air_Storm			\Factory SoundSeed Air Game Syncs\SS_Air_Storm	
 	3847924954	SS_Air_Presence			\Factory SoundSeed Air Game Syncs\SS_Air_Presence	
+	4033886414	sfxSideChain			\Default Work Unit\sfxSideChain	
 	4160247818	SS_Air_Turbulence			\Factory SoundSeed Air Game Syncs\SS_Air_Turbulence	
 
 Modulator LFO	ID	Name			Wwise Object Path	Notes
@@ -198,6 +211,7 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	2425890738	rvb1			\Default Work Unit\Master Audio Bus\rvb1	
 
 Effect plug-ins	ID	Name	Type				Notes
+	126297577	galsidechain	Wwise Meter			
 	216046035	firewoosh	Wwise Parametric EQ			
 	259313001	Master_Dynamic	McDSP ML1			
 	789860477	Wwise Guitar Distortion (Custom)	Wwise Guitar Distortion			
@@ -210,6 +224,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	3013737255	Bass_Remover_9	Wwise Parametric EQ			
 	3043085106	High_Impact	Wwise Compressor			
 	3216246379	Space_Dreaming	Wwise RoomVerb			
+	4033886414	sfxsidechain	Wwise Meter			
 	4143868621	Bass_Remover_10	Wwise Parametric EQ			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
@@ -314,9 +329,11 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	105906957	launch synth2	Y:\Desktop\Wwise\.cache\Mac\SFX\launch synth2_617036E9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth2		80739
 	107064225	narrativeDan9	Y:\Desktop\Wwise\.cache\Mac\SFX\narrative\narrativeDan9_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\what are you doing\narrativeDan9		46077
 	112371414	object impact light6	Y:\Desktop\Wwise\.cache\Mac\SFX\impacts\object impact light6_178FB079.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light6		3575
+	114230876	space wind	Y:\Desktop\Wwise\.cache\Mac\SFX\space wind_B4208FA5.wem		\Actor-Mixer Hierarchy\Default Work Unit\cinematics\space wind		189788
 	116050032	explosion6	Y:\Desktop\Wwise\.cache\Mac\SFX\explosion6_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion6		10965
 	117874704	preexplosion	Y:\Desktop\Wwise\.cache\Mac\SFX\preexplosion_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\preexplosion		4029
 	120419077	metal impact F2	Y:\Desktop\Wwise\.cache\Mac\SFX\metal\F\metal impact F2_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\F\metal impact F2		31582
+	124263028	keys chime reward2	Y:\Desktop\Wwise\.cache\Mac\SFX\keys chime reward2_C4E4A650.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys chime reward2		103138
 	129103809	hvor er du bare Fan-tastisk_2_7	Y:\Desktop\Wwise\.cache\Mac\SFX\GAL\Danish\fan\hvor er du bare Fan-tastisk.2.7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan4\hvor er du bare Fan-tastisk_2_7		40490
 	131464271	remarkDan9	Y:\Desktop\Wwise\.cache\Mac\SFX\GAL\Danish\general remarks\final\remarkDan9_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark7\remarkDan9		16339
 	140590783	min analyse	Y:\Desktop\Wwise\.cache\Mac\SFX\GAL\Danish\general remarks\final\remarkDan3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark6\min analyse		96177
@@ -403,6 +420,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	402805320	outofocygen1	Y:\Desktop\Wwise\.cache\Mac\SFX\GAL\English\out of oxygen\final\outofocygen1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 1\outofocygen1		39578
 	404632530	buttscratch4	Y:\Desktop\Wwise\.cache\Mac\SFX\dave\buttscratch4_24F18740.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\buttscratch\buttscratch4		2093
 	408124425	object impact light5	Y:\Desktop\Wwise\.cache\Mac\SFX\impacts\object impact light5_20368D23.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light5		2174
+	412013133	SuctionWet_BW_61371	Y:\Desktop\Wwise\.cache\Mac\SFX\SuctionWet_BW.61371_976B6625.wem		\Actor-Mixer Hierarchy\Default Work Unit\cinematics\SuctionWet_BW_61371		8679
 	418672149	remarks14	Y:\Desktop\Wwise\.cache\Mac\SFX\GAL\English\general remarks\final\remarks14_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark14\remarks14		43195
 	421879619	heavy impact2	Y:\Desktop\Wwise\.cache\Mac\SFX\impacts\heavy impact2_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact2		5555
 	422239685	heavy impact8	Y:\Desktop\Wwise\.cache\Mac\SFX\impacts\heavy impact8_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact8		6672
@@ -426,6 +444,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	483393435	outOfOxygenDan4	Y:\Desktop\Wwise\.cache\Mac\SFX\Danish\out of oxygen\outOfOxygenDan4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 4\outOfOxygenDan4		57242
 	483913680	blip blop random118	Y:\Desktop\Wwise\.cache\Mac\SFX\blip blop\blip blop random118_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random118		49657
 	485270404	light impact2	Y:\Desktop\Wwise\.cache\Mac\SFX\impacts\light impact2_8EF4B22F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact2		5558
+	485838835	keys pickup	Y:\Desktop\Wwise\.cache\Mac\SFX\keys pickup_108EF94C.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys pickup		95396
 	486336854	blip blop random16	Y:\Desktop\Wwise\.cache\Mac\SFX\blip blop\blip blop random16_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random16		32337
 	489066010	slukkefordig	Y:\Desktop\Wwise\.cache\Mac\SFX\Danish\fire\fireDan4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire5\slukkefordig		55060
 	489574698	metal impact D2	Y:\Desktop\Wwise\.cache\Mac\SFX\metal\D\metal impact D2_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\D\metal impact D2		30893
@@ -456,6 +475,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	572527449	door close slide5	Y:\Desktop\Wwise\.cache\Mac\SFX\door slide\door close slide5_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\door slide\close\door close slide5		3009
 	572934450	hydralics4	Y:\Desktop\Wwise\.cache\Mac\SFX\atmos\hydralics4_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics4		4996
 	573092875	metal impact g2	Y:\Desktop\Wwise\.cache\Mac\SFX\metal\G\metal impact g2_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g2		32198
+	577442237	keys chime reward1	Y:\Desktop\Wwise\.cache\Mac\SFX\keys chime reward1_95CB26DC.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys chime reward1		74858
 	578189822	blip blop sci fi forest long1	Y:\Desktop\Wwise\.cache\Mac\SFX\blip blop\blip blop sci fi forest long1_B73642EA.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop sci fi forest long1		500769
 	578658333	blip blop random21	Y:\Desktop\Wwise\.cache\Mac\SFX\blip blop\blip blop random21_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random21		64690
 	581417438	object impact2	Y:\Desktop\Wwise\.cache\Mac\SFX\impacts\object impact2_470E9B54.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact2		4227
@@ -521,10 +541,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	714977692	metal impact no tone6	Y:\Desktop\Wwise\.cache\Mac\SFX\metal\metal impact no tone6_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone6		38800
 	723073472	electrocute2	Y:\Desktop\Wwise\.cache\Mac\SFX\electrocute2_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute2		48481
 	725214750	charge	Y:\Desktop\Wwise\.cache\Mac\SFX\charge_6DE9CED7.wem		\Actor-Mixer Hierarchy\Default Work Unit\jetpack\charge		189741
+	726059107	SuctionCup_SFXB_1040	Y:\Desktop\Wwise\.cache\Mac\SFX\SuctionCup_SFXB.1040_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\cinematics\SuctionCup_SFXB_1040		2564
 	731203348	outofocygen5	Y:\Desktop\Wwise\.cache\Mac\SFX\GAL\English\out of oxygen\final\outofocygen5_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 5\outofocygen5		78410
 	734779861	blip blop sci fi forest short8	Y:\Desktop\Wwise\.cache\Mac\SFX\blip blop\blip blop sci fi forest short8_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short8		31341
 	738519879	door open slide 2	Y:\Desktop\Wwise\.cache\Mac\SFX\door slide\door open slide 2_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\door slide\open\door open slide 2		11373
 	739005694	metal impact no tone2	Y:\Desktop\Wwise\.cache\Mac\SFX\metal\metal impact no tone2_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone2		45127
+	742830660	keys chime2	Y:\Desktop\Wwise\.cache\Mac\SFX\keys chime2_63D80A15.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys chime2		81587
+	743864732	keys chime	Y:\Desktop\Wwise\.cache\Mac\SFX\keys chime_29923BE5.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys chime		140188
 	746671419	remarks4	Y:\Desktop\Wwise\.cache\Mac\SFX\GAL\English\general remarks\final\remarks4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark4\remarks4		34914
 	751321384	light impact7	Y:\Desktop\Wwise\.cache\Mac\SFX\impacts\light impact7_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact7		4001
 	753447221	blip blop random2	Y:\Desktop\Wwise\.cache\Mac\SFX\blip blop\blip blop random2_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random2		36960

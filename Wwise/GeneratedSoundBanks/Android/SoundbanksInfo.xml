@@ -60,6 +60,11 @@
 				<Event Id="3782881839" Name="doorShut" ObjectPath="\Events\Default Work Unit\enviroment\doorShut"/>
 				<Event Id="2917121896" Name="electricity" ObjectPath="\Events\Default Work Unit\enviroment\electricity"/>
 				<Event Id="26822469" Name="exit" ObjectPath="\Events\Default Work Unit\gameState\exit"/>
+				<Event Id="753483767" Name="explosion1" ObjectPath="\Events\Default Work Unit\gal\explosion1explosion1\explosion1"/>
+				<Event Id="753483764" Name="explosion2" ObjectPath="\Events\Default Work Unit\gal\explosion1explosion1\explosion2"/>
+				<Event Id="753483765" Name="explosion3" ObjectPath="\Events\Default Work Unit\gal\explosion1explosion1\explosion3"/>
+				<Event Id="753483762" Name="explosion4" ObjectPath="\Events\Default Work Unit\gal\explosion1explosion1\explosion4"/>
+				<Event Id="753483763" Name="explosion5" ObjectPath="\Events\Default Work Unit\gal\explosion1explosion1\explosion5"/>
 				<Event Id="433216386" Name="explosive" ObjectPath="\Events\Default Work Unit\enviroment\explosive"/>
 				<Event Id="2478829233" Name="fan1" ObjectPath="\Events\Default Work Unit\gal\fan\fan1"/>
 				<Event Id="2478829234" Name="fan2" ObjectPath="\Events\Default Work Unit\gal\fan\fan2"/>
@@ -76,6 +81,7 @@
 				<Event Id="1124785722" Name="gasLeak5" ObjectPath="\Events\Default Work Unit\gal\gasLeak\gasLeak5"/>
 				<Event Id="1124785721" Name="gasLeak6" ObjectPath="\Events\Default Work Unit\gal\gasLeak\gasLeak6"/>
 				<Event Id="1124785720" Name="gasLeak7" ObjectPath="\Events\Default Work Unit\gal\gasLeak\gasLeak7"/>
+				<Event Id="510278571" Name="keysChime" ObjectPath="\Events\Default Work Unit\enviroment\keysChime"/>
 				<Event Id="3700176350" Name="lowOxygen1" ObjectPath="\Events\Default Work Unit\gal\lowOxygen\lowOxygen1"/>
 				<Event Id="3700176349" Name="lowOxygen2" ObjectPath="\Events\Default Work Unit\gal\lowOxygen\lowOxygen2"/>
 				<Event Id="3700176348" Name="lowOxygen3" ObjectPath="\Events\Default Work Unit\gal\lowOxygen\lowOxygen3"/>
@@ -136,6 +142,11 @@
 				<Event Id="1203400786" Name="restart" ObjectPath="\Events\Default Work Unit\gameState\restart"/>
 				<Event Id="1406654456" Name="slowmotionStart" ObjectPath="\Events\Default Work Unit\gameState\slowmotionStart"/>
 				<Event Id="2017509636" Name="slowmotionStop" ObjectPath="\Events\Default Work Unit\gameState\slowmotionStop"/>
+				<Event Id="3708930415" Name="spaceWind" ObjectPath="\Events\Default Work Unit\Cinematics\spaceWind"/>
+				<Event Id="1281810866" Name="star1" ObjectPath="\Events\Default Work Unit\UI\star1"/>
+				<Event Id="1281810865" Name="star2" ObjectPath="\Events\Default Work Unit\UI\star2"/>
+				<Event Id="1281810864" Name="star3" ObjectPath="\Events\Default Work Unit\UI\star3"/>
+				<Event Id="1026534452" Name="suckedIntoSpace" ObjectPath="\Events\Default Work Unit\Cinematics\suckedIntoSpace"/>
 				<Event Id="1590382670" Name="switch1" ObjectPath="\Events\Default Work Unit\gal\switch\switch1"/>
 				<Event Id="1590382669" Name="switch2" ObjectPath="\Events\Default Work Unit\gal\switch\switch2"/>
 				<Event Id="1590382668" Name="switch3" ObjectPath="\Events\Default Work Unit\gal\switch\switch3"/>
@@ -308,6 +319,10 @@
 					<ShortName>impacts\object impact light6.wav</ShortName>
 					<Path>SFX/impacts/object impact light6_178FB079.wem</Path>
 				</File>
+				<File Id="114230876" Language="SFX">
+					<ShortName>space wind.wav</ShortName>
+					<Path>SFX/space wind_B4208FA5.wem</Path>
+				</File>
 				<File Id="116050032" Language="SFX">
 					<ShortName>explosion6.wav</ShortName>
 					<Path>SFX/explosion6_CFD21E99.wem</Path>
@@ -315,6 +330,10 @@
 				<File Id="117874704" Language="SFX">
 					<ShortName>preexplosion.wav</ShortName>
 					<Path>SFX/preexplosion_CFD21E99.wem</Path>
+				</File>
+				<File Id="124263028" Language="SFX">
+					<ShortName>keys chime reward2.wav</ShortName>
+					<Path>SFX/keys chime reward2_C4E4A650.wem</Path>
 				</File>
 				<File Id="129103809" Language="SFX">
 					<ShortName>GAL\Danish\fan\hvor er du bare Fan-tastisk.2.7.wav</ShortName>
@@ -660,6 +679,10 @@
 					<ShortName>impacts\object impact light5.wav</ShortName>
 					<Path>SFX/impacts/object impact light5_20368D23.wem</Path>
 				</File>
+				<File Id="412013133" Language="SFX">
+					<ShortName>SuctionWet_BW.61371.wav</ShortName>
+					<Path>SFX/SuctionWet_BW.61371_976B6625.wem</Path>
+				</File>
 				<File Id="418672149" Language="SFX">
 					<ShortName>GAL\English\general remarks\final\remarks14.wav</ShortName>
 					<Path>SFX/GAL/English/general remarks/final/remarks14_645155D0.wem</Path>
@@ -747,6 +770,10 @@
 				<File Id="485270404" Language="SFX">
 					<ShortName>impacts\light impact2.wav</ShortName>
 					<Path>SFX/impacts/light impact2_8EF4B22F.wem</Path>
+				</File>
+				<File Id="485838835" Language="SFX">
+					<ShortName>keys pickup.wav</ShortName>
+					<Path>SFX/keys pickup_108EF94C.wem</Path>
 				</File>
 				<File Id="486336854" Language="SFX">
 					<ShortName>blip blop\blip blop random16.wav</ShortName>
@@ -859,6 +886,10 @@
 				<File Id="573092875" Language="SFX">
 					<ShortName>metal\G\metal impact g2.wav</ShortName>
 					<Path>SFX/metal/G/metal impact g2_CFD21E99.wem</Path>
+				</File>
+				<File Id="577442237" Language="SFX">
+					<ShortName>keys chime reward1.wav</ShortName>
+					<Path>SFX/keys chime reward1_95CB26DC.wem</Path>
 				</File>
 				<File Id="578189822" Language="SFX">
 					<ShortName>blip blop\blip blop sci fi forest long1.wav</ShortName>
@@ -1100,6 +1131,10 @@
 					<ShortName>charge.wav</ShortName>
 					<Path>SFX/charge_6DE9CED7.wem</Path>
 				</File>
+				<File Id="726059107" Language="SFX">
+					<ShortName>SuctionCup_SFXB.1040.wav</ShortName>
+					<Path>SFX/SuctionCup_SFXB.1040_CFD21E99.wem</Path>
+				</File>
 				<File Id="731203348" Language="SFX">
 					<ShortName>GAL\English\out of oxygen\final\outofocygen5.wav</ShortName>
 					<Path>SFX/GAL/English/out of oxygen/final/outofocygen5_645155D0.wem</Path>
@@ -1115,6 +1150,14 @@
 				<File Id="739005694" Language="SFX">
 					<ShortName>metal\metal impact no tone2.wav</ShortName>
 					<Path>SFX/metal/metal impact no tone2_CFD21E99.wem</Path>
+				</File>
+				<File Id="742830660" Language="SFX">
+					<ShortName>keys chime2.wav</ShortName>
+					<Path>SFX/keys chime2_63D80A15.wem</Path>
+				</File>
+				<File Id="743864732" Language="SFX">
+					<ShortName>keys chime.wav</ShortName>
+					<Path>SFX/keys chime_29923BE5.wem</Path>
 				</File>
 				<File Id="746671419" Language="SFX">
 					<ShortName>GAL\English\general remarks\final\remarks4.wav</ShortName>

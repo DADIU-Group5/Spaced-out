@@ -125,11 +125,16 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+									<ObjectRef Name="galsidechain" ID="{2FE2804D-80F3-4BF7-A811-551E7EEF585D}" WorkUnitID="{16BB581D-BAEC-49FA-A974-D915FC1D5EA1}"/>
+								</Reference>
+							</ReferenceList>
 							<DuckingList>
 								<DuckItem>
 									<BusRef Name="music" ID="{CA906606-09FB-4986-B724-CAA394C96D8F}"/>
 									<DuckingParam>
-										<Volume>-10</Volume>
+										<Volume>-3</Volume>
 										<FadeInTime>0.100000001490116</FadeInTime>
 										<FadeOutTime>0.100000001490116</FadeOutTime>
 										<FadeCurve>FadeLinear</FadeCurve>
@@ -178,6 +183,11 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+									<ObjectRef Name="sfxsidechain" ID="{375F4AF8-E756-48DA-9307-0AF42AB0D8BE}" WorkUnitID="{16BB581D-BAEC-49FA-A974-D915FC1D5EA1}"/>
+								</Reference>
+							</ReferenceList>
 						</Bus>
 						<Bus Name="atmos" ID="{FA0DE26E-0B1A-402B-A0E0-578BA0A760BF}">
 							<PropertyList>
@@ -283,6 +293,65 @@
 													<Point>
 														<XPos>100</XPos>
 														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+										<RTPC Name="" ID="{B44F5471-982B-4688-A3C8-CB8EA1120DEC}" ShortID="298128051">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="galSidechain" ID="{60BF31E9-478B-4DE4-954F-45BFC64AB433}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{05D08E7D-A43E-4B90-B262-5DA8C727C860}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-0.12932</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>50.531914893617</XPos>
+														<YPos>-0.0637314969756796</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>-200</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+										<RTPC Name="" ID="{293BECD5-88FB-4AD2-BCF9-E83DFCE41E65}" ShortID="815787899">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="sfxSideChain" ID="{898B4D00-A726-4AD1-9F5F-D2518D0994CF}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{78AA3C56-B64C-4D85-8AB5-C09E56D94533}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0.04289</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>68.75</XPos>
+														<YPos>0.0133803885783858</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>-200</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>

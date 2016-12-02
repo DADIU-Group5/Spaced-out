@@ -3,47 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI.Extensions;
 
 public class MenuLevelSelect : MonoBehaviour {
-
-    public Button generateLevelButton;
-    public Button[] levelButtons;
-    [System.Serializable]
-    public class achievementObjects
-    {
-        public List<GameObject> objects;
-    }
-    public List<achievementObjects> achievements = new List<achievementObjects>();
-
-    public void UnlockAll()
-    {
-        ProgressManager.instance.UnlockAll();
-        OnEnable();
-    }
-
-    void OnEnable()
-    {
-        generateLevelButton.interactable = ProgressManager.instance.GetStars() >= 15;
-        // enable / disable level buttons
-        for (int i = 0; i < levelButtons.Length; i++)
-        {
-            //if (i != 0)
-            if (i < ProgressManager.instance.progress.levels.Length)
-                levelButtons[i].interactable = ProgressManager.instance.IsUnlocked(i);
-
-            if (i < ProgressManager.instance.progress.levels.Length)
-            {
-                bool[] medals = ProgressManager.instance.GetMedals(i);
-
-                for (int j = 0; j < medals.Length; j++)
-                {
-                    achievements[i].objects[j].SetActive(medals[j]);
-                }
-            }
-        }
-
-        //Update achievement list
-    }
 
     // generates new seeds for levels
     public void GenerateNewSeeds()
@@ -52,7 +14,6 @@ public class MenuLevelSelect : MonoBehaviour {
         if (ProgressManager.instance.GetStars() > 15)
         {
             GenerationDataManager.instance.RandomizeSeeds();
-            ProgressManager.instance.ChangeStars(-15);
         }
     }
 
@@ -62,7 +23,7 @@ public class MenuLevelSelect : MonoBehaviour {
         if (level == 0)
         {
             SceneManager.LoadScene("Intro Cinematic");
-            GenerationDataManager.instance.SetTutortialLevel();
+            GenerationDataManager.instance.SetCurrentLevel(0);
         }
         else
         {

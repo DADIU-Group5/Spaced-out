@@ -12,7 +12,6 @@ public class Progress : ScriptableObject
     // called from unity editor
     void Reset()
     {
-        Debug.Log("Reseting medals...");
         stars = 0;
         completedTutorial = true;
 
@@ -30,9 +29,10 @@ public class Progress : ScriptableObject
     public struct LevelProgress
     {
         public bool unlocked;
-        public bool completed;
-        public bool shotCount;
-        public int bestShotCount;
-        public bool allComics;
+        public bool starComplete;
+        public bool starComics;
+        public bool starBoosts;
+        public int bestBoostCount;
+
     }
 }

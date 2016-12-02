@@ -3,6 +3,7 @@
     Collision,
     CameraMoved,
     PlayerLaunch,
+    PlayerFakeLaunched,
     PlayerCollision,
     Pause,
     Unpause,
@@ -57,5 +58,6 @@
     UIButton,
     DisableCameraInput,
     EnableCameraInput,
-    ChangeLanguage
+    ChangeLanguage,
+    PlayerRecord
 }

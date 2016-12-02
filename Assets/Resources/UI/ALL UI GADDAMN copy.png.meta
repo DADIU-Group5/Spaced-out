@@ -1,57 +1,57 @@
 fileFormatVersion: 2
 guid: c7053665d238efa48a34bda289392935
-timeCreated: 1480521784
+timeCreated: 1480689309
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: ALL UI GADDAMN copy_0
-    21300002: ALL UI GADDAMN copy_1
+    21300000: UI_header_background_small
+    21300002: UI_checkbox_checkmark
     21300004: ALL UI GADDAMN copy_2
     21300006: ALL UI GADDAMN copy_3
     21300008: ALL UI GADDAMN copy_4
     21300010: ALL UI GADDAMN copy_5
     21300012: ALL UI GADDAMN copy_6
     21300014: ALL UI GADDAMN copy_7
-    21300016: ALL UI GADDAMN copy_8
+    21300016: UI_button_blue
     21300018: ALL UI GADDAMN copy_9
     21300020: ALL UI GADDAMN copy_10
     21300022: ALL UI GADDAMN copy_11
-    21300024: ALL UI GADDAMN copy_12
+    21300024: UI_button_blue_pressed
     21300026: ALL UI GADDAMN copy_13
     21300028: ALL UI GADDAMN copy_14
     21300030: ALL UI GADDAMN copy_15
-    21300032: ALL UI GADDAMN copy_16
+    21300032: UI_speech
     21300034: ALL UI GADDAMN copy_17
     21300036: ALL UI GADDAMN copy_18
     21300038: ALL UI GADDAMN copy_19
     21300040: ALL UI GADDAMN copy_20
     21300042: ALL UI GADDAMN copy_21
-    21300044: ALL UI GADDAMN copy_22
-    21300046: ALL UI GADDAMN copy_23
+    21300044: UI_levelselect_chosen
+    21300046: UI_levelselect
     21300048: ALL UI GADDAMN copy_24
-    21300050: ALL UI GADDAMN copy_25
-    21300052: ALL UI GADDAMN copy_26
-    21300054: ALL UI GADDAMN copy_27
-    21300056: ALL UI GADDAMN copy_28
+    21300050: UI_level_star1
+    21300052: UI_level_star2
+    21300054: UI_paused
+    21300056: UI_corner_button_blue
     21300058: ALL UI GADDAMN copy_29
-    21300060: ALL UI GADDAMN copy_30
+    21300060: UI_level_star3
     21300062: ALL UI GADDAMN copy_31
     21300064: ALL UI GADDAMN copy_32
     21300066: ALL UI GADDAMN copy_33
     21300068: ALL UI GADDAMN copy_34
-    21300070: ALL UI GADDAMN copy_35
+    21300070: UI_menu_background
     21300072: ALL UI GADDAMN copy_36
-    21300074: ALL UI GADDAMN copy_37
-    21300076: ALL UI GADDAMN copy_38
-    21300078: ALL UI GADDAMN copy_39
+    21300074: UI_star1_collected
+    21300076: UI_star2_collected
+    21300078: UI_star3_collected
     21300080: ALL UI GADDAMN copy_40
     21300082: ALL UI GADDAMN copy_41
     21300084: ALL UI GADDAMN copy_42
     21300086: ALL UI GADDAMN copy_43
     21300088: ALL UI GADDAMN copy_44
     21300090: ALL UI GADDAMN copy_45
-    21300092: ALL UI GADDAMN copy_46
-    21300094: ALL UI GADDAMN copy_47
+    21300092: UI_shop_background
+    21300094: UI_win_background
     21300096: ALL UI GADDAMN copy_48
     21300098: ALL UI GADDAMN copy_49
     21300100: ALL UI GADDAMN copy_50
@@ -65,16 +65,16 @@ TextureImporter:
     21300116: ALL UI GADDAMN copy_58
     21300118: ALL UI GADDAMN copy_59
     21300120: ALL UI GADDAMN copy_60
-    21300122: ALL UI GADDAMN copy_61
-    21300124: ALL UI GADDAMN copy_62
-    21300126: ALL UI GADDAMN copy_63
-    21300128: ALL UI GADDAMN copy_64
-    21300130: ALL UI GADDAMN copy_65
-    21300132: ALL UI GADDAMN copy_66
-    21300134: ALL UI GADDAMN copy_67
-    21300136: ALL UI GADDAMN copy_68
-    21300138: ALL UI GADDAMN copy_69
-    21300140: ALL UI GADDAMN copy_70
+    21300122: UI_language_english_pressed
+    21300124: UI_language_danish_pressed
+    21300126: UI_language_danish
+    21300128: UI_language_english
+    21300130: UI_counter_star
+    21300132: UI_slider_knob
+    21300134: UI_shop_banner_english
+    21300136: UI_shop_banner_danish
+    21300138: UI_slider_empty
+    21300140: UI_slider_full
     21300142: ALL UI GADDAMN copy_72
     21300144: ALL UI GADDAMN copy_73
     21300146: ALL UI GADDAMN copy_74
@@ -89,19 +89,19 @@ TextureImporter:
     21300164: ALL UI GADDAMN copy_83
     21300166: ALL UI GADDAMN copy_84
     21300168: ALL UI GADDAMN copy_85
-    21300170: ALL UI GADDAMN copy_86
-    21300172: ALL UI GADDAMN copy_87
-    21300174: ALL UI GADDAMN copy_88
+    21300170: UI_level_select_unlocked
+    21300172: UI_level_select_locked
+    21300174: UI_button_orange
     21300176: ALL UI GADDAMN copy_89
-    21300178: ALL UI GADDAMN copy_90
+    21300178: UI_button_orange_pressed
     21300180: ALL UI GADDAMN copy_91
     21300182: ALL UI GADDAMN copy_92
     21300184: ALL UI GADDAMN copy_93
     21300186: ALL UI GADDAMN copy_94
     21300188: ALL UI GADDAMN copy_95
-    21300190: ALL UI GADDAMN copy_96
-    21300192: ALL UI GADDAMN copy_97
-    21300194: ALL UI GADDAMN copy_98
+    21300190: UI_star1_uncollected
+    21300192: UI_star2_uncollected
+    21300194: UI_star3_uncollected
     21300196: ALL UI GADDAMN copy_99
     21300198: ALL UI GADDAMN copy_100
     21300200: ALL UI GADDAMN copy_101
@@ -120,11 +120,16 @@ TextureImporter:
     21300226: ALL UI GADDAMN copy_114
     21300228: ALL UI GADDAMN copy_115
     21300230: ALL UI GADDAMN copy_71
-    21300232: ALL UI GADDAMN copy_116
+    21300232: UI_corner_button_blue_pressed
     21300234: ALL UI GADDAMN copy_117
-    21300236: ALL UI GADDAMN copy_118
-    21300238: ALL UI GADDAMN copy_119
-    21300240: ALL UI GADDAMN copy_120
+    21300236: UI_counter_boosts
+    21300238: UI_counter_comics
+    21300240: UI_header_background
+    21300242: UI_gal_frame
+    21300244: UI_level_select_blank
+    21300246: UI_checkbox_background
+    21300248: UI_music_on
+    21300250: UI_music_muted
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -150,7 +155,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 1
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -174,215 +179,33 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_0
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 1236
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_1
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 1174
-        width: 175
-        height: 55
-      alignment: 9
-      pivot: {x: 0.4819394, y: 0.44253373}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_2
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 1112
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_3
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 1053
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_4
-      rect:
-        serializedVersion: 2
-        x: 211
-        y: 1053
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_5
-      rect:
-        serializedVersion: 2
-        x: 211
-        y: 1113
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_6
-      rect:
-        serializedVersion: 2
-        x: 211
-        y: 1174
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_7
-      rect:
-        serializedVersion: 2
-        x: 211
-        y: 1235
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_8
+      name: UI_button_blue
       rect:
         serializedVersion: 2
         x: 404
-        y: 1236
+        y: 1234
         width: 175
-        height: 55
+        height: 57
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 14, y: 10, z: 26, w: 26}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_9
+      name: UI_button_blue_pressed
       rect:
         serializedVersion: 2
-        x: 404
-        y: 1174
+        x: 590
+        y: 1234
         width: 175
-        height: 55
+        height: 57
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 14, y: 10, z: 26, w: 26}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_10
-      rect:
-        serializedVersion: 2
-        x: 404
-        y: 1113
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_11
-      rect:
-        serializedVersion: 2
-        x: 404
-        y: 1053
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_12
-      rect:
-        serializedVersion: 2
-        x: 589
-        y: 1235
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_13
-      rect:
-        serializedVersion: 2
-        x: 589
-        y: 1174
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_14
-      rect:
-        serializedVersion: 2
-        x: 589
-        y: 1113
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_15
-      rect:
-        serializedVersion: 2
-        x: 589
-        y: 1052
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_16
+      name: UI_speech
       rect:
         serializedVersion: 2
         x: 17
@@ -391,106 +214,41 @@ TextureImporter:
         height: 83
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 30, y: 25, z: 30, w: 35}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_17
+      name: UI_levelselect_chosen
       rect:
         serializedVersion: 2
-        x: 840
-        y: 1223
-        width: 200
-        height: 65
+        x: 894
+        y: 1004
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_18
+      name: UI_levelselect
       rect:
         serializedVersion: 2
-        x: 840
-        y: 1148
-        width: 200
-        height: 65
+        x: 580
+        y: 997
+        width: 306
+        height: 45
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_19
-      rect:
-        serializedVersion: 2
-        x: 840
-        y: 1073
-        width: 200
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_20
-      rect:
-        serializedVersion: 2
-        x: 1046
-        y: 1223
-        width: 200
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_21
-      rect:
-        serializedVersion: 2
-        x: 1046
-        y: 1147
-        width: 200
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_22
-      rect:
-        serializedVersion: 2
-        x: 891
-        y: 1002
-        width: 34
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_23
-      rect:
-        serializedVersion: 2
-        x: 583
-        y: 999
-        width: 300
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_25
+      name: UI_level_star1
       rect:
         serializedVersion: 2
         x: 557
-        y: 849
+        y: 851
         width: 85
         height: 80
       alignment: 0
@@ -499,7 +257,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_26
+      name: UI_level_star2
       rect:
         serializedVersion: 2
         x: 676
@@ -512,7 +270,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_27
+      name: UI_paused
       rect:
         serializedVersion: 2
         x: 26
@@ -525,7 +283,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_28
+      name: UI_corner_button_blue
       rect:
         serializedVersion: 2
         x: 770
@@ -534,28 +292,15 @@ TextureImporter:
         height: 55
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 12, y: 12, z: 12, w: 12}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_29
+      name: UI_level_star3
       rect:
         serializedVersion: 2
-        x: 770
-        y: 1174
-        width: 60
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_30
-      rect:
-        serializedVersion: 2
-        x: 801
-        y: 848
+        x: 802
+        y: 847
         width: 85
         height: 80
       alignment: 0
@@ -564,59 +309,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_31
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 893
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_32
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 829
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_33
-      rect:
-        serializedVersion: 2
-        x: 335
-        y: 893
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_34
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 829
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_35
+      name: UI_menu_background
       rect:
         serializedVersion: 2
         x: 13
@@ -625,28 +318,15 @@ TextureImporter:
         height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 45, y: 45, z: 45, w: 45}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_36
+      name: UI_star1_collected
       rect:
         serializedVersion: 2
-        x: 14
-        y: 47
-        width: 555
-        height: 375
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_37
-      rect:
-        serializedVersion: 2
-        x: 607
-        y: 19
+        x: 608
+        y: 18
         width: 85
         height: 80
       alignment: 0
@@ -655,10 +335,23 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_38
+      name: UI_star2_collected
       rect:
         serializedVersion: 2
         x: 719
+        y: 18
+        width: 85
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_star3_collected
+      rect:
+        serializedVersion: 2
+        x: 834
         y: 19
         width: 85
         height: 80
@@ -668,111 +361,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_39
-      rect:
-        serializedVersion: 2
-        x: 834
-        y: 20
-        width: 85
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_40
-      rect:
-        serializedVersion: 2
-        x: 964
-        y: 554
-        width: 220
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_41
-      rect:
-        serializedVersion: 2
-        x: 1220
-        y: 476
-        width: 205
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_42
-      rect:
-        serializedVersion: 2
-        x: 955
-        y: 484
-        width: 235
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_43
-      rect:
-        serializedVersion: 2
-        x: 1893
-        y: 1251
-        width: 150
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_44
-      rect:
-        serializedVersion: 2
-        x: 2076
-        y: 1254
-        width: 150
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_45
-      rect:
-        serializedVersion: 2
-        x: 2297
-        y: 1255
-        width: 110
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_46
-      rect:
-        serializedVersion: 2
-        x: 974
-        y: 48
-        width: 555
-        height: 375
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_47
+      name: UI_win_background
       rect:
         serializedVersion: 2
         x: 1939
@@ -781,197 +370,15 @@ TextureImporter:
         height: 340
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 45, y: 55, z: 45, w: 45}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_48
-      rect:
-        serializedVersion: 2
-        x: 1972
-        y: 829
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_49
-      rect:
-        serializedVersion: 2
-        x: 1973
-        y: 765
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_50
-      rect:
-        serializedVersion: 2
-        x: 2162
-        y: 765
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_51
-      rect:
-        serializedVersion: 2
-        x: 2161
-        y: 829
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_52
-      rect:
-        serializedVersion: 2
-        x: 2161
-        y: 696
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_53
-      rect:
-        serializedVersion: 2
-        x: 2162
-        y: 631
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_54
-      rect:
-        serializedVersion: 2
-        x: 1973
-        y: 631
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_55
-      rect:
-        serializedVersion: 2
-        x: 1973
-        y: 696
-        width: 175
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_56
-      rect:
-        serializedVersion: 2
-        x: 2364
-        y: 829
-        width: 80
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_24
-      rect:
-        serializedVersion: 2
-        x: 2366
-        y: 765
-        width: 80
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_57
+      name: UI_language_english_pressed
       rect:
         serializedVersion: 2
         x: 594
-        y: 733
-        width: 178
-        height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_58
-      rect:
-        serializedVersion: 2
-        x: 784
-        y: 735
-        width: 178
-        height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_59
-      rect:
-        serializedVersion: 2
-        x: 595
-        y: 672
-        width: 178
-        height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_60
-      rect:
-        serializedVersion: 2
-        x: 782
-        y: 672
-        width: 178
-        height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_61
-      rect:
-        serializedVersion: 2
-        x: 594
-        y: 597
+        y: 596
         width: 230
         height: 60
       alignment: 0
@@ -980,7 +387,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_62
+      name: UI_language_danish_pressed
       rect:
         serializedVersion: 2
         x: 594
@@ -993,11 +400,11 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_63
+      name: UI_language_danish
       rect:
         serializedVersion: 2
         x: 594
-        y: 463
+        y: 462
         width: 230
         height: 60
       alignment: 0
@@ -1006,11 +413,11 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_64
+      name: UI_language_english
       rect:
         serializedVersion: 2
         x: 594
-        y: 399
+        y: 400
         width: 230
         height: 60
       alignment: 0
@@ -1019,7 +426,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_65
+      name: UI_counter_star
       rect:
         serializedVersion: 2
         x: 861
@@ -1032,11 +439,11 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_66
+      name: UI_slider_knob
       rect:
         serializedVersion: 2
         x: 861
-        y: 377
+        y: 376
         width: 60
         height: 60
       alignment: 0
@@ -1045,241 +452,33 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_67
+      name: UI_slider_empty
       rect:
         serializedVersion: 2
-        x: 1552
-        y: 234
-        width: 180
-        height: 205
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_68
-      rect:
-        serializedVersion: 2
-        x: 1564
-        y: 14
-        width: 180
-        height: 205
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_69
-      rect:
-        serializedVersion: 2
-        x: 613
+        x: 612
         y: 330
         width: 300
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 30, y: 13, z: 34, w: 13}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_70
+      name: UI_slider_full
       rect:
         serializedVersion: 2
-        x: 613
+        x: 612
         y: 279
         width: 300
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 30, y: 13, z: 34, w: 13}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_72
-      rect:
-        serializedVersion: 2
-        x: 1837
-        y: 555
-        width: 495
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_73
-      rect:
-        serializedVersion: 2
-        x: 1851
-        y: 491
-        width: 495
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_74
-      rect:
-        serializedVersion: 2
-        x: 1887
-        y: 436
-        width: 220
-        height: 25
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_75
-      rect:
-        serializedVersion: 2
-        x: 2226
-        y: 429
-        width: 240
-        height: 25
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_76
-      rect:
-        serializedVersion: 2
-        x: 1887
-        y: 362
-        width: 170
-        height: 25
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_77
-      rect:
-        serializedVersion: 2
-        x: 2228
-        y: 345
-        width: 165
-        height: 50
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_78
-      rect:
-        serializedVersion: 2
-        x: 1886
-        y: 290
-        width: 165
-        height: 25
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_79
-      rect:
-        serializedVersion: 2
-        x: 2226
-        y: 285
-        width: 180
-        height: 25
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_80
-      rect:
-        serializedVersion: 2
-        x: 1793
-        y: 199
-        width: 220
-        height: 25
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_81
-      rect:
-        serializedVersion: 2
-        x: 2131
-        y: 193
-        width: 240
-        height: 25
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_82
-      rect:
-        serializedVersion: 2
-        x: 1793
-        y: 127
-        width: 170
-        height: 25
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_83
-      rect:
-        serializedVersion: 2
-        x: 2134
-        y: 111
-        width: 165
-        height: 50
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_84
-      rect:
-        serializedVersion: 2
-        x: 2132
-        y: 49
-        width: 180
-        height: 25
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_85
-      rect:
-        serializedVersion: 2
-        x: 1793
-        y: 56
-        width: 165
-        height: 25
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_86
+      name: UI_level_select_unlocked
       rect:
         serializedVersion: 2
         x: 1001
@@ -1292,7 +491,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_87
+      name: UI_level_select_locked
       rect:
         serializedVersion: 2
         x: 1260
@@ -1305,111 +504,33 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_88
+      name: UI_button_orange
       rect:
         serializedVersion: 2
-        x: 1613
+        x: 1612
         y: 979
         width: 235
-        height: 75
+        height: 76
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 23, y: 17, z: 32, w: 34}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_89
+      name: UI_button_orange_pressed
       rect:
         serializedVersion: 2
-        x: 1613
-        y: 899
-        width: 235
-        height: 75
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_90
-      rect:
-        serializedVersion: 2
-        x: 1617
+        x: 1616
         y: 808
         width: 235
-        height: 75
+        height: 76
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 23, y: 17, z: 32, w: 34}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_91
-      rect:
-        serializedVersion: 2
-        x: 1617
-        y: 728
-        width: 235
-        height: 75
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_92
-      rect:
-        serializedVersion: 2
-        x: 1597
-        y: 1167
-        width: 270
-        height: 86
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_93
-      rect:
-        serializedVersion: 2
-        x: 1597
-        y: 1076
-        width: 270
-        height: 86
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_94
-      rect:
-        serializedVersion: 2
-        x: 1521
-        y: 562
-        width: 270
-        height: 86
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_95
-      rect:
-        serializedVersion: 2
-        x: 1521
-        y: 473
-        width: 270
-        height: 86
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_96
+      name: UI_star1_uncollected
       rect:
         serializedVersion: 2
         x: 2378
@@ -1422,7 +543,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_97
+      name: UI_star2_uncollected
       rect:
         serializedVersion: 2
         x: 2378
@@ -1435,10 +556,10 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_98
+      name: UI_star3_uncollected
       rect:
         serializedVersion: 2
-        x: 2373
+        x: 2374
         y: 481
         width: 85
         height: 80
@@ -1448,270 +569,23 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_99
-      rect:
-        serializedVersion: 2
-        x: 1303
-        y: 1250
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_100
-      rect:
-        serializedVersion: 2
-        x: 1352
-        y: 1250
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_101
-      rect:
-        serializedVersion: 2
-        x: 1403
-        y: 1250
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_102
-      rect:
-        serializedVersion: 2
-        x: 1456
-        y: 1250
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_103
-      rect:
-        serializedVersion: 2
-        x: 1496
-        y: 1250
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_104
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 1250
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_105
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 1201
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_106
-      rect:
-        serializedVersion: 2
-        x: 1496
-        y: 1201
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_107
-      rect:
-        serializedVersion: 2
-        x: 1455
-        y: 1201
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_108
-      rect:
-        serializedVersion: 2
-        x: 1403
-        y: 1201
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_109
-      rect:
-        serializedVersion: 2
-        x: 1352
-        y: 1201
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_110
-      rect:
-        serializedVersion: 2
-        x: 1303
-        y: 1200
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_111
-      rect:
-        serializedVersion: 2
-        x: 1300
-        y: 1150
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_112
-      rect:
-        serializedVersion: 2
-        x: 1352
-        y: 1150
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_113
-      rect:
-        serializedVersion: 2
-        x: 1406
-        y: 1150
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_114
-      rect:
-        serializedVersion: 2
-        x: 1459
-        y: 1150
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_115
-      rect:
-        serializedVersion: 2
-        x: 1509
-        y: 1150
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_71
-      rect:
-        serializedVersion: 2
-        x: 1518
-        y: 1106
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_116
+      name: UI_corner_button_blue_pressed
       rect:
         serializedVersion: 2
         x: 770
-        y: 1113
+        y: 1114
         width: 60
         height: 55
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 12, y: 12, z: 12, w: 12}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_117
+      name: UI_counter_boosts
       rect:
         serializedVersion: 2
-        x: 770
-        y: 1052
-        width: 60
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ALL UI GADDAMN copy_118
-      rect:
-        serializedVersion: 2
-        x: 1240
+        x: 1241
         y: 570
         width: 80
         height: 80
@@ -1721,7 +595,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_119
+      name: UI_counter_comics
       rect:
         serializedVersion: 2
         x: 1370
@@ -1734,13 +608,104 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ALL UI GADDAMN copy_120
+      name: UI_header_background
       rect:
         serializedVersion: 2
         x: 577
         y: 141
         width: 385
         height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 55, z: 45, w: 35}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_header_background_small
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1220
+        width: 204
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 37, y: 35, z: 37, w: 22}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_gal_frame
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 952
+        width: 137
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 13, y: 13, z: 13, w: 13}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_level_select_blank
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 215
+        width: 250
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_checkbox_background
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 366
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_checkbox_checkmark
+      rect:
+        serializedVersion: 2
+        x: 2317
+        y: 372
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_music_on
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 96
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_music_muted
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 95
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -135,7 +135,7 @@ public class EntryCutScene : MonoBehaviour {
 
     public void Ended()
     {
-       // ToggleUI();
+        ToggleUI();
         Destroy(cam.gameObject);
         key.SetActive(false);
         playerObj.parent = null;

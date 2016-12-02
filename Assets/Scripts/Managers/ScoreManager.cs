@@ -90,9 +90,15 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
             case EventName.PlayerDead:
                 hasDied = true;
                 break;
-            case EventName.PlayerLaunch:
+                //Moved this to the hud. Not pretty but works (Frederik).
+            /*case EventName.PlayerLaunch:
                 shotsFired++;
+                Debug.LogError("fired" + shotsFired);
                 break;
+            case EventName.PlayerFakeLaunched:
+                shotsFired--;
+                Debug.LogError("firedFaked" + shotsFired);
+                break;*/
             case EventName.ComicPickup:
                 ComicCollected();
                 break;

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c7053665d238efa48a34bda289392935
-timeCreated: 1480599233
+timeCreated: 1480680639
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -179,9 +179,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 404
-        y: 1236
+        y: 1234
         width: 175
-        height: 55
+        height: 57
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 14, y: 10, z: 26, w: 26}
@@ -191,10 +191,10 @@ TextureImporter:
       name: UI_button_blue_pressed
       rect:
         serializedVersion: 2
-        x: 589
-        y: 1235
+        x: 590
+        y: 1234
         width: 175
-        height: 55
+        height: 57
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 14, y: 10, z: 26, w: 26}
@@ -217,10 +217,10 @@ TextureImporter:
       name: UI_levelselect_chosen
       rect:
         serializedVersion: 2
-        x: 891
-        y: 1001
-        width: 35
-        height: 35
+        x: 894
+        y: 1004
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -542,10 +542,10 @@ TextureImporter:
       name: UI_button_orange
       rect:
         serializedVersion: 2
-        x: 1613
+        x: 1612
         y: 979
         width: 235
-        height: 75
+        height: 76
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 23, y: 17, z: 32, w: 34}
@@ -555,10 +555,10 @@ TextureImporter:
       name: UI_button_orange_pressed
       rect:
         serializedVersion: 2
-        x: 1617
+        x: 1616
         y: 808
         width: 235
-        height: 75
+        height: 76
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 23, y: 17, z: 32, w: 34}

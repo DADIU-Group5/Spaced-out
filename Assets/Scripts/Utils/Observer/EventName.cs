@@ -58,5 +58,6 @@
     UIButton,
     DisableCameraInput,
     EnableCameraInput,
-    ChangeLanguage
+    ChangeLanguage,
+    PlayerRecord
 }

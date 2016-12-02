@@ -36,8 +36,8 @@ public class InputController : MonoBehaviour, Observer
         inputDisabled = false;
         cameraInputDisabled = false;
 
-        // TODO: Add event listener for sensitivity.
-
+        ChangeSensitivity(SettingsManager.instance.GetSensitivity());
+        SettingsManager.instance.onSensitivityChanged += ChangeSensitivity;
     }
 
     private void LateUpdate()
@@ -205,7 +205,7 @@ public class InputController : MonoBehaviour, Observer
         }
     }
 
-    private void OnChangeSensitivity(float ratio)
+    private void ChangeSensitivity(float ratio)
     {
         cameraRotateSpeed = Mathf.Lerp(minSensitivity, maxSensitivity, ratio);
     }
@@ -261,7 +261,6 @@ public class InputController : MonoBehaviour, Observer
     public void OnDestroy()
     {
         Subject.instance.RemoveObserver(this);
-
-        // TODO: Remove listener.
+        SettingsManager.instance.onSensitivityChanged -= ChangeSensitivity;
     }
 }

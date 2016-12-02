@@ -113,7 +113,7 @@ public class ProgressManager : Singleton<ProgressManager> {
     /// <returns>srray of bools</returns>
     public bool[] GetStars(int level)
     {
-        if (level < 0 || level > progress.levels.Length)
+        if (level < 1 || level > progress.levels.Length)
         {
             throw new UnityException("No medals exists for level: " + level);
         }

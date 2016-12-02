@@ -10,7 +10,6 @@ public class WinMenu : MonoBehaviour, Observer
     private bool playerWon = false;
 
     public GameObject levelCompletedMenu;
-    public GameObject adsMenu;
     public GameObject winMenu;
     public GameObject hud;
     public GameObject record;
@@ -130,16 +129,8 @@ public class WinMenu : MonoBehaviour, Observer
 
     public void ShowNextWinMenu()
     {
-        if (SettingsManager.instance.GetPremium() == false)
-        {
             levelCompletedMenu.SetActive(false);
-            adsMenu.SetActive(true);
-
-        }
-        else
-        {
-            ShowLastWinMenu();
-        }
+            winMenu.SetActive(true);
     }
 
     public void SetScore()
@@ -151,20 +142,6 @@ public class WinMenu : MonoBehaviour, Observer
     public void SetComics(string comicText)
     {
         comicsLabel1.text = comicText.Replace("0", "O");
-    }
-
-    public void ShowLastWinMenu()
-    {
-        if (SettingsManager.instance.GetPremium() == false)
-        {
-            adsMenu.SetActive(false);
-        }
-        else
-        {
-            levelCompletedMenu.SetActive(false);
-        }
-
-        winMenu.SetActive(true);
     }
 
     /// <summary>

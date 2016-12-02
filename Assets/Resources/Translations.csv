@@ -1,56 +1,40 @@
-key,english,danish,Description
-danish,DANISH,DANSK,
-english,ENGLISH,ENGELSK,
-start,START,START,
-play,PLAY,SPIL,
-settings,SETTINGS,INDSTILLINGER,
-exit,EXIT GAME,LUK SPIL,
+key,english,danish,description
+back,Back,Tilbage,
+next,Next,Næste,
+danish,Danish,Dansk,
+english,English,Engelsk,
+exitGame,Exit game,Luk spil,
+generateLevels,Generate levels,Generer niveauer,
+level,Level,Niveau,
+levels,Levels,Levels,
+master,Master,Master,
+star,star,stjerne,
+Stars,stars,stjerner,
+music,Music,Musik,
+mute,Mute,Lydløs,
+unmute,Unmute,Lyd,
+play,Play,Spil,
+resetAll,Reset all,Nulstil alt,
 resetProg,Reset Progress,Nulstil forløb,
-disableNotify,Disable Notifications,Slå Notifikationer fra,
-credits,CREDITS,RULLETEKSTER,
-back,BACK,TILBAGE,
-next,NEXT,NÆSTE
-shop,SHOP,BUTIK,
-generateLevels,Generate levels (costs 15x medals), Generér niveauer (Koster 15x medaljer)
-level,LEVEL,NIVEAU
-medal,Medal,Medalje
-medals,Medals,Medaljer
-reset medals,Reset Medals,Nulstil medaljer
-reset all,Reset All,Nulstil Alt
-buy,Buy,Køb
-music,Music,Musik
-effects,Effects,Effekter
-invert camera controls,INVERT CAMERA CONTROLS,SPEJLVEND KAMERA KONTROL
-velocity,VELOCITY,HASTIGHED
-current,Current,Nuværende
-fuel,Fuel,Gas
-No More Fuel,no more fuel,Ikke mere gas
-Not Ready To Launch,not ready to launch,Ikke Klar til Affyring
-Ready To Launch,ready to launch,Klar til Affyring
-BURNING!,Burning!,Du Brænder!
-Did you smell something Dave?,Did You Smell Something Dave?,Kan du lugte noget brændt Dave?
-you lost,You Lost,Du tabte
-you burned to death,You Burned to Death,Du brændte ihjel
-you got crushed,You got Crushed,Du blev Mast
-you got electrocuted,You Got Electrocuted,Du fik Elektrisk Stød
-you exploded,You exploded!,Du eksploderede!
-but they also don't usually explode themselves,but they also don't usually explode themselves,Men exploderer heller ikke normalt sig selv
-you ran out of oxygen,You ran out of Oxygen,Du løb tør for luft
-resetting in,Resetting in,Genstarter om
-you win,YOU WON,DU VANDT
-comics,COMICS,TEGNESERIER
-unlockLevels,Unlock Levels,Åben alle Niveauer
+settings,Settings,Indstillinger,
 tutorial,Tutorial,Tutorial,
+unlockLevels,Unlock Levels,Åben niveauer,
 unlockAll,Unlock all,Lås alt op,
-unmute,UNMUTE,LYD FRA
-!,!,!
-record,RECORD,REKORD
-score,SCORE,SCORE
-levelComplete,LEVEL COMPLETE,LEVEL GENNEMFØRT
-comicsCollected,COMICS COLLECTED,TEGNESERIER SAMLET
-boostsUsed,BOOSTS USED,BOOSTS BRUGT
-main menu,MAIN MENU,HOVED MENU
-replay,REPLAY,SPIL IGEN
-next level,NEXT LEVEL,NÆSTE NIVEAU
-resume,RESUME,FORTSÆT
-restart,RESTART,GENSTART
+record,Record,Rekord,
+score,Score,Score,
+levelComplete,Level Complete,Level Gennemført,
+comics,Comics,Tegneserier,
+comicsCollected,Comics Collected,Tegneserier Samlet,
+boostsUsed,Boosts Used,Boosts Brugt,
+mainMenu,Main menu,Hoved menu,
+replay,Replay,Spil igen,
+nextLevel,Next level,Next niveau,
+resume,Resume,Fortsæt,
+restart,Restart,Genstart,
+start,Start,Start,
+credits,Credits,Rulletekster,
+effects,Effects,Effekter,
+invertCameraControls,Invert Camera Controls,Spejlvend kamera control,
+velocity,Velocity,Hastighed,
+current,Current,Nuværende,
+hooray,Hooray...You did it,Hurra...Du klarede det,

@@ -113,6 +113,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3465444258	davePutOutFire			\Default Work Unit\dave\davePutOutFire	
 	3467920165	pickupKeys			\Default Work Unit\enviroment\pickupKeys	
 	3536816288	daveCatchFire			\Default Work Unit\dave\daveCatchFire	
+	3588208292	hazardsStop			\Default Work Unit\enviroment\hazardsStop	
 	3619358932	ventAir			\Default Work Unit\enviroment\ventAir	
 	3669325296	daveElectrocute			\Default Work Unit\dave\daveElectrocute	
 	3700176345	lowOxygen6			\Default Work Unit\gal\lowOxygen\lowOxygen6	
@@ -142,6 +143,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	42812665	galLanguage			\Default Work Unit\galLanguage	
 	340593036	slowMotion			\Default Work Unit\slowMotion	
 	2391494160	power			\Default Work Unit\power	
+	3092587493	pause			\Default Work Unit\pause	
 
 State	ID	Name	State Group			Notes
 	311764526	Dan	galLanguage			
@@ -153,10 +155,14 @@ State	ID	Name	State Group			Notes
 	748895195	None	power			
 	930712164	off	power			
 	1651971902	on	power			
+	319258907	paused	pause			
+	748895195	None	pause			
+	1365518790	unpaused	pause			
 
 Custom State	ID	Name	State Group	Owner		Notes
 	298898746	off	power	\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electricity loop		
 	327007126	off	power	\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects\SpacedOut\soundseedfxs\fanair		
+	365429045	paused	pause	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
 	775978487	on	slowMotion	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
 	1070632189	off	power	\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\blæser		
 
@@ -303,7 +309,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	22107775	blip blop random6	Y:\Desktop\Wwise\.cache\Android\SFX\blip blop\blip blop random6_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random6		43215
 	24715317	bevar fatiningen	Y:\Desktop\Wwise\.cache\Android\SFX\Danish\electrocute\wiresDan4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires5\bevar fatiningen		50500
 	26065425	dave grunts 15	Y:\Desktop\Wwise\.cache\Android\SFX\grunts\dave grunts 15_0F7F9E0C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 15		13312
-	26219457	slo mo effect	Y:\Desktop\Wwise\.cache\Android\SFX\slo mo effect_CF672B9C.wem		\Actor-Mixer Hierarchy\Default Work Unit\jetpack\slo mo effect		49888
+	26219457	slo mo effect	Y:\Desktop\Wwise\.cache\Android\SFX\slo mo effect_26F29A81.wem		\Actor-Mixer Hierarchy\Default Work Unit\jetpack\slo mo effect		49888
 	30115822	dave grunts 16	Y:\Desktop\Wwise\.cache\Android\SFX\grunts\dave grunts 16_AB64C529.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 16		11026
 	33179142	metal impact no tone4	Y:\Desktop\Wwise\.cache\Android\SFX\metal\metal impact no tone4_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone4		39384
 	35238501	metal impact g5	Y:\Desktop\Wwise\.cache\Android\SFX\metal\G\metal impact g5_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g5		26006
@@ -329,16 +335,17 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	105906957	launch synth2	Y:\Desktop\Wwise\.cache\Android\SFX\launch synth2_617036E9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth2		80739
 	107064225	narrativeDan9	Y:\Desktop\Wwise\.cache\Android\SFX\narrative\narrativeDan9_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\what are you doing\narrativeDan9		46077
 	112371414	object impact light6	Y:\Desktop\Wwise\.cache\Android\SFX\impacts\object impact light6_178FB079.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light6		3575
-	114230876	space wind	Y:\Desktop\Wwise\.cache\Android\SFX\space wind_B4208FA5.wem		\Actor-Mixer Hierarchy\Default Work Unit\cinematics\space wind		189788
+	114230876	space wind	Y:\Desktop\Wwise\.cache\Android\SFX\space wind_22A60087.wem		\Actor-Mixer Hierarchy\Default Work Unit\cinematics\space wind		189788
 	116050032	explosion6	Y:\Desktop\Wwise\.cache\Android\SFX\explosion6_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion6		10965
 	117874704	preexplosion	Y:\Desktop\Wwise\.cache\Android\SFX\preexplosion_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\preexplosion		4029
-	124263028	keys chime reward2	Y:\Desktop\Wwise\.cache\Android\SFX\keys chime reward2_C4E4A650.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys chime reward2		103138
+	124263028	keys chime reward2	Y:\Desktop\Wwise\.cache\Android\SFX\keys chime reward2_7075D2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys chime reward2		103138
 	129103809	hvor er du bare Fan-tastisk_2_7	Y:\Desktop\Wwise\.cache\Android\SFX\GAL\Danish\fan\hvor er du bare Fan-tastisk.2.7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan4\hvor er du bare Fan-tastisk_2_7		40490
 	131464271	remarkDan9	Y:\Desktop\Wwise\.cache\Android\SFX\GAL\Danish\general remarks\final\remarkDan9_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark7\remarkDan9		16339
 	140590783	min analyse	Y:\Desktop\Wwise\.cache\Android\SFX\GAL\Danish\general remarks\final\remarkDan3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark6\min analyse		96177
 	143105393	wires6	Y:\Desktop\Wwise\.cache\Android\SFX\GAL\English\electrocute\final\wires6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires6\wires6		39432
 	145958102	fire3	Y:\Desktop\Wwise\.cache\Android\SFX\GAL\English\fire\final\fire3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire2\fire3		56194
 	146173779	lowOxygenDan4	Y:\Desktop\Wwise\.cache\Android\SFX\Danish\low oxygen\lowOxygen4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 2\lowOxygenDan4		51729
+	154893435	hello dave final	Y:\Desktop\Wwise\.cache\Android\SFX\hello dave final_6DE9CED7.wem		\Interactive Music Hierarchy\Default Work Unit\musicmain\hello dave final\hello dave final		3979436
 	163750867	outofocygen2	Y:\Desktop\Wwise\.cache\Android\SFX\GAL\English\out of oxygen\final\outofocygen2_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 8\outofocygen2		73090
 	170007116	CINEMATIC intro no gal	Y:\Desktop\Wwise\.cache\Android\SFX\CINEMATIC intro no gal_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\cinematics\CINEMATIC intro no gal		497992
 	182772970	metal impact no tone3	Y:\Desktop\Wwise\.cache\Android\SFX\metal\metal impact no tone3_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone3		42153
@@ -400,7 +407,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	354171151	dave grunts 17	Y:\Desktop\Wwise\.cache\Android\SFX\grunts\dave grunts 17_6529F511.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 17		14808
 	354507471	hydralics5	Y:\Desktop\Wwise\.cache\Android\SFX\atmos\hydralics5_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics5		7029
 	355268674	outofocygen7	Y:\Desktop\Wwise\.cache\Android\SFX\GAL\English\out of oxygen\final\outofocygen7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 7\outofocygen7		44794
-	360974853	hello dave first play	Y:\Desktop\Wwise\.cache\Android\SFX\hello dave first play_6DE9CED7.wem		\Interactive Music Hierarchy\Default Work Unit\musicFirst\hello dave first play\hello dave first play		4014059
 	362285532	metal impact C6	Y:\Desktop\Wwise\.cache\Android\SFX\metal\C\metal impact C6_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\C\metal impact C6		25912
 	363675299	lowoxygen3	Y:\Desktop\Wwise\.cache\Android\SFX\GAL\English\low oxygen\final\lowoxygen3_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 3\lowoxygen3		44454
 	366758689	switch1	Y:\Desktop\Wwise\.cache\Android\SFX\GAL\English\switch\final\switch1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch1\switch1		37752
@@ -418,7 +424,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	402805320	outofocygen1	Y:\Desktop\Wwise\.cache\Android\SFX\GAL\English\out of oxygen\final\outofocygen1_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 1\outofocygen1		39578
 	404632530	buttscratch4	Y:\Desktop\Wwise\.cache\Android\SFX\dave\buttscratch4_24F18740.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\buttscratch\buttscratch4		2093
 	408124425	object impact light5	Y:\Desktop\Wwise\.cache\Android\SFX\impacts\object impact light5_20368D23.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light5		2174
-	412013133	SuctionWet_BW_61371	Y:\Desktop\Wwise\.cache\Android\SFX\SuctionWet_BW.61371_976B6625.wem		\Actor-Mixer Hierarchy\Default Work Unit\cinematics\SuctionWet_BW_61371		8679
+	412013133	SuctionWet_BW_61371	Y:\Desktop\Wwise\.cache\Android\SFX\SuctionWet_BW.61371_E6CA6D80.wem		\Actor-Mixer Hierarchy\Default Work Unit\cinematics\SuctionWet_BW_61371		8679
 	418672149	remarks14	Y:\Desktop\Wwise\.cache\Android\SFX\GAL\English\general remarks\final\remarks14_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark14\remarks14		43195
 	421879619	heavy impact2	Y:\Desktop\Wwise\.cache\Android\SFX\impacts\heavy impact2_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact2		5555
 	422239685	heavy impact8	Y:\Desktop\Wwise\.cache\Android\SFX\impacts\heavy impact8_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact8		6672
@@ -441,7 +447,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	483393435	outOfOxygenDan4	Y:\Desktop\Wwise\.cache\Android\SFX\Danish\out of oxygen\outOfOxygenDan4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 4\outOfOxygenDan4		57242
 	483913680	blip blop random118	Y:\Desktop\Wwise\.cache\Android\SFX\blip blop\blip blop random118_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random118		49657
 	485270404	light impact2	Y:\Desktop\Wwise\.cache\Android\SFX\impacts\light impact2_8EF4B22F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact2		5558
-	485838835	keys pickup	Y:\Desktop\Wwise\.cache\Android\SFX\keys pickup_108EF94C.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys pickup		95396
+	485838835	keys pickup	Y:\Desktop\Wwise\.cache\Android\SFX\keys pickup_96E81ADC.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys pickup		95396
 	486336854	blip blop random16	Y:\Desktop\Wwise\.cache\Android\SFX\blip blop\blip blop random16_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random16		32337
 	489066010	slukkefordig	Y:\Desktop\Wwise\.cache\Android\SFX\Danish\fire\fireDan4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire5\slukkefordig		55060
 	489574698	metal impact D2	Y:\Desktop\Wwise\.cache\Android\SFX\metal\D\metal impact D2_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\D\metal impact D2		30893
@@ -469,7 +475,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	572527449	door close slide5	Y:\Desktop\Wwise\.cache\Android\SFX\door slide\door close slide5_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\door slide\close\door close slide5		3009
 	572934450	hydralics4	Y:\Desktop\Wwise\.cache\Android\SFX\atmos\hydralics4_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics4		4996
 	573092875	metal impact g2	Y:\Desktop\Wwise\.cache\Android\SFX\metal\G\metal impact g2_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g2		32198
-	577442237	keys chime reward1	Y:\Desktop\Wwise\.cache\Android\SFX\keys chime reward1_95CB26DC.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys chime reward1		74858
+	577442237	keys chime reward1	Y:\Desktop\Wwise\.cache\Android\SFX\keys chime reward1_52B4DF88.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys chime reward1		74858
 	578189822	blip blop sci fi forest long1	Y:\Desktop\Wwise\.cache\Android\SFX\blip blop\blip blop sci fi forest long1_B73642EA.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop sci fi forest long1		500769
 	578658333	blip blop random21	Y:\Desktop\Wwise\.cache\Android\SFX\blip blop\blip blop random21_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random21		64690
 	581417438	object impact2	Y:\Desktop\Wwise\.cache\Android\SFX\impacts\object impact2_470E9B54.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact2		4227
@@ -515,14 +521,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	672133736	charge noise	Y:\Desktop\Wwise\.cache\Android\SFX\charge noise_6DE9CED7.wem		\Actor-Mixer Hierarchy\Default Work Unit\jetpack\charge noise		24141
 	672209193	blip blop random23	Y:\Desktop\Wwise\.cache\Android\SFX\blip blop\blip blop random23_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random23		68518
 	672799992	door open slide 1	Y:\Desktop\Wwise\.cache\Android\SFX\door slide\door open slide 1_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\door slide\open\door open slide 1		11319
-	674232697	hello dave3	Y:\Desktop\Wwise\.cache\Android\SFX\hello dave3_6DE9CED7.wem		\Interactive Music Hierarchy\Default Work Unit\musicmain\hello dave3\hello dave3		3872773
 	681768169	metal impact C4	Y:\Desktop\Wwise\.cache\Android\SFX\metal\C\metal impact C4_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\C\metal impact C4		32064
 	684420584	9	Y:\Desktop\Wwise\.cache\Android\SFX\GAL\English\electrocute\final\9_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires8\9		106798
 	690851100	narrative6	Y:\Desktop\Wwise\.cache\Android\SFX\GAL\English\narrative\final\narrative6_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\what are you doing\narrative6		51022
 	691152910	light impact8	Y:\Desktop\Wwise\.cache\Android\SFX\impacts\light impact8_B7B9AFBE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact8		6746
 	692903098	wires4	Y:\Desktop\Wwise\.cache\Android\SFX\GAL\English\electrocute\final\wires4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires4\wires4		112921
 	693313243	launch synth1	Y:\Desktop\Wwise\.cache\Android\SFX\launch synth1_570EA8BE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth1		81459
-	693831123	jetpack synth2	Y:\Desktop\Wwise\.cache\Android\SFX\jetpack synth2_7288C639.wem		\Actor-Mixer Hierarchy\Default Work Unit\jetpack\jetpack synth fx\jetpack synth2		19716
+	693831123	jetpack synth2	Y:\Desktop\Wwise\.cache\Android\SFX\jetpack synth2_A38694FB.wem		\Actor-Mixer Hierarchy\Default Work Unit\jetpack\jetpack synth fx\jetpack synth2		19716
 	694793896	remarkDan12	Y:\Desktop\Wwise\.cache\Android\SFX\GAL\Danish\general remarks\final\remarkDan12_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark8\remarkDan12		57305
 	699581131	switchDAn7	Y:\Desktop\Wwise\.cache\Android\SFX\Danish\switch\switchDAn7_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch7\switchDAn7		37775
 	706371641	dave grunts 12	Y:\Desktop\Wwise\.cache\Android\SFX\grunts\dave grunts 12_A16A78D4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 12		13068
@@ -535,8 +540,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	734779861	blip blop sci fi forest short8	Y:\Desktop\Wwise\.cache\Android\SFX\blip blop\blip blop sci fi forest short8_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short8		31341
 	738519879	door open slide 2	Y:\Desktop\Wwise\.cache\Android\SFX\door slide\door open slide 2_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\door slide\open\door open slide 2		11373
 	739005694	metal impact no tone2	Y:\Desktop\Wwise\.cache\Android\SFX\metal\metal impact no tone2_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone2		45127
-	742830660	keys chime2	Y:\Desktop\Wwise\.cache\Android\SFX\keys chime2_63D80A15.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys chime2		81587
-	743864732	keys chime	Y:\Desktop\Wwise\.cache\Android\SFX\keys chime_29923BE5.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys chime		140188
+	742830660	keys chime2	Y:\Desktop\Wwise\.cache\Android\SFX\keys chime2_0DC44973.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys chime2		81587
+	743864732	keys chime	Y:\Desktop\Wwise\.cache\Android\SFX\keys chime_7F01AACC.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys chime		140188
 	746671419	remarks4	Y:\Desktop\Wwise\.cache\Android\SFX\GAL\English\general remarks\final\remarks4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark4\remarks4		34914
 	751321384	light impact7	Y:\Desktop\Wwise\.cache\Android\SFX\impacts\light impact7_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact7		4001
 	753447221	blip blop random2	Y:\Desktop\Wwise\.cache\Android\SFX\blip blop\blip blop random2_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random2		36960
@@ -594,7 +599,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	919400887	door close slide7	Y:\Desktop\Wwise\.cache\Android\SFX\door slide\door close slide7_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\door slide\close\door close slide7		3020
 	920506848	object impact light7	Y:\Desktop\Wwise\.cache\Android\SFX\impacts\object impact light7_B949F25F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light7		3078
 	920814763	menuclickforward	Y:\Desktop\Wwise\.cache\Android\SFX\menuclickforward_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\menuclickforward		16992
-	925249132	jetpack synth1	Y:\Desktop\Wwise\.cache\Android\SFX\jetpack synth1_3FB4BBA2.wem		\Actor-Mixer Hierarchy\Default Work Unit\jetpack\jetpack synth fx\jetpack synth1		22204
+	925249132	jetpack synth1	Y:\Desktop\Wwise\.cache\Android\SFX\jetpack synth1_D8AAAFD2.wem		\Actor-Mixer Hierarchy\Default Work Unit\jetpack\jetpack synth fx\jetpack synth1		22204
 	929920904	remarks6	Y:\Desktop\Wwise\.cache\Android\SFX\GAL\English\general remarks\final\remarks6_88CCFD8E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark6\remarks6		83991
 	938445351	object impact6	Y:\Desktop\Wwise\.cache\Android\SFX\impacts\object impact6_D9AAA607.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact6		5001
 	942376865	door shut7_1	Y:\Desktop\Wwise\.cache\Android\SFX\door shut7_1_88603197.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\door close\door shut7_1		9868
@@ -602,6 +607,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	949012013	main atmos	Y:\Desktop\Wwise\.cache\Android\SFX\main atmos_6DE9CED7.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\main atmos		364397
 	954327847	blip blop random8	Y:\Desktop\Wwise\.cache\Android\SFX\blip blop\blip blop random8_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random8		39731
 	956419964	metal impact D3	Y:\Desktop\Wwise\.cache\Android\SFX\metal\D\metal impact D3_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\D\metal impact D3		26258
+	957554754	hello dave first play final	Y:\Desktop\Wwise\.cache\Android\SFX\hello dave first play final_6DE9CED7.wem		\Interactive Music Hierarchy\Default Work Unit\musicFirst\hello dave first play final\hello dave first play final		3974885
 	964917836	switchDAn4	Y:\Desktop\Wwise\.cache\Android\SFX\Danish\switch\switchDAn4_645155D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch2\switchDAn4		79497
 	969317301	blip blop sci fi forest short10	Y:\Desktop\Wwise\.cache\Android\SFX\blip blop\blip blop sci fi forest short10_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short10		44897
 	971397170	hydralics1	Y:\Desktop\Wwise\.cache\Android\SFX\atmos\hydralics1_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics1		21570

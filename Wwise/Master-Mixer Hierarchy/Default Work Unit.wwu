@@ -395,6 +395,9 @@
 							<StateGroupInfo>
 								<StateGroupRef Name="slowMotion" ID="{AD3BB683-1050-4B91-ADF9-E3970BDC3C31}"/>
 							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="pause" ID="{2DA0F13A-FBF7-4730-A9D5-D63FC4EF998E}"/>
+							</StateGroupInfo>
 						</StateGroupList>
 						<CustomStateList>
 							<CustomState>
@@ -402,6 +405,14 @@
 								<State Name="Custom State" ID="{0FE45214-B38A-4203-A5FD-5123EFD701E3}" ShortID="775978487">
 									<PropertyList>
 										<Property Name="Pitch" Type="int32" Value="-2400"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="paused" ID="{5C00FE7B-B639-4CA8-8842-0C1BFA2E0DD4}"/>
+								<State Name="Custom State" ID="{90FBFF40-DEAC-41DB-8F2A-E32E05C2392C}" ShortID="365429045">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="70"/>
 									</PropertyList>
 								</State>
 							</CustomState>

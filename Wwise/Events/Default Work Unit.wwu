@@ -1320,7 +1320,13 @@
 						</Event>
 						<Event Name="pickupKeys" ID="{A10FBA1B-703C-4677-BD91-AFB13E4C23E0}">
 							<ChildrenList>
-								<Action Name="Play" ID="{D0C90201-CC6E-4362-A7B5-51AF723E20A4}" ShortID="728042467" Type="Play" Scope="One" Global="false"/>
+								<Action Name="Play" ID="{D0C90201-CC6E-4362-A7B5-51AF723E20A4}" ShortID="728042467" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{8B4EFAC0-EA0E-46D1-96A4-A8A007DEF4BE}" Global="false">
+											<ObjectRef Name="keys pickup" ID="{A8CF8471-A091-4C67-ACB5-16DAE9425F44}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="pickupTrex" ID="{39789651-38FC-497E-BEAE-9BB1033BB90D}">
@@ -1500,6 +1506,45 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="hazardsStop" ID="{754FA855-32D9-4DE1-9C5A-3BA95B3125AD}">
+							<ChildrenList>
+								<Action Name="Stop" ID="{C1CB1E95-219C-4EB2-8705-B97D7AC0AA6F}" ShortID="69031740" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{F5B5CB91-D3EF-4703-9A75-16536A462D7F}" Global="true">
+											<ObjectRef Name="blæser" ID="{0E0B2ADF-034A-4D56-ACF1-C829F0F25B0C}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{EAC5995B-D830-4C64-9506-4B82392EB76F}" ShortID="152396250" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{E6DD5719-8139-419D-A29B-85FAC8FFF300}" Global="true">
+											<ObjectRef Name="electricity loop" ID="{9F32160E-1220-4D2E-A195-E4D70C4DC0D7}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{051DFD35-64A2-462D-951B-58505362A19D}" ShortID="39100312" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{C35F9BD5-676C-4070-A069-D0AFA6E38736}" Global="true">
+											<ObjectRef Name="gasloop" ID="{533D6B45-FCEB-4537-AD96-BD49B01BFAD1}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{85C06EEC-39F4-4C4A-B0FA-D30409F60566}" ShortID="225985667" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{0E241D10-C626-4C13-B16F-02A2A2337B69}" Global="true">
+											<ObjectRef Name="gasonfire" ID="{E906ED12-D905-459F-99C3-58BC1C76FDEC}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{2ED8ABD3-A574-4B2B-90CA-81F8395A5315}" ShortID="532747866" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{06ED2D4E-3BDD-4D50-81D0-B674C33EA348}" Global="true">
+											<ObjectRef Name="fanair" ID="{5F8D3812-4A81-46D0-AC89-8C9487F79949}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Cinematics" ID="{9886BF1A-9A93-45A4-91D9-204AE6F18DCD}" ShortID="792126149">
@@ -1580,6 +1625,9 @@
 						<Event Name="musicMainPlay" ID="{F30947D7-9777-485C-A4D1-A33BE2BFE1AE}">
 							<ChildrenList>
 								<Action Name="Play" ID="{1CBD0B57-249D-4549-9E46-DAB54422125F}" ShortID="998077567" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{4D1F581C-8F81-4398-B7EF-116E23E0769C}" Global="false">
 											<ObjectRef Name="musicmain" ID="{A4BE85F5-7236-4E80-B2CE-91E61AC28E1E}" WorkUnitID="{F5948B08-8EA0-455A-9A43-E3F403D87912}"/>

@@ -63,6 +63,7 @@ namespace AK
         static const AkUniqueID GASLEAK5 = 1124785722U;
         static const AkUniqueID GASLEAK6 = 1124785721U;
         static const AkUniqueID GASLEAK7 = 1124785720U;
+        static const AkUniqueID HAZARDSSTOP = 3588208292U;
         static const AkUniqueID KEYSCHIME = 510278571U;
         static const AkUniqueID LOWOXYGEN1 = 3700176350U;
         static const AkUniqueID LOWOXYGEN2 = 3700176349U;

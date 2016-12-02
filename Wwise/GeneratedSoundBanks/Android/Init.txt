@@ -19,6 +19,7 @@ State	ID	Name	State Group			Notes
 	1365518790	unpaused	pause			
 
 Custom State	ID	Name	State Group	Owner		Notes
+	365429045	paused	pause	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
 	775978487	on	slowMotion	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes

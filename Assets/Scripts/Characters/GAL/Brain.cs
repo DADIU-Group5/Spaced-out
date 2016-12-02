@@ -96,6 +96,9 @@ public class Brain : Singleton<Brain>, Observer
                 case EventName.OxygenEmpty:
                     type = SubtitleType.OutOfOxygen;
                     break;
+                case EventName.PlayerExploded:
+                    type = SubtitleType.Explosion;
+                    break;
             }
         }
         else

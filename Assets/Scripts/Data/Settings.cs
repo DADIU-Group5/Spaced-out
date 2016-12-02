@@ -2,6 +2,8 @@
 
 [CreateAssetMenu(fileName = "Settings", menuName = "Settings", order = 1)]
 public class Settings : ScriptableObject {
+    [Range(0, 1)]
+    public float sensitivity;
     [Range(0, 100)]
     public float masterVolume;
     [Range(0, 100)]

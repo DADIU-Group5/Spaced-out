@@ -6,8 +6,8 @@ public class MenuSettings : MonoBehaviour {
     public Slider masterSlider;
     public Slider musicSlider;
     public Slider effectsSlider;
-    public GameObject muteBtn;
-    public GameObject unmuteBtn;
+    public Slider sensitivitySlider;
+    public Toggle mute;
     public Toggle cameraControls;
 
     void Start()
@@ -16,12 +16,11 @@ public class MenuSettings : MonoBehaviour {
         masterSlider.onValueChanged.AddListener(OnMasterSliderChanged);
         musicSlider.onValueChanged.AddListener(OnMusicSliderChanged);
         effectsSlider.onValueChanged.AddListener(OnEffectsSliderChanged);
+        sensitivitySlider.onValueChanged.AddListener(OnSensitivitySliderChanged);
         // setup mute / unmute buttons
-        var isMuted = SettingsManager.instance.IsMute();
-        muteBtn.SetActive(!isMuted);
-        //unmuteBtn.SetActive(isMuted);
-
+        mute.isOn = SettingsManager.instance.IsMute();
         cameraControls.isOn = SettingsManager.instance.GetInvertedCamera();
+        sensitivitySlider.value = SettingsManager.instance.GetSensitivity();
 
         SetupSoundSliders();
     }
@@ -33,7 +32,7 @@ public class MenuSettings : MonoBehaviour {
         masterSlider.value =  SettingsManager.instance.GetMasterVolume();
         musicSlider.value = SettingsManager.instance.GetMusicVolume();
         effectsSlider.value = SettingsManager.instance.GetEffectsVolume();
-        //muteBtn
+        
     }
 
     public void OnMasterSliderChanged(float value)
@@ -51,11 +50,14 @@ public class MenuSettings : MonoBehaviour {
         SettingsManager.instance.SetEffectsVolume(value);
     }
 
-    public void OnMuteBtnClick(bool mute)
+    public void OnSensitivitySliderChanged(float value)
     {
-        muteBtn.SetActive(!mute);
-        unmuteBtn.SetActive(mute);
-        SettingsManager.instance.MuteSound(mute);
+        SettingsManager.instance.SetSensitivity(value);
+    }
+
+    public void OnMuteToggle()
+    {
+        SettingsManager.instance.MuteSound(mute.isOn);
     }
 
     public void OnEnglishClick()

@@ -9,6 +9,8 @@ public class SettingsManager : Singleton<SettingsManager> {
     // events
     public delegate void LanguageChangedEventHandler(Language language);
     public event LanguageChangedEventHandler onLanguageChanged;
+    public delegate void SensitivityChangedEventHandler(float sensitivity);
+    public event SensitivityChangedEventHandler onSensitivityChanged;
 
     [SerializeField]
     private Settings settings;
@@ -62,7 +64,8 @@ public class SettingsManager : Singleton<SettingsManager> {
         if (settings.language != language)
         {
             settings.language = language;
-            onLanguageChanged(language);
+            if (onLanguageChanged != null)
+                onLanguageChanged(language);
         }
     }
 
@@ -79,5 +82,21 @@ public class SettingsManager : Singleton<SettingsManager> {
     public bool GetInvertedCamera()
     {
         return settings.invertedCamera;
+    }
+
+    public void SetSensitivity(float sensitivity)
+    {
+        sensitivity = Mathf.Clamp01(sensitivity);
+        if (settings.sensitivity != sensitivity)
+        {
+            settings.sensitivity = sensitivity;
+            if (onSensitivityChanged != null)
+                onSensitivityChanged(sensitivity);
+        }
+    }
+
+    public float GetSensitivity()
+    {
+        return settings.sensitivity;
     }
 }

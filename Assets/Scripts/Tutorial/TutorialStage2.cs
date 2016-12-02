@@ -17,11 +17,14 @@ public class TutorialStage2 : MonoBehaviour, Observer
     void Start()
     {
         Subject.instance.AddObserver(this);
+        var evt = new ObserverEvent(EventName.PlayerSpawned);
+        evt.payload.Add(PayloadConstants.PLAYER, player);
+        Subject.instance.Notify(gameObject, evt);
 
         Brain.instance.randomRemarks = false;
 
         // setup camera and disable inputs
-        var evt = new ObserverEvent(EventName.DisableInput);
+        evt = new ObserverEvent(EventName.DisableInput);
         Subject.instance.Notify(gameObject, evt);
         
         ToggleUI();

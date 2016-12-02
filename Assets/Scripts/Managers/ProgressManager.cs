@@ -39,7 +39,7 @@ public class ProgressManager : Singleton<ProgressManager> {
                 if (!progress.levels[level].completed) // check if completed already
                 {
                     progress.levels[level].completed = true;
-                    progress.currency++;
+                    progress.stars++;
                     // unlock next level
                     if (level < progress.levels.Length - 1)
                         progress.levels[level + 1].unlocked = true;
@@ -49,14 +49,14 @@ public class ProgressManager : Singleton<ProgressManager> {
                 if (!progress.levels[level].allComics) // check if completed already
                 {
                     progress.levels[level].allComics = true;
-                    progress.currency++;
+                    progress.stars++;
                 }
                 break;
             case medalShots:
                 if (!progress.levels[level].shotCount) // check if completed already
                 {
                     progress.levels[level].shotCount = true;
-                    progress.currency++;
+                    progress.stars++;
                 }
                 break;
             default:
@@ -64,7 +64,7 @@ public class ProgressManager : Singleton<ProgressManager> {
         }
     }
 
-    public void SetShotCount(int level, int count)
+    public bool SetShotCount(int level, int count)
     {
         level--;
         if (count <= GenerationDataManager.instance.GetShotCount()) {
@@ -72,13 +72,16 @@ public class ProgressManager : Singleton<ProgressManager> {
             {
                 progress.levels[level].shotCount = true;
                 progress.levels[level].bestShotCount = count;
-                progress.currency++;
+                progress.stars++;
+                return true;
             }
             else if(count < progress.levels[level].bestShotCount)
             {
                 progress.levels[level].bestShotCount = count;
+                return true;
             }
         }
+        return false;
     }
 
     // returns an array of 3 bools indicating if medals are completed
@@ -93,29 +96,41 @@ public class ProgressManager : Singleton<ProgressManager> {
         return new bool[] { levelProgress.completed, levelProgress.shotCount, levelProgress.allComics}; 
     }
 
-    // change the currency
-    public void ChangeCurrency(int amount)
+    // change the amount of stars
+    public void ChangeStars(int amount)
     {
-        progress.currency += amount;
+        progress.stars += amount;
     }
 
-    // get current amount of currency
-    public int GetCurrency() {
-        return progress.currency;
+    // get current amount of stars
+    public int GetStars() {
+        return progress.stars;
     }
 
-    // reset the currency
-    public void ResetCurrency()
+    // reset the stars
+    public void ResetStars()
     {
-        progress.currency = 0;
+        progress.stars = 0;
     }
 
     public void resetCurrentLevel(int levelNumber)
     {
         var level = progress.levels[levelNumber];
         level.completed = false;
+        if (level.completed == true)
+        {
+            ProgressManager.instance.ChangeStars(-1);
+        }
         level.allComics = false;
+        if (level.allComics == true)
+        {
+            ProgressManager.instance.ChangeStars(-1);
+        }
         level.shotCount = false;
+        if (level.shotCount == true)
+        {
+            ProgressManager.instance.ChangeStars(-1);
+        }
     }
 
     // resets progress in levels to default
@@ -125,11 +140,13 @@ public class ProgressManager : Singleton<ProgressManager> {
         for (int i = 0; i < progress.levels.Length; i++)
         {
             var level = progress.levels[i];
+
             level.unlocked = false;
             level.completed = false;
             level.allComics = false;
             level.shotCount = false;
         }
+        ProgressManager.instance.ResetStars();
         progress.levels[0].unlocked = true;
     }
 
@@ -141,7 +158,8 @@ public class ProgressManager : Singleton<ProgressManager> {
         {
             progress.levels[i] = new Progress.LevelProgress();
         }
-        progress.currency = 0;
+        //progress.stars = 0;
+        ProgressManager.instance.ResetStars();
         progress.completedTutorial = false;
     }
 

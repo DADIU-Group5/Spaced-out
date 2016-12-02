@@ -12,6 +12,9 @@ public class HUDController : MonoBehaviour, Observer {
     public Text velocityText;
     public Text currentFuelText;
     public Text comicsLeftText;
+    public Text shotText;
+
+    public GameObject winMenu;
 
     public GameObject subtitleBackdrop;
 
@@ -49,6 +52,12 @@ public class HUDController : MonoBehaviour, Observer {
         var evt = new ObserverEvent(EventName.ToggleCameraControls);
         Subject.instance.Notify(gameObject, evt);
     }
+
+    public void ShotsFired()
+    {
+        shotText.text = ""+ScoreManager.shotsFired;
+    }
+
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
@@ -111,12 +120,20 @@ public class HUDController : MonoBehaviour, Observer {
                 var comicsPayload = evt.payload;
                 if (comicsLeftText != null)
                 {
-                    comicsLeftText.text = (string)comicsPayload[PayloadConstants.COMICS] + " " + Translator.instance.Get("comics");
+                    comicsLeftText.text = (string)comicsPayload[PayloadConstants.COMICS];
+                    string tempText = (string)comicsPayload[PayloadConstants.COMICS];
+                    if (winMenu != null)
+                    {
+                        winMenu.GetComponent<WinMenu>().SetComics(tempText);
+                    }
                 }
                 break;
 
             case EventName.ToggleUI:
                 gameObject.SetActive(!gameObject.activeSelf);
+                break;
+            case EventName.PlayerLaunch:
+                ShotsFired();
                 break;
             default:
                 break;

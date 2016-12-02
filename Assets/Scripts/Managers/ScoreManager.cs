@@ -15,6 +15,8 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
 
     public static int shotsFired = 0;
 
+    public GameObject winMenu;
+
     protected override void Awake()
     {   
         // will be increased on start
@@ -73,8 +75,17 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
                     ProgressManager.instance.SetMedal(level, ProgressManager.medalAllComics);
                 }
 
-                ProgressManager.instance.SetShotCount(level, shotsFired);
-                
+                if (ProgressManager.instance.SetShotCount(level, shotsFired))
+                {
+                    //YOU CANNOT KEEP A REFERENCE FROM SCOREMANAGER, OR ANY OTHER SINGLETON, TO AN OBJECT IN THE SCENE! THIS INSTANCE OF THE SINGLETON WILL BE DESTROYED!
+                    //winMenu.GetComponent<WinMenu>().ShowRecord(true);
+                }
+                else
+                {
+                    //YOU CANNOT KEEP A REFERENCE FROM SCOREMANAGER, OR ANY OTHER SINGLETON, TO AN OBJECT IN THE SCENE! THIS INSTANCE OF THE SINGLETON WILL BE DESTROYED!
+                    //winMenu.GetComponent<WinMenu>().ShowRecord(false);
+                }
+
                 break;
             case EventName.PlayerDead:
                 hasDied = true;

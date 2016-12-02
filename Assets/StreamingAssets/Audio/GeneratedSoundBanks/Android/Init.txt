@@ -2,6 +2,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	42812665	galLanguage			\Default Work Unit\galLanguage	
 	340593036	slowMotion			\Default Work Unit\slowMotion	
 	2391494160	power			\Default Work Unit\power	
+	3092587493	pause			\Default Work Unit\pause	
 
 State	ID	Name	State Group			Notes
 	311764526	Dan	galLanguage			
@@ -13,6 +14,9 @@ State	ID	Name	State Group			Notes
 	748895195	None	power			
 	930712164	off	power			
 	1651971902	on	power			
+	319258907	paused	pause			
+	748895195	None	pause			
+	1365518790	unpaused	pause			
 
 Custom State	ID	Name	State Group	Owner		Notes
 	775978487	on	slowMotion	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
@@ -33,12 +37,16 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3991942870	music			\Default Work Unit\Master Audio Bus\music	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	135845145	rvbatmos			\Default Work Unit\Master Audio Bus\rvbatmos	
 	373392551	New_Auxiliary_Bus			\Default Work Unit\Master Secondary Bus\New_Auxiliary_Bus	
+	529873614	dly			\Default Work Unit\Master Audio Bus\dly	
 	2425890737	rvb2			\Default Work Unit\Master Audio Bus\rvb2	
 	2425890738	rvb1			\Default Work Unit\Master Audio Bus\rvb1	
 
 Effect plug-ins	ID	Name	Type				Notes
 	259313001	Master_Dynamic	McDSP ML1			
+	1125262053	Blue_Distant_Echoes	Wwise Stereo Delay			
 	1718002255	custom_rvb_1	Wwise Convolution Reverb			
 	1796269791	Damped_Chamber	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 4ms 
+	3216246379	Space_Dreaming	Wwise RoomVerb			
 

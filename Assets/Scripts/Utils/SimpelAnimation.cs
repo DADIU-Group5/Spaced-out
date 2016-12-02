@@ -17,9 +17,15 @@ public class SimpelAnimation : MonoBehaviour {
         public Transform target;
     }
 
+    public bool playOnAwake;
     public AnimationStep[] animations;
     private Vector3 startPosition;
     private Quaternion startRotation;
+
+    void Start()
+    {
+        PlayAnimations(() => { });
+    }
 
     /// <summary>
     /// Plays all camera animations

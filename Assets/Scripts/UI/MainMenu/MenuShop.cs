@@ -6,11 +6,11 @@ public class MenuShop : MonoBehaviour {
     
     public void OnBuy50Click()
     {
-        ProgressManager.instance.ChangeCurrency(50);
+        ProgressManager.instance.ChangeStars(50);
     }
 
     public void OnBuy20Click()
     {
-        ProgressManager.instance.ChangeCurrency(20);
+        ProgressManager.instance.ChangeStars(20);
     }
 }

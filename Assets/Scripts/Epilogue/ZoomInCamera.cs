@@ -7,16 +7,6 @@ public class ZoomInCamera : MonoBehaviour {
     public GameObject mainCameraPod;
     public GameObject zoomCamera;
 
-    // Use this for initialization
-    void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
     private void ToggleUI()
     {
         var statusEvent = new ObserverEvent(EventName.ToggleUI);
@@ -27,7 +17,7 @@ public class ZoomInCamera : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            ToggleUI();
+            //ToggleUI();
             mainCameraPod.SetActive(false);
             zoomCamera.gameObject.SetActive(true);
         }

@@ -48,7 +48,7 @@ public class InputController : MonoBehaviour, Observer
             launchMode = true;
         }
 
-        // Check if we are NOT in launchmode and camera input NOT disables
+        // Check if we are NOT in launchmode and camera input NOT disabled
         if (!launchMode && !cameraInputDisabled)
         {
             HandleCameraMode();
@@ -180,9 +180,22 @@ public class InputController : MonoBehaviour, Observer
     {
         float xScale = cameraController.pitch.transform.up.y;
         xScale = Mathf.Sign(xScale);
-
-        transform.Rotate(Vector3.up, Time.deltaTime * xScale * cameraRotateSpeed * (offset.x / ScreenCenter().magnitude),Space.World);
+        transform.Rotate(Vector3.up, Time.deltaTime * xScale * cameraRotateSpeed * (offset.x / ScreenCenter().magnitude), Space.World);
         cameraController.pitch.transform.Rotate(Vector3.right, Time.deltaTime * cameraRotateSpeed * (-offset.y / ScreenCenter().magnitude));
+        
+        // Clamp rotation
+        // This is fucking weird and stupid, but it works. Ask Malte to explain if you need to know about it..
+        if (Mathf.Abs(cameraController.pitch.transform.localEulerAngles.z - 180f) < 0.1)
+        {
+            if (cameraController.pitch.transform.localEulerAngles.x < 180)
+            {
+                cameraController.pitch.transform.localEulerAngles = new Vector3(89.99f, 0f, 0f);
+            }
+            else
+            {
+                cameraController.pitch.transform.localEulerAngles = new Vector3(270.01f, 0f, 0f);
+            }
+        }
     }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
@@ -190,6 +203,10 @@ public class InputController : MonoBehaviour, Observer
         switch (evt.eventName)
         {
             case EventName.PlayerSpawned:
+                if (!gameObject.activeSelf)
+                {
+                    gameObject.SetActive(true);
+                }
                 inputDisabled = false;
                 cameraInputDisabled = false;
                 GameObject go = evt.payload[PayloadConstants.PLAYER] as GameObject;
@@ -198,7 +215,7 @@ public class InputController : MonoBehaviour, Observer
                 transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
                 transform.Rotate(new Vector3(0, player.transform.eulerAngles.y - transform.eulerAngles.y, 0));
                 cameraController.pitch.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
-
+                gameObject.SetActive(true);
                 break;
             case EventName.DisableInput:
             case EventName.StartCutscene:

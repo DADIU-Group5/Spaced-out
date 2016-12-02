@@ -18,6 +18,7 @@ public class EntryCutScene : MonoBehaviour {
     public float zoomSpeed = 2.0f;
     public GameObject finalKey;
     public GameObject moveDirection;
+    public GameObject playerStartPosition;
    
     private Vector3 keyPosition;
     private Vector3 orgPosition;
@@ -25,6 +26,7 @@ public class EntryCutScene : MonoBehaviour {
     private bool backToDave = false;
     private bool movingPlayer = false;
     private GameObject player;
+    private float speed = 0.5f;
 
     void Awake()
     {
@@ -50,8 +52,8 @@ public class EntryCutScene : MonoBehaviour {
         playerObj.position = playerPos.position;
         playerObj.rotation = playerPos.rotation;
         playerObj.parent = playerPos;
-        player.GetComponentInChildren<Animator>().SetBool("Force Fly", true);
-        //player.GetComponentInChildren<Animator>().SetTrigger("Pick Up");
+        player.GetComponentInChildren<Animator>().SetTrigger("StartCinematicFly");
+        player.GetComponentInChildren<Animator>().SetBool("CinematicFly", true);
         particles = player.GetComponent<PlayerController>().chargeParticle;
         player.GetComponent<PlayerController>().chargeParticle = null;
 
@@ -62,6 +64,11 @@ public class EntryCutScene : MonoBehaviour {
 
     void ZoomInOnKey()
     {
+        if (zoomCamera == null)
+        {
+            return;
+        }
+        player = GameObject.FindGameObjectWithTag("Player");
         key.SetActive(false);
         zoomCamera.SetActive(true);
         keyPosition = finalKey.transform.position;
@@ -83,6 +90,12 @@ public class EntryCutScene : MonoBehaviour {
             {
                 zoomingIn = false;
                 StartCoroutine(waitAfterZooming());
+                player = GameObject.FindGameObjectWithTag("Player");
+                keyPosition = moveDirection.transform.position;
+                //movingPlayer = true;
+                player.transform.position = playerStartPosition.transform.position;
+                player.GetComponentInChildren<Animator>().SetBool("CinematicFly", false);
+                GameObject.Find("Behind Camera Pod").GetComponent<LineRenderer>().enabled = false;
             }
         }
 
@@ -92,19 +105,19 @@ public class EntryCutScene : MonoBehaviour {
             zoomCamera.transform.position = Vector3.MoveTowards(zoomCamera.transform.position, orgPosition, step);
 
             //if we're in range, stop zooming.
-            if (Vector3.Distance(zoomCamera.transform.position, orgPosition) < 1f)
+            if (Vector3.Distance(zoomCamera.transform.position, mainCameraPod.transform.position) < 10f)//(Vector3.Distance(zoomCamera.transform.position, orgPosition) < 1f)
             {
                 backToDave = false;
-                //zoomCamera.SetActive(false);
-                player = GameObject.FindGameObjectWithTag("Player");
-                keyPosition = moveDirection.transform.position;
-                movingPlayer = true;
+                zoomCamera.SetActive(false);
+                mainCameraPod.SetActive(true);
+                GameObject.Find("Behind Camera Pod").GetComponent<LineRenderer>().enabled = true;
                 //ToggleUI();
             }
         }
 
         if (movingPlayer)
         {
+            
             float step = zoomSpeed * Time.deltaTime;
             player.transform.position = Vector3.MoveTowards(player.transform.position, keyPosition, step);
             if (Vector3.Distance(player.transform.position, keyPosition) < 5)
@@ -122,8 +135,7 @@ public class EntryCutScene : MonoBehaviour {
 
     public void Ended()
     {
-        //ToggleUI();
-
+       // ToggleUI();
         Destroy(cam.gameObject);
         key.SetActive(false);
         playerObj.parent = null;
@@ -131,7 +143,7 @@ public class EntryCutScene : MonoBehaviour {
         CheckpointManager.instance.SetNewCheckpoint(playerPos.position);
         CheckpointManager.instance.SetNewCheckpointRotation(playerPos.forward);
 
-        cam.gameObject.SetActive(false);
+        //cam.gameObject.SetActive(false);
 
         var evt = new ObserverEvent(EventName.PlayerSpawned);
         evt.payload.Add(PayloadConstants.PLAYER, playerObj.GetComponentInChildren<PlayerController>().gameObject);
@@ -142,6 +154,7 @@ public class EntryCutScene : MonoBehaviour {
     {
         particles.SetActive(false);
         playerObj.gameObject.GetComponent<PlayerController>().chargeParticle = particles;
+        playerObj.GetComponentInChildren<Animator>().SetBool("CinematicFly", false);
         //playerObj.gameObject.GetComponentInChildren<Animator>().SetBool("Force Fly", false);
         ZoomInOnKey();
     }

@@ -112,7 +112,7 @@ public class WinMenu : MonoBehaviour, Observer
 
     void SetBadges()
     {
-        bool[] medals = ProgressManager.instance.GetMedals(level-1);
+        bool[] medals = ProgressManager.instance.GetStars(level-1);
         bool finished = medals[0];
         bool didntDie = medals[1];
         bool collectedComics = medals[2];

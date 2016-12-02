@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public enum Language
 {
@@ -7,30 +6,22 @@ public enum Language
 }
 
 public class SettingsManager : Singleton<SettingsManager> {
-    // event
+    // events
     public delegate void LanguageChangedEventHandler(Language language);
     public event LanguageChangedEventHandler onLanguageChanged;
 
-    // event
-    /*public delegate void GodModeChangedEventHandler(bool godMode);
-    public event GodModeChangedEventHandler onGodModeChanged;*/
-    // settings 
-    public GameSettings settings;
-
-    /*public void SetGodMode(bool godmode)
-    {
-        if (settings.GodMode != godmode)
-        {
-            print("Changed godMode to: " + godmode);
-            settings.GodMode = godmode;
-            onGodModeChanged(godmode);
-        }
-    }*/
+    [SerializeField]
+    private Settings settings;
 
     public void SetMasterVolume(float volume)
     {
         settings.masterVolume = volume;
         SoundManager.instance.SetMasterVolume(volume);
+    }
+
+    public float GetMasterVolume()
+    {
+        return settings.masterVolume;
     }
 
     public void SetMusicVolume(float volume)
@@ -39,24 +30,37 @@ public class SettingsManager : Singleton<SettingsManager> {
         SoundManager.instance.SetMusicVolume(volume);
     }
 
+    public float GetMusicVolume()
+    {
+        return settings.musicVolume;
+    }
+
     public void SetEffectsVolume(float volume)
     {
         settings.effectsVolume = volume;
         SoundManager.instance.SetEffectsVolume(volume);
     }
 
+    public float GetEffectsVolume()
+    {
+        return settings.effectsVolume;
+    }
+
     public void MuteSound(bool mute)
     {
         settings.mute = mute;
-
         SoundManager.instance.MuteSound(mute);
+    }
+
+    public bool IsMute()
+    {
+        return settings.mute;
     }
 
     public void SetLanguage(Language language)
     {
         if (settings.language != language)
         {
-            print("Changed language: " + language);
             settings.language = language;
             onLanguageChanged(language);
         }
@@ -67,13 +71,13 @@ public class SettingsManager : Singleton<SettingsManager> {
         return settings.language;
     }
 
-    public void SetPremium(bool premium)
+    public void SetInvertedCamera(bool isInverted)
     {
-        settings.premium = premium;
+        settings.invertedCamera = isInverted;
     }
 
-    public bool GetPremium()
+    public bool GetInvertedCamera()
     {
-        return settings.premium;
+        return settings.invertedCamera;
     }
 }

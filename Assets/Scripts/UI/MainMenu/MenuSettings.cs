@@ -17,29 +17,23 @@ public class MenuSettings : MonoBehaviour {
         musicSlider.onValueChanged.AddListener(OnMusicSliderChanged);
         effectsSlider.onValueChanged.AddListener(OnEffectsSliderChanged);
         // setup mute / unmute buttons
-        var isMuted = SettingsManager.instance.settings.mute;
+        var isMuted = SettingsManager.instance.IsMute();
         muteBtn.SetActive(!isMuted);
-        unmuteBtn.SetActive(isMuted);
+        //unmuteBtn.SetActive(isMuted);
 
-        cameraControls.isOn = SettingsManager.instance.settings.invertedCamera;
+        cameraControls.isOn = SettingsManager.instance.GetInvertedCamera();
 
-        SetUpSound();
+        SetupSoundSliders();
     }
 
-    private void SetUpSound()
+    private void SetupSoundSliders()
     {
-        var settings = SettingsManager.instance.settings;
         var soundManager = SoundManager.instance;
 
-        masterSlider.value = settings.masterVolume;
-        musicSlider.value = settings.musicVolume;
-        effectsSlider.value = settings.effectsVolume;
-
-        soundManager.SetMasterVolume(settings.masterVolume);
-        soundManager.SetMusicVolume(settings.musicVolume);
-        soundManager.SetEffectsVolume(settings.effectsVolume);
-
-        SettingsManager.instance.MuteSound(settings.mute);
+        masterSlider.value =  SettingsManager.instance.GetMasterVolume();
+        musicSlider.value = SettingsManager.instance.GetMusicVolume();
+        effectsSlider.value = SettingsManager.instance.GetEffectsVolume();
+        //muteBtn
     }
 
     public void OnMasterSliderChanged(float value)
@@ -76,7 +70,7 @@ public class MenuSettings : MonoBehaviour {
 
     public void OnCameraInvertedToggle()
     {
-        SettingsManager.instance.settings.invertedCamera = !SettingsManager.instance.settings.invertedCamera;
+        SettingsManager.instance.SetInvertedCamera(cameraControls.isOn);
 
         var evt = new ObserverEvent(EventName.ToggleCameraControls);
         Subject.instance.Notify(gameObject, evt);

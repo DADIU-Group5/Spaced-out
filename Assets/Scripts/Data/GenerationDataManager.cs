@@ -5,14 +5,14 @@ using System;
 public class GenerationDataManager : Singleton<GenerationDataManager> {
 
     private int level = 1;
-    public GenerationData generationData;
+    [SerializeField]
+    private GenerationData generationData;
 
     /// <summary>
     /// resets the generation data to default
     /// </summary>
     public void Reset()
     {
-        generationData.LastGenerationTime = DateTime.Now;
         for (int i = 0; i < 5; i++)
         {
             var level = generationData.levels[i];
@@ -29,8 +29,10 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
         ProgressManager.instance.Reset();
         for (int i = 0; i < generationData.levels.Length; i++)
         {
-            generationData.levels[i].exteriorSeed = RandomSeed();
-            generationData.levels[i].interiorSeed = RandomSeed();
+            var level = generationData.levels[i];
+            level.exteriorSeed = RandomSeed();
+            level.interiorSeed = RandomSeed();
+            level.roomTheme = (Themes)UnityEngine.Random.Range(1, 3);
         }
     }
 
@@ -51,11 +53,6 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
             generationData.levels[level-1].interiorSeed = RandomSeed();
     }
 
-    public void SetTutortialLevel()
-    {
-        level = 0;
-    }
-
     /// <summary>
     /// Returns the current level
     /// </summary>
@@ -64,7 +61,6 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
     {
         return level;
     }
-
 
     public int GetShotCount()
     {

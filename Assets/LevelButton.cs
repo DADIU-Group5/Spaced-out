@@ -20,7 +20,7 @@ public class LevelButton : MonoBehaviour {
         // update stars
         if (unlocked)
         {
-            var stars = ProgressManager.instance.GetMedals(level);
+            var stars = ProgressManager.instance.GetStars(level);
             star1.SetActive(stars[0]);
             star2.SetActive(stars[1]);
             star3.SetActive(stars[2]);

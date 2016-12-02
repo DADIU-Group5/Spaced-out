@@ -60,88 +60,74 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
     }
 
     /// <summary>
-    /// Start exploding and initiate flashing
+    /// EXPLOSION!
     /// </summary>
-    public IEnumerator Exploder()
+    /// <returns></returns>
+    IEnumerator Exploder()
     {
-        //start flashing
-        //StartCoroutine(Flasher());
+        //TODO visual effect?
 
-        //wait...
         yield return new WaitForSeconds(timeToExplode);
 
         var evtExp = new ObserverEvent(EventName.BarrelExplosion);
         Subject.instance.Notify(gameObject, evtExp);
 
+        Collider[] colls = Physics.OverlapSphere(transform.position,pushRadius);
 
-        //Explode, and destroy object/start animation:
+        RaycastHit hitinfo;
 
-        //find all objects in radius of child's spherecollider...
-        Collider[] explosionObjects = Physics.OverlapSphere(transform.position, explosionRadius);
-        List<Collider> filterList = new List<Collider>();//(explosionObjects);
+        List<Collider> pushColls = new List<Collider>();
 
-        RaycastHit hitInfo;
-        foreach (Collider collider in explosionObjects)
+        foreach (Collider item in colls)
         {
-           bool hit =  Physics.Raycast(transform.position, (collider.transform.position - transform.position), out hitInfo, explosionRadius);
-
-            if (hit && hitInfo.transform.tag != "Respawn")
+            if(!(item.transform.tag == "Player" || item.transform.tag == "Floating Object"))
             {
-                filterList.Add(collider);
-            }
-            else if (!hit)
-            {
-                filterList.Add(collider);
-            }
-            
-        }
-
-        Collider[] filtered = filterList.ToArray();
-
-        for (int i = 0; i < filtered.Length; i++)
-        {
-            Rigidbody rgb = filtered[i].GetComponent<Rigidbody>();
-            if (rgb == null)
                 continue;
-            if (filtered[i].tag == "Player")
-            {
-                Debug.Log("player collider tag found: " + filtered[i].name);
-                var evt = new ObserverEvent(EventName.PlayerExploded);
-                Subject.instance.Notify(gameObject, evt);
             }
-        }
-        filterList.Clear();
-
-        Collider[] pushObjects = Physics.OverlapSphere(transform.position, pushRadius);
-        Debug.Log("pushobjects: " + pushObjects.Length);
-        foreach (Collider collider in pushObjects)
-        {
-            bool hit = Physics.Raycast(transform.position, (collider.transform.position - transform.position), out hitInfo, explosionRadius);
-
-            if (hit && hitInfo.transform.tag != "Respawn")
+            if(Physics.Raycast(transform.position, item.transform.position - transform.position, out hitinfo))
             {
-                filterList.Add(collider);
-            }
-            else if (!hit)
-            {
-                filterList.Add(collider);
+                if (hitinfo.transform.tag == "Player" )
+                {
+                    pushColls.Add(item);
+                    if (hitinfo.distance < explosionRadius)
+                    {
+                        var evt = new ObserverEvent(EventName.PlayerExploded);
+                        Subject.instance.Notify(gameObject, evt);
+                    }
+                }
+                else if(hitinfo.transform.tag == "Floating Object")
+                {
+                    pushColls.Add(item);
+                }
             }
         }
 
-        pushObjects = filterList.ToArray();
-
-        for (int i = 0; i < pushObjects.Length; i++)
+        foreach (Collider item in pushColls)
         {
-            Rigidbody rgb = pushObjects[i].GetComponent<Rigidbody>();
-            if (rgb == null)
-                continue;
-            //and Boom!
-
-            // transform.position should be pushDirection - check results.
-            rgb.AddExplosionForce(explosionPower, transform.position, pushRadius);
+            PushObject(item.transform);
         }
 
         Destroy(gameObject);
+    }
+
+    /// <summary>
+    /// Function for pushing objects.
+    /// </summary>
+    /// <param name="obj"></param>
+    void PushObject(Transform obj)
+    {
+        if(obj.GetComponent<Rigidbody>() != null)
+        {
+            if (obj.tag == "Player")
+            {
+                obj.GetComponent<Rigidbody>().AddExplosionForce(explosionPower * 30, transform.position, pushRadius);
+            }
+            else
+            {
+                obj.GetComponent<Rigidbody>().AddExplosionForce(explosionPower, transform.position, pushRadius);
+            }
+
+        }
     }
 
     /// <summary>
@@ -154,8 +140,7 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
     {
         if (itemState.On)
         {
-            if (other.transform.tag == "Player" ||
-            other.transform.tag == "object" && other.gameObject.GetComponent<Rigidbody>() != null)
+            if (other.transform.tag == "Player")
             {
                 var evt = new ObserverEvent(EventName.BarrelTriggered);
                 Subject.instance.Notify(gameObject, evt);

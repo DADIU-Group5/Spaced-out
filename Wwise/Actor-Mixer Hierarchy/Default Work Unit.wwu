@@ -11008,7 +11008,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>20</Value>
+												<Value>7</Value>
 											</ValueList>
 											<RTPCList>
 												<RTPC Name="" ID="{5BC4C6F8-3DB2-45A1-AC7D-95F5BDE69C87}" ShortID="688438935">
@@ -13764,7 +13764,7 @@
 						</ActorMixer>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="music" ID="{3ECF0B41-8A18-4E43-B2A4-6695EE6B52C9}" ShortID="201991576">
+				<Folder Name="jetpack" ID="{3ECF0B41-8A18-4E43-B2A4-6695EE6B52C9}" ShortID="201991576">
 					<ChildrenList>
 						<Sound Name="kick" ID="{75D27AD6-0832-4684-B0CB-0AB353F0E3F8}" ShortID="700347089" Type="SoundFX">
 							<ExcludedPlatformList>
@@ -13942,6 +13942,462 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="charge" ID="{33E2AA1E-89DB-46BA-BFAB-E6A474FD31E8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="jetpack synth fx" ID="{230402C6-2EB5-4C69-8CD4-8965EF75B5FF}" ShortID="280992802">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{7EF2F6D7-E145-4CBB-AE28-73545EFF2737}" ShortID="103228437">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="launchsynth" ID="{3DB8921D-B2B8-43D3-A776-9FDBBBF7DD63}" WorkUnitID="{6A881719-F594-42CE-8014-4A49B1FE4AC3}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{2CB62D59-5165-4FA1-A096-89D165DA3D0A}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>21</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>-2648</YPos>
+														<Flags>53</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-25</Value>
+									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{D33C7258-F134-4E22-8A4C-97C3C9D7EE81}" ShortID="13702041">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{70123F35-AF4A-4D9D-93CC-FBE53B82E1AF}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>79.52128</XPos>
+														<YPos>-200</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="jetpack synth1" ID="{EBE20784-ABB0-4839-BF8D-1B3CD50BD924}" ShortID="554842398" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jetpack synth1" ID="{FD299BDB-F023-467D-8C34-C397DD7A70DC}" ShortID="925249132">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="2.73781204074816"/>
+												<Property Name="FadeOutShape" Type="int16" Value="0"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.73781204074816"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>jetpack synth1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jetpack synth1" ID="{FD299BDB-F023-467D-8C34-C397DD7A70DC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="jetpack synth2" ID="{4F7075F9-6FDC-463B-A860-DD7E462D79CA}" ShortID="411261180" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>700</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jetpack synth2" ID="{349AEA6D-EB0F-4AE7-B321-1721AAB3DD87}" ShortID="693831123">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0526986472945892"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="2.51196885437542"/>
+												<Property Name="FadeOutShape" Type="int16" Value="0"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.00566585253841"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.58789956997328"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>jetpack synth2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jetpack synth2" ID="{349AEA6D-EB0F-4AE7-B321-1721AAB3DD87}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="jetpack synth3" ID="{E81206A9-BA45-4938-B03E-0796FC39AC4F}" ShortID="265705793" Type="SoundFX">
+									<ExcludedPlatformList>
+										<Platform>Android</Platform>
+									</ExcludedPlatformList>
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>500</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jetpack synth3" ID="{1E0A4D79-554D-4057-8CAC-59343EDF5DF0}" ShortID="768276099">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00715447561790247"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="2.62569255177021"/>
+												<Property Name="FadeOutShape" Type="int16" Value="0"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.132357798931196"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.7580503507014"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>jetpack synth3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jetpack synth3" ID="{1E0A4D79-554D-4057-8CAC-59343EDF5DF0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="jetpack synth4" ID="{1441769A-2105-40AE-BD4F-85E69A06FAE4}" ShortID="835581650" Type="SoundFX">
+									<ExcludedPlatformList>
+										<Platform>Android</Platform>
+									</ExcludedPlatformList>
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>400</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jetpack synth4" ID="{0F4328E1-F159-4F5E-A23D-A075813854EC}" ShortID="561239547">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="2.88883091182365"/>
+												<Property Name="FadeOutShape" Type="int16" Value="0"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.131165080160321"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.01999599198397"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>jetpack synth4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jetpack synth4" ID="{0F4328E1-F159-4F5E-A23D-A075813854EC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="slo mo effect" ID="{3450FA5A-A0E0-43BB-80BF-588FC3EBBA7D}" ShortID="938908410" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{8B1C7BB2-FEF2-4CB3-8A74-596683925D61}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-300"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-20</Value>
+									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{B517F8DC-B6EC-4921-9599-6C7E4791772D}" ShortID="330811414">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{EE147A92-7200-4BC5-BE9C-CE09272A5928}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>79.92021</XPos>
+														<YPos>-200</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="slo mo effect" ID="{E2E2F93F-C6E4-4A4E-A615-8D6499C8669E}" ShortID="26219457">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="4.0586940774974"/>
+										<Property Name="FadeOutShape" Type="int16" Value="6"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>slo mo effect.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="slo mo effect" ID="{E2E2F93F-C6E4-4A4E-A615-8D6499C8669E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="charge noise" ID="{DC318F8D-FDDD-42C0-AB9A-8758805C1320}" ShortID="368697016" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>30</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{D236659E-1278-43E0-B9F3-16EAB2A3A791}" ShortID="21496304">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{28B14441-8EFD-4DE3-B0A9-14A4ED079646}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-2459</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>89.7606382978723</XPos>
+														<YPos>-295</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>2599</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-20</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+								</Reference>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Guitar Distortion (Custom)" ID="{EE2E6405-7C70-46F7-887F-81CA6530861D}" ShortID="789860477" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+											<PropertyList>
+												<Property Name="DistortionDrive" Type="Real32" Value="10">
+													<RTPCList>
+														<RTPC Name="" ID="{82CD7B9C-27E0-4BE4-AAC3-BA2B0BD94847}" ShortID="78602972">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{1AC6BAAF-8D3D-458D-A390-F5A8435C15D5}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>69.6124031007752</XPos>
+																		<YPos>35.0578155813954</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>100</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="DistortionTone" Type="Real32" Value="59"/>
+												<Property Name="DistortionType" Type="int32" Value="3"/>
+												<Property Name="OutputLevel" Type="Real32">
+													<RTPCList>
+														<RTPC Name="" ID="{B1BA24CA-7970-4BF7-92B8-E8E69C7CA360}" ShortID="705259566">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{F20F9CD3-6B2D-4D48-BEE2-CD66098147FF}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-24</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>50.077519379845</XPos>
+																		<YPos>-3.93456201277914</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Exp1</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>71.00775</XPos>
+																		<YPos>0.01253</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Log1</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>24</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="PostEQBand1Enable" Type="bool" Value="True"/>
+												<Property Name="PostEQBand1Gain" Type="Real32" Value="-10"/>
+												<Property Name="PostEQBand2Enable" Type="bool" Value="True"/>
+												<Property Name="PostEQBand2FilterType" Type="int32" Value="1"/>
+												<Property Name="PostEQBand2Frequency" Type="Real32" Value="433"/>
+												<Property Name="PostEQBand2Gain" Type="Real32" Value="15"/>
+												<Property Name="PostEQBand3Enable" Type="bool" Value="True"/>
+												<Property Name="PostEQBand3FilterType" Type="int32" Value="2"/>
+												<Property Name="PostEQBand3Frequency" Type="Real32" Value="792"/>
+												<Property Name="PostEQBand3Gain" Type="Real32" Value="-24"/>
+												<Property Name="PreEQBand2Enable" Type="bool" Value="True"/>
+												<Property Name="PreEQBand2Gain" Type="Real32" Value="10"/>
+												<Property Name="PreEQBand3Enable" Type="bool" Value="True"/>
+												<Property Name="PreEQBand3FilterType" Type="int32" Value="2"/>
+												<Property Name="PreEQBand3Frequency" Type="Real32" Value="3799"/>
+												<Property Name="PreEQBand3Gain" Type="Real32" Value="-25"/>
+												<Property Name="Rectification" Type="Real32" Value="100"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
+								<Reference Name="Effect1" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Octave_Up" ID="{A98F423C-EC97-49D8-8698-445CE91F24B7}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="charge noise" ID="{696AD7E0-7415-4DB6-A44E-601D4A9A6B93}" ShortID="672133736">
+									<Language>SFX</Language>
+									<AudioFile>charge noise.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="charge noise" ID="{696AD7E0-7415-4DB6-A44E-601D4A9A6B93}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -14374,7 +14830,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="CINEMATIC INTRO" ID="{E2BAA12D-E87E-43E0-8FDC-C54B98E63BE7}" ShortID="834334889" Type="SoundFX">
+						<Sound Name="CINEMATIC intro no gal" ID="{3229D4A3-A726-4C8F-8E34-E682145D5767}" ShortID="661531914" Type="SoundFX">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
@@ -14384,13 +14840,13 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="CINEMATIC INTRO" ID="{B57B2C08-FA12-4453-B800-4C36CABB5E6B}" ShortID="203599200">
+								<AudioFileSource Name="CINEMATIC intro no gal" ID="{1DAB3BB3-C6CA-44A5-A86F-9EF39FFC9F41}" ShortID="170007116">
 									<Language>SFX</Language>
-									<AudioFile>CINEMATIC INTRO.wav</AudioFile>
+									<AudioFile>CINEMATIC intro no gal.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="CINEMATIC INTRO" ID="{B57B2C08-FA12-4453-B800-4C36CABB5E6B}" Platform="Linked"/>
+								<ActiveSource Name="CINEMATIC intro no gal" ID="{1DAB3BB3-C6CA-44A5-A86F-9EF39FFC9F41}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

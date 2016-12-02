@@ -273,8 +273,8 @@
 							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="charge" ID="{0301B950-95C3-4298-BBDA-BEC82750E4CD}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
-							<Position X="3" Y="1"/>
+							<ObjectRef Name="daveCharge" ID="{B9F41EF2-D4FC-424A-A610-5226949576CC}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<Position X="3" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -336,7 +336,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="musicVolume" ID="{94967744-CEA3-4D37-893D-F4A043DFEB29}"/>
-							<Value>83</Value>
+							<Value>84</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Freefall" ID="{2F2DFE37-4F9E-4D94-83D8-53CCA39781AD}"/>

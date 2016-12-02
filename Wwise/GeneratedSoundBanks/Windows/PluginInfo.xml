@@ -8,7 +8,9 @@
 		<Plugin Name="Wwise RoomVerb" ID="7733251" DLL="AkRoomVerb"/>
 		<Plugin Name="SoundSeed Air/SoundSeed Wind" ID="7798786" DLL="AkSoundSeedAir"/>
 		<Plugin Name="SoundSeed Air/SoundSeed Woosh" ID="7864322" DLL="AkSoundSeedAir"/>
+		<Plugin Name="Wwise Guitar Distortion" ID="8257539" DLL="AkGuitarDistortion"/>
 		<Plugin Name="Wwise Convolution Reverb" ID="8323075" DLL="AkConvolutionReverb"/>
 		<Plugin Name="Wwise Stereo Delay" ID="8847363" DLL="AkStereoDelay"/>
+		<Plugin Name="Wwise Pitch Shifter" ID="8912899" DLL="AkPitchShifter"/>
 	</Plugins>
 </PluginInfo>

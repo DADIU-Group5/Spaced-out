@@ -893,6 +893,16 @@
 										</Element>
 									</ElementList>
 								</Action>
+								<Action Name="Play" ID="{E052DAEC-AC7C-4A8E-AB96-42074CA8276A}" ShortID="727464855" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{094196AC-07B7-4D92-9AA2-4DE45FB1BB1C}" Global="false">
+											<ObjectRef Name="charge noise" ID="{DC318F8D-FDDD-42C0-AB9A-8758805C1320}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="daveLaunch" ID="{FABF4B6D-90BB-474B-A3AE-F7110ED709BA}">
@@ -925,6 +935,41 @@
 									<ElementList>
 										<Element ID="{994F01D9-C8BC-41A8-908D-7ACF2AB7556E}" Global="false">
 											<ObjectRef Name="launchsynth" ID="{E6C34B2D-6D03-48B4-8A0E-79B74543A0A3}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{58C07CF3-B0A2-4874-B223-9AF658802AC1}" ShortID="942316146" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.7">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{BBDF0296-AD93-45F1-A074-47E51A32A6F3}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="0.7"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Probability" Type="Real64" Value="50"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{EFEA028A-D33F-4D1F-9A41-6D8C196715A7}" Global="false">
+											<ObjectRef Name="jetpack synth fx" ID="{230402C6-2EB5-4C69-8CD4-8965EF75B5FF}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{3F09A285-2396-4990-B407-E54008CD8AB1}" ShortID="416003706" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{19FFA03E-BFA4-4119-AB14-C95834ACEC69}" Global="false">
+											<ObjectRef Name="charge noise" ID="{DC318F8D-FDDD-42C0-AB9A-8758805C1320}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{D6450350-B55B-4404-AE73-CCFCC17F24F1}" ShortID="699913434" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{87900D66-5C32-4635-BD44-5A17E98F3C9C}" Global="false">
+											<ObjectRef Name="slo mo effect" ID="{3450FA5A-A0E0-43BB-80BF-588FC3EBBA7D}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -1351,7 +1396,7 @@
 								<Action Name="Play" ID="{258806D3-4CF5-4F79-93E3-6ABB0E8D5249}" ShortID="615178539" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{9842A949-6078-41C9-9537-21BFEC88C731}" Global="false">
-											<ObjectRef Name="CINEMATIC INTRO" ID="{E2BAA12D-E87E-43E0-8FDC-C54B98E63BE7}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+											<ObjectRef Name="CINEMATIC intro no gal" ID="{948AEB9C-F6CA-4960-B9EE-B19484F15F2B}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -1359,7 +1404,13 @@
 						</Event>
 						<Event Name="cinematic2" ID="{80F35067-DA78-46DF-BD3F-6046A9ED0C3C}">
 							<ChildrenList>
-								<Action Name="Play" ID="{CF8C2219-E705-4FA1-AC54-4A0A38199D64}" ShortID="773883473" Type="Play" Scope="One" Global="false"/>
+								<Action Name="Play" ID="{CF8C2219-E705-4FA1-AC54-4A0A38199D64}" ShortID="773883473" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{34676336-E761-4E7C-AF57-C8303D1337B9}" Global="false">
+											<ObjectRef Name="CINEMATIC intro no gal" ID="{3229D4A3-A726-4C8F-8E34-E682145D5767}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="cinematic3" ID="{C04124D7-B63F-4F41-8104-7B53A0032E59}">

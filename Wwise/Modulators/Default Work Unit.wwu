@@ -141,6 +141,11 @@
 						</Property>
 					</PropertyList>
 				</ModulatorLfo>
+				<ModulatorEnvelope Name="launchsynth" ID="{3DB8921D-B2B8-43D3-A776-9FDBBBF7DD63}" ShortID="85586121">
+					<PropertyList>
+						<Property Name="EnvelopeAttackTime" Type="Real64" Value="6"/>
+					</PropertyList>
+				</ModulatorEnvelope>
 			</ChildrenList>
 		</WorkUnit>
 	</Modulators>

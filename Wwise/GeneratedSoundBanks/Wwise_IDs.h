@@ -42,6 +42,11 @@ namespace AK
         static const AkUniqueID DOORSHUT = 3782881839U;
         static const AkUniqueID ELECTRICITY = 2917121896U;
         static const AkUniqueID EXIT = 26822469U;
+        static const AkUniqueID EXPLOSION1 = 753483767U;
+        static const AkUniqueID EXPLOSION2 = 753483764U;
+        static const AkUniqueID EXPLOSION3 = 753483765U;
+        static const AkUniqueID EXPLOSION4 = 753483762U;
+        static const AkUniqueID EXPLOSION5 = 753483763U;
         static const AkUniqueID EXPLOSIVE = 433216386U;
         static const AkUniqueID FAN1 = 2478829233U;
         static const AkUniqueID FAN2 = 2478829234U;

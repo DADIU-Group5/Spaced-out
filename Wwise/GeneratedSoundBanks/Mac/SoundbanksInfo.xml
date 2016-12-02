@@ -60,6 +60,11 @@
 				<Event Id="3782881839" Name="doorShut" ObjectPath="\Events\Default Work Unit\enviroment\doorShut"/>
 				<Event Id="2917121896" Name="electricity" ObjectPath="\Events\Default Work Unit\enviroment\electricity"/>
 				<Event Id="26822469" Name="exit" ObjectPath="\Events\Default Work Unit\gameState\exit"/>
+				<Event Id="753483767" Name="explosion1" ObjectPath="\Events\Default Work Unit\gal\explosion1explosion1\explosion1"/>
+				<Event Id="753483764" Name="explosion2" ObjectPath="\Events\Default Work Unit\gal\explosion1explosion1\explosion2"/>
+				<Event Id="753483765" Name="explosion3" ObjectPath="\Events\Default Work Unit\gal\explosion1explosion1\explosion3"/>
+				<Event Id="753483762" Name="explosion4" ObjectPath="\Events\Default Work Unit\gal\explosion1explosion1\explosion4"/>
+				<Event Id="753483763" Name="explosion5" ObjectPath="\Events\Default Work Unit\gal\explosion1explosion1\explosion5"/>
 				<Event Id="433216386" Name="explosive" ObjectPath="\Events\Default Work Unit\enviroment\explosive"/>
 				<Event Id="2478829233" Name="fan1" ObjectPath="\Events\Default Work Unit\gal\fan\fan1"/>
 				<Event Id="2478829234" Name="fan2" ObjectPath="\Events\Default Work Unit\gal\fan\fan2"/>

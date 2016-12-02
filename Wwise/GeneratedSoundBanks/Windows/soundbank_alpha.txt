@@ -21,6 +21,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	607463598	daveobjectCollision			\Default Work Unit\dave\daveobjectCollision	
 	661603698	daveOutofOxygen			\Default Work Unit\dave\daveOutofOxygen	
 	668664389	newLevel			\Default Work Unit\gameState\newLevel	
+	753483762	explosion4			\Default Work Unit\gal\explosion1explosion1\explosion4	
+	753483763	explosion5			\Default Work Unit\gal\explosion1explosion1\explosion5	
+	753483764	explosion2			\Default Work Unit\gal\explosion1explosion1\explosion2	
+	753483765	explosion3			\Default Work Unit\gal\explosion1explosion1\explosion3	
+	753483767	explosion1			\Default Work Unit\gal\explosion1explosion1\explosion1	
 	779278001	death			\Default Work Unit\gameState\death	
 	877642273	cinematic1			\Default Work Unit\Cinematics\cinematic1	
 	877642274	cinematic2			\Default Work Unit\Cinematics\cinematic2	

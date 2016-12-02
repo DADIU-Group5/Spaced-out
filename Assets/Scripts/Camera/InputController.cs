@@ -22,6 +22,10 @@ public class InputController : MonoBehaviour, Observer
     private Camera cam;
     private bool paused = false;
 
+    // Camera sensitivity
+    public float minSensitivity = 5000f;
+    public float maxSensitivity = 40000f;
+
     private void Awake()
     {
         cameraController = GetComponent<CameraController>();
@@ -31,6 +35,9 @@ public class InputController : MonoBehaviour, Observer
 
         inputDisabled = false;
         cameraInputDisabled = false;
+
+        // TODO: Add event listener for sensitivity.
+
     }
 
     private void LateUpdate()
@@ -198,6 +205,11 @@ public class InputController : MonoBehaviour, Observer
         }
     }
 
+    private void OnChangeSensitivity(float ratio)
+    {
+        cameraRotateSpeed = Mathf.Lerp(minSensitivity, maxSensitivity, ratio);
+    }
+
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
         switch (evt.eventName)
@@ -249,5 +261,7 @@ public class InputController : MonoBehaviour, Observer
     public void OnDestroy()
     {
         Subject.instance.RemoveObserver(this);
+
+        // TODO: Remove listener.
     }
 }

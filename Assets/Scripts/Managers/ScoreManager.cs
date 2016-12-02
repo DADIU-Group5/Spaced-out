@@ -33,7 +33,7 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
 
     void Start()
     {
-        hasDied = ProgressManager.instance.GetMedals(GenerationDataManager.instance.GetCurrentLevel())[2];
+        hasDied = ProgressManager.instance.GetStars(GenerationDataManager.instance.GetCurrentLevel())[2];
     }
 
     // add comic to level
@@ -66,33 +66,38 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
                 {
                     break;
                 }
-                ProgressManager.instance.SetMedal(level, ProgressManager.medalCompleted);
+                ProgressManager.instance.ObtainStar(level, ProgressManager.medalCompleted);
                /* if (!hasDied)
                     ProgressManager.instance.SetMedal(level, ProgressManager.medalNoDeaths);*/
 
                 if (comicsCollected == totalComics && totalComics != 0)
                 {
-                    ProgressManager.instance.SetMedal(level, ProgressManager.medalAllComics);
+                    ProgressManager.instance.ObtainStar(level, ProgressManager.medalAllComics);
                 }
 
-                if (ProgressManager.instance.SetShotCount(level, shotsFired))
+                if (ProgressManager.instance.SetBoostCount(level, shotsFired))
                 {
-                    //YOU CANNOT KEEP A REFERENCE FROM SCOREMANAGER, OR ANY OTHER SINGLETON, TO AN OBJECT IN THE SCENE! THIS INSTANCE OF THE SINGLETON WILL BE DESTROYED!
-                    //winMenu.GetComponent<WinMenu>().ShowRecord(true);
+                    var recordEvent = new ObserverEvent(EventName.PlayerRecord);
+                    Subject.instance.Notify(gameObject, recordEvent);
                 }
                 else
                 {
-                    //YOU CANNOT KEEP A REFERENCE FROM SCOREMANAGER, OR ANY OTHER SINGLETON, TO AN OBJECT IN THE SCENE! THIS INSTANCE OF THE SINGLETON WILL BE DESTROYED!
-                    //winMenu.GetComponent<WinMenu>().ShowRecord(false);
-                }
 
+                }
+                
                 break;
             case EventName.PlayerDead:
                 hasDied = true;
                 break;
-            case EventName.PlayerLaunch:
+                //Moved this to the hud. Not pretty but works (Frederik).
+            /*case EventName.PlayerLaunch:
                 shotsFired++;
+                Debug.LogError("fired" + shotsFired);
                 break;
+            case EventName.PlayerFakeLaunched:
+                shotsFired--;
+                Debug.LogError("firedFaked" + shotsFired);
+                break;*/
             case EventName.ComicPickup:
                 ComicCollected();
                 break;

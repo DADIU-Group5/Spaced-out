@@ -115,7 +115,7 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 }
                 break;
             case EventName.PlayerVentilated:
-                PlayEvent(SoundEventConstants.DAVE_VENT);
+                //PlayEvent(SoundEventConstants.DAVE_VENT);
                 break;
 
             case EventName.UIButton:

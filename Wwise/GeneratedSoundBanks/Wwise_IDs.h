@@ -58,6 +58,7 @@ namespace AK
         static const AkUniqueID GASLEAK5 = 1124785722U;
         static const AkUniqueID GASLEAK6 = 1124785721U;
         static const AkUniqueID GASLEAK7 = 1124785720U;
+        static const AkUniqueID KEYSCHIME = 510278571U;
         static const AkUniqueID LOWOXYGEN1 = 3700176350U;
         static const AkUniqueID LOWOXYGEN2 = 3700176349U;
         static const AkUniqueID LOWOXYGEN3 = 3700176348U;
@@ -118,6 +119,11 @@ namespace AK
         static const AkUniqueID RESTART = 1203400786U;
         static const AkUniqueID SLOWMOTIONSTART = 1406654456U;
         static const AkUniqueID SLOWMOTIONSTOP = 2017509636U;
+        static const AkUniqueID SPACEWIND = 3708930415U;
+        static const AkUniqueID STAR1 = 1281810866U;
+        static const AkUniqueID STAR2 = 1281810865U;
+        static const AkUniqueID STAR3 = 1281810864U;
+        static const AkUniqueID SUCKEDINTOSPACE = 1026534452U;
         static const AkUniqueID SWITCH1 = 1590382670U;
         static const AkUniqueID SWITCH2 = 1590382669U;
         static const AkUniqueID SWITCH3 = 1590382668U;

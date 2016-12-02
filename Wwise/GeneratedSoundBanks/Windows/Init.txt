@@ -22,11 +22,13 @@ Custom State	ID	Name	State Group	Owner		Notes
 	775978487	on	slowMotion	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	126297577	galSidechain			\Default Work Unit\galSidechain	
 	640585335	effectsVolume			\Default Work Unit\effectsVolume	
 	2346531308	musicVolume			\Default Work Unit\musicVolume	
 	2371628509	jetpackChargeLevel			\Default Work Unit\jetpackChargeLevel	
 	2918011349	masterVolume			\Default Work Unit\masterVolume	
 	3097485287	masterLoPass			\Default Work Unit\masterLoPass	
+	4033886414	sfxSideChain			\Default Work Unit\sfxSideChain	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	393239870	sfx			\Default Work Unit\Master Audio Bus\sfx	
@@ -44,9 +46,11 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	2425890738	rvb1			\Default Work Unit\Master Audio Bus\rvb1	
 
 Effect plug-ins	ID	Name	Type				Notes
+	126297577	galsidechain	Wwise Meter			
 	259313001	Master_Dynamic	McDSP ML1			
 	1125262053	Blue_Distant_Echoes	Wwise Stereo Delay			
 	1718002255	custom_rvb_1	Wwise Convolution Reverb			
 	1796269791	Damped_Chamber	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 4ms 
 	3216246379	Space_Dreaming	Wwise RoomVerb			
+	4033886414	sfxsidechain	Wwise Meter			
 

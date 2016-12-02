@@ -222,6 +222,7 @@ namespace AK
         static const AkUniqueID MASTERVOLUME = 2918011349U;
         static const AkUniqueID MUSICSIDECHAIN = 2680026934U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;
+        static const AkUniqueID SFXSIDECHAIN = 4033886414U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
         static const AkUniqueID SS_AIR_FURY = 1029930033U;

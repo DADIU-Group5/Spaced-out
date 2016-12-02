@@ -156,6 +156,7 @@ Custom State	ID	Name	State Group	Owner		Notes
 	1070632189	off	power	\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\blæser		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	126297577	galSidechain			\Default Work Unit\galSidechain	
 	640585335	effectsVolume			\Default Work Unit\effectsVolume	
 	822163944	SS_Air_RPM			\Factory SoundSeed Air Game Syncs\SS_Air_RPM	
 	911290369	fanForce			\Default Work Unit\fanForce	
@@ -172,6 +173,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	3519441192	velocity			\Default Work Unit\velocity	
 	3715662592	SS_Air_Storm			\Factory SoundSeed Air Game Syncs\SS_Air_Storm	
 	3847924954	SS_Air_Presence			\Factory SoundSeed Air Game Syncs\SS_Air_Presence	
+	4033886414	sfxSideChain			\Default Work Unit\sfxSideChain	
 	4160247818	SS_Air_Turbulence			\Factory SoundSeed Air Game Syncs\SS_Air_Turbulence	
 
 Modulator LFO	ID	Name			Wwise Object Path	Notes
@@ -204,6 +206,7 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	2425890738	rvb1			\Default Work Unit\Master Audio Bus\rvb1	
 
 Effect plug-ins	ID	Name	Type				Notes
+	126297577	galsidechain	Wwise Meter			
 	216046035	firewoosh	Wwise Parametric EQ			
 	259313001	Master_Dynamic	McDSP ML1			
 	789860477	Wwise Guitar Distortion (Custom)	Wwise Guitar Distortion			
@@ -216,6 +219,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	3013737255	Bass_Remover_9	Wwise Parametric EQ			
 	3043085106	High_Impact	Wwise Compressor			
 	3216246379	Space_Dreaming	Wwise RoomVerb			
+	4033886414	sfxsidechain	Wwise Meter			
 	4143868621	Bass_Remover_10	Wwise Parametric EQ			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes

@@ -1,11 +1,11 @@
 fileFormatVersion: 2
 guid: c7053665d238efa48a34bda289392935
-timeCreated: 1480684291
+timeCreated: 1480689309
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
     21300000: UI_header_background_small
-    21300002: ALL UI GADDAMN copy_1
+    21300002: UI_checkbox_checkmark
     21300004: ALL UI GADDAMN copy_2
     21300006: ALL UI GADDAMN copy_3
     21300008: ALL UI GADDAMN copy_4
@@ -65,11 +65,11 @@ TextureImporter:
     21300116: ALL UI GADDAMN copy_58
     21300118: ALL UI GADDAMN copy_59
     21300120: ALL UI GADDAMN copy_60
-    21300122: UI_english_orange_pressed
-    21300124: UI_danish_orange_pressed
-    21300126: UI_danish_orange
-    21300128: UI_english_orange
-    21300130: UI_star_counter
+    21300122: UI_language_english_pressed
+    21300124: UI_language_danish_pressed
+    21300126: UI_language_danish
+    21300128: UI_language_english
+    21300130: UI_counter_star
     21300132: UI_slider_knob
     21300134: UI_shop_banner_english
     21300136: UI_shop_banner_danish
@@ -89,8 +89,8 @@ TextureImporter:
     21300164: ALL UI GADDAMN copy_83
     21300166: ALL UI GADDAMN copy_84
     21300168: ALL UI GADDAMN copy_85
-    21300170: UI_level_unlocked
-    21300172: UI_level_locked
+    21300170: UI_level_select_unlocked
+    21300172: UI_level_select_locked
     21300174: UI_button_orange
     21300176: ALL UI GADDAMN copy_89
     21300178: UI_button_orange_pressed
@@ -122,10 +122,14 @@ TextureImporter:
     21300230: ALL UI GADDAMN copy_71
     21300232: UI_corner_button_blue_pressed
     21300234: ALL UI GADDAMN copy_117
-    21300236: UI_boosts_counter
-    21300238: UI_comics_counter
+    21300236: UI_counter_boosts
+    21300238: UI_counter_comics
     21300240: UI_header_background
     21300242: UI_gal_frame
+    21300244: UI_level_select_blank
+    21300246: UI_checkbox_background
+    21300248: UI_music_on
+    21300250: UI_music_muted
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -295,8 +299,8 @@ TextureImporter:
       name: UI_level_star3
       rect:
         serializedVersion: 2
-        x: 801
-        y: 848
+        x: 802
+        y: 847
         width: 85
         height: 80
       alignment: 0
@@ -321,8 +325,8 @@ TextureImporter:
       name: UI_star1_collected
       rect:
         serializedVersion: 2
-        x: 607
-        y: 19
+        x: 608
+        y: 18
         width: 85
         height: 80
       alignment: 0
@@ -335,7 +339,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 719
-        y: 19
+        y: 18
         width: 85
         height: 80
       alignment: 0
@@ -348,22 +352,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 834
-        y: 20
+        y: 19
         width: 85
         height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: UI_shop_background
-      rect:
-        serializedVersion: 2
-        x: 974
-        y: 48
-        width: 555
-        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,11 +374,11 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: UI_english_orange_pressed
+      name: UI_language_english_pressed
       rect:
         serializedVersion: 2
         x: 594
-        y: 597
+        y: 596
         width: 230
         height: 60
       alignment: 0
@@ -396,7 +387,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: UI_danish_orange_pressed
+      name: UI_language_danish_pressed
       rect:
         serializedVersion: 2
         x: 594
@@ -409,11 +400,11 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: UI_danish_orange
+      name: UI_language_danish
       rect:
         serializedVersion: 2
         x: 594
-        y: 463
+        y: 462
         width: 230
         height: 60
       alignment: 0
@@ -422,11 +413,11 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: UI_english_orange
+      name: UI_language_english
       rect:
         serializedVersion: 2
         x: 594
-        y: 399
+        y: 400
         width: 230
         height: 60
       alignment: 0
@@ -435,7 +426,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: UI_star_counter
+      name: UI_counter_star
       rect:
         serializedVersion: 2
         x: 861
@@ -452,35 +443,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 861
-        y: 377
+        y: 376
         width: 60
         height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: UI_shop_banner_english
-      rect:
-        serializedVersion: 2
-        x: 1552
-        y: 234
-        width: 180
-        height: 205
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: UI_shop_banner_danish
-      rect:
-        serializedVersion: 2
-        x: 1564
-        y: 14
-        width: 180
-        height: 205
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -490,7 +455,7 @@ TextureImporter:
       name: UI_slider_empty
       rect:
         serializedVersion: 2
-        x: 613
+        x: 612
         y: 330
         width: 300
         height: 40
@@ -503,7 +468,7 @@ TextureImporter:
       name: UI_slider_full
       rect:
         serializedVersion: 2
-        x: 613
+        x: 612
         y: 279
         width: 300
         height: 40
@@ -513,7 +478,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: UI_level_unlocked
+      name: UI_level_select_unlocked
       rect:
         serializedVersion: 2
         x: 1001
@@ -526,7 +491,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: UI_level_locked
+      name: UI_level_select_locked
       rect:
         serializedVersion: 2
         x: 1260
@@ -594,7 +559,7 @@ TextureImporter:
       name: UI_star3_uncollected
       rect:
         serializedVersion: 2
-        x: 2373
+        x: 2374
         y: 481
         width: 85
         height: 80
@@ -617,10 +582,10 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: UI_boosts_counter
+      name: UI_counter_boosts
       rect:
         serializedVersion: 2
-        x: 1240
+        x: 1241
         y: 570
         width: 80
         height: 80
@@ -630,7 +595,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: UI_comics_counter
+      name: UI_counter_comics
       rect:
         serializedVersion: 2
         x: 1370
@@ -679,6 +644,71 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 13, y: 13, z: 13, w: 13}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_level_select_blank
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 215
+        width: 250
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_checkbox_background
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 366
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_checkbox_checkmark
+      rect:
+        serializedVersion: 2
+        x: 2317
+        y: 372
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_music_on
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 96
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_music_muted
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 95
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     outline: []

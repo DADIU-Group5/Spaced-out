@@ -155,7 +155,16 @@ public class SoundManager : Singleton<SoundManager>, Observer
                     if ((bool)evt.payload[PayloadConstants.START_LEVEL])
                         StartMusic();
                 break;
+
+            case EventName.PlayerWon:
+                StopHazards(entity);
+                break;
         }
+    }
+
+    public void StopHazards(GameObject entity)
+    {
+        PlayEvent("hazardsStop", entity);
     }
 
     private void SetLanguage(Language language)

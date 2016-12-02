@@ -101,6 +101,10 @@ public class Brain : Singleton<Brain>, Observer
                     break;
             }
         }
+        else if (currentEvent.eventName == EventName.PlayerVentilated)
+        {
+            type = SubtitleType.Fan;
+        }
         else
         {
             type = currentEvent.eventName.EventToSubtitleType();   
@@ -152,15 +156,11 @@ public class Brain : Singleton<Brain>, Observer
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
-        // YEAH BEBE! I used goto in production code ;)
         switch (evt.eventName)
         {
             case EventName.SwitchPressed:
-                goto case EventName.PlayerDead;
             case EventName.PlayerVentilated:
-                goto case EventName.PlayerDead;
             case EventName.LowOnOxygen:
-                goto case EventName.PlayerDead;
             case EventName.PlayerDead:
                 if (state == State.Silent)
                 {

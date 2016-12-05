@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class TutorialSwitch : MonoBehaviour {
-
+public class TutorialSwitch : MonoBehaviour
+{
     public HazardState[] hazards;
     public Color offColour = Color.red;
     public Color onColour = Color.green;
@@ -34,13 +33,13 @@ public class TutorialSwitch : MonoBehaviour {
         if (other.transform.tag == "Player")
         {
             SwitchColor();
-            
+
             foreach (HazardState state in hazards)
             {
                 state.EnabledOrDisableTrap();
 
                 var evt = new ObserverEvent(EventName.SwitchPressed);
-                evt.payload.Add(PayloadConstants.SWITCH_ON, false);
+                evt.payload.Add(PayloadConstants.SWITCH_ON, on);
                 Subject.instance.Notify(gameObject, evt);
             }
         }

@@ -43,7 +43,7 @@ public class HUDController : MonoBehaviour, Observer {
     private void UpdateButtonText(Language lan)
     {
         //camControlsText.text = Translator.instance.Get("invert camera controls");
-        velocityText.text = Translator.instance.Get("velocity");
+        //velocityText.text = Translator.instance.Get("velocity");
         //currentFuelText.text = Translator.instance.Get("current") + " " + Translator.instance.Get("fuel");
     }
 
@@ -146,6 +146,7 @@ public class HUDController : MonoBehaviour, Observer {
     public void OnDestroy()
     {
         Subject.instance.RemoveObserver(this);
+        SettingsManager.instance.onLanguageChanged -= UpdateButtonText;
     }
 
     /// <summary>

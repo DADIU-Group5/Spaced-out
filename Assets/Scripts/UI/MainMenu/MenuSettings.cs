@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuSettings : MonoBehaviour {
 
@@ -25,13 +26,16 @@ public class MenuSettings : MonoBehaviour {
         sensitivitySlider.value = SettingsManager.instance.GetSensitivity();
 
         SetupSoundSliders();
-        if (SettingsManager.instance.GetLanguage().ToString() == "english")
+        if (SceneManager.GetActiveScene().name == "Main Menu")
         {
-            english.SetActive(true);
-        }
-        else
-        {
-            danish.SetActive(true);
+            if (SettingsManager.instance.GetLanguage().ToString() == "english")
+            {
+                english.SetActive(true);
+            }
+            else
+            {
+                danish.SetActive(true);
+            }
         }
     }
 

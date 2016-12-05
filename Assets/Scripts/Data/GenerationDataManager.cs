@@ -12,7 +12,6 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
     {
         if (PlayerPrefs.GetInt("PlayedBefore") == 0)
         {
-            Debug.Log("randomizes");
             RandomizeSeeds();
             PlayerPrefs.SetInt("PlayedBefore", 1);
         }

@@ -28,8 +28,15 @@ public class WinMenu : MonoBehaviour, Observer
     [Header("If Zero, zero times passes.", order =2)]
     public float timeTilWinScreen = 0;
 
-    public List<GameObject> winBadges1;
-    public List<GameObject> winBadges2;
+    public List<StarAnimation> animatedStars;
+    public List<GameObject> staticStars;
+
+    // Use this for initialization
+    void Start()
+    {
+        Subject.instance.AddObserver(this);
+        level = GenerationDataManager.instance.GetCurrentLevel();
+    }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
@@ -55,13 +62,6 @@ public class WinMenu : MonoBehaviour, Observer
     public void OnDestroy()
     {
         Subject.instance.RemoveObserver(this);
-    }
-
-    // Use this for initialization
-    void Start()
-    {
-        Subject.instance.AddObserver(this);
-        level = GenerationDataManager.instance.GetCurrentLevel();
     }
 
     public void GotRecord()
@@ -110,21 +110,26 @@ public class WinMenu : MonoBehaviour, Observer
         }
     }
 
-    void SetBadges()
+    void SetStars()
     {
         bool[] medals = ProgressManager.instance.GetStars(level);
         bool finished = medals[0];
         bool didntDie = medals[1];
         bool collectedComics = medals[2];
         
-        winBadges1[0].SetActive(finished);
-        winBadges1[1].SetActive(didntDie);
-        winBadges1[2].SetActive(collectedComics);
+        StartCoroutine(InitStar(0, medals[0]));
+        StartCoroutine(InitStar(1, medals[1]));
+        StartCoroutine(InitStar(2, medals[2]));
+    }
 
-        winBadges2[0].SetActive(finished);
-        winBadges2[1].SetActive(didntDie);
-        winBadges2[2].SetActive(collectedComics);
-
+    // shows or hides a star
+    private IEnumerator InitStar(int index, bool show)
+    {
+        yield return new WaitForSeconds(0.7f + 0.2f * index);
+        animatedStars[index].gameObject.SetActive(show);
+        staticStars[index].SetActive(show);
+        if (show)
+            animatedStars[index].StartAnimation();
     }
 
     public void ShowNextWinMenu()
@@ -160,7 +165,7 @@ public class WinMenu : MonoBehaviour, Observer
             currentLevelLabel.text = currentlevel.ToString().Replace("0", "O");
             playerWon = true;
 
-            SetBadges();
+            SetStars();
         }
         yield return null;
     }

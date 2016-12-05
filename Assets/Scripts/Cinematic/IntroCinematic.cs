@@ -26,6 +26,14 @@ public class IntroCinematic : MonoBehaviour {
         Invoke("AstroidImpact", 14.0f);
     }
 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            LoadScene();
+        }
+    }
+
     private void LoadScene()
     {
         SceneManager.LoadScene("TutStage01");

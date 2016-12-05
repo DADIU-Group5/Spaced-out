@@ -96,7 +96,7 @@ public class ProgressManager : Singleton<ProgressManager> {
         }
 
         level--;
-        if (count < progress.levels[level].bestBoostCount)
+        if (count < progress.levels[level].bestBoostCount && count < GenerationDataManager.instance.GetShotCount())
         {
             progress.levels[level].bestBoostCount = count;
 

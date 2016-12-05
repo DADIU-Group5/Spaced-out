@@ -56,4 +56,9 @@ public class Translator : Singleton<Translator>
                 danish[vals[0]] = vals[2].Trim('"');
         }
     }
+
+    void OnDestroy()
+    {
+        SettingsManager.instance.onLanguageChanged -= LanguageChanged;
+    }
 }

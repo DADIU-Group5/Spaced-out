@@ -94,4 +94,9 @@ public class PauseMenu : MonoBehaviour {
         //SceneManager.LoadScene(levelIndex);
         SceneManager.LoadScene("Main Menu");
     }
+
+    void OnDestroy()
+    {
+        SettingsManager.instance.onLanguageChanged -= UpdateButtonText;
+    }
 }

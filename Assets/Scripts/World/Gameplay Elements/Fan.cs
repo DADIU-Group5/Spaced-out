@@ -84,7 +84,7 @@ public class Fan : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if (itemState.On && other.transform.tag == "Player")
         {

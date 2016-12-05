@@ -1,13 +1,17 @@
 fileFormatVersion: 2
 guid: 3fae409b31ddb4d4788159641a1fc934
-timeCreated: 1474902693
-licenseType: Free
+timeCreated: 1480930505
+licenseType: Pro
 PluginImporter:
   serializedVersion: 1
   iconMap: {}
   executionOrder: {}
   isPreloaded: 0
   platformData:
+    Android:
+      enabled: 1
+      settings:
+        CPU: ARMv7
     Any:
       enabled: 0
       settings: {}

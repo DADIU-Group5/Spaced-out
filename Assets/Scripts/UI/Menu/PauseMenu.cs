@@ -74,6 +74,8 @@ public class PauseMenu : MonoBehaviour {
         //remember to unpause;
         TogglePause();
 
+        SoundManager.instance.StopHazards(gameObject);
+
         var evt = new ObserverEvent(EventName.RestartLevel);
         Subject.instance.Notify(gameObject, evt);
 
@@ -91,5 +93,10 @@ public class PauseMenu : MonoBehaviour {
         TogglePause();
         //SceneManager.LoadScene(levelIndex);
         SceneManager.LoadScene("Main Menu");
+    }
+
+    void OnDestroy()
+    {
+        SettingsManager.instance.onLanguageChanged -= UpdateButtonText;
     }
 }

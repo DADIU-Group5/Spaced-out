@@ -42,6 +42,11 @@ namespace AK
         static const AkUniqueID DOORSHUT = 3782881839U;
         static const AkUniqueID ELECTRICITY = 2917121896U;
         static const AkUniqueID EXIT = 26822469U;
+        static const AkUniqueID EXPLOSION1 = 753483767U;
+        static const AkUniqueID EXPLOSION2 = 753483764U;
+        static const AkUniqueID EXPLOSION3 = 753483765U;
+        static const AkUniqueID EXPLOSION4 = 753483762U;
+        static const AkUniqueID EXPLOSION5 = 753483763U;
         static const AkUniqueID EXPLOSIVE = 433216386U;
         static const AkUniqueID FAN1 = 2478829233U;
         static const AkUniqueID FAN2 = 2478829234U;
@@ -58,6 +63,9 @@ namespace AK
         static const AkUniqueID GASLEAK5 = 1124785722U;
         static const AkUniqueID GASLEAK6 = 1124785721U;
         static const AkUniqueID GASLEAK7 = 1124785720U;
+        static const AkUniqueID HAZARDSSTOP = 3588208292U;
+        static const AkUniqueID KEYSAMBIENT = 1037158387U;
+        static const AkUniqueID KEYSTUTORIAL = 3935357491U;
         static const AkUniqueID LOWOXYGEN1 = 3700176350U;
         static const AkUniqueID LOWOXYGEN2 = 3700176349U;
         static const AkUniqueID LOWOXYGEN3 = 3700176348U;
@@ -118,6 +126,11 @@ namespace AK
         static const AkUniqueID RESTART = 1203400786U;
         static const AkUniqueID SLOWMOTIONSTART = 1406654456U;
         static const AkUniqueID SLOWMOTIONSTOP = 2017509636U;
+        static const AkUniqueID SPACEWIND = 3708930415U;
+        static const AkUniqueID STAR1 = 1281810866U;
+        static const AkUniqueID STAR2 = 1281810865U;
+        static const AkUniqueID STAR3 = 1281810864U;
+        static const AkUniqueID SUCKEDINTOSPACE = 1026534452U;
         static const AkUniqueID SWITCH1 = 1590382670U;
         static const AkUniqueID SWITCH2 = 1590382669U;
         static const AkUniqueID SWITCH3 = 1590382668U;
@@ -216,6 +229,7 @@ namespace AK
         static const AkUniqueID MASTERVOLUME = 2918011349U;
         static const AkUniqueID MUSICSIDECHAIN = 2680026934U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;
+        static const AkUniqueID SFXSIDECHAIN = 4033886414U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
         static const AkUniqueID SS_AIR_FURY = 1029930033U;
@@ -242,6 +256,7 @@ namespace AK
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MASTER_SECONDARY_BUS = 805203703U;
         static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID NEW_AUDIO_BUS = 2255513057U;
         static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 

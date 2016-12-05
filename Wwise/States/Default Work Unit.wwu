@@ -47,6 +47,20 @@
 						<State Name="paused" ID="{5C00FE7B-B639-4CA8-8842-0C1BFA2E0DD4}"/>
 						<State Name="unpaused" ID="{9E5A9166-EB7D-4BB1-8C1F-ACB6F66D5CBC}"/>
 					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="unpaused" ID="{9E5A9166-EB7D-4BB1-8C1F-ACB6F66D5CBC}"/>
+							<EndState Name="paused" ID="{5C00FE7B-B639-4CA8-8842-0C1BFA2E0DD4}"/>
+							<Time>0.3</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="None" ID="{D4BF5150-DF49-4975-A1CE-DC821CBF6A0A}"/>
+							<EndState Name="paused" ID="{5C00FE7B-B639-4CA8-8842-0C1BFA2E0DD4}"/>
+							<Time>0.3</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
 				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>

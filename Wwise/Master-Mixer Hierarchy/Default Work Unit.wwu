@@ -125,11 +125,16 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+									<ObjectRef Name="galsidechain" ID="{2FE2804D-80F3-4BF7-A811-551E7EEF585D}" WorkUnitID="{16BB581D-BAEC-49FA-A974-D915FC1D5EA1}"/>
+								</Reference>
+							</ReferenceList>
 							<DuckingList>
 								<DuckItem>
 									<BusRef Name="music" ID="{CA906606-09FB-4986-B724-CAA394C96D8F}"/>
 									<DuckingParam>
-										<Volume>-10</Volume>
+										<Volume>-3</Volume>
 										<FadeInTime>0.100000001490116</FadeInTime>
 										<FadeOutTime>0.100000001490116</FadeOutTime>
 										<FadeCurve>FadeLinear</FadeCurve>
@@ -178,6 +183,11 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+									<ObjectRef Name="sfxsidechain" ID="{375F4AF8-E756-48DA-9307-0AF42AB0D8BE}" WorkUnitID="{16BB581D-BAEC-49FA-A974-D915FC1D5EA1}"/>
+								</Reference>
+							</ReferenceList>
 						</Bus>
 						<Bus Name="atmos" ID="{FA0DE26E-0B1A-402B-A0E0-578BA0A760BF}">
 							<PropertyList>
@@ -254,7 +264,7 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>-20</Value>
+										<Value>-15</Value>
 									</ValueList>
 								</Property>
 								<Property Name="HdrThreshold" Type="Real64">
@@ -288,9 +298,71 @@
 												</PointList>
 											</Curve>
 										</RTPC>
+										<RTPC Name="" ID="{B44F5471-982B-4688-A3C8-CB8EA1120DEC}" ShortID="298128051">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="galSidechain" ID="{60BF31E9-478B-4DE4-954F-45BFC64AB433}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{05D08E7D-A43E-4B90-B262-5DA8C727C860}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-0.12932</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>50.531914893617</XPos>
+														<YPos>-6.37314969756796E-02</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>-13.01046</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+										<RTPC Name="" ID="{293BECD5-88FB-4AD2-BCF9-E83DFCE41E65}" ShortID="815787899">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="sfxSideChain" ID="{898B4D00-A726-4AD1-9F5F-D2518D0994CF}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{78AA3C56-B64C-4D85-8AB5-C09E56D94533}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0.04289</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>68.75</XPos>
+														<YPos>1.33803885783858E-02</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>-13.01047</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
 									</RTPCList>
 								</Property>
 							</PropertyList>
+							<ChildrenList>
+								<Bus Name="New Audio Bus" ID="{3F17B168-2571-4E1C-B51D-B5FC44BFC517}"/>
+							</ChildrenList>
 						</Bus>
 						<AuxBus Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}">
 							<ReferenceList>
@@ -326,6 +398,9 @@
 							<StateGroupInfo>
 								<StateGroupRef Name="slowMotion" ID="{AD3BB683-1050-4B91-ADF9-E3970BDC3C31}"/>
 							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="pause" ID="{2DA0F13A-FBF7-4730-A9D5-D63FC4EF998E}"/>
+							</StateGroupInfo>
 						</StateGroupList>
 						<CustomStateList>
 							<CustomState>
@@ -333,6 +408,14 @@
 								<State Name="Custom State" ID="{0FE45214-B38A-4203-A5FD-5123EFD701E3}" ShortID="775978487">
 									<PropertyList>
 										<Property Name="Pitch" Type="int32" Value="-2400"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="paused" ID="{5C00FE7B-B639-4CA8-8842-0C1BFA2E0DD4}"/>
+								<State Name="Custom State" ID="{90FBFF40-DEAC-41DB-8F2A-E32E05C2392C}" ShortID="365429045">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="70"/>
 									</PropertyList>
 								</State>
 							</CustomState>

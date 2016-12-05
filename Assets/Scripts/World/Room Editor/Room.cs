@@ -343,6 +343,14 @@ public class Room : MonoBehaviour
                 Debug.Log("not there");
             }
         }
+        //Removes a percentage of the hazards.
+        float amountToRemove = (int)(hazardObjects.Count * (1-GenerationDataManager.instance.GetHazardPercentForCurrentLevel()));
+        for (int i = 0; i < amountToRemove; i++)
+        {
+            int num = Random.Range(0, hazardObjects.Count);
+            Destroy(hazardObjects[num].gameObject);
+            hazardObjects.RemoveAt(num);
+        }
         foreach (GameObject item in hazardObjects)
         {
             if (item.GetComponent<ObjectSelector>() != null)

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="118">
 	<RootPaths>
-		<ProjectRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Desktop/Wwise/</ProjectRoot>
-		<SourceFilesRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Desktop/Wwise/.cache/Windows/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Desktop/Wwise/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ProjectRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Spaced-out/Wwise/</ProjectRoot>
+		<SourceFilesRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Spaced-out/Wwise/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Spaced-out/Wwise/GeneratedSoundBanks/Windows/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Desktop/Wwise/GeneratedSoundBanks/Windows/</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Spaced-out/Wwise/GeneratedSoundBanks/Windows/</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -844,6 +844,10 @@
 					<ShortName>GAL\English\low oxygen\final\lowoxygen1.wav</ShortName>
 					<Path>SFX/GAL/English/low oxygen/final/lowoxygen1_645155D0.wem</Path>
 				</File>
+				<File Id="524316644" Language="SFX">
+					<ShortName>hello dave first final short loop version.wav</ShortName>
+					<Path>SFX/hello dave first final short loop version_6DE9CED7.wem</Path>
+				</File>
 				<File Id="531256382" Language="SFX">
 					<ShortName>metal\Bb\metal impact Bb3.wav</ShortName>
 					<Path>SFX/metal/Bb/metal impact Bb3_CFD21E99.wem</Path>
@@ -1475,10 +1479,6 @@
 				<File Id="956419964" Language="SFX">
 					<ShortName>metal\D\metal impact D3.wav</ShortName>
 					<Path>SFX/metal/D/metal impact D3_CFD21E99.wem</Path>
-				</File>
-				<File Id="957554754" Language="SFX">
-					<ShortName>hello dave first play final.wav</ShortName>
-					<Path>SFX/hello dave first play final_6DE9CED7.wem</Path>
 				</File>
 				<File Id="964917836" Language="SFX">
 					<ShortName>Danish\switch\switchDAn4.wav</ShortName>

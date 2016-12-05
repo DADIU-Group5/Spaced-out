@@ -12,18 +12,6 @@ public class EntryCutScene : MonoBehaviour {
     private Transform player;
     private GameObject particles;
 
-    //[Header("Cameras")]
-    //public GameObject mainCameraPod;
-    //public GameObject zoomCamera;
-
-    //public float zoomSpeed = 2.0f;
-    //public GameObject finalKey;
-    //public GameObject moveDirection;
-    //public GameObject playerStartPosition;
-   
-    //private Vector3 keyPosition;
-    //private Vector3 orgPosition;
-
    void ToggleUI()
     {
         var evt = new ObserverEvent(EventName.ToggleUI);
@@ -55,71 +43,6 @@ public class EntryCutScene : MonoBehaviour {
 
         // play the cutscene animation
         GetComponent<Animator>().SetTrigger("Start");
-    }
-
-    void ZoomInOnKey()
-    {
-        //if (zoomCamera == null)
-        //{
-        //    return;
-        //}
-        //player = GameObject.FindGameObjectWithTag("Player");
-        //key.SetActive(false);
-        //zoomCamera.SetActive(true);
-        //keyPosition = finalKey.transform.position;
-        //orgPosition = zoomCamera.transform.position;
-        //zoomingIn = true;
-        //player.GetComponentInChildren<Animator>().SetTrigger("StartCinematicFly");
-        //player.GetComponentInChildren<Animator>().SetBool("CinematicFly", true);
-    }
-
-    void Update()
-    {
-        //if (zoomingIn)
-        //{
-        //    float step = zoomSpeed * Time.deltaTime;
-        //    zoomCamera.transform.position = Vector3.MoveTowards(zoomCamera.transform.position, keyPosition, step);
-
-        //    //if we're in range, stop zooming.
-        //    if (Vector3.Distance(zoomCamera.transform.position, keyPosition) < 2f)
-        //    {
-        //        zoomingIn = false;
-        //        StartCoroutine(waitAfterZooming());
-        //        player = GameObject.FindGameObjectWithTag("Player");
-        //        keyPosition = moveDirection.transform.position;
-        //        //movingPlayer = true;
-        //        player.transform.position = playerStartPosition.transform.position;
-        //        player.GetComponentInChildren<Animator>().SetBool("CinematicFly", false);
-        //        //GameObject.Find("Behind Camera Pod").GetComponent<LineRenderer>().enabled = false;
-        //    }
-        //}
-
-        //if (backToDave)
-        //{
-        //    float step = zoomSpeed*2 * Time.deltaTime;
-        //    zoomCamera.transform.position = Vector3.MoveTowards(zoomCamera.transform.position, orgPosition, step);
-
-        //    //if we're in range, stop zooming.
-        //    if (Vector3.Distance(zoomCamera.transform.position, mainCameraPod.transform.position) < 10f)//(Vector3.Distance(zoomCamera.transform.position, orgPosition) < 1f)
-        //    {
-        //        backToDave = false;
-        //        zoomCamera.SetActive(false);
-        //        mainCameraPod.SetActive(true);
-        //        GameObject.Find("Behind Camera Pod").GetComponent<LineRenderer>().enabled = true;
-        //        //ToggleUI();
-        //    }
-        //}
-
-        //if (movingPlayer)
-        //{
-            
-        //    float step = zoomSpeed * Time.deltaTime;
-        //    player.transform.position = Vector3.MoveTowards(player.transform.position, keyPosition, step);
-        //    if (Vector3.Distance(player.transform.position, keyPosition) < 5)
-        //    {
-        //        movingPlayer = false;
-        //    }
-        //}
     }
 
     // event from animator once player starts to move in cutscene

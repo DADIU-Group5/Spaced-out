@@ -51,6 +51,7 @@ public class EpilogueBehavior : MonoBehaviour, Observer {
     {
         player.GetComponent<Rigidbody>().velocity = new Vector3(4f, 0, 0);
         player.transform.position = roomTrigger.transform.position;
+        trajectory.gameObject.SetActive(false);
         var evt = new ObserverEvent(EventName.DisableInput);
         Subject.instance.Notify(gameObject, evt);
         roomCamAnimation.gameObject.SetActive(true);

@@ -1,15 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System;
+using UnityEngine.UI;
 
-public class EscapePodSign : MonoBehaviour, Observer {
-
-    public Material matDanish, matEnglish;
-
-    private Renderer rend;
-
-    void Start () {
-        rend = GetComponent<Renderer>();
+public class SkipButton : MonoBehaviour, Observer {
+    void Start()
+    {
         SetLanguage();
     }
 
@@ -18,10 +13,10 @@ public class EscapePodSign : MonoBehaviour, Observer {
         switch (SettingsManager.instance.GetLanguage())
         {
             case Language.Danish:
-                rend.material = matDanish;
+                GetComponent<Text>().text = "Spring over";
                 break;
             case Language.English:
-                rend.material = matEnglish;
+                GetComponent<Text>().text = "Skip";
                 break;
         }
     }

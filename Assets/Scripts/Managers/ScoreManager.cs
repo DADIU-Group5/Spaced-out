@@ -77,6 +77,7 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
 
                 if (ProgressManager.instance.SetBoostCount(level, shotsFired))
                 {
+                    ProgressManager.instance.ObtainStar(level, ProgressManager.medalShots);
                     var recordEvent = new ObserverEvent(EventName.PlayerRecord);
                     Subject.instance.Notify(gameObject, recordEvent);
                 }

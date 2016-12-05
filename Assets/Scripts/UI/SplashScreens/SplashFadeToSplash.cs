@@ -82,7 +82,7 @@ public class SplashFadeToSplash : MonoBehaviour {
             nextSplash.GetComponent<SplashFadeToSplash>().StartFadingIn();
         else
             LoadMainScene();
-        if (nextSplash.GetComponent<SplashFadeToSplash>().bg != null)
+        if (nextSplash != null && nextSplash.GetComponent<SplashFadeToSplash>().bg != null)
             nextSplash.GetComponent<SplashFadeToSplash>().bg.SetActive(true);
         this.gameObject.SetActive(false);
     }

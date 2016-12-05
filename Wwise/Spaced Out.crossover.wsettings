@@ -3,7 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{DEDC5B82-926B-46DC-AD30-C2EA5168518E}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Desktop\Dadiu\Hold 5\GRADUATION GAME\music"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Desktop\Dadiu\Hold 5\GRADUATION GAME\pickups"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
 						<Value Platform="Windows"></Value>
@@ -84,7 +84,7 @@
 				<Property Name="ProjectExplorer\Expanded_19_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\Expanded_1_1" Type="string" Value="2KQUFaYdKkGhfnXKDCFJ80PUh585Xb1Jheil4Z5Buek="/>
 				<Property Name="ProjectExplorer\Expanded_20_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\Expanded_2_1" Type="string" Value="VOwB28znw0CFITfBKLoO0gP7oDwTW61Eucn73SaWYGLDzoQBxqXqRoDtsj3Emj04pFSAHQHmV0mnVkEuH6bVe/iViiqADPhJjO32/tLVva0v8iQczFliSpVnj98+kciEMChNGYPhj0uKhPg1uhMMxcYCBCO1LmlMjNSJZe91tf9BC88+GIpDTrKkZpXua1LJ"/>
+				<Property Name="ProjectExplorer\Expanded_2_1" Type="string" Value="BQ85RGFBIECfdekrZY1PaVTsAdvM58NAhSE3wSi6DtI/H5JqAY+bQoThAdiLwAZfA/ugPBNbrUS5yfvdJpZgYsPOhAHGpepGgO2yPcSaPTgMfFjNZQ3vR4FC1RQknWbGja7hkh4zVEiaYokyY4wNTKRUgB0B5ldJp1ZBLh+m1Xv4lYoqgAz4SYzt9v7S1b2tMeMet64y+kmPrggvrNixji/yJBzMWWJKlWeP3z6RyIQwKE0Zg+GPS4qE+DW6EwzFxgIEI7UuaUyM1Ill73W1/0ELzz4YikNOsqRmle5rUsk="/>
 				<Property Name="ProjectExplorer\Expanded_3_1" Type="string" Value="qI47ebapckCYmJKgqTPFqVvUmNsOMCtBmXtS/jRFKaGlNzekTeKJQpgarGM77NZtGr+GmJOapEWR2SBK5vGNzbrHJu/hDGRGsFGZwUXCEj7OwHF9NsacRrRNToHp/4tpSiyB7IzCJUiQl2c3elSnSgan/d2mWVVIm1CeZZrsQDn/32Dq/1kJSYezUJg/hhl4fLOi+FznNUmtcw66AmF9i0b4uU2vslJMjugTuGBivTK4tcueLnHjTI2e3oqBeRPsEBrMAWZvp02KopF5pZyFY4gtwnwjbMNNogNZoStl8Coqr9uuWhrbT7Bxi6lnWGsq"/>
 				<Property Name="ProjectExplorer\Expanded_4_1" Type="string" Value="ekTOOHhV70S4/cr9+lIEvHBNwLsnJBtFj5OEB6Xv1HQ="/>
 				<Property Name="ProjectExplorer\Expanded_5_1" Type="string" Value="zNsrcBEpfkK331wuj+wR92wOIDYswSZHjJ6ZYhP2d2g68aAt9/swR6nV1j/E75mO5rGqd95AsUqFhc039dDKNoO2O61QEJFLrfnjlwvcPDE="/>
@@ -93,8 +93,8 @@
 				<Property Name="ProjectExplorer\Expanded_8_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
-				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{BF4E15A6-DBD6-4FBB-8221-C7E51BEAF67F}"/>
-				<Property Name="ProjectExplorer\FirstVisible_3_1" Type="string" Value="{307C99F4-DFB4-41EF-8193-7329183646AD}"/>
+				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}"/>
+				<Property Name="ProjectExplorer\FirstVisible_3_1" Type="string" Value="{6904D5CC-4E58-4F8A-85ED-2FE81C7C2577}"/>
 				<Property Name="ProjectExplorer\FirstVisible_4_1" Type="string" Value="{CB6175F1-6080-4A23-92EF-0807E304D0C1}"/>
 				<Property Name="ProjectExplorer\FirstVisible_6_1" Type="string" Value="{C98E673F-A24C-48A8-960F-10565FFE70A0}"/>
 				<Property Name="ProjectExplorer\FirstVisible_8_1" Type="string" Value="{41093F77-829F-4D88-8601-E8B25F3D4781}"/>

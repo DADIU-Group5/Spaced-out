@@ -1529,7 +1529,7 @@
 								<Action Name="Play" ID="{AA230C78-E8FF-496E-A6E7-8B0EF5C6E147}" ShortID="924444092" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{01BFBB58-82E3-45D9-A399-1BE4E0250AF0}" Global="false">
-											<ObjectRef Name="key ambient" ID="{88A128A0-4EEE-4D39-A362-E676134BFE6E}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+											<ObjectRef Name="KEYS CHIME LOOP" ID="{07D15E04-2418-45E6-B0C6-3585751FABB2}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>

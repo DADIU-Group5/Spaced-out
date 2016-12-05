@@ -38,7 +38,7 @@ public class TutorialStage3 : MonoBehaviour, Observer {
         ECS.StartCutScene(go);
 
         // play camera animation after small delay
-        Invoke("PlayZoomOxygenAnimation", 1f);
+        Invoke("PlayZoomOxygenAnimation", 1.5f);
         secondRoom.callback = PlayZoomHazardAnimation;
     }
 

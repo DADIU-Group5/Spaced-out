@@ -55,7 +55,8 @@ public class HUDController : MonoBehaviour, Observer {
 
     public void ShotsFired()
     {
-        shotText.text = (""+ScoreManager.shotsFired++).Replace("0","O");
+        ScoreManager.shotsFired++;
+        shotText.text = (""+ScoreManager.shotsFired).Replace("0","O");
     }
 
 
@@ -136,7 +137,8 @@ public class HUDController : MonoBehaviour, Observer {
                 ShotsFired();
                 break;
             case EventName.PlayerFakeLaunched:
-                ScoreManager.shotsFired -= 2;
+                ScoreManager.shotsFired -= 1;
+                shotText.text = ("" + ScoreManager.shotsFired).Replace("0", "O");
                 break;
             default:
                 break;

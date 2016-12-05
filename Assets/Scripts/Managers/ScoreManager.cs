@@ -23,7 +23,7 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
         base.Awake();
         totalComics = 0;
         comicsCollected = 0;
-        shotsFired = 0;
+        shotsFired = -1;
         hasDied = false;
         if (Subject.instance != null)
         {

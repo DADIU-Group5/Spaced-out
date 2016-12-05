@@ -149,11 +149,11 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
                 pushDirection = other.contacts[0].point - transform.position;
                 pushDirection = -pushDirection.normalized;
 
-                barrelTrigger.TriggerBarrel();
 
                 //if the velocity is enough to explode...
                 if (pushForce >= explodeForce)
                 {
+                    barrelTrigger.TriggerBarrel();
                     StartCoroutine(Exploder());
                 }
                 //if the force is not enough to explode, just push instead.

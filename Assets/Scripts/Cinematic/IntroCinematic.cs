@@ -16,6 +16,9 @@ public class IntroCinematic : MonoBehaviour {
     void Start () {
         //soundManager.DisableSounds();
         Invoke("CinematicSound", 0.0f);
+        Invoke("Narrative1", 2.0f);
+        Invoke("Narrative2", 11.0f);
+        Invoke("Remark9", 35.0f);
         Invoke("PlayMusic", 25.0f);
         floatingObjects = floatingObjectsParent.GetComponentsInChildren<InitialForce>();
         GetComponent<SimpelAnimation>().PlayAnimations(LoadScene);
@@ -66,6 +69,21 @@ public class IntroCinematic : MonoBehaviour {
         }
         comic.gameObject.SetActive(false);
         
+    }
+
+    private void Narrative1()
+    {
+        Brain.instance.Narrate("narrative1");
+    }
+
+    private void Narrative2()
+    {
+        Brain.instance.Narrate("narrative2");
+    }
+
+    private void Remarks9()
+    {
+        Brain.instance.Narrate("remarks9");
     }
 
     private void PlayRest()

@@ -6,6 +6,7 @@
     SwitchPressed,
     Fan,            // done
     GasLeak,        // done
+    Explosion,
     LowOxygen,      // done
     OutOfOxygen     // done
 }

@@ -152,6 +152,7 @@ public class EntryCutScene : MonoBehaviour {
 
     public void StopPlayerFly()
     {
+        key.SetActive(false);
         particles.SetActive(false);
         playerObj.gameObject.GetComponent<PlayerController>().chargeParticle = particles;
         playerObj.GetComponentInChildren<Animator>().SetBool("CinematicFly", false);

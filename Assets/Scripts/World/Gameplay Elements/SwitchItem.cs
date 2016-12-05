@@ -27,6 +27,8 @@ public class SwitchItem : MonoBehaviour {
     private Renderer switchRenderer;
     private bool on = false;
 
+    private bool switchState = true;
+
     Room inRoom;
 
     void Start()
@@ -70,8 +72,22 @@ public class SwitchItem : MonoBehaviour {
     {
         if (other.transform.tag == "Player" || other.transform.tag == "object")
         {
+            if (!countingDown)
+            {
+                countingDown = true;
+                StartCoroutine(CountDown());
+
+                switchState = !switchState;
+
+                var evt = new ObserverEvent(EventName.SwitchPressed);
+                evt.payload.Add(PayloadConstants.SWITCH_ON, switchState);
+                Subject.instance.Notify(gameObject, evt);
+
+                inRoom.SwitchWasTouched();
+            }
+
             //if we are allowed to trigger more than once || it hasn't been triggered yet:
-            if (!oneTimeTrigger && !countingDown || !hasBeenTriggered)
+            /*if (!oneTimeTrigger && !countingDown || !hasBeenTriggered)
             {
                 countingDown = true;
                 //start counting down to next available switch:
@@ -84,7 +100,7 @@ public class SwitchItem : MonoBehaviour {
                 Subject.instance.Notify(gameObject, evt);
 
                 inRoom.SwitchWasTouched();
-            }
+            }*/
         }
     }
-}
+ }

@@ -1,20 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
-public class SwitchItem : MonoBehaviour {
-
-    //Should contain logic on on/off,
-    // as well as which object it manipulates.
-    //[HideInInspector]
-    //public List<GameObject> assignedHazards;
-
+public class SwitchItem : MonoBehaviour
+{
     [Header("How long is the switch untouchable after collision?")]
     public float triggerDelay = 1f;
-    
+
     [Header("Can the switch only be triggered once?")]
     public bool oneTimeTrigger = false;
-    
+
     [Header("Choose on/off colours:")]
     public Color offColour = Color.red;
     public Color onColour = Color.green;
@@ -85,22 +79,6 @@ public class SwitchItem : MonoBehaviour {
 
                 inRoom.SwitchWasTouched();
             }
-
-            //if we are allowed to trigger more than once || it hasn't been triggered yet:
-            /*if (!oneTimeTrigger && !countingDown || !hasBeenTriggered)
-            {
-                countingDown = true;
-                //start counting down to next available switch:
-                StartCoroutine(CountDown());
-
-                hasBeenTriggered = true;
-
-                var evt = new ObserverEvent(EventName.SwitchPressed);
-                evt.payload.Add(PayloadConstants.SWITCH_ON, !hasBeenTriggered);
-                Subject.instance.Notify(gameObject, evt);
-
-                inRoom.SwitchWasTouched();
-            }*/
         }
     }
- }
+}

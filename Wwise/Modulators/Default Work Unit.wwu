@@ -146,6 +146,37 @@
 						<Property Name="EnvelopeAttackTime" Type="Real64" Value="6"/>
 					</PropertyList>
 				</ModulatorEnvelope>
+				<ModulatorEnvelope Name="impact floating" ID="{A8AA1BB8-78B7-4642-AED9-931039C3388A}" ShortID="340700688">
+					<PropertyList>
+						<Property Name="EnvelopeAttackCurve" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{38105BF8-C3B9-45DB-ADCB-919565E7884E}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="30"/>
+											<Property Name="Min" Type="Real64" Value="-30"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="EnvelopeAttackTime" Type="Real64" Value="0.1">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{2CFA8B2C-3523-42EF-BF28-3C3717C49233}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="0.05"/>
+											<Property Name="Min" Type="Real64" Value="-0.05"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="EnvelopeAutoRelease" Type="bool" Value="True"/>
+					</PropertyList>
+				</ModulatorEnvelope>
 			</ChildrenList>
 		</WorkUnit>
 	</Modulators>

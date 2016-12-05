@@ -58,12 +58,15 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
             case EventName.OnFire:
                 PlayEvent(SoundEventConstants.DAVE_CATCH_FIRE);
-                Invoke("PutOutDave", 6.0f);
                 break;
 
             case EventName.Electrocuted:
                 PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
-                Invoke("StopElectrocution", 5.0f);
+                break;
+
+            case EventName.PlayerExploded:
+                PlayEvent(SoundEventConstants.DAVE_CATCH_FIRE);
+
                 break;
 
             case EventName.PlayerCharge:
@@ -76,8 +79,6 @@ public class SoundManager : Singleton<SoundManager>, Observer
                         if (!chargePlaying)
                         {
                             PlayEvent(SoundEventConstants.DAVE_CHARGE);
-
-                            //AkSoundEngine.SetRTPCValue("jetpackChargeLevel", force1);
                             chargePlaying = true;
                         }
                         break;
@@ -99,14 +100,12 @@ public class SoundManager : Singleton<SoundManager>, Observer
             case EventName.Collision:
                 float force = (float)evt.payload[PayloadConstants.VELOCITY];
                 AkSoundEngine.SetRTPCValue("velocity", force * 10);
+
                 if ((bool)evt.payload[PayloadConstants.COLLISION_STATIC])
-                {
                     PlayEvent(SoundEventConstants.DAVE_STATIC_COLLISION, entity);
-                }
                 else
-                {
                     PlayEvent(SoundEventConstants.DAVE_OBJECT_COLLISION, entity);
-                }
+
                 break;
             case EventName.PlayerVentilated:
                 //PlayEvent(SoundEventConstants.DAVE_VENT);
@@ -152,6 +151,11 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
             case EventName.PlayerWon:
                 StopHazards(entity);
+                break;
+
+            case EventName.RespawnPlayer:
+                StopElectrocution();
+                PutOutDave();
                 break;
         }
     }

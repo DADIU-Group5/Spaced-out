@@ -264,7 +264,7 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>-20</Value>
+										<Value>-15</Value>
 									</ValueList>
 								</Property>
 								<Property Name="HdrThreshold" Type="Real64">
@@ -316,12 +316,12 @@
 													</Point>
 													<Point>
 														<XPos>50.531914893617</XPos>
-														<YPos>-0.0637314969756796</YPos>
+														<YPos>-6.37314969756796E-02</YPos>
 														<Flags>0</Flags>
 													</Point>
 													<Point>
 														<XPos>100</XPos>
-														<YPos>-200</YPos>
+														<YPos>-13.01046</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -345,13 +345,13 @@
 													</Point>
 													<Point>
 														<XPos>68.75</XPos>
-														<YPos>0.0133803885783858</YPos>
+														<YPos>1.33803885783858E-02</YPos>
 														<Flags>0</Flags>
 														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>100</XPos>
-														<YPos>-200</YPos>
+														<YPos>-13.01047</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -360,6 +360,9 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
+							<ChildrenList>
+								<Bus Name="New Audio Bus" ID="{3F17B168-2571-4E1C-B51D-B5FC44BFC517}"/>
+							</ChildrenList>
 						</Bus>
 						<AuxBus Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}">
 							<ReferenceList>

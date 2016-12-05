@@ -74,6 +74,8 @@ public class PauseMenu : MonoBehaviour {
         //remember to unpause;
         TogglePause();
 
+        SoundManager.instance.StopHazards(gameObject);
+
         var evt = new ObserverEvent(EventName.RestartLevel);
         Subject.instance.Notify(gameObject, evt);
 

@@ -195,10 +195,14 @@
 				</Effect>
 				<Effect Name="galsidechain" ID="{2FE2804D-80F3-4BF7-A811-551E7EEF585D}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
 					<PropertyList>
-						<Property Name="Min" Type="Real32" Value="-24.3"/>
+						<Property Name="MeterMode" Type="int32" Value="1"/>
 					</PropertyList>
 					<PluginData>
 	<GameParameter Name="galSidechain" ID="{60BF31E9-478B-4DE4-954F-45BFC64AB433}"/>
+</PluginData>
+				</Effect>
+				<Effect Name="sfxsidechain" ID="{375F4AF8-E756-48DA-9307-0AF42AB0D8BE}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">					<PluginData>
+	<GameParameter Name="sfxSideChain" ID="{898B4D00-A726-4AD1-9F5F-D2518D0994CF}"/>
 </PluginData>
 				</Effect>
 			</ChildrenList>

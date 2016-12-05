@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="72">
-	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3923277422" DateHigh="30558621"/>
+	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="184589606" DateHigh="30559961"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="3121751204" DateHigh="30557339"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="1010828980" DateHigh="30557179"/>
-	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Attenuations\Default Work Unit.wwu" DateLow="3923312450" DateHigh="30558621"/>
+	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Attenuations\Default Work Unit.wwu" DateLow="1297827926" DateHigh="30558951"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Audio Devices\Default Work Unit.wwu" DateLow="1010358661" DateHigh="30557179"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Control Surface Sessions\Default Work Unit.wwu" DateLow="1010348663" DateHigh="30557179"/>
-	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Conversion Settings\Default Work Unit.wwu" DateLow="2904573725" DateHigh="30558586"/>
+	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Conversion Settings\Default Work Unit.wwu" DateLow="184619629" DateHigh="30559961"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1010318640" DateHigh="30557179"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1010278607" DateHigh="30557179"/>
-	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Effects\Default Work Unit.wwu" DateLow="995539045" DateHigh="30558608"/>
+	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Effects\Default Work Unit.wwu" DateLow="184653778" DateHigh="30559961"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Effects\Factory Altiverb - Outdoor and More.wwu" DateLow="1010238578" DateHigh="30557179"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Effects\Factory Auro Headphone.wwu" DateLow="1010083461" DateHigh="30557179"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Effects\Factory Convolution Reverb Effects.wwu" DateLow="1010057948" DateHigh="30557179"/>
-	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Effects\Factory Effects.wwu" DateLow="1009882833" DateHigh="30557179"/>
+	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Effects\Factory Effects.wwu" DateLow="184718207" DateHigh="30559961"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Effects\Factory iZotope Box Modeler.wwu" DateLow="1009752749" DateHigh="30557179"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Effects\Factory iZotope Delay.wwu" DateLow="1009719384" DateHigh="30557179"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Effects\Factory iZotope Dynamics.wwu" DateLow="1009709381" DateHigh="30557179"/>
@@ -21,22 +21,22 @@
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="1009614307" DateHigh="30557179"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="1009579291" DateHigh="30557179"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="1009519384" DateHigh="30557179"/>
-	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Effects\Factory McDSP Effects.wwu" DateLow="1009812786" DateHigh="30557179"/>
-	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Events\Default Work Unit.wwu" DateLow="3923372487" DateHigh="30558621"/>
-	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Game Parameters\Default Work Unit.wwu" DateLow="862560920" DateHigh="30558607"/>
+	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Effects\Factory McDSP Effects.wwu" DateLow="1298663756" DateHigh="30558951"/>
+	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Events\Default Work Unit.wwu" DateLow="4013220829" DateHigh="30559961"/>
+	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Game Parameters\Default Work Unit.wwu" DateLow="185032809" DateHigh="30559961"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="1009429167" DateHigh="30557179"/>
-	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="2908422884" DateHigh="30558586"/>
-	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3927460641" DateHigh="30558621"/>
-	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Mixing Sessions\Default Work Unit.wwu" DateLow="2908485167" DateHigh="30558586"/>
-	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Modulators\Default Work Unit.wwu" DateLow="3927495666" DateHigh="30558621"/>
+	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="549185341" DateHigh="30559961"/>
+	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="194739778" DateHigh="30559961"/>
+	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Mixing Sessions\Default Work Unit.wwu" DateLow="1349652200" DateHigh="30558951"/>
+	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Modulators\Default Work Unit.wwu" DateLow="194779796" DateHigh="30559961"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Presets\Default Work Unit.wwu" DateLow="867715278" DateHigh="30557179"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Queries\Default Work Unit.wwu" DateLow="867705280" DateHigh="30557179"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Queries\Factory Queries.wwu" DateLow="867690260" DateHigh="30557179"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\SoundBanks\Default Work Unit.wwu" DateLow="1084289049" DateHigh="30557206"/>
-	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Soundcaster Sessions\Default Work Unit.wwu" DateLow="3937559114" DateHigh="30558621"/>
-	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Spaced Out.student.wsettings" DateLow="3788181839" DateHigh="30558621"/>
+	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Soundcaster Sessions\Default Work Unit.wwu" DateLow="555075332" DateHigh="30559961"/>
+	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Spaced Out.student.wsettings" DateLow="3828324251" DateHigh="30559962"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Spaced Out.wproj" DateLow="3432837507" DateHigh="30557971"/>
-	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\States\Default Work Unit.wwu" DateLow="1341494894" DateHigh="30558604"/>
+	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\States\Default Work Unit.wwu" DateLow="305088949" DateHigh="30559961"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Switches\Default Work Unit.wwu" DateLow="3509388224" DateHigh="30557181"/>
 	<ValidationCacheItem File="C:\Users\student\Documents\Spaced-out\Wwise\Triggers\Default Work Unit.wwu" DateLow="867284994" DateHigh="30557179"/>
 </ValidationCache>

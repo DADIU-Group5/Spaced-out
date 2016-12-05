@@ -200,12 +200,12 @@ public class SoundManager : Singleton<SoundManager>, Observer
         ResumeEvent(eventName, fadein);
     }
 
-    private void StopEvent(string eventName, float fadeout)
+    public void StopEvent(string eventName, float fadeout)
     {
         StopEvent(eventName, fadeout, gameObject);
     }
 
-    private void StopEvent(string eventName, float fadeout, GameObject entity)
+    public void StopEvent(string eventName, float fadeout, GameObject entity)
     {
         uint eventID;
         eventID = AkSoundEngine.GetIDFromString(eventName);

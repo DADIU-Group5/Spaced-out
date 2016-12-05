@@ -29,6 +29,10 @@ public class TutorialStage1 : MonoBehaviour, Observer
         evt.payload.Add(PayloadConstants.PLAYER, player);
         Subject.instance.Notify(gameObject, evt);
 
+        evt = new ObserverEvent(EventName.StartCutscene);
+        evt.payload.Add(PayloadConstants.START_LEVEL, true);
+        Subject.instance.Notify(gameObject, evt);
+
         // disable key
         key = GameObject.FindGameObjectWithTag("Key");
         key.SetActive(false);

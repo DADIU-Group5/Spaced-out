@@ -29,20 +29,17 @@ public class IntroCinematic : MonoBehaviour {
         Invoke("AstroidImpact", 14.0f);
     }
 
-    private void Update()
+    public void SkipIntro()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            // Stop all sounds and animations that were scheduled
-            CancelInvoke();
+        // Stop all sounds and animations that were scheduled
+        CancelInvoke();
 
-            SoundManager.instance.StopEvent("cinematic1", 0, gameObject);
-            SoundManager.instance.StopEvent("narrative1", 0);
-            SoundManager.instance.StopEvent("narrative2", 0);
-            SoundManager.instance.StopEvent("remark9", 0);
+        SoundManager.instance.StopEvent("cinematic1", 0, gameObject);
+        SoundManager.instance.StopEvent("narrative1", 0);
+        SoundManager.instance.StopEvent("narrative2", 0);
+        SoundManager.instance.StopEvent("remark9", 0);
 
-            LoadScene();
-        }
+        LoadScene();
     }
 
     private void LoadScene()

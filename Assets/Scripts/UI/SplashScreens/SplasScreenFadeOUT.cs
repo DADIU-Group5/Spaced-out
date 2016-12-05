@@ -4,24 +4,25 @@ using UnityEngine.UI;
 
 public class SplasScreenFadeOUT : MonoBehaviour {
 
+    public float waitToFade = 2f;
     public float fadeSpeed = 1f;
     public RawImage DadiuImage;
     public GameObject NextSplash;
 
-    private bool fadingOut = false;
-    private Color orgColor;
+    [HideInInspector]
+    public bool fadingOut = false;
+    [HideInInspector]
+    public bool fadingIn = false;
 
-	// Use this for initialization
-	void Start () {
-        orgColor = gameObject.GetComponent<Image>().color;
 
-        StartCoroutine(FadeOut());
-
+    void Start () {
+        StartCoroutine(WaitBeforeFading());
     }
 
-    IEnumerator FadeOut()
+    IEnumerator WaitBeforeFading()
     {
-        yield return new WaitForSeconds(fadeSpeed);
+        fadingIn = true;
+        yield return new WaitForSeconds(waitToFade);
         fadingOut = true;
         StartCoroutine(FadeInNextScreen());
     }
@@ -31,17 +32,26 @@ public class SplasScreenFadeOUT : MonoBehaviour {
         yield return new WaitForSeconds(fadeSpeed);
         NextSplash.GetComponent<SplashFadeToSplash>().StartFadingIn();
         fadingOut = false;
+        gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update () {
-	    if (fadingOut)
+        if (Input.anyKeyDown && fadingIn || Input.anyKeyDown && fadingOut)
         {
-           
-            //orgColor.a *= fadeSpeed;
-            //gameObject.GetComponent<Image>().color = orgColor;//GetComponent<Renderer>().material.color.a * fadeSpeed;
+            Debug.Log("Next screen!");
+            //set the current image to null//or fade out?
+            DadiuImage.GetComponent<RawImage>().canvasRenderer.SetAlpha(0.0f);
+            gameObject.GetComponent<Image>().canvasRenderer.SetAlpha(0.0f);
+            StopAllCoroutines();
+            fadeSpeed = 0;
+            StartCoroutine(FadeInNextScreen());
+        }
+
+        if (fadingOut)
+        {
             gameObject.GetComponent<Image>().CrossFadeAlpha(0, fadeSpeed, false);
             DadiuImage.CrossFadeAlpha(0, fadeSpeed*0.5f, false);
+
             if (gameObject.GetComponent<Image>().color.a < 0.01f)
             {
                 fadingOut = false;

@@ -146,6 +146,7 @@ public class HUDController : MonoBehaviour, Observer {
     public void OnDestroy()
     {
         Subject.instance.RemoveObserver(this);
+        SettingsManager.instance.onLanguageChanged -= UpdateButtonText;
     }
 
     /// <summary>

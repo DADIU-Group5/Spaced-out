@@ -22,15 +22,22 @@ public class InputController : MonoBehaviour, Observer
     private Camera cam;
     private bool paused = false;
 
+    // Camera sensitivity
+    public float minSensitivity = 5000f;
+    public float maxSensitivity = 40000f;
+
     private void Awake()
     {
         cameraController = GetComponent<CameraController>();
         cam = Camera.main;
-        invertCameraControls = SettingsManager.instance.settings.invertedCamera;
+        invertCameraControls = SettingsManager.instance.GetInvertedCamera();
         Subject.instance.AddObserver(this);
 
         inputDisabled = false;
         cameraInputDisabled = false;
+
+        ChangeSensitivity(SettingsManager.instance.GetSensitivity());
+        SettingsManager.instance.onSensitivityChanged += ChangeSensitivity;
     }
 
     private void LateUpdate()
@@ -198,6 +205,11 @@ public class InputController : MonoBehaviour, Observer
         }
     }
 
+    private void ChangeSensitivity(float ratio)
+    {
+        cameraRotateSpeed = Mathf.Lerp(minSensitivity, maxSensitivity, ratio);
+    }
+
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
         switch (evt.eventName)
@@ -249,5 +261,6 @@ public class InputController : MonoBehaviour, Observer
     public void OnDestroy()
     {
         Subject.instance.RemoveObserver(this);
+        SettingsManager.instance.onSensitivityChanged -= ChangeSensitivity;
     }
 }

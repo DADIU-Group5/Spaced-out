@@ -22,18 +22,12 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
         AkSoundEngine.LoadBank("soundbank_alpha", AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
 
-        var settings = SettingsManager.instance.settings;
+        SetMasterVolume(SettingsManager.instance.GetMasterVolume());
+        SetMusicVolume(SettingsManager.instance.GetMusicVolume());
+        SetEffectsVolume(SettingsManager.instance.GetEffectsVolume());
+        MuteSound(SettingsManager.instance.IsMute());
 
-        SetMasterVolume(settings.masterVolume);
-        SetMusicVolume(settings.musicVolume);
-        SetEffectsVolume(settings.effectsVolume);
-
-        mute = settings.mute;
-
-        MuteSound(mute);
-
-        SetLanguage(settings.language);
-
+        SetLanguage(SettingsManager.instance.GetLanguage());
         musicPlaying = false;
         atmoshericSoundPlaying = false;
     }

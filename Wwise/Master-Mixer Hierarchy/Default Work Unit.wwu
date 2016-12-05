@@ -83,7 +83,7 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>-10</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 								<Property Name="HdrEnable" Type="bool">
@@ -134,7 +134,7 @@
 								<DuckItem>
 									<BusRef Name="music" ID="{CA906606-09FB-4986-B724-CAA394C96D8F}"/>
 									<DuckingParam>
-										<Volume>-3</Volume>
+										<Volume>-2</Volume>
 										<FadeInTime>0.100000001490116</FadeInTime>
 										<FadeOutTime>0.100000001490116</FadeOutTime>
 										<FadeCurve>FadeLinear</FadeCurve>

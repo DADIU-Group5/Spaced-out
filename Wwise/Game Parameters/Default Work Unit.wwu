@@ -6,6 +6,7 @@
 				<GameParameter Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}">
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="RTPCRamping" Type="int16" Value="2"/>
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="masterHiPass" ID="{6BE69766-05F5-4CC4-BD22-B4CD8F23794C}"/>
@@ -27,7 +28,11 @@
 				</GameParameter>
 				<GameParameter Name="musicVolume" ID="{94967744-CEA3-4D37-893D-F4A043DFEB29}"/>
 				<GameParameter Name="effectsVolume" ID="{ED513413-85B0-45A9-B98F-EE61A42D635F}"/>
-				<GameParameter Name="masterVolume" ID="{16D6A1BF-90EA-4458-897A-819BFBA4868A}"/>
+				<GameParameter Name="masterVolume" ID="{16D6A1BF-90EA-4458-897A-819BFBA4868A}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
 				<GameParameter Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}">
 					<PropertyList>
 						<Property Name="RTPCRamping" Type="int16" Value="1"/>
@@ -37,7 +42,11 @@
 				</GameParameter>
 				<GameParameter Name="musicSidechain" ID="{181A310C-6E70-4F86-B312-63125AE5BB3A}"/>
 				<GameParameter Name="galSidechain" ID="{60BF31E9-478B-4DE4-954F-45BFC64AB433}"/>
-				<GameParameter Name="sfxSideChain" ID="{898B4D00-A726-4AD1-9F5F-D2518D0994CF}"/>
+				<GameParameter Name="sfxSideChain" ID="{898B4D00-A726-4AD1-9F5F-D2518D0994CF}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

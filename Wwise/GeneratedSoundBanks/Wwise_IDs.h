@@ -64,7 +64,8 @@ namespace AK
         static const AkUniqueID GASLEAK6 = 1124785721U;
         static const AkUniqueID GASLEAK7 = 1124785720U;
         static const AkUniqueID HAZARDSSTOP = 3588208292U;
-        static const AkUniqueID KEYSCHIME = 510278571U;
+        static const AkUniqueID KEYSAMBIENT = 1037158387U;
+        static const AkUniqueID KEYSTUTORIAL = 3935357491U;
         static const AkUniqueID LOWOXYGEN1 = 3700176350U;
         static const AkUniqueID LOWOXYGEN2 = 3700176349U;
         static const AkUniqueID LOWOXYGEN3 = 3700176348U;
@@ -255,6 +256,7 @@ namespace AK
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MASTER_SECONDARY_BUS = 805203703U;
         static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID NEW_AUDIO_BUS = 2255513057U;
         static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 

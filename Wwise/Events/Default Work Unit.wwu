@@ -1555,7 +1555,7 @@
 								<Action Name="Play" ID="{258806D3-4CF5-4F79-93E3-6ABB0E8D5249}" ShortID="615178539" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{9842A949-6078-41C9-9537-21BFEC88C731}" Global="false">
-											<ObjectRef Name="CINEMATIC intro no gal" ID="{3229D4A3-A726-4C8F-8E34-E682145D5767}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+											<ObjectRef Name="CINEMATIC INTRO no gal mix2" ID="{B91BAA89-CB7E-4DC9-829C-D627FF1F8522}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>

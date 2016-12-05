@@ -1953,6 +1953,35 @@
 									<PropertyList>
 										<Property Name="DryLevel" Type="Real32" Value="0"/>
 										<Property Name="Pitch" Type="Real32" Value="1200"/>
+										<Property Name="WetLevel" Type="Real32">
+											<RTPCList>
+												<RTPC Name="" ID="{343FC299-1809-4455-A6D8-8965A89F3672}" ShortID="260765597">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{B328BA77-EDA2-4B56-9305-75D9DE6EB424}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-96</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Exp3</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
 									</PropertyList>
 								</Effect>
 								<Effect Name="Octave_Down" ID="{062EC4B1-5372-4D1E-917B-C757293F2B42}" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">

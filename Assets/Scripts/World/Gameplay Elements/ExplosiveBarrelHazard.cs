@@ -120,7 +120,7 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
         {
             if (obj.tag == "Player")
             {
-                obj.GetComponent<Rigidbody>().AddExplosionForce(explosionPower * 30, transform.position, pushRadius);
+                obj.GetComponent<Rigidbody>().AddExplosionForce(explosionPower * 50, transform.position, pushRadius);
             }
             else
             {
@@ -149,11 +149,11 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
                 pushDirection = other.contacts[0].point - transform.position;
                 pushDirection = -pushDirection.normalized;
 
-                barrelTrigger.TriggerBarrel();
 
                 //if the velocity is enough to explode...
                 if (pushForce >= explodeForce)
                 {
+                    barrelTrigger.TriggerBarrel();
                     StartCoroutine(Exploder());
                 }
                 //if the force is not enough to explode, just push instead.

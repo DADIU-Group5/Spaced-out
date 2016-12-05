@@ -39,4 +39,9 @@ public class MenuMain : Singleton<MenuMain> {
     {
         view.SetActive(false);
     }
+
+    void OnDestroy()
+    {
+        SettingsManager.instance.onLanguageChanged -= UpdateButtonText;
+    }
 }

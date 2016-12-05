@@ -43,7 +43,7 @@ public class HUDController : MonoBehaviour, Observer {
     private void UpdateButtonText(Language lan)
     {
         //camControlsText.text = Translator.instance.Get("invert camera controls");
-        velocityText.text = Translator.instance.Get("velocity");
+        //velocityText.text = Translator.instance.Get("velocity");
         //currentFuelText.text = Translator.instance.Get("current") + " " + Translator.instance.Get("fuel");
     }
 
@@ -55,7 +55,8 @@ public class HUDController : MonoBehaviour, Observer {
 
     public void ShotsFired()
     {
-        shotText.text = (""+ScoreManager.shotsFired++).Replace("0","O");
+        ScoreManager.shotsFired++;
+        shotText.text = (""+ScoreManager.shotsFired).Replace("0","O");
     }
 
 
@@ -136,7 +137,8 @@ public class HUDController : MonoBehaviour, Observer {
                 ShotsFired();
                 break;
             case EventName.PlayerFakeLaunched:
-                ScoreManager.shotsFired -= 2;
+                ScoreManager.shotsFired -= 1;
+                shotText.text = ("" + ScoreManager.shotsFired).Replace("0", "O");
                 break;
             default:
                 break;
@@ -146,6 +148,7 @@ public class HUDController : MonoBehaviour, Observer {
     public void OnDestroy()
     {
         Subject.instance.RemoveObserver(this);
+        SettingsManager.instance.onLanguageChanged -= UpdateButtonText;
     }
 
     /// <summary>

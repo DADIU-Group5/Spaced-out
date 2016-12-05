@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuSettings : MonoBehaviour {
 
@@ -9,6 +10,8 @@ public class MenuSettings : MonoBehaviour {
     public Slider sensitivitySlider;
     public Toggle mute;
     public Toggle cameraControls;
+    public GameObject danish;
+    public GameObject english;
 
     void Start()
     {
@@ -23,6 +26,17 @@ public class MenuSettings : MonoBehaviour {
         sensitivitySlider.value = SettingsManager.instance.GetSensitivity();
 
         SetupSoundSliders();
+        if (SceneManager.GetActiveScene().name == "Main Menu")
+        {
+            if (SettingsManager.instance.GetLanguage().ToString() == "english")
+            {
+                english.SetActive(true);
+            }
+            else
+            {
+                danish.SetActive(true);
+            }
+        }
     }
 
     private void SetupSoundSliders()
@@ -62,21 +76,16 @@ public class MenuSettings : MonoBehaviour {
 
     public void OnEnglishClick()
     {
-        SettingsManager.instance.SetLanguage(Language.English);
-        SendLanguageChangeEvent(Language.English);
+        SettingsManager.instance.SetLanguage(Language.Danish);
+        danish.SetActive(true);
+        english.SetActive(false);
     }
 
     public void OnDanishClick()
     {
-        SettingsManager.instance.SetLanguage(Language.Danish);
-        SendLanguageChangeEvent(Language.Danish);
-    }
-
-    private void SendLanguageChangeEvent(Language lang)
-    {
-        var evt = new ObserverEvent(EventName.ChangeLanguage);
-        evt.payload.Add(PayloadConstants.LANGUAGE, lang);
-        Subject.instance.Notify(gameObject, evt);
+        SettingsManager.instance.SetLanguage(Language.English);
+        danish.SetActive(false);
+        english.SetActive(true);
     }
 
     public void OnCameraInvertedToggle()

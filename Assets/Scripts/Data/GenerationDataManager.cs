@@ -84,4 +84,9 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
         // creates a random int value
         return UnityEngine.Random.Range(0, int.MaxValue);
     }
+
+    public float GetHazardPercentForCurrentLevel()
+    {
+        return generationData.levels[level - 1].hazardPercent;
+    }
 }

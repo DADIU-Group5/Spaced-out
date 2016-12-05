@@ -6,6 +6,7 @@ public class TutorialTrigger : MonoBehaviour {
 
     public Action callback;
     public GameObject door;
+    public GameObject launchAt;
 
     void OnTriggerEnter(Collider collider)
     {
@@ -13,6 +14,9 @@ public class TutorialTrigger : MonoBehaviour {
         {
             door.SetActive(true);
             callback.Invoke();
+            //collider.transform.position = gameObject.transform.position;
+            //collider.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            //collider.GetComponent<PlayerController>().Aim(launchAt.transform.position);
             Destroy(gameObject);
         }
     }

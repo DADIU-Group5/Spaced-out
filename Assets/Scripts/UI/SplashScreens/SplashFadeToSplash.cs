@@ -14,6 +14,8 @@ public class SplashFadeToSplash : MonoBehaviour {
     [Header("Time it takes to fade")]
     public float waitToFade = 2f;
 
+    public GameObject bg;
+
     [Header("Should this screen fade out?")]
     [Tooltip("This is mostly for the last screen. Unchecking this also means that the end of this screen starts the Main Scene.")]
     public bool Fade = true;
@@ -26,6 +28,8 @@ public class SplashFadeToSplash : MonoBehaviour {
     void Start()
     {
         childImage.GetComponent<RawImage>().canvasRenderer.SetAlpha(0.0f);
+        if (bg != null)
+            bg.GetComponent<Image>().canvasRenderer.SetAlpha(0.0f);
     }
 
     public void LoadMainScene()
@@ -43,6 +47,8 @@ public class SplashFadeToSplash : MonoBehaviour {
     public void StartFadingIn()
     {
         fadingIn = true;
+        if (bg != null)
+            bg.GetComponent<Image>().canvasRenderer.SetAlpha(1.0f);
         StartCoroutine(WaitForFading());     
     }
 
@@ -76,6 +82,8 @@ public class SplashFadeToSplash : MonoBehaviour {
             nextSplash.GetComponent<SplashFadeToSplash>().StartFadingIn();
         else
             LoadMainScene();
+        if (nextSplash != null && nextSplash.GetComponent<SplashFadeToSplash>().bg != null)
+            nextSplash.GetComponent<SplashFadeToSplash>().bg.SetActive(true);
         this.gameObject.SetActive(false);
     }
 
@@ -100,6 +108,8 @@ public class SplashFadeToSplash : MonoBehaviour {
         } else if (fadingIn)
         {
             childImage.GetComponent<RawImage>().CrossFadeAlpha(1.0f, fadeSpeed, false);
+            /*if (bg != null)
+                bg.GetComponent<Image>().CrossFadeAlpha(1.0f, fadeSpeed/2, false);*/
         }
     }
 }

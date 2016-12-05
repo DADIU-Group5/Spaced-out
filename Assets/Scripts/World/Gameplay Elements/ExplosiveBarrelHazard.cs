@@ -120,7 +120,7 @@ public class ExplosiveBarrelHazard : MonoBehaviour {
         {
             if (obj.tag == "Player")
             {
-                obj.GetComponent<Rigidbody>().AddExplosionForce(explosionPower * 30, transform.position, pushRadius);
+                obj.GetComponent<Rigidbody>().AddExplosionForce(explosionPower * 50, transform.position, pushRadius);
             }
             else
             {

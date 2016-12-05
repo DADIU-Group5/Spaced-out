@@ -33,9 +33,10 @@ public class Room : MonoBehaviour
         StaticBatchingUtility.Combine(enviromentalObjectsParent.gameObject);
         //StaticBatchingUtility.Combine(hazardObjectParent.gameObject);
         //StaticBatchingUtility.Combine(switchParent.gameObject);
-        StaticBatchingUtility.Combine(pickupParent.gameObject);
+        //StaticBatchingUtility.Combine(pickupParent.gameObject);
         StaticBatchingUtility.Combine(decorParent.gameObject);
-        //StaticBatchingUtility.Combine(doorParent.gameObject);
+        StaticBatchingUtility.Combine(doorParent.gameObject);
+        StaticBatchingUtility.Combine(shapingParent.gameObject);
     }
 
     /// <summary>

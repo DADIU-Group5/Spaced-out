@@ -4,14 +4,13 @@ using System;
 
 [CreateAssetMenu(fileName = "Generation Data", menuName = "Generation Data")]
 public class GenerationData : ScriptableObject {
-
-    public DateTime LastGenerationTime;
-    public int shotCountPerLevel = 10;
+    
+    public int shotCountPerLevel;
     public LevelData[] levels;
     
     void Reset()
     {
-        LastGenerationTime = DateTime.Now;
+        shotCountPerLevel = 20;
         levels = new LevelData[5];
         for(int i = 0; i < 5; i++)
         {

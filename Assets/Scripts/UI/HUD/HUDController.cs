@@ -55,7 +55,7 @@ public class HUDController : MonoBehaviour, Observer {
 
     public void ShotsFired()
     {
-        shotText.text = ""+ScoreManager.shotsFired;
+        shotText.text = (""+ScoreManager.shotsFired++).Replace("0","O");
     }
 
 
@@ -120,8 +120,8 @@ public class HUDController : MonoBehaviour, Observer {
                 var comicsPayload = evt.payload;
                 if (comicsLeftText != null)
                 {
-                    comicsLeftText.text = (string)comicsPayload[PayloadConstants.COMICS];
-                    string tempText = (string)comicsPayload[PayloadConstants.COMICS];
+                    string tempText = ((string)comicsPayload[PayloadConstants.COMICS]).Replace("0", "O");
+                    comicsLeftText.text = tempText;
                     if (winMenu != null)
                     {
                         winMenu.GetComponent<WinMenu>().SetComics(tempText);
@@ -134,6 +134,9 @@ public class HUDController : MonoBehaviour, Observer {
                 break;
             case EventName.PlayerLaunch:
                 ShotsFired();
+                break;
+            case EventName.PlayerFakeLaunched:
+                ScoreManager.shotsFired -= 2;
                 break;
             default:
                 break;

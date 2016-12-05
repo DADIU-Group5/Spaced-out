@@ -189,5 +189,5 @@ public class ObjectDatabase : MonoBehaviour {
 
 public enum Themes
 {
-    CommandCenter, Storage, Botanic, Cafeteria, ScienceLab
+    Storage, Botanic, Cafeteria, ScienceLab
 }

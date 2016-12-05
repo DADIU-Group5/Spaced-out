@@ -95,7 +95,7 @@ public class EntryCutScene : MonoBehaviour {
                 //movingPlayer = true;
                 player.transform.position = playerStartPosition.transform.position;
                 player.GetComponentInChildren<Animator>().SetBool("CinematicFly", false);
-                GameObject.Find("Behind Camera Pod").GetComponent<LineRenderer>().enabled = false;
+                //GameObject.Find("Behind Camera Pod").GetComponent<LineRenderer>().enabled = false;
             }
         }
 
@@ -135,12 +135,12 @@ public class EntryCutScene : MonoBehaviour {
 
     public void Ended()
     {
-       // ToggleUI();
+        ToggleUI();
         Destroy(cam.gameObject);
         key.SetActive(false);
         playerObj.parent = null;
 
-        CheckpointManager.instance.SetNewCheckpoint(playerPos.position);
+        CheckpointManager.instance.SetNewCheckpoint(playerPos.position - new Vector3(-2, 0, 0));
         CheckpointManager.instance.SetNewCheckpointRotation(playerPos.forward);
 
         //cam.gameObject.SetActive(false);

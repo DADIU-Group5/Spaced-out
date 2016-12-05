@@ -18,15 +18,17 @@ public class IntroCinematic : MonoBehaviour {
         Invoke("CinematicSound", 0.0f);
         Invoke("PlayMusic", 25.0f);
         floatingObjects = floatingObjectsParent.GetComponentsInChildren<InitialForce>();
-        GetComponent<SimpelAnimation>().PlayAnimations(() =>
-        {
-            SceneManager.LoadScene("TutStage01");
-        });
+        GetComponent<SimpelAnimation>().PlayAnimations(LoadScene);
         Invoke("PlayRest", 10f);
         Invoke("HappyTalk", 5f);
         Invoke("SadTalk", 35f);
         Invoke("Astroid", 8.05f);
         Invoke("AstroidImpact", 14.0f);
+    }
+
+    private void LoadScene()
+    {
+        SceneManager.LoadScene("TutStage01");
     }
 
     private void Astroid()

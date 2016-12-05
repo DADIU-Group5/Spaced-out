@@ -6,8 +6,8 @@ public class MenuSettings : MonoBehaviour {
     public Slider masterSlider;
     public Slider musicSlider;
     public Slider effectsSlider;
-    public GameObject muteBtn;
-    public GameObject unmuteBtn;
+    public Slider sensitivitySlider;
+    public Toggle mute;
     public Toggle cameraControls;
 
     void Start()
@@ -16,30 +16,23 @@ public class MenuSettings : MonoBehaviour {
         masterSlider.onValueChanged.AddListener(OnMasterSliderChanged);
         musicSlider.onValueChanged.AddListener(OnMusicSliderChanged);
         effectsSlider.onValueChanged.AddListener(OnEffectsSliderChanged);
+        sensitivitySlider.onValueChanged.AddListener(OnSensitivitySliderChanged);
         // setup mute / unmute buttons
-        var isMuted = SettingsManager.instance.settings.mute;
-        muteBtn.SetActive(!isMuted);
-        unmuteBtn.SetActive(isMuted);
+        mute.isOn = SettingsManager.instance.IsMute();
+        cameraControls.isOn = SettingsManager.instance.GetInvertedCamera();
+        sensitivitySlider.value = SettingsManager.instance.GetSensitivity();
 
-        cameraControls.isOn = SettingsManager.instance.settings.invertedCamera;
-
-        SetUpSound();
+        SetupSoundSliders();
     }
 
-    private void SetUpSound()
+    private void SetupSoundSliders()
     {
-        var settings = SettingsManager.instance.settings;
         var soundManager = SoundManager.instance;
 
-        masterSlider.value = settings.masterVolume;
-        musicSlider.value = settings.musicVolume;
-        effectsSlider.value = settings.effectsVolume;
-
-        soundManager.SetMasterVolume(settings.masterVolume);
-        soundManager.SetMusicVolume(settings.musicVolume);
-        soundManager.SetEffectsVolume(settings.effectsVolume);
-
-        SettingsManager.instance.MuteSound(settings.mute);
+        masterSlider.value =  SettingsManager.instance.GetMasterVolume();
+        musicSlider.value = SettingsManager.instance.GetMusicVolume();
+        effectsSlider.value = SettingsManager.instance.GetEffectsVolume();
+        
     }
 
     public void OnMasterSliderChanged(float value)
@@ -57,11 +50,14 @@ public class MenuSettings : MonoBehaviour {
         SettingsManager.instance.SetEffectsVolume(value);
     }
 
-    public void OnMuteBtnClick(bool mute)
+    public void OnSensitivitySliderChanged(float value)
     {
-        muteBtn.SetActive(!mute);
-        unmuteBtn.SetActive(mute);
-        SettingsManager.instance.MuteSound(mute);
+        SettingsManager.instance.SetSensitivity(value);
+    }
+
+    public void OnMuteToggle()
+    {
+        SettingsManager.instance.MuteSound(mute.isOn);
     }
 
     public void OnEnglishClick()
@@ -76,7 +72,7 @@ public class MenuSettings : MonoBehaviour {
 
     public void OnCameraInvertedToggle()
     {
-        SettingsManager.instance.settings.invertedCamera = !SettingsManager.instance.settings.invertedCamera;
+        SettingsManager.instance.SetInvertedCamera(cameraControls.isOn);
 
         var evt = new ObserverEvent(EventName.ToggleCameraControls);
         Subject.instance.Notify(gameObject, evt);

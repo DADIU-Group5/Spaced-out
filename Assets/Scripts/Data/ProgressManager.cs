@@ -96,7 +96,7 @@ public class ProgressManager : Singleton<ProgressManager> {
         }
 
         level--;
-        if (count < progress.levels[level].bestBoostCount)
+        if (count < progress.levels[level].bestBoostCount && count < GenerationDataManager.instance.GetShotCount())
         {
             progress.levels[level].bestBoostCount = count;
 
@@ -139,6 +139,7 @@ public class ProgressManager : Singleton<ProgressManager> {
             level.starComplete = false;
             level.starComics = false;
             level.starBoosts = false;
+            level.bestBoostCount = 9999;
         }
         progress.levels[0].unlocked = true;
     }

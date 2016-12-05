@@ -23,7 +23,7 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
         base.Awake();
         totalComics = 0;
         comicsCollected = 0;
-        shotsFired = 0;
+        shotsFired = -1;
         hasDied = false;
         if (Subject.instance != null)
         {
@@ -77,6 +77,7 @@ public class ScoreManager : Singleton<ScoreManager>, Observer
 
                 if (ProgressManager.instance.SetBoostCount(level, shotsFired))
                 {
+                    ProgressManager.instance.ObtainStar(level, ProgressManager.medalShots);
                     var recordEvent = new ObserverEvent(EventName.PlayerRecord);
                     Subject.instance.Notify(gameObject, recordEvent);
                 }

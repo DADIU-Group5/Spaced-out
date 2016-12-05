@@ -65,7 +65,8 @@ public class GALAnimation : MonoBehaviour, Observer
     private void SetGAL(bool b)
     {
         // Set both to b 
-        imageCanvas.enabled = GALObject.enabled = b;
+        if(imageCanvas != null)
+            imageCanvas.enabled = GALObject.enabled = b;
     }
 
     /// <summary>

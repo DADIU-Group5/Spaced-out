@@ -133,9 +133,10 @@ public class RoomFixer : MonoBehaviour
             {
                 continue;
             }
-            if (item.GetComponent<MeshRenderer>() != null)
+            if (item.GetComponent<MeshRenderer>() != null || item.name == "Doorway_Sci_Fil2")
             {
                 item.localScale = fixScale(item.localScale);
+                item.localPosition = FixPos(item.localPosition);
             }
 
             FixSize(item);
@@ -154,11 +155,11 @@ public class RoomFixer : MonoBehaviour
         }
         else if (x < 1)
         {
-            x = 1.01277f / 2f;
+            x = 1.013f / 2f;
         }
         else
         {
-            x = 1.01277f;
+            x = 1.013f;
         }
 
         if (y == 1)
@@ -167,11 +168,11 @@ public class RoomFixer : MonoBehaviour
         }
         else if (y < 1)
         {
-            y = 1.01277f / 2f;
+            y = 1.013f / 2f;
         }
         else
         {
-            y = 1.01277f;
+            y = 1.013f;
         }
 
         if (z == 1)
@@ -180,13 +181,34 @@ public class RoomFixer : MonoBehaviour
         }
         else if (z < 1)
         {
-            z = 1.01277f / 2f;
+            z = 1.013f / 2f;
         }
         else
         {
-            z = 1.01277f;
+            z = 1.013f;
         }
 
+        return new Vector3(x, y, z);
+    }
+
+    Vector3 FixPos(Vector3 oldPos)
+    {
+        float x = oldPos.x;
+        float y = oldPos.y;
+        float z = oldPos.z;
+        if(oldPos.x == -2.826f)
+        {
+            x = -2.825f;
+        }
+       /* else if(oldPos.x == 0.825f)
+        {
+            x = 0.808f;
+        }*/
+
+        /*if(oldPos.z == -0.825f)
+        {
+            z = -0.808f;
+        }*/
         return new Vector3(x, y, z);
     }
 }

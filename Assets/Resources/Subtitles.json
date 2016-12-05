@@ -317,7 +317,7 @@
 			"duration": 3.5
 		},{
 			"id": "gasLeak6",
-			"text": "My database suggests that aloe vera is suitable for that burn.",
+			"text": "My database suggests that aloe\nvera is suitable for that burn.",
 			"start": 0.0,
 			"duration": 3.5
 		},{
@@ -439,7 +439,7 @@
 			"duration": 3.5
 		}, {
 			"id": "narrative8",
-			"text": "Vi har teknologien til at bringe dig tilbage, når du kommer galt af sted. Heldigt for dig.",
+			"text": "Vi har teknologien til at bringe\ndig tilbage, når du kommer galt\naf sted. Heldigt for dig.",
 			"start": 0.0,
 			"duration": 3.5
 		}],
@@ -684,7 +684,7 @@
 			"duration": 3.5
 		},{
 			"id": "gasLeak2",
-			"text": "Dave, Jeg ville bare informere dig om at der er ild i dig.",
+			"text": "Dave, Jeg ville bare informere\ndig om at der er ild i dig.",
 			"start": 0.0,
 			"duration": 3.5
 		},{
@@ -699,17 +699,17 @@
 			"duration": 3.5
 		},{
 			"id": "gasLeak5",
-			"text": "Du vil have at jeg slukker dig? Desværre, Dave, det er ikke en del af mine subrutiner.",
+			"text": "Du vil have at jeg slukker dig?\nDesværre, Dave, det er ikke\nen del af mine subrutiner.",
 			"start": 0.0,
 			"duration": 3.5
 		},{
 			"id": "gasLeak6",
-			"text": "Min database foreslår Aloe Vera for det brændsår. Synd, at vi ikke har noget.",
+			"text": "Min database foreslår Aloe\nVera for det brændsår.\nSynd, at vi ikke har noget.",
 			"start": 0.0,
 			"duration": 3.5
 		},{
 			"id": "gasLeak7",
-			"text": "Hør, Dave, Jeg kan se at du virkelig er opflammet over det her. Jeg synes du skal sætte dig ned og køle af.",
+			"text": "Hør, Dave, Jeg kan se at du\nvirkelig er opflammet over det\nher. Jeg synes du skal sætte dig\nned og køle af.",
 			"start": 0.0,
 			"duration": 3.5
 		}],

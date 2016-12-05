@@ -7,6 +7,7 @@ public class TutorialStage3 : MonoBehaviour, Observer {
     public EntryCutScene ECS;
     public GameObject playerPrefab;
     public Transform playerSpawnPoint;
+    public GameObject door;
 
     [Header("Cameras")]
     public GameObject playerCameraPod;
@@ -63,6 +64,8 @@ public class TutorialStage3 : MonoBehaviour, Observer {
 
     public void PlayZoomHazardAnimation()
     {
+        door.SetActive(true);
+
         // disable input
         var evt = new ObserverEvent(EventName.DisableInput);
         Subject.instance.Notify(gameObject, evt);

@@ -7,6 +7,7 @@ public class TutorialStage3 : MonoBehaviour, Observer {
     public EntryCutScene ECS;
     public GameObject playerPrefab;
     public Transform playerSpawnPoint;
+    public GameObject door;
 
     [Header("Cameras")]
     public GameObject playerCameraPod;
@@ -38,7 +39,7 @@ public class TutorialStage3 : MonoBehaviour, Observer {
         ECS.StartCutScene(go);
 
         // play camera animation after small delay
-        Invoke("PlayZoomOxygenAnimation", 1f);
+        Invoke("PlayZoomOxygenAnimation", 1.5f);
         secondRoom.callback = PlayZoomHazardAnimation;
     }
 
@@ -63,6 +64,8 @@ public class TutorialStage3 : MonoBehaviour, Observer {
 
     public void PlayZoomHazardAnimation()
     {
+        door.SetActive(true);
+
         // disable input
         var evt = new ObserverEvent(EventName.DisableInput);
         Subject.instance.Notify(gameObject, evt);

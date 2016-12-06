@@ -12,6 +12,7 @@ public class SubtitlesByCategory
     public List<Subtitle> gasLeak;
     public List<Subtitle> lowOxygen;
     public List<Subtitle> outOfOxygen;
+    public List<Subtitle> explosion;
 
     public List<Subtitle> GetSubtitles(SubtitleType type)
     {
@@ -33,6 +34,8 @@ public class SubtitlesByCategory
                 return lowOxygen;
             case SubtitleType.OutOfOxygen:
                 return outOfOxygen;
+            case SubtitleType.Explosion:
+                return explosion;
             default:
                 return null;
         }

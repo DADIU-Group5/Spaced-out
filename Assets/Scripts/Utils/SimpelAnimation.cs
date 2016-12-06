@@ -24,7 +24,8 @@ public class SimpelAnimation : MonoBehaviour {
 
     void Start()
     {
-        PlayAnimations(() => { });
+        if (playOnAwake)
+            PlayAnimations(() => { });
     }
 
     /// <summary>

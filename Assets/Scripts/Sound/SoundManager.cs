@@ -58,12 +58,15 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
             case EventName.OnFire:
                 PlayEvent(SoundEventConstants.DAVE_CATCH_FIRE);
-                Invoke("PutOutDave", 6.0f);
                 break;
 
             case EventName.Electrocuted:
                 PlayEvent(SoundEventConstants.DAVE_ELECTROCUTE);
-                Invoke("StopElectrocution", 5.0f);
+                break;
+
+            case EventName.PlayerExploded:
+                PlayEvent(SoundEventConstants.DAVE_CATCH_FIRE);
+
                 break;
 
             case EventName.PlayerCharge:
@@ -76,8 +79,6 @@ public class SoundManager : Singleton<SoundManager>, Observer
                         if (!chargePlaying)
                         {
                             PlayEvent(SoundEventConstants.DAVE_CHARGE);
-
-                            //AkSoundEngine.SetRTPCValue("jetpackChargeLevel", force1);
                             chargePlaying = true;
                         }
                         break;
@@ -99,17 +100,15 @@ public class SoundManager : Singleton<SoundManager>, Observer
             case EventName.Collision:
                 float force = (float)evt.payload[PayloadConstants.VELOCITY];
                 AkSoundEngine.SetRTPCValue("velocity", force * 10);
+
                 if ((bool)evt.payload[PayloadConstants.COLLISION_STATIC])
-                {
                     PlayEvent(SoundEventConstants.DAVE_STATIC_COLLISION, entity);
-                }
                 else
-                {
                     PlayEvent(SoundEventConstants.DAVE_OBJECT_COLLISION, entity);
-                }
+
                 break;
             case EventName.PlayerVentilated:
-                PlayEvent(SoundEventConstants.DAVE_VENT);
+                //PlayEvent(SoundEventConstants.DAVE_VENT);
                 break;
 
             case EventName.UIButton:
@@ -119,9 +118,13 @@ public class SoundManager : Singleton<SoundManager>, Observer
             case EventName.SwitchPressed:
 
                 if ((bool)evt.payload[PayloadConstants.SWITCH_ON])
+                {
                     PlayEvent(SoundEventConstants.SWITCH_ON, entity);
+                }
                 else
+                {
                     PlayEvent(SoundEventConstants.SWITCH_OFF, entity);
+                }
 
                 break;
             case EventName.ChangeLanguage:
@@ -145,7 +148,21 @@ public class SoundManager : Singleton<SoundManager>, Observer
                     if ((bool)evt.payload[PayloadConstants.START_LEVEL])
                         StartMusic();
                 break;
+
+            case EventName.PlayerWon:
+                StopHazards(entity);
+                break;
+
+            case EventName.RespawnPlayer:
+                StopElectrocution();
+                PutOutDave();
+                break;
         }
+    }
+
+    public void StopHazards(GameObject entity)
+    {
+        PlayEvent("hazardsStop", entity);
     }
 
     private void SetLanguage(Language language)
@@ -183,12 +200,12 @@ public class SoundManager : Singleton<SoundManager>, Observer
         ResumeEvent(eventName, fadein);
     }
 
-    private void StopEvent(string eventName, float fadeout)
+    public void StopEvent(string eventName, float fadeout)
     {
         StopEvent(eventName, fadeout, gameObject);
     }
 
-    private void StopEvent(string eventName, float fadeout, GameObject entity)
+    public void StopEvent(string eventName, float fadeout, GameObject entity)
     {
         uint eventID;
         eventID = AkSoundEngine.GetIDFromString(eventName);

@@ -3,39 +3,39 @@
 	<Platform GUID="{2000E5B0-7655-4732-A442-4FEFA9DCCB30}">
 		<Banks>
 			<Language ID="0">
-				<File Name="Init" Hash="2264445542" Timestamp="131249964070000000"/>
-				<File Name="soundbank_alpha" Hash="4132884449" Timestamp="131250047790000000"/>
+				<File Name="Init" Hash="2710671486" Timestamp="131254168810000000"/>
+				<File Name="soundbank_alpha" Hash="3266587212" Timestamp="131254168810000000"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1634792240" Timestamp="131250047790000000"/>
+				<File Name="" Hash="2831994611" Timestamp="131254168810000000"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{42DB363A-CEA2-4B1F-8044-0B5E754A2D53}">
 		<Banks>
 			<Language ID="0">
-				<File Name="Init" Hash="1395200056" Timestamp="131249963550000000"/>
-				<File Name="soundbank_alpha" Hash="4132884449" Timestamp="131250047780000000"/>
+				<File Name="Init" Hash="3807915088" Timestamp="131254168790000000"/>
+				<File Name="soundbank_alpha" Hash="3266587212" Timestamp="131254168790000000"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1290709834" Timestamp="131250047780000000"/>
+				<File Name="" Hash="144647265" Timestamp="131254168790000000"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{C717B118-BC74-4BCF-9DE8-E56AEEC6EDEB}">
 		<Banks>
 			<Language ID="0">
-				<File Name="Init" Hash="3785908518" Timestamp="131249963030000000"/>
-				<File Name="soundbank_alpha" Hash="204067130" Timestamp="131250047770000000"/>
+				<File Name="Init" Hash="1882253758" Timestamp="131254168770000000"/>
+				<File Name="soundbank_alpha" Hash="497915298" Timestamp="131254168770000000"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2006293132" Timestamp="131250047770000000"/>
+				<File Name="" Hash="2727597906" Timestamp="131254168770000000"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

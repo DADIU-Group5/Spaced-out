@@ -8,6 +8,15 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
     [SerializeField]
     private GenerationData generationData;
 
+    void Start()
+    {
+        if (PlayerPrefs.GetInt("PlayedBefore") == 0)
+        {
+            RandomizeSeeds();
+            PlayerPrefs.SetInt("PlayedBefore", 1);
+        }
+    }
+
     /// <summary>
     /// resets the generation data to default
     /// </summary>
@@ -26,13 +35,12 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
     /// </summary>
     public void RandomizeSeeds()
     {
+        UnityEngine.Random.InitState(DateTime.Now.Hour + DateTime.Now.Minute + DateTime.Now.Second + DateTime.Now.Millisecond);
         ProgressManager.instance.Reset();
         for (int i = 0; i < generationData.levels.Length; i++)
         {
-            var level = generationData.levels[i];
-            level.exteriorSeed = RandomSeed();
-            level.interiorSeed = RandomSeed();
-            level.roomTheme = (Themes)UnityEngine.Random.Range(1, 3);
+            generationData.levels[i].exteriorSeed = RandomSeed();
+            generationData.levels[i].interiorSeed = RandomSeed();
         }
     }
 
@@ -83,5 +91,10 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
     {
         // creates a random int value
         return UnityEngine.Random.Range(0, int.MaxValue);
+    }
+
+    public float GetHazardPercentForCurrentLevel()
+    {
+        return generationData.levels[level - 1].hazardPercent;
     }
 }

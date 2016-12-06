@@ -122,7 +122,6 @@
 				<Event Id="3092587493" Name="pause" ObjectPath="\Events\Default Work Unit\gameState\pause"/>
 				<Event Id="2059739492" Name="pickupComic" ObjectPath="\Events\Default Work Unit\enviroment\pickupComic"/>
 				<Event Id="3467920165" Name="pickupKeys" ObjectPath="\Events\Default Work Unit\enviroment\pickupKeys"/>
-				<Event Id="3110939813" Name="pickupOxygen" ObjectPath="\Events\Default Work Unit\enviroment\pickupOxygen"/>
 				<Event Id="2388995740" Name="pickupTrex" ObjectPath="\Events\Default Work Unit\enviroment\pickupTrex"/>
 				<Event Id="4046533878" Name="remark1" ObjectPath="\Events\Default Work Unit\gal\remarks\remark1"/>
 				<Event Id="2792775538" Name="remark10" ObjectPath="\Events\Default Work Unit\gal\remarks\remark10"/>
@@ -141,6 +140,7 @@
 				<Event Id="4046533872" Name="remark7" ObjectPath="\Events\Default Work Unit\gal\remarks\remark7"/>
 				<Event Id="4046533887" Name="remark8" ObjectPath="\Events\Default Work Unit\gal\remarks\remark8"/>
 				<Event Id="4046533886" Name="remark9" ObjectPath="\Events\Default Work Unit\gal\remarks\remark9"/>
+				<Event Id="4279841335" Name="respawn" ObjectPath="\Events\Default Work Unit\dave\respawn"/>
 				<Event Id="1203400786" Name="restart" ObjectPath="\Events\Default Work Unit\gameState\restart"/>
 				<Event Id="1406654456" Name="slowmotionStart" ObjectPath="\Events\Default Work Unit\gameState\slowmotionStart"/>
 				<Event Id="2017509636" Name="slowmotionStop" ObjectPath="\Events\Default Work Unit\gameState\slowmotionStop"/>
@@ -199,7 +199,7 @@
 				</File>
 				<File Id="19945158" Language="SFX">
 					<ShortName>blæser.wav</ShortName>
-					<Path>SFX\blæser_6DE9CED7.wem</Path>
+					<Path>SFX\blæser_DAF950FB.wem</Path>
 				</File>
 				<File Id="21575732" Language="SFX">
 					<ShortName>explosion1.wav</ShortName>
@@ -311,7 +311,7 @@
 				</File>
 				<File Id="105906957" Language="SFX">
 					<ShortName>launch synth2.wav</ShortName>
-					<Path>SFX\launch synth2_E805ED92.wem</Path>
+					<Path>SFX\launch synth2_366EDA7E.wem</Path>
 				</File>
 				<File Id="107064225" Language="SFX">
 					<ShortName>narrative\narrativeDan9.wav</ShortName>
@@ -523,7 +523,7 @@
 				</File>
 				<File Id="263781592" Language="SFX">
 					<ShortName>gasloop.wav</ShortName>
-					<Path>SFX\gasloop_6DE9CED7.wem</Path>
+					<Path>SFX\gasloop_DAF950FB.wem</Path>
 				</File>
 				<File Id="271092841" Language="SFX">
 					<ShortName>GAL\English\narrative\final\narrative7.wav</ShortName>
@@ -635,7 +635,7 @@
 				</File>
 				<File Id="369241998" Language="SFX">
 					<ShortName>electricity loop.wav</ShortName>
-					<Path>SFX\electricity loop_6DE9CED7.wem</Path>
+					<Path>SFX\electricity loop_DAF950FB.wem</Path>
 				</File>
 				<File Id="377881980" Language="SFX">
 					<ShortName>atmos\hydralics7.wav</ShortName>
@@ -655,7 +655,7 @@
 				</File>
 				<File Id="391699126" Language="SFX">
 					<ShortName>oxygen.wav</ShortName>
-					<Path>SFX\oxygen_CFD21E99.wem</Path>
+					<Path>SFX\oxygen_13D18597.wem</Path>
 				</File>
 				<File Id="399018016" Language="SFX">
 					<ShortName>metal\F\metal impact F5.wav</ShortName>
@@ -707,7 +707,7 @@
 				</File>
 				<File Id="427171029" Language="SFX">
 					<ShortName>launch synth5.wav</ShortName>
-					<Path>SFX\launch synth5_1F6AE493.wem</Path>
+					<Path>SFX\launch synth5_E506BEF7.wem</Path>
 				</File>
 				<File Id="430918783" Language="SFX">
 					<ShortName>grunts\dave grunts 9.wav</ShortName>
@@ -883,7 +883,7 @@
 				</File>
 				<File Id="551964046" Language="SFX">
 					<ShortName>KEYS CHIME LOOP.wav</ShortName>
-					<Path>SFX\KEYS CHIME LOOP_6DE9CED7.wem</Path>
+					<Path>SFX\KEYS CHIME LOOP_DAF950FB.wem</Path>
 				</File>
 				<File Id="555734377" Language="SFX">
 					<ShortName>impacts\heavy impact4.wav</ShortName>
@@ -891,7 +891,7 @@
 				</File>
 				<File Id="556032845" Language="SFX">
 					<ShortName>gasonfire.wav</ShortName>
-					<Path>SFX\gasonfire_6DE9CED7.wem</Path>
+					<Path>SFX\gasonfire_DAF950FB.wem</Path>
 				</File>
 				<File Id="559213883" Language="SFX">
 					<ShortName>door shut2_1.wav</ShortName>
@@ -1143,7 +1143,7 @@
 				</File>
 				<File Id="693313243" Language="SFX">
 					<ShortName>launch synth1.wav</ShortName>
-					<Path>SFX\launch synth1_570EA8BE.wem</Path>
+					<Path>SFX\launch synth1_3D6CA1DA.wem</Path>
 				</File>
 				<File Id="693831123" Language="SFX">
 					<ShortName>jetpack synth2.wav</ShortName>
@@ -1355,7 +1355,7 @@
 				</File>
 				<File Id="860279208" Language="SFX">
 					<ShortName>launch synth3.wav</ShortName>
-					<Path>SFX\launch synth3_494649EE.wem</Path>
+					<Path>SFX\launch synth3_99262CDA.wem</Path>
 				</File>
 				<File Id="867057375" Language="SFX">
 					<ShortName>power up.wav</ShortName>
@@ -1371,7 +1371,7 @@
 				</File>
 				<File Id="871754042" Language="SFX">
 					<ShortName>launch synth4.wav</ShortName>
-					<Path>SFX\launch synth4_2941658E.wem</Path>
+					<Path>SFX\launch synth4_8177D2FA.wem</Path>
 				</File>
 				<File Id="873587437" Language="SFX">
 					<ShortName>Danish\switch\switchDAn3.wav</ShortName>

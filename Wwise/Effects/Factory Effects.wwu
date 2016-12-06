@@ -1778,7 +1778,7 @@
 						</Effect>
 						<Effect Name="Blue_Distant_Echoes" ID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
 							<PropertyList>
-								<Property Name="DryLevel" Type="Real32" Value="-96"/>
+								<Property Name="DryLevel" Type="Real32" Value="-2"/>
 								<Property Name="EnableCrossFeed" Type="bool" Value="True"/>
 								<Property Name="EnableFeedback" Type="bool" Value="True"/>
 								<Property Name="FilterFrequency" Type="Real32" Value="2507"/>
@@ -1974,7 +1974,7 @@
 															</Point>
 															<Point>
 																<XPos>100</XPos>
-																<YPos>0</YPos>
+																<YPos>-2.79223</YPos>
 																<Flags>37</Flags>
 															</Point>
 														</PointList>

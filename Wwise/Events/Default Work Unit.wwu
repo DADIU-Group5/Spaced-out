@@ -1173,6 +1173,27 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="respawn" ID="{067CD7EA-896E-4FF0-A370-7A114A6F631B}">
+							<ChildrenList>
+								<Action Name="Play" ID="{DCAE0ED9-AD21-4620-A03F-47EEE09597D3}" ShortID="712330725" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.7"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{6AA223D8-D409-4743-AFC4-6FFF4C8BDCF7}" Global="false">
+											<ObjectRef Name="oxygen" ID="{C53E9EA0-3E35-44F3-83A1-ACD808D25983}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{83F2DE78-B29D-441C-98CB-5F07EA4B2EA8}" ShortID="115347840" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{17D53020-B92F-484A-8328-A31DD9539BC0}" Global="false">
+											<ObjectRef Name="keys chime reward2" ID="{0C3FBE23-7945-47ED-B56B-6BB052646C27}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{7CC22D88-6C23-4DC3-A203-59A12B65F02A}" ShortID="773461650">
@@ -1337,17 +1358,6 @@
 									<ElementList>
 										<Element ID="{0061995E-C297-498A-925E-9D816CFFD5E5}" Global="false">
 											<ObjectRef Name="comic_ shitty" ID="{6DC55AB2-2E89-4E54-B461-CF88DE509C2B}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
-										</Element>
-									</ElementList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="pickupOxygen" ID="{067CD7EA-896E-4FF0-A370-7A114A6F631B}">
-							<ChildrenList>
-								<Action Name="Play" ID="{DCAE0ED9-AD21-4620-A03F-47EEE09597D3}" ShortID="712330725" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{6AA223D8-D409-4743-AFC4-6FFF4C8BDCF7}" Global="false">
-											<ObjectRef Name="oxygen" ID="{C53E9EA0-3E35-44F3-83A1-ACD808D25983}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>

@@ -277,7 +277,7 @@
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="pickupOxygen" ID="{067CD7EA-896E-4FF0-A370-7A114A6F631B}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<ObjectRef Name="respawn" ID="{067CD7EA-896E-4FF0-A370-7A114A6F631B}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
 							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
@@ -316,7 +316,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}"/>
-							<Value>15.6089193825043</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_RPM" ID="{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"/>
@@ -344,7 +344,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}"/>
-							<Value>98.2804232804233</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="sfxSideChain" ID="{898B4D00-A726-4AD1-9F5F-D2518D0994CF}"/>

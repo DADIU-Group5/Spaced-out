@@ -105,7 +105,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	2792775543	remark15			\Default Work Unit\gal\remarks\remark15	
 	2917121896	electricity			\Default Work Unit\enviroment\electricity	
 	3092587493	pause			\Default Work Unit\gameState\pause	
-	3110939813	pickupOxygen			\Default Work Unit\enviroment\pickupOxygen	
 	3193570530	daveLaunch			\Default Work Unit\dave\daveLaunch	
 	3273397333	atmosStop			\Default Work Unit\gameState\atmosStop	
 	3321711160	vent			\Default Work Unit\enviroment\vent	
@@ -138,6 +137,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	4046533887	remark8			\Default Work Unit\gal\remarks\remark8	
 	4058101365	gameStart			\Default Work Unit\gameState\gameStart	
 	4153348305	daveFireWoosh			\Default Work Unit\dave\daveFireWoosh	
+	4279841335	respawn			\Default Work Unit\dave\respawn	
 	4294846034	menuClickBackwards			\Default Work Unit\UI\menuClickBackwards	
 
 State Group	ID	Name			Wwise Object Path	Notes
@@ -342,7 +342,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	116050032	explosion6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\explosion6_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion6		10962
 	117874704	preexplosion	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\preexplosion_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\preexplosion		4029
 	120419077	metal impact F2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\metal\F\metal impact F2_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\F\metal impact F2		31594
-	124263028	keys chime reward2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\keys chime reward2_7075D2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys chime reward2		103146
+	124263028	keys chime reward2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\keys chime reward2_7075D2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\chimereward\keys chime reward2		103146
 	129103809	hvor er du bare Fan-tastisk_2_7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\GAL\Danish\fan\hvor er du bare Fan-tastisk.2.7_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan4\hvor er du bare Fan-tastisk_2_7		40520
 	131464271	remarkDan9	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\GAL\Danish\general remarks\final\remarkDan9_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark7\remarkDan9		16364
 	140590783	min analyse	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\GAL\Danish\general remarks\final\remarkDan3_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark6\min analyse		96198
@@ -420,7 +420,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	383218319	remarkDan5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\GAL\Danish\general remarks\final\remarkDan5_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark4\remarkDan5		37154
 	389819741	door close slide4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\door slide\door close slide4_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\door slide\close\door close slide4		3022
 	390605717	switchDAn6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\Danish\switch\switchDAn6_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch5\switchDAn6		62779
-	391699126	oxygen	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\oxygen_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\oxygen		36583
+	391699126	oxygen	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\oxygen_13D18597.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\oxygen		36023
 	399018016	metal impact F5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\metal\F\metal impact F5_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\F\metal impact F5		26396
 	399449157	power up	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\power down_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\power up		41509
 	399586230	launch mockup1 medium	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\launch mockup1 medium_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launch\launch mockup1 medium		19847
@@ -486,7 +486,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	572527449	door close slide5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\door slide\door close slide5_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\door slide\close\door close slide5		3009
 	572934450	hydralics4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\atmos\hydralics4_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics4		4996
 	573092875	metal impact g2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\metal\G\metal impact g2_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g2		32194
-	577442237	keys chime reward1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\keys chime reward1_3F39870D.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys chime reward1		74864
+	577442237	keys chime reward1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\keys chime reward1_3F39870D.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\chimereward\keys chime reward1		74864
 	578189822	blip blop sci fi forest long1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\blip blop\blip blop sci fi forest long1_B73642EA.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop sci fi forest long1		500794
 	578658333	blip blop random21	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\blip blop\blip blop random21_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random21		64690
 	581417438	object impact2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Mac\SFX\impacts\object impact2_470E9B54.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact2		4227

@@ -105,7 +105,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	2792775543	remark15			\Default Work Unit\gal\remarks\remark15	
 	2917121896	electricity			\Default Work Unit\enviroment\electricity	
 	3092587493	pause			\Default Work Unit\gameState\pause	
-	3110939813	pickupOxygen			\Default Work Unit\enviroment\pickupOxygen	
 	3193570530	daveLaunch			\Default Work Unit\dave\daveLaunch	
 	3273397333	atmosStop			\Default Work Unit\gameState\atmosStop	
 	3321711160	vent			\Default Work Unit\enviroment\vent	
@@ -138,6 +137,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	4046533887	remark8			\Default Work Unit\gal\remarks\remark8	
 	4058101365	gameStart			\Default Work Unit\gameState\gameStart	
 	4153348305	daveFireWoosh			\Default Work Unit\dave\daveFireWoosh	
+	4279841335	respawn			\Default Work Unit\dave\respawn	
 	4294846034	menuClickBackwards			\Default Work Unit\UI\menuClickBackwards	
 
 State Group	ID	Name			Wwise Object Path	Notes
@@ -307,7 +307,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	11557003	metal impact g3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\G\metal impact g3_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g3		32009
 	17473018	remarks15	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks15_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark15\remarks15		80830
 	18933449	outofocygen3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\out of oxygen\final\outofocygen3_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 3\outofocygen3		62933
-	19945158	blæser	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blæser_6DE9CED7.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\blæser		100776
+	19945158	blæser	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blæser_DAF950FB.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\blæser		56262
 	21575732	explosion1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\explosion1_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion1		11311
 	22107775	blip blop random6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random6_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random6		43199
 	24715317	bevar fatiningen	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan4_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires5\bevar fatiningen		50540
@@ -335,14 +335,14 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	98760664	remarkDan11	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan11_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark5\remarkDan11		103976
 	101226196	blev du forskrækket	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\electrocute\wiresDan3_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires6\blev du forskrækket		48130
 	104585137	object impact light3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact light3_87E7BC49.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light3		3623
-	105906957	launch synth2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch synth2_E805ED92.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth2		80734
+	105906957	launch synth2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch synth2_366EDA7E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth2		45760
 	107064225	narrativeDan9	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\narrative\narrativeDan9_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\what are you doing\narrativeDan9		46121
 	112371414	object impact light6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact light6_8BBB1322.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\light object impacts\object impact light6		3575
 	114230876	space wind	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\space wind_22A60087.wem		\Actor-Mixer Hierarchy\Default Work Unit\cinematics\space wind		189790
 	116050032	explosion6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\explosion6_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion6		10962
 	117874704	preexplosion	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\preexplosion_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\preexplosion		4029
 	120419077	metal impact F2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\F\metal impact F2_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\F\metal impact F2		31594
-	124263028	keys chime reward2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\keys chime reward2_7075D2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys chime reward2		103146
+	124263028	keys chime reward2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\keys chime reward2_7075D2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\chimereward\keys chime reward2		103146
 	129103809	hvor er du bare Fan-tastisk_2_7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\fan\hvor er du bare Fan-tastisk.2.7_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\fan\fan4\hvor er du bare Fan-tastisk_2_7		40520
 	131464271	remarkDan9	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan9_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark7\remarkDan9		16364
 	140590783	min analyse	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan3_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark6\min analyse		96198
@@ -387,7 +387,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	261205730	electrocute5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\electrocute5_539C5F29.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute5		41009
 	261596142	metal impact g4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\G\metal impact g4_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g4		29789
 	262597100	remarks1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks1_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark1\remarks1		49895
-	263781592	gasloop	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\gasloop_6DE9CED7.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\gasloop		169436
+	263781592	gasloop	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\gasloop_DAF950FB.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\gasloop		105393
 	271092841	narrative7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative7_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\u are lucky\narrative7		70115
 	271445821	metal impact C1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\C\metal impact C1_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\C\metal impact C1		25868
 	271878563	putoutfire3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\putoutfire3_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\putoutfire\putoutfire3		35673
@@ -415,12 +415,12 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	363675299	lowoxygen3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\low oxygen\final\lowoxygen3_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\low oxygen\lowO2 3\lowoxygen3		44486
 	366758689	switch1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\switch\final\switch1_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch1\switch1		37791
 	368979356	look dave	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\fire\final\fire2_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\gasleak\fire7\look dave		135231
-	369241998	electricity loop	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\electricity loop_6DE9CED7.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electricity loop		320082
+	369241998	electricity loop	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\electricity loop_DAF950FB.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electricity loop		197652
 	377881980	hydralics7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics7_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics7		25455
 	383218319	remarkDan5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan5_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark4\remarkDan5		37154
 	389819741	door close slide4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\door slide\door close slide4_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\door slide\close\door close slide4		3022
 	390605717	switchDAn6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\switch\switchDAn6_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch5\switchDAn6		62779
-	391699126	oxygen	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\oxygen_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\oxygen		36583
+	391699126	oxygen	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\oxygen_13D18597.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\oxygen		36023
 	399018016	metal impact F5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\F\metal impact F5_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\F\metal impact F5		26396
 	399449157	power up	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\power down_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\power up		41509
 	399586230	launch mockup1 medium	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch mockup1 medium_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launch\launch mockup1 medium		19847
@@ -433,7 +433,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	418672149	remarks14	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks14_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark14\remarks14		43225
 	421879619	heavy impact2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact2_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact2		5556
 	422239685	heavy impact8	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact8_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact8		6674
-	427171029	launch synth5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch synth5_1F6AE493.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth5		76118
+	427171029	launch synth5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch synth5_E506BEF7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth5		42469
 	430918783	dave grunts 9	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\grunts\dave grunts 9_41982B86.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\grunts\dave grunts 9		17746
 	432234945	blip blop sci fi forest short9	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest short9_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop low\blip blop low random\blip blop sci fi forest short9		20963
 	438058724	door open slide 5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\door slide\door open slide 5_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\door slide\open\door open slide 5		11321
@@ -476,9 +476,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	544555031	remarks3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks3_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark3\remarks3		62997
 	545959078	blip blop random3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random3_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random3		35731
 	546810305	metal impact no tone5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\metal impact no tone5_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metal\metal impact no tone5		38867
-	551964046	KEYS CHIME LOOP	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\KEYS CHIME LOOP_6DE9CED7.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\KEYS CHIME LOOP		286975
+	551964046	KEYS CHIME LOOP	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\KEYS CHIME LOOP_DAF950FB.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\KEYS CHIME LOOP		154872
 	555734377	heavy impact4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\heavy impact4_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\heavy impacts\heavy impact4		5298
-	556032845	gasonfire	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\gasonfire_6DE9CED7.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\gasonfire		87588
+	556032845	gasonfire	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\gasonfire_DAF950FB.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\gasonfire		61625
 	559213883	door shut2_1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\door shut2_1_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\door close\door shut2_1		10643
 	560816914	electrocute3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\electrocute3_AF30F9E8.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute3		93284
 	561239547	jetpack synth4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\jetpack synth4_A165BDCE.wem		\Actor-Mixer Hierarchy\Default Work Unit\jetpack\jetpack synth fx\jetpack synth4		21885
@@ -486,7 +486,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	572527449	door close slide5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\door slide\door close slide5_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\door slide\close\door close slide5		3009
 	572934450	hydralics4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\atmos\hydralics4_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\hydralics\hydralics4		4996
 	573092875	metal impact g2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\metal\G\metal impact g2_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\metalimpacts\metalnotes\G\metal impact g2		32194
-	577442237	keys chime reward1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\keys chime reward1_3F39870D.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\keys chime reward1		74864
+	577442237	keys chime reward1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\keys chime reward1_3F39870D.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\pickups\keys\chimereward\keys chime reward1		74864
 	578189822	blip blop sci fi forest long1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop sci fi forest long1_B73642EA.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop sci fi forest long1		500794
 	578658333	blip blop random21	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random21_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random21		64690
 	581417438	object impact2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact2_470E9B54.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact2		4227
@@ -541,7 +541,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	690851100	narrative6	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\narrative\final\narrative6_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\narrative\what are you doing\narrative6		51043
 	691152910	light impact8	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\light impact8_B7B9AFBE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\wall impacts\light impacts\light impact8		6746
 	692903098	wires4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\electrocute\final\wires4_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\wires\wires4\wires4		112940
-	693313243	launch synth1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch synth1_570EA8BE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth1		81460
+	693313243	launch synth1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch synth1_3D6CA1DA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth1		46220
 	693831123	jetpack synth2	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\jetpack synth2_66EAF9F2.wem		\Actor-Mixer Hierarchy\Default Work Unit\jetpack\jetpack synth fx\jetpack synth2		19708
 	694793896	remarkDan12	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan12_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark8\remarkDan12		57326
 	699581131	switchDAn7	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\switch\switchDAn7_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch7\switchDAn7		37805
@@ -594,11 +594,11 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	853230804	object impact5	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\impacts\object impact5_03AAB369.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\impacts\object impacts\heavy object impacts\object impact5		2933
 	854233652	remarkDan14	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\Danish\general remarks\final\remarkDan14_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark11\remarkDan14		100341
 	857782782	remarks11	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\general remarks\final\remarks11_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\general remarks\remark11\remarks11		68117
-	860279208	launch synth3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch synth3_494649EE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth3		81889
+	860279208	launch synth3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch synth3_99262CDA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth3		46571
 	867057375	power down	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\power up_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\enviroment\enviroment\power down		23407
 	868425316	outofocygen4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\GAL\English\out of oxygen\final\outofocygen4_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\out of oxygen\outofO2 4\outofocygen4		71092
 	868996355	blip blop random15	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\blip blop\blip blop random15_6926EB06.wem		\Actor-Mixer Hierarchy\Default Work Unit\atmos\atmos\blip blop high\blip blopdelay\blip blop random15		34762
-	871754042	launch synth4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch synth4_2941658E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth4		76586
+	871754042	launch synth4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\launch synth4_8177D2FA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dave\dave\launchsynth\launch synth4		42885
 	873587437	switchDAn3	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\Danish\switch\switchDAn3_7BADABE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gal\gal\switches\switch1\switchDAn3		47989
 	877963907	electrocute1	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\electrocute1_6E917673.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\electrocute\electrocute1		88987
 	878892781	explosion4	C:\Users\student\Documents\Spaced-out\Wwise\.cache\Windows\SFX\explosion4_CFD21E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\hazards\hazards\explosion sequence\explosion\explosion4		37865

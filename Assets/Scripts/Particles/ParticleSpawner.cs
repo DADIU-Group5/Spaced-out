@@ -74,6 +74,7 @@ public class ParticleSpawner : MonoBehaviour, Observer {
                 SpawnParticles(explodingBarrel, go.transform.position);
                 break;
 
+            case EventName.PickUpKey:
             case EventName.ComicPickup:
                 SpawnParticles(pickup, go.transform.position);
                 break;

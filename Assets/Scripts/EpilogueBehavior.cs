@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class EpilogueBehavior : MonoBehaviour, Observer
 {
@@ -12,6 +13,9 @@ public class EpilogueBehavior : MonoBehaviour, Observer
     public SimpelAnimation keyZoomAnimation; // zoom towards key
     public SimpelAnimation roomCamAnimation;
     public GameObject key;
+
+    public GameObject doorLock;
+    public GameObject wind;
 
 
     // Use this for initialization
@@ -62,6 +66,7 @@ public class EpilogueBehavior : MonoBehaviour, Observer
 
     private void OpenExitDoor()
     {
+        wind.SetActive(true);
         SoundManager.instance.StopEvent("keysAmbient", 0.5f, key);
         AkSoundEngine.PostEvent("spaceWind", gameObject);
         doorAnimation.PlayAnimations(FireDaveThroughExitDoor);
@@ -73,6 +78,7 @@ public class EpilogueBehavior : MonoBehaviour, Observer
         AkSoundEngine.PostEvent("musicCredits", gameObject);
         player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 12);
         player.GetComponentInChildren<RagdollAnimationBlender>().EnableRagdoll();
+        Invoke("LoadEpilogueMenu", 2.5f);
     }
 
     private void PlayKeyCollectedAnimation()
@@ -82,14 +88,46 @@ public class EpilogueBehavior : MonoBehaviour, Observer
 
         // stop dave
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        GameObject.FindGameObjectWithTag("Key").SetActive(false);
+        Invoke("RemoveKey", 0.75f);
         player.GetComponentInChildren<Animator>().SetTrigger("Pick Up");
         Invoke("Idle", 0.1f);
+    }
+
+    private void RemoveKey()
+    {
+        var evt = new ObserverEvent(EventName.PickUpKey);
+        Subject.instance.Notify(key, evt);
+        player.GetComponent<PlayerController>().aimRotateSpeed = 25f;
+        player.GetComponent<PlayerController>().ReadyForLaunch();
+        player.GetComponent<PlayerController>().Aim(doorLock.transform.position);
+        key.SetActive(false);
+        StartCoroutine(ScaleKey(1f, doorLock.transform));
+
+    }
+
+    private void LoadEpilogueMenu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(7);
     }
 
     private void Idle()
     {
         player.GetComponentInChildren<Animator>().SetTrigger("Ready To Launch");
+    }
+
+    IEnumerator ScaleKey(float t, Transform trans)
+    {
+        Vector3 newScale;
+        while (t > 0)
+        {
+            t -= Time.deltaTime;
+
+            newScale = Vector3.one * t;
+            newScale.z = 1;
+            trans.localScale = newScale;
+            yield return new WaitForEndOfFrame();
+        }
+        trans.gameObject.SetActive(false);
     }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)

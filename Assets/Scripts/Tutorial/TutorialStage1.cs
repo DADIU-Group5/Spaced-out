@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class TutorialStage1 : MonoBehaviour, Observer
@@ -13,7 +14,6 @@ public class TutorialStage1 : MonoBehaviour, Observer
     [Header("UI Tips")]
     public GameObject rotationTip;
     public GameObject powerTip;
-    public GameObject launchTip;
 
     public Brain gal;
 
@@ -40,7 +40,6 @@ public class TutorialStage1 : MonoBehaviour, Observer
         // setup UI tips
         rotationTip.SetActive(false);
         powerTip.SetActive(true);
-        launchTip.SetActive(false);
         // call once player hits trigger
         missingKeysTrigger.callback = BeginMissingKeysCutscene;
 
@@ -128,54 +127,12 @@ public class TutorialStage1 : MonoBehaviour, Observer
         Subject.instance.Notify(gameObject, statusEvent);
     }
 
-    void OnTriggerEnter(Collider coll)
-    {
-        //if (coll.CompareTag("Tutorial Room"))
-        //{
-        //    coll.gameObject.SetActive(false);
-        //    SetStaticCamera();
-        //    GetComponent<Rigidbody>().velocity = new Vector3(7.5f, 0, 0);
-        //}
-        //else if (coll.CompareTag("Tutorial Door"))
-        //{
-        //    coll.gameObject.SetActive(false);
-        //    SetDoorCamera();
-        //    Invoke("ToggleKeyTrigger", 2.5f);
-        //}
-        //else if (coll.CompareTag("Tutorial Trigger"))
-        //{
-        //    coll.gameObject.SetActive(false);
-        //    key.gameObject.SetActive(true);
-        //    Invoke("StartMovingCamera", 2.5f);
-        //    GetComponent<PlayerController>().ReadyForLaunch();
-        //    GetComponent<Rigidbody>().velocity = Vector3.zero;
-        //    //animator.SetTrigger("Missing Keys");
-        //    var statusEvent = new ObserverEvent(EventName.DisableInput);
-        //    Subject.instance.Notify(gameObject, statusEvent);
-        //}
-    }
-
-
-
     // Returns the pixel center of the camera.
     private Vector2 ScreenCenter()
     {
         return new Vector2(Camera.main.pixelWidth / 2f, Camera.main.pixelHeight / 2f);
     }
-    /*
-    private void StopSoundEvent(string eventName, float fadeout)
-    {
-        uint eventID;
-        eventID = AkSoundEngine.GetIDFromString(eventName);
-        int fadeoutMs = (int)fadeout * 1000;
-        AkSoundEngine.ExecuteActionOnEvent(
-            eventID,
-            AkActionOnEventType.AkActionOnEventType_Stop,
-            gameObject, fadeoutMs,
-            AkCurveInterpolation.
-            AkCurveInterpolation_Sine);
-    }
-    */
+
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
         switch(evt.eventName)
@@ -184,19 +141,44 @@ public class TutorialStage1 : MonoBehaviour, Observer
                 if (hasLaunched)
                     return;
                 float force = ((Vector2)evt.payload[PayloadConstants.LAUNCH_FORCE]).x;
-                bool showLaunchTip = force > 0;
-                powerTip.SetActive(!showLaunchTip);
-                launchTip.SetActive(showLaunchTip);
+                if (force == 0)
+                {
+                    powerTip.GetComponent<Animation>().Play();
+                    var rectTransform = powerTip.GetComponent<RectTransform>();
+                    StartCoroutine(HideWindow(rectTransform));
+                }
+
+                //powerTip.SetActive(hideLaunchTip);
                 break;
             case EventName.PlayerLaunch:
                 hasLaunched = true;
                 powerTip.SetActive(false);
-                launchTip.SetActive(false);
                 break;
             case EventName.PlayerWon:
                 SceneManager.LoadScene("TutStage02");
                 break;
         }
+    }
+
+    private IEnumerator HideWindow(RectTransform rect)
+    {
+        float t = 0;
+        float duration = 0.5f;
+        Vector2 startPos = rect.anchoredPosition;
+        Vector2 endPos = new Vector2(630, 300);
+        Vector3 startScale = rect.localScale;
+        Vector3 endScale = new Vector3(0.4f, 0.4f, 0.4f);
+
+        while (t < 1)
+        {
+            t += Time.deltaTime / duration;
+            rect.anchoredPosition = Vector2.Lerp(startPos, endPos, t);
+            rect.localScale = Vector3.Lerp(startScale, endScale, t);
+            yield return null;
+        }
+
+        rect.anchoredPosition = endPos;
+        rect.localScale = endScale;
     }
 
     public void OnDestroy()

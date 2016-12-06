@@ -23,6 +23,7 @@ public class TutorialStage1 : MonoBehaviour, Observer
     {
         Subject.instance.AddObserver(this);
 
+        // we have to start the music if the player has skipped the intro
         SoundManager.instance.StartMusic();
 
         launchTip.SetActive(true);
@@ -34,13 +35,16 @@ public class TutorialStage1 : MonoBehaviour, Observer
         // disable key
         key = GameObject.FindGameObjectWithTag("Key");
         key.SetActive(false);
+        
         // disable camera input
         var statusEvent = new ObserverEvent(EventName.DisableCameraInput);
         Subject.instance.Notify(gameObject, statusEvent);
+        
         // setup UI tips
-        rotationTip.SetActive(false);
-        powerTip.SetActive(true);
-        launchTip.SetActive(false);
+        //rotationTip.SetActive(false);
+        //powerTip.SetActive(true);
+        //launchTip.SetActive(false);
+        
         // call once player hits trigger
         missingKeysTrigger.callback = BeginMissingKeysCutscene;
 

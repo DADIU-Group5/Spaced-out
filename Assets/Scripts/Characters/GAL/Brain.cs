@@ -105,6 +105,10 @@ public class Brain : Singleton<Brain>, Observer
         {
             type = SubtitleType.Fan;
         }
+        else if (currentEvent.eventName == EventName.SwitchPressed)
+        {
+            type = SubtitleType.SwitchPressed;
+        }
         else
         {
             type = currentEvent.eventName.EventToSubtitleType();   

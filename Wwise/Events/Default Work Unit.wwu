@@ -966,16 +966,6 @@
 						</Event>
 						<Event Name="daveLaunch" ID="{FABF4B6D-90BB-474B-A3AE-F7110ED709BA}">
 							<ChildrenList>
-								<Action Name="Set Game Parameter" ID="{CE5CDB3E-50BE-4590-A8C6-F9F1844CF88F}" ShortID="546822127" Type="SetGameParameter" Scope="One" Global="true">
-									<PropertyList>
-										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
-									</PropertyList>
-									<ElementList>
-										<Element ID="{AC1544C6-66E4-4159-BD35-0A3CB829167F}" Global="true">
-											<ObjectRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
-										</Element>
-									</ElementList>
-								</Action>
 								<Action Name="Stop" ID="{C6FD244C-E0A1-4F5A-B2B0-489E211E77C6}" ShortID="886240378" Type="Stop" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{4688A6B3-2F04-4F45-B52B-069D7C864989}" Global="false">
@@ -990,6 +980,13 @@
 										</Element>
 									</ElementList>
 								</Action>
+								<Action Name="Play" ID="{D6450350-B55B-4404-AE73-CCFCC17F24F1}" ShortID="699913434" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{87900D66-5C32-4635-BD44-5A17E98F3C9C}" Global="false">
+											<ObjectRef Name="slo mo effect" ID="{3450FA5A-A0E0-43BB-80BF-588FC3EBBA7D}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 								<Action Name="Play" ID="{3ED66BBA-E6A3-49E2-8E5F-2FF16966253C}" ShortID="943046188" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{994F01D9-C8BC-41A8-908D-7ACF2AB7556E}" Global="false">
@@ -999,18 +996,19 @@
 								</Action>
 								<Action Name="Play" ID="{58C07CF3-B0A2-4874-B223-9AF658802AC1}" ShortID="942316146" Type="Play" Scope="One" Global="false">
 									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.7">
+										<Property Name="Delay" Type="Real64">
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{BBDF0296-AD93-45F1-A074-47E51A32A6F3}">
 														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
 															<Property Name="Max" Type="Real64" Value="0.7"/>
 														</PropertyList>
 													</Modifier>
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
-										<Property Name="Probability" Type="Real64" Value="50"/>
+										<Property Name="Probability" Type="Real64" Value="75"/>
 									</PropertyList>
 									<ElementList>
 										<Element ID="{EFEA028A-D33F-4D1F-9A41-6D8C196715A7}" Global="false">
@@ -1022,13 +1020,6 @@
 									<ElementList>
 										<Element ID="{19FFA03E-BFA4-4119-AB14-C95834ACEC69}" Global="false">
 											<ObjectRef Name="charge noise" ID="{DC318F8D-FDDD-42C0-AB9A-8758805C1320}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Play" ID="{D6450350-B55B-4404-AE73-CCFCC17F24F1}" ShortID="699913434" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{87900D66-5C32-4635-BD44-5A17E98F3C9C}" Global="false">
-											<ObjectRef Name="slo mo effect" ID="{3450FA5A-A0E0-43BB-80BF-588FC3EBBA7D}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -1605,12 +1596,34 @@
 						<Event Name="spaceWind" ID="{FCFC9D82-6916-4E5E-923C-2FC3C098690C}">
 							<ChildrenList>
 								<Action Name="Play" ID="{76FA340B-52EB-4610-BB01-C7443C3F5198}" ShortID="573261606" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{6A4CAEBE-8150-45C2-B66A-ABBC60754C52}" Global="false">
 											<ObjectRef Name="space wind" ID="{F2306465-894B-4E3B-AA4B-4A00A44671C0}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>
+								<Action Name="Stop" ID="{1D77FF89-5D5B-407C-BB8F-4A00971C0CC0}" ShortID="27777534" Type="Stop" Scope="One" Global="true">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="10"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{FB9C17E4-F788-41F3-893F-AD8E92FC654C}" Global="true">
+											<ObjectRef Name="space wind" ID="{F2306465-894B-4E3B-AA4B-4A00A44671C0}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{A381DFB4-6F69-4149-9FD6-D7C800A4EC92}" ShortID="563202823" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{DB46DB86-FFAA-4E84-930C-14FE69907DC5}" Global="false">
+											<ObjectRef Name="open" ID="{E83D6B16-2D02-4721-804E-3E9330D982FB}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{3EE12CD4-3D36-4AA6-A6D1-B84615D1AE66}" ShortID="859460138" Type="Play" Scope="One" Global="false"/>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>
@@ -1681,6 +1694,13 @@
 									<ElementList>
 										<Element ID="{E480C134-65BD-482E-9F46-A2537738FFD4}" Global="false">
 											<ObjectRef Name="musicCredits" ID="{D246BA3F-4D0B-4908-AFA8-91FFB3D93FC9}" WorkUnitID="{F5948B08-8EA0-455A-9A43-E3F403D87912}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{1396CE51-80AD-45B2-BEB4-B283FA7B0890}" ShortID="114692890" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{36B1FD4D-83BA-453F-8FE1-AD5C006B71DC}" Global="true">
+											<ObjectRef Name="KEYS CHIME LOOP" ID="{07D15E04-2418-45E6-B0C6-3585751FABB2}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>

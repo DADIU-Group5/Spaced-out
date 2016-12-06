@@ -3,21 +3,33 @@ using System.Collections;
 
 public class InitialForce : MonoBehaviour {
 
-    public bool applyOnStart = true; 
+    public bool applyOnStart = true;
+    public bool applyOnlyTorque;
     private float force = 3;
+    private Rigidbody body;
 
 	// Use this for initialization
 	void Start () {
+        body = GetComponent<Rigidbody>();
         if (applyOnStart)
-            ApplyForce();
+        {
+            if (applyOnlyTorque)
+                ApplyTorque();
+            else
+                ApplyForce();
+        }
 	}
+
+    public void ApplyTorque()
+    {
+        var min = 0.5f * Vector3.one;
+        var torque = min + Random.insideUnitSphere * 0.5f;
+        body.AddTorque(torque);
+    }
 
     public void ApplyForce()
     {
-        GetComponent<Rigidbody>().isKinematic = false;
-        float x = Random.Range(-force, force);
-        float y = Random.Range(-force, force);
-        float z = Random.Range(-force, force);
-        GetComponent<Rigidbody>().AddForce(new Vector3(x, y, z), ForceMode.Force);
+        body.isKinematic = false;
+        body.AddForce(Random.onUnitSphere * force, ForceMode.Force);
     }
 }

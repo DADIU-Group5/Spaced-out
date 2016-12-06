@@ -15,8 +15,6 @@ public class TutorialStage1 : MonoBehaviour, Observer
     public GameObject powerTip;
     public GameObject launchTip;
 
-    public Brain gal;
-
     private GameObject key;
     private bool hasLaunched;
 
@@ -25,7 +23,10 @@ public class TutorialStage1 : MonoBehaviour, Observer
     {
         Subject.instance.AddObserver(this);
 
+        // we have to start the music if the player has skipped the intro
         SoundManager.instance.StartMusic();
+
+        launchTip.SetActive(true);
 
         var evt = new ObserverEvent(EventName.PlayerSpawned);
         evt.payload.Add(PayloadConstants.PLAYER, player);
@@ -34,18 +35,21 @@ public class TutorialStage1 : MonoBehaviour, Observer
         // disable key
         key = GameObject.FindGameObjectWithTag("Key");
         key.SetActive(false);
+        
         // disable camera input
         var statusEvent = new ObserverEvent(EventName.DisableCameraInput);
         Subject.instance.Notify(gameObject, statusEvent);
+        
         // setup UI tips
-        rotationTip.SetActive(false);
-        powerTip.SetActive(true);
-        launchTip.SetActive(false);
+        //rotationTip.SetActive(false);
+        //powerTip.SetActive(true);
+        //launchTip.SetActive(false);
+        
         // call once player hits trigger
         missingKeysTrigger.callback = BeginMissingKeysCutscene;
 
         //guidanceObject.Activate();
-        gal.Narrate("narrative3");
+        Brain.instance.Narrate("narrative3");
     }
     
     private void BeginMissingKeysCutscene()
@@ -82,7 +86,7 @@ public class TutorialStage1 : MonoBehaviour, Observer
         var statusEvent = new ObserverEvent(EventName.EnableInput);
         Subject.instance.Notify(gameObject, statusEvent);
 
-        gal.Narrate("narrative7");
+        Brain.instance.Narrate("narrative7");
 
         // begin aim phase
         aimTrigger.SetActive(true);
@@ -118,7 +122,7 @@ public class TutorialStage1 : MonoBehaviour, Observer
     private void AimSuccess()
     {
         //StopSoundEvent("narrative3", 0.5f);
-        gal.Narrate("narrative5");
+        Brain.instance.Narrate("narrative5");
         rotationTip.SetActive(false);
     }
 
@@ -155,27 +159,12 @@ public class TutorialStage1 : MonoBehaviour, Observer
         //}
     }
 
-
-
     // Returns the pixel center of the camera.
     private Vector2 ScreenCenter()
     {
         return new Vector2(Camera.main.pixelWidth / 2f, Camera.main.pixelHeight / 2f);
     }
-    /*
-    private void StopSoundEvent(string eventName, float fadeout)
-    {
-        uint eventID;
-        eventID = AkSoundEngine.GetIDFromString(eventName);
-        int fadeoutMs = (int)fadeout * 1000;
-        AkSoundEngine.ExecuteActionOnEvent(
-            eventID,
-            AkActionOnEventType.AkActionOnEventType_Stop,
-            gameObject, fadeoutMs,
-            AkCurveInterpolation.
-            AkCurveInterpolation_Sine);
-    }
-    */
+
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
         switch(evt.eventName)

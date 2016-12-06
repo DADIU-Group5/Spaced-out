@@ -131,17 +131,17 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 SetLanguage((Language)evt.payload[PayloadConstants.LANGUAGE]);
                 break;
 
-            case EventName.Door:
-                if ((bool)evt.payload[PayloadConstants.DOOR_OPEN])
-                {
-                    StopEvent(SoundEventConstants.DOOR_OPEN, 0, entity);
-                    AkSoundEngine.PostEvent(SoundEventConstants.DOOR_OPEN, entity);
-                }
-                else
-                {
-                    AkSoundEngine.PostEvent(SoundEventConstants.DOOR_SHUT, entity);
-                }
-                break;
+            //case EventName.Door:
+            //    if ((bool)evt.payload[PayloadConstants.DOOR_OPEN])
+            //    {
+            //        StopEvent(SoundEventConstants.DOOR_OPEN, 0, entity);
+            //        AkSoundEngine.PostEvent(SoundEventConstants.DOOR_OPEN, entity);
+            //    }
+            //    else
+            //    {
+            //        AkSoundEngine.PostEvent(SoundEventConstants.DOOR_SHUT, entity);
+            //    }
+            //    break;
 
             case EventName.StartCutscene:
                 if (evt.payload.ContainsKey(PayloadConstants.START_LEVEL))

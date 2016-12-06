@@ -86,9 +86,9 @@ public class IntroCinematic : MonoBehaviour {
         Brain.instance.Narrate("narrative2");
     }
 
-    private void Remarks9()
+    private void Remark9()
     {
-        Brain.instance.Narrate("remarks9");
+        Brain.instance.Narrate("remark9");
     }
 
     private void PlayRest()

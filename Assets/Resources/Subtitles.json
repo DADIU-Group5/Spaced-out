@@ -40,11 +40,6 @@
 			"text": "You're lucky we have the technology to bring you back when you hurt yourself.",
 			"start": 0.0,
 			"duration": 5.5
-		}, {
-			"id": "narrative9",
-			"text": "Dave, your suit has sustained major blows.",
-			"start": 0.0,
-			"duration": 3.1
 		}],
 		"generalRemarks": [{
 			"id": "remark1",
@@ -404,11 +399,6 @@
 			"text": "Vi har teknologien til at bringe dig tilbage, når du kommer galt afsted. Heldigt for dig.",
 			"start": 0.0,
 			"duration": 5.6
-		}, {
-			"id": "narrative9",
-			"text": "Dave, din dragts iltniveau er nul.",
-			"start": 0.0,
-			"duration": 3.1
 		}],
 		"generalRemarks": [{
 			"id": "remark1",

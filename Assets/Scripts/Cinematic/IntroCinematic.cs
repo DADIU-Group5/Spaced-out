@@ -9,7 +9,6 @@ public class IntroCinematic : MonoBehaviour {
     private InitialForce[] floatingObjects;
     public CameraShake shakeAstroid;
     public CameraShake shakeImpact;
-    public SimpelAnimation sandwichAnim;
     public Transform comic;
 
     // Use this for initialization
@@ -59,7 +58,6 @@ public class IntroCinematic : MonoBehaviour {
         {
             floatingObj.ApplyForce();
         }
-
         StartCoroutine(HideComic());
     }
 

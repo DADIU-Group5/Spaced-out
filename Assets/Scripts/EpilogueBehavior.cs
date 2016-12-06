@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System;
 
-public class EpilogueBehavior : MonoBehaviour, Observer {
+public class EpilogueBehavior : MonoBehaviour, Observer
+{
     public DrawTrajectory trajectory;
     public GameObject player;
     public TutorialTrigger roomTrigger;
@@ -12,6 +11,7 @@ public class EpilogueBehavior : MonoBehaviour, Observer {
     public EntryCutScene ECS; // entry through door
     public SimpelAnimation keyZoomAnimation; // zoom towards key
     public SimpelAnimation roomCamAnimation;
+    public GameObject key;
 
 
     // Use this for initialization
@@ -21,6 +21,8 @@ public class EpilogueBehavior : MonoBehaviour, Observer {
         var evt = new ObserverEvent(EventName.StartCutscene);
         Subject.instance.Notify(gameObject, evt);
         ECS.StartCutScene(player);
+
+        SoundManager.instance.StopMusic();
 
         roomTrigger.callback = RoomEntered;
     }
@@ -60,17 +62,24 @@ public class EpilogueBehavior : MonoBehaviour, Observer {
 
     private void OpenExitDoor()
     {
+        SoundManager.instance.StopEvent("keysAmbient", 0.5f, key);
+        AkSoundEngine.PostEvent("spaceWind", gameObject);
         doorAnimation.PlayAnimations(FireDaveThroughExitDoor);
     }
 
     private void FireDaveThroughExitDoor()
     {
+        AkSoundEngine.PostEvent("suckedIntoSpace", gameObject);
+        AkSoundEngine.PostEvent("musicCredits", gameObject);
         player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 12);
         player.GetComponentInChildren<RagdollAnimationBlender>().EnableRagdoll();
     }
 
     private void PlayKeyCollectedAnimation()
     {
+        // play key pick up sound
+        AkSoundEngine.PostEvent("pickupKeys", gameObject);
+
         // stop dave
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         GameObject.FindGameObjectWithTag("Key").SetActive(false);
@@ -85,7 +94,7 @@ public class EpilogueBehavior : MonoBehaviour, Observer {
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
-        switch(evt.eventName)
+        switch (evt.eventName)
         {
             case EventName.PlayerSpawned:
                 PlayKeyZoomAnimation();

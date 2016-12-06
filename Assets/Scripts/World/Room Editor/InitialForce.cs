@@ -22,7 +22,7 @@ public class InitialForce : MonoBehaviour {
 
     public void ApplyTorque()
     {
-        var min = Vector3.one;
+        var min = 0.5f * Vector3.one;
         var torque = min + Random.insideUnitSphere * 0.5f;
         body.AddTorque(torque);
     }

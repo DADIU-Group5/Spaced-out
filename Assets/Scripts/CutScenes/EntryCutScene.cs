@@ -24,7 +24,6 @@ public class EntryCutScene : MonoBehaviour {
         
         // create a key model for the animation
         GameObject keyModel = Instantiate(keyPrefab, keyAnimParent.transform.position, Quaternion.identity, keyAnimParent.transform) as GameObject;
-        keyModel.GetComponent<SphereCollider>().enabled = false;
 
         // add player to cutscene animations 
         player = playerObj.transform;

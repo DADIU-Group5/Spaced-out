@@ -26,7 +26,7 @@ public class TutorialStage3 : MonoBehaviour {
         ECS.StartCutScene(go);
 
         // play camera animation after small delay
-        Invoke("PlayZoomOxygenAnimation", 1.5f);
+        Invoke("PlayZoomOxygenAnimation", 2.35f);
         secondRoom.callback = PlayZoomHazardAnimation;
     }
 
@@ -44,6 +44,12 @@ public class TutorialStage3 : MonoBehaviour {
     public void PlayZoomHazardAnimation()
     {
         door.SetActive(true);
+
+        // set fixed position and velocity for player
+        var player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = secondRoom.transform.position;
+        player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 5.5f); 
+
 
         // disable input
         var evt = new ObserverEvent(EventName.DisableInput);

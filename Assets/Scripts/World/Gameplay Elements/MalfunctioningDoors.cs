@@ -17,9 +17,6 @@ public class MalfunctioningDoors : MonoBehaviour {
 
     bool started = false;
 
-    public DoorCloseTrigger doorCloseTrigger;
-    public DoorOpenTrigger doorOpenTrigger;
-
     [HideInInspector]
     private Animator animator;
 
@@ -67,6 +64,7 @@ public class MalfunctioningDoors : MonoBehaviour {
         }
         doorIsMalfunctioning = false;
         animator.SetTrigger("Open");
+        AkSoundEngine.PostEvent(SoundEventConstants.DOOR_OPEN, gameObject);
         closed = false;
     }
 
@@ -76,6 +74,7 @@ public class MalfunctioningDoors : MonoBehaviour {
         if (staticDoor)
         {
             animator.SetTrigger("Open");
+            AkSoundEngine.PostEvent(SoundEventConstants.DOOR_OPEN, gameObject);
             closed = false;
         }
     }
@@ -88,6 +87,7 @@ public class MalfunctioningDoors : MonoBehaviour {
         }
         doorIsMalfunctioning = !doorIsMalfunctioning;
         animator.SetTrigger("Open");
+        AkSoundEngine.PostEvent(SoundEventConstants.DOOR_OPEN, gameObject);
         closed = false;
         if (doorIsMalfunctioning)
         {
@@ -159,15 +159,5 @@ public class MalfunctioningDoors : MonoBehaviour {
         {
             item.SetActive(false);
         }
-    }
-
-    void SoundOpen()
-    {
-        doorOpenTrigger.Open();
-    }
-
-    void SoundClose()
-    {
-        doorCloseTrigger.Close();
     }
 }

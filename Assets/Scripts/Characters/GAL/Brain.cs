@@ -97,13 +97,17 @@ public class Brain : Singleton<Brain>, Observer
                     type = SubtitleType.OutOfOxygen;
                     break;
                 case EventName.PlayerExploded:
-                    type = SubtitleType.Explosion;
+                    type = SubtitleType.GasLeak;
                     break;
             }
         }
         else if (currentEvent.eventName == EventName.PlayerVentilated)
         {
             type = SubtitleType.Fan;
+        }
+        else if (currentEvent.eventName == EventName.SwitchPressed)
+        {
+            type = SubtitleType.SwitchPressed;
         }
         else
         {

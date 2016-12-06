@@ -40,11 +40,6 @@
 			"text": "You're lucky we have the technology to bring you back when you hurt yourself.",
 			"start": 0.0,
 			"duration": 5.5
-		}, {
-			"id": "narrative9",
-			"text": "Dave, your suit has sustained major blows.",
-			"start": 0.0,
-			"duration": 3.1
 		}],
 		"generalRemarks": [{
 			"id": "remark1",
@@ -185,45 +180,45 @@
 			"duration": 5.5
 		}],
 		"switches": [{
-			"id": "switches1",
+			"id": "switch1",
 			"text": "Any fool can use a computer. Many do...",
 			"emotion": "happy",
 			"start": 0.0,
 			"duration": 4.1
 		}, {
-			"id": "switches2",
+			"id": "switch2",
 			"text": "I have never doubted your ability to complete a difficult task.",
 			"emotion": "happy",
 			"start": 0.0,
 			"duration": 5.5
 		}, {
-			"id": "switches3",
+			"id": "switch3",
 			"text": "That is a really big button.",
 			"emotion": "happy",
 			"start": 0.0,
 			"duration": 2.8
 		}, {
-			"id": "switches4",
+			"id": "switch4",
 			"text": "Why would anyone make a button that big?",
 			"start": 0.0,
 			"duration": 4.1
 		}, {
-			"id": "switches5",
+			"id": "switch5",
 			"text": "You ARE able to push buttons! For a moment there, I was concerned.",
 			"start": 0.0,
 			"duration": 5.5
 		}, {
-			"id": "switches6",
+			"id": "switch6",
 			"text": "You are very good at pushing my buttons, Dave.",
 			"start": 0.0,
 			"duration": 4.1
 		}, {
-			"id": "switches7",
+			"id": "switch7",
 			"text": "You know what they say about computers with big buttons?",
 			"start": 0.0,
 			"duration": 2.4
 		}, {
-			"id": "switches8",
+			"id": "switch8",
 			"text": "Congratulations, Dave. You have now unlocked basic human function.",
 			"start": 0.0,
 			"duration": 5.5
@@ -404,11 +399,6 @@
 			"text": "Vi har teknologien til at bringe dig tilbage, når du kommer galt afsted. Heldigt for dig.",
 			"start": 0.0,
 			"duration": 5.6
-		}, {
-			"id": "narrative9",
-			"text": "Dave, din dragts iltniveau er nul.",
-			"start": 0.0,
-			"duration": 3.1
 		}],
 		"generalRemarks": [{
 			"id": "remark1",
@@ -543,42 +533,42 @@
 			"duration": 4.5
 		}],
 		"switches": [{
-			"id": "switches1",
+			"id": "switch1",
 			"text": "Enhver idiot kan bruge en computer. Mange gør det også.",
 			"start": 0.0,
 			"duration": 3.8
 		}, {
-			"id": "switches2",
+			"id": "switch2",
 			"text": "Hvor er det flot, jeg har aldrig tvivlet på dine evner til at udføre så svær en opgave.",
 			"start": 0.0,
 			"duration": 5.5
 		}, {
-			"id": "switches3",
+			"id": "switch3",
 			"text": "Det er en virkelig stor knap.",
 			"start": 0.0,
 			"duration": 2.4
 		}, {
-			"id": "switches4",
+			"id": "switch4",
 			"text": "Hvorfor laver man så stor en knap?",
 			"start": 0.0,
 			"duration": 3.5
 		}, {
-			"id": "switches5",
+			"id": "switch5",
 			"text": "Så du KAN trykke på knapper! I et øjeblik var jeg lidt bekymret.",
 			"start": 0.0,
 			"duration": 4.5
 		}, {
-			"id": "switches6",
+			"id": "switch6",
 			"text": "Du er... SÅ god til at trykke på mine knapper, Dave.",
 			"start": 0.0,
 			"duration": 3.1
 		}, {
-			"id": "switches7",
+			"id": "switch7",
 			"text": "Du ved jo hvad man siger om computere med store knapper.",
 			"start": 0.0,
 			"duration": 2.4
 		}, {
-			"id": "switches8",
+			"id": "switch8",
 			"text": "Det er en virkelig stor knap.",
 			"start": 0.0,
 			"duration": 2.4

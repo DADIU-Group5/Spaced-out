@@ -13,7 +13,9 @@ public class IntroCinematic : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        //soundManager.DisableSounds();
+        // in case player got here from the menu while playing a different level
+        SoundManager.instance.StopMusic();
+
         Invoke("CinematicSound", 0.0f);
         Invoke("Narrative1", 2.0f);
         Invoke("Narrative2", 11.0f);
@@ -84,9 +86,9 @@ public class IntroCinematic : MonoBehaviour {
         Brain.instance.Narrate("narrative2");
     }
 
-    private void Remarks9()
+    private void Remark9()
     {
-        Brain.instance.Narrate("remarks9");
+        Brain.instance.Narrate("remark9");
     }
 
     private void PlayRest()

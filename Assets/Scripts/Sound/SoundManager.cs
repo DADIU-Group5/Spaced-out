@@ -47,14 +47,22 @@ public class SoundManager : Singleton<SoundManager>, Observer
     {
         switch (evt.eventName)
         {
+            case EventName.PlayerLaunch:
+                PlayEvent(SoundEventConstants.DAVE_LAUNCH, gameObject);
+                chargePlaying = false;
+                break;
+
             case EventName.Narrate:
                 var eventName = (string)evt.payload[PayloadConstants.NARRATIVE_ID];
                 PlayEvent(eventName);
                 break;
 
-            case EventName.PlayerLaunch:
-                PlayEvent(SoundEventConstants.DAVE_LAUNCH, gameObject);
-                chargePlaying = false;
+            case EventName.PlayerVelocity:
+                var velocity = (float)evt.payload[PayloadConstants.VELOCITY];
+               // print("Victor velocity: " + velocity);
+                AkSoundEngine.SetRTPCValue("velocity2", velocity * 10);  
+                // VICOYR
+
                 break;
 
             case EventName.OnFire:

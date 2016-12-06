@@ -1791,6 +1791,13 @@
 										</Element>
 									</ElementList>
 								</Action>
+								<Action Name="Play" ID="{D92B07DE-BFC3-42F5-B671-5C16F57C3337}" ShortID="1071655637" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{6087300C-5B32-4400-A225-901D95E019D9}" Global="false">
+											<ObjectRef Name="airdrag" ID="{F531F20F-7E93-44CF-9E05-98BE0E6F2967}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="atmosStop" ID="{05E9F216-EF0D-4360-8547-666CC68CD8EA}">

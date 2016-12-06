@@ -404,7 +404,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 						<Flags>5</Flags>
 					</Point>
 					<Point>
-						<XPos>0.0519466666666667</XPos>
+						<XPos>5.19466666666667E-02</XPos>
 						<YPos>195.918</YPos>
 						<Flags>0</Flags>
 					</Point>
@@ -639,7 +639,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 						<Flags>5</Flags>
 					</Point>
 					<Point>
-						<XPos>0.0584421686746988</XPos>
+						<XPos>5.84421686746988E-02</XPos>
 						<YPos>0</YPos>
 						<Flags>0</Flags>
 					</Point>
@@ -874,7 +874,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 						<Flags>5</Flags>
 					</Point>
 					<Point>
-						<XPos>0.0681825301204819</XPos>
+						<XPos>6.81825301204819E-02</XPos>
 						<YPos>0</YPos>
 						<Flags>0</Flags>
 					</Point>
@@ -6337,7 +6337,7 @@ RPM - a throttle control for the engine</Comment>
 				</PropertyList>
 				<PointList>
 					<Point>
-						<XPos>1E-05</XPos>
+						<XPos>0.00001</XPos>
 						<YPos>0</YPos>
 						<Flags>12</Flags>
 						<Time>0</Time>
@@ -10894,7 +10894,7 @@ Presence is roughly related to distance and occlusion</Comment>
 				</PropertyList>
 				<PointList>
 					<Point>
-						<XPos>1E-05</XPos>
+						<XPos>0.00001</XPos>
 						<YPos>-0.59347</YPos>
 						<Flags>12</Flags>
 						<Time>0</Time>
@@ -11348,6 +11348,17 @@ Presence is roughly related to distance and occlusion</Comment>
 								<Sound Name="airdrag" ID="{F531F20F-7E93-44CF-9E05-98BE0E6F2967}" ShortID="144602667" Type="SoundFX">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-13</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>20</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -11355,6 +11366,9 @@ Presence is roughly related to distance and occlusion</Comment>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvbatmos" ID="{562DE2B7-4E68-4373-A5C3-BCA520A72E06}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -11380,20 +11394,20 @@ Presence is roughly related to distance and occlusion</Comment>
 																		<SegmentShape>Exp3</SegmentShape>
 																	</Point>
 																	<Point>
-																		<XPos>49.94083</XPos>
-																		<YPos>-1359.03615</YPos>
+																		<XPos>50.17978</XPos>
+																		<YPos>-1830.71245</YPos>
 																		<Flags>0</Flags>
 																		<SegmentShape>Exp3</SegmentShape>
 																	</Point>
 																	<Point>
-																		<XPos>83.43195</XPos>
-																		<YPos>-586.56919</YPos>
+																		<XPos>82.95405</XPos>
+																		<YPos>-1113.73682</YPos>
 																		<Flags>0</Flags>
 																		<SegmentShape>Log3</SegmentShape>
 																	</Point>
 																	<Point>
 																		<XPos>100</XPos>
-																		<YPos>-532.04819</YPos>
+																		<YPos>-948.23316</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -11406,7 +11420,7 @@ Presence is roughly related to distance and occlusion</Comment>
 														<RTPC Name="" ID="{57984B72-D32B-4613-A572-6F0E26FA2567}" ShortID="297726860">
 															<ReferenceList>
 																<Reference Name="ControlInput">
-																	<ObjectRef Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+																	<ObjectRef Name="velocity2" ID="{437B7395-5498-439E-A447-C6AC63340C6B}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 																</Reference>
 															</ReferenceList>
 															<Curve Name="" ID="{50E7258C-C1FC-43AD-A1E6-88DD7A3A1B28}">
@@ -11416,7 +11430,7 @@ Presence is roughly related to distance and occlusion</Comment>
 																<PointList>
 																	<Point>
 																		<XPos>0</XPos>
-																		<YPos>-0.94464</YPos>
+																		<YPos>-0.29724</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
@@ -11434,7 +11448,7 @@ Presence is roughly related to distance and occlusion</Comment>
 														<RTPC Name="" ID="{FA1089A1-60EC-48F2-825A-B64E8A91E7C1}" ShortID="629582307">
 															<ReferenceList>
 																<Reference Name="ControlInput">
-																	<ObjectRef Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+																	<ObjectRef Name="velocity2" ID="{437B7395-5498-439E-A447-C6AC63340C6B}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 																</Reference>
 															</ReferenceList>
 															<Curve Name="" ID="{B0F8147F-58A3-48ED-A113-842D1FA30963}">
@@ -11449,10 +11463,16 @@ Presence is roughly related to distance and occlusion</Comment>
 																		<SegmentShape>Exp3</SegmentShape>
 																	</Point>
 																	<Point>
-																		<XPos>5.2071</XPos>
+																		<XPos>1.86181</XPos>
 																		<YPos>-96.3</YPos>
 																		<Flags>0</Flags>
 																		<SegmentShape>Exp3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>49.23686</XPos>
+																		<YPos>-10.25792</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>SCurve</SegmentShape>
 																	</Point>
 																	<Point>
 																		<XPos>100</XPos>
@@ -11469,7 +11489,7 @@ Presence is roughly related to distance and occlusion</Comment>
 														<RTPC Name="" ID="{00CB805C-6EE8-4321-AE4B-7EBD04EC9D0E}" ShortID="485302491">
 															<ReferenceList>
 																<Reference Name="ControlInput">
-																	<ObjectRef Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+																	<ObjectRef Name="velocity2" ID="{437B7395-5498-439E-A447-C6AC63340C6B}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 																</Reference>
 															</ReferenceList>
 															<Curve Name="" ID="{6ADA3465-669D-41F2-B385-C815553BB68A}">
@@ -11484,8 +11504,14 @@ Presence is roughly related to distance and occlusion</Comment>
 																		<SegmentShape>Exp3</SegmentShape>
 																	</Point>
 																	<Point>
+																		<XPos>90.6586826347305</XPos>
+																		<YPos>3.53784561157227E-02</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Log3</SegmentShape>
+																	</Point>
+																	<Point>
 																		<XPos>100</XPos>
-																		<YPos>0.08795</YPos>
+																		<YPos>0.12262</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -11498,7 +11524,7 @@ Presence is roughly related to distance and occlusion</Comment>
 														<RTPC Name="" ID="{3DBFC87A-A665-44D0-B38E-FBD79D2FCA9F}" ShortID="852955300">
 															<ReferenceList>
 																<Reference Name="ControlInput">
-																	<ObjectRef Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+																	<ObjectRef Name="velocity2" ID="{437B7395-5498-439E-A447-C6AC63340C6B}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 																</Reference>
 															</ReferenceList>
 															<Curve Name="" ID="{45750D57-6400-4F63-94AE-B95FA3E55174}">
@@ -11514,7 +11540,7 @@ Presence is roughly related to distance and occlusion</Comment>
 																	</Point>
 																	<Point>
 																		<XPos>100</XPos>
-																		<YPos>-2.98797</YPos>
+																		<YPos>-1.8266</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -11527,7 +11553,7 @@ Presence is roughly related to distance and occlusion</Comment>
 														<RTPC Name="" ID="{3DEEF8D2-03B8-4B22-9D62-CD7240F11A04}" ShortID="1025494638">
 															<ReferenceList>
 																<Reference Name="ControlInput">
-																	<ObjectRef Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+																	<ObjectRef Name="velocity2" ID="{437B7395-5498-439E-A447-C6AC63340C6B}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 																</Reference>
 															</ReferenceList>
 															<Curve Name="" ID="{08A8D1FB-4218-469D-AF71-3894FBD680D3}">
@@ -11541,14 +11567,14 @@ Presence is roughly related to distance and occlusion</Comment>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>50.05917</XPos>
-																		<YPos>0</YPos>
+																		<XPos>50.53707</XPos>
+																		<YPos>0.07515</YPos>
 																		<Flags>0</Flags>
 																		<SegmentShape>Exp3</SegmentShape>
 																	</Point>
 																	<Point>
 																		<XPos>100</XPos>
-																		<YPos>0.20241</YPos>
+																		<YPos>0.49711</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -11583,7 +11609,11 @@ Presence is roughly related to distance and occlusion</Comment>
 </PluginData>
 											<PluginInnerObjectList>
 												<List Name="Deflectors">
-													<PluginInnerObject Name="" ID="{DCBE66C7-FC97-4662-960C-DA0E2910AFDE}" PluginName="Deflector" CompanyID="0" PluginID="121"/>
+													<PluginInnerObject Name="" ID="{DCBE66C7-FC97-4662-960C-DA0E2910AFDE}" PluginName="Deflector" CompanyID="0" PluginID="121">
+														<PropertyList>
+															<Property Name="Frequency" Type="Real32" Value="200"/>
+														</PropertyList>
+													</PluginInnerObject>
 												</List>
 											</PluginInnerObjectList>
 										</SourcePlugin>

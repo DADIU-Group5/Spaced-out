@@ -36,7 +36,7 @@ public class Fan : MonoBehaviour
     }
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         distance = Vector3.Distance(startPos.position, endPos.position);
         CapsuleCollider coll = GetComponent<CapsuleCollider>();

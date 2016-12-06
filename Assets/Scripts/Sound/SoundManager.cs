@@ -15,6 +15,9 @@ public class SoundManager : Singleton<SoundManager>, Observer
     private bool musicPlaying;
     private bool atmoshericSoundPlaying;
 
+    private float newRTPCForCharge;
+    private float previousRTPCFC;
+
     // Use this for initialization
     void Start()
     {
@@ -51,9 +54,7 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
             case EventName.PlayerLaunch:
                 PlayEvent(SoundEventConstants.DAVE_LAUNCH, gameObject);
-
                 chargePlaying = false;
-
                 break;
 
             case EventName.OnFire:
@@ -84,7 +85,7 @@ public class SoundManager : Singleton<SoundManager>, Observer
                         break;
 
                     case JetPackState.StopCharging:
-                        AkSoundEngine.SetRTPCValue("jetpackChargeLevel", 0);
+                        //AkSoundEngine.SetRTPCValue("jetpackChargeLevel", 0);
                         StopEvent(SoundEventConstants.DAVE_CHARGE, 0.0f);
                         chargePlaying = false;
 
@@ -93,8 +94,12 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 break;
 
             case EventName.LaunchPowerChanged:
+                previousRTPCFC = newRTPCForCharge;
+                
                 var forceVec = (Vector2)evt.payload[PayloadConstants.LAUNCH_FORCE];
-                AkSoundEngine.SetRTPCValue("jetpackChargeLevel", forceVec.x * 10.0f);
+                newRTPCForCharge = forceVec.x * 10.0f;
+
+                AkSoundEngine.SetRTPCValue("jetpackChargeLevel", previousRTPCFC);
                 break;
 
             case EventName.Collision:

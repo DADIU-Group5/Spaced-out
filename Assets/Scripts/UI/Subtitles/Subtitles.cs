@@ -17,9 +17,16 @@ public class Subtitles
 
     public Subtitle GetSubtitle(string id, Language language)
     {
-        if (language == Language.English)
-            return englishSubtitles.narrative.Find(s => s.id == id);
-        else
-            return danishSubtitles.narrative.Find(s => s.id == id);
+        var subtitles = language == Language.English ? englishSubtitles : danishSubtitles;
+
+        // really not cool hack but no time :(
+        var subList = id.Contains("narr") ? subtitles.narrative : subtitles.generalRemarks;
+
+        return subList.Find(s => s.id == id);
+
+        //if (language == Language.English)
+        //    return englishSubtitles.narrative.Find(s => s.id == id);
+        //else
+        //    return danishSubtitles.narrative.Find(s => s.id == id);
     }
 }

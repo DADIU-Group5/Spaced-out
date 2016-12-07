@@ -269,6 +269,10 @@
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="keysAmbient" ID="{C92E0D84-AA52-4381-BA90-B19F5426274A}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="atmosStart" ID="{89D83D7C-F2BD-46C6-BC86-21E6D8C98D5D}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
 							<Position X="2" Y="0"/>
 						</Module>
@@ -283,6 +287,18 @@
 						<Module>
 							<ObjectRef Name="gasLeak2" ID="{83278C14-37C0-499A-89B2-1B335090F4AE}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
 							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="spaceWind" ID="{FCFC9D82-6916-4E5E-923C-2FC3C098690C}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="suckedIntoSpace" ID="{FCAB4B24-6C13-437B-A881-344E053C4937}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="musicCredits" ID="{D6E25FDD-18C0-4A46-A534-FE38148A4F1C}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+							<Position X="5" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -300,7 +316,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}"/>
-							<Value>100</Value>
+							<Value>15.6089193825043</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_RPM" ID="{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"/>
@@ -328,7 +344,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}"/>
-							<Value>100</Value>
+							<Value>98.2804232804233</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="sfxSideChain" ID="{898B4D00-A726-4AD1-9F5F-D2518D0994CF}"/>
@@ -348,7 +364,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="musicVolume" ID="{94967744-CEA3-4D37-893D-F4A043DFEB29}"/>
-							<Value>50</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Freefall" ID="{2F2DFE37-4F9E-4D94-83D8-53CCA39781AD}"/>
@@ -375,6 +391,7 @@
 						<CurrentStateRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
 						<CurrentStateRef Name="unpaused" ID="{9E5A9166-EB7D-4BB1-8C1F-ACB6F66D5CBC}"/>
 						<CurrentStateRef Name="off" ID="{8CE3E364-66FA-4DE3-9D14-E500C95C290B}"/>
+						<CurrentStateRef Name="None" ID="{19D658AC-B690-4C40-9D7D-EB2CD27E55D2}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="dan" ID="{067E8178-15B4-4628-AEDE-BD89FB2A8F68}"/>

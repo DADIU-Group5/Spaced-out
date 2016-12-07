@@ -23,7 +23,6 @@ public class Fan : MonoBehaviour
     [HideInInspector]
     public Vector3 windDirection;
 
-    [HideInInspector]
     public GameplayElement itemState;
 
     // Internal list that tracks objects that enter this object's "zone"
@@ -51,9 +50,6 @@ public class Fan : MonoBehaviour
         {
             rotationDirection = transform.right;
         }
-
-
-        itemState = gameObject.GetComponent<GameplayElement>();
     }
 
     //for every frame, for every collider touching trigger.

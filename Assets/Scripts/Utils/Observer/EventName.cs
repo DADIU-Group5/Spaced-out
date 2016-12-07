@@ -59,5 +59,6 @@
     DisableCameraInput,
     EnableCameraInput,
     ChangeLanguage,
-    PlayerRecord
+    PlayerRecord,
+    PickUpKey
 }

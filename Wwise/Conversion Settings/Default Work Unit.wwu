@@ -7,9 +7,9 @@
 					<PropertyList>
 						<Property Name="Channels" Type="int32">
 							<ValueList>
-								<Value Platform="Windows">4</Value>
-								<Value Platform="Mac">4</Value>
-								<Value Platform="Android">4</Value>
+								<Value Platform="Windows">0</Value>
+								<Value Platform="Mac">0</Value>
+								<Value Platform="Android">0</Value>
 							</ValueList>
 						</Property>
 						<Property Name="LRMix" Type="Real64">

@@ -146,6 +146,18 @@ public class RoomFixer : MonoBehaviour
                 Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name);
             }
         }
+        foreach (Transform item in room.decorParent)
+        {
+            if (!(item.GetComponent<SwitchSelector>() == null && item.GetComponent<Door>() == null && item.GetComponent<ComicSelector>() == null && 
+                item.GetComponent<FloorSelector>() == null && item.GetComponent<OuterCornorSelector>() == null && item.GetComponent<InnerCornorSelector>() == null && 
+                item.GetComponent<WallSelector>() == null && item.GetComponent<StaticObjectSelector>() == null && item.GetComponent<StaticObjectSelector>() == null &&
+                item.GetComponent<FloatingProps>() == null && item.GetComponent<XLargeObjectSelector>() == null && item.GetComponent<LargeObjectSelector>() == null && 
+                item.GetComponent<MediumObjectSelector>() == null))
+            {
+                Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name + " Decor parent");
+            }
+        }
+
     }
 
     void MakeStatic(Transform parent)

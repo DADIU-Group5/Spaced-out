@@ -36,7 +36,7 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
     public void RandomizeSeeds()
     {
         UnityEngine.Random.InitState(DateTime.Now.Hour + DateTime.Now.Minute + DateTime.Now.Second + DateTime.Now.Millisecond);
-        ProgressManager.instance.Reset();
+        //ProgressManager.instance.Reset();
         for (int i = 0; i < generationData.levels.Length; i++)
         {
             generationData.levels[i].exteriorSeed = RandomSeed();

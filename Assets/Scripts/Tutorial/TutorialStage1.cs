@@ -27,6 +27,8 @@ public class TutorialStage1 : MonoBehaviour, Observer
 
         SoundManager.instance.StartMusic();
 
+        gal.randomRemarks = false;
+
         var evt = new ObserverEvent(EventName.PlayerSpawned);
         evt.payload.Add(PayloadConstants.PLAYER, player);
         Subject.instance.Notify(gameObject, evt);

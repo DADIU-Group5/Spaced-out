@@ -12,6 +12,8 @@ public class MenuSettings : MonoBehaviour {
     public Toggle cameraControls;
     public GameObject danish;
     public GameObject english;
+    public GameObject danishCredits;
+    public GameObject englishCredits;
 
     void Start()
     {
@@ -31,10 +33,12 @@ public class MenuSettings : MonoBehaviour {
             if (SettingsManager.instance.GetLanguage().ToString() == "English")
             {
                 english.SetActive(true);
+                englishCredits.SetActive(true);
             }
             else if(SettingsManager.instance.GetLanguage().ToString() == "Danish")
             {
                 danish.SetActive(true);
+                danishCredits.SetActive(true);
             }
         }
     }

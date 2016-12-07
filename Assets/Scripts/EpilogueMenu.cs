@@ -5,6 +5,6 @@ public class EpilogueMenu : MonoBehaviour {
 
 	public void GoToMainMenu()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 }

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MalfunctioningDoors : MonoBehaviour {
+public class MalfunctioningDoors : MonoBehaviour
+{
 
     public bool doorIsMalfunctioning = true;
     bool staticDoor = true;
@@ -17,30 +18,24 @@ public class MalfunctioningDoors : MonoBehaviour {
 
     bool started = false;
 
+    private DoorCloseTrigger doorCloseTrigger;
+    private DoorOpenTrigger doorOpenTrigger;
+
     [HideInInspector]
     private Animator animator;
 
     public void CloseOpenDoor()
     {
-        //var evt = new ObserverEvent(EventName.Door);
-        //evt.payload.Add(PayloadConstants.DOOR_OPEN, gameObject);
-        //doorOpenTrigger.Open();
         if (closed)
         {
+            doorOpenTrigger.Open();
             animator.SetTrigger("Open");
-            AkSoundEngine.PostEvent(SoundEventConstants.DOOR_OPEN, gameObject);
-            //doorOpenTrigger.Open();
-            //evt.payload.Add(PayloadConstants.DOOR_OPEN, true);
         }
         else
         {
+            doorCloseTrigger.Close();
             animator.SetTrigger("Close");
-            AkSoundEngine.PostEvent(SoundEventConstants.DOOR_SHUT, gameObject);
-            //doorCloseTrigger.Close();
-            //evt.payload.Add(PayloadConstants.DOOR_OPEN, false);
         }
-        
-        //Subject.instance.Notify(gameObject, evt);
     }
 
     public void LockDoor()
@@ -64,7 +59,7 @@ public class MalfunctioningDoors : MonoBehaviour {
         }
         doorIsMalfunctioning = false;
         animator.SetTrigger("Open");
-        AkSoundEngine.PostEvent(SoundEventConstants.DOOR_OPEN, gameObject);
+        //AkSoundEngine.PostEvent(SoundEventConstants.DOOR_OPEN, gameObject);
         closed = false;
     }
 
@@ -74,7 +69,7 @@ public class MalfunctioningDoors : MonoBehaviour {
         if (staticDoor)
         {
             animator.SetTrigger("Open");
-            AkSoundEngine.PostEvent(SoundEventConstants.DOOR_OPEN, gameObject);
+            //AkSoundEngine.PostEvent(SoundEventConstants.DOOR_OPEN, gameObject);
             closed = false;
         }
     }
@@ -87,7 +82,7 @@ public class MalfunctioningDoors : MonoBehaviour {
         }
         doorIsMalfunctioning = !doorIsMalfunctioning;
         animator.SetTrigger("Open");
-        AkSoundEngine.PostEvent(SoundEventConstants.DOOR_OPEN, gameObject);
+        //AkSoundEngine.PostEvent(SoundEventConstants.DOOR_OPEN, gameObject);
         closed = false;
         if (doorIsMalfunctioning)
         {
@@ -109,10 +104,17 @@ public class MalfunctioningDoors : MonoBehaviour {
         }
     }
 
+    void Start()
+    {
+        doorCloseTrigger = gameObject.GetComponentInParent<DoorCloseTrigger>();
+        doorOpenTrigger = gameObject.GetComponentInParent<DoorOpenTrigger>();
+    }
+
     // Use this for initialization
-    void Awake () {
+    void Awake()
+    {
         animator = gameObject.GetComponent<Animator>();
-        if(Random.Range(0,2) == 0)
+        if (Random.Range(0, 2) == 0)
         {
             EnableParticles();
             staticDoor = false;
@@ -122,9 +124,10 @@ public class MalfunctioningDoors : MonoBehaviour {
             DisableParticles();
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         if (staticDoor)
         {
             return;

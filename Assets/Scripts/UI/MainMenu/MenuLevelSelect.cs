@@ -17,6 +17,7 @@ public class MenuLevelSelect : MonoBehaviour {
     // loads the level
     public void LoadLevel(int level)
     {
+        AkSoundEngine.PostEvent("musicMainStop", gameObject);
         if (level == 0)
         {
             SceneManager.LoadScene("Intro Cinematic");

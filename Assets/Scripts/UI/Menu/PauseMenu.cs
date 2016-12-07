@@ -91,7 +91,8 @@ public class PauseMenu : MonoBehaviour {
         Debug.Log("Tring to load main menu");
         //remember to unpause;
         TogglePause();
-        //SceneManager.LoadScene(levelIndex);
+
+        SoundManager.instance.StopMusic();
         SceneManager.LoadScene("Main Menu");
     }
 

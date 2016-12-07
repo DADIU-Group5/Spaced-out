@@ -122,8 +122,8 @@ public class ProgressManager : Singleton<ProgressManager> {
         return new bool[] { levelProgress.starComplete, levelProgress.starComics, levelProgress.starBoosts}; 
     }
 
-    // get current amount of stars
-    public int GetStars() {
+    // get total number of stars
+    public int GetTotalStars() {
         return progress.stars;
     }
 

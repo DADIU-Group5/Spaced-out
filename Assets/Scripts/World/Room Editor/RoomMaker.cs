@@ -266,4 +266,10 @@ public class RoomMaker : MonoBehaviour {
         currentRoom.AddDecorObject(temp);
         return temp;
     }
+
+    public GameObject RotateObject(GameObject obj, Transform targetRot)
+    {
+        obj.transform.localRotation = targetRot.localRotation;
+        return obj;
+    }
 }

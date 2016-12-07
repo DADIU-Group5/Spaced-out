@@ -151,6 +151,7 @@ public class ProgressManager : Singleton<ProgressManager> {
         for (int i = 0; i < 5; i++)
         {
             progress.levels[i] = new Progress.LevelProgress();
+            progress.levels[i].bestBoostCount = 9999;
         }
         progress.stars = 0;
         progress.completedTutorial = false;

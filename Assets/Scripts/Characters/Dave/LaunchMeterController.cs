@@ -6,11 +6,14 @@ using System.Collections.Generic;
 public class LaunchMeterController : MonoBehaviour, Observer
 {
     public List<Renderer> bars;
+    public Material newMat;
+    private Material OrgMat;
     float delimiter;
 
     private void Awake()
     {
         Subject.instance.AddObserver(this);
+        OrgMat = bars[0].material;
     }
 
     private void Start()
@@ -26,6 +29,7 @@ public class LaunchMeterController : MonoBehaviour, Observer
         {
             if (current < t)
             {
+                bars[i].material = newMat;
                 if (i <= 1)
                 {
                     bars[i].material.color = new Color(34f / 225f, 177f / 225f, 76f / 225f); // Green
@@ -45,6 +49,7 @@ public class LaunchMeterController : MonoBehaviour, Observer
             }
             else
             {
+                bars[i].material = OrgMat;
                 bars[i].material.color = new Color(63f / 225f, 72f / 225f, 204f / 225f);
             }
         }

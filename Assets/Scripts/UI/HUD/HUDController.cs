@@ -25,11 +25,14 @@ public class HUDController : MonoBehaviour, Observer {
     private float chargeArrowYMin = 68f;
     private float chargeArrowYHeight = 350.0f;
 
+    private bool GALVisible;
+
     private bool gameOver = false;
 
     void Awake ()
     {
         Subject.instance.AddObserver(this);
+        GALVisible = true;
         //animator.StartPlayback();
         //gal.enabled = false;
     }
@@ -59,6 +62,11 @@ public class HUDController : MonoBehaviour, Observer {
         shotText.text = (""+ScoreManager.shotsFired).Replace("0","O");
     }
 
+    private void ShowGAL(bool show)
+    {
+        GALVisible = show;
+        //subtitleBackdrop.SetActive(show);
+    }
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
@@ -133,6 +141,9 @@ public class HUDController : MonoBehaviour, Observer {
             case EventName.ToggleUI:
                 gameObject.SetActive(!gameObject.activeSelf);
                 break;
+            case EventName.ToggleGAL:
+                GALVisible = (bool)evt.payload[PayloadConstants.SWITCH_ON];
+                break;
             case EventName.PlayerLaunch:
                 ShotsFired();
                 break;
@@ -156,18 +167,21 @@ public class HUDController : MonoBehaviour, Observer {
     /// </summary>
     public IEnumerator ShowSubtitle(string subText, float subStart, float subDuration)//, int emotion)
     {
-        yield return new WaitForSeconds(subStart);
+        if (GALVisible)
+        {
+            yield return new WaitForSeconds(subStart);
 
-        subtitleText.text = subText;
-        subtitleBackdrop.SetActive(true);
+            subtitleText.text = subText;
+            subtitleBackdrop.SetActive(true);
 
-        var evt = new ObserverEvent(EventName.GALAnimate);
-        evt.payload.Add(PayloadConstants.START_STOP, true);
-        Subject.instance.Notify(gameObject, evt);
+            var evt = new ObserverEvent(EventName.GALAnimate);
+            evt.payload.Add(PayloadConstants.START_STOP, true);
+            Subject.instance.Notify(gameObject, evt);
 
-        yield return new WaitForSeconds(subDuration);
+            yield return new WaitForSeconds(subDuration);
 
-        subtitleText.text = "";
-        subtitleBackdrop.SetActive(false);
+            subtitleText.text = "";
+            subtitleBackdrop.SetActive(false);
+        }
     }
 }

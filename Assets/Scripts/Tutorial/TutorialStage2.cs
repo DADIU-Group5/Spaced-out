@@ -23,6 +23,11 @@ public class TutorialStage2 : MonoBehaviour, Observer
 
         Brain.instance.randomRemarks = false;
 
+        // enable GAL
+        evt = new ObserverEvent(EventName.ToggleGAL);
+        evt.payload.Add(PayloadConstants.SWITCH_ON, true);
+        Subject.instance.Notify(gameObject, evt);
+
         // setup camera and disable inputs
         evt = new ObserverEvent(EventName.DisableInput);
         Subject.instance.Notify(gameObject, evt);

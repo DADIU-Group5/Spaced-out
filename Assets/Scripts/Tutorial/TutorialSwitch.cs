@@ -5,7 +5,7 @@ public class TutorialSwitch : MonoBehaviour
     public HazardState[] hazards;
     public Color offColour = Color.red;
     public Color onColour = Color.green;
-    private Renderer switchRenderer;
+    public Renderer switchRenderer;
     private bool on = false;
     public GameObject actualButtonPart;
 

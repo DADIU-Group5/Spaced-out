@@ -129,51 +129,51 @@
 			"duration": 9.6
 		}],
 		"wires": [{
-			"id": "wires1",
+			"id": "wire1",
 			"text": "- What is an electrician's favorite ice cream flavor? \n - Shock-o-lot! Hehehehe... Dave?",
 			"start": 0.0,
 			"duration": 8.2
 		}, {
-			"id": "wires2",
+			"id": "wire2",
 			"text": "I find the current situation... Shocking.",
 			"start": 0.0,
 			"duration": 4.1
 		}, {
-			"id": "wires3",
+			"id": "wire3",
 			"text": "You finally managed to get rid of that nasty electical charge. I'm ex-static!",
 			"start": 0.0,
 			"duration": 6.9
 		}, {
-			"id": "wires4",
+			"id": "wire4",
 			"text": "Dave, your suit is now fully charged. Ready to go! Come on, space cowboy. Dave?",
 			"emotion": "sad",
 			"start": 0.0,
 			"duration": 11.4
 		}, {
-			"id": "wires5",
+			"id": "wire5",
 			"text": "This is not how to take charge of your life, Dave.",
 			"emotion": "sad",
 			"start": 0.0,
 			"duration": 4.1
 		}, {
-			"id": "wires6",
+			"id": "wire6",
 			"text": "Did you find that shocking, Dave?",
 			"start": 0.0,
 			"duration": 4.1
 		}, {
-			"id": "wires7",
+			"id": "wire7",
 			"text": "There are better ways to put a spark in your life, Dave.",
 			"emotion": "sad",
 			"start": 0.0,
 			"duration": 4.3
 		}, {
-			"id": "wires8",
+			"id": "wire8",
 			"text": "Most people know to stay away from exposed high-voltage cables, Dave. But that is what makes you so special.",
 			"emotion": "happy",
 			"start": 0.0,
 			"duration": 8.0
 		}, {
-			"id": "wires9",
+			"id": "wire9",
 			"text": "With great power comes great responsibility. Dave?",
 			"emotion": "happy",
 			"start": 0.0,
@@ -487,47 +487,47 @@
 			"duration": 8.9
 		}],
 		"wires": [{
-			"id": "wires1",
+			"id": "wire1",
 			"text": "- Hvad er elektrikerens yndligs smag? \n- Chock-olade. Hahaha... Dave?",
 			"start": 0.0,
 			"duration": 7.9
 		}, {
-			"id": "wires2",
+			"id": "wire2",
 			"text": "Din nuværende situation er simpelthen chokerende!",
 			"start": 0.0,
 			"duration": 2.8
 		}, {
-			"id": "wires3",
+			"id": "wire3",
 			"text": "At se dig sådan her, Dave... Det gør mig helt ekstatisk!",
 			"start": 0.0,
 			"duration": 4.5
 		}, {
-			"id": "wires4",
+			"id": "wire4",
 			"text": "Dave, din dragt er nu fuldt opladt. Dave?",
 			"start": 0.0,
 			"duration": 4.5
 		}, {
-			"id": "wires5",
+			"id": "wire5",
 			"text": "Det er altså ikke det jeg mener, når jeg siger bevar fatningen, Dave.",
 			"start": 0.0,
 			"duration": 3.5
 		}, {
-			"id": "wires6",
+			"id": "wire6",
 			"text": "Blev du forskrækket Dave? Var det lidt chokerende?",
 			"start": 0.0,
 			"duration": 4.1
 		}, {
-			"id": "wires7",
+			"id": "wire7",
 			"text": "Der findes bedre måder at få gnisten tilbage i dit liv på, Dave.",
 			"start": 0.0,
 			"duration": 4.1
 		}, {
-			"id": "wires8",
+			"id": "wire8",
 			"text": "De fleste folk ved godt man holde sig fra højspændingskabler, Dave.",
 			"start": 0.0,
 			"duration": 4.0
 		}, {
-			"id": "wires9",
+			"id": "wire9",
 			"text": "At se dig sådan her, Dave... Det gør mig helt ekstatisk!",
 			"start": 0.0,
 			"duration": 4.5

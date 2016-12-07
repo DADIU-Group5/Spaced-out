@@ -111,7 +111,6 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
 
     void SaveData()
     {
-        Debug.LogError("savedfggg");
         int[] toSave = new int[5];
 
         toSave[0] = generationData.levels[0].exteriorSeed;

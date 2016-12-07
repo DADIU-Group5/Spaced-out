@@ -262,7 +262,8 @@ public class SoundManager : Singleton<SoundManager>, Observer
     public void SetMasterVolume(float volume)
     {
         masterVolume = volume;
-        AkSoundEngine.SetRTPCValue("masterVolume", volume);
+        if(!mute)
+            AkSoundEngine.SetRTPCValue("masterVolume", volume);
     }
 
     public void SetMusicVolume(float volume)

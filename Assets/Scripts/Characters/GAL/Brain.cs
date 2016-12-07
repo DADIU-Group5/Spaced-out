@@ -97,7 +97,7 @@ public class Brain : Singleton<Brain>, Observer
                     type = SubtitleType.OutOfOxygen;
                     break;
                 case EventName.PlayerExploded:
-                    type = SubtitleType.GasLeak;
+                    type = SubtitleType.Explosion;
                     break;
             }
         }

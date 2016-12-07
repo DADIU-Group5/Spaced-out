@@ -60,5 +60,6 @@
     EnableCameraInput,
     ChangeLanguage,
     PlayerRecord,
-    PlayerVelocity
+    PlayerVelocity,
+    PickUpKey
 }

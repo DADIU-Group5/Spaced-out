@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: a4b0bf1345056c54886e31c364a5177a
-timeCreated: 1479822381
+guid: 3b86fad661a995a44b0a938939d3e598
+timeCreated: 1481043281
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: openCommic
-    100002: //RootNode
-    400000: openCommic
-    400002: //RootNode
+    100000: //RootNode
+    100002: openCommic
+    400000: //RootNode
+    400002: openCommic
     2300000: openCommic
     3300000: openCommic
     4300000: openCommic

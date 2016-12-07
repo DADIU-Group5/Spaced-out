@@ -53,6 +53,7 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 break;
 
             case EventName.Narrate:
+                SetLanguage(SettingsManager.instance.GetLanguage());
                 var eventName = (string)evt.payload[PayloadConstants.NARRATIVE_ID];
                 PlayEvent(eventName);
                 break;

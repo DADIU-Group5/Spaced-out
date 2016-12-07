@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class TutorialStage1 : MonoBehaviour, Observer
@@ -7,26 +8,24 @@ public class TutorialStage1 : MonoBehaviour, Observer
     public GameObject playerCamera;
     [Header("Triggers")]
     public TutorialTrigger missingKeysTrigger;
-    public GameObject aimTrigger;
     [Header("Cameras")]
     public SimpelAnimation missingKeysCamera;
     [Header("UI Tips")]
     public GameObject rotationTip;
     public GameObject powerTip;
-    public GameObject launchTip;
+
+    public Brain gal;
 
     private GameObject key;
-    private bool hasLaunched;
+    private bool scaleGuide1, scaleGuide2;
+    private Vector3 startDir;
 
     // Use this for initialization
     void Start()
     {
         Subject.instance.AddObserver(this);
 
-        // we have to start the music if the player has skipped the intro
         SoundManager.instance.StartMusic();
-
-        launchTip.SetActive(true);
 
         var evt = new ObserverEvent(EventName.PlayerSpawned);
         evt.payload.Add(PayloadConstants.PLAYER, player);
@@ -35,25 +34,23 @@ public class TutorialStage1 : MonoBehaviour, Observer
         // disable key
         key = GameObject.FindGameObjectWithTag("Key");
         key.SetActive(false);
-        
         // disable camera input
         var statusEvent = new ObserverEvent(EventName.DisableCameraInput);
         Subject.instance.Notify(gameObject, statusEvent);
-        
         // setup UI tips
-        //rotationTip.SetActive(false);
-        //powerTip.SetActive(true);
-        //launchTip.SetActive(false);
-        
+        rotationTip.SetActive(false);
+        powerTip.SetActive(true);
         // call once player hits trigger
         missingKeysTrigger.callback = BeginMissingKeysCutscene;
 
         //guidanceObject.Activate();
-        Brain.instance.Narrate("narrative3");
+        gal.Narrate("narrative3");
     }
     
     private void BeginMissingKeysCutscene()
     {
+        powerTip.gameObject.SetActive(false);
+
         // spawn key
         key.SetActive(true);
 
@@ -72,6 +69,7 @@ public class TutorialStage1 : MonoBehaviour, Observer
     private void PlayMissingKeysAnimation()
     {
         player.GetComponentInChildren<Animator>().SetTrigger("Missing Keys");
+
     }
 
     // will be called once missing keys cutscene is over
@@ -86,12 +84,12 @@ public class TutorialStage1 : MonoBehaviour, Observer
         var statusEvent = new ObserverEvent(EventName.EnableInput);
         Subject.instance.Notify(gameObject, statusEvent);
 
-        Brain.instance.Narrate("narrative7");
+        gal.Narrate("narrative7");
 
         // begin aim phase
-        aimTrigger.SetActive(true);
         rotationTip.SetActive(true);
         // periodically check if player aims correctly
+        startDir = Camera.main.ScreenPointToRay(ScreenCenter()).direction;
         InvokeRepeating("CheckAim", 1f, 0.5f);
     }
 
@@ -101,20 +99,12 @@ public class TutorialStage1 : MonoBehaviour, Observer
         Ray ray = Camera.main.ScreenPointToRay(ScreenCenter());
         RaycastHit hit;
 
-        // Create layermask that ignores all Golfball and Ragdoll layers
-        int layermask1 = 1 << LayerMask.NameToLayer("Golfball");
-        int layermask2 = 1 << LayerMask.NameToLayer("Ragdoll");
-        int finalmask = ~(layermask1 | layermask2);
-
-        if (Physics.Raycast(ray, out hit, float.MaxValue, finalmask))
+        // scale down aim tutorial
+        if (!scaleGuide2 && startDir != ray.direction)
         {
-            if (hit.collider.gameObject == aimTrigger)
-            {
-                // stop periodically check for aim
-                CancelInvoke();
-                aimTrigger.SetActive(false);
-                AimSuccess();
-            }
+            var rectTransform = rotationTip.GetComponent<RectTransform>();
+            StartCoroutine(HideWindow(rectTransform));
+            scaleGuide2 = true;
         }
     }
 
@@ -122,7 +112,7 @@ public class TutorialStage1 : MonoBehaviour, Observer
     private void AimSuccess()
     {
         //StopSoundEvent("narrative3", 0.5f);
-        Brain.instance.Narrate("narrative5");
+        gal.Narrate("narrative5");
         rotationTip.SetActive(false);
     }
 
@@ -130,33 +120,6 @@ public class TutorialStage1 : MonoBehaviour, Observer
     {
         var statusEvent = new ObserverEvent(EventName.ToggleUI);
         Subject.instance.Notify(gameObject, statusEvent);
-    }
-
-    void OnTriggerEnter(Collider coll)
-    {
-        //if (coll.CompareTag("Tutorial Room"))
-        //{
-        //    coll.gameObject.SetActive(false);
-        //    SetStaticCamera();
-        //    GetComponent<Rigidbody>().velocity = new Vector3(7.5f, 0, 0);
-        //}
-        //else if (coll.CompareTag("Tutorial Door"))
-        //{
-        //    coll.gameObject.SetActive(false);
-        //    SetDoorCamera();
-        //    Invoke("ToggleKeyTrigger", 2.5f);
-        //}
-        //else if (coll.CompareTag("Tutorial Trigger"))
-        //{
-        //    coll.gameObject.SetActive(false);
-        //    key.gameObject.SetActive(true);
-        //    Invoke("StartMovingCamera", 2.5f);
-        //    GetComponent<PlayerController>().ReadyForLaunch();
-        //    GetComponent<Rigidbody>().velocity = Vector3.zero;
-        //    //animator.SetTrigger("Missing Keys");
-        //    var statusEvent = new ObserverEvent(EventName.DisableInput);
-        //    Subject.instance.Notify(gameObject, statusEvent);
-        //}
     }
 
     // Returns the pixel center of the camera.
@@ -170,22 +133,47 @@ public class TutorialStage1 : MonoBehaviour, Observer
         switch(evt.eventName)
         {
             case EventName.LaunchPowerChanged:
-                if (hasLaunched)
+                if (scaleGuide1)
                     return;
+
                 float force = ((Vector2)evt.payload[PayloadConstants.LAUNCH_FORCE]).x;
-                bool showLaunchTip = force > 0;
-                powerTip.SetActive(!showLaunchTip);
-                launchTip.SetActive(showLaunchTip);
-                break;
-            case EventName.PlayerLaunch:
-                hasLaunched = true;
-                powerTip.SetActive(false);
-                launchTip.SetActive(false);
+                if (force == 0)
+                {
+                    var rectTransform = powerTip.GetComponent<RectTransform>();
+                    StartCoroutine(HideWindow(rectTransform));
+                    scaleGuide1 = true;
+                }
                 break;
             case EventName.PlayerWon:
                 SceneManager.LoadScene("TutStage02");
                 break;
+            case EventName.PlayerGotKey:
+                rotationTip.SetActive(false);
+                break;
         }
+    }
+
+    // used to scale down a tutorial screen
+    private IEnumerator HideWindow(RectTransform rect)
+    {
+        var curve = AnimationCurve.EaseInOut(0,0,1,1);
+        float t = 0;
+        float duration = 0.5f;
+        Vector2 startPos = rect.anchoredPosition;
+        Vector2 endPos = new Vector2(630, 300);
+        Vector3 startScale = rect.localScale;
+        Vector3 endScale = new Vector3(0.4f, 0.4f, 0.4f);
+
+        while (t < 1)
+        {
+            t += Time.deltaTime / duration;
+            rect.anchoredPosition = Vector2.Lerp(startPos, endPos, curve.Evaluate(t));
+            rect.localScale = Vector3.Lerp(startScale, endScale, curve.Evaluate(t));
+            yield return null;
+        }
+
+        rect.anchoredPosition = endPos;
+        rect.localScale = endScale;
     }
 
     public void OnDestroy()

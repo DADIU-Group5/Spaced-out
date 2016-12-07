@@ -31,5 +31,6 @@ public class InitialForce : MonoBehaviour {
     {
         body.isKinematic = false;
         body.AddForce(Random.onUnitSphere * force, ForceMode.Force);
+        ApplyTorque();
     }
 }

@@ -31,6 +31,11 @@ public class TutorialStage1 : MonoBehaviour, Observer
         evt.payload.Add(PayloadConstants.PLAYER, player);
         Subject.instance.Notify(gameObject, evt);
 
+        // disable GAL
+        evt = new ObserverEvent(EventName.ToggleGAL);
+        evt.payload.Add(PayloadConstants.SWITCH_ON, false);
+        Subject.instance.Notify(gameObject, evt);
+
         // disable key
         key = GameObject.FindGameObjectWithTag("Key");
         key.SetActive(false);
@@ -46,7 +51,7 @@ public class TutorialStage1 : MonoBehaviour, Observer
         //guidanceObject.Activate();
         gal.Narrate("narrative3");
     }
-    
+
     private void BeginMissingKeysCutscene()
     {
         powerTip.gameObject.SetActive(false);
@@ -130,7 +135,7 @@ public class TutorialStage1 : MonoBehaviour, Observer
 
     public void OnNotify(GameObject entity, ObserverEvent evt)
     {
-        switch(evt.eventName)
+        switch (evt.eventName)
         {
             case EventName.LaunchPowerChanged:
                 if (scaleGuide1)
@@ -156,7 +161,7 @@ public class TutorialStage1 : MonoBehaviour, Observer
     // used to scale down a tutorial screen
     private IEnumerator HideWindow(RectTransform rect)
     {
-        var curve = AnimationCurve.EaseInOut(0,0,1,1);
+        var curve = AnimationCurve.EaseInOut(0, 0, 1, 1);
         float t = 0;
         float duration = 0.5f;
         Vector2 startPos = rect.anchoredPosition;

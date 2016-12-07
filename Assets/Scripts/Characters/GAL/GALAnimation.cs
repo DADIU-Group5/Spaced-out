@@ -12,6 +12,8 @@ public class GALAnimation : MonoBehaviour, Observer
     Image imageCanvas;
     Image GALObject;
 
+    private bool galVisible;
+
     public enum Emotion
     {
         Idle, Happy, Sad, Angry
@@ -32,6 +34,7 @@ public class GALAnimation : MonoBehaviour, Observer
         animator = GetComponent<Animator>();
         GetComponent<Animation>().Play();
         Subject.instance.AddObserver(this);
+        galVisible = true;
     }
 
     void Start ()
@@ -59,6 +62,9 @@ public class GALAnimation : MonoBehaviour, Observer
 
                 StartCoroutine(ShowGAL(subStart, subDuration));
                 break;
+            case EventName.ToggleGAL:
+                galVisible = (bool)evt.payload[PayloadConstants.SWITCH_ON];
+                break;
         }
     }
 
@@ -74,11 +80,14 @@ public class GALAnimation : MonoBehaviour, Observer
     /// </summary>
     public IEnumerator ShowGAL(float subStart, float subDuration)//, int emotion)
     {
-        yield return new WaitForSeconds(subStart);
-        SetGAL(true);
+        if (galVisible)
+        {
+            yield return new WaitForSeconds(subStart);
+            SetGAL(true);
 
-        yield return new WaitForSeconds(subDuration);
-        SetGAL(false);
+            yield return new WaitForSeconds(subDuration);
+            SetGAL(false);
+        }
     }
 
     public void OnDestroy()

@@ -36,7 +36,7 @@
 											<SegmentShape>Log3</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>29.71262</XPos>
+											<XPos>40.00508</XPos>
 											<YPos>-200</YPos>
 											<Flags>0</Flags>
 											<SegmentShape>Exp3</SegmentShape>
@@ -281,10 +281,10 @@
 											<XPos>0</XPos>
 											<YPos>0</YPos>
 											<Flags>5</Flags>
-											<SegmentShape>Log3</SegmentShape>
+											<SegmentShape>Log1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>34.76248</XPos>
+											<XPos>19.97058</XPos>
 											<YPos>-200</YPos>
 											<Flags>0</Flags>
 										</Point>

@@ -1129,11 +1129,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="daveJetpackRandomExhaust" ID="{1D9D1416-C6B1-4A0A-BBC6-A2EAD791389D}">
-							<ChildrenList>
-								<Action Name="Play" ID="{1B7B2AE3-DA43-4E40-94F1-73AE50F75FE1}" ShortID="1022239694" Type="Play" Scope="One" Global="false"/>
-							</ChildrenList>
-						</Event>
 						<Event Name="daveSquishBetweenDoors" ID="{6904D5CC-4E58-4F8A-85ED-2FE81C7C2577}">
 							<ChildrenList>
 								<Action Name="Play" ID="{384FC4E2-49B6-4B4C-B185-0F48C9FD8C28}" ShortID="318350910" Type="Play" Scope="One" Global="false">
@@ -1168,6 +1163,30 @@
 									<ElementList>
 										<Element ID="{59E462F7-CDBC-4071-B576-C19E78DFF23E}" Global="false">
 											<ObjectRef Name="buttscratch" ID="{D44DEA8E-B999-4A22-AD2C-AF98A72E961B}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="respawn" ID="{067CD7EA-896E-4FF0-A370-7A114A6F631B}">
+							<ChildrenList>
+								<Action Name="Play" ID="{DCAE0ED9-AD21-4620-A03F-47EEE09597D3}" ShortID="712330725" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.7"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{6AA223D8-D409-4743-AFC4-6FFF4C8BDCF7}" Global="false">
+											<ObjectRef Name="oxygen" ID="{C53E9EA0-3E35-44F3-83A1-ACD808D25983}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{83F2DE78-B29D-441C-98CB-5F07EA4B2EA8}" ShortID="115347840" Type="Play" Scope="One" Global="false">
+									<ExcludedPlatformList>
+										<Platform>Windows</Platform>
+									</ExcludedPlatformList>
+									<ElementList>
+										<Element ID="{17D53020-B92F-484A-8328-A31DD9539BC0}" Global="false">
+											<ObjectRef Name="keys chime reward2" ID="{0C3FBE23-7945-47ED-B56B-6BB052646C27}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -1337,17 +1356,6 @@
 									<ElementList>
 										<Element ID="{0061995E-C297-498A-925E-9D816CFFD5E5}" Global="false">
 											<ObjectRef Name="comic_ shitty" ID="{6DC55AB2-2E89-4E54-B461-CF88DE509C2B}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
-										</Element>
-									</ElementList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="pickupOxygen" ID="{067CD7EA-896E-4FF0-A370-7A114A6F631B}">
-							<ChildrenList>
-								<Action Name="Play" ID="{DCAE0ED9-AD21-4620-A03F-47EEE09597D3}" ShortID="712330725" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{6AA223D8-D409-4743-AFC4-6FFF4C8BDCF7}" Global="false">
-											<ObjectRef Name="oxygen" ID="{C53E9EA0-3E35-44F3-83A1-ACD808D25983}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -1552,26 +1560,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="cinematic2" ID="{80F35067-DA78-46DF-BD3F-6046A9ED0C3C}">
-							<ChildrenList>
-								<Action Name="Play" ID="{CF8C2219-E705-4FA1-AC54-4A0A38199D64}" ShortID="773883473" Type="Play" Scope="One" Global="false"/>
-							</ChildrenList>
-						</Event>
-						<Event Name="cinematic3" ID="{C04124D7-B63F-4F41-8104-7B53A0032E59}">
-							<ChildrenList>
-								<Action Name="Play" ID="{F372FB5B-52CA-4E28-BDA3-7451D82956EE}" ShortID="1023141179" Type="Play" Scope="One" Global="false"/>
-							</ChildrenList>
-						</Event>
-						<Event Name="cinematic4" ID="{E1AF43E7-6FBC-4DA6-8C1D-E9713B48FF48}">
-							<ChildrenList>
-								<Action Name="Play" ID="{4299EFEB-9885-4E3D-8346-39CBC78467EF}" ShortID="16061211" Type="Play" Scope="One" Global="false"/>
-							</ChildrenList>
-						</Event>
-						<Event Name="cinematic5" ID="{43AF32F8-7C39-45B6-9994-0470EBB59763}">
-							<ChildrenList>
-								<Action Name="Play" ID="{B2D00100-F2F7-43EB-84DA-65931B24654F}" ShortID="500774686" Type="Play" Scope="One" Global="false"/>
-							</ChildrenList>
-						</Event>
 						<Event Name="suckedIntoSpace" ID="{FCAB4B24-6C13-437B-A881-344E053C4937}">
 							<ChildrenList>
 								<Action Name="Play" ID="{09538683-9067-4076-9442-501B6D2EA7B4}" ShortID="372126805" Type="Play" Scope="One" Global="false">
@@ -1623,7 +1611,6 @@
 										</Element>
 									</ElementList>
 								</Action>
-								<Action Name="Play" ID="{3EE12CD4-3D36-4AA6-A6D1-B84615D1AE66}" ShortID="859460138" Type="Play" Scope="One" Global="false"/>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>
@@ -1632,6 +1619,13 @@
 					<ChildrenList>
 						<Event Name="musicMainPlay" ID="{F30947D7-9777-485C-A4D1-A33BE2BFE1AE}">
 							<ChildrenList>
+								<Action Name="Post Event" ID="{E831F527-87D3-4B58-9F8D-F8C1A8FDADCD}" ShortID="126071768" Type="PlayEvent" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{A2DF4188-1B66-4BDA-86F1-189DC8FF0A77}" Global="false">
+											<ObjectRef Name="musicMainStop" ID="{60F4096D-3070-4B3B-8F39-D4B5D486FB13}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+										</Element>
+									</ElementList>
+								</Action>
 								<Action Name="Play" ID="{1CBD0B57-249D-4549-9E46-DAB54422125F}" ShortID="998077567" Type="Play" Scope="One" Global="false">
 									<PropertyList>
 										<Property Name="FadeTime" Type="Real64" Value="1"/>
@@ -1655,16 +1649,16 @@
 										</Element>
 									</ElementList>
 								</Action>
-								<Action Name="Stop" ID="{A58D4359-66FB-436A-93F2-835E31CCE20A}" ShortID="32444845" Type="Stop" Scope="One" Global="false">
+								<Action Name="Stop" ID="{A58D4359-66FB-436A-93F2-835E31CCE20A}" ShortID="32444845" Type="Stop" Scope="One" Global="true">
 									<ElementList>
-										<Element ID="{0156B48C-1E2F-473D-BAC8-3243E6D45E27}" Global="false">
+										<Element ID="{0156B48C-1E2F-473D-BAC8-3243E6D45E27}" Global="true">
 											<ObjectRef Name="musicFirst" ID="{129A023D-119A-496B-B302-614F15E66252}" WorkUnitID="{F5948B08-8EA0-455A-9A43-E3F403D87912}"/>
 										</Element>
 									</ElementList>
 								</Action>
-								<Action Name="Stop" ID="{6C46B502-1091-4A6F-8EA6-56639D78BEF2}" ShortID="240691427" Type="Stop" Scope="One" Global="false">
+								<Action Name="Stop" ID="{6C46B502-1091-4A6F-8EA6-56639D78BEF2}" ShortID="240691427" Type="Stop" Scope="One" Global="true">
 									<ElementList>
-										<Element ID="{F5B86DD5-771E-4A1F-B9E0-0DF120A48690}" Global="false">
+										<Element ID="{F5B86DD5-771E-4A1F-B9E0-0DF120A48690}" Global="true">
 											<ObjectRef Name="musicCredits" ID="{D246BA3F-4D0B-4908-AFA8-91FFB3D93FC9}" WorkUnitID="{F5948B08-8EA0-455A-9A43-E3F403D87912}"/>
 										</Element>
 									</ElementList>
@@ -1675,6 +1669,13 @@
 						<Event Name="musicWinStop" ID="{DA915DC8-5822-4A10-92E0-20A2736C9236}"/>
 						<Event Name="musicFirstPlay" ID="{2DBDE27F-2D39-4B13-AE12-C6B05D2865EE}">
 							<ChildrenList>
+								<Action Name="Post Event" ID="{99EA2D5B-38BF-452A-9BB2-60420A91F1DE}" ShortID="410285820" Type="PlayEvent" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{FCDEAA2E-73C8-46EF-B55D-DF8E90488C60}" Global="false">
+											<ObjectRef Name="musicMainStop" ID="{60F4096D-3070-4B3B-8F39-D4B5D486FB13}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+										</Element>
+									</ElementList>
+								</Action>
 								<Action Name="Play" ID="{12725E4D-337A-46C1-8475-DA3D6430519F}" ShortID="184913595" Type="Play" Scope="One" Global="false">
 									<PropertyList>
 										<Property Name="FadeCurve" Type="int16" Value="7"/>
@@ -1690,6 +1691,13 @@
 						</Event>
 						<Event Name="musicCredits" ID="{D6E25FDD-18C0-4A46-A534-FE38148A4F1C}">
 							<ChildrenList>
+								<Action Name="Post Event" ID="{DA55E591-ED75-4CAF-9F02-9205046AA0F0}" ShortID="390588159" Type="PlayEvent" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{6E1C4406-E090-4AC3-B0EA-7CC551A16B10}" Global="false">
+											<ObjectRef Name="musicMainStop" ID="{60F4096D-3070-4B3B-8F39-D4B5D486FB13}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
+										</Element>
+									</ElementList>
+								</Action>
 								<Action Name="Play" ID="{0641C0D6-BE01-4B10-9354-15ED0F56EB66}" ShortID="129328013" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{E480C134-65BD-482E-9F46-A2537738FFD4}" Global="false">
@@ -1778,6 +1786,13 @@
 									<ElementList>
 										<Element ID="{09A8132A-336B-4AF2-9D4F-152F2D4D31E8}" Global="false">
 											<ObjectRef Name="blip blop sci fi forest long1" ID="{54951246-80EB-4D37-ACE3-D430F90EECCF}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{D92B07DE-BFC3-42F5-B671-5C16F57C3337}" ShortID="1071655637" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{6087300C-5B32-4400-A225-901D95E019D9}" Global="false">
+											<ObjectRef Name="airdrag" ID="{F531F20F-7E93-44CF-9E05-98BE0E6F2967}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}"/>
 										</Element>
 									</ElementList>
 								</Action>

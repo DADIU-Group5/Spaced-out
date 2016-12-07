@@ -6486,6 +6486,7 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="explosion sequence" ID="{D3332EA2-2CA1-4CCC-BBCB-4A7E3B1ADEBF}" ShortID="474082288">
 									<PropertyList>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
@@ -6496,7 +6497,7 @@
 											<ObjectRef Name="explosion" ID="{557AEB92-E0FB-428B-A2F0-AE9D683E8D95}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
 										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+											<ObjectRef Name="monirizer" ID="{1136D10A-ECFB-4E03-949B-01199B618812}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
@@ -7020,11 +7021,12 @@
 								<Sound Name="electricity loop" ID="{9F32160E-1220-4D2E-A195-E4D70C4DC0D7}" ShortID="704610882" Type="SoundFX">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-20</Value>
+												<Value>-15</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -7033,7 +7035,7 @@
 											<ObjectRef Name="electricity" ID="{3AB70FE9-DBA1-46D2-9FA1-A024962E697E}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
 										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+											<ObjectRef Name="monirizer" ID="{1136D10A-ECFB-4E03-949B-01199B618812}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
@@ -7074,11 +7076,12 @@
 								<Sound Name="gasloop" ID="{533D6B45-FCEB-4537-AD96-BD49B01BFAD1}" ShortID="407497455" Type="SoundFX">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-23</Value>
+												<Value>-25</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -7087,7 +7090,7 @@
 											<ObjectRef Name="electricity" ID="{3AB70FE9-DBA1-46D2-9FA1-A024962E697E}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
 										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+											<ObjectRef Name="monirizer" ID="{1136D10A-ECFB-4E03-949B-01199B618812}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
@@ -7110,6 +7113,7 @@
 									<PropertyList>
 										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
 										<Property Name="OverrideAnalysis" Type="bool" Value="True"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
@@ -7157,7 +7161,7 @@
 											<ObjectRef Name="electricity" ID="{3AB70FE9-DBA1-46D2-9FA1-A024962E697E}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
 										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+											<ObjectRef Name="monirizer" ID="{1136D10A-ECFB-4E03-949B-01199B618812}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
@@ -7186,6 +7190,9 @@
 												<AudioFileSource Name="door shut1_1" ID="{29B65402-23CF-4A6E-85B9-DACA01FE1C28}" ShortID="1066027588">
 													<Language>SFX</Language>
 													<AudioFile>door shut1_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="454449915"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7208,6 +7215,9 @@
 												<AudioFileSource Name="door shut2_1" ID="{2A49B66F-8077-44A5-8BD3-A3B07A175979}" ShortID="559213883">
 													<Language>SFX</Language>
 													<AudioFile>door shut2_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="458589676"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7234,6 +7244,9 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut3_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="78198148"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7270,6 +7283,9 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut4_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="625073912"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7303,6 +7319,9 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut5_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="970972274"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7339,6 +7358,9 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut6_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="704262867"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7372,6 +7394,9 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut7_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="422398595"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7405,6 +7430,9 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut8_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="216144738"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7438,6 +7466,9 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut9_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="751371429"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7471,6 +7502,9 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut10_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="376739912"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7482,6 +7516,7 @@
 								<Sound Name="gasonfire" ID="{E906ED12-D905-459F-99C3-58BC1C76FDEC}" ShortID="433371983" Type="SoundFX">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
@@ -7520,7 +7555,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>1</Value>
+												<Value>-2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -7529,7 +7564,7 @@
 											<ObjectRef Name="electricity" ID="{3AB70FE9-DBA1-46D2-9FA1-A024962E697E}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
 										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+											<ObjectRef Name="monirizer" ID="{1136D10A-ECFB-4E03-949B-01199B618812}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
@@ -7552,6 +7587,7 @@
 									<PropertyList>
 										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
@@ -7635,7 +7671,7 @@
 																			<SegmentShape>Log3</SegmentShape>
 																		</Point>
 																		<Point>
-																			<XPos>19.84</XPos>
+																			<XPos>29.86402</XPos>
 																			<YPos>-200</YPos>
 																			<Flags>0</Flags>
 																			<SegmentShape>Exp3</SegmentShape>
@@ -7728,7 +7764,7 @@
 											</Custom>
 										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+											<ObjectRef Name="monirizer" ID="{1136D10A-ECFB-4E03-949B-01199B618812}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
 										<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
 											<ObjectRef Name="Bass_Remover_9" ID="{8986F65E-F3FA-44DE-8843-DCE54B78B3CD}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
@@ -7770,6 +7806,7 @@
 								</Sound>
 								<RandomSequenceContainer Name="door slide" ID="{11AADC56-911E-4515-86D1-D7BDFF07C6DA}" ShortID="771329840">
 									<PropertyList>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
@@ -7783,7 +7820,7 @@
 											<ObjectRef Name="electricity" ID="{3AB70FE9-DBA1-46D2-9FA1-A024962E697E}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
 										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+											<ObjectRef Name="monirizer" ID="{1136D10A-ECFB-4E03-949B-01199B618812}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
@@ -8145,6 +8182,7 @@
 									<PropertyList>
 										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
 										<Property Name="OverrideAnalysis" Type="bool" Value="True"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
@@ -8186,7 +8224,7 @@
 											<ObjectRef Name="electricity" ID="{3AB70FE9-DBA1-46D2-9FA1-A024962E697E}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
 										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+											<ObjectRef Name="monirizer" ID="{1136D10A-ECFB-4E03-949B-01199B618812}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
@@ -8215,9 +8253,6 @@
 												<AudioFileSource Name="door shut1_1" ID="{51936832-A8EB-4680-877E-8CA53CA74465}" ShortID="454449915">
 													<Language>SFX</Language>
 													<AudioFile>door shut1_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="1066027588"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8240,9 +8275,6 @@
 												<AudioFileSource Name="door shut2_1" ID="{3E4152F1-99FF-46D0-BE2D-6A00F6EB742B}" ShortID="458589676">
 													<Language>SFX</Language>
 													<AudioFile>door shut2_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="559213883"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8269,9 +8301,6 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut3_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="585615623"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8308,9 +8337,6 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut4_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="598173962"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8344,9 +8370,6 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut5_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="846681906"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8383,9 +8406,6 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut6_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="670195520"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8419,9 +8439,6 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut7_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="942376865"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8455,9 +8472,6 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut8_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="401680823"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8491,9 +8505,6 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut9_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="507642210"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8527,9 +8538,6 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut10_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="621924902"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8577,7 +8585,7 @@
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-25</Value>
+												<Value>-20</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -8620,7 +8628,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-30</Value>
+												<Value>-27</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -9538,8 +9546,7 @@
 												<ModifierInfo>
 													<Modifier Name="" ID="{0CA1ABCB-97FB-47CB-9CAD-11E7DEA82B9C}">
 														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="5"/>
+															<Property Name="Max" Type="Real64" Value="15"/>
 														</PropertyList>
 													</Modifier>
 												</ModifierInfo>
@@ -9554,6 +9561,11 @@
 										<Property Name="UserAuxSendVolume0" Type="Real64">
 											<ValueList>
 												<Value>-40</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -9577,14 +9589,14 @@
 												<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
 												<Property Name="InitialDelay" Type="Real64">
 													<ValueList>
-														<Value>5</Value>
+														<Value>10</Value>
 													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
 															<Modifier Name="" ID="{18CBDF48-BC4C-44F0-AAEC-81E59E28CA0E}">
 																<PropertyList>
 																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="10"/>
+																	<Property Name="Max" Type="Real64" Value="15"/>
 																</PropertyList>
 															</Modifier>
 														</ModifierInfo>
@@ -10301,6 +10313,11 @@
 												<Value>-40</Value>
 											</ValueList>
 										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -10321,14 +10338,14 @@
 											<PropertyList>
 												<Property Name="InitialDelay" Type="Real64">
 													<ValueList>
-														<Value>5</Value>
+														<Value>10</Value>
 													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
 															<Modifier Name="" ID="{88831299-8F7D-442E-A15C-C540718CD0AF}">
 																<PropertyList>
 																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="20"/>
+																	<Property Name="Max" Type="Real64" Value="15"/>
 																</PropertyList>
 															</Modifier>
 														</ModifierInfo>
@@ -10906,7 +10923,7 @@
 												<RTPC Name="" ID="{BE932FE6-8DBF-46D6-A6E1-ECA9B7692701}" ShortID="185517421">
 													<ReferenceList>
 														<Reference Name="ControlInput">
-															<ObjectRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+															<ObjectRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 														</Reference>
 													</ReferenceList>
 													<Curve Name="" ID="{C8CD7F79-B9A4-4870-A5FF-EF1DE4E92B18}">
@@ -10916,12 +10933,13 @@
 														<PointList>
 															<Point>
 																<XPos>0</XPos>
-																<YPos>38</YPos>
+																<YPos>50</YPos>
 																<Flags>5</Flags>
+																<SegmentShape>Log2</SegmentShape>
 															</Point>
 															<Point>
-																<XPos>30.18001</XPos>
-																<YPos>2</YPos>
+																<XPos>99.999</XPos>
+																<YPos>0</YPos>
 																<Flags>0</Flags>
 															</Point>
 															<Point>
@@ -10965,7 +10983,13 @@
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
-															<Modifier Name="" ID="{43F470BB-0A32-42E1-B49A-EC78B6380636}"/>
+															<Modifier Name="" ID="{43F470BB-0A32-42E1-B49A-EC78B6380636}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
@@ -10989,6 +11013,33 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="launch mockup1 long" ID="{2169F90C-8215-427F-B02D-C1C030F3717A}" ShortID="326662284" Type="SoundFX">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{6C185D93-C675-4D29-B98F-A6971B66EF33}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{BD0ACF8B-C719-495B-81E9-9E103408BB0D}">
+																<PropertyList>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
@@ -11008,6 +11059,28 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="launch mockup1 medium" ID="{7FC8D631-F6D1-4B62-A756-355736481E18}" ShortID="843883494" Type="SoundFX">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{C736F92A-E571-441A-A23B-BC9CF33EE56D}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{791B8B69-8201-4320-8BE1-66B9E197C412}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
@@ -11034,7 +11107,7 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="LayerCrossFadeControlInput">
-													<ObjectRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+													<ObjectRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 												</Reference>
 											</ReferenceList>
 											<BlendTrackAssocList>
@@ -11043,7 +11116,7 @@
 													<CrossfadingInfo>
 														<LeftEdgePos>0</LeftEdgePos>
 														<LeftFadingMode>Automatic</LeftFadingMode>
-														<RightEdgePos>39.6827896825397</RightEdgePos>
+														<RightEdgePos>64.8150648148148</RightEdgePos>
 														<RightFadingMode>Automatic</RightFadingMode>
 													</CrossfadingInfo>
 												</BlendTrackAssoc>
@@ -11052,14 +11125,14 @@
 													<CrossfadingInfo>
 														<LeftEdgePos>0.0005</LeftEdgePos>
 														<LeftFadingMode>Automatic</LeftFadingMode>
-														<RightEdgePos>84.999875</RightEdgePos>
+														<RightEdgePos>99.9995</RightEdgePos>
 														<RightFadingMode>Automatic</RightFadingMode>
 													</CrossfadingInfo>
 												</BlendTrackAssoc>
 												<BlendTrackAssoc>
 													<ItemRef Name="launch mockup1 long" ID="{2169F90C-8215-427F-B02D-C1C030F3717A}"/>
 													<CrossfadingInfo>
-														<LeftEdgePos>39.6827896825397</LeftEdgePos>
+														<LeftEdgePos>64.8150648148148</LeftEdgePos>
 														<LeftFadingMode>Automatic</LeftFadingMode>
 														<RightEdgePos>100</RightEdgePos>
 														<RightFadingMode>Automatic</RightFadingMode>
@@ -11071,15 +11144,16 @@
 								</BlendContainer>
 								<RandomSequenceContainer Name="launchsynth" ID="{E6C34B2D-6D03-48B4-8A0E-79B74543A0A3}" ShortID="456118260">
 									<PropertyList>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>7</Value>
+												<Value>15</Value>
 											</ValueList>
 											<RTPCList>
 												<RTPC Name="" ID="{5BC4C6F8-3DB2-45A1-AC7D-95F5BDE69C87}" ShortID="688438935">
 													<ReferenceList>
 														<Reference Name="ControlInput">
-															<ObjectRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+															<ObjectRef Name="velocity2" ID="{437B7395-5498-439E-A447-C6AC63340C6B}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 														</Reference>
 													</ReferenceList>
 													<Curve Name="" ID="{0CA17459-CDFA-46E3-B7F9-FE77C73EDE52}">
@@ -11097,13 +11171,7 @@
 																<XPos>44.42639</XPos>
 																<YPos>-200</YPos>
 																<Flags>0</Flags>
-																<SegmentShape>Exp3</SegmentShape>
-															</Point>
-															<Point>
-																<XPos>84.90566</XPos>
-																<YPos>-0.07698</YPos>
-																<Flags>0</Flags>
-																<SegmentShape>Log2</SegmentShape>
+																<SegmentShape>Exp1</SegmentShape>
 															</Point>
 															<Point>
 																<XPos>100</XPos>
@@ -11120,8 +11188,17 @@
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+											<ObjectRef Name="Blue_Distant_Echoes" ID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend1">
+											<ObjectRef Name="dly" ID="{C9714835-2726-49D1-9907-A5292C51E966}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -11971,7 +12048,7 @@
 										</Property>
 										<Property Name="UserAuxSendVolume0" Type="Real64">
 											<ValueList>
-												<Value>-10</Value>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 										<Property Name="UserAuxSendVolume1" Type="Real64">
@@ -13202,8 +13279,45 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-20</Value>
+												<Value>20</Value>
 											</ValueList>
+											<RTPCList>
+												<RTPC Name="" ID="{334D440E-6307-44E5-975D-FA9EEE6052B9}" ShortID="937455807">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{4B087BAC-FDD1-4445-94F9-BA87634793F1}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>49.94764</XPos>
+																<YPos>-200</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>InvertedSCurve</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>99.999</XPos>
+																<YPos>0.1963</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -14025,7 +14139,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-4</Value>
+										<Value>-2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -14082,7 +14196,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-25</Value>
+										<Value>-30</Value>
 									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{D33C7258-F134-4E22-8A4C-97C3C9D7EE81}" ShortID="13702041">
@@ -14102,16 +14216,22 @@
 														<Flags>5</Flags>
 													</Point>
 													<Point>
-														<XPos>59.79572</XPos>
+														<XPos>0.001</XPos>
 														<YPos>-200</YPos>
 														<Flags>0</Flags>
-														<SegmentShape>Log3</SegmentShape>
+														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
-														<XPos>80.01715</XPos>
-														<YPos>0.06213</YPos>
+														<XPos>31.72775</XPos>
+														<YPos>-200</YPos>
 														<Flags>0</Flags>
-														<SegmentShape>Exp3</SegmentShape>
+														<SegmentShape>Exp1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>63.56021</XPos>
+														<YPos>-6.16741</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>100</XPos>
@@ -14133,6 +14253,9 @@
 								</Reference>
 								<Reference Name="UserAuxSend0">
 									<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+								<Reference Name="UserAuxSend1">
+									<ObjectRef Name="dly" ID="{C9714835-2726-49D1-9907-A5292C51E966}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -14289,7 +14412,7 @@
 										<RTPC Name="" ID="{B517F8DC-B6EC-4921-9599-6C7E4791772D}" ShortID="330811414">
 											<ReferenceList>
 												<Reference Name="ControlInput">
-													<ObjectRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+													<ObjectRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 												</Reference>
 											</ReferenceList>
 											<Curve Name="" ID="{EE147A92-7200-4BC5-BE9C-CE09272A5928}">
@@ -14303,16 +14426,10 @@
 														<Flags>5</Flags>
 													</Point>
 													<Point>
-														<XPos>60.02312</XPos>
+														<XPos>89.52569</XPos>
 														<YPos>-200</YPos>
 														<Flags>0</Flags>
 														<SegmentShape>Log3</SegmentShape>
-													</Point>
-													<Point>
-														<XPos>81.81818</XPos>
-														<YPos>-0.12598</YPos>
-														<Flags>0</Flags>
-														<SegmentShape>Exp3</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>100</XPos>
@@ -14352,6 +14469,11 @@
 						</Sound>
 						<Sound Name="charge noise" ID="{DC318F8D-FDDD-42C0-AB9A-8758805C1320}" ShortID="368697016" Type="SoundFX">
 							<PropertyList>
+								<Property Name="BypassEffect0" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
 										<Value>30</Value>
@@ -14383,7 +14505,7 @@
 													</Point>
 													<Point>
 														<XPos>100</XPos>
-														<YPos>2599</YPos>
+														<YPos>-136</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -14393,7 +14515,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-20</Value>
+										<Value>-25</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -14915,6 +15037,7 @@
 										</Sound>
 										<Sound Name="oxygen" ID="{C53E9EA0-3E35-44F3-83A1-ACD808D25983}" ShortID="314778614" Type="SoundFX">
 											<PropertyList>
+												<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>100</Value>
@@ -14925,12 +15048,22 @@
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 												</Reference>
+												<Reference Name="Effect0" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+													<ObjectRef Name="Blue_Distant_Echoes" ID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="dly" ID="{C9714835-2726-49D1-9907-A5292C51E966}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="oxygen" ID="{798DB9CB-DFEC-445C-8CBE-728EEBAF7361}" ShortID="391699126">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.574533426465824"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.196550909054098"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>oxygen.wav</AudioFile>
 												</AudioFileSource>
@@ -14995,59 +15128,22 @@
 														<ActiveSource Name="keys chime" ID="{88545B61-55E3-4541-B306-AFC9F0F5C53D}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="keys chime reward1" ID="{77486F5C-D0C5-4255-83CA-104B97E7FFAA}" ShortID="955685941" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="keys chime reward1" ID="{46E42CD9-287B-40FA-AFE0-2B1D0D497CFF}" ShortID="577442237">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="1.60320641282565E-02"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.593186372745491"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>keys chime reward1.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="keys chime reward1" ID="{46E42CD9-287B-40FA-AFE0-2B1D0D497CFF}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="keys chime reward2" ID="{0C3FBE23-7945-47ED-B56B-6BB052646C27}" ShortID="391397430" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="keys chime reward2" ID="{09803FE6-5395-4B59-826E-96E79A09304E}" ShortID="124263028">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="1.80360721442886E-02"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.709418837675351"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>keys chime reward2.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="keys chime reward2" ID="{09803FE6-5395-4B59-826E-96E79A09304E}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
 												<Sound Name="keys pickup" ID="{A8CF8471-A091-4C67-ACB5-16DAE9425F44}" ShortID="950271543" Type="SoundFX">
+													<PropertyList>
+														<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 														</Reference>
+														<Reference Name="Effect0" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+															<ObjectRef Name="Blue_Distant_Echoes" ID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+														</Reference>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="dly" ID="{C9714835-2726-49D1-9907-A5292C51E966}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -15071,7 +15167,7 @@
 														<Property Name="PositioningType" Type="int16" Value="1"/>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>10</Value>
+																<Value>15</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -15096,6 +15192,78 @@
 														<ActiveSource Name="KEYS CHIME LOOP" ID="{77ADACBF-9C5A-4AFD-8D21-6E6C33739D72}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
+												<RandomSequenceContainer Name="chimereward" ID="{39703757-ED40-4A8D-B1BF-0AE628BF76C2}" ShortID="1038980564">
+													<PropertyList>
+														<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>1200</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+														</Reference>
+														<Reference Name="Effect0" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+															<ObjectRef Name="Blue_Distant_Echoes" ID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="dly" ID="{C9714835-2726-49D1-9907-A5292C51E966}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="keys chime reward1" ID="{77486F5C-D0C5-4255-83CA-104B97E7FFAA}" ShortID="955685941" Type="SoundFX">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="keys chime reward1" ID="{46E42CD9-287B-40FA-AFE0-2B1D0D497CFF}" ShortID="577442237">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="1.60320641282565E-02"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.593186372745491"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>keys chime reward1.wav</AudioFile>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="keys chime reward1" ID="{46E42CD9-287B-40FA-AFE0-2B1D0D497CFF}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="keys chime reward2" ID="{0C3FBE23-7945-47ED-B56B-6BB052646C27}" ShortID="391397430" Type="SoundFX">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="keys chime reward2" ID="{09803FE6-5395-4B59-826E-96E79A09304E}" ShortID="124263028">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="1.80360721442886E-02"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.709418837675351"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>keys chime reward2.wav</AudioFile>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="keys chime reward2" ID="{09803FE6-5395-4B59-826E-96E79A09304E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
 											</ChildrenList>
 										</ActorMixer>
 									</ChildrenList>

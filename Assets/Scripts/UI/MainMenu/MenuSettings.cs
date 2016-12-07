@@ -2,7 +2,8 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class MenuSettings : MonoBehaviour {
+public class MenuSettings : MonoBehaviour
+{
 
     public Slider masterSlider;
     public Slider musicSlider;
@@ -20,6 +21,7 @@ public class MenuSettings : MonoBehaviour {
         musicSlider.onValueChanged.AddListener(OnMusicSliderChanged);
         effectsSlider.onValueChanged.AddListener(OnEffectsSliderChanged);
         sensitivitySlider.onValueChanged.AddListener(OnSensitivitySliderChanged);
+
         // setup mute / unmute buttons
         mute.isOn = SettingsManager.instance.IsMute();
         cameraControls.isOn = SettingsManager.instance.GetInvertedCamera();
@@ -28,13 +30,13 @@ public class MenuSettings : MonoBehaviour {
         SetupSoundSliders();
         if (SceneManager.GetActiveScene().name == "Main Menu")
         {
-            if (SettingsManager.instance.GetLanguage().ToString() == "english")
+            if (SettingsManager.instance.GetLanguage() == Language.English)
             {
-                english.SetActive(true);
+                danish.SetActive(true);
             }
             else
             {
-                danish.SetActive(true);
+                english.SetActive(true);
             }
         }
     }
@@ -43,10 +45,9 @@ public class MenuSettings : MonoBehaviour {
     {
         var soundManager = SoundManager.instance;
 
-        masterSlider.value =  SettingsManager.instance.GetMasterVolume();
+        masterSlider.value = SettingsManager.instance.GetMasterVolume();
         musicSlider.value = SettingsManager.instance.GetMusicVolume();
         effectsSlider.value = SettingsManager.instance.GetEffectsVolume();
-        
     }
 
     public void OnMasterSliderChanged(float value)
@@ -76,16 +77,20 @@ public class MenuSettings : MonoBehaviour {
 
     public void OnEnglishClick()
     {
-        SettingsManager.instance.SetLanguage(Language.Danish);
+        SettingsManager.instance.SetLanguage(Language.English);
         danish.SetActive(true);
         english.SetActive(false);
+
+        SendChangeLanguageEvent(Language.English);
     }
 
     public void OnDanishClick()
     {
-        SettingsManager.instance.SetLanguage(Language.English);
+        SettingsManager.instance.SetLanguage(Language.Danish);
         danish.SetActive(false);
         english.SetActive(true);
+
+        SendChangeLanguageEvent(Language.Danish);
     }
 
     public void OnCameraInvertedToggle()
@@ -93,6 +98,14 @@ public class MenuSettings : MonoBehaviour {
         SettingsManager.instance.SetInvertedCamera(cameraControls.isOn);
 
         var evt = new ObserverEvent(EventName.ToggleCameraControls);
+        Subject.instance.Notify(gameObject, evt);
+    }
+
+    public void SendChangeLanguageEvent(Language lang)
+    {
+        var evt = new ObserverEvent(EventName.ChangeLanguage);
+        evt.payload.Add(PayloadConstants.LANGUAGE, lang);
+
         Subject.instance.Notify(gameObject, evt);
     }
 }

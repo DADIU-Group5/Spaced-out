@@ -256,6 +256,37 @@
 												</PointList>
 											</Curve>
 										</RTPC>
+										<RTPC Name="" ID="{E1E68233-EDFA-4E42-94BA-428B40B16BCD}" ShortID="143977031">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="velocitySlowLerp" ID="{3FD8C653-11EB-408B-86C1-E3967D63A2F8}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{667828CA-F572-4C8B-B4A5-0098B68AF216}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>7</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Log3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>19.89529</XPos>
+														<YPos>-0</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Exp3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>-0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
 									</RTPCList>
 								</Property>
 							</PropertyList>
@@ -264,7 +295,7 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>-15</Value>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 								<Property Name="HdrThreshold" Type="Real64">
@@ -274,6 +305,35 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
+										<RTPC Name="" ID="{4D56D625-C2A0-4F56-B91C-BB46C9A4D86D}" ShortID="938983448">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="velocitySlowLerp" ID="{3FD8C653-11EB-408B-86C1-E3967D63A2F8}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{069321B0-30E4-4A26-B0C7-9BFCF2B4240E}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-5</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>6.59686</XPos>
+														<YPos>-0</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
 										<RTPC Name="" ID="{A7E6265E-8BC7-4D64-AC46-299D51509CFE}" ShortID="992768241">
 											<ReferenceList>
 												<Reference Name="ControlInput">

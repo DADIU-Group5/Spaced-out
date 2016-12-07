@@ -31,9 +31,10 @@ public class RoomFixer : MonoBehaviour
         }*/
         //FixSize(room.shapingParent);
 
-        FindMisplacedObjects();
+        /*FindMisplacedObjects();
         ReplaceAllShaping();
-        room.CleanData();
+        room.CleanData();*/
+        FixLights(room.transform.GetComponentsInChildren<Light>());
     }
 
     void ReplaceAllShaping()
@@ -338,5 +339,14 @@ public class RoomFixer : MonoBehaviour
             z = -0.808f;
         }*/
         return new Vector3(x, y, z);
+    }
+
+    void FixLights(Light[] lights)
+    {
+        foreach (Light item in lights)
+        {
+            item.range = 5;
+            item.intensity = 4.8f;
+        }
     }
 }

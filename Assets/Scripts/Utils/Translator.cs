@@ -13,6 +13,10 @@ public class Translator : Singleton<Translator>
     {
         base.Awake();
         LoadTranslations();
+    }
+
+    void Start()
+    {
         language = SettingsManager.instance.GetLanguage();
         SettingsManager.instance.onLanguageChanged += LanguageChanged;
     }

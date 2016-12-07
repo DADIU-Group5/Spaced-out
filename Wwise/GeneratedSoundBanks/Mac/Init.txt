@@ -25,6 +25,7 @@ Custom State	ID	Name	State Group	Owner		Notes
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	126297577	galSidechain			\Default Work Unit\galSidechain	
 	640585335	effectsVolume			\Default Work Unit\effectsVolume	
+	1992117424	velocitySlowLerp			\Default Work Unit\velocitySlowLerp	
 	2346531308	musicVolume			\Default Work Unit\musicVolume	
 	2371628509	jetpackChargeLevel			\Default Work Unit\jetpackChargeLevel	
 	2918011349	masterVolume			\Default Work Unit\masterVolume	

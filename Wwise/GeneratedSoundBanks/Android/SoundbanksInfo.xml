@@ -17,8 +17,8 @@
 			<Path>Init.bnk</Path>
 			<ExcludedMemoryFiles>
 				<File Id="134280575" Language="SFX">
-					<ShortName> factory rvb impulse.wav</ShortName>
-					<Path>Plugins\Wwise Convolution Reverb\ factory rvb impulse_9FFC2351.wem</Path>
+					<ShortName>factory rvb impulse.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\factory rvb impulse_8C721491.wem</Path>
 				</File>
 				<File Id="538281099" Language="SFX">
 					<ShortName>AK_Factory_IR\Rooms\AK Hamburg Echo Chamber.wav</ShortName>
@@ -345,8 +345,8 @@
 					<Path>SFX\GAL\Danish\general remarks\final\remarkDan9_7BADABE3.wem</Path>
 				</File>
 				<File Id="134280575" Language="SFX">
-					<ShortName> factory rvb impulse.wav</ShortName>
-					<Path>Plugins\Wwise Convolution Reverb\ factory rvb impulse_9FFC2351.wem</Path>
+					<ShortName>factory rvb impulse.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\factory rvb impulse_8C721491.wem</Path>
 				</File>
 				<File Id="140590783" Language="SFX">
 					<ShortName>GAL\Danish\general remarks\final\remarkDan3.wav</ShortName>

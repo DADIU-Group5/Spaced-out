@@ -111,10 +111,10 @@
 						<Property Name="IRConvolutionStop" Type="Real64" Value="1.8973125"/>
 					</PropertyList>
 					<ChildrenList>
-						<PluginMediaSource Name=" factory rvb impulse" ID="{DE8252EA-6B25-488C-AEAE-6DCD9B567D43}" ShortID="134280575">
+						<PluginMediaSource Name="factory rvb impulse" ID="{DE8252EA-6B25-488C-AEAE-6DCD9B567D43}" ShortID="134280575">
 							<ParentPluginID>8323075</ParentPluginID>
 							<PropertyList>
-								<Property Name="DataFileName" Type="string" Value=" factory rvb impulse.wav"/>
+								<Property Name="DataFileName" Type="string" Value="factory rvb impulse.wav"/>
 							</PropertyList>
 						</PluginMediaSource>
 					</ChildrenList>

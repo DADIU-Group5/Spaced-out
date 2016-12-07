@@ -8,6 +8,6 @@ public class StarPanel : MonoBehaviour {
 
     void Start()
     {
-        starText.text = ProgressManager.instance.GetTotalStars().ToString();
+        starText.text = ProgressManager.instance.GetTotalStars().ToString().Replace("0", "O");
     }
 }

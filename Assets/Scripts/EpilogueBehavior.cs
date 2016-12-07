@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class EpilogueBehavior : MonoBehaviour, Observer
 {
@@ -107,7 +108,7 @@ public class EpilogueBehavior : MonoBehaviour, Observer
 
     private void LoadEpilogueMenu()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(7);
+        SceneManager.LoadScene("EpilogueMenu");
     }
 
     private void Idle()
@@ -118,6 +119,7 @@ public class EpilogueBehavior : MonoBehaviour, Observer
     IEnumerator ScaleKey(float t, Transform trans)
     {
         Vector3 newScale;
+        yield return new WaitForSeconds(2.5f);
         while (t > 0)
         {
             t -= Time.deltaTime;
@@ -125,7 +127,7 @@ public class EpilogueBehavior : MonoBehaviour, Observer
             newScale = Vector3.one * t;
             newScale.z = 1;
             trans.localScale = newScale;
-            yield return new WaitForEndOfFrame();
+            yield return null;
         }
         trans.gameObject.SetActive(false);
     }

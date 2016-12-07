@@ -31,6 +31,7 @@
 			<ShortName>soundbank_alpha</ShortName>
 			<Path>soundbank_alpha.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2154074004" Name="alienTube" ObjectPath="\Events\Default Work Unit\enviroment\alienTube"/>
 				<Event Id="2218299087" Name="atmosStart" ObjectPath="\Events\Default Work Unit\gameState\atmosStart"/>
 				<Event Id="3273397333" Name="atmosStop" ObjectPath="\Events\Default Work Unit\gameState\atmosStop"/>
 				<Event Id="1935175563" Name="blipBlopHigh" ObjectPath="\Events\Default Work Unit\enviroment\blipBlopHigh"/>
@@ -79,6 +80,7 @@
 				<Event Id="3588208292" Name="hazardsStop" ObjectPath="\Events\Default Work Unit\enviroment\hazardsStop"/>
 				<Event Id="1037158387" Name="keysAmbient" ObjectPath="\Events\Default Work Unit\enviroment\keysAmbient"/>
 				<Event Id="3935357491" Name="keysTutorial" ObjectPath="\Events\Default Work Unit\enviroment\keysTutorial"/>
+				<Event Id="3192784746" Name="lights" ObjectPath="\Events\Default Work Unit\enviroment\lights"/>
 				<Event Id="3700176350" Name="lowOxygen1" ObjectPath="\Events\Default Work Unit\gal\lowOxygen\lowOxygen1"/>
 				<Event Id="3700176349" Name="lowOxygen2" ObjectPath="\Events\Default Work Unit\gal\lowOxygen\lowOxygen2"/>
 				<Event Id="3700176348" Name="lowOxygen3" ObjectPath="\Events\Default Work Unit\gal\lowOxygen\lowOxygen3"/>
@@ -178,11 +180,11 @@
 				</File>
 				<File Id="10743316" Language="SFX">
 					<ShortName>blip blop\blip blop sci fi forest short2.wav</ShortName>
-					<Path>SFX\blip blop\blip blop sci fi forest short2_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop sci fi forest short2_739EC3DA.wem</Path>
 				</File>
 				<File Id="11557003" Language="SFX">
 					<ShortName>metal\G\metal impact g3.wav</ShortName>
-					<Path>SFX\metal\G\metal impact g3_CFD21E99.wem</Path>
+					<Path>SFX\metal\G\metal impact g3_DA49F56D.wem</Path>
 				</File>
 				<File Id="17473018" Language="SFX">
 					<ShortName>GAL\English\general remarks\final\remarks15.wav</ShortName>
@@ -202,7 +204,7 @@
 				</File>
 				<File Id="22107775" Language="SFX">
 					<ShortName>blip blop\blip blop random6.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random6_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random6_739EC3DA.wem</Path>
 				</File>
 				<File Id="24715317" Language="SFX">
 					<ShortName>Danish\electrocute\wiresDan4.wav</ShortName>
@@ -210,23 +212,27 @@
 				</File>
 				<File Id="26065425" Language="SFX">
 					<ShortName>grunts\dave grunts 15.wav</ShortName>
-					<Path>SFX\grunts\dave grunts 15_0F7F9E0C.wem</Path>
+					<Path>SFX\grunts\dave grunts 15_C7A8C700.wem</Path>
 				</File>
 				<File Id="26219457" Language="SFX">
 					<ShortName>slo mo effect.wav</ShortName>
-					<Path>SFX\slo mo effect_26F29A81.wem</Path>
+					<Path>SFX\slo mo effect_12DD8FFD.wem</Path>
+				</File>
+				<File Id="26447406" Language="SFX">
+					<ShortName>lightloop.wav</ShortName>
+					<Path>SFX\lightloop_DAF950FB.wem</Path>
 				</File>
 				<File Id="30115822" Language="SFX">
 					<ShortName>grunts\dave grunts 16.wav</ShortName>
-					<Path>SFX\grunts\dave grunts 16_AB64C529.wem</Path>
+					<Path>SFX\grunts\dave grunts 16_2B0BBF75.wem</Path>
 				</File>
 				<File Id="33179142" Language="SFX">
 					<ShortName>metal\metal impact no tone4.wav</ShortName>
-					<Path>SFX\metal\metal impact no tone4_CFD21E99.wem</Path>
+					<Path>SFX\metal\metal impact no tone4_DA49F56D.wem</Path>
 				</File>
 				<File Id="35238501" Language="SFX">
 					<ShortName>metal\G\metal impact g5.wav</ShortName>
-					<Path>SFX\metal\G\metal impact g5_CFD21E99.wem</Path>
+					<Path>SFX\metal\G\metal impact g5_DA49F56D.wem</Path>
 				</File>
 				<File Id="38413473" Language="SFX">
 					<ShortName>Danish\fire\fireDan2.wav</ShortName>
@@ -234,11 +240,11 @@
 				</File>
 				<File Id="53206835" Language="SFX">
 					<ShortName>blip blop\blip blop sci fi forest short12.wav</ShortName>
-					<Path>SFX\blip blop\blip blop sci fi forest short12_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop sci fi forest short12_739EC3DA.wem</Path>
 				</File>
 				<File Id="53431297" Language="SFX">
 					<ShortName>metal\F\metal impact F1.wav</ShortName>
-					<Path>SFX\metal\F\metal impact F1_CFD21E99.wem</Path>
+					<Path>SFX\metal\F\metal impact F1_DA49F56D.wem</Path>
 				</File>
 				<File Id="58689411" Language="SFX">
 					<ShortName>GAL\English\narrative\final\narrative8.wav</ShortName>
@@ -258,7 +264,7 @@
 				</File>
 				<File Id="68587342" Language="SFX">
 					<ShortName>electrocute4.wav</ShortName>
-					<Path>SFX\electrocute4_A8F14FE3.wem</Path>
+					<Path>SFX\electrocute4_9FD9F3B7.wem</Path>
 				</File>
 				<File Id="68659619" Language="SFX">
 					<ShortName>GAL\English\low oxygen\final\lowoxygen2.wav</ShortName>
@@ -278,15 +284,15 @@
 				</File>
 				<File Id="80316185" Language="SFX">
 					<ShortName>metal\C\metal impact C2.wav</ShortName>
-					<Path>SFX\metal\C\metal impact C2_CFD21E99.wem</Path>
+					<Path>SFX\metal\C\metal impact C2_DA49F56D.wem</Path>
 				</File>
 				<File Id="80479230" Language="SFX">
 					<ShortName>blip blop\blip blop random17.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random17_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random17_739EC3DA.wem</Path>
 				</File>
 				<File Id="82713544" Language="SFX">
 					<ShortName>blip blop\blip blop sci fi forest short6.wav</ShortName>
-					<Path>SFX\blip blop\blip blop sci fi forest short6_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop sci fi forest short6_739EC3DA.wem</Path>
 				</File>
 				<File Id="92370258" Language="SFX">
 					<ShortName>Danish\electrocute\wiresDan5.wav</ShortName>
@@ -306,11 +312,11 @@
 				</File>
 				<File Id="104585137" Language="SFX">
 					<ShortName>impacts\object impact light3.wav</ShortName>
-					<Path>SFX\impacts\object impact light3_87E7BC49.wem</Path>
+					<Path>SFX\impacts\object impact light3_BC5FB8E5.wem</Path>
 				</File>
 				<File Id="105906957" Language="SFX">
 					<ShortName>launch synth2.wav</ShortName>
-					<Path>SFX\launch synth2_E805ED92.wem</Path>
+					<Path>SFX\launch synth2_366EDA7E.wem</Path>
 				</File>
 				<File Id="107064225" Language="SFX">
 					<ShortName>narrative\narrativeDan9.wav</ShortName>
@@ -318,11 +324,11 @@
 				</File>
 				<File Id="112371414" Language="SFX">
 					<ShortName>impacts\object impact light6.wav</ShortName>
-					<Path>SFX\impacts\object impact light6_8BBB1322.wem</Path>
+					<Path>SFX\impacts\object impact light6_31B71F76.wem</Path>
 				</File>
 				<File Id="114230876" Language="SFX">
 					<ShortName>space wind.wav</ShortName>
-					<Path>SFX\space wind_22A60087.wem</Path>
+					<Path>SFX\space wind_0FE988F3.wem</Path>
 				</File>
 				<File Id="116050032" Language="SFX">
 					<ShortName>explosion6.wav</ShortName>
@@ -334,11 +340,11 @@
 				</File>
 				<File Id="120419077" Language="SFX">
 					<ShortName>metal\F\metal impact F2.wav</ShortName>
-					<Path>SFX\metal\F\metal impact F2_CFD21E99.wem</Path>
+					<Path>SFX\metal\F\metal impact F2_DA49F56D.wem</Path>
 				</File>
 				<File Id="124263028" Language="SFX">
 					<ShortName>keys chime reward2.wav</ShortName>
-					<Path>SFX\keys chime reward2_7075D2B7.wem</Path>
+					<Path>SFX\keys chime reward2_83E3BD93.wem</Path>
 				</File>
 				<File Id="129103809" Language="SFX">
 					<ShortName>GAL\Danish\fan\hvor er du bare Fan-tastisk.2.7.wav</ShortName>
@@ -370,7 +376,7 @@
 				</File>
 				<File Id="154893435" Language="SFX">
 					<ShortName>hello dave final.wav</ShortName>
-					<Path>SFX\hello dave final_6DE9CED7.wem</Path>
+					<Path>SFX\hello dave final_DAF950FB.wem</Path>
 				</File>
 				<File Id="163750867" Language="SFX">
 					<ShortName>GAL\English\out of oxygen\final\outofocygen2.wav</ShortName>
@@ -378,7 +384,7 @@
 				</File>
 				<File Id="182772970" Language="SFX">
 					<ShortName>metal\metal impact no tone3.wav</ShortName>
-					<Path>SFX\metal\metal impact no tone3_CFD21E99.wem</Path>
+					<Path>SFX\metal\metal impact no tone3_DA49F56D.wem</Path>
 				</File>
 				<File Id="186452641" Language="SFX">
 					<ShortName>GAL\English\fire\final\fire4.wav</ShortName>
@@ -386,7 +392,7 @@
 				</File>
 				<File Id="189888312" Language="SFX">
 					<ShortName>blip blop\blip blop random13.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random13_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random13_739EC3DA.wem</Path>
 				</File>
 				<File Id="191894431" Language="SFX">
 					<ShortName>GAL\English\fire\final\fire1.wav</ShortName>
@@ -394,7 +400,7 @@
 				</File>
 				<File Id="192421913" Language="SFX">
 					<ShortName>blip blop\blip blop sci fi forest short13.wav</ShortName>
-					<Path>SFX\blip blop\blip blop sci fi forest short13_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop sci fi forest short13_739EC3DA.wem</Path>
 				</File>
 				<File Id="193127449" Language="SFX">
 					<ShortName>GAL\English\electrocute\final\wires5.wav</ShortName>
@@ -402,11 +408,11 @@
 				</File>
 				<File Id="202362747" Language="SFX">
 					<ShortName>switches\switch on.wav</ShortName>
-					<Path>SFX\switches\switch on_CFD21E99.wem</Path>
+					<Path>SFX\switches\switch on_DA49F56D.wem</Path>
 				</File>
 				<File Id="202606872" Language="SFX">
 					<ShortName>blip blop\blip blop random7.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random7_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random7_739EC3DA.wem</Path>
 				</File>
 				<File Id="207786701" Language="SFX">
 					<ShortName>Danish\fire\fireDan3.wav</ShortName>
@@ -418,7 +424,7 @@
 				</File>
 				<File Id="209214066" Language="SFX">
 					<ShortName>blip blop\blip blop random10.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random10_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random10_739EC3DA.wem</Path>
 				</File>
 				<File Id="211269648" Language="SFX">
 					<ShortName>Danish\low oxygen\lowOxygen1.wav</ShortName>
@@ -426,7 +432,7 @@
 				</File>
 				<File Id="213148062" Language="SFX">
 					<ShortName>menuScrollclick4.wav</ShortName>
-					<Path>SFX\menuScrollclick4_CFD21E99.wem</Path>
+					<Path>SFX\menuScrollclick4_DA49F56D.wem</Path>
 				</File>
 				<File Id="214047775" Language="SFX">
 					<ShortName>Danish\switch\switchDAn2.wav</ShortName>
@@ -446,7 +452,11 @@
 				</File>
 				<File Id="218282206" Language="SFX">
 					<ShortName>dave\buttscratch3.wav</ShortName>
-					<Path>SFX\dave\buttscratch3_6F050520.wem</Path>
+					<Path>SFX\dave\buttscratch3_11C8757C.wem</Path>
+				</File>
+				<File Id="218492288" Language="SFX">
+					<ShortName>Boiling Waterloop.wav</ShortName>
+					<Path>SFX\Boiling Waterloop_DAF950FB.wem</Path>
 				</File>
 				<File Id="220396511" Language="SFX">
 					<ShortName>GAL\English\fan\final\fan6.wav</ShortName>
@@ -454,7 +464,7 @@
 				</File>
 				<File Id="221557103" Language="SFX">
 					<ShortName>impacts\object impact light2.wav</ShortName>
-					<Path>SFX\impacts\object impact light2_B8B34FE3.wem</Path>
+					<Path>SFX\impacts\object impact light2_383BECCF.wem</Path>
 				</File>
 				<File Id="221848891" Language="SFX">
 					<ShortName>GAL\Danish\general remarks\final\remarkDan16.wav</ShortName>
@@ -470,7 +480,7 @@
 				</File>
 				<File Id="229414056" Language="SFX">
 					<ShortName>atmos\hydralics2.wav</ShortName>
-					<Path>SFX\atmos\hydralics2_CFD21E99.wem</Path>
+					<Path>SFX\atmos\hydralics2_DA49F56D.wem</Path>
 				</File>
 				<File Id="232222218" Language="SFX">
 					<ShortName>door slide\door open slide 4.wav</ShortName>
@@ -478,11 +488,11 @@
 				</File>
 				<File Id="233307603" Language="SFX">
 					<ShortName>dave\buttscratch1.wav</ShortName>
-					<Path>SFX\dave\buttscratch1_88B32A7D.wem</Path>
+					<Path>SFX\dave\buttscratch1_E9C95CE9.wem</Path>
 				</File>
 				<File Id="242871080" Language="SFX">
 					<ShortName>skibsatmos\skibsrumlen proper loop 3.wav</ShortName>
-					<Path>SFX\skibsatmos\skibsrumlen proper loop 3_CFD21E99.wem</Path>
+					<Path>SFX\skibsatmos\skibsrumlen proper loop 3_DA49F56D.wem</Path>
 				</File>
 				<File Id="249461941" Language="SFX">
 					<ShortName>Danish\low oxygen\lowOxygen2.wav</ShortName>
@@ -490,7 +500,7 @@
 				</File>
 				<File Id="250187452" Language="SFX">
 					<ShortName>skibsatmos\skibsrumlen knirk5.wav</ShortName>
-					<Path>SFX\skibsatmos\skibsrumlen knirk5_CFD21E99.wem</Path>
+					<Path>SFX\skibsatmos\skibsrumlen knirk5_DA49F56D.wem</Path>
 				</File>
 				<File Id="253900823" Language="SFX">
 					<ShortName>GAL\English\low oxygen\final\lowoxygen6.wav</ShortName>
@@ -502,7 +512,7 @@
 				</File>
 				<File Id="257012564" Language="SFX">
 					<ShortName>switches\switch off.wav</ShortName>
-					<Path>SFX\switches\switch off_CFD21E99.wem</Path>
+					<Path>SFX\switches\switch off_DA49F56D.wem</Path>
 				</File>
 				<File Id="257647355" Language="SFX">
 					<ShortName>door slide\door close slide3.wav</ShortName>
@@ -510,15 +520,15 @@
 				</File>
 				<File Id="259925040" Language="SFX">
 					<ShortName>blip blop\blip blop random12.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random12_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random12_739EC3DA.wem</Path>
 				</File>
 				<File Id="261205730" Language="SFX">
 					<ShortName>electrocute5.wav</ShortName>
-					<Path>SFX\electrocute5_539C5F29.wem</Path>
+					<Path>SFX\electrocute5_773EE765.wem</Path>
 				</File>
 				<File Id="261596142" Language="SFX">
 					<ShortName>metal\G\metal impact g4.wav</ShortName>
-					<Path>SFX\metal\G\metal impact g4_CFD21E99.wem</Path>
+					<Path>SFX\metal\G\metal impact g4_DA49F56D.wem</Path>
 				</File>
 				<File Id="262597100" Language="SFX">
 					<ShortName>GAL\English\general remarks\final\remarks1.wav</ShortName>
@@ -534,15 +544,15 @@
 				</File>
 				<File Id="271445821" Language="SFX">
 					<ShortName>metal\C\metal impact C1.wav</ShortName>
-					<Path>SFX\metal\C\metal impact C1_CFD21E99.wem</Path>
+					<Path>SFX\metal\C\metal impact C1_DA49F56D.wem</Path>
 				</File>
 				<File Id="271878563" Language="SFX">
 					<ShortName>putoutfire3.wav</ShortName>
-					<Path>SFX\putoutfire3_CFD21E99.wem</Path>
+					<Path>SFX\putoutfire3_DA49F56D.wem</Path>
 				</File>
 				<File Id="280545090" Language="SFX">
 					<ShortName>metal\metal impact no tone1.wav</ShortName>
-					<Path>SFX\metal\metal impact no tone1_CFD21E99.wem</Path>
+					<Path>SFX\metal\metal impact no tone1_DA49F56D.wem</Path>
 				</File>
 				<File Id="283467246" Language="SFX">
 					<ShortName>GAL\Danish\general remarks\final\remarkDan10.wav</ShortName>
@@ -554,7 +564,7 @@
 				</File>
 				<File Id="289304815" Language="SFX">
 					<ShortName>blip blop\blip blop random1.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random1_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random1_739EC3DA.wem</Path>
 				</File>
 				<File Id="295334028" Language="SFX">
 					<ShortName>GAL\English\electrocute\final\wires7.wav</ShortName>
@@ -562,7 +572,7 @@
 				</File>
 				<File Id="297086226" Language="SFX">
 					<ShortName>blip blop\blip blop sci fi forest short1.wav</ShortName>
-					<Path>SFX\blip blop\blip blop sci fi forest short1_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop sci fi forest short1_739EC3DA.wem</Path>
 				</File>
 				<File Id="298840236" Language="SFX">
 					<ShortName>Danish\out of oxygen\outOfOxygenDan5.wav</ShortName>
@@ -582,7 +592,7 @@
 				</File>
 				<File Id="330617176" Language="SFX">
 					<ShortName>impacts\object impact light4.wav</ShortName>
-					<Path>SFX\impacts\object impact light4_CFD21E99.wem</Path>
+					<Path>SFX\impacts\object impact light4_DA49F56D.wem</Path>
 				</File>
 				<File Id="331187366" Language="SFX">
 					<ShortName>GAL\Danish\general remarks\final\remarkDan7.wav</ShortName>
@@ -590,7 +600,7 @@
 				</File>
 				<File Id="341741593" Language="SFX">
 					<ShortName>atmos\hydralics9.wav</ShortName>
-					<Path>SFX\atmos\hydralics9_CFD21E99.wem</Path>
+					<Path>SFX\atmos\hydralics9_DA49F56D.wem</Path>
 				</File>
 				<File Id="343732216" Language="SFX">
 					<ShortName>explosion2.wav</ShortName>
@@ -598,7 +608,7 @@
 				</File>
 				<File Id="348662842" Language="SFX">
 					<ShortName>skibsatmos\skibs rumlen knirk 6.wav</ShortName>
-					<Path>SFX\skibsatmos\skibs rumlen knirk 6_F33BC7D7.wem</Path>
+					<Path>SFX\skibsatmos\skibs rumlen knirk 6_B388CD73.wem</Path>
 				</File>
 				<File Id="350922483" Language="SFX">
 					<ShortName>GAL\English\general remarks\final\remarks13.wav</ShortName>
@@ -606,15 +616,15 @@
 				</File>
 				<File Id="353469564" Language="SFX">
 					<ShortName>skibsatmos\skibs rumlem proper loop 1.wav</ShortName>
-					<Path>SFX\skibsatmos\skibs rumlem proper loop 1_CFD21E99.wem</Path>
+					<Path>SFX\skibsatmos\skibs rumlem proper loop 1_DA49F56D.wem</Path>
 				</File>
 				<File Id="354171151" Language="SFX">
 					<ShortName>grunts\dave grunts 17.wav</ShortName>
-					<Path>SFX\grunts\dave grunts 17_1B917FDD.wem</Path>
+					<Path>SFX\grunts\dave grunts 17_6D3E28C9.wem</Path>
 				</File>
 				<File Id="354507471" Language="SFX">
 					<ShortName>atmos\hydralics5.wav</ShortName>
-					<Path>SFX\atmos\hydralics5_CFD21E99.wem</Path>
+					<Path>SFX\atmos\hydralics5_DA49F56D.wem</Path>
 				</File>
 				<File Id="355268674" Language="SFX">
 					<ShortName>GAL\English\out of oxygen\final\outofocygen7.wav</ShortName>
@@ -622,7 +632,7 @@
 				</File>
 				<File Id="362285532" Language="SFX">
 					<ShortName>metal\C\metal impact C6.wav</ShortName>
-					<Path>SFX\metal\C\metal impact C6_CFD21E99.wem</Path>
+					<Path>SFX\metal\C\metal impact C6_DA49F56D.wem</Path>
 				</File>
 				<File Id="363675299" Language="SFX">
 					<ShortName>GAL\English\low oxygen\final\lowoxygen3.wav</ShortName>
@@ -646,7 +656,7 @@
 				</File>
 				<File Id="377881980" Language="SFX">
 					<ShortName>atmos\hydralics7.wav</ShortName>
-					<Path>SFX\atmos\hydralics7_CFD21E99.wem</Path>
+					<Path>SFX\atmos\hydralics7_DA49F56D.wem</Path>
 				</File>
 				<File Id="383218319" Language="SFX">
 					<ShortName>GAL\Danish\general remarks\final\remarkDan5.wav</ShortName>
@@ -662,19 +672,19 @@
 				</File>
 				<File Id="391699126" Language="SFX">
 					<ShortName>oxygen.wav</ShortName>
-					<Path>SFX\oxygen_9EAA80BD.wem</Path>
+					<Path>SFX\oxygen_07AB6D71.wem</Path>
 				</File>
 				<File Id="399018016" Language="SFX">
 					<ShortName>metal\F\metal impact F5.wav</ShortName>
-					<Path>SFX\metal\F\metal impact F5_CFD21E99.wem</Path>
+					<Path>SFX\metal\F\metal impact F5_DA49F56D.wem</Path>
 				</File>
 				<File Id="399449157" Language="SFX">
 					<ShortName>power down.wav</ShortName>
-					<Path>SFX\power down_CFD21E99.wem</Path>
+					<Path>SFX\power down_DA49F56D.wem</Path>
 				</File>
 				<File Id="399586230" Language="SFX">
 					<ShortName>launch mockup1 medium.wav</ShortName>
-					<Path>SFX\launch mockup1 medium_CFD21E99.wem</Path>
+					<Path>SFX\launch mockup1 medium_DA49F56D.wem</Path>
 				</File>
 				<File Id="402805320" Language="SFX">
 					<ShortName>GAL\English\out of oxygen\final\outofocygen1.wav</ShortName>
@@ -682,19 +692,19 @@
 				</File>
 				<File Id="404632530" Language="SFX">
 					<ShortName>dave\buttscratch4.wav</ShortName>
-					<Path>SFX\dave\buttscratch4_1D134D99.wem</Path>
+					<Path>SFX\dave\buttscratch4_8A8F82DD.wem</Path>
 				</File>
 				<File Id="408124425" Language="SFX">
 					<ShortName>impacts\object impact light5.wav</ShortName>
-					<Path>SFX\impacts\object impact light5_C4AD3850.wem</Path>
+					<Path>SFX\impacts\object impact light5_C90BE34C.wem</Path>
 				</File>
 				<File Id="409729343" Language="SFX">
 					<ShortName>CINEMATIC INTRO no gal mix2.wav</ShortName>
-					<Path>SFX\CINEMATIC INTRO no gal mix2_CFD21E99.wem</Path>
+					<Path>SFX\CINEMATIC INTRO no gal mix2_DA49F56D.wem</Path>
 				</File>
 				<File Id="412013133" Language="SFX">
 					<ShortName>SuctionWet_BW.61371.wav</ShortName>
-					<Path>SFX\SuctionWet_BW.61371_E6CA6D80.wem</Path>
+					<Path>SFX\SuctionWet_BW.61371_30F47B3C.wem</Path>
 				</File>
 				<File Id="418672149" Language="SFX">
 					<ShortName>GAL\English\general remarks\final\remarks14.wav</ShortName>
@@ -702,11 +712,11 @@
 				</File>
 				<File Id="421879619" Language="SFX">
 					<ShortName>impacts\heavy impact2.wav</ShortName>
-					<Path>SFX\impacts\heavy impact2_CFD21E99.wem</Path>
+					<Path>SFX\impacts\heavy impact2_DA49F56D.wem</Path>
 				</File>
 				<File Id="422239685" Language="SFX">
 					<ShortName>impacts\heavy impact8.wav</ShortName>
-					<Path>SFX\impacts\heavy impact8_CFD21E99.wem</Path>
+					<Path>SFX\impacts\heavy impact8_DA49F56D.wem</Path>
 				</File>
 				<File Id="422398595" Language="SFX">
 					<ShortName>door shut7_1.wav</ShortName>
@@ -714,15 +724,15 @@
 				</File>
 				<File Id="427171029" Language="SFX">
 					<ShortName>launch synth5.wav</ShortName>
-					<Path>SFX\launch synth5_1F6AE493.wem</Path>
+					<Path>SFX\launch synth5_E506BEF7.wem</Path>
 				</File>
 				<File Id="430918783" Language="SFX">
 					<ShortName>grunts\dave grunts 9.wav</ShortName>
-					<Path>SFX\grunts\dave grunts 9_41982B86.wem</Path>
+					<Path>SFX\grunts\dave grunts 9_662DE312.wem</Path>
 				</File>
 				<File Id="432234945" Language="SFX">
 					<ShortName>blip blop\blip blop sci fi forest short9.wav</ShortName>
-					<Path>SFX\blip blop\blip blop sci fi forest short9_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop sci fi forest short9_739EC3DA.wem</Path>
 				</File>
 				<File Id="438058724" Language="SFX">
 					<ShortName>door slide\door open slide 5.wav</ShortName>
@@ -730,7 +740,7 @@
 				</File>
 				<File Id="444280125" Language="SFX">
 					<ShortName>grunts\dave grunts 4.wav</ShortName>
-					<Path>SFX\grunts\dave grunts 4_9EC769C6.wem</Path>
+					<Path>SFX\grunts\dave grunts 4_26A0FB22.wem</Path>
 				</File>
 				<File Id="445026076" Language="SFX">
 					<ShortName>GAL\English\narrative\final\narrative1.wav</ShortName>
@@ -738,11 +748,11 @@
 				</File>
 				<File Id="448290045" Language="SFX">
 					<ShortName>impacts\heavy impact7.wav</ShortName>
-					<Path>SFX\impacts\heavy impact7_CFD21E99.wem</Path>
+					<Path>SFX\impacts\heavy impact7_DA49F56D.wem</Path>
 				</File>
 				<File Id="449393799" Language="SFX">
 					<ShortName>metal\C\metal impact C5.wav</ShortName>
-					<Path>SFX\metal\C\metal impact C5_CFD21E99.wem</Path>
+					<Path>SFX\metal\C\metal impact C5_DA49F56D.wem</Path>
 				</File>
 				<File Id="453653314" Language="SFX">
 					<ShortName>explosion3.wav</ShortName>
@@ -754,11 +764,11 @@
 				</File>
 				<File Id="456412154" Language="SFX">
 					<ShortName>impacts\light impact1.wav</ShortName>
-					<Path>SFX\impacts\light impact1_CFD21E99.wem</Path>
+					<Path>SFX\impacts\light impact1_DA49F56D.wem</Path>
 				</File>
 				<File Id="456998750" Language="SFX">
 					<ShortName>electrocute6.wav</ShortName>
-					<Path>SFX\electrocute6_6229DFB1.wem</Path>
+					<Path>SFX\electrocute6_ACFB5DCD.wem</Path>
 				</File>
 				<File Id="458589676" Language="SFX">
 					<ShortName>door shut2_1.wav</ShortName>
@@ -766,11 +776,11 @@
 				</File>
 				<File Id="462357784" Language="SFX">
 					<ShortName>metal\F\metal impact F3.wav</ShortName>
-					<Path>SFX\metal\F\metal impact F3_CFD21E99.wem</Path>
+					<Path>SFX\metal\F\metal impact F3_DA49F56D.wem</Path>
 				</File>
 				<File Id="468680021" Language="SFX">
 					<ShortName>menuScrollclick2.wav</ShortName>
-					<Path>SFX\menuScrollclick2_CFD21E99.wem</Path>
+					<Path>SFX\menuScrollclick2_DA49F56D.wem</Path>
 				</File>
 				<File Id="471019115" Language="SFX">
 					<ShortName>GAL\English\electrocute\final\wires8.wav</ShortName>
@@ -786,7 +796,7 @@
 				</File>
 				<File Id="473138648" Language="SFX">
 					<ShortName>fireloop.wav</ShortName>
-					<Path>SFX\fireloop_6DE9CED7.wem</Path>
+					<Path>SFX\fireloop_DAF950FB.wem</Path>
 				</File>
 				<File Id="483393435" Language="SFX">
 					<ShortName>Danish\out of oxygen\outOfOxygenDan4.wav</ShortName>
@@ -794,19 +804,19 @@
 				</File>
 				<File Id="483913680" Language="SFX">
 					<ShortName>blip blop\blip blop random118.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random118_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random118_739EC3DA.wem</Path>
 				</File>
 				<File Id="485270404" Language="SFX">
 					<ShortName>impacts\light impact2.wav</ShortName>
-					<Path>SFX\impacts\light impact2_D1C6C2ED.wem</Path>
+					<Path>SFX\impacts\light impact2_D0287659.wem</Path>
 				</File>
 				<File Id="485838835" Language="SFX">
 					<ShortName>keys pickup.wav</ShortName>
-					<Path>SFX\keys pickup_96E81ADC.wem</Path>
+					<Path>SFX\keys pickup_00D0B238.wem</Path>
 				</File>
 				<File Id="486336854" Language="SFX">
 					<ShortName>blip blop\blip blop random16.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random16_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random16_739EC3DA.wem</Path>
 				</File>
 				<File Id="489066010" Language="SFX">
 					<ShortName>Danish\fire\fireDan4.wav</ShortName>
@@ -814,7 +824,7 @@
 				</File>
 				<File Id="489574698" Language="SFX">
 					<ShortName>metal\D\metal impact D2.wav</ShortName>
-					<Path>SFX\metal\D\metal impact D2_CFD21E99.wem</Path>
+					<Path>SFX\metal\D\metal impact D2_DA49F56D.wem</Path>
 				</File>
 				<File Id="490533361" Language="SFX">
 					<ShortName>Danish\fire\fireDan6.wav</ShortName>
@@ -826,11 +836,11 @@
 				</File>
 				<File Id="495970770" Language="SFX">
 					<ShortName>skibsatmos\skibsrumlen proper loop 2.wav</ShortName>
-					<Path>SFX\skibsatmos\skibsrumlen proper loop 2_CFD21E99.wem</Path>
+					<Path>SFX\skibsatmos\skibsrumlen proper loop 2_DA49F56D.wem</Path>
 				</File>
 				<File Id="497404101" Language="SFX">
 					<ShortName>grunts\dave grunts 6.wav</ShortName>
-					<Path>SFX\grunts\dave grunts 6_96CE7DCD.wem</Path>
+					<Path>SFX\grunts\dave grunts 6_9F5E4AC1.wem</Path>
 				</File>
 				<File Id="500649464" Language="SFX">
 					<ShortName>aloevera.wav</ShortName>
@@ -838,11 +848,11 @@
 				</File>
 				<File Id="504936043" Language="SFX">
 					<ShortName>metal\F\metal impact F4.wav</ShortName>
-					<Path>SFX\metal\F\metal impact F4_CFD21E99.wem</Path>
+					<Path>SFX\metal\F\metal impact F4_DA49F56D.wem</Path>
 				</File>
 				<File Id="506737199" Language="SFX">
 					<ShortName>blip blop\blip blop random11.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random11_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random11_739EC3DA.wem</Path>
 				</File>
 				<File Id="510201090" Language="SFX">
 					<ShortName>GAL\Danish\general remarks\final\remarkDan13.wav</ShortName>
@@ -850,7 +860,7 @@
 				</File>
 				<File Id="510992843" Language="SFX">
 					<ShortName>grunts\dave grunts 1.wav</ShortName>
-					<Path>SFX\grunts\dave grunts 1_FE4D18C7.wem</Path>
+					<Path>SFX\grunts\dave grunts 1_C4C6C6BB.wem</Path>
 				</File>
 				<File Id="511513502" Language="SFX">
 					<ShortName>GAL\English\low oxygen\final\lowoxygen1.wav</ShortName>
@@ -858,11 +868,11 @@
 				</File>
 				<File Id="524316644" Language="SFX">
 					<ShortName>hello dave first final short loop version.wav</ShortName>
-					<Path>SFX\hello dave first final short loop version_6DE9CED7.wem</Path>
+					<Path>SFX\hello dave first final short loop version_DAF950FB.wem</Path>
 				</File>
 				<File Id="531256382" Language="SFX">
 					<ShortName>metal\Bb\metal impact Bb3.wav</ShortName>
-					<Path>SFX\metal\Bb\metal impact Bb3_CFD21E99.wem</Path>
+					<Path>SFX\metal\Bb\metal impact Bb3_DA49F56D.wem</Path>
 				</File>
 				<File Id="538281099" Language="SFX">
 					<ShortName>AK_Factory_IR\Rooms\AK Hamburg Echo Chamber.wav</ShortName>
@@ -878,7 +888,7 @@
 				</File>
 				<File Id="543943558" Language="SFX">
 					<ShortName>grunts\dave grunts 7.wav</ShortName>
-					<Path>SFX\grunts\dave grunts 7_789D617E.wem</Path>
+					<Path>SFX\grunts\dave grunts 7_882AB9D2.wem</Path>
 				</File>
 				<File Id="544555031" Language="SFX">
 					<ShortName>GAL\English\general remarks\final\remarks3.wav</ShortName>
@@ -886,19 +896,19 @@
 				</File>
 				<File Id="545959078" Language="SFX">
 					<ShortName>blip blop\blip blop random3.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random3_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random3_739EC3DA.wem</Path>
 				</File>
 				<File Id="546810305" Language="SFX">
 					<ShortName>metal\metal impact no tone5.wav</ShortName>
-					<Path>SFX\metal\metal impact no tone5_CFD21E99.wem</Path>
+					<Path>SFX\metal\metal impact no tone5_DA49F56D.wem</Path>
 				</File>
 				<File Id="551964046" Language="SFX">
 					<ShortName>KEYS CHIME LOOP.wav</ShortName>
-					<Path>SFX\KEYS CHIME LOOP_6DE9CED7.wem</Path>
+					<Path>SFX\KEYS CHIME LOOP_DAF950FB.wem</Path>
 				</File>
 				<File Id="555734377" Language="SFX">
 					<ShortName>impacts\heavy impact4.wav</ShortName>
-					<Path>SFX\impacts\heavy impact4_CFD21E99.wem</Path>
+					<Path>SFX\impacts\heavy impact4_DA49F56D.wem</Path>
 				</File>
 				<File Id="556032845" Language="SFX">
 					<ShortName>gasonfire.wav</ShortName>
@@ -906,15 +916,15 @@
 				</File>
 				<File Id="560816914" Language="SFX">
 					<ShortName>electrocute3.wav</ShortName>
-					<Path>SFX\electrocute3_AF30F9E8.wem</Path>
+					<Path>SFX\electrocute3_E3E7FFCC.wem</Path>
 				</File>
 				<File Id="561239547" Language="SFX">
 					<ShortName>jetpack synth4.wav</ShortName>
-					<Path>SFX\jetpack synth4_A165BDCE.wem</Path>
+					<Path>SFX\jetpack synth4_5E76579A.wem</Path>
 				</File>
 				<File Id="563855461" Language="SFX">
 					<ShortName>grunts\dave grunts 8.wav</ShortName>
-					<Path>SFX\grunts\dave grunts 8_4651E27E.wem</Path>
+					<Path>SFX\grunts\dave grunts 8_C683FEE2.wem</Path>
 				</File>
 				<File Id="572527449" Language="SFX">
 					<ShortName>door slide\door close slide5.wav</ShortName>
@@ -922,31 +932,31 @@
 				</File>
 				<File Id="572934450" Language="SFX">
 					<ShortName>atmos\hydralics4.wav</ShortName>
-					<Path>SFX\atmos\hydralics4_CFD21E99.wem</Path>
+					<Path>SFX\atmos\hydralics4_DA49F56D.wem</Path>
 				</File>
 				<File Id="573092875" Language="SFX">
 					<ShortName>metal\G\metal impact g2.wav</ShortName>
-					<Path>SFX\metal\G\metal impact g2_CFD21E99.wem</Path>
+					<Path>SFX\metal\G\metal impact g2_DA49F56D.wem</Path>
 				</File>
 				<File Id="577442237" Language="SFX">
 					<ShortName>keys chime reward1.wav</ShortName>
-					<Path>SFX\keys chime reward1_3F39870D.wem</Path>
+					<Path>SFX\keys chime reward1_BC07E4B9.wem</Path>
 				</File>
 				<File Id="578189822" Language="SFX">
 					<ShortName>blip blop\blip blop sci fi forest long1.wav</ShortName>
-					<Path>SFX\blip blop\blip blop sci fi forest long1_B73642EA.wem</Path>
+					<Path>SFX\blip blop\blip blop sci fi forest long1_92F8DBDE.wem</Path>
 				</File>
 				<File Id="578658333" Language="SFX">
 					<ShortName>blip blop\blip blop random21.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random21_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random21_739EC3DA.wem</Path>
 				</File>
 				<File Id="581417438" Language="SFX">
 					<ShortName>impacts\object impact2.wav</ShortName>
-					<Path>SFX\impacts\object impact2_470E9B54.wem</Path>
+					<Path>SFX\impacts\object impact2_5306B7B0.wem</Path>
 				</File>
 				<File Id="584384380" Language="SFX">
 					<ShortName>metal\D\metal impact D6.wav</ShortName>
-					<Path>SFX\metal\D\metal impact D6_CFD21E99.wem</Path>
+					<Path>SFX\metal\D\metal impact D6_DA49F56D.wem</Path>
 				</File>
 				<File Id="588734109" Language="SFX">
 					<ShortName>Danish\fire\fireDan5.wav</ShortName>
@@ -954,7 +964,7 @@
 				</File>
 				<File Id="588751820" Language="SFX">
 					<ShortName>launch mockup1 light.wav</ShortName>
-					<Path>SFX\launch mockup1 light_CFD21E99.wem</Path>
+					<Path>SFX\launch mockup1 light_DA49F56D.wem</Path>
 				</File>
 				<File Id="592368350" Language="SFX">
 					<ShortName>Danish\electrocute\wiresDan1.wav</ShortName>
@@ -966,7 +976,7 @@
 				</File>
 				<File Id="597181408" Language="SFX">
 					<ShortName>grunts\dave grunts 13.wav</ShortName>
-					<Path>SFX\grunts\dave grunts 13_0905EA87.wem</Path>
+					<Path>SFX\grunts\dave grunts 13_4C443C93.wem</Path>
 				</File>
 				<File Id="598488493" Language="SFX">
 					<ShortName>GAL\Danish\general remarks\final\remarkDan6.wav</ShortName>
@@ -982,7 +992,7 @@
 				</File>
 				<File Id="604626767" Language="SFX">
 					<ShortName>skibsatmos\skibs rumlen dyb 1 LOOP 2 fucking fixed.wav</ShortName>
-					<Path>SFX\skibsatmos\skibs rumlen dyb 1 LOOP 2 fucking fixed_CFD21E99.wem</Path>
+					<Path>SFX\skibsatmos\skibs rumlen dyb 1 LOOP 2 fucking fixed_DA49F56D.wem</Path>
 				</File>
 				<File Id="605860953" Language="SFX">
 					<ShortName>GAL\English\electrocute\final\wires2.wav</ShortName>
@@ -998,7 +1008,7 @@
 				</File>
 				<File Id="615578784" Language="SFX">
 					<ShortName>blip blop\blip blop sci fi forest short4.wav</ShortName>
-					<Path>SFX\blip blop\blip blop sci fi forest short4_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop sci fi forest short4_739EC3DA.wem</Path>
 				</File>
 				<File Id="625073912" Language="SFX">
 					<ShortName>door shut4_1.wav</ShortName>
@@ -1006,27 +1016,27 @@
 				</File>
 				<File Id="625149348" Language="SFX">
 					<ShortName>kick.wav</ShortName>
-					<Path>SFX\kick_9D8A61A5.wem</Path>
+					<Path>SFX\kick_46017ED9.wem</Path>
 				</File>
 				<File Id="627803589" Language="SFX">
 					<ShortName>blip blop\blip blop random4.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random4_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random4_739EC3DA.wem</Path>
 				</File>
 				<File Id="634867864" Language="SFX">
 					<ShortName>grunts\dave grunts 2.wav</ShortName>
-					<Path>SFX\grunts\dave grunts 2_B1D0ED5D.wem</Path>
+					<Path>SFX\grunts\dave grunts 2_A87567E1.wem</Path>
 				</File>
 				<File Id="635598483" Language="SFX">
 					<ShortName>grunts\dave grunts 11.wav</ShortName>
-					<Path>SFX\grunts\dave grunts 11_90EC29D8.wem</Path>
+					<Path>SFX\grunts\dave grunts 11_0A34E664.wem</Path>
 				</File>
 				<File Id="635644102" Language="SFX">
 					<ShortName>impacts\object impact light1.wav</ShortName>
-					<Path>SFX\impacts\object impact light1_8D2AE018.wem</Path>
+					<Path>SFX\impacts\object impact light1_FAD7BF7C.wem</Path>
 				</File>
 				<File Id="638340624" Language="SFX">
 					<ShortName>blip blop\blip blop random9.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random9_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random9_739EC3DA.wem</Path>
 				</File>
 				<File Id="639618804" Language="SFX">
 					<ShortName>GAL\Danish\fan\bare følg med strømmen.2.01.wav</ShortName>
@@ -1042,39 +1052,39 @@
 				</File>
 				<File Id="641636094" Language="SFX">
 					<ShortName>metal\Bb\metal impact Bb5.wav</ShortName>
-					<Path>SFX\metal\Bb\metal impact Bb5_CFD21E99.wem</Path>
+					<Path>SFX\metal\Bb\metal impact Bb5_DA49F56D.wem</Path>
 				</File>
 				<File Id="644181627" Language="SFX">
 					<ShortName>blip blop\blip blop sci fi forest long2 not as jolly.wav</ShortName>
-					<Path>SFX\blip blop\blip blop sci fi forest long2 not as jolly_CFD21E99.wem</Path>
+					<Path>SFX\blip blop\blip blop sci fi forest long2 not as jolly_DA49F56D.wem</Path>
 				</File>
 				<File Id="645013745" Language="SFX">
 					<ShortName>atmos\hydralics3.wav</ShortName>
-					<Path>SFX\atmos\hydralics3_CFD21E99.wem</Path>
+					<Path>SFX\atmos\hydralics3_DA49F56D.wem</Path>
 				</File>
 				<File Id="645679551" Language="SFX">
 					<ShortName>grunts\dave grunts 10.wav</ShortName>
-					<Path>SFX\grunts\dave grunts 10_087D0BA7.wem</Path>
+					<Path>SFX\grunts\dave grunts 10_0CD61073.wem</Path>
 				</File>
 				<File Id="647898339" Language="SFX">
 					<ShortName>door squeeze.wav</ShortName>
-					<Path>SFX\door squeeze_CFD21E99.wem</Path>
+					<Path>SFX\door squeeze_DA49F56D.wem</Path>
 				</File>
 				<File Id="650509731" Language="SFX">
 					<ShortName>atmos\hydralics8.wav</ShortName>
-					<Path>SFX\atmos\hydralics8_CFD21E99.wem</Path>
+					<Path>SFX\atmos\hydralics8_DA49F56D.wem</Path>
 				</File>
 				<File Id="653065705" Language="SFX">
 					<ShortName>blip blop\blip blop random14.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random14_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random14_739EC3DA.wem</Path>
 				</File>
 				<File Id="655295371" Language="SFX">
 					<ShortName>blip blop\blip blop random20.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random20_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random20_739EC3DA.wem</Path>
 				</File>
 				<File Id="666155042" Language="SFX">
 					<ShortName>atmos\hydralics6.wav</ShortName>
-					<Path>SFX\atmos\hydralics6_CFD21E99.wem</Path>
+					<Path>SFX\atmos\hydralics6_DA49F56D.wem</Path>
 				</File>
 				<File Id="666269133" Language="SFX">
 					<ShortName>GAL\English\narrative\final\narrative4.wav</ShortName>
@@ -1090,7 +1100,7 @@
 				</File>
 				<File Id="670906658" Language="SFX">
 					<ShortName>metal\D\metal impact D4.wav</ShortName>
-					<Path>SFX\metal\D\metal impact D4_CFD21E99.wem</Path>
+					<Path>SFX\metal\D\metal impact D4_DA49F56D.wem</Path>
 				</File>
 				<File Id="671594274" Language="SFX">
 					<ShortName>door slide\door close slide1.wav</ShortName>
@@ -1106,11 +1116,11 @@
 				</File>
 				<File Id="672133736" Language="SFX">
 					<ShortName>charge noise.wav</ShortName>
-					<Path>SFX\charge noise_6DE9CED7.wem</Path>
+					<Path>SFX\charge noise_DAF950FB.wem</Path>
 				</File>
 				<File Id="672209193" Language="SFX">
 					<ShortName>blip blop\blip blop random23.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random23_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random23_739EC3DA.wem</Path>
 				</File>
 				<File Id="672799992" Language="SFX">
 					<ShortName>door slide\door open slide 1.wav</ShortName>
@@ -1118,7 +1128,7 @@
 				</File>
 				<File Id="681768169" Language="SFX">
 					<ShortName>metal\C\metal impact C4.wav</ShortName>
-					<Path>SFX\metal\C\metal impact C4_CFD21E99.wem</Path>
+					<Path>SFX\metal\C\metal impact C4_DA49F56D.wem</Path>
 				</File>
 				<File Id="684420584" Language="SFX">
 					<ShortName>GAL\English\electrocute\final\9.wav</ShortName>
@@ -1130,7 +1140,7 @@
 				</File>
 				<File Id="691152910" Language="SFX">
 					<ShortName>impacts\light impact8.wav</ShortName>
-					<Path>SFX\impacts\light impact8_B7B9AFBE.wem</Path>
+					<Path>SFX\impacts\light impact8_DBFE9662.wem</Path>
 				</File>
 				<File Id="692903098" Language="SFX">
 					<ShortName>GAL\English\electrocute\final\wires4.wav</ShortName>
@@ -1138,11 +1148,11 @@
 				</File>
 				<File Id="693313243" Language="SFX">
 					<ShortName>launch synth1.wav</ShortName>
-					<Path>SFX\launch synth1_570EA8BE.wem</Path>
+					<Path>SFX\launch synth1_3D6CA1DA.wem</Path>
 				</File>
 				<File Id="693831123" Language="SFX">
 					<ShortName>jetpack synth2.wav</ShortName>
-					<Path>SFX\jetpack synth2_66EAF9F2.wem</Path>
+					<Path>SFX\jetpack synth2_686D7396.wem</Path>
 				</File>
 				<File Id="694793896" Language="SFX">
 					<ShortName>GAL\Danish\general remarks\final\remarkDan12.wav</ShortName>
@@ -1154,7 +1164,7 @@
 				</File>
 				<File Id="701977863" Language="SFX">
 					<ShortName>impacts\object impact4.wav</ShortName>
-					<Path>SFX\impacts\object impact4_88C48A08.wem</Path>
+					<Path>SFX\impacts\object impact4_C186CE5C.wem</Path>
 				</File>
 				<File Id="704262867" Language="SFX">
 					<ShortName>door shut6_1.wav</ShortName>
@@ -1162,27 +1172,27 @@
 				</File>
 				<File Id="706371641" Language="SFX">
 					<ShortName>grunts\dave grunts 12.wav</ShortName>
-					<Path>SFX\grunts\dave grunts 12_A16A78D4.wem</Path>
+					<Path>SFX\grunts\dave grunts 12_29844A40.wem</Path>
 				</File>
 				<File Id="712774231" Language="SFX">
 					<ShortName>metal\G\metal impact g1.wav</ShortName>
-					<Path>SFX\metal\G\metal impact g1_CFD21E99.wem</Path>
+					<Path>SFX\metal\G\metal impact g1_DA49F56D.wem</Path>
 				</File>
 				<File Id="714977692" Language="SFX">
 					<ShortName>metal\metal impact no tone6.wav</ShortName>
-					<Path>SFX\metal\metal impact no tone6_CFD21E99.wem</Path>
+					<Path>SFX\metal\metal impact no tone6_DA49F56D.wem</Path>
 				</File>
 				<File Id="723073472" Language="SFX">
 					<ShortName>electrocute2.wav</ShortName>
-					<Path>SFX\electrocute2_CFD21E99.wem</Path>
+					<Path>SFX\electrocute2_DA49F56D.wem</Path>
 				</File>
 				<File Id="725214750" Language="SFX">
 					<ShortName>charge.wav</ShortName>
-					<Path>SFX\charge_6DE9CED7.wem</Path>
+					<Path>SFX\charge_DAF950FB.wem</Path>
 				</File>
 				<File Id="726059107" Language="SFX">
 					<ShortName>SuctionCup_SFXB.1040.wav</ShortName>
-					<Path>SFX\SuctionCup_SFXB.1040_CFD21E99.wem</Path>
+					<Path>SFX\SuctionCup_SFXB.1040_DA49F56D.wem</Path>
 				</File>
 				<File Id="731203348" Language="SFX">
 					<ShortName>GAL\English\out of oxygen\final\outofocygen5.wav</ShortName>
@@ -1190,7 +1200,7 @@
 				</File>
 				<File Id="734779861" Language="SFX">
 					<ShortName>blip blop\blip blop sci fi forest short8.wav</ShortName>
-					<Path>SFX\blip blop\blip blop sci fi forest short8_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop sci fi forest short8_739EC3DA.wem</Path>
 				</File>
 				<File Id="738519879" Language="SFX">
 					<ShortName>door slide\door open slide 2.wav</ShortName>
@@ -1198,11 +1208,11 @@
 				</File>
 				<File Id="739005694" Language="SFX">
 					<ShortName>metal\metal impact no tone2.wav</ShortName>
-					<Path>SFX\metal\metal impact no tone2_CFD21E99.wem</Path>
+					<Path>SFX\metal\metal impact no tone2_DA49F56D.wem</Path>
 				</File>
 				<File Id="743864732" Language="SFX">
 					<ShortName>keys chime.wav</ShortName>
-					<Path>SFX\keys chime_CB172179.wem</Path>
+					<Path>SFX\keys chime_CEE1AC6D.wem</Path>
 				</File>
 				<File Id="746671419" Language="SFX">
 					<ShortName>GAL\English\general remarks\final\remarks4.wav</ShortName>
@@ -1210,7 +1220,7 @@
 				</File>
 				<File Id="751321384" Language="SFX">
 					<ShortName>impacts\light impact7.wav</ShortName>
-					<Path>SFX\impacts\light impact7_CFD21E99.wem</Path>
+					<Path>SFX\impacts\light impact7_DA49F56D.wem</Path>
 				</File>
 				<File Id="751371429" Language="SFX">
 					<ShortName>door shut9_1.wav</ShortName>
@@ -1218,19 +1228,19 @@
 				</File>
 				<File Id="753447221" Language="SFX">
 					<ShortName>blip blop\blip blop random2.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random2_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random2_739EC3DA.wem</Path>
 				</File>
 				<File Id="755883233" Language="SFX">
 					<ShortName>impacts\object impact7.wav</ShortName>
-					<Path>SFX\impacts\object impact7_60304DD7.wem</Path>
+					<Path>SFX\impacts\object impact7_1D4808AB.wem</Path>
 				</File>
 				<File Id="756074339" Language="SFX">
 					<ShortName>blip blop\blip blop sci fi forest short7.wav</ShortName>
-					<Path>SFX\blip blop\blip blop sci fi forest short7_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop sci fi forest short7_739EC3DA.wem</Path>
 				</File>
 				<File Id="756219729" Language="SFX">
 					<ShortName>metal\D\metal impact D1.wav</ShortName>
-					<Path>SFX\metal\D\metal impact D1_CFD21E99.wem</Path>
+					<Path>SFX\metal\D\metal impact D1_DA49F56D.wem</Path>
 				</File>
 				<File Id="762822008" Language="SFX">
 					<ShortName>GAL\Danish\general remarks\final\remarkDan2.wav</ShortName>
@@ -1238,15 +1248,15 @@
 				</File>
 				<File Id="763044600" Language="SFX">
 					<ShortName>blip blop\blip blop random5.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random5_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random5_739EC3DA.wem</Path>
 				</File>
 				<File Id="763202499" Language="SFX">
 					<ShortName>metal\F\metal impact F6.wav</ShortName>
-					<Path>SFX\metal\F\metal impact F6_CFD21E99.wem</Path>
+					<Path>SFX\metal\F\metal impact F6_DA49F56D.wem</Path>
 				</File>
 				<File Id="768276099" Language="SFX">
 					<ShortName>jetpack synth3.wav</ShortName>
-					<Path>SFX\jetpack synth3_70DE1AA5.wem</Path>
+					<Path>SFX\jetpack synth3_4AAAB289.wem</Path>
 				</File>
 				<File Id="768671281" Language="SFX">
 					<ShortName>GAL\English\narrative\final\narrative5.wav</ShortName>
@@ -1254,7 +1264,7 @@
 				</File>
 				<File Id="772753394" Language="SFX">
 					<ShortName>blip blop\blip blop random22.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random22_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random22_739EC3DA.wem</Path>
 				</File>
 				<File Id="781418421" Language="SFX">
 					<ShortName>GAL\English\switch\final\switch7.wav</ShortName>
@@ -1266,11 +1276,11 @@
 				</File>
 				<File Id="786633454" Language="SFX">
 					<ShortName>menuclickbackwards.wav</ShortName>
-					<Path>SFX\menuclickbackwards_CFD21E99.wem</Path>
+					<Path>SFX\menuclickbackwards_DA49F56D.wem</Path>
 				</File>
 				<File Id="788867424" Language="SFX">
 					<ShortName>metal\Bb\metal impact Bb6.wav</ShortName>
-					<Path>SFX\metal\Bb\metal impact Bb6_CFD21E99.wem</Path>
+					<Path>SFX\metal\Bb\metal impact Bb6_DA49F56D.wem</Path>
 				</File>
 				<File Id="791519769" Language="SFX">
 					<ShortName>GAL\English\switch\final\switch3.wav</ShortName>
@@ -1278,11 +1288,11 @@
 				</File>
 				<File Id="794015766" Language="SFX">
 					<ShortName>grunts\dave grunts 14.wav</ShortName>
-					<Path>SFX\grunts\dave grunts 14_D8FEF0C5.wem</Path>
+					<Path>SFX\grunts\dave grunts 14_6E8FC391.wem</Path>
 				</File>
 				<File Id="800798867" Language="SFX">
 					<ShortName>metal\Bb\metal impact Bb1.wav</ShortName>
-					<Path>SFX\metal\Bb\metal impact Bb1_56C3F216.wem</Path>
+					<Path>SFX\metal\Bb\metal impact Bb1_DBF1D7F2.wem</Path>
 				</File>
 				<File Id="803463307" Language="SFX">
 					<ShortName>GAL\Danish\general remarks\final\remarkDan4.wav</ShortName>
@@ -1290,7 +1300,7 @@
 				</File>
 				<File Id="804870020" Language="SFX">
 					<ShortName>metal\Bb\metal impact Bb4.wav</ShortName>
-					<Path>SFX\metal\Bb\metal impact Bb4_CFD21E99.wem</Path>
+					<Path>SFX\metal\Bb\metal impact Bb4_DA49F56D.wem</Path>
 				</File>
 				<File Id="820358792" Language="SFX">
 					<ShortName>door slide\door open slide 7.wav</ShortName>
@@ -1298,15 +1308,15 @@
 				</File>
 				<File Id="821671456" Language="SFX">
 					<ShortName>skibsatmos\skibsrumlen proper loop 1.wav</ShortName>
-					<Path>SFX\skibsatmos\skibsrumlen proper loop 1_CFD21E99.wem</Path>
+					<Path>SFX\skibsatmos\skibsrumlen proper loop 1_DA49F56D.wem</Path>
 				</File>
 				<File Id="824313990" Language="SFX">
 					<ShortName>dave\buttscratch2.wav</ShortName>
-					<Path>SFX\dave\buttscratch2_7A536625.wem</Path>
+					<Path>SFX\dave\buttscratch2_B35800D1.wem</Path>
 				</File>
 				<File Id="824586379" Language="SFX">
 					<ShortName>putoutfire2.wav</ShortName>
-					<Path>SFX\putoutfire2_CFD21E99.wem</Path>
+					<Path>SFX\putoutfire2_DA49F56D.wem</Path>
 				</File>
 				<File Id="826297103" Language="SFX">
 					<ShortName>GAL\English\narrative\final\dave your suit has sustained major blows.wav</ShortName>
@@ -1322,15 +1332,15 @@
 				</File>
 				<File Id="836593034" Language="SFX">
 					<ShortName>impacts\object impact1.wav</ShortName>
-					<Path>SFX\impacts\object impact1_C7EAD7E5.wem</Path>
+					<Path>SFX\impacts\object impact1_71199551.wem</Path>
 				</File>
 				<File Id="837032869" Language="SFX">
 					<ShortName>grunts\dave grunts 5.wav</ShortName>
-					<Path>SFX\grunts\dave grunts 5_339405A0.wem</Path>
+					<Path>SFX\grunts\dave grunts 5_ECAC246C.wem</Path>
 				</File>
 				<File Id="837404966" Language="SFX">
 					<ShortName>impacts\heavy impact6.wav</ShortName>
-					<Path>SFX\impacts\heavy impact6_CFD21E99.wem</Path>
+					<Path>SFX\impacts\heavy impact6_DA49F56D.wem</Path>
 				</File>
 				<File Id="837454280" Language="SFX">
 					<ShortName>GAL\Danish\general remarks\final\remarkDan1.wav</ShortName>
@@ -1338,11 +1348,11 @@
 				</File>
 				<File Id="852010570" Language="SFX">
 					<ShortName>putoutfire1.wav</ShortName>
-					<Path>SFX\putoutfire1_CFD21E99.wem</Path>
+					<Path>SFX\putoutfire1_DA49F56D.wem</Path>
 				</File>
 				<File Id="853230804" Language="SFX">
 					<ShortName>impacts\object impact5.wav</ShortName>
-					<Path>SFX\impacts\object impact5_03AAB369.wem</Path>
+					<Path>SFX\impacts\object impact5_A100E245.wem</Path>
 				</File>
 				<File Id="854233652" Language="SFX">
 					<ShortName>GAL\Danish\general remarks\final\remarkDan14.wav</ShortName>
@@ -1354,11 +1364,11 @@
 				</File>
 				<File Id="860279208" Language="SFX">
 					<ShortName>launch synth3.wav</ShortName>
-					<Path>SFX\launch synth3_494649EE.wem</Path>
+					<Path>SFX\launch synth3_99262CDA.wem</Path>
 				</File>
 				<File Id="867057375" Language="SFX">
 					<ShortName>power up.wav</ShortName>
-					<Path>SFX\power up_CFD21E99.wem</Path>
+					<Path>SFX\power up_DA49F56D.wem</Path>
 				</File>
 				<File Id="868425316" Language="SFX">
 					<ShortName>GAL\English\out of oxygen\final\outofocygen4.wav</ShortName>
@@ -1366,11 +1376,11 @@
 				</File>
 				<File Id="868996355" Language="SFX">
 					<ShortName>blip blop\blip blop random15.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random15_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random15_739EC3DA.wem</Path>
 				</File>
 				<File Id="871754042" Language="SFX">
 					<ShortName>launch synth4.wav</ShortName>
-					<Path>SFX\launch synth4_2941658E.wem</Path>
+					<Path>SFX\launch synth4_8177D2FA.wem</Path>
 				</File>
 				<File Id="873587437" Language="SFX">
 					<ShortName>Danish\switch\switchDAn3.wav</ShortName>
@@ -1378,7 +1388,7 @@
 				</File>
 				<File Id="877963907" Language="SFX">
 					<ShortName>electrocute1.wav</ShortName>
-					<Path>SFX\electrocute1_6E917673.wem</Path>
+					<Path>SFX\electrocute1_2F0FCBCF.wem</Path>
 				</File>
 				<File Id="878892781" Language="SFX">
 					<ShortName>explosion4.wav</ShortName>
@@ -1386,11 +1396,11 @@
 				</File>
 				<File Id="881265781" Language="SFX">
 					<ShortName>grunts\dave grunts 3.wav</ShortName>
-					<Path>SFX\grunts\dave grunts 3_C05994AA.wem</Path>
+					<Path>SFX\grunts\dave grunts 3_D2B2A30E.wem</Path>
 				</File>
 				<File Id="886669593" Language="SFX">
 					<ShortName>metal\G\metal impact g6.wav</ShortName>
-					<Path>SFX\metal\G\metal impact g6_CFD21E99.wem</Path>
+					<Path>SFX\metal\G\metal impact g6_DA49F56D.wem</Path>
 				</File>
 				<File Id="887277475" Language="SFX">
 					<ShortName>narrative\narrativeDan8.wav</ShortName>
@@ -1402,11 +1412,11 @@
 				</File>
 				<File Id="888007184" Language="SFX">
 					<ShortName>impacts\light impact4.wav</ShortName>
-					<Path>SFX\impacts\light impact4_CFD21E99.wem</Path>
+					<Path>SFX\impacts\light impact4_DA49F56D.wem</Path>
 				</File>
 				<File Id="889245619" Language="SFX">
 					<ShortName>blip blop\blip blop sci fi forest long3 weird.wav</ShortName>
-					<Path>SFX\blip blop\blip blop sci fi forest long3 weird_CFD21E99.wem</Path>
+					<Path>SFX\blip blop\blip blop sci fi forest long3 weird_DA49F56D.wem</Path>
 				</File>
 				<File Id="896546075" Language="SFX">
 					<ShortName>GAL\English\fire\final\fire5.wav</ShortName>
@@ -1418,11 +1428,11 @@
 				</File>
 				<File Id="914127829" Language="SFX">
 					<ShortName>impacts\heavy impact1.wav</ShortName>
-					<Path>SFX\impacts\heavy impact1_CFD21E99.wem</Path>
+					<Path>SFX\impacts\heavy impact1_DA49F56D.wem</Path>
 				</File>
 				<File Id="914452362" Language="SFX">
 					<ShortName>metal\D\metal impact D5.wav</ShortName>
-					<Path>SFX\metal\D\metal impact D5_CFD21E99.wem</Path>
+					<Path>SFX\metal\D\metal impact D5_DA49F56D.wem</Path>
 				</File>
 				<File Id="916303569" Language="SFX">
 					<ShortName>GAL\English\general remarks\final\remarks10.wav</ShortName>
@@ -1430,7 +1440,7 @@
 				</File>
 				<File Id="919206210" Language="SFX">
 					<ShortName>metal\Bb\metal impact Bb2.wav</ShortName>
-					<Path>SFX\metal\Bb\metal impact Bb2_CFD21E99.wem</Path>
+					<Path>SFX\metal\Bb\metal impact Bb2_DA49F56D.wem</Path>
 				</File>
 				<File Id="919400887" Language="SFX">
 					<ShortName>door slide\door close slide7.wav</ShortName>
@@ -1438,15 +1448,15 @@
 				</File>
 				<File Id="920506848" Language="SFX">
 					<ShortName>impacts\object impact light7.wav</ShortName>
-					<Path>SFX\impacts\object impact light7_FCF95FA8.wem</Path>
+					<Path>SFX\impacts\object impact light7_03E2C1AC.wem</Path>
 				</File>
 				<File Id="920814763" Language="SFX">
 					<ShortName>menuclickforward.wav</ShortName>
-					<Path>SFX\menuclickforward_CFD21E99.wem</Path>
+					<Path>SFX\menuclickforward_DA49F56D.wem</Path>
 				</File>
 				<File Id="925249132" Language="SFX">
 					<ShortName>jetpack synth1.wav</ShortName>
-					<Path>SFX\jetpack synth1_878FDFAE.wem</Path>
+					<Path>SFX\jetpack synth1_DB62FC4A.wem</Path>
 				</File>
 				<File Id="929920904" Language="SFX">
 					<ShortName>GAL\English\general remarks\final\remarks6.wav</ShortName>
@@ -1458,7 +1468,7 @@
 				</File>
 				<File Id="938445351" Language="SFX">
 					<ShortName>impacts\object impact6.wav</ShortName>
-					<Path>SFX\impacts\object impact6_FBF239FC.wem</Path>
+					<Path>SFX\impacts\object impact6_1B32BE18.wem</Path>
 				</File>
 				<File Id="942578140" Language="SFX">
 					<ShortName>GAL\English\fan\final\fan5.wav</ShortName>
@@ -1466,15 +1476,15 @@
 				</File>
 				<File Id="949012013" Language="SFX">
 					<ShortName>main atmos.wav</ShortName>
-					<Path>SFX\main atmos_6DE9CED7.wem</Path>
+					<Path>SFX\main atmos_DAF950FB.wem</Path>
 				</File>
 				<File Id="954327847" Language="SFX">
 					<ShortName>blip blop\blip blop random8.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random8_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random8_739EC3DA.wem</Path>
 				</File>
 				<File Id="956419964" Language="SFX">
 					<ShortName>metal\D\metal impact D3.wav</ShortName>
-					<Path>SFX\metal\D\metal impact D3_CFD21E99.wem</Path>
+					<Path>SFX\metal\D\metal impact D3_DA49F56D.wem</Path>
 				</File>
 				<File Id="964917836" Language="SFX">
 					<ShortName>Danish\switch\switchDAn4.wav</ShortName>
@@ -1482,7 +1492,7 @@
 				</File>
 				<File Id="969317301" Language="SFX">
 					<ShortName>blip blop\blip blop sci fi forest short10.wav</ShortName>
-					<Path>SFX\blip blop\blip blop sci fi forest short10_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop sci fi forest short10_739EC3DA.wem</Path>
 				</File>
 				<File Id="970972274" Language="SFX">
 					<ShortName>door shut5_1.wav</ShortName>
@@ -1490,11 +1500,11 @@
 				</File>
 				<File Id="971397170" Language="SFX">
 					<ShortName>atmos\hydralics1.wav</ShortName>
-					<Path>SFX\atmos\hydralics1_CFD21E99.wem</Path>
+					<Path>SFX\atmos\hydralics1_DA49F56D.wem</Path>
 				</File>
 				<File Id="972817918" Language="SFX">
 					<ShortName>skibsatmos\skibs rumlen knirk 2.wav</ShortName>
-					<Path>SFX\skibsatmos\skibs rumlen knirk 2_7D14CECA.wem</Path>
+					<Path>SFX\skibsatmos\skibs rumlen knirk 2_CB6AD8AE.wem</Path>
 				</File>
 				<File Id="975186946" Language="SFX">
 					<ShortName>Danish\switch\switchDAn1.wav</ShortName>
@@ -1506,11 +1516,11 @@
 				</File>
 				<File Id="981090303" Language="SFX">
 					<ShortName>impacts\light impact6.wav</ShortName>
-					<Path>SFX\impacts\light impact6_CFD21E99.wem</Path>
+					<Path>SFX\impacts\light impact6_DA49F56D.wem</Path>
 				</File>
 				<File Id="981487521" Language="SFX">
 					<ShortName>impacts\light impact5.wav</ShortName>
-					<Path>SFX\impacts\light impact5_CFD21E99.wem</Path>
+					<Path>SFX\impacts\light impact5_DA49F56D.wem</Path>
 				</File>
 				<File Id="982755718" Language="SFX">
 					<ShortName>narrative\narrativeDan6.wav</ShortName>
@@ -1518,7 +1528,7 @@
 				</File>
 				<File Id="984498401" Language="SFX">
 					<ShortName>impacts\heavy impact3.wav</ShortName>
-					<Path>SFX\impacts\heavy impact3_CFD21E99.wem</Path>
+					<Path>SFX\impacts\heavy impact3_DA49F56D.wem</Path>
 				</File>
 				<File Id="988269575" Language="SFX">
 					<ShortName>GAL\English\out of oxygen\final\outofocygen6.wav</ShortName>
@@ -1526,19 +1536,19 @@
 				</File>
 				<File Id="990388538" Language="SFX">
 					<ShortName>impacts\light impact3.wav</ShortName>
-					<Path>SFX\impacts\light impact3_CFD21E99.wem</Path>
+					<Path>SFX\impacts\light impact3_DA49F56D.wem</Path>
 				</File>
 				<File Id="995787277" Language="SFX">
 					<ShortName>blip blop\blip blop sci fi forest short3.wav</ShortName>
-					<Path>SFX\blip blop\blip blop sci fi forest short3_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop sci fi forest short3_739EC3DA.wem</Path>
 				</File>
 				<File Id="997255121" Language="SFX">
 					<ShortName>menuScrollclick3.wav</ShortName>
-					<Path>SFX\menuScrollclick3_CFD21E99.wem</Path>
+					<Path>SFX\menuScrollclick3_DA49F56D.wem</Path>
 				</File>
 				<File Id="1000329366" Language="SFX">
 					<ShortName>metal\C\metal impact C3.wav</ShortName>
-					<Path>SFX\metal\C\metal impact C3_CFD21E99.wem</Path>
+					<Path>SFX\metal\C\metal impact C3_DA49F56D.wem</Path>
 				</File>
 				<File Id="1001129958" Language="SFX">
 					<ShortName>GAL\English\narrative\final\narrative2.wav</ShortName>
@@ -1550,11 +1560,11 @@
 				</File>
 				<File Id="1008444769" Language="SFX">
 					<ShortName>catchfire.wav</ShortName>
-					<Path>SFX\catchfire_CFD21E99.wem</Path>
+					<Path>SFX\catchfire_DA49F56D.wem</Path>
 				</File>
 				<File Id="1008447857" Language="SFX">
 					<ShortName>blip blop\blip blop random19.wav</ShortName>
-					<Path>SFX\blip blop\blip blop random19_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop random19_739EC3DA.wem</Path>
 				</File>
 				<File Id="1024588397" Language="SFX">
 					<ShortName>Danish\low oxygen\lowOxygen3.wav</ShortName>
@@ -1570,11 +1580,11 @@
 				</File>
 				<File Id="1030162421" Language="SFX">
 					<ShortName>blip blop\blip blop sci fi forest short11.wav</ShortName>
-					<Path>SFX\blip blop\blip blop sci fi forest short11_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop sci fi forest short11_739EC3DA.wem</Path>
 				</File>
 				<File Id="1031646511" Language="SFX">
 					<ShortName>launch mockup1 long.wav</ShortName>
-					<Path>SFX\launch mockup1 long_CFD21E99.wem</Path>
+					<Path>SFX\launch mockup1 long_DA49F56D.wem</Path>
 				</File>
 				<File Id="1035730658" Language="SFX">
 					<ShortName>Danish\fire\fireDan1.wav</ShortName>
@@ -1582,7 +1592,7 @@
 				</File>
 				<File Id="1036120416" Language="SFX">
 					<ShortName>blip blop\blip blop sci fi forest short5.wav</ShortName>
-					<Path>SFX\blip blop\blip blop sci fi forest short5_6926EB06.wem</Path>
+					<Path>SFX\blip blop\blip blop sci fi forest short5_739EC3DA.wem</Path>
 				</File>
 				<File Id="1039321002" Language="SFX">
 					<ShortName>Danish\out of oxygen\outOfOxygenDan3.wav</ShortName>
@@ -1590,11 +1600,11 @@
 				</File>
 				<File Id="1041668143" Language="SFX">
 					<ShortName>menuScrollclick.wav</ShortName>
-					<Path>SFX\menuScrollclick_CFD21E99.wem</Path>
+					<Path>SFX\menuScrollclick_DA49F56D.wem</Path>
 				</File>
 				<File Id="1044380383" Language="SFX">
 					<ShortName>skibsatmos\skibsrumlen knirk4.wav</ShortName>
-					<Path>SFX\skibsatmos\skibsrumlen knirk4_76AC7FB2.wem</Path>
+					<Path>SFX\skibsatmos\skibsrumlen knirk4_0B206D9E.wem</Path>
 				</File>
 				<File Id="1044968386" Language="SFX">
 					<ShortName>GAL\English\electrocute\final\wires3.wav</ShortName>
@@ -1610,11 +1620,11 @@
 				</File>
 				<File Id="1059243837" Language="SFX">
 					<ShortName>comic. shitty.wav</ShortName>
-					<Path>SFX\comic. shitty_CFD21E99.wem</Path>
+					<Path>SFX\comic. shitty_DA49F56D.wem</Path>
 				</File>
 				<File Id="1061219038" Language="SFX">
 					<ShortName>impacts\object impact3.wav</ShortName>
-					<Path>SFX\impacts\object impact3_F8200C04.wem</Path>
+					<Path>SFX\impacts\object impact3_B32F5940.wem</Path>
 				</File>
 				<File Id="1064419361" Language="SFX">
 					<ShortName>explosion5.wav</ShortName>
@@ -1622,11 +1632,11 @@
 				</File>
 				<File Id="1064649682" Language="SFX">
 					<ShortName>impacts\heavy impact5.wav</ShortName>
-					<Path>SFX\impacts\heavy impact5_CFD21E99.wem</Path>
+					<Path>SFX\impacts\heavy impact5_DA49F56D.wem</Path>
 				</File>
 				<File Id="1065919626" Language="SFX">
 					<ShortName>skibsatmos\skibsrumlen knirk3.wav</ShortName>
-					<Path>SFX\skibsatmos\skibsrumlen knirk3_76F0F492.wem</Path>
+					<Path>SFX\skibsatmos\skibsrumlen knirk3_2A1CD436.wem</Path>
 				</File>
 				<File Id="1068792125" Language="SFX">
 					<ShortName>Danish\out of oxygen\outOfOxygenDan2.wav</ShortName>

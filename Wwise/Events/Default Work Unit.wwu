@@ -1146,17 +1146,6 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="daveOutofOxygen" ID="{29D16A91-BAB9-4DDC-8A2B-2DDDE1A4DB05}"/>
-						<Event Name="daveVent" ID="{61D326B8-41B3-4F62-9696-75FEAEC489A2}">
-							<ChildrenList>
-								<Action Name="Play" ID="{CDC291D3-7121-4FAE-BD45-DA8E02ED3AFD}" ShortID="131811180" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{E10CDA6A-D4AA-4D98-9EA7-4FA03ED14BF6}" Global="false">
-											<ObjectRef Name="airdrag" ID="{F531F20F-7E93-44CF-9E05-98BE0E6F2967}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}"/>
-										</Element>
-									</ElementList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="daveScratch" ID="{27E2C4F0-F349-4F33-8A96-68A0FA840C7D}">
 							<ChildrenList>
 								<Action Name="Play" ID="{9742EC6C-6AE7-4D33-A609-DC70D8586F19}" ShortID="806010274" Type="Play" Scope="One" Global="false">
@@ -1187,6 +1176,34 @@
 									<ElementList>
 										<Element ID="{17D53020-B92F-484A-8328-A31DD9539BC0}" Global="false">
 											<ObjectRef Name="keys chime reward2" ID="{0C3FBE23-7945-47ED-B56B-6BB052646C27}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{E3C2D35D-D66F-4785-BC6F-0D5F37E25F0D}" ShortID="74855023" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{D3856071-8676-4029-BB91-0E9CFF77CD1F}" Global="true">
+											<ObjectRef Name="blip blop high" ID="{051A0537-8D66-4B55-B8E4-9244D1313A32}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{B6E3153F-1CF1-4A90-A534-50A9693A4959}" ShortID="213024406" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{9F815C0E-2D45-4713-94DC-96CD971E0F29}" Global="true">
+											<ObjectRef Name="blip blop low" ID="{26057701-EBAE-471B-A848-0AE7780EEA2E}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{15C7210B-415A-4101-9CB3-74673C6E5DD9}" ShortID="1045773421" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{014D7205-84A3-4203-91D6-CE068EDEB1A5}" Global="false">
+											<ObjectRef Name="blip blop high" ID="{051A0537-8D66-4B55-B8E4-9244D1313A32}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{DF0C33EF-8181-4F76-90F2-B916490DBB7E}" ShortID="201676985" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{A6F2FA20-8CF9-4990-8698-4D8E88F1B628}" Global="false">
+											<ObjectRef Name="blip blop low" ID="{26057701-EBAE-471B-A848-0AE7780EEA2E}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -1451,17 +1468,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="ventAir" ID="{63694199-89B1-4D0F-8472-12B42F956FC3}">
-							<ChildrenList>
-								<Action Name="Play" ID="{FCD4252F-3F49-4DD6-A441-56DA4A915E35}" ShortID="663316393" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{58FBB1A4-243C-4310-B031-64FACB369422}" Global="false">
-											<ObjectRef Name="airdrag" ID="{F531F20F-7E93-44CF-9E05-98BE0E6F2967}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}"/>
-										</Element>
-									</ElementList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="blipBlopHigh" ID="{FDE64E94-C591-4E29-AA0E-7A33F7ECA3AD}">
 							<ChildrenList>
 								<Action Name="Play" ID="{18E8EA5B-987F-4AAB-8D80-05285F852632}" ShortID="304990650" Type="Play" Scope="One" Global="false">
@@ -1525,6 +1531,13 @@
 						</Event>
 						<Event Name="keysAmbient" ID="{C92E0D84-AA52-4381-BA90-B19F5426274A}">
 							<ChildrenList>
+								<Action Name="Stop" ID="{8BEE237A-6B0F-41BF-A805-5B42F3CF1640}" ShortID="847915184" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{E62CCA88-5605-436C-88FE-95F3D96E8677}" Global="true">
+											<ObjectRef Name="KEYS CHIME LOOP" ID="{07D15E04-2418-45E6-B0C6-3585751FABB2}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 								<Action Name="Play" ID="{AA230C78-E8FF-496E-A6E7-8B0EF5C6E147}" ShortID="924444092" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{01BFBB58-82E3-45D9-A399-1BE4E0250AF0}" Global="false">
@@ -1540,6 +1553,28 @@
 									<ElementList>
 										<Element ID="{7D0E4319-6EF5-4B4E-8FF9-088CF37CA108}" Global="false">
 											<ObjectRef Name="keys chime" ID="{518F3D2D-F675-4A4E-867D-38D58449EAA9}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="lights" ID="{537F8D76-B921-4196-BD44-84FA9E486D70}">
+							<ChildrenList>
+								<Action Name="Play" ID="{57E194AD-BB91-43EA-B149-03E52BBBCB4A}" ShortID="263916979" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{0B201028-1400-48C0-B377-FFA1BDD98A86}" Global="false">
+											<ObjectRef Name="lightloop" ID="{28023181-48EF-420A-91D2-7C50D5CCBCC0}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="alienTube" ID="{E239812D-A831-4F73-809D-7C16EF1E9E3F}">
+							<ChildrenList>
+								<Action Name="Play" ID="{DAA1891E-1FCC-4529-89B7-0AD9344ED2F8}" ShortID="45961325" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{2184C7CF-010F-4E70-AB8C-24C1C236CD8D}" Global="false">
+											<ObjectRef Name="Boiling Waterloop" ID="{A6F9B35C-0FCE-43C8-BEDE-2E25F5BBFA9D}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>

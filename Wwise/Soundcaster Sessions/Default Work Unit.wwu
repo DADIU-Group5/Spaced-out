@@ -33,15 +33,19 @@
 							<ObjectRef Name="daveFirstLaunch" ID="{2550C575-219E-4DEC-B001-F0B5745648B4}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
 							<Position X="3" Y="1"/>
 						</Module>
-						<Module>
-							<ObjectRef Name="ventAir" ID="{63694199-89B1-4D0F-8472-12B42F956FC3}" WorkUnitID="{EC812C4A-C28C-4825-9097-67377A54A74A}"/>
-							<Position X="4" Y="1"/>
-						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="velocitySlowLerp" ID="{3FD8C653-11EB-408B-86C1-E3967D63A2F8}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Turbulence" ID="{EDA87B19-73AA-40A0-9F19-2073606DB710}"/>
 							<Value>6</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="velocity2" ID="{437B7395-5498-439E-A447-C6AC63340C6B}"/>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="masterVolume" ID="{16D6A1BF-90EA-4458-897A-819BFBA4868A}"/>
@@ -84,6 +88,10 @@
 							<Value>91.6111850865513</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="sfxSideChain" ID="{898B4D00-A726-4AD1-9F5F-D2518D0994CF}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}"/>
 							<Value>76.3905325443787</Value>
 						</RTPCValue>
@@ -104,7 +112,15 @@
 							<Value>75</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="galSidechain" ID="{60BF31E9-478B-4DE4-954F-45BFC64AB433}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Fear" ID="{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="musicSidechain" ID="{181A310C-6E70-4F86-B312-63125AE5BB3A}"/>
 							<Value>50</Value>
 						</RTPCValue>
 						<RTPCValue>

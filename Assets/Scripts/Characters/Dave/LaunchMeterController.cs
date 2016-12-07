@@ -7,13 +7,13 @@ public class LaunchMeterController : MonoBehaviour, Observer
 {
     public List<Renderer> bars;
     public Material newMat;
-    private Material OrgMat;
+    private Material orgMat;
     float delimiter;
 
     private void Awake()
     {
+        orgMat = bars[0].material;
         Subject.instance.AddObserver(this);
-        OrgMat = bars[0].material;
     }
 
     private void Start()
@@ -49,7 +49,7 @@ public class LaunchMeterController : MonoBehaviour, Observer
             }
             else
             {
-                bars[i].material = OrgMat;
+                bars[i].material = orgMat;
                 bars[i].material.color = new Color(63f / 225f, 72f / 225f, 204f / 225f);
             }
         }

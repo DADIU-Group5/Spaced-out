@@ -1282,7 +1282,7 @@
 							<ChildrenList>
 								<Action Name="Play" ID="{0B2CD72E-79B5-4E11-A447-675B2F1D61F2}" ShortID="3840145" Type="Play" Scope="One" Global="false">
 									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.2"/>
+										<Property Name="Delay" Type="Real64" Value="0.7"/>
 									</PropertyList>
 									<ElementList>
 										<Element ID="{4ACA9471-5696-4B32-8C0C-46A0F0D67A07}" Global="false">
@@ -1291,6 +1291,9 @@
 									</ElementList>
 								</Action>
 								<Action Name="Play" ID="{2C70E2DB-8D0F-4D2D-AF78-7C25A4466F52}" ShortID="138100998" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.57"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{A5D46115-1757-48CC-A456-1A266131D691}" Global="false">
 											<ObjectRef Name="close" ID="{0D44963E-C73A-4BD6-A14F-256A4A32BD83}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>

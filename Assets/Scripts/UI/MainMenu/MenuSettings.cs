@@ -28,11 +28,11 @@ public class MenuSettings : MonoBehaviour {
         SetupSoundSliders();
         if (SceneManager.GetActiveScene().name == "Main Menu")
         {
-            if (SettingsManager.instance.GetLanguage().ToString() == "english")
+            if (SettingsManager.instance.GetLanguage().ToString() == "English")
             {
                 english.SetActive(true);
             }
-            else
+            else if(SettingsManager.instance.GetLanguage().ToString() == "Danish")
             {
                 danish.SetActive(true);
             }

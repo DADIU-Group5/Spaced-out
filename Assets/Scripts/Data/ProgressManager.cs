@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 public class ProgressManager : Singleton<ProgressManager> {
     public const int medalCompleted = 0;
@@ -9,6 +11,11 @@ public class ProgressManager : Singleton<ProgressManager> {
 
     [SerializeField]
     private Progress progress;
+
+    void Start()
+    {
+        LoadData();
+    }
 
     /// <summary>
     /// Unlocks all levels
@@ -28,6 +35,7 @@ public class ProgressManager : Singleton<ProgressManager> {
     {
         progress.completedTutorial = true;
         progress.levels[0].unlocked = true;
+        SaveData();
     }
 
     /// <summary>
@@ -54,6 +62,7 @@ public class ProgressManager : Singleton<ProgressManager> {
                     // unlock next level
                     if (level < progress.levels.Length - 1)
                         progress.levels[level + 1].unlocked = true;
+                    SaveData();
                     return true;
                 }
                 break;
@@ -63,6 +72,7 @@ public class ProgressManager : Singleton<ProgressManager> {
                 {
                     progress.levels[level].starComics = true;
                     progress.stars++;
+                    SaveData();
                     return true;
                 }
                 break;
@@ -72,13 +82,14 @@ public class ProgressManager : Singleton<ProgressManager> {
                 {
                     progress.levels[level].starBoosts = true;
                     progress.stars++;
+                    SaveData();
                     return true;
                 }
                 break;
             default:
                 throw new UnityException("Star value not in range [0..2]: " + star);
         }
-
+        SaveData();
         return false;
     }
 
@@ -99,10 +110,10 @@ public class ProgressManager : Singleton<ProgressManager> {
         if (count < progress.levels[level].bestBoostCount && count < GenerationDataManager.instance.GetShotCount())
         {
             progress.levels[level].bestBoostCount = count;
-
+            SaveData();
             return true;
         }
-
+        SaveData();
         return false;
     }
 
@@ -142,6 +153,7 @@ public class ProgressManager : Singleton<ProgressManager> {
             level.bestBoostCount = 9999;
         }
         progress.levels[0].unlocked = true;
+        SaveData();
     }
 
     // Resets all progress to default
@@ -155,6 +167,7 @@ public class ProgressManager : Singleton<ProgressManager> {
         }
         progress.stars = 0;
         progress.completedTutorial = false;
+        SaveData();
     }
 
     // is a level unlocked
@@ -165,5 +178,124 @@ public class ProgressManager : Singleton<ProgressManager> {
             throw new UnityException("Invalid level: " + level);
         }
         return progress.levels[level - 1].unlocked;
+    }
+
+    void SaveData()
+    {
+        int[] toSave = new int[27];
+        for (int i = 0; i < 5; i++)
+        {
+            if (progress.levels[i].unlocked)
+            {
+                toSave[(i * 5) + 0] = 1;
+            }
+            else
+            {
+                toSave[(i * 5) + 0] = 0;
+            }
+            if (progress.levels[i].starComplete)
+            {
+                toSave[(i * 5) + 1] = 1;
+            }
+            else
+            {
+                toSave[(i * 5) + 1] = 0;
+            }
+            if (progress.levels[i].starComics)
+            {
+                toSave[(i * 5) + 2] = 1;
+            }
+            else
+            {
+                toSave[(i * 5) + 2] = 0;
+            }
+            if (progress.levels[i].starBoosts)
+            {
+                toSave[(i * 5) + 3] = 1;
+            }
+            else
+            {
+                toSave[(i * 5) + 3] = 0;
+            }
+            toSave[(i * 5) + 4] = progress.levels[i].bestBoostCount;
+        }
+        toSave[25] = progress.stars;
+        if (progress.completedTutorial)
+        {
+            toSave[26] = 1;
+        }
+        else
+        {
+            toSave[26] = 0;
+        }
+
+        FileStream file = File.Create(Application.persistentDataPath + "/Progress.gd");
+
+        BinaryFormatter bf = new BinaryFormatter();
+
+        bf.Serialize(file, toSave);
+        file.Close();
+    }
+
+    void LoadData()
+    {
+        if (File.Exists(Application.persistentDataPath + "/Progress.gd"))
+        {
+            int[] toLoad = new int[27];
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/Progress.gd", FileMode.Open);
+            toLoad = (int[])bf.Deserialize(file);
+            file.Close();
+
+            for (int i = 0; i < 5; i++)
+            {
+                if(toLoad[(i*5)+0] == 1)
+                {
+                    progress.levels[i].unlocked = true;
+                }
+                else
+                {
+                    progress.levels[i].unlocked = false;
+                }
+
+                if (toLoad[(i * 5) + 1] == 1)
+                {
+                    progress.levels[i].starComplete = true;
+                }
+                else
+                {
+                    progress.levels[i].starComplete = false;
+                }
+
+                if (toLoad[(i * 5) + 2] == 1)
+                {
+                    progress.levels[i].starComics = true;
+                }
+                else
+                {
+                    progress.levels[i].starComics = false;
+                }
+
+                if (toLoad[(i * 5) + 3] == 1)
+                {
+                    progress.levels[i].starBoosts = true;
+                }
+                else
+                {
+                    progress.levels[i].starBoosts = false;
+                }
+
+                progress.levels[i].bestBoostCount = toLoad[(i * 5) + 4];
+            }
+            progress.stars = toLoad[25];
+            if (toLoad[26] == 1)
+            {
+                progress.completedTutorial = true;
+            }
+            else
+            {
+                progress.completedTutorial = false;
+            }
+        }
     }
 }

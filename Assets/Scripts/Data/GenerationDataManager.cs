@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 public class GenerationDataManager : Singleton<GenerationDataManager> {
 
@@ -12,9 +14,17 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
     {
         if (PlayerPrefs.GetInt("PlayedBefore") == 0)
         {
-            RandomizeSeeds();
             PlayerPrefs.SetInt("PlayedBefore", 1);
+            UnityEngine.Random.InitState(DateTime.Now.Hour + DateTime.Now.Minute + DateTime.Now.Second + DateTime.Now.Millisecond);
+            for (int i = 0; i < generationData.levels.Length; i++)
+            {
+                generationData.levels[i].exteriorSeed = RandomSeed();
+                generationData.levels[i].interiorSeed = RandomSeed();
+            }
+            SaveData();
+            ProgressManager.instance.Reset();
         }
+        LoadData();
     }
 
     /// <summary>
@@ -42,6 +52,7 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
             generationData.levels[i].exteriorSeed = RandomSeed();
             generationData.levels[i].interiorSeed = RandomSeed();
         }
+        SaveData();
     }
 
     /// <summary>
@@ -96,5 +107,42 @@ public class GenerationDataManager : Singleton<GenerationDataManager> {
     public float GetHazardPercentForCurrentLevel()
     {
         return generationData.levels[level - 1].hazardPercent;
+    }
+
+    void SaveData()
+    {
+        Debug.LogError("savedfggg");
+        int[] toSave = new int[5];
+
+        toSave[0] = generationData.levels[0].exteriorSeed;
+        toSave[1] = generationData.levels[1].exteriorSeed;
+        toSave[2] = generationData.levels[2].exteriorSeed;
+        toSave[3] = generationData.levels[3].exteriorSeed;
+        toSave[4] = generationData.levels[4].exteriorSeed;
+
+        FileStream file = File.Create(Application.persistentDataPath + "/Generation.gd");
+
+        BinaryFormatter bf = new BinaryFormatter();
+
+        bf.Serialize(file, toSave);
+        file.Close();
+    }
+
+    void LoadData()
+    {
+        if (File.Exists(Application.persistentDataPath + "/Generation.gd"))
+        {
+            int[] toLoad = new int[5];
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/Generation.gd", FileMode.Open);
+            toLoad = (int[])bf.Deserialize(file);
+            file.Close();
+
+            generationData.levels[0].exteriorSeed = toLoad[0];
+            generationData.levels[1].exteriorSeed = toLoad[1];
+            generationData.levels[2].exteriorSeed = toLoad[2];
+            generationData.levels[3].exteriorSeed = toLoad[3];
+            generationData.levels[4].exteriorSeed = toLoad[4];
+        }
     }
 }

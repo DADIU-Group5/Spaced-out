@@ -41,6 +41,11 @@ public class MovementBehaviour : MonoBehaviour
             Subject.instance.Notify(gameObject, evt);
             firedZoomOut = true;
         }
+
+        // event used by sound
+        var evt2 = new ObserverEvent(EventName.PlayerVelocity);
+        evt2.payload.Add(PayloadConstants.VELOCITY, body.velocity.magnitude);
+        Subject.instance.Notify(gameObject, evt2);
     }
 
     void Start()

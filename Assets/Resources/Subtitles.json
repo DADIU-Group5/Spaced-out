@@ -356,6 +356,32 @@
 			"text": "I will never understand why your oxygen is also your fuel.",
 			"start": 0.0,
 			"duration": 3.5
+		}],
+		"explosion": [{
+			"id": "explosion1",
+			"text": "Daily Fun fact; Dave has four letters, just like dead.",
+			"start": 0.0,
+			"duration": 5.2
+		}, {
+			"id": "explosion2",
+			"text": "What am i going to tell your mother?",
+			"start": 0.0,
+			"duration": 3.0
+		}, {
+			"id": "explosion3",
+			"text": "This is being blow way out of proportions, Dave.",
+			"start": 0.0,
+			"duration": 3.0
+		}, {
+			"id": "explosion4",
+			"text": "Dave I'm just informing you that you're on fire.",
+			"start": 0.0,
+			"duration": 4.5
+		}, {
+			"id": "explosion5",
+			"text": "Put you out? I'm sorry, Dave. I'm afraid I can't do that.",
+			"start": 0.0,
+			"duration": 6.5
 		}]
 	},
 	"danishSubtitles": {
@@ -706,6 +732,32 @@
 			"text": "Jeg vil aldrig forstå hvorfor din ilt også er dit brændstof...",
 			"start": 0.0,
 			"duration": 3.5
+		}],
+		"explosion": [{
+			"id": "explosion1",
+			"text": "Det var da helt utroligt med dig.",
+			"start": 0.0,
+			"duration": 3.5
+		}, {
+			"id": "explosion2",
+			"text": "Hvad skal jeg dog sige til din mor?",
+			"start": 0.0,
+			"duration": 2.2
+		}, {
+			"id": "explosion3",
+			"text": "Nu bliver det da blæst helt ud af proportioner, Dave.",
+			"start": 0.0,
+			"duration": 3.3
+		}, {
+			"id": "explosion4",
+			"text": "Dave, jeg vil bare informere dig om at der er ild i dig.",
+			"start": 0.0,
+			"duration": 4.0
+		}, {
+			"id": "explosion5",
+			"text": "Du vil have mig slukke for dig? Desværre, Dave, det må jeg ikke.",
+			"start": 0.0,
+			"duration": 6.0
 		}]
 	}
 }

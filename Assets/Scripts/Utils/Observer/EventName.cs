@@ -48,6 +48,7 @@
     PlayerVentilated,
     StartCutscene,
     ToggleUI,
+    ToggleGAL,
     SwitchPressed,
     EPILOGUE_EVENTONE,
     EPILOGUE_EVENTTWO,
@@ -60,5 +61,6 @@
     EnableCameraInput,
     ChangeLanguage,
     PlayerRecord,
+    PlayerVelocity,
     PickUpKey
 }

@@ -85,6 +85,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 
     private void ThrowRespawnEvent()
     {
+        AkSoundEngine.PostEvent("respawn", gameObject);  
         var evt = new ObserverEvent(EventName.RespawnPlayer);
         Subject.instance.Notify(gameObject, evt);
         Destroy(gameObject);

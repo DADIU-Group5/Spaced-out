@@ -133,8 +133,8 @@ public class ProgressManager : Singleton<ProgressManager> {
         return new bool[] { levelProgress.starComplete, levelProgress.starComics, levelProgress.starBoosts}; 
     }
 
-    // get current amount of stars
-    public int GetStars() {
+    // get total number of stars
+    public int GetTotalStars() {
         return progress.stars;
     }
 
@@ -144,13 +144,11 @@ public class ProgressManager : Singleton<ProgressManager> {
         // keep same seeds but reset progress
         for (int i = 0; i < progress.levels.Length; i++)
         {
-            var level = progress.levels[i];
-
-            level.unlocked = false;
-            level.starComplete = false;
-            level.starComics = false;
-            level.starBoosts = false;
-            level.bestBoostCount = 9999;
+            progress.levels[i].unlocked = false;
+            progress.levels[i].starComplete = false;
+            progress.levels[i].starComics = false;
+            progress.levels[i].starBoosts = false;
+            progress.levels[i].bestBoostCount = 9999;
         }
         progress.levels[0].unlocked = true;
         SaveData();

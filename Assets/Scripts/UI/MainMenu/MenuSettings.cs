@@ -12,6 +12,8 @@ public class MenuSettings : MonoBehaviour {
     public Toggle cameraControls;
     public GameObject danish;
     public GameObject english;
+    public GameObject danishCredits;
+    public GameObject englishCredits;
 
     void Start()
     {
@@ -28,11 +30,11 @@ public class MenuSettings : MonoBehaviour {
         SetupSoundSliders();
         if (SceneManager.GetActiveScene().name == "Main Menu")
         {
-            if (SettingsManager.instance.GetLanguage().ToString() == "english")
+            if (SettingsManager.instance.GetLanguage().ToString() == "English")
             {
                 english.SetActive(true);
             }
-            else
+            else if(SettingsManager.instance.GetLanguage().ToString() == "Danish")
             {
                 danish.SetActive(true);
             }
@@ -79,13 +81,23 @@ public class MenuSettings : MonoBehaviour {
         SettingsManager.instance.SetLanguage(Language.Danish);
         danish.SetActive(true);
         english.SetActive(false);
+
+        danishCredits.SetActive(true);
+        englishCredits.SetActive(false);
+
+        SendLanguageChangeEvent(Language.Danish);
     }
 
     public void OnDanishClick()
     {
         SettingsManager.instance.SetLanguage(Language.English);
-        danish.SetActive(false);
         english.SetActive(true);
+        danish.SetActive(false);
+
+        englishCredits.SetActive(true);
+        danishCredits.SetActive(false);
+
+        SendLanguageChangeEvent(Language.English);
     }
 
     public void OnCameraInvertedToggle()
@@ -93,6 +105,13 @@ public class MenuSettings : MonoBehaviour {
         SettingsManager.instance.SetInvertedCamera(cameraControls.isOn);
 
         var evt = new ObserverEvent(EventName.ToggleCameraControls);
+        Subject.instance.Notify(gameObject, evt);
+    }
+
+    private void SendLanguageChangeEvent(Language lang)
+    {
+        var evt = new ObserverEvent(EventName.ChangeLanguage);
+        evt.payload.Add(PayloadConstants.LANGUAGE, lang);
         Subject.instance.Notify(gameObject, evt);
     }
 }

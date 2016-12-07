@@ -50,7 +50,6 @@
 				<Event Id="918879319" Name="daveScratch" ObjectPath="\Events\Default Work Unit\dave\daveScratch"/>
 				<Event Id="1016866911" Name="daveSquishBetweenDoors" ObjectPath="\Events\Default Work Unit\dave\daveSquishBetweenDoors"/>
 				<Event Id="2519729295" Name="daveStaticCollision" ObjectPath="\Events\Default Work Unit\dave\daveStaticCollision"/>
-				<Event Id="2108630538" Name="daveVent" ObjectPath="\Events\Default Work Unit\dave\daveVent"/>
 				<Event Id="779278001" Name="death" ObjectPath="\Events\Default Work Unit\gameState\death"/>
 				<Event Id="1404805401" Name="doorOpen" ObjectPath="\Events\Default Work Unit\enviroment\doorOpen"/>
 				<Event Id="3782881839" Name="doorShut" ObjectPath="\Events\Default Work Unit\enviroment\doorShut"/>
@@ -145,6 +144,10 @@
 				<Event Id="1281810866" Name="star1" ObjectPath="\Events\Default Work Unit\UI\star1"/>
 				<Event Id="1281810865" Name="star2" ObjectPath="\Events\Default Work Unit\UI\star2"/>
 				<Event Id="1281810864" Name="star3" ObjectPath="\Events\Default Work Unit\UI\star3"/>
+				<Event Id="2685994476" Name="stopAlienTube" ObjectPath="\Events\Default Work Unit\enviroment\stopAlienTube"/>
+				<Event Id="3323836819" Name="stopBlipBlopHigh" ObjectPath="\Events\Default Work Unit\enviroment\stopBlipBlopHigh"/>
+				<Event Id="660920151" Name="stopBlipBlopLow" ObjectPath="\Events\Default Work Unit\enviroment\stopBlipBlopLow"/>
+				<Event Id="2533808882" Name="stopLights" ObjectPath="\Events\Default Work Unit\enviroment\stopLights"/>
 				<Event Id="1026534452" Name="suckedIntoSpace" ObjectPath="\Events\Default Work Unit\Cinematics\suckedIntoSpace"/>
 				<Event Id="1590382670" Name="switch1" ObjectPath="\Events\Default Work Unit\gal\switch\switch1"/>
 				<Event Id="1590382669" Name="switch2" ObjectPath="\Events\Default Work Unit\gal\switch\switch2"/>
@@ -158,7 +161,6 @@
 				<Event Id="1242499422" Name="switchOn" ObjectPath="\Events\Default Work Unit\enviroment\switchOn"/>
 				<Event Id="3412868374" Name="unpause" ObjectPath="\Events\Default Work Unit\gameState\unpause"/>
 				<Event Id="3321711160" Name="vent" ObjectPath="\Events\Default Work Unit\enviroment\vent"/>
-				<Event Id="3619358932" Name="ventAir" ObjectPath="\Events\Default Work Unit\enviroment\ventAir"/>
 				<Event Id="189158595" Name="wire1" ObjectPath="\Events\Default Work Unit\gal\wire\wire1"/>
 				<Event Id="189158592" Name="wire2" ObjectPath="\Events\Default Work Unit\gal\wire\wire2"/>
 				<Event Id="189158593" Name="wire3" ObjectPath="\Events\Default Work Unit\gal\wire\wire3"/>

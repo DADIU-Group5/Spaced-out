@@ -17,6 +17,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	579662040	gas			\Default Work Unit\enviroment\gas	
 	584329514	musicWinPlay			\Default Work Unit\music\musicWinPlay	
 	607463598	daveobjectCollision			\Default Work Unit\dave\daveobjectCollision	
+	660920151	stopBlipBlopLow			\Default Work Unit\enviroment\stopBlipBlopLow	
 	661603698	daveOutofOxygen			\Default Work Unit\dave\daveOutofOxygen	
 	668664389	newLevel			\Default Work Unit\gameState\newLevel	
 	753483762	explosion4			\Default Work Unit\gal\explosion1explosion1\explosion4	
@@ -67,7 +68,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	1988531540	musicWinStop			\Default Work Unit\music\musicWinStop	
 	2017509636	slowmotionStop			\Default Work Unit\gameState\slowmotionStop	
 	2059739492	pickupComic			\Default Work Unit\enviroment\pickupComic	
-	2108630538	daveVent			\Default Work Unit\dave\daveVent	
 	2154074004	alienTube			\Default Work Unit\enviroment\alienTube	
 	2218299087	atmosStart			\Default Work Unit\gameState\atmosStart	
 	2341326210	narrative9			\Default Work Unit\gal\Narrative\narrative9	
@@ -89,7 +89,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	2478829238	fan6			\Default Work Unit\gal\fan\fan6	
 	2486930427	musicMainPlay			\Default Work Unit\music\musicMainPlay	
 	2519729295	daveStaticCollision			\Default Work Unit\dave\daveStaticCollision	
+	2533808882	stopLights			\Default Work Unit\enviroment\stopLights	
 	2648706865	musicMenuPlay			\Default Work Unit\music\musicMenuPlay	
+	2685994476	stopAlienTube			\Default Work Unit\enviroment\stopAlienTube	
 	2736691391	menuPressStart			\Default Work Unit\UI\menuPressStart	
 	2792775536	remark12			\Default Work Unit\gal\remarks\remark12	
 	2792775537	remark13			\Default Work Unit\gal\remarks\remark13	
@@ -105,12 +107,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	3193570530	daveLaunch			\Default Work Unit\dave\daveLaunch	
 	3273397333	atmosStop			\Default Work Unit\gameState\atmosStop	
 	3321711160	vent			\Default Work Unit\enviroment\vent	
+	3323836819	stopBlipBlopHigh			\Default Work Unit\enviroment\stopBlipBlopHigh	
 	3412868374	unpause			\Default Work Unit\gameState\unpause	
 	3465444258	davePutOutFire			\Default Work Unit\dave\davePutOutFire	
 	3467920165	pickupKeys			\Default Work Unit\enviroment\pickupKeys	
 	3536816288	daveCatchFire			\Default Work Unit\dave\daveCatchFire	
 	3588208292	hazardsStop			\Default Work Unit\enviroment\hazardsStop	
-	3619358932	ventAir			\Default Work Unit\enviroment\ventAir	
 	3669325296	daveElectrocute			\Default Work Unit\dave\daveElectrocute	
 	3700176345	lowOxygen6			\Default Work Unit\gal\lowOxygen\lowOxygen6	
 	3700176346	lowOxygen5			\Default Work Unit\gal\lowOxygen\lowOxygen5	

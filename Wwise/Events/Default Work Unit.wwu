@@ -1179,34 +1179,6 @@
 										</Element>
 									</ElementList>
 								</Action>
-								<Action Name="Stop" ID="{E3C2D35D-D66F-4785-BC6F-0D5F37E25F0D}" ShortID="74855023" Type="Stop" Scope="One" Global="true">
-									<ElementList>
-										<Element ID="{D3856071-8676-4029-BB91-0E9CFF77CD1F}" Global="true">
-											<ObjectRef Name="blip blop high" ID="{051A0537-8D66-4B55-B8E4-9244D1313A32}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Stop" ID="{B6E3153F-1CF1-4A90-A534-50A9693A4959}" ShortID="213024406" Type="Stop" Scope="One" Global="true">
-									<ElementList>
-										<Element ID="{9F815C0E-2D45-4713-94DC-96CD971E0F29}" Global="true">
-											<ObjectRef Name="blip blop low" ID="{26057701-EBAE-471B-A848-0AE7780EEA2E}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Play" ID="{15C7210B-415A-4101-9CB3-74673C6E5DD9}" ShortID="1045773421" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{014D7205-84A3-4203-91D6-CE068EDEB1A5}" Global="false">
-											<ObjectRef Name="blip blop high" ID="{051A0537-8D66-4B55-B8E4-9244D1313A32}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Play" ID="{DF0C33EF-8181-4F76-90F2-B916490DBB7E}" ShortID="201676985" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{A6F2FA20-8CF9-4990-8698-4D8E88F1B628}" Global="false">
-											<ObjectRef Name="blip blop low" ID="{26057701-EBAE-471B-A848-0AE7780EEA2E}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
-										</Element>
-									</ElementList>
-								</Action>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>
@@ -1558,23 +1530,57 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="lights" ID="{537F8D76-B921-4196-BD44-84FA9E486D70}">
-							<ChildrenList>
-								<Action Name="Play" ID="{57E194AD-BB91-43EA-B149-03E52BBBCB4A}" ShortID="263916979" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{0B201028-1400-48C0-B377-FFA1BDD98A86}" Global="false">
-											<ObjectRef Name="lightloop" ID="{28023181-48EF-420A-91D2-7C50D5CCBCC0}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
-										</Element>
-									</ElementList>
-								</Action>
-							</ChildrenList>
-						</Event>
+						<Event Name="lights" ID="{537F8D76-B921-4196-BD44-84FA9E486D70}"/>
 						<Event Name="alienTube" ID="{E239812D-A831-4F73-809D-7C16EF1E9E3F}">
 							<ChildrenList>
 								<Action Name="Play" ID="{DAA1891E-1FCC-4529-89B7-0AD9344ED2F8}" ShortID="45961325" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{2184C7CF-010F-4E70-AB8C-24C1C236CD8D}" Global="false">
 											<ObjectRef Name="Boiling Waterloop" ID="{A6F9B35C-0FCE-43C8-BEDE-2E25F5BBFA9D}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="stopBlipBlopHigh" ID="{B507B8C3-50E9-4FD8-A0FC-0A6E9285497D}">
+							<ChildrenList>
+								<Action Name="Stop" ID="{D6526124-5279-4E7F-824A-E173A6C565EC}" ShortID="732810458" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{25D12CF0-2095-49B7-9E2E-C29FE5B0E48E}" Global="false">
+											<ObjectRef Name="blip blop high" ID="{051A0537-8D66-4B55-B8E4-9244D1313A32}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="stopBlipBlopLow" ID="{C2A6E774-9E0A-4A37-B927-1ED6B6402F70}">
+							<ChildrenList>
+								<Action Name="Play" ID="{6B8D15D9-8962-4FDD-A438-41315C8E2D90}" ShortID="466268913" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{5CA3A23A-A213-472D-B127-172E6EC62E64}" Global="false">
+											<ObjectRef Name="blip blop low" ID="{26057701-EBAE-471B-A848-0AE7780EEA2E}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="stopAlienTube" ID="{0B922F7A-D02C-4C08-B432-21FB292602E5}">
+							<ChildrenList>
+								<Action Name="Stop" ID="{D1ED44FF-EC99-434C-90C7-10FCAD1EA3C6}" ShortID="174855775" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{74B5F49E-68CC-4FBE-A83D-39FFCFE43CA3}" Global="false">
+											<ObjectRef Name="Boiling Waterloop" ID="{A6F9B35C-0FCE-43C8-BEDE-2E25F5BBFA9D}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="stopLights" ID="{0276F297-89B6-4415-B693-7A3C395EE3BB}">
+							<ChildrenList>
+								<Action Name="Stop" ID="{A28BCF53-0E0E-4E10-A315-04B719327C20}" ShortID="53047644" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{382346F7-34A6-4A8B-AD24-3C5BB1539B2D}" Global="false">
+											<ObjectRef Name="lightloop" ID="{28023181-48EF-420A-91D2-7C50D5CCBCC0}" WorkUnitID="{1D8054A4-E601-4957-A756-412E1FA6D57B}"/>
 										</Element>
 									</ElementList>
 								</Action>

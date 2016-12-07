@@ -130,7 +130,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Eng" ID="{78458975-348D-4948-B26E-88FB301491D8}"/>
-						<CurrentStateRef Name="on" ID="{47F04DF9-4A7D-4198-A709-3A5E13D6213A}"/>
+						<CurrentStateRef Name="off" ID="{8CE3E364-66FA-4DE3-9D14-E500C95C290B}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="dan" ID="{067E8178-15B4-4628-AEDE-BD89FB2A8F68}"/>

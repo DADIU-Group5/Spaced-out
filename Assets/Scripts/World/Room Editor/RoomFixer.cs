@@ -29,7 +29,123 @@ public class RoomFixer : MonoBehaviour
         {
             room.decorParent = GameObject.Find("Decor").transform;
         }*/
-        FixSize(room.shapingParent);
+        //FixSize(room.shapingParent);
+
+        FindMisplacedObjects();
+        ReplaceAllShaping();
+        room.CleanData();
+    }
+
+    void ReplaceAllShaping()
+    {
+        int count = room.shapingParent.childCount;
+        for (int i = count-1; i >= 0; i--)
+        {
+            string shortName = room.shapingParent.GetChild(i).name.Substring(0, 4);
+            switch (shortName)
+            {
+                case "Wall":
+                    RM.RotateObject(RM.NewWall(room.shapingParent.GetChild(i).position), room.shapingParent.GetChild(i));
+                    DestroyImmediate(room.shapingParent.GetChild(i).gameObject);
+                    break;
+                case "Inne":
+                    RM.RotateObject(RM.NewInner(room.shapingParent.GetChild(i).position), room.shapingParent.GetChild(i));
+                    DestroyImmediate(room.shapingParent.GetChild(i).gameObject);
+                    break;
+                case "Oute":
+                    RM.RotateObject(RM.NewOuter(room.shapingParent.GetChild(i).position), room.shapingParent.GetChild(i));
+                    DestroyImmediate(room.shapingParent.GetChild(i).gameObject);
+                    break;
+                case "Floo":
+                    RM.RotateObject(RM.NewFloor(room.shapingParent.GetChild(i).position), room.shapingParent.GetChild(i));
+                    DestroyImmediate(room.shapingParent.GetChild(i).gameObject);
+                    break;
+                default:
+                    Debug.LogError("AN OBJECT HAS THE WRONG PARENT! " + room.shapingParent.GetChild(i).name);
+                    break;
+            }
+        }
+    }
+
+    void FindMisplacedObjects()
+    {
+        foreach (Transform item in room.enviromentalObjectsParent)
+        {
+            if (!room.enviromentalObjects.Contains(item.gameObject))
+            {
+                Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name);
+            }
+            if(item.GetComponent<XLargeObjectSelector>() == null && item.GetComponent<LargeObjectSelector>() == null && item.GetComponent<MediumObjectSelector>() == null)
+            {
+                Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name);
+            }
+        }
+        foreach (Transform item in room.floatingObjectParent)
+        {
+            if (!room.floatingObjects.Contains(item.gameObject))
+            {
+                Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name);
+            }
+            if (item.GetComponent<FloatingProps>() == null)
+            {
+                Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name);
+            }
+        }
+        foreach (Transform item in room.hazardObjectParent)
+        {
+            if (!room.hazardObjects.Contains(item.gameObject))
+            {
+                Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name);
+            }
+            if (item.GetComponent<StaticObjectSelector>() == null)
+            {
+                Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name);
+            }
+        }
+        foreach (Transform item in room.shapingParent)
+        {
+            if (!room.shapingObjects.Contains(item.gameObject))
+            {
+                Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name);
+            }
+            if (item.GetComponent<FloorSelector>() == null && item.GetComponent<OuterCornorSelector>() == null && item.GetComponent<InnerCornorSelector>() == null && item.GetComponent<WallSelector>() == null)
+            {
+                Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name);
+            }
+        }
+        foreach (Transform item in room.pickupParent)
+        {
+            if (!room.pickupObjects.Contains(item.gameObject))
+            {
+                Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name);
+            }
+            if (item.GetComponent<ComicSelector>() == null)
+            {
+                Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name);
+            }
+        }
+        foreach (Transform item in room.doorParent)
+        {
+            if (!room.doorObjects.Contains(item.gameObject))
+            {
+                Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name);
+            }
+            if (item.GetComponent<Door>() == null)
+            {
+                Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name);
+            }
+        }
+        foreach (Transform item in room.switchParent)
+        {
+            if (!room.switchObjects.Contains(item.gameObject))
+            {
+                Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name);
+            }
+            if (item.GetComponent<SwitchSelector>() == null)
+            {
+                Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name);
+            }
+        }
     }
 
     void MakeStatic(Transform parent)

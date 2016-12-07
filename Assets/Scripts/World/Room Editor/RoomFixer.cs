@@ -97,7 +97,7 @@ public class RoomFixer : MonoBehaviour
             {
                 Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name);
             }
-            if (item.GetComponent<StaticObjectSelector>() == null)
+            if (item.GetComponent<StaticObjectSelector>() == null && item.GetComponent<BarrelObjectSelector>() == null)
             {
                 Debug.LogError("OBJECT NOT IN CORRECT LIST / OBJECT HAS WRONG PARENT! " + item.name);
             }

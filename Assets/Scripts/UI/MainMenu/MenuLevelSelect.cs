@@ -10,11 +10,8 @@ public class MenuLevelSelect : MonoBehaviour {
     // generates new seeds for levels
     public void GenerateNewSeeds()
     {
-        // can we afford it?
-        if (ProgressManager.instance.GetStars() > 15)
-        {
-            GenerationDataManager.instance.RandomizeSeeds();
-        }
+        ProgressManager.instance.ResetLevelProgress();
+        GenerationDataManager.instance.RandomizeSeeds();
     }
 
     // loads the level
@@ -30,5 +27,10 @@ public class MenuLevelSelect : MonoBehaviour {
             GenerationDataManager.instance.SetCurrentLevel(level);
             SceneManager.LoadScene("LevelGenerator");
         }
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 }

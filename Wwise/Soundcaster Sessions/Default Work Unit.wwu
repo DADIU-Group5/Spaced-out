@@ -303,6 +303,10 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="velocitySlowLerp" ID="{3FD8C653-11EB-408B-86C1-E3967D63A2F8}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Turbulence" ID="{EDA87B19-73AA-40A0-9F19-2073606DB710}"/>
 							<Value>6</Value>
 						</RTPCValue>
@@ -320,7 +324,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}"/>
-							<Value>100</Value>
+							<Value>21.4659685863874</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_RPM" ID="{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"/>
@@ -356,7 +360,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="fanForce" ID="{7695B3AE-4B13-4AF1-899F-0FB923911969}"/>
-							<Value>93.2043010752688</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_TimeOfDay" ID="{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}"/>

@@ -61,7 +61,8 @@ public class SoundManager : Singleton<SoundManager>, Observer
             case EventName.PlayerVelocity:
                 var velocity = (float)evt.payload[PayloadConstants.VELOCITY];
                // print("Victor velocity: " + velocity);
-                AkSoundEngine.SetRTPCValue("velocity2", velocity * 10);  
+                AkSoundEngine.SetRTPCValue("velocity2", velocity * 10);
+                AkSoundEngine.SetRTPCValue("velocitySlowLerp", velocity * 10);
                 // VICOYR
 
                 break;

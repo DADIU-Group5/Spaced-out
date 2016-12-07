@@ -99,7 +99,7 @@
 				<Effect Name="fire" ID="{34339A46-3998-4C5B-A38E-A0C5A19A562A}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 					<PropertyList>
 						<Property Name="FrequencyBand1" Type="Real32" Value="304"/>
-						<Property Name="GainBand1" Type="Real32" Value="12"/>
+						<Property Name="GainBand1" Type="Real32" Value="24"/>
 					</PropertyList>
 				</Effect>
 				<Effect Name="newsoundseed" ID="{CAC4C381-639F-435D-831D-5EED7C5AB9FD}" PluginName="SoundSeed Impact" CompanyID="0" PluginID="116" PluginType="3">					<PluginData>
@@ -204,6 +204,14 @@
 				<Effect Name="sfxsidechain" ID="{375F4AF8-E756-48DA-9307-0AF42AB0D8BE}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">					<PluginData>
 	<GameParameter Name="sfxSideChain" ID="{898B4D00-A726-4AD1-9F5F-D2518D0994CF}"/>
 </PluginData>
+				</Effect>
+				<Effect Name="windfilter" ID="{CC2558EA-4CD4-4494-B872-A6089121665A}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FrequencyBand2" Type="Real32" Value="1359"/>
+						<Property Name="FrequencyBand3" Type="Real32" Value="2794"/>
+						<Property Name="GainBand2" Type="Real32" Value="-7.5"/>
+						<Property Name="GainBand3" Type="Real32" Value="8"/>
+					</PropertyList>
 				</Effect>
 			</ChildrenList>
 		</WorkUnit>

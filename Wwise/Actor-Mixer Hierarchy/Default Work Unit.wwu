@@ -6486,6 +6486,7 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="explosion sequence" ID="{D3332EA2-2CA1-4CCC-BBCB-4A7E3B1ADEBF}" ShortID="474082288">
 									<PropertyList>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
@@ -6496,7 +6497,7 @@
 											<ObjectRef Name="explosion" ID="{557AEB92-E0FB-428B-A2F0-AE9D683E8D95}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
 										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+											<ObjectRef Name="monirizer" ID="{1136D10A-ECFB-4E03-949B-01199B618812}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
@@ -7020,6 +7021,7 @@
 								<Sound Name="electricity loop" ID="{9F32160E-1220-4D2E-A195-E4D70C4DC0D7}" ShortID="704610882" Type="SoundFX">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
@@ -7033,7 +7035,7 @@
 											<ObjectRef Name="electricity" ID="{3AB70FE9-DBA1-46D2-9FA1-A024962E697E}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
 										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+											<ObjectRef Name="monirizer" ID="{1136D10A-ECFB-4E03-949B-01199B618812}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
@@ -7074,6 +7076,7 @@
 								<Sound Name="gasloop" ID="{533D6B45-FCEB-4537-AD96-BD49B01BFAD1}" ShortID="407497455" Type="SoundFX">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
@@ -7087,7 +7090,7 @@
 											<ObjectRef Name="electricity" ID="{3AB70FE9-DBA1-46D2-9FA1-A024962E697E}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
 										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+											<ObjectRef Name="monirizer" ID="{1136D10A-ECFB-4E03-949B-01199B618812}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
@@ -7110,6 +7113,7 @@
 									<PropertyList>
 										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
 										<Property Name="OverrideAnalysis" Type="bool" Value="True"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
@@ -7157,7 +7161,7 @@
 											<ObjectRef Name="electricity" ID="{3AB70FE9-DBA1-46D2-9FA1-A024962E697E}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
 										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+											<ObjectRef Name="monirizer" ID="{1136D10A-ECFB-4E03-949B-01199B618812}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
@@ -7186,6 +7190,9 @@
 												<AudioFileSource Name="door shut1_1" ID="{29B65402-23CF-4A6E-85B9-DACA01FE1C28}" ShortID="1066027588">
 													<Language>SFX</Language>
 													<AudioFile>door shut1_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="454449915"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7208,6 +7215,9 @@
 												<AudioFileSource Name="door shut2_1" ID="{2A49B66F-8077-44A5-8BD3-A3B07A175979}" ShortID="559213883">
 													<Language>SFX</Language>
 													<AudioFile>door shut2_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="458589676"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7234,6 +7244,9 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut3_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="78198148"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7270,6 +7283,9 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut4_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="625073912"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7303,6 +7319,9 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut5_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="970972274"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7339,6 +7358,9 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut6_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="704262867"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7372,6 +7394,9 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut7_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="422398595"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7405,6 +7430,9 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut8_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="216144738"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7438,6 +7466,9 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut9_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="751371429"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7471,6 +7502,9 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut10_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="376739912"/>
+													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -7482,6 +7516,7 @@
 								<Sound Name="gasonfire" ID="{E906ED12-D905-459F-99C3-58BC1C76FDEC}" ShortID="433371983" Type="SoundFX">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
@@ -7529,7 +7564,7 @@
 											<ObjectRef Name="electricity" ID="{3AB70FE9-DBA1-46D2-9FA1-A024962E697E}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
 										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+											<ObjectRef Name="monirizer" ID="{1136D10A-ECFB-4E03-949B-01199B618812}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
@@ -7552,6 +7587,7 @@
 									<PropertyList>
 										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
@@ -7728,7 +7764,7 @@
 											</Custom>
 										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+											<ObjectRef Name="monirizer" ID="{1136D10A-ECFB-4E03-949B-01199B618812}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
 										<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
 											<ObjectRef Name="Bass_Remover_9" ID="{8986F65E-F3FA-44DE-8843-DCE54B78B3CD}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
@@ -7770,6 +7806,7 @@
 								</Sound>
 								<RandomSequenceContainer Name="door slide" ID="{11AADC56-911E-4515-86D1-D7BDFF07C6DA}" ShortID="771329840">
 									<PropertyList>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
@@ -7783,7 +7820,7 @@
 											<ObjectRef Name="electricity" ID="{3AB70FE9-DBA1-46D2-9FA1-A024962E697E}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
 										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+											<ObjectRef Name="monirizer" ID="{1136D10A-ECFB-4E03-949B-01199B618812}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
@@ -8145,6 +8182,7 @@
 									<PropertyList>
 										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
 										<Property Name="OverrideAnalysis" Type="bool" Value="True"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
@@ -8186,7 +8224,7 @@
 											<ObjectRef Name="electricity" ID="{3AB70FE9-DBA1-46D2-9FA1-A024962E697E}" WorkUnitID="{144608AD-F3D2-4C1C-94EE-0A93B9C8250B}"/>
 										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+											<ObjectRef Name="monirizer" ID="{1136D10A-ECFB-4E03-949B-01199B618812}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
@@ -8215,9 +8253,6 @@
 												<AudioFileSource Name="door shut1_1" ID="{51936832-A8EB-4680-877E-8CA53CA74465}" ShortID="454449915">
 													<Language>SFX</Language>
 													<AudioFile>door shut1_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="1066027588"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8240,9 +8275,6 @@
 												<AudioFileSource Name="door shut2_1" ID="{3E4152F1-99FF-46D0-BE2D-6A00F6EB742B}" ShortID="458589676">
 													<Language>SFX</Language>
 													<AudioFile>door shut2_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="559213883"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8269,9 +8301,6 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut3_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="585615623"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8308,9 +8337,6 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut4_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="598173962"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8344,9 +8370,6 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut5_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="846681906"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8383,9 +8406,6 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut6_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="670195520"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8419,9 +8439,6 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut7_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="942376865"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8455,9 +8472,6 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut8_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="401680823"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8491,9 +8505,6 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut9_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="507642210"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8527,9 +8538,6 @@
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>door shut10_1.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="621924902"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -8577,7 +8585,7 @@
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-22</Value>
+												<Value>-20</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -10925,9 +10933,9 @@
 														<PointList>
 															<Point>
 																<XPos>0</XPos>
-																<YPos>38</YPos>
+																<YPos>50</YPos>
 																<Flags>5</Flags>
-																<SegmentShape>Exp2</SegmentShape>
+																<SegmentShape>Log2</SegmentShape>
 															</Point>
 															<Point>
 																<XPos>99.999</XPos>
@@ -11136,6 +11144,7 @@
 								</BlendContainer>
 								<RandomSequenceContainer Name="launchsynth" ID="{E6C34B2D-6D03-48B4-8A0E-79B74543A0A3}" ShortID="456118260">
 									<PropertyList>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>15</Value>
@@ -11144,7 +11153,7 @@
 												<RTPC Name="" ID="{5BC4C6F8-3DB2-45A1-AC7D-95F5BDE69C87}" ShortID="688438935">
 													<ReferenceList>
 														<Reference Name="ControlInput">
-															<ObjectRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+															<ObjectRef Name="velocity2" ID="{437B7395-5498-439E-A447-C6AC63340C6B}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 														</Reference>
 													</ReferenceList>
 													<Curve Name="" ID="{0CA17459-CDFA-46E3-B7F9-FE77C73EDE52}">
@@ -11162,7 +11171,7 @@
 																<XPos>44.42639</XPos>
 																<YPos>-200</YPos>
 																<Flags>0</Flags>
-																<SegmentShape>Exp3</SegmentShape>
+																<SegmentShape>Exp1</SegmentShape>
 															</Point>
 															<Point>
 																<XPos>100</XPos>
@@ -11179,8 +11188,17 @@
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
 										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+											<ObjectRef Name="Blue_Distant_Echoes" ID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend1">
+											<ObjectRef Name="dly" ID="{C9714835-2726-49D1-9907-A5292C51E966}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -13261,8 +13279,45 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-20</Value>
+												<Value>20</Value>
 											</ValueList>
+											<RTPCList>
+												<RTPC Name="" ID="{334D440E-6307-44E5-975D-FA9EEE6052B9}" ShortID="937455807">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{4B087BAC-FDD1-4445-94F9-BA87634793F1}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>49.94764</XPos>
+																<YPos>-200</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>InvertedSCurve</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>99.999</XPos>
+																<YPos>0.1963</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -14141,13 +14196,13 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-35</Value>
+										<Value>-30</Value>
 									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{D33C7258-F134-4E22-8A4C-97C3C9D7EE81}" ShortID="13702041">
 											<ReferenceList>
 												<Reference Name="ControlInput">
-													<ObjectRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+													<ObjectRef Name="velocity" ID="{ED93C332-B4E0-49DA-A45B-B2818E5574F1}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 												</Reference>
 											</ReferenceList>
 											<Curve Name="" ID="{70123F35-AF4A-4D9D-93CC-FBE53B82E1AF}">
@@ -14161,10 +14216,22 @@
 														<Flags>5</Flags>
 													</Point>
 													<Point>
-														<XPos>79.86433</XPos>
+														<XPos>0.001</XPos>
+														<YPos>-200</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>31.72775</XPos>
 														<YPos>-200</YPos>
 														<Flags>0</Flags>
 														<SegmentShape>Exp1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>63.56021</XPos>
+														<YPos>-6.16741</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>100</XPos>
@@ -14186,6 +14253,9 @@
 								</Reference>
 								<Reference Name="UserAuxSend0">
 									<ObjectRef Name="rvb1" ID="{297165BC-D36C-4142-996C-6B20B3B10F6B}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+								</Reference>
+								<Reference Name="UserAuxSend1">
+									<ObjectRef Name="dly" ID="{C9714835-2726-49D1-9907-A5292C51E966}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -14967,7 +15037,7 @@
 										</Sound>
 										<Sound Name="oxygen" ID="{C53E9EA0-3E35-44F3-83A1-ACD808D25983}" ShortID="314778614" Type="SoundFX">
 											<PropertyList>
-												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>100</Value>
@@ -14983,6 +15053,9 @@
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="dly" ID="{C9714835-2726-49D1-9907-A5292C51E966}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -15057,7 +15130,7 @@
 												</Sound>
 												<Sound Name="keys pickup" ID="{A8CF8471-A091-4C67-ACB5-16DAE9425F44}" ShortID="950271543" Type="SoundFX">
 													<PropertyList>
-														<Property Name="OverrideEffect" Type="bool" Value="True"/>
+														<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -15068,6 +15141,9 @@
 														</Reference>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="sfx" ID="{58A7C2E3-C0CE-4AC9-B165-2D2A006E53FD}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="dly" ID="{C9714835-2726-49D1-9907-A5292C51E966}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -15118,7 +15194,7 @@
 												</Sound>
 												<RandomSequenceContainer Name="chimereward" ID="{39703757-ED40-4A8D-B1BF-0AE628BF76C2}" ShortID="1038980564">
 													<PropertyList>
-														<Property Name="OverrideEffect" Type="bool" Value="True"/>
+														<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
 																<Value>1200</Value>
@@ -15134,6 +15210,9 @@
 														</Reference>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="dly" ID="{C9714835-2726-49D1-9907-A5292C51E966}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>

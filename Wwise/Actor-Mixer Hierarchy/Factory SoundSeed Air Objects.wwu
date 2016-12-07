@@ -11348,6 +11348,7 @@ Presence is roughly related to distance and occlusion</Comment>
 								<Sound Name="airdrag" ID="{F531F20F-7E93-44CF-9E05-98BE0E6F2967}" ShortID="144602667" Type="SoundFX">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="UserAuxSendVolume0" Type="Real64">
 											<ValueList>
@@ -11363,6 +11364,9 @@ Presence is roughly related to distance and occlusion</Comment>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71D85467-8D76-4854-9412-2DA36D1BA397}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<ObjectRef Name="windfilter" ID="{CC2558EA-4CD4-4494-B872-A6089121665A}" WorkUnitID="{16BB581D-BAEC-49FA-A974-D915FC1D5EA1}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F87D443-5D39-49BD-85E8-A5E19E41B9E9}"/>
@@ -11394,20 +11398,8 @@ Presence is roughly related to distance and occlusion</Comment>
 																		<SegmentShape>Exp3</SegmentShape>
 																	</Point>
 																	<Point>
-																		<XPos>50.17978</XPos>
-																		<YPos>-1830.71245</YPos>
-																		<Flags>0</Flags>
-																		<SegmentShape>Exp3</SegmentShape>
-																	</Point>
-																	<Point>
-																		<XPos>82.95405</XPos>
-																		<YPos>-1113.73682</YPos>
-																		<Flags>0</Flags>
-																		<SegmentShape>Log3</SegmentShape>
-																	</Point>
-																	<Point>
 																		<XPos>100</XPos>
-																		<YPos>-948.23316</YPos>
+																		<YPos>-1349.21596</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -11430,12 +11422,17 @@ Presence is roughly related to distance and occlusion</Comment>
 																<PointList>
 																	<Point>
 																		<XPos>0</XPos>
-																		<YPos>-0.29724</YPos>
+																		<YPos>-1.28005</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
+																		<XPos>3.10633</XPos>
+																		<YPos>0.00777</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
 																		<XPos>100</XPos>
-																		<YPos>1.00245</YPos>
+																		<YPos>0.6683</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -11458,25 +11455,43 @@ Presence is roughly related to distance and occlusion</Comment>
 																<PointList>
 																	<Point>
 																		<XPos>0</XPos>
-																		<YPos>-96.3000030517578</YPos>
+																		<YPos>-2.04756</YPos>
 																		<Flags>5</Flags>
-																		<SegmentShape>Exp3</SegmentShape>
+																		<SegmentShape>Exp2</SegmentShape>
 																	</Point>
 																	<Point>
-																		<XPos>1.86181</XPos>
+																		<XPos>2.62944</XPos>
+																		<YPos>-6.804</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Log1</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>3.34527</XPos>
+																		<YPos>-12.8249</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Exp1</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>5.01792</XPos>
 																		<YPos>-96.3</YPos>
 																		<Flags>0</Flags>
-																		<SegmentShape>Exp3</SegmentShape>
+																		<SegmentShape>Exp1</SegmentShape>
 																	</Point>
 																	<Point>
-																		<XPos>49.23686</XPos>
-																		<YPos>-10.25792</YPos>
+																		<XPos>9.91636798088411</XPos>
+																		<YPos>-16.1470731413693</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Exp1</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>42.0684</XPos>
+																		<YPos>-6.40601</YPos>
 																		<Flags>0</Flags>
 																		<SegmentShape>SCurve</SegmentShape>
 																	</Point>
 																	<Point>
 																		<XPos>100</XPos>
-																		<YPos>0</YPos>
+																		<YPos>0.46703</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -11504,14 +11519,14 @@ Presence is roughly related to distance and occlusion</Comment>
 																		<SegmentShape>Exp3</SegmentShape>
 																	</Point>
 																	<Point>
-																		<XPos>90.6586826347305</XPos>
-																		<YPos>3.53784561157227E-02</YPos>
+																		<XPos>67.12224</XPos>
+																		<YPos>0.02309</YPos>
 																		<Flags>0</Flags>
 																		<SegmentShape>Log3</SegmentShape>
 																	</Point>
 																	<Point>
 																		<XPos>100</XPos>
-																		<YPos>0.12262</YPos>
+																		<YPos>0.10811</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -11534,13 +11549,19 @@ Presence is roughly related to distance and occlusion</Comment>
 																<PointList>
 																	<Point>
 																		<XPos>0</XPos>
-																		<YPos>-4</YPos>
+																		<YPos>4</YPos>
 																		<Flags>5</Flags>
 																		<SegmentShape>Exp1</SegmentShape>
 																	</Point>
 																	<Point>
+																		<XPos>2.9868578255675</XPos>
+																		<YPos>-1.9098002910614</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Log1</SegmentShape>
+																	</Point>
+																	<Point>
 																		<XPos>100</XPos>
-																		<YPos>-1.8266</YPos>
+																		<YPos>-4</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -11567,14 +11588,14 @@ Presence is roughly related to distance and occlusion</Comment>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>50.53707</XPos>
-																		<YPos>0.07515</YPos>
+																		<XPos>0.001</XPos>
+																		<YPos>-0</YPos>
 																		<Flags>0</Flags>
 																		<SegmentShape>Exp3</SegmentShape>
 																	</Point>
 																	<Point>
 																		<XPos>100</XPos>
-																		<YPos>0.49711</YPos>
+																		<YPos>0.10074</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -11611,7 +11632,10 @@ Presence is roughly related to distance and occlusion</Comment>
 												<List Name="Deflectors">
 													<PluginInnerObject Name="" ID="{DCBE66C7-FC97-4662-960C-DA0E2910AFDE}" PluginName="Deflector" CompanyID="0" PluginID="121">
 														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="200"/>
+															<Property Name="Frequency" Type="Real32" Value="778"/>
+															<Property Name="PanX" Type="Real64" Value="-2.66453525910038E-15"/>
+															<Property Name="PanY" Type="Real64" Value="-0.602409638554213"/>
+															<Property Name="QFactor" Type="Real32" Value="30"/>
 														</PropertyList>
 													</PluginInnerObject>
 												</List>

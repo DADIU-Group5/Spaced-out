@@ -10,7 +10,7 @@ public class LevelButton : MonoBehaviour {
     public GameObject star2;
     public GameObject star3;
 
-    void OnEnable()
+    public void OnEnable()
     {
         // unlock/lock button
         bool unlocked = ProgressManager.instance.IsUnlocked(level);

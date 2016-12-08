@@ -17,6 +17,8 @@ public class CollectibleRotator : MonoBehaviour {
     {
         transform.Rotate(Vector3.up, rotationSpeed);
         //transform.Translate(Vector3.up * vertical.Evaluate(Time.time));
-        transform.position = startPos + Vector3.up * vertical.Evaluate(Time.time) * hoverScale;
+        float y = startPos.y + vertical.Evaluate(Time.time) * hoverScale;
+        Vector3 pos = transform.position;
+        transform.position = new Vector3(pos.x, y, pos.z);
 	}
 }

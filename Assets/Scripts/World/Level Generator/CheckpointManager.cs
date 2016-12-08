@@ -32,6 +32,7 @@ public class CheckpointManager : Singleton<CheckpointManager>, Observer {
     {
         if(evt.eventName == EventName.RespawnPlayer)
         {
+            Debug.LogWarning("Did you die from electricity and not respawn? tell Frederik you saw nr. 4!");
             spawnPlayer = true;
         }
     }

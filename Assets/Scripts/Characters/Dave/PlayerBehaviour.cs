@@ -45,6 +45,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         // start animations
         animator.SetTrigger("Shock");
         Invoke("StartDeathAnimation", shockDuration);
+        Debug.LogWarning("Did you die from electricity and not respawn? tell Frederik you saw nr. 1!");
         ThrowDeathEvent();
     }
 
@@ -58,6 +59,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     // starts the death animation in the animator
     private void StartDeathAnimation()
     {
+        Debug.LogWarning("Did you die from electricity and not respawn? tell Frederik you saw nr. 2!");
         animator.SetTrigger("Death");
     }
 
@@ -85,6 +87,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 
     private void ThrowRespawnEvent()
     {
+        Debug.LogWarning("Did you die from electricity and not respawn? tell Frederik you saw nr. 3!");
         AkSoundEngine.PostEvent("respawn", gameObject);  
         var evt = new ObserverEvent(EventName.RespawnPlayer);
         Subject.instance.Notify(gameObject, evt);

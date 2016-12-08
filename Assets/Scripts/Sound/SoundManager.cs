@@ -327,5 +327,6 @@ public class SoundManager : Singleton<SoundManager>, Observer
     public void StopMusic()
     {
         AkSoundEngine.PostEvent(SoundEventConstants.MUSIC_MAIN_STOP, gameObject);
+        musicPlaying = false;
     }
 }

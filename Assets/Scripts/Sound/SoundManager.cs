@@ -110,6 +110,7 @@ public class SoundManager : Singleton<SoundManager>, Observer
                 newRTPCForCharge = forceVec.x * 10.0f;
 
                 AkSoundEngine.SetRTPCValue("jetpackChargeLevel", previousRTPCFC);
+                AkSoundEngine.SetRTPCValue("jetpackChargelevel2", forceVec.x * 10.0f);  
                 break;
 
             case EventName.Collision:

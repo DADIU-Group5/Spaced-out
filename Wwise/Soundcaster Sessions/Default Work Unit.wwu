@@ -331,6 +331,10 @@
 							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="jetpackChargeLevel2" ID="{EEA80A5E-8F09-43FF-A366-3A6B2A5BFDDF}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="masterVolume" ID="{16D6A1BF-90EA-4458-897A-819BFBA4868A}"/>
 							<Value>100</Value>
 						</RTPCValue>

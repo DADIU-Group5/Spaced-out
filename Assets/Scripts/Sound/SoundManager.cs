@@ -18,7 +18,6 @@ public class SoundManager : Singleton<SoundManager>, Observer
     private float newRTPCForCharge;
     private float previousRTPCFC;
 
-    // Use this for initialization
     void Start()
     {
         Subject.instance.AddObserver(this);
@@ -60,10 +59,8 @@ public class SoundManager : Singleton<SoundManager>, Observer
 
             case EventName.PlayerVelocity:
                 var velocity = (float)evt.payload[PayloadConstants.VELOCITY];
-               // print("Victor velocity: " + velocity);
                 AkSoundEngine.SetRTPCValue("velocity2", velocity * 10);
                 AkSoundEngine.SetRTPCValue("velocitySlowLerp", velocity * 10);
-                // VICOYR
 
                 break;
 
@@ -95,7 +92,6 @@ public class SoundManager : Singleton<SoundManager>, Observer
                         break;
 
                     case JetPackState.StopCharging:
-                        //AkSoundEngine.SetRTPCValue("jetpackChargeLevel", 0);
                         StopEvent(SoundEventConstants.DAVE_CHARGE, 0.0f);
                         chargePlaying = false;
 
@@ -123,9 +119,6 @@ public class SoundManager : Singleton<SoundManager>, Observer
                     PlayEvent(SoundEventConstants.DAVE_OBJECT_COLLISION, entity);
 
                 break;
-            case EventName.PlayerVentilated:
-                //PlayEvent(SoundEventConstants.DAVE_VENT);
-                break;
 
             case EventName.UIButton:
                 PlayEvent((string)evt.payload[PayloadConstants.TYPE]);
@@ -146,18 +139,6 @@ public class SoundManager : Singleton<SoundManager>, Observer
             case EventName.ChangeLanguage:
                 SetLanguage((Language)evt.payload[PayloadConstants.LANGUAGE]);
                 break;
-
-            //case EventName.Door:
-            //    if ((bool)evt.payload[PayloadConstants.DOOR_OPEN])
-            //    {
-            //        StopEvent(SoundEventConstants.DOOR_OPEN, 0, entity);
-            //        AkSoundEngine.PostEvent(SoundEventConstants.DOOR_OPEN, entity);
-            //    }
-            //    else
-            //    {
-            //        AkSoundEngine.PostEvent(SoundEventConstants.DOOR_SHUT, entity);
-            //    }
-            //    break;
 
             case EventName.StartCutscene:
                 if (evt.payload.ContainsKey(PayloadConstants.START_LEVEL))

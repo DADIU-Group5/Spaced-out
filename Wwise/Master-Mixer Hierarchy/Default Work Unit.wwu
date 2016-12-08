@@ -201,7 +201,7 @@
 										<RTPC Name="" ID="{C266C6E5-96DF-41DB-9399-FA3613689A62}" ShortID="649055199">
 											<ReferenceList>
 												<Reference Name="ControlInput">
-													<ObjectRef Name="jetpackChargeLevel" ID="{0B24DF7A-888D-4512-AE8A-5029CF4B83ED}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+													<ObjectRef Name="jetpackChargeLevel2" ID="{EEA80A5E-8F09-43FF-A366-3A6B2A5BFDDF}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
 												</Reference>
 											</ReferenceList>
 											<Curve Name="" ID="{DF06DDEF-B09E-4FE6-B82A-83D4B34D3C8A}">
@@ -222,7 +222,7 @@
 													</Point>
 													<Point>
 														<XPos>100</XPos>
-														<YPos>32</YPos>
+														<YPos>67</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -302,6 +302,40 @@
 									<ValueList>
 										<Value>-1</Value>
 									</ValueList>
+								</Property>
+								<Property Name="Highpass" Type="int16">
+									<RTPCList>
+										<RTPC Name="" ID="{EDCDA739-60FB-4721-81CF-944B4FD9F4F7}" ShortID="402023334">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="jetpackChargeLevel2" ID="{EEA80A5E-8F09-43FF-A366-3A6B2A5BFDDF}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{D52B312F-285C-45A1-8418-F7CE287428EE}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>60.0343053173242</XPos>
+														<YPos>0</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Exp2</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>59</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>

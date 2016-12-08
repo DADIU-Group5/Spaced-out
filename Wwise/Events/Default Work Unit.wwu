@@ -973,6 +973,13 @@
 										</Element>
 									</ElementList>
 								</Action>
+								<Action Name="Set Game Parameter" ID="{A69261BA-04B9-4A0F-BC7C-13F023A01AB3}" ShortID="870734079" Type="SetGameParameter" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{FCE68F30-6A73-4B96-B887-CEF861CEA5D7}" Global="true">
+											<ObjectRef Name="jetpackChargeLevel2" ID="{EEA80A5E-8F09-43FF-A366-3A6B2A5BFDDF}" WorkUnitID="{C9AADC08-2053-43EF-8DC7-BE6941A745E7}"/>
+										</Element>
+									</ElementList>
+								</Action>
 								<Action Name="Play" ID="{3BAC3CCB-930C-4207-82EF-14486677D1E2}" ShortID="583974003" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{59BA8C64-910E-48E3-8FC1-7CD93A860FE9}" Global="false">

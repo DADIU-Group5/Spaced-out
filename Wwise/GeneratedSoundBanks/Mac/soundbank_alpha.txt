@@ -174,6 +174,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	1029930033	SS_Air_Fury			\Factory SoundSeed Air Game Syncs\SS_Air_Fury	
 	1351367891	SS_Air_Fear			\Factory SoundSeed Air Game Syncs\SS_Air_Fear	
 	1666681290	velocity2			\Default Work Unit\velocity2	
+	1696346837	jetpackChargeLevel2			\Default Work Unit\jetpackChargeLevel2	
 	1992117424	velocitySlowLerp			\Default Work Unit\velocitySlowLerp	
 	2346531308	musicVolume			\Default Work Unit\musicVolume	
 	2371628509	jetpackChargeLevel			\Default Work Unit\jetpackChargeLevel	

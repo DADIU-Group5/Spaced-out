@@ -65,7 +65,9 @@
 				</GameParameter>
 				<GameParameter Name="jetpackChargeLevel2" ID="{EEA80A5E-8F09-43FF-A366-3A6B2A5BFDDF}">
 					<PropertyList>
+						<Property Name="FilterTimeUp" Type="Real64" Value="1"/>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="RTPCRamping" Type="int16" Value="2"/>
 					</PropertyList>
 				</GameParameter>
 			</ChildrenList>

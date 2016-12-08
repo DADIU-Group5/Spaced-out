@@ -4,7 +4,7 @@ using System.Collections;
 
 public class DebugSeedText : MonoBehaviour {
 
-    public Text seedText;
+    /*public Text seedText;
     GenerationData.LevelData data;
     string roomName;
 
@@ -16,12 +16,12 @@ public class DebugSeedText : MonoBehaviour {
 
     void Update()
     {
-        seedText.text = "Ext seed: " + data.exteriorSeed + "\nInt seed: " + data.interiorSeed+"\nFPS: "+(int)(1f/Time.deltaTime)+"\nRoom name: "+roomName;
+        seedText.text = "FPS: "+(int)(1f/Time.deltaTime);
     }
 
     public void EnteredRoom(string name)
     {
         roomName = name.Remove(name.Length - 7, 7);
-    }
+    }*/
 	
 }

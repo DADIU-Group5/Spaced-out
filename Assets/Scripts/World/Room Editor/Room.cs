@@ -247,10 +247,6 @@ public class Room : MonoBehaviour
 
     public void EnteredThisRoom()
     {
-        if (Debug.isDebugBuild)
-        {
-            GameObject.FindObjectOfType<DebugSeedText>().EnteredRoom(gameObject.name);
-        }
         if(exitDoor != null)
         {
             exitDoor.PrepNextRoom();

@@ -27,7 +27,10 @@ public class SplashFadeToSplash : MonoBehaviour {
 
     void Start()
     {
-        childImage.GetComponent<RawImage>().canvasRenderer.SetAlpha(0.0f);
+        if (childImage != null)
+        {
+            childImage.GetComponent<RawImage>().canvasRenderer.SetAlpha(0.0f);
+        }
         if (bg != null)
             bg.GetComponent<Image>().canvasRenderer.SetAlpha(0.0f);
     }
@@ -103,11 +106,17 @@ public class SplashFadeToSplash : MonoBehaviour {
 
         if (fadingOut)
         {
-            childImage.GetComponent<RawImage>().CrossFadeAlpha(0, fadeSpeed, false);
+            if (childImage != null)
+            {
+                childImage.GetComponent<RawImage>().CrossFadeAlpha(0, fadeSpeed, false);
+            }
 
         } else if (fadingIn)
         {
-            childImage.GetComponent<RawImage>().CrossFadeAlpha(1.0f, fadeSpeed, false);
+            if (childImage != null)
+            {
+                childImage.GetComponent<RawImage>().CrossFadeAlpha(1.0f, fadeSpeed, false);
+            }
             /*if (bg != null)
                 bg.GetComponent<Image>().CrossFadeAlpha(1.0f, fadeSpeed/2, false);*/
         }

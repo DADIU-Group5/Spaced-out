@@ -132,6 +132,10 @@ public class TutorialStage1 : MonoBehaviour, Observer
     // Returns the pixel center of the camera.
     private Vector2 ScreenCenter()
     {
+        if(Camera.main == null)
+        {
+            return Vector2.zero;
+        }
         return new Vector2(Camera.main.pixelWidth / 2f, Camera.main.pixelHeight / 2f);
     }
 

@@ -17,6 +17,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     private bool godMode;
     private bool dead;
     private EventName causeOfDeath;
+    private bool threwRespawn = false;
 
 
     // Use this for initialization
@@ -34,6 +35,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         // start animations
         animator.SetTrigger("Burn");
         Invoke("StartDeathAnimation", burnDuration);
+        Invoke("DeathAnimationOver", 5);
         ThrowDeathEvent();
     }
     
@@ -45,7 +47,7 @@ public class PlayerBehaviour : MonoBehaviour, Observer
         // start animations
         animator.SetTrigger("Shock");
         Invoke("StartDeathAnimation", shockDuration);
-        Debug.LogWarning("Did you die from electricity and not respawn? tell Frederik you saw nr. 1!");
+        Invoke("DeathAnimationOver", 5);
         ThrowDeathEvent();
     }
 
@@ -59,13 +61,17 @@ public class PlayerBehaviour : MonoBehaviour, Observer
     // starts the death animation in the animator
     private void StartDeathAnimation()
     {
-        Debug.LogWarning("Did you die from electricity and not respawn? tell Frederik you saw nr. 2!");
         animator.SetTrigger("Death");
     }
 
     // called by animation blender when the death animation is finished (wierd workaround by bjørn)
     public void DeathAnimationOver()
     {
+        if (threwRespawn)
+        {
+            return;
+        }
+        threwRespawn = true;
         var evt = new ObserverEvent(EventName.PlayerFadeValue);
         evt.payload.Add(PayloadConstants.PERCENT, 0f);
         evt.payload.Add(PayloadConstants.TIME, ragdollDuration);
@@ -87,7 +93,6 @@ public class PlayerBehaviour : MonoBehaviour, Observer
 
     private void ThrowRespawnEvent()
     {
-        Debug.LogWarning("Did you die from electricity and not respawn? tell Frederik you saw nr. 3!");
         AkSoundEngine.PostEvent("respawn", gameObject);  
         var evt = new ObserverEvent(EventName.RespawnPlayer);
         Subject.instance.Notify(gameObject, evt);
